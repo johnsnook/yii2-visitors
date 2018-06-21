@@ -22,6 +22,7 @@ class IpFilter extends Component {
 
     public $ipInfoKey = '';
     public $proxyCheckKey = '';
+    public $blowOff;
     private static $visitor;
 
     /**
@@ -37,11 +38,17 @@ class IpFilter extends Component {
         if ($visitor->isNewRecord) {
             $visitor->ip_info = $this->getIpInfo();
             $visitor->proxy_check = $this->getProxyInfo();
+            if ($visitor->proxyCheck->proxy === 'yes') {
+                $visitor->access_type = Visitor::ACCESS_LIST_BLACK;
+            }
         }
         if (!$visitor->save()) {
             die(json_encode($visitor->errors));
         }
         $visitor->refresh();
+        if ($visitor->access_type) {
+            \Yii::$app->controller->redirect($this->blowOff);
+        }
         self::$visitor = $visitor;
     }
 
