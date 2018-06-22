@@ -16,29 +16,56 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <p>
         <?= Html::a('Update', ['update', 'id' => $model->ip_address], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->ip_address], [
+        <?=
+        Html::a('Delete', ['delete', 'id' => $model->ip_address], [
             'class' => 'btn btn-danger',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
             ],
-        ]) ?>
+        ])
+        ?>
     </p>
 
-    <?= DetailView::widget([
+    <?=
+    DetailView::widget([
         'model' => $model,
         'attributes' => [
             'ip_address',
             'access_type',
             'created_at',
-            'updated_at',
-            'user_id',
+            [
+                'attribute' => 'created_at',
+                'value' => function($data) {
+                    return $data->created_at->format('Y-m-d g:i A');
+                }
+            ],
+            [
+                'attribute' => 'updated_at',
+                'value' => function($data) {
+                    return $data->updated_at->format('Y-m-d g:i A');
+                }
+            ],
+            //'user_id',
             'name',
             'message:ntext',
+            [
+                'attribute' => 'ip_info',
+                'format' => 'raw',
+                'value' => function($data) {
+                    $fields = (array) $data->ip_info;
+                    $out = '';
+                    foreach ($fields as $key => $field) {
+                        $out .= '';
+                    }
+                    return $data->updated_at->format('Y-m-d g:i A');
+                }
+            ],
             'ip_info',
-            'access_log',
-            'proxy_check',
+        //'access_log',
+        //'proxy_check',
         ],
-    ]) ?>
+    ])
+    ?>
 
 </div>
