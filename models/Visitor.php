@@ -5,6 +5,8 @@ namespace johnsnook\ipFilter\models;
 use johnsnook\ipFilter\lib\RemoteAddress;
 use Yii;
 use yii\db\ActiveRecord;
+use yii\behaviors\TimestampBehavior;
+use yii\db\Expression;
 
 /**
  * This is the model class for table "visitor".
@@ -16,10 +18,8 @@ use yii\db\ActiveRecord;
  * @property integer $user_id
  * @property string $name
  * @property string $message
- * @property array $ip_info
- * @property object $ipInfo
- * @property object $proxyCheck
- * @property array $proxy_check
+ * @property object $ip_info
+ * @property object $proxy_check
  * @property float $latitude
  * @property float $longitude
  * @property array $access_log
@@ -57,11 +57,28 @@ class Visitor extends ActiveRecord {
     public function rules() {
         return [
             [['ip_address'], 'required'],
-            [['ip_address', 'access_type', 'name', 'message'], 'string'],
-            [['ip_info', 'access_log', 'proxy_check'], 'array'],
+            [['access_type', 'name', 'message', 'ip_address'], 'string'],
+            //[['ip_info', 'access_log', 'proxy_check'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
             [['user_id'], 'integer'],
         ];
+    }
+
+    public function beforeSave($insert) {
+//        if (parent::beforeSave($insert)) {
+        $this->ip_info = json_encode($this->ip_info);
+        $this->proxy_check = json_encode($this->proxy_check);
+        $this->access_log = json_encode($this->access_log);
+        return true;
+//        }
+//        return false;
+    }
+
+    public function afterFind() {
+        parent::afterFind();
+        $this->ip_info = json_decode($this->ip_info);
+        $this->proxy_check = json_decode($this->proxy_check);
+        $this->access_log = json_decode($this->access_log, true);
     }
 
     /**
@@ -75,31 +92,18 @@ class Visitor extends ActiveRecord {
         $guest = self::findOne($ip_address);
         if (is_null($guest)) {
             $guest = new Visitor(['ip_address' => $ip_address]);
+            $guest->access_log = [];
         }
+        $dt = new \DateTime();
         $access = $guest->access_log;
         $access[] = [
+            'timestamp' => $dt->format('Y-m-d H:i:s'),
             'request' => filter_input(INPUT_SERVER, 'REQUEST_URI'),
             'referer' => filter_input(INPUT_SERVER, 'HTTP_REFERER'),
             'user_agent' => filter_input(INPUT_SERVER, 'HTTP_USER_AGENT'),
         ];
         $guest->access_log = $access;
         return $guest;
-    }
-
-    /**
-     * Virtual property for $ip_info property
-     * @return string
-     */
-    public function getIpInfo() {
-        return (object) $this->ip_info;
-    }
-
-    /**
-     * Virtual property for $ip_info property
-     * @return string
-     */
-    public function getProxyInfo() {
-        return (object) $this->proxy_check;
     }
 
     /**

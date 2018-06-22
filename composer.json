@@ -3,6 +3,7 @@
     "description": "This extension gets the visitors ip address, logs the access and checks if it's blacklisted or whitelisted.  If it's a blacklist ip address, it redirects them to a blowoff page.",
     "type": "yii2-extension",
     "keywords": ["yii2", "extension", "cidr", "proxy", "tor", "blacklist", "whitelist", "ip address", "security", "hackers", "postgresql"],
+    "homepage": "https://snooky.biz/",
     "license": "Apache-2.0",
     "authors": [
         {
@@ -11,7 +12,9 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "*"
+        "yiisoft/yii2": "*",
+        "tigrov/yii2-pgsql": "dev-master",
+        "2amigos/yii2-leaflet-extension": "~1.0"
     },
     "autoload": {
         "psr-4": {
