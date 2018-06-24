@@ -72,7 +72,7 @@ $ php yii migrate/up --migrationPath=@vendor/johnsnook/yii2-ip-filter/migrations
 
 Customization
 -----
-So, you should be able to go to http://yoursite.com/visitor and see the index.
+So, you should be able to go to ```http://yoursite.com/visitor``` and see the index.
 
 But you'll probably want to make your own views.  If it was me, I'd copy the controller and views to your backend or basic controllers & views directories.  But maybe there's some best practices way to do it.
 
@@ -87,3 +87,5 @@ If you want to find out information on the current user, you can get the visitor
         echo "Your city sucks balls";
     }
 ```
+
+To see it live, check out https://snooky.biz/visitor
