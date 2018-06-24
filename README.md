@@ -54,9 +54,8 @@ The routes are defined in the Module file as $urlRules.  These can also be redef
     public $urlRules = [
         'visitor' => 'ipFilter/visitor/index',
         'visitor/index' => 'ipFilter/visitor/index',
-        'visitor/view/<ipAddress>' => 'visitor/view',
-        'visitor/update/<ipAddress>' => 'visitor/update',
-        'visitor/delete/<ipAddress>' => 'visitor/delete',
+        'visitor/<id>' => 'ipFilter/visitor/view',
+        'visitor/update/<id>' => 'ipFilter/visitor/update',
     ];
 ```
 
