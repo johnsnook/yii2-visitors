@@ -2,8 +2,6 @@
 
 namespace johnsnook\ipFilter\models;
 
-use johnsnook\ipFilter\lib\RemoteAddress;
-use Yii;
 use yii\db\ActiveRecord;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
@@ -11,18 +9,19 @@ use yii\db\Expression;
 /**
  * This is the model class for table "visitor".
  *
- * @property string $ip_address
+ * @property string $ip
  * @property string $access_type
  * @property string $created_at
  * @property string $updated_at
  * @property integer $user_id
  * @property string $name
  * @property string $message
- * @property object $ip_info
- * @property object $proxy_check
+ * @property object $info
  * @property float $latitude
  * @property float $longitude
- * @property array $access_log
+ * @property array $info
+ *
+ * @property VisitorLog[] $visitorLogs
  */
 class Visitor extends ActiveRecord {
 
@@ -56,54 +55,38 @@ class Visitor extends ActiveRecord {
      */
     public function rules() {
         return [
-            [['ip_address'], 'required'],
-            [['access_type', 'name', 'message', 'ip_address'], 'string'],
-            //[['ip_info', 'access_log', 'proxy_check'], 'string'],
+            [['ip'], 'required'],
+            [['access_type', 'name', 'message', 'ip'], 'string'],
+            //[['info', 'access_log', 'proxy_check'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
             [['user_id'], 'integer'],
         ];
     }
 
     public function beforeSave($insert) {
-//        if (parent::beforeSave($insert)) {
-        $this->ip_info = json_encode($this->ip_info);
-        $this->proxy_check = json_encode($this->proxy_check);
+        $this->info = json_encode($this->info);
         $this->access_log = json_encode($this->access_log);
         return true;
-//        }
-//        return false;
     }
 
     public function afterFind() {
         parent::afterFind();
-        $this->ip_info = json_decode($this->ip_info);
-        $this->proxy_check = json_decode($this->proxy_check);
-        $this->access_log = json_decode($this->access_log, true);
+        $this->info = json_decode($this->info);
     }
 
     /**
      * Tries to find existing visitor record, and creates a new one if not found
      * Also logs this visit in the access_log
      *
-     * @param type $ip_address
+     * @param type $ip
      * @return \johnsnook\ipFilter\models\Visitor
      */
-    public static function ringDoorbell($ip_address) {
-        $guest = self::findOne($ip_address);
-        if (is_null($guest)) {
-            $guest = new Visitor(['ip_address' => $ip_address]);
-            $guest->access_log = [];
+    public static function ringDoorbell($ip) {
+        $visitor = self::findOne($ip);
+        if (is_null($visitor)) {
+            $visitor = new Visitor(['ip' => $ip]);
         }
-        $dt = new \DateTime();
-        $access = $guest->access_log;
-        $access[] = [
-            'timestamp' => $dt->format('Y-m-d H:i:s'),
-            'request' => filter_input(INPUT_SERVER, 'REQUEST_URI'),
-            'referer' => filter_input(INPUT_SERVER, 'HTTP_REFERER'),
-            'user_agent' => filter_input(INPUT_SERVER, 'HTTP_USER_AGENT'),
-        ];
-        $guest->access_log = $access;
-        return $guest;
+        return $visitor;
     }
 
     /**
@@ -111,7 +94,7 @@ class Visitor extends ActiveRecord {
      * @return string
      */
     public function getLatitude() {
-        return isset($this->info['loc']) ? split(',', $this->info['loc'])[0] : null;
+        return isset($this->info->loc) ? split(',', $this->info->loc)[0] : null;
     }
 
     /**
@@ -119,7 +102,7 @@ class Visitor extends ActiveRecord {
      * @return string
      */
     public function getLongitude() {
-        return isset($this->info['loc']) ? split(',', $this->info['loc'])[1] : null;
+        return isset($this->info->loc) ? split(',', $this->info->loc)[1] : null;
     }
 
     /**
@@ -127,14 +110,14 @@ class Visitor extends ActiveRecord {
      */
     public function attributeLabels() {
         return [
-            'ip_address' => 'Ip Address',
+            'ip' => 'Ip Address',
             'access_type' => 'Access Type',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'user_id' => 'User ID',
             'name' => 'Name',
             'message' => 'Message',
-            'ip_info' => 'Ip Info',
+            'info' => 'Ip Info',
             'hostname' => 'Host Name',
             'city' => 'City',
             'region' => 'Region',
@@ -146,6 +129,13 @@ class Visitor extends ActiveRecord {
             'organization' => 'Organization',
             'access_log' => 'Access Log',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getVisitorLogs() {
+        return $this->hasMany(VisitorLog::className(), ['ip' => 'ip']);
     }
 
 }

@@ -12,9 +12,7 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "*",
-        "tigrov/yii2-pgsql": "dev-master",
-        "2amigos/yii2-leaflet-extension": "~1.0"
+        "yiisoft/yii2": "*"
     },
     "autoload": {
         "psr-4": {

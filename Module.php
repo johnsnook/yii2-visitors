@@ -13,8 +13,11 @@ namespace johnsnook\ipFilter;
 
 use johnsnook\ipFilter\lib\RemoteAddress;
 use johnsnook\ipFilter\models\Visitor;
+use johnsnook\ipFilter\models\VisitorLog;
 use yii\base\ActionEvent;
+use yii\base\BootstrapInterface;
 use yii\base\Module as BaseModule;
+use yii\web\Application;
 
 /**
  * This is the main module class for the Yii2-user.
@@ -23,25 +26,22 @@ use yii\base\Module as BaseModule;
  *
  * @author John Snook <jsnook@gmail.com>
  */
-class Module extends BaseModule {
+class Module extends BaseModule implements BootstrapInterface {
 
     const VERSION = '0.0.1';
 
-    /**
-     *
-     * @var string
-     */
-    public $ipAddress;
-    public $proxyCheckUrlTemplate = 'http://proxycheck.io/v2/{ip_address}&key={key}&vpn=1&inf=0';
-    public $ipInfoUrlTemplate = 'http://ipinfo.io/{ip_address}?token={key}';
+    public $mapquestKey;
+    public static $proxyCheckUrlTemplate = 'http://proxycheck.io/v2/{ip_address}&key={key}&vpn=1&inf=0';
+    public static $ipInfoUrlTemplate = 'http://ipinfo.io/{ip_address}?token={key}';
 
     const TEMPLATE = ['{ip_address}', '{key}'];
 
     public $ipInfoKey = '';
     public $proxyCheckKey = '';
     public $blowOff;
-    public $controller = 'johnsnook\ipFilter\controllers\VisitorController';
-    private static $visitor;
+//    public $controller = 'johnsnook\ipFilter\controllers\VisitorController';
+//    public $controllerNamespace = 'johnsnook\ipFilter\controllers';
+    public $visitor;
 
     /**
      * @var string The prefix for user module URL.
@@ -54,10 +54,29 @@ class Module extends BaseModule {
     public $urlRules = [
         'visitor' => 'ipFilter/visitor/index',
         'visitor/index' => 'ipFilter/visitor/index',
-        'visitor/view/<ipAddress>' => 'visitor/view',
-        'visitor/update/<ipAddress>' => 'visitor/update',
-        'visitor/delete/<ipAddress>' => 'visitor/delete',
+        'visitor/<id>' => 'ipFilter/visitor/view',
+        'visitor/update/<id>' => 'ipFilter/visitor/update',
+        'visitor/delete/<id>' => 'visitor/delete',
     ];
+
+    /**
+     *
+     * @param Application $app
+     */
+    public function bootstrap($app) {
+        if ($app->hasModule('ipFilter') && ($module = $app->getModule('ipFilter')) instanceof Module) {
+            //\Yii::$container->set('johnsnook\ipFilter\models\Visitor'); //, ['Visitor' => 'johnsnook\ipFilter\models\Visitor']
+            //$app->controllerMap[] = ['Visitor' => 'johnsnook\\ipFilter\\controllers\\VisitorController'];
+            $app->getUrlManager()->addRules($module->urlRules, false);
+
+            /** this allows me to do some importing from my old security system */
+            if (!($app instanceof \yii\console\Application)) {
+                $app->on(Application::EVENT_BEFORE_ACTION, [$module, 'metalDetector']);
+            } else {
+                $this->controllerNamespace = 'johnsnook\ipFilter\commands';
+            }
+        }
+    }
 
     /**
      * Handles the BeforeAction event
@@ -66,26 +85,27 @@ class Module extends BaseModule {
      */
     public function metalDetector(ActionEvent $event) {
         $remoteAddress = new RemoteAddress();
-        $this->ipAddress = $remoteAddress->getIpAddress();
-        $visitor = Visitor::ringDoorbell($this->ipAddress);
+        $ipAddress = $remoteAddress->getIpAddress();
+        $visitor = Visitor::ringDoorbell($ipAddress);
         if ($visitor->isNewRecord) {
-            $visitor->ip_info = $this->getIpInfo();
-            $visitor->proxy_check = $this->getProxyInfo();
-            //die($visitor->proxy_check);
-            if ($visitor->proxy_check->proxy === 'yes') {
+            $visitor->info = $this->getIpInfo($ipAddress);
+            $pcheck = $this->getProxyInfo($ipAddress);
+            $visitor->info->proxy = ($pcheck->proxy === 'yes' ? $pcheck->type : 'no');
+            if ($visitor->info->proxy !== 'no') {
                 $visitor->access_type = Visitor::ACCESS_LIST_BLACK;
             }
+            if (!$visitor->save()) {
+                die(json_encode($visitor->errors));
+            }
+            $visitor->refresh();
         }
-        if (!$visitor->save()) {
-            die(json_encode($visitor->errors));
-        }
-        $visitor->refresh();
+        VisitorLog::log($ipAddress);
         if ($visitor->access_type === Visitor::ACCESS_LIST_BLACK) {
             $url = Url::toRoute([$this->blowOff, 'visitor' => $visitor]);
             $event->result = \Yii::$app->controller->redirect($url);
             $event->isValid = FALSE;
         }
-        self::$visitor = $visitor;
+        $this->visitor = $visitor;
     }
 
     /**
@@ -100,10 +120,9 @@ class Module extends BaseModule {
      *
      * @return array
      */
-    private function getIpInfo() {
-        $url = str_replace(self::TEMPLATE, [
-            $this->ipAddress, $this->ipInfoKey], $this->ipInfoUrlTemplate);
-
+    public function getIpInfo($ipAddress) {
+        $ipAddress = self::getPlainIp($ipAddress);
+        $url = str_replace(self::TEMPLATE, [$ipAddress, $this->ipInfoKey], static::$ipInfoUrlTemplate);
         if (!empty($data = json_decode(file_get_contents($url)))) {
             return $data;
         }
@@ -122,12 +141,11 @@ class Module extends BaseModule {
      *
      * @return array
      */
-    private function getProxyInfo() {
-        $url = str_replace(self::TEMPLATE, [
-            $this->ipAddress, $this->proxyCheckKey], $this->proxyCheckUrlTemplate);
-
+    public function getProxyInfo($ipAddress) {
+        $ipAddress = self::getPlainIp($ipAddress);
+        $url = str_replace(self::TEMPLATE, [$ipAddress, $this->proxyCheckKey], self::$proxyCheckUrlTemplate);
         if (!empty($data = json_decode(file_get_contents($url), true))) {
-            return (object) $data[$this->ipAddress];
+            return (object) $data[$ipAddress];
         }
         return (object) [];
     }
@@ -137,8 +155,8 @@ class Module extends BaseModule {
      *
      * @return string The IP without the masking part
      */
-    public function getPlainIp() {
-        return split('/', $this->ipaddess)[0];
+    public static function getPlainIp($ipAddress) {
+        return split('/', $ipAddress)[0];
     }
 
     /**

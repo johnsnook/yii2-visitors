@@ -5,25 +5,25 @@ namespace johnsnook\ipFilter\models;
 use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use johnsnook\ipFilter\models\Visitor;
+use johnsnook\ipFilter\models\VisitorLog;
 
 /**
- * VisitorSearch represents the model behind the search form about `frontend\models\Visitor`.
+ * VisitorLogSearch represents the model behind the search form of `common\models\VisitorLog`.
  */
-class VisitorSearch extends Visitor {
+class VisitorLogSearch extends VisitorLog {
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function rules() {
         return [
-            [['ip_address', 'access_type', 'created_at', 'updated_at', 'name', 'message', 'ip_info', 'access_log', 'proxy_check'], 'safe'],
-            [['user_id'], 'integer'],
+            [['id'], 'integer'],
+            [['ip', 'created_at', 'request', 'referer', 'user_agent'], 'safe'],
         ];
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function scenarios() {
         // bypass scenarios() implementation in the parent class
@@ -38,12 +38,13 @@ class VisitorSearch extends Visitor {
      * @return ActiveDataProvider
      */
     public function search($params) {
-        $query = Visitor::find();
+        $query = VisitorLog::find();
 
         // add conditions that should always apply here
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'sort' => ['defaultOrder' => ['created_at' => SORT_DESC]]
         ]);
 
         $this->load($params);
@@ -56,18 +57,13 @@ class VisitorSearch extends Visitor {
 
         // grid filtering conditions
         $query->andFilterWhere([
+            'ip' => $this->ip,
             'created_at' => $this->created_at,
-            'updated_at' => $this->updated_at,
-            'user_id' => $this->user_id,
         ]);
 
-        $query->andFilterWhere(['like', 'ip_address', $this->ip_address])
-                ->andFilterWhere(['like', 'access_type', $this->access_type])
-                ->andFilterWhere(['like', 'name', $this->name])
-                ->andFilterWhere(['like', 'message', $this->message])
-                ->andFilterWhere(['like', 'ip_info', $this->ip_info])
-                ->andFilterWhere(['like', 'access_log', $this->access_log])
-                ->andFilterWhere(['like', 'proxy_check', $this->proxy_check]);
+        $query->andFilterWhere(['ilike', 'request', $this->request])
+                ->andFilterWhere(['ilike', 'referer', $this->referer])
+                ->andFilterWhere(['ilike', 'user_agent', $this->user_agent]);
 
         return $dataProvider;
     }

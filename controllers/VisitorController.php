@@ -4,10 +4,10 @@ namespace johnsnook\ipFilter\controllers;
 
 use Yii;
 use johnsnook\ipFilter\models\Visitor;
-use johnsnook\ipFilter\models\VisitorSearch;
+use johnsnook\ipFilter\models\VisitorLogSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
+use yii\data\SqlDataProvider;
 use yii\filters\AccessControl;
 
 /**
@@ -50,41 +50,47 @@ class VisitorController extends Controller {
      * @return mixed
      */
     public function actionIndex() {
-        $searchModel = new VisitorSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $sql = "select distinct v.ip, count(vl.*) as count, access_type, "
+                . "max(vl.created_at) as recent, info::text "
+                . "from visitor v left join visitor_log vl using(ip) group by v.ip, access_type ";
+        $count = Yii::$app->db->createCommand("SELECT COUNT(*) as cnt FROM ($sql) as foo")->queryScalar();
 
-        return $this->render('index', [
-                    'searchModel' => $searchModel,
-                    'dataProvider' => $dataProvider,
+        $dataProvider = new SqlDataProvider([
+            'key' => 'ip',
+            'sql' => $sql,
+            'totalCount' => $count,
+            'pagination' => [
+                'pageSize' => 20,
+            ],
+            'sort' => [
+                'defaultOrder' => ['recent' => SORT_DESC], //, 'count' => SORT_DESC
+                'attributes' => [
+                    'recent' => ['default' => SORT_DESC],
+                    'count',
+                    'ip',
+                    'city',
+                    'access_type'
+                ],
+            ],
         ]);
+        return $this->render('index', ['dataProvider' => $dataProvider,]);
     }
 
     /**
      * Displays a single Visitor model.
-     * @param string $id
+     * @param string $id The IP address to be viewed
      * @return mixed
      */
     public function actionView($id) {
+        $searchModel = new VisitorLogSearch();
+        $searchModel->ip = $id;
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
         return $this->render('view', [
                     'model' => $this->findModel($id),
+                    'searchModel' => $searchModel,
+                    'dataProvider' => $dataProvider,
         ]);
-    }
-
-    /**
-     * Creates a new Visitor model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
-    public function actionCreate() {
-        $model = new Visitor();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->ip_address]);
-        } else {
-            return $this->render('create', [
-                        'model' => $model,
-            ]);
-        }
     }
 
     /**
@@ -97,7 +103,7 @@ class VisitorController extends Controller {
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->ip_address]);
+            return $this->redirect(['view', 'id' => $id]);
         } else {
             return $this->render('update', [
                         'model' => $model,
@@ -113,7 +119,6 @@ class VisitorController extends Controller {
      */
     public function actionDelete($id) {
         $this->findModel($id)->delete();
-
         return $this->redirect(['index']);
     }
 

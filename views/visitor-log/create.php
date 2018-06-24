@@ -4,13 +4,13 @@ use yii\helpers\Html;
 
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\Visitor */
+/* @var $model common\models\VisitorLog */
 
-$this->title = 'Create Visitor';
-$this->params['breadcrumbs'][] = ['label' => 'Visitors', 'url' => ['index']];
+$this->title = 'Create Visitor Log';
+$this->params['breadcrumbs'][] = ['label' => 'Visitor Logs', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="visitor-create">
+<div class="visitor-log-create">
 
     <h1><?= Html::encode($this->title) ?></h1>
 

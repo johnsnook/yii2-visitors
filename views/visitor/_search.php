@@ -10,12 +10,14 @@ use yii\widgets\ActiveForm;
 
 <div class="visitor-search">
 
-    <?php $form = ActiveForm::begin([
-        'action' => ['index'],
-        'method' => 'get',
-    ]); ?>
+    <?php
+    $form = ActiveForm::begin([
+                'action' => ['index'],
+                'method' => 'get',
+    ]);
+    ?>
 
-    <?= $form->field($model, 'ip_address') ?>
+    <?= $form->field($model, 'ip') ?>
 
     <?= $form->field($model, 'access_type') ?>
 
@@ -29,17 +31,17 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'message') ?>
 
-    <?php // echo $form->field($model, 'ip_info') ?>
+    <?php // echo $form->field($model, 'info') ?>
 
     <?php // echo $form->field($model, 'access_log') ?>
 
-    <?php // echo $form->field($model, 'proxy_check') ?>
+        <?php // echo $form->field($model, 'proxy_check')  ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
+<?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
+    <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
     </div>
 
-    <?php ActiveForm::end(); ?>
+<?php ActiveForm::end(); ?>
 
 </div>
