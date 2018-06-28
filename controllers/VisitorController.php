@@ -7,8 +7,9 @@ use johnsnook\ipFilter\models\Visitor;
 use johnsnook\ipFilter\models\VisitorLogSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
-use yii\data\SqlDataProvider;
+use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
+use yii\db\Query;
 
 /**
  * VisitorController implements the CRUD actions for Visitor model.
@@ -32,7 +33,7 @@ class VisitorController extends Controller {
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index', 'view'],
+                        'actions' => ['index', 'view', 'blowoff'],
                         'roles' => ['?'],
                     ],
                     [
@@ -49,31 +50,40 @@ class VisitorController extends Controller {
      * Lists all Visitor models.
      * @return mixed
      */
-    public function actionIndex() {
-        $sql = "select distinct v.ip, count(vl.*) as count, access_type, "
-                . "max(vl.created_at) as recent, info::text "
-                . "from visitor v left join visitor_log vl using(ip) group by v.ip, access_type ";
-        $count = Yii::$app->db->createCommand("SELECT COUNT(*) as cnt FROM ($sql) as foo")->queryScalar();
+    public function actionIndex($search = "", $field = "") {
+        if (empty($search)) {
+            $query = Visitor::find();
+        } elseif (strpos($field, 'log') === 0) {
+            $field = explode('-', $field)[1];
+            $query = Visitor::find()
+                    ->select(['t.ip'])
+                    ->distinct()
+                    ->addSelect(['city', 'region', 'country', 'visits', 'updated_at'])
+                    ->from('visitor t')
+                    ->leftJoin('visitor_log vl', 't.ip = vl.ip')
+                    ->where(['ilike', $field, "$search"]);
+        } else {
+            $query = Visitor::find()->where(['ilike', $field, "$search"]);
+        }
 
-        $dataProvider = new SqlDataProvider([
-            'key' => 'ip',
-            'sql' => $sql,
-            'totalCount' => $count,
+        //$subquery = (new Query)->from('visitor_log')->where(['active' => true])
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
             'pagination' => [
                 'pageSize' => 20,
             ],
             'sort' => [
-                'defaultOrder' => ['recent' => SORT_DESC], //, 'count' => SORT_DESC
-                'attributes' => [
-                    'recent' => ['default' => SORT_DESC],
-                    'count',
-                    'ip',
-                    'city',
-                    'access_type'
-                ],
+                'defaultOrder' => [
+                    'updated_at' => SORT_DESC,
+                ]
             ],
         ]);
-        return $this->render('index', ['dataProvider' => $dataProvider,]);
+
+        return $this->render('index', [
+                    'dataProvider' => $dataProvider,
+                    'search' => $search
+        ]);
     }
 
     /**
@@ -90,6 +100,28 @@ class VisitorController extends Controller {
                     'model' => $this->findModel($id),
                     'searchModel' => $searchModel,
                     'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Displays a blowoff Visitor message.
+     * @return mixed
+     */
+    public function actionBlacklist($id) {
+        $model = $this->findModel($id);
+        $model->access_type = Visitor::ACCESS_LIST_BLACK;
+        $model->save();
+        return $this->actionView($id);
+    }
+
+    /**
+     * Displays a blowoff Visitor message.
+     * @return mixed
+     */
+    public function actionBlowoff() {
+        $visitor = $this->module->visitor;
+        return $this->render('blowoff', [
+                    'visitor' => $visitor,
         ]);
     }
 

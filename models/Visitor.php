@@ -16,10 +16,13 @@ use yii\db\Expression;
  * @property integer $user_id
  * @property string $name
  * @property string $message
- * @property object $info
- * @property float $latitude
- * @property float $longitude
- * @property array $info
+ * @property string $city
+ * @property string $region
+ * @property string $country
+ * @property double $latitude
+ * @property double $longitude
+ * @property string $organization
+ * @property string $proxy
  *
  * @property VisitorLog[] $visitorLogs
  */
@@ -56,53 +59,31 @@ class Visitor extends ActiveRecord {
     public function rules() {
         return [
             [['ip'], 'required'],
-            [['access_type', 'name', 'message', 'ip'], 'string'],
-            //[['info', 'access_log', 'proxy_check'], 'string'],
+            [['access_type', 'name', 'message', 'ip', 'city', 'region', 'organization', 'proxy'], 'string'],
             [['created_at', 'updated_at'], 'safe'],
+            [['latitude', 'longitude'], 'double'],
             [['user_id'], 'integer'],
         ];
     }
 
     public function beforeSave($insert) {
-        $this->info = json_encode($this->info);
-        $this->access_log = json_encode($this->access_log);
+//        if (gettype($this->info) !== 'string') {
+//            $this->info = json_encode($this->info);
+//        }
+
         return true;
     }
 
     public function afterFind() {
         parent::afterFind();
-        $this->info = json_decode($this->info);
+        $this->info = (object) $this->info;
+        //$this->info = json_decode($this->info);
     }
 
-    /**
-     * Tries to find existing visitor record, and creates a new one if not found
-     * Also logs this visit in the access_log
-     *
-     * @param type $ip
-     * @return \johnsnook\ipFilter\models\Visitor
-     */
-    public static function ringDoorbell($ip) {
-        $visitor = self::findOne($ip);
-        if (is_null($visitor)) {
-            $visitor = new Visitor(['ip' => $ip]);
-        }
-        return $visitor;
-    }
-
-    /**
-     * Virtual property for $info property
-     * @return string
-     */
-    public function getLatitude() {
-        return isset($this->info->loc) ? split(',', $this->info->loc)[0] : null;
-    }
-
-    /**
-     * Virtual property for $info property
-     * @return string
-     */
-    public function getLongitude() {
-        return isset($this->info->loc) ? split(',', $this->info->loc)[1] : null;
+    public static function incrementCount($ip) {
+        $sql = "UPDATE visitor SET visits = visits + 1, updated_at = now() WHERE ip = '$ip'";
+        $command = \Yii::$app->db->createCommand($sql);
+        $command->execute();
     }
 
     /**
@@ -111,7 +92,7 @@ class Visitor extends ActiveRecord {
     public function attributeLabels() {
         return [
             'ip' => 'Ip Address',
-            'access_type' => 'Access Type',
+            'access_type' => 'Access List',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'user_id' => 'User ID',

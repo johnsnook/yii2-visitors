@@ -14,6 +14,9 @@ use yii\db\Expression;
  * @property string $request
  * @property string $referer
  * @property string $user_agent
+ *
+ * @property Visitor $visitor
+ * @property VisitorAgent $userAgent
  */
 class VisitorLog extends \yii\db\ActiveRecord {
 
@@ -52,6 +55,8 @@ class VisitorLog extends \yii\db\ActiveRecord {
             'user_agent' => filter_input(INPUT_SERVER, 'HTTP_USER_AGENT'),
         ]);
         $log->save(false);
+        Visitor::incrementCount($ip);
+        return $log;
     }
 
     /**
@@ -78,11 +83,23 @@ class VisitorLog extends \yii\db\ActiveRecord {
         ];
     }
 
+    public static function getMostRecentVisit($ip) {
+        $sql = "select max(created_at) from visitor_log where ip = '$ip'";
+        return \Yii::$app->db->createCommand($sql)->queryScalar();
+    }
+
     /**
      * @return \yii\db\ActiveQuery
      */
     public function getVisitor() {
         return $this->hasOne(Visitor::className(), ['ip' => 'ip']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getUserAgent() {
+        return $this->hasOne(VisitorAgent::className(), ['user_agent' => 'user_agent']);
     }
 
 }

@@ -4,9 +4,12 @@
  * Uses mapquest/osm static map
  * @see https://developer.mapquest.com/documentation/static-map-api/v4/map/get/
  */
+use johnsnook\ipFilter\models\VisitorAgent;
+use johnsnook\ipFilter\models\Visitor;
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\widgets\DetailView;
-use yii\widgets\Pjax;
+//use yii\widgets\Pjax;
 use yii\grid\GridView;
 
 /* @var $this yii\web\View */
@@ -15,13 +18,21 @@ use yii\grid\GridView;
 $this->title = empty($model->name) ? $model->ip : $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Visitors', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
+$ipFilter = Yii::$app->getModule('ipFilter');
 ?>
 <div class="visitor-view">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <h1><?php
+        echo Html::encode($this->title);
+        if ($ipFilter->isAdmin) {
+            if ($model->access_type !== Visitor::ACCESS_LIST_BLACK) {
+                echo Html::a('Blacklist', ['blacklist', 'id' => $model->ip], ['class' => 'btn btn-sm btn-dark float-right']);
+            }
+            echo Html::a('Update', ['update', 'id' => $model->ip], ['class' => 'btn btn-sm btn-warning float-right']);
+        }
+        ?> </h1>
 <!--    <p>
     <?php
-//        echo Html::a('Update', ['update', 'id' => $model->ip], ['class' => 'btn btn-primary']);
 //        echo Html::a('Delete', ['delete', 'id' => $model->ip], [
 //            'class' => 'btn btn-danger',
 //            'data' => [
@@ -32,7 +43,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ?>
     </p>-->
     <div class="row">
-        <div class="col-6">
+        <div class="col-5">
             <?php
             echo DetailView::widget([
                 'model' => $model,
@@ -58,7 +69,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ])
             ?>
         </div>
-        <div class="col-6">
+        <div class="col-7">
             <table style="width:100%" class="table table-striped table-bordered detail-view">
                 <?php
                 $fields = (array) $model->info;
@@ -76,7 +87,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php
             $info = (object) $model->info;
             $mapKey = Yii::$app->getModule('ipFilter')->mapquestKey;
-            //https://open.mapquestapi.com/staticmap/v4/getmap?key=KEY&size=600,400&zoom=13&center=47.6062,-122.3321
+//https://open.mapquestapi.com/staticmap/v4/getmap?key=KEY&size=600,400&zoom=13&center=47.6062,-122.3321
 
             $mapUrl = "https://open.mapquestapi.com/staticmap/v4/getmap?key=$mapKey";
             $mapUrl .= "&size=1000,500&zoom=16&center={$model->latitude},{$model->longitude}";
@@ -89,34 +100,58 @@ $this->params['breadcrumbs'][] = $this->title;
             ?>
         </div>
     </div>
-    <div class="visitorlog-index">
+    <div class="visitorlog-index" style="font-size: .96em">
 
-        <?php //Pjax::begin(); ?>
-        <?php // echo $this->render('_search', ['model' => $searchModel]);  ?>
+        <?php //Pjax::begin();    ?>
+        <?php // echo $this->render('_search', ['model' => $searchModel]);   ?>
         <?=
         GridView::widget([
             'dataProvider' => $dataProvider,
             'filterModel' => $searchModel,
             'columns' => [
-                //['class' => 'yii\grid\SerialColumn'],
-                //'ip',
                 [
                     'class' => '\yii\grid\DataColumn',
                     'attribute' => 'created_at',
                     'value' => function($data) {
                         return $data['created_at']->format('Y-m-d g:i A');
-//                    $dt = new DateTime($data['created_at']);
-//                    return $dt->format('Y-m-d g:i A');
                     }
                 ],
-                //'created_at',
-                'request',
+                [
+                    'class' => '\yii\grid\DataColumn',
+                    'attribute' => 'request',
+                    'format' => 'html',
+                    'value' => function($data) {
+                        return Html::a($data['request'], Url::toRoute($data['request']));
+                    }
+                ],
                 'referer',
-                //'user_agent',
-                ['class' => 'yii\grid\ActionColumn'],
+                [
+                    'class' => '\yii\grid\DataColumn',
+                    'attribute' => 'user_agent',
+                    'value' => function($data) {
+                        static $agent = '666';
+                        if ($agent === '666') {
+                            $agent = VisitorAgent::findOne($data['user_agent']);
+                        }
+                        if (!empty($agent)) {
+                            $type = ($agent->agentType == 'Browser' ? '' : "$agent->agentType: ");
+                            return "{$type}{$agent->agentName} {$agent->agentVersion}";
+                        } else {
+                            return $data['user_agent'];
+                        }
+                    }
+                ],
+            ],
+            'pager' => [
+                'class' => \kop\y2sp\ScrollPager::className(),
+                'container' => '.grid-view tbody',
+                'item' => 'tr',
+                'paginationSelector' => '.grid-view .pagination',
+                'triggerOffset' => 100,
+                'triggerTemplate' => '<tr class="ias-trigger"><td colspan="100%" style="text-align: center"><a style="cursor: pointer">{text}</a></td></tr>',
             ],
         ]);
         ?>
-        <?php //Pjax::end(); ?>
+        <?php //Pjax::end();  ?>
     </div>
 </div>

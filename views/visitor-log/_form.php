@@ -14,8 +14,12 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'ip')->textInput() ?>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
-
+    <div class="form-group field-visitor-created_at">
+        <label class="control-label" for="visitor-created_at">Creation</label>
+        <div type="text" id="visitor-created_at" class="form-control" name="Visitor[created_at]">
+            <?= $model->created_at->format('Y-m-d g:i A') ?>
+        </div>
+    </div>
     <?= $form->field($model, 'request')->textInput() ?>
 
     <?= $form->field($model, 'referer')->textInput() ?>
