@@ -59,6 +59,7 @@ $this->params['breadcrumbs'][] = $this->title;
         #'filterModel' => $searchModel,
         'summary' => false,
         'columns' => [
+            ['class' => 'yii\grid\ActionColumn'],
             [
                 'class' => '\yii\grid\DataColumn',
                 'attribute' => 'ip',
@@ -107,22 +108,21 @@ $this->params['breadcrumbs'][] = $this->title;
                     return $data->updated_at->format('Y-m-d g:i A');
                 }
             ],
-            //'user_id',
-            // 'name',
-            // 'message:ntext',
-            // 'info',
-            // 'access_log',
-            // 'proxy_check',
-            ['class' => 'yii\grid\ActionColumn'],
+        //'user_id',
+        // 'name',
+        // 'message:ntext',
+        // 'info',
+        // 'access_log',
+        // 'proxy_check',
         ],
-        'pager' => [
-            'class' => \kop\y2sp\ScrollPager::className(),
-            'container' => '.grid-view tbody',
-            'item' => 'tr',
-            'paginationSelector' => '.grid-view .pagination',
-            'triggerOffset' => 100,
-            'triggerTemplate' => '<tr class="ias-trigger"><td colspan="100%" style="text-align: center"><a style="cursor: pointer">{text}</a></td></tr>',
-        ],
+//        'pager' => [
+//            'class' => \kop\y2sp\ScrollPager::className(),
+//            'container' => '.grid-view tbody',
+//            'item' => 'tr',
+//            'paginationSelector' => '.grid-view .pagination',
+//            'triggerOffset' => 100,
+//            'triggerTemplate' => '<tr class="ias-trigger"><td colspan="100%" style="text-align: center"><a style="cursor: pointer">{text}</a></td></tr>',
+//        ],
     ]);
     ?>
     <?php Pjax::end(); ?>
