@@ -120,7 +120,7 @@ class Module extends BaseModule implements BootstrapInterface {
             $country = Country::findOne(['code' => $info->country]);
             $visitor->country = $country->name;
             if ($info->loc) {
-                $visitor->lattitude = floatval(explode(',', $info->loc)[0]);
+                $visitor->latitude = floatval(explode(',', $info->loc)[0]);
                 $visitor->longitude = floatval(explode(',', $info->loc)[1]);
             }
             $visitor->organization = $info->org;
