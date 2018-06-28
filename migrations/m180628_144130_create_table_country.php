@@ -270,7 +270,7 @@ class m180628_144130_create_table_country extends Migration {
                 ['AX', "Åland Islands"],
                 ['US', "USA"],
             ]);
-            $$transaction->commit();
+            $transaction->commit();
         } catch (Exception $e) {
             $transaction->rollBack();
             echo "Error importing country data!\n";
