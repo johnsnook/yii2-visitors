@@ -1,10 +1,10 @@
 <?php
 
 /*
- * This file is part of the Dektrium project.
+ * This file is part of the yii2-ip-filter project.
  *
- * (c) Dektrium project <http://github.com/dektrium/>
- *
+ * (c) John Snook Consulting  <http://github.com/john snook/> 
+ * 
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
@@ -25,7 +25,7 @@ use yii\web\Application;
 /**
  * This is the main module class for the Yii2-user.
  *
- * @property array $modelMap
+ * @property string $mapquestKey
  *
  * @author John Snook <jsnook@gmail.com>
  */
