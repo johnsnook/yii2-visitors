@@ -19,7 +19,6 @@ use johnsnook\ipFilter\models\VisitorLog;
 use yii\base\ActionEvent;
 use yii\base\BootstrapInterface;
 use yii\base\Module as BaseModule;
-use yii\helpers\Url;
 use yii\web\Application;
 
 /**
@@ -31,12 +30,12 @@ use yii\web\Application;
  */
 class Module extends BaseModule implements BootstrapInterface {
 
-    const VERSION = '0.0.1';
+    const VERSION = '0.9.1';
 
+    public $proxyCheckUrlTemplate = 'http://proxycheck.io/v2/{ip_address}&key={key}&vpn=1&inf=0';
+    public $ipInfoUrlTemplate = 'http://ipinfo.io/{ip_address}?token={key}';
+    public $userAgentUrlTemplate = 'http://www.useragentstring.com/?uas={user_agent}&getJSON=all';
     public $mapquestKey;
-    public static $proxyCheckUrlTemplate = 'http://proxycheck.io/v2/{ip_address}&key={key}&vpn=1&inf=0';
-    public static $ipInfoUrlTemplate = 'http://ipinfo.io/{ip_address}?token={key}';
-    public static $userAgentUrlTemplate = 'http://www.useragentstring.com/?uas={user_agent}&getJSON=all ';
     public $blacklistProxyType = ['VPN', 'TOR'];
     public $ignore;
 
@@ -45,8 +44,6 @@ class Module extends BaseModule implements BootstrapInterface {
     public $ipInfoKey = '';
     public $proxyCheckKey = '';
     public $blowOff = 'ipFilter/visitor/blowoff';
-//    public $controller = 'johnsnook\ipFilter\controllers\VisitorController';
-//    public $controllerNamespace = 'johnsnook\ipFilter\controllers';
     public $visitor;
     public $admins = [];
     private $ipBlock = 'iptables -A INPUT -s 123.45.67.89 -j DROP';
@@ -165,7 +162,7 @@ class Module extends BaseModule implements BootstrapInterface {
      * @return array
      */
     public function getIpInfo($ip) {
-        $url = str_replace(self::TEMPLATE, [$ip, $this->ipInfoKey], static::$ipInfoUrlTemplate);
+        $url = str_replace(self::TEMPLATE, [$ip, $this->ipInfoKey], $this->ipInfoUrlTemplate);
         if (!empty($data = json_decode(file_get_contents($url)))) {
             return $data;
         }
@@ -187,7 +184,7 @@ class Module extends BaseModule implements BootstrapInterface {
      * @return array
      */
     public function getProxyInfo($ip) {
-        $url = str_replace(self::TEMPLATE, [$ip, $this->proxyCheckKey], self::$proxyCheckUrlTemplate);
+        $url = str_replace(self::TEMPLATE, [$ip, $this->proxyCheckKey], $this->proxyCheckUrlTemplate);
         if (!empty($data = json_decode(file_get_contents($url), true))) {
             return (object) $data[$ip];
         }
@@ -222,7 +219,7 @@ class Module extends BaseModule implements BootstrapInterface {
         if (is_null($vaModel = VisitorAgent::findOne($userAgent))) {
             $vaModel = new VisitorAgent(['user_agent' => $userAgent]);
             $userAgent = urlencode($userAgent);
-            $url = str_replace('{user_agent}', $userAgent, self::$userAgentUrlTemplate);
+            $url = str_replace('{user_agent}', $userAgent, $this->userAgentUrlTemplate);
             $vaModel->info = file_get_contents($url);
             $vaModel->save();
         }
