@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m180624_004239_create_table_visitor_log extends Migration
+class m180628_144042_create_table_visitor_log extends Migration
 {
     public function up()
     {
@@ -22,6 +22,7 @@ class m180624_004239_create_table_visitor_log extends Migration
 
         $this->createIndex('visits_ip_idx', '{{%visitor_log}}', 'ip');
         $this->createIndex('visits_timestamp_idx', '{{%visitor_log}}', 'created_at');
+        $this->createIndex('fki_vl_va_ua_fkey', '{{%visitor_log}}', 'user_agent');
         $this->addForeignKey('visits_visitor_fkey', '{{%visitor_log}}', 'ip', '{{%visitor}}', 'ip', 'CASCADE', 'CASCADE');
     }
 

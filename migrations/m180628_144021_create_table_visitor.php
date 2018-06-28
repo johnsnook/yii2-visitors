@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m180624_004233_create_table_visitor extends Migration
+class m180628_144021_create_table_visitor extends Migration
 {
     public function up()
     {
@@ -20,6 +20,14 @@ class m180624_004233_create_table_visitor extends Migration
             'name' => $this->string(),
             'message' => $this->text(),
             'info' => $this->json(),
+            'visits' => $this->integer()->notNull()->defaultValue('0'),
+            'city' => $this->string(),
+            'region' => $this->string(),
+            'country' => $this->string(),
+            'latitude' => $this->double(),
+            'longitude' => $this->double(),
+            'organization' => $this->string(),
+            'proxy' => $this->string(),
         ], $tableOptions);
 
         $this->createIndex('visitor_ip_idx', '{{%visitor}}', 'ip', true);

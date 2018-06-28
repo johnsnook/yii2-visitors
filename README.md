@@ -81,8 +81,8 @@ Usage
 If you want to find out information on the current user, you can get the visitor model from the module and use it like so:
 ```php
     $visitor = \Yii::$app->getModule('ipFilter')->visitor;
-    // give a special hello to people in Atlanta or your ex wife
-    if ($visitor->info->city === 'Atlanta' || $visitor->info->ip_address === '99.203.4.238') {
+    // give a special hello to people in Atlanta like your ex wife for example
+    if ($visitor->city === 'Atlanta' || $visitor->ip_address === '99.203.4.238') {
         echo "Your city sucks balls";
     }
 ```
