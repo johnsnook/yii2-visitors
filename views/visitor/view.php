@@ -53,13 +53,13 @@ $ipFilter = Yii::$app->getModule('ipFilter');
                     [
                         'attribute' => 'created_at',
                         'value' => function($data) {
-                            return $data->created_at->format('Y-m-d g:i A');
+                            return $data->createdAt;
                         }
                     ],
                     [
                         'attribute' => 'updated_at',
                         'value' => function($data) {
-                            return $data->updated_at->format('Y-m-d g:i A');
+                            return $data->updatedBy;
                         }
                     ],
                     //'user_id',

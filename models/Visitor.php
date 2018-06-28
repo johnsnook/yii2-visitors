@@ -86,6 +86,16 @@ class Visitor extends ActiveRecord {
         $command->execute();
     }
 
+    public function getCreatedAt() {
+        $dt = new \DateTime($this->created_at);
+        return $dt->format('Y-m-d g:i A');
+    }
+
+    public function getCUpdatedAt() {
+        $dt = new \DateTime($this->updated_at);
+        return $dt->format('Y-m-d g:i A');
+    }
+
     /**
      * @inheritdoc
      */

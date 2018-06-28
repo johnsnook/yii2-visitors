@@ -22,13 +22,13 @@ $this->params['breadcrumbs'][] = 'Update';
         <div class="form-group field-visitor-created_at">
             <label class="control-label" for="visitor-created_at">Creation</label>
             <div type="text" id="visitor-created_at" class="form-control" name="Visitor[created_at]">
-                <?= $model->created_at->format('Y-m-d g:i A') ?>
+                <?= $model->createdAt ?>
             </div>
         </div>
         <div class="form-group field-visitor-updated_at">
             <label class="control-label" for="visitor-updated_at">Modified</label>
             <div type="text" id="visitor-updated_at" class="form-control" name="Visitor[updated_at]">
-                <?= $model->updated_at->format('Y-m-d g:i A') ?>
+                <?= $model->updatedAt ?>
             </div>
         </div>
 

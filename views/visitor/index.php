@@ -105,7 +105,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'attribute' => 'updated_at',
                 'value' => function($data) {
                     //$dt = new DateTime();
-                    return $data->updated_at->format('Y-m-d g:i A');
+                    return $data->updatedBy;
                 }
             ],
         //'user_id',

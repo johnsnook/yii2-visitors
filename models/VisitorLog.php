@@ -11,6 +11,7 @@ use yii\db\Expression;
  * @property integer $id
  * @property string $ip
  * @property string $created_at
+ * @property string $createdBy
  * @property string $request
  * @property string $referer
  * @property string $user_agent
@@ -57,6 +58,11 @@ class VisitorLog extends \yii\db\ActiveRecord {
         $log->save(false);
         Visitor::incrementCount($ip);
         return $log;
+    }
+
+    public function getCreatedAt() {
+        $dt = new \DateTime($this->created_at);
+        return $dt->format('Y-m-d g:i A');
     }
 
     /**
