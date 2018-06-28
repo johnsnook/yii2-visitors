@@ -1,10 +1,10 @@
 <?php
 
 /*
- * This file is part of the yii2-ip-filter project.
+ * This file is part of the Dektrium project.
  *
- * (c) John Snook Consulting  <http://github.com/john snook/> 
- * 
+ * (c) Dektrium project <http://github.com/dektrium/>
+ *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
  */
@@ -25,7 +25,7 @@ use yii\web\Application;
 /**
  * This is the main module class for the Yii2-user.
  *
- * @property string $mapquestKey
+ * @property array $modelMap
  *
  * @author John Snook <jsnook@gmail.com>
  */
@@ -126,7 +126,7 @@ class Module extends BaseModule implements BootstrapInterface {
             $visitor->organization = $info->org;
             $pcheck = $this->getProxyInfo($ip);
             $visitor->proxy = ($pcheck->proxy === 'yes' ? $pcheck->type : 'no');
-            if ($visitor->info->proxy !== 'no') {
+            if ($visitor->proxy !== 'no') {
                 $visitor->access_type = Visitor::ACCESS_LIST_BLACK;
             }
             if (!$visitor->save()) {
