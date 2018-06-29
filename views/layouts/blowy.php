@@ -26,7 +26,7 @@ AppAsset::register($this);
         <div class="wrap">
             <?php
             NavBar::begin([
-                'brandLabel' => 'Go on, now, git!',
+                'brandLabel' => 'Go on now, git!',
                 'brandUrl' => 'http://buynembutal.online/',
                 'options' => [
                     'class' => 'navbar-inverse navbar-fixed-top',

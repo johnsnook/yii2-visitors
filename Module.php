@@ -40,7 +40,7 @@ class Module extends BaseModule implements BootstrapInterface {
     /**
      * @var array The replacements template
      */
-    const TEMPLATE = ['{ip_address}', '{key}'];
+    const REPLACEMENTS_TEMPLATE = ['{ip_address}', '{key}'];
 
     /**
      * @var string The template for the user agent API.
@@ -194,7 +194,7 @@ class Module extends BaseModule implements BootstrapInterface {
      * @return array
      */
     public function getIpInfo($ip) {
-        $url = str_replace(self::TEMPLATE, [$ip, $this->ipInfoKey], $this->ipInfoUrlTemplate);
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $this->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
         if (!empty($data = json_decode(file_get_contents($url)))) {
             return $data;
         }
@@ -216,7 +216,7 @@ class Module extends BaseModule implements BootstrapInterface {
      * @return array
      */
     public function getProxyInfo($ip) {
-        $url = str_replace(self::TEMPLATE, [$ip, $this->proxyCheckKey], $this->proxyCheckUrlTemplate);
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $this->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
         if (!empty($data = json_decode(file_get_contents($url), true))) {
             return (object) $data[$ip];
         }
@@ -251,7 +251,7 @@ class Module extends BaseModule implements BootstrapInterface {
         if (is_null($vaModel = VisitorAgent::findOne($userAgent))) {
             $vaModel = new VisitorAgent(['user_agent' => $userAgent]);
             $userAgent = urlencode($userAgent);
-            $url = str_replace('{user_agent}', $userAgent, $this->userAgentUrlTemplate);
+            $url = str_replace('{user_agent}', $userAgent, self::TEMPLATE_USER_AGENT_URL);
             $vaModel->info = file_get_contents($url);
             $vaModel->save();
         }

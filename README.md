@@ -12,13 +12,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-php composer.phar require --prefer-dist johnsnook/yii2-ip-filter "~v0.9"
+php composer.phar require --prefer-dist johnsnook/yii2-ip-filter "*"
 ```
 
 or add
 
 ```
-"johnsnook/yii2-ip-filter": "~v0.9"
+"johnsnook/yii2-ip-filter": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -30,11 +30,11 @@ Once the extension is installed, add 'ipFilter' to the bootstrap section of your
 
 ```php
     'bootstrap' => [
-        ...
+        'log',
         'ipFilter',
-        ...
     ],
 ```
+
 Then add the module definition
 ```php
     'modules' => [
@@ -53,9 +53,8 @@ Then add the module definition
 The routes are defined in the Module file as $urlRules.  These can also be redefined in the module definition.  By default, they look like this:
 ```php
     public $urlRules = [
-        'visitor' => '/ipFilter/visitor/index',
-        'visitor/index' => '/ipFilter/visitor/index',
-        'visitor/blowoff' => '/ipFilter/visitor/blowoff',
+        'visitor' => 'ipFilter/visitor/index',
+        'visitor/index' => 'ipFilter/visitor/index',
         'visitor/<id>' => 'ipFilter/visitor/view',
         'visitor/update/<id>' => 'ipFilter/visitor/update',
     ];
@@ -71,23 +70,18 @@ and run the following command:
 $ php yii migrate/up --migrationPath=@vendor/johnsnook/yii2-ip-filter/migrations
 ```
 
+Free API Keys
+-----
+1) For the map to render in Visitor view, you must have a MapQuest key.  Go to https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register for a free API key.
+2) ipinfo.io limits the number of requests each day to 100 but with a key you can make 1000 a day.  Go to https://ipinfo.io/signup for a free API key
+3) proxycheck.io limits the number of requests each day to 100 but with a key you can make 1000 a day.  Go to https://proxycheck.io/ for a free API key
+
+
 Customization
 -----
-If you have prettyUrl set to true, you should be able to go to ```http://yoursite.com/visitor``` and see the index.  Otherwise use index.php?r=ipFilter/visitor/index.
+So, you should be able to go to ```http://yoursite.com/visitor``` and see the index.
 
 But you'll probably want to make your own views.  If it was me, I'd copy the controller and views to your backend or basic controllers & views directories.  But maybe there's some best practices way to do it.
-
-If there are controller actions you don't want logged, such as a javascript process that updates using an ajax call periodically, you can use the "ignorables" configuration like so:
-```php
-    'ipFilter' => [
-        'class' => 'johnsnook\ipFilter\Module',
-        ...
-        'ignorables' => [
-            'somecontroller' => ['action1', 'action2'],
-        ]
-        ...
-    ],
-```
 
 Usage
 -----
@@ -95,8 +89,8 @@ Usage
 If you want to find out information on the current user, you can get the visitor model from the module and use it like so:
 ```php
     $visitor = \Yii::$app->getModule('ipFilter')->visitor;
-    // give a special hello to people in Atlanta like your ex wife for example
-    if ($visitor->city === 'Atlanta' || $visitor->ip_address === '99.203.4.238') {
+    // give a special hello to people in Atlanta or your ex wife
+    if ($visitor->info->city === 'Atlanta' || $visitor->info->ip_address === '99.203.4.238') {
         echo "Your city sucks balls";
     }
 ```

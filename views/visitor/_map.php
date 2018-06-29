@@ -11,13 +11,18 @@ use yii\helpers\Html;
 
 $mapKey = Yii::$app->getModule('ipFilter')->mapquestKey;
 
-$mapUrl = "https://open.mapquestapi.com/staticmap/v4/getmap?key=$mapKey";
-$mapUrl .= "&size=1000,500&zoom=16&center={$model->latitude},{$model->longitude}";
-$mapUrl .= "&mcenter={$model->latitude},{$model->longitude},0,0";
-$mapUrl .= "&type=map&imagetype=png&scalebar=false";
-$googUrl = "https://www.google.com/maps/place/{$model->latitude},{$model->longitude}";
-$location = "$model->city, $model->region, $model->country Map";
-$staticMap = Html::img($mapUrl, ['width' => '1000', 'alt' => $location]);
-echo Html::a($staticMap, $googUrl, ['target' => "_blank"]);
-?>
-    
+if (empty(Yii::$app->getModule('ipFilter')->mapquestKey)) {
+    echo "<p>For this map to work, you must hava MapQuest key defined in your configuration.</p>";
+    echo "<p>Go to <a href=\"https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register\">their site</a> for a free API key</p>";
+} else {
+
+    $mapUrl = "https://open.mapquestapi.com/staticmap/v4/getmap?key=$mapKey";
+    $mapUrl .= "&size=1000,500&zoom=16&center={$model->latitude},{$model->longitude}";
+    $mapUrl .= "&mcenter={$model->latitude},{$model->longitude},0,0";
+    $mapUrl .= "&type=map&imagetype=png&scalebar=false";
+    $googUrl = "https://www.google.com/maps/place/{$model->latitude},{$model->longitude}";
+    $location = "$model->city, $model->region, $model->country Map";
+    $staticMap = Html::img($mapUrl, ['width' => '1000', 'alt' => $location]);
+    echo Html::a($staticMap, $googUrl, ['target' => "_blank"]);
+}
+
