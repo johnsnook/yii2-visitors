@@ -9,7 +9,7 @@ use yii\widgets\ActiveForm;
 
 $this->title = 'Update Visitor: ' . empty($model->name) ? $model->ip : "$model->name - $model->ip ";
 $this->params['breadcrumbs'][] = ['label' => 'Visitors', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->ip, 'url' => ['view', 'ip' => $model->ip]];
+$this->params['breadcrumbs'][] = ['label' => $model->ip, 'url' => ['view', 'id' => $model->ip]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="visitor-update">
@@ -18,7 +18,7 @@ $this->params['breadcrumbs'][] = 'Update';
         <?php $form = ActiveForm::begin(); ?>
         <?= $form->field($model, 'name')->textInput() ?>
         <?= $form->field($model, 'message')->textarea(['rows' => 6]) ?>
-        <?= $form->field($model, 'access_type')->dropDownList(['None' => 'None', 'Black' => 'Black', 'White' => 'White',]) ?>
+        <?= $form->field($model, 'is_blacklisted')->checkbox() ?>
         <div class="form-group field-visitor-created_at">
             <label class="control-label" for="visitor-created_at">Creation</label>
             <div type="text" id="visitor-created_at" class="form-control" name="Visitor[created_at]">

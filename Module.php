@@ -30,8 +30,9 @@ use yii\web\Application;
  */
 class Module extends BaseModule implements BootstrapInterface {
 
-    const VERSION = '0.9.1';
+    const VERSION = '0.9.2';
 
+    //public $controllerNamespace = 'johnsnook\ipFilter\controllers';
     public $proxyCheckUrlTemplate = 'http://proxycheck.io/v2/{ip_address}&key={key}&vpn=1&inf=0';
     public $ipInfoUrlTemplate = 'http://ipinfo.io/{ip_address}?token={key}';
     public $userAgentUrlTemplate = 'http://www.useragentstring.com/?uas={user_agent}&getJSON=all';
@@ -43,7 +44,7 @@ class Module extends BaseModule implements BootstrapInterface {
 
     public $ipInfoKey = '';
     public $proxyCheckKey = '';
-    public $blowOff = 'ipFilter/visitor/blowoff';
+    public $blowOff = 'visitor/blowoff';
     public $visitor;
     public $admins = [];
     private $ipBlock = 'iptables -A INPUT -s 123.45.67.89 -j DROP';
@@ -54,16 +55,15 @@ class Module extends BaseModule implements BootstrapInterface {
      *
      * @See [[GroupUrlRule::prefix]]
      */
-    public $urlPrefix = 'ipFilter';
 
     /** @var array The rules to be used in URL management. */
     public $urlRules = [
-        'visitor' => 'ipFilter/visitor/index',
-        'visitor/index' => 'ipFilter/visitor/index',
-        //'/visitor/blowoff' => 'ipFilter/visitor/blowoff',
+//        'visitor/<action:\w+>' => '/ipFilter/visitor/<action>',
+        'visitor' => '/ipFilter/visitor/index',
+        'visitor/index' => '/ipFilter/visitor/index',
+        'visitor/blowoff' => '/ipFilter/visitor/blowoff',
         'visitor/<id>' => 'ipFilter/visitor/view',
         'visitor/update/<id>' => 'ipFilter/visitor/update',
-        'visitor/delete/<id>' => 'visitor/delete',
     ];
 
     public function getIsAdmin() {
@@ -76,9 +76,7 @@ class Module extends BaseModule implements BootstrapInterface {
      */
     public function bootstrap($app) {
         if ($app->hasModule('ipFilter') && ($module = $app->getModule('ipFilter')) instanceof Module) {
-            //\Yii::$container->set('johnsnook\ipFilter\models\Visitor'); //, ['Visitor' => 'johnsnook\ipFilter\models\Visitor']
-            //$app->controllerMap[] = ['Visitor' => 'johnsnook\\ipFilter\\controllers\\VisitorController'];
-            $app->getUrlManager()->addRules($module->urlRules, false);
+            $app->getUrlManager()->addRules($this->urlRules, false);
 
             /** this allows me to do some importing from my old security system */
             if (!($app instanceof \yii\console\Application)) {
@@ -124,7 +122,7 @@ class Module extends BaseModule implements BootstrapInterface {
             $pcheck = $this->getProxyInfo($ip);
             $visitor->proxy = ($pcheck->proxy === 'yes' ? $pcheck->type : 'no');
             if ($visitor->proxy !== 'no') {
-                $visitor->access_type = Visitor::ACCESS_LIST_BLACK;
+                $visitor->is_blacklisted = true;
             }
             if (!$visitor->save()) {
                 die(json_encode($visitor->errors));
@@ -139,7 +137,9 @@ class Module extends BaseModule implements BootstrapInterface {
         if ($alreadyFuckingOff) {
             //die($event->action->controller->route . '=====' . $this->blowOff);
             return true;
-        } elseif (!$alreadyFuckingOff && ($visitor->access_type === Visitor::ACCESS_LIST_BLACK)) {
+        } elseif (!$alreadyFuckingOff && $visitor->is_blacklisted) {
+            die(json_encode([$event->action->controller->route, $this->blowOff]));
+
             $event->handled = true;
             return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
         }

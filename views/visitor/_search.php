@@ -19,7 +19,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'ip') ?>
 
-    <?= $form->field($model, 'access_type') ?>
+    <?= $form->field($model, 'is_blacklisted') ?>
 
     <?= $form->field($model, 'created_at') ?>
 
@@ -35,13 +35,13 @@ use yii\widgets\ActiveForm;
 
     <?php // echo $form->field($model, 'access_log') ?>
 
-        <?php // echo $form->field($model, 'proxy_check')  ?>
+    <?php // echo $form->field($model, 'proxy_check')  ?>
 
     <div class="form-group">
-<?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
-    <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
+        <?= Html::submitButton('Search', ['class' => 'btn btn-primary']) ?>
+        <?= Html::resetButton('Reset', ['class' => 'btn btn-default']) ?>
     </div>
 
-<?php ActiveForm::end(); ?>
+    <?php ActiveForm::end(); ?>
 
 </div>

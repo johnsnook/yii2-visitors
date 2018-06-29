@@ -21,15 +21,9 @@ class VisitorController extends Controller {
      */
     public function behaviors() {
         return [
-//            'verbs' => [
-//                'class' => VerbFilter::className(),
-//                'actions' => [
-//                    'delete' => ['POST'],
-//                ],
-//            ],
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index', 'view', 'update'],
+                'only' => ['index', 'view', 'update', 'blowoff'],
                 'rules' => [
                     [
                         'allow' => true,
@@ -109,7 +103,7 @@ class VisitorController extends Controller {
      */
     public function actionBlacklist($id) {
         $model = $this->findModel($id);
-        $model->access_type = Visitor::ACCESS_LIST_BLACK;
+        $model->is_blacklisted = true;
         $model->save();
         return $this->actionView($id);
     }
@@ -119,6 +113,7 @@ class VisitorController extends Controller {
      * @return mixed
      */
     public function actionBlowoff() {
+        $this->layout = 'blowy';
         $visitor = $this->module->visitor;
         return $this->render('blowoff', [
                     'visitor' => $visitor,
@@ -141,17 +136,6 @@ class VisitorController extends Controller {
                         'model' => $model,
             ]);
         }
-    }
-
-    /**
-     * Deletes an existing Visitor model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param string $id
-     * @return mixed
-     */
-    public function actionDelete($id) {
-        $this->findModel($id)->delete();
-        return $this->redirect(['index']);
     }
 
     /**

@@ -10,7 +10,7 @@ use yii\db\Expression;
  * This is the model class for table "visitor".
  *
  * @property string $ip
- * @property string $access_type
+ * @property boolean $is_blacklisted
  * @property string $created_at
  * @property string $updated_at
  * @property integer $user_id
@@ -27,10 +27,6 @@ use yii\db\Expression;
  * @property VisitorLog[] $visitorLogs
  */
 class Visitor extends ActiveRecord {
-
-    const ACCESS_LIST_NONE = 'None';
-    const ACCESS_LIST_BLACK = 'Black';
-    const ACCESS_LIST_WHITE = 'White';
 
     /**
      * Set up timestamp behavior here
@@ -59,25 +55,12 @@ class Visitor extends ActiveRecord {
     public function rules() {
         return [
             [['ip'], 'required'],
-            [['access_type', 'name', 'message', 'ip', 'city', 'region', 'organization', 'proxy'], 'string'],
+            [['name', 'message', 'ip', 'city', 'region', 'organization', 'proxy'], 'string'],
+            [['is_blacklisted'], 'boolean'],
             [['created_at', 'updated_at'], 'safe'],
             [['latitude', 'longitude'], 'double'],
             [['user_id'], 'integer'],
         ];
-    }
-
-    public function beforeSave($insert) {
-//        if (gettype($this->info) !== 'string') {
-//            $this->info = json_encode($this->info);
-//        }
-
-        return true;
-    }
-
-    public function afterFind() {
-        parent::afterFind();
-        $this->info = (object) $this->info;
-        //$this->info = json_decode($this->info);
     }
 
     public static function incrementCount($ip) {
@@ -91,7 +74,7 @@ class Visitor extends ActiveRecord {
         return $dt->format('Y-m-d g:i A');
     }
 
-    public function getCUpdatedAt() {
+    public function getUpdatedAt() {
         $dt = new \DateTime($this->updated_at);
         return $dt->format('Y-m-d g:i A');
     }
@@ -102,7 +85,7 @@ class Visitor extends ActiveRecord {
     public function attributeLabels() {
         return [
             'ip' => 'Ip Address',
-            'access_type' => 'Access List',
+            'is_blacklisted' => 'Blacklisted?',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'user_id' => 'User ID',

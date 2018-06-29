@@ -15,9 +15,10 @@ use johnsnook\ipFilter\assets\VisitorAsset;
 VisitorAsset::register($this);
 $this->title = 'Visitors';
 $this->params['breadcrumbs'][] = $this->title;
+$route = Url::to([Yii::$app->controller->id . '/index']);
 ?>
 <div class="visitor-index" style="text-align: center">
-    <form id="search-form" action="/visitor/index" method="get" role="form">
+    <form id="search-form" action="<?= $route ?>" method="get" role="form">
         <div class="row">
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
@@ -42,13 +43,13 @@ $this->params['breadcrumbs'][] = $this->title;
                         </ul>
                     </div><!-- /btn-group -->
                     <div class="input-group-btn">
-                        <a href="/visitor/index" type="button" class="btn btn-default btn-outline-dark" role="button">Reset</a>
+                        <a href="<?= $route ?>" type="button" class="btn btn-default btn-outline-dark" role="button">Reset</a>
                     </div>
                 </div><!-- /input-group -->
             </div>
             <div class="col-lg-1"></div>
         </div>
-        <div class="row"><?= $dataProvider->query->createCommand()->getRawSql() ?></div>
+        <div class="row"><?php #echo $dataProvider->query->createCommand()->getRawSql()       ?></div>
     </form>
     <h1><?php echo $dataProvider->totalCount . ' ' . Html::encode($this->title) ?>!</h1>
 
@@ -59,19 +60,20 @@ $this->params['breadcrumbs'][] = $this->title;
         #'filterModel' => $searchModel,
         'summary' => false,
         'columns' => [
-            ['class' => 'yii\grid\ActionColumn'],
+            [
+                'class' => 'yii\grid\ActionColumn',
+                'template' => '{view} {update}'
+            ],
             [
                 'class' => '\yii\grid\DataColumn',
                 'attribute' => 'ip',
                 'format' => 'html',
                 'value' => function($data) {
                     $style = '';
-                    if ($data->access_type === Visitor::ACCESS_LIST_BLACK) {
+                    if ($data->is_blacklisted) {
                         $style = 'background-color: Black; color: White';
-                    } elseif ($data->access_type === Visitor::ACCESS_LIST_WHITE) {
-                        $style = 'background-color: GreenYellow';
                     }
-                    return Html::a($data->ip, ['visitor/view', 'id' => $data->ip], ['style' => $style]);
+                    return Html::a($data->ip, ['view', 'id' => $data->ip], ['style' => $style]);
                 }
             ],
             [
@@ -104,25 +106,11 @@ $this->params['breadcrumbs'][] = $this->title;
                 'class' => '\yii\grid\DataColumn',
                 'attribute' => 'updated_at',
                 'value' => function($data) {
-                    //$dt = new DateTime();
-                    return $data->updatedBy;
+                    $dt = new DateTime($data->updated_at);
+                    return $dt->format('Y-m-d g:i A');
                 }
             ],
-        //'user_id',
-        // 'name',
-        // 'message:ntext',
-        // 'info',
-        // 'access_log',
-        // 'proxy_check',
         ],
-//        'pager' => [
-//            'class' => \kop\y2sp\ScrollPager::className(),
-//            'container' => '.grid-view tbody',
-//            'item' => 'tr',
-//            'paginationSelector' => '.grid-view .pagination',
-//            'triggerOffset' => 100,
-//            'triggerTemplate' => '<tr class="ias-trigger"><td colspan="100%" style="text-align: center"><a style="cursor: pointer">{text}</a></td></tr>',
-//        ],
     ]);
     ?>
     <?php Pjax::end(); ?>
