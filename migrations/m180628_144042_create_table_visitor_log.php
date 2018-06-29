@@ -15,7 +15,7 @@ class m180628_144042_create_table_visitor_log extends Migration {
             'ip' => $this->string()->notNull(),
             'created_at' => $this->timestamp()->notNull()->defaultExpression('now()'),
             'request' => $this->string()->notNull(),
-            'referer' => $this->string(),
+            'referer' => $this->text(),
             'user_agent' => $this->text(),
                 ], $tableOptions);
 
