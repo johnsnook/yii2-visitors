@@ -35,29 +35,24 @@ Once the extension is installed, add 'ipFilter' to the bootstrap section of your
     ],
 ```
 
-Then add the module definition
+Then add the bare-minimum module definition
 ```php
     'modules' => [
         ...
         'ipFilter' => [
             'class' => 'johnsnook\ipFilter\Module',
-            'ipInfoKey' => 'asfdasdfasdfasdfasdf',  // Get a free key from ipinfo.io
-            'proxyCheckKey' => '012345-012345-012345-012345',   // Get a free key from proxycheck.io
-            'mapquestKey' => 'zuppityboobopadiddlydiddly',  // Get a free key from https://developer.mapquest.com/user/me/apps
-            'blowOff' => 'site/get-out'
         ],
         ...
     ],
 ```
 
-The routes are defined in the Module file as $urlRules.  These can also be redefined in the module definition.  By default, they look like this:
+The routes are defined in the Module file as $urlRules.  These can also be redefined in the module definition.  By default, they look like this for prettyUrls:
 ```php
-    public $urlRules = [
-        'visitor' => 'ipFilter/visitor/index',
-        'visitor/index' => 'ipFilter/visitor/index',
-        'visitor/<id>' => 'ipFilter/visitor/view',
-        'visitor/update/<id>' => 'ipFilter/visitor/update',
-    ];
+    'visitor' => '/ipFilter/visitor/index',
+    'visitor/index' => '/ipFilter/visitor/index',
+    'visitor/blowoff' => '/ipFilter/visitor/blowoff',
+    'visitor/<id>' => 'ipFilter/visitor/view',
+    'visitor/update/<id>' => 'ipFilter/visitor/update',
 ```
 
 ### 3. Update database schema
@@ -79,12 +74,36 @@ Free API Keys
 
 Customization
 -----
-So, you should be able to go to ```http://yoursite.com/visitor``` and see the index.
+So, you should be able to go to  ```http://yoursit.biz/index.php?r=ipFilter/visitor/index``` or, if you have prettyUrl enabled, ```http://yoursite.com/visitor``` and see the visitor index.
 
 But you'll probably want to make your own views.  If it was me, I'd copy the controller and views to your backend or basic controllers & views directories.  But maybe there's some best practices way to do it.
 
+When you're done getting all your keys, and deciding that there are some controller actions you're not interested in tracking, your module configuration might look something like this:
+```php
+    'modules' => [
+        ...
+        'ipFilter' => [
+            'class' => 'johnsnook\ipFilter\Module',
+            'ipInfoKey' => 'Not a real key, obviously',
+            'proxyCheckKey' => 'Not a real key, obviously',
+            'mapquestKey' => 'Not a real key, obviously',
+            'blowOff' => 'site/nope',
+            'ignorables' => [
+                'acontroller' => ['ignore-me', 'ignore-that'],
+                'whitelist' => ['127.0.0.1', '24.99.155.86']
+            ]
+        ],
+        ...
+    ],
+```
+As you see, you can add a custom 'blowoff' controller action.  The visitor will be passed in so you can display the name and blowoff message.
+
+A couple of things to note here about the 'ignorables' configuration array.  You can add a controller and actions to ignore as well as a whitelist of IP addresses to ignore.  These will not be added to the access log.
+
 Usage
 -----
+
+
 
 If you want to find out information on the current user, you can get the visitor model from the module and use it like so:
 ```php

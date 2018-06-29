@@ -11,7 +11,7 @@ use yii\helpers\Html;
 
 $mapKey = Yii::$app->getModule('ipFilter')->mapquestKey;
 
-if (empty(Yii::$app->getModule('ipFilter')->mapquestKey)) {
+if (empty($mapKey)) {
     echo "<p>For this map to work, you must hava MapQuest key defined in your configuration.</p>";
     echo "<p>Go to <a href=\"https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register\">their site</a> for a free API key</p>";
 } else {

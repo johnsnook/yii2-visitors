@@ -2,11 +2,9 @@
 
 use johnsnook\ipFilter\models\VisitorAgent;
 use yii\grid\GridView;
-use yii\widgets\Pjax;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-Pjax::begin();
 // echo $this->render('_search', ['model' => $searchModel]);
 echo GridView::widget([
     'dataProvider' => $dataProvider,
@@ -46,5 +44,4 @@ echo GridView::widget([
         ],
     ],
 ]);
-Pjax::end();
 ?>

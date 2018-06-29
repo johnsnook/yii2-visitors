@@ -125,14 +125,15 @@ class Module extends BaseModule implements BootstrapInterface {
      * @param ActionEvent $event
      */
     public function metalDetector(ActionEvent $event) {
+        $remoteAddress = new RemoteAddress();
+        $ip = $remoteAddress->getIpAddress();
 
         $controllerId = $event->action->controller->id;
         if (array_key_exists($controllerId, $this->ignorables) && in_array($event->action->id, $this->ignorables[$controllerId])) {
             return true;
+        } elseif (array_key_exists('whitelist', $this->ignorables) && in_array($ip, $this->ignorables['whitelist'])) {
+            return true;
         }
-
-        $remoteAddress = new RemoteAddress();
-        $ip = $remoteAddress->getIpAddress();
 
         /**
          * Try to find existing visitor record, and creates a new one if not found
@@ -170,10 +171,8 @@ class Module extends BaseModule implements BootstrapInterface {
             //die($event->action->controller->route . '=====' . $this->blowOff);
             return true;
         } elseif (!$alreadyFuckingOff && $visitor->is_blacklisted) {
-            die(json_encode([$event->action->controller->route, $this->blowOff]));
-
             $event->handled = true;
-            return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
+            return \Yii::$app->getResponse()->redirect([$this->blowOff, 'visitor' => $visitor])->send();
         }
     }
 
