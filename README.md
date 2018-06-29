@@ -12,13 +12,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-php composer.phar require --prefer-dist johnsnook/yii2-ip-filter "*"
+php composer.phar require --prefer-dist johnsnook/yii2-ip-filter "~v0.9"
 ```
 
 or add
 
 ```
-"johnsnook/yii2-ip-filter": "*"
+"johnsnook/yii2-ip-filter": "~v0.9"
 ```
 
 to the require section of your `composer.json` file.
@@ -30,8 +30,9 @@ Once the extension is installed, add 'ipFilter' to the bootstrap section of your
 
 ```php
     'bootstrap' => [
-        'log',
+        ...
         'ipFilter',
+        ...
     ],
 ```
 Then add the module definition
@@ -52,8 +53,9 @@ Then add the module definition
 The routes are defined in the Module file as $urlRules.  These can also be redefined in the module definition.  By default, they look like this:
 ```php
     public $urlRules = [
-        'visitor' => 'ipFilter/visitor/index',
-        'visitor/index' => 'ipFilter/visitor/index',
+        'visitor' => '/ipFilter/visitor/index',
+        'visitor/index' => '/ipFilter/visitor/index',
+        'visitor/blowoff' => '/ipFilter/visitor/blowoff',
         'visitor/<id>' => 'ipFilter/visitor/view',
         'visitor/update/<id>' => 'ipFilter/visitor/update',
     ];
@@ -71,9 +73,21 @@ $ php yii migrate/up --migrationPath=@vendor/johnsnook/yii2-ip-filter/migrations
 
 Customization
 -----
-So, you should be able to go to ```http://yoursite.com/visitor``` and see the index.
+If you have prettyUrl set to true, you should be able to go to ```http://yoursite.com/visitor``` and see the index.  Otherwise use index.php?r=ipFilter/visitor/index.
 
 But you'll probably want to make your own views.  If it was me, I'd copy the controller and views to your backend or basic controllers & views directories.  But maybe there's some best practices way to do it.
+
+If there are controller actions you don't want logged, such as a javascript process that updates using an ajax call periodically, you can use the "ignorables" configuration like so:
+```php
+    'ipFilter' => [
+        'class' => 'johnsnook\ipFilter\Module',
+        ...
+        'ignorables' => [
+            'somecontroller' => ['action1', 'action2'],
+        ]
+        ...
+    ],
+```
 
 Usage
 -----
