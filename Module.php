@@ -1,12 +1,10 @@
 <?php
 
-/*
- * This file is part of the Dektrium project.
- *
- * (c) Dektrium project <http://github.com/dektrium/>
- *
- * For the full copyright and license information, please view the LICENSE
- * file that was distributed with this source code.
+/**
+ * @author John Snook
+ * @date 2018-06-28
+ * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @copyright 2018 John Snook Consulting
  */
 
 namespace johnsnook\ipFilter;
@@ -24,37 +22,75 @@ use yii\web\Application;
 /**
  * This is the main module class for the Yii2-user.
  *
- * @property array $modelMap
+ * @property string $ipInfoKey
+ * @property string $mapquestKey
+ * @property string $proxyCheckKey
+ * @property string $proxyCheckKey
+ * @property string $proxyCheckKey
  *
  * @author John Snook <jsnook@gmail.com>
  */
 class Module extends BaseModule implements BootstrapInterface {
 
-    const VERSION = '0.9.2';
-
-    //public $controllerNamespace = 'johnsnook\ipFilter\controllers';
-    public $proxyCheckUrlTemplate = 'http://proxycheck.io/v2/{ip_address}&key={key}&vpn=1&inf=0';
-    public $ipInfoUrlTemplate = 'http://ipinfo.io/{ip_address}?token={key}';
-    public $userAgentUrlTemplate = 'http://www.useragentstring.com/?uas={user_agent}&getJSON=all';
-    public $mapquestKey;
-    public $blacklistProxyType = ['VPN', 'TOR'];
-    public $ignore;
-
-    const TEMPLATE = ['{ip_address}', '{key}'];
-
-    public $ipInfoKey = '';
-    public $proxyCheckKey = '';
-    public $blowOff = 'visitor/blowoff';
-    public $visitor;
-    public $admins = [];
-    private $ipBlock = 'iptables -A INPUT -s 123.45.67.89 -j DROP';
-    private $ipUnBlock = 'iptables -D INPUT -s 123.45.67.89 -j DROP';
+    /**
+     * @var string The next release version string
+     */
+    const VERSION = 'v0.9.1';
 
     /**
-     * @var string The prefix for user module URL.
-     *
-     * @See [[GroupUrlRule::prefix]]
+     * @var array The replacements template
      */
+    const TEMPLATE = ['{ip_address}', '{key}'];
+
+    /**
+     * @var string The template for the user agent API.
+     */
+    const TEMPLATE_USER_AGENT_URL = 'http://www.useragentstring.com/?uas={user_agent}&getJSON=all';
+
+    /**
+     * @var string The template for the proxy check API.
+     */
+    const TEMPLATE_PROXY_CHECK_URL = 'http://proxycheck.io/v2/{ip_address}&key={key}&vpn=1&inf=0';
+
+    /**
+     * @var string The template for the ip info API.
+     */
+    const TEMPLATE_IP_INFO_URL = 'http://ipinfo.io/{ip_address}?token={key}';
+
+    /**
+     * @var Visitor The Visitor record of the currently connected particular individual
+     */
+    public $visitor;
+
+    /**
+     * @var string The route to your blowoff page telling the user to pound sand
+     */
+    public $blowOff = 'visitor/blowoff';
+
+    /**
+     * @var string $ipInfoKey Go to https://ipinfo.io/signup for a free API key
+     */
+    public $ipInfoKey = '';
+
+    /**
+     * @var string $mapquestKey Go to https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register for a free API key
+     */
+    public $mapquestKey;
+
+    /**
+     * @var string $proxyCheckKey Go to https://proxycheck.io/ for a free API key
+     */
+    public $proxyCheckKey = '';
+
+    /**
+     * @var array These are the controller actions that will not be logged
+     * <code>
+     *     [
+     *         'site'=> ['about', 'contact'],
+     *     ]
+     * </code>
+     */
+    public $ignorables = [];
 
     /** @var array The rules to be used in URL management. */
     public $urlRules = [
@@ -65,10 +101,6 @@ class Module extends BaseModule implements BootstrapInterface {
         'visitor/<id>' => 'ipFilter/visitor/view',
         'visitor/update/<id>' => 'ipFilter/visitor/update',
     ];
-
-    public function getIsAdmin() {
-        return in_array($this->visitor->ip, $this->admins);
-    }
 
     /**
      *
@@ -95,7 +127,7 @@ class Module extends BaseModule implements BootstrapInterface {
     public function metalDetector(ActionEvent $event) {
 
         $controllerId = $event->action->controller->id;
-        if (array_key_exists($controllerId, $this->ignore) && in_array($event->action->id, $this->ignore[$controllerId])) {
+        if (array_key_exists($controllerId, $this->ignorables) && in_array($event->action->id, $this->ignorables[$controllerId])) {
             return true;
         }
 

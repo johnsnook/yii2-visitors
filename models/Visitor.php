@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * @author John Snook
+ * @date 2018-06-28
+ * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @copyright 2018 John Snook Consulting
+ */
+
 namespace johnsnook\ipFilter\models;
 
 use yii\db\ActiveRecord;
@@ -24,7 +31,6 @@ use yii\db\Expression;
  * @property string $organization
  * @property string $proxy
  *
- * @property VisitorLog[] $visitorLogs
  */
 class Visitor extends ActiveRecord {
 
@@ -63,17 +69,33 @@ class Visitor extends ActiveRecord {
         ];
     }
 
+    /**
+     * To reduce load on the database by performing a count(*) of visitor_log for
+     * every visitor, we increment the count field whenever a new visit is logged
+     *
+     * @param string $ip
+     */
     public static function incrementCount($ip) {
         $sql = "UPDATE visitor SET visits = visits + 1, updated_at = now() WHERE ip = '$ip'";
         $command = \Yii::$app->db->createCommand($sql);
         $command->execute();
     }
 
+    /**
+     * Format the postgresql time stamp into nicer version
+     *
+     * @return string a formatted big endian DateTime
+     */
     public function getCreatedAt() {
         $dt = new \DateTime($this->created_at);
         return $dt->format('Y-m-d g:i A');
     }
 
+    /**
+     * Format the postgresql time stamp into nicer version
+     *
+     * @return string a formatted big endian DateTime
+     */
     public function getUpdatedAt() {
         $dt = new \DateTime($this->updated_at);
         return $dt->format('Y-m-d g:i A');
@@ -103,13 +125,6 @@ class Visitor extends ActiveRecord {
             'organization' => 'Organization',
             'access_log' => 'Access Log',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getVisitorLogs() {
-        return $this->hasMany(VisitorLog::className(), ['ip' => 'ip']);
     }
 
 }
