@@ -2,10 +2,9 @@
 
 use yii\db\Migration;
 
-class m180628_144042_create_table_visitor_log extends Migration
-{
-    public function up()
-    {
+class m180628_144042_create_table_visitor_log extends Migration {
+
+    public function up() {
         $tableOptions = null;
         if ($this->db->driverName === 'mysql') {
             $tableOptions = 'CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB';
@@ -17,8 +16,8 @@ class m180628_144042_create_table_visitor_log extends Migration
             'created_at' => $this->timestamp()->notNull()->defaultExpression('now()'),
             'request' => $this->string()->notNull(),
             'referer' => $this->string(),
-            'user_agent' => $this->string(),
-        ], $tableOptions);
+            'user_agent' => $this->text(),
+                ], $tableOptions);
 
         $this->createIndex('visits_ip_idx', '{{%visitor_log}}', 'ip');
         $this->createIndex('visits_timestamp_idx', '{{%visitor_log}}', 'created_at');
@@ -26,8 +25,8 @@ class m180628_144042_create_table_visitor_log extends Migration
         $this->addForeignKey('visits_visitor_fkey', '{{%visitor_log}}', 'ip', '{{%visitor}}', 'ip', 'CASCADE', 'CASCADE');
     }
 
-    public function down()
-    {
+    public function down() {
         $this->dropTable('{{%visitor_log}}');
     }
+
 }

@@ -9,7 +9,6 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
-use yii\db\Query;
 
 /**
  * VisitorController implements the CRUD actions for Visitor model.
@@ -23,7 +22,7 @@ class VisitorController extends Controller {
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index', 'view', 'update', 'blowoff'],
+                'only' => ['index', 'view', 'update', 'blowoff', 'blacklist'],
                 'rules' => [
                     [
                         'allow' => true,
@@ -32,7 +31,7 @@ class VisitorController extends Controller {
                     ],
                     [
                         'allow' => true,
-                        'actions' => ['index', 'view', 'update'],
+                        'actions' => ['index', 'view', 'update', 'blacklist'],
                         'roles' => ['@'],
                     ],
                 ],

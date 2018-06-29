@@ -17,7 +17,7 @@ $this->title = 'Visitors';
 $this->params['breadcrumbs'][] = $this->title;
 $route = Url::to([Yii::$app->controller->id . '/index']);
 ?>
-<div class="visitor-index" style="text-align: center">
+<div class="visitor-index" >
     <form id="search-form" action="<?= $route ?>" method="get" role="form">
         <div class="row">
             <div class="col-lg-1"></div>
@@ -49,7 +49,7 @@ $route = Url::to([Yii::$app->controller->id . '/index']);
             </div>
             <div class="col-lg-1"></div>
         </div>
-        <div class="row"><?php #echo $dataProvider->query->createCommand()->getRawSql()       ?></div>
+        <div class="row"><?php #echo $dataProvider->query->createCommand()->getRawSql()        ?></div>
     </form>
     <h1><?php echo $dataProvider->totalCount . ' ' . Html::encode($this->title) ?>!</h1>
 
