@@ -68,7 +68,7 @@ class VisitorAgent extends \yii\db\ActiveRecord {
     public function rules() {
         return [
             [['user_agent'], 'required'],
-            [['user_agent', 'name', 'info'], 'string'],
+            [['user_agent', 'name'], 'string'],
         ];
     }
 

@@ -61,6 +61,7 @@ class Visitor extends ActiveRecord {
     public function rules() {
         return [
             [['ip'], 'required'],
+            //['ip', 'ip', 'ipv6' => false], // IPv4 address (IPv6 is disabled)
             [['name', 'message', 'ip', 'city', 'region', 'organization', 'proxy'], 'string'],
             [['is_blacklisted'], 'boolean'],
             [['created_at', 'updated_at'], 'safe'],

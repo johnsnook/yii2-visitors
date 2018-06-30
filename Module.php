@@ -14,6 +14,7 @@ use johnsnook\ipFilter\models\Country;
 use johnsnook\ipFilter\models\Visitor;
 use johnsnook\ipFilter\models\VisitorAgent;
 use johnsnook\ipFilter\models\VisitorLog;
+use Yii;
 use yii\base\ActionEvent;
 use yii\base\BootstrapInterface;
 use yii\base\Module as BaseModule;
@@ -83,6 +84,11 @@ class Module extends BaseModule implements BootstrapInterface {
     public $proxyCheckKey = '';
 
     /**
+     * @var string $whatsmybrowswerKey Go to https://proxycheck.io/ for a free API key
+     */
+    public $whatsmybrowswerKey = '';
+
+    /**
      * @var array These are the controller actions that will not be logged
      * <code>
      *     [
@@ -102,19 +108,27 @@ class Module extends BaseModule implements BootstrapInterface {
         'visitor/update/<id>' => 'ipFilter/visitor/update',
     ];
 
+    public function init() {
+        parent::init();
+        if (Yii::$app instanceof \yii\console\Application) {
+            $this->controllerNamespace = 'johnsnook\ipFilter\commands';
+        }
+    }
+
     /**
      *
      * @param Application $app
      */
     public function bootstrap($app) {
+
         if ($app->hasModule('ipFilter') && ($module = $app->getModule('ipFilter')) instanceof Module) {
             $app->getUrlManager()->addRules($this->urlRules, false);
 
             /** this allows me to do some importing from my old security system */
-            if (!($app instanceof \yii\console\Application)) {
-                $app->on(Application::EVENT_BEFORE_ACTION, [$module, 'metalDetector']);
-            } else {
+            if ($app instanceof \yii\console\Application) {
                 $this->controllerNamespace = 'johnsnook\ipFilter\commands';
+            } else {
+                $app->on(Application::EVENT_BEFORE_ACTION, [$module, 'metalDetector']);
             }
         }
     }
@@ -130,8 +144,6 @@ class Module extends BaseModule implements BootstrapInterface {
 
         $controllerId = $event->action->controller->id;
         if (array_key_exists($controllerId, $this->ignorables) && in_array($event->action->id, $this->ignorables[$controllerId])) {
-            return true;
-        } elseif (array_key_exists('whitelist', $this->ignorables) && in_array($ip, $this->ignorables['whitelist'])) {
             return true;
         }
 
@@ -162,13 +174,16 @@ class Module extends BaseModule implements BootstrapInterface {
             }
             $visitor->refresh();
         }
+        $this->visitor = $visitor;
+        if (array_key_exists('whitelist', $this->ignorables) && in_array($ip, $this->ignorables['whitelist'])) {
+            return true;
+        }
 
         $log = VisitorLog::log($ip);
         $this->logUserAgentInfo($log->user_agent);
         $alreadyFuckingOff = ($event->action->controller->route === $this->blowOff);
         $this->visitor = $visitor;
         if ($alreadyFuckingOff) {
-            //die($event->action->controller->route . '=====' . $this->blowOff);
             return true;
         } elseif (!$alreadyFuckingOff && $visitor->is_blacklisted) {
             $event->handled = true;
@@ -248,6 +263,11 @@ class Module extends BaseModule implements BootstrapInterface {
             return;
         }
         if (is_null($vaModel = VisitorAgent::findOne($userAgent))) {
+
+            $yii = \Yii::getAlias('@app') . '/../yii';
+            shell_exec("php $yii ipFilter/service/user-agent $userAgent " . self::TEMPLATE_USER_AGENT_URL . ' > /dev/null 2>&1 &');
+
+
             $vaModel = new VisitorAgent(['user_agent' => $userAgent]);
             $userAgent = urlencode($userAgent);
             $url = str_replace('{user_agent}', $userAgent, self::TEMPLATE_USER_AGENT_URL);

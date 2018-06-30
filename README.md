@@ -68,15 +68,24 @@ $ php yii migrate/up --migrationPath=@vendor/johnsnook/yii2-ip-filter/migrations
 Free API Keys
 -----
 1) For the map to render in Visitor view, you must have a MapQuest key.  Go to https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register for a free API key.
-2) ipinfo.io limits the number of requests each day to 100 but with a key you can make 1000 a day.  Go to https://ipinfo.io/signup for a free API key
-3) proxycheck.io limits the number of requests each day to 100 but with a key you can make 1000 a day.  Go to https://proxycheck.io/ for a free API key
+If you don't have this set, the map won't display.
 
+2) Ipinfo.io limits the number of requests each day to 100 but with a key you can make 1000 a day.  Go to https://ipinfo.io/signup for a free API key
+If you don't have this set, you'll be limited to 100 requests per day.
+
+3) Proxycheck.io limits the number of requests each day to 100 but with a key you can make 1000 a day.  Go to https://proxycheck.io/ for a free API key
+If you don't have this set, you'll be limited to 100 requests per day.
+
+4) Whatismybrowser.com is serious business, so having an API is mandatory to use their service.  Go to https://developers.whatismybrowser.com/api/signup/basic for a free API key, but be prepared to provide an "app name" and website.
+If you don't have this set, no data beyond the basic USER_AGENT string will be captured.
 
 Customization
 -----
 So, you should be able to go to  ```http://yoursit.biz/index.php?r=ipFilter/visitor/index``` or, if you have prettyUrl enabled, ```http://yoursite.com/visitor``` and see the visitor index.
 
 But you'll probably want to make your own views.  If it was me, I'd copy the controller and views to your backend or basic controllers & views directories.  But maybe there's some best practices way to do it.
+
+I have left the layout empty so that the pages should be rendered with your layouts/theme.
 
 When you're done getting all your keys, and deciding that there are some controller actions you're not interested in tracking, your module configuration might look something like this:
 ```php
