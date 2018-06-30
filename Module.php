@@ -32,7 +32,7 @@ use yii\web\Application;
  * @property array $ignorables Array of controller actions and IPs to ignore
  * @property array $urlRules Array of rules for a UrlManger configured to pretty Url
  *
- * @author John Snook <jsnook@gmail.com>
+ * @author John Snook <jsnook@gmail.com> The masta with a blasta
  */
 class Module extends BaseModule implements BootstrapInterface {
 
