@@ -1,8 +1,15 @@
 <?php
 
-namespace johnsnook\ipFilter\models;
+/**
+ * This file is part of the Yii2 extension module, yii2-ip-filter
+ *
+ * @author John Snook
+ * @date 2018-06-28
+ * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @copyright 2018 John Snook Consulting
+ */
 
-use Yii;
+namespace johnsnook\ipFilter\models;
 
 /**
  * This is the model class for table "visitor_service_error".

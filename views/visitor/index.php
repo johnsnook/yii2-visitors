@@ -1,12 +1,17 @@
 <?php
 
-use johnsnook\ipFilter\models\Visitor;
-use johnsnook\ipFilter\models\VisitorLog;
+/**
+ * This file is part of the Yii2 extension module, yii2-ip-filter
+ *
+ * @author John Snook
+ * @date 2018-06-28
+ * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @copyright 2018 John Snook Consulting
+ */
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
-use yii\helpers\ArrayHelper;
 use johnsnook\ipFilter\assets\VisitorAsset;
 
 /* @var $this yii\web\View */
@@ -49,7 +54,7 @@ $route = Url::to([Yii::$app->controller->id . '/index']);
             </div>
             <div class="col-lg-1"></div>
         </div>
-        <div class="row"><?php #echo $dataProvider->query->createCommand()->getRawSql()        ?></div>
+        <div class="row"><?php #echo $dataProvider->query->createCommand()->getRawSql()         ?></div>
     </form>
     <h1><?php echo $dataProvider->totalCount . ' ' . Html::encode($this->title) ?>!</h1>
 

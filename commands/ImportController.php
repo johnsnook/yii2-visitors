@@ -2,7 +2,11 @@
 
 namespace johnsnook\ipFilter\commands;
 
-use yii;
+use johnsnook\ipFilter\helpers\ProgressBar;
+use johnsnook\ipFilter\models\Visitor;
+use johnsnook\ipFilter\models\VisitorLog;
+use johnsnook\ipFilter\models\VisitorAgent;
+use Kassner\LogParser\LogParser;
 use yii\helpers\Console;
 
 /*
@@ -18,58 +22,166 @@ use yii\helpers\Console;
  * @author John
  */
 class ImportController extends \yii\console\Controller {
-
+#$parser->setFormat('%h %l %u %t "%r" %>s %b "%{Referer}i" "%{User-Agent}i" %I %O');
     /**
-     * @inheritdoc
+     * Delete this
+     * @return int
      */
-    public function init() {
-        parent::init();
-        /** set the user to admin identiy */
-//        \Yii::$app->user->setIdentity(\common\models\Person::findOne(1));
-        //Console::clearScreen();
+
+    function actionTest() {
+        $logDir = '/etc/httpd/logs';
+        $totes = 0;
+        foreach (glob("$logDir/access*") as $filename) {
+            echo "$filename size " . filesize($filename) . "\n";
+            $arr = file($filename, FILE_IGNORE_NEW_LINES);
+            $count = count($arr);
+            echo "Lines $count\n";
+            $totes += $count;
+        }
+        echo "Total lines $totes\n";
+
+        return \yii\console\ExitCode::OK;
+    }
+
+    public function countAndConfirm($list) {
+        $totes = 0;
+        foreach (($list) as $filename) {
+            if (!file_exists($filename)) {
+                die("File not found: $filename\n");
+            }
+            echo "$filename size " . filesize($filename) . "\n";
+            $arr = file($filename, FILE_IGNORE_NEW_LINES);
+            $count = count($arr);
+            echo "Lines $count\n";
+            $totes += $count;
+        }
+        echo "Total lines $totes\n";
+        if (Console::confirm("Do you want to import $totes records?\n")) {
+            return $totes;
+        } else {
+            return false;
+        }
     }
 
     /**
-     * @inheritdoc
+     * Parses Apache2 log files into the database to kickstart your data
+     * @example
+     * 24.99.237.149 - - [30/Jun/2018:12:31:51 -0400] "GET /minecraft/get-log?offset=188 HTTP/1.1" 200 26 "https://snooky.biz/minecraft" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.99 Safari/537.36"
+     *
+     * @param string $logDir
+     * @param string $list Comma separated list of log files to parse
      */
-    public function actionTest() {
-        list($w, $h) = Console::getScreenSize();
-        Console::moveCursorTo(1, 1);
-        for ($i = 1; $i < $h * 100 + 1; $i++) {
-            echo str_repeat('╥', $w) . PHP_EOL;
-            if (fgetc(STDIN) == 'q') {
-                return;
+    function actionLogs($logDir = '/etc/httpd/logs', $list = null) {
+        Console::clearScreen();
+        if (!is_dir($logDir)) {
+            echo "Invalid log directory";
+        }
+
+        $ipFilter = \Yii::$app->controller->module;
+        if (!empty($list)) {
+            $files = explode(',', $list);
+            foreach ($files as &$file) {
+                $file = "$logDir/$file";
+            }
+        } else {
+            $files = glob("$logDir/access*");
+        }
+        $total = $this->countAndConfirm($files);
+        if ($total === false) {
+            die("User cancled\n");
+        }
+        Console::clearScreen();
+
+        $transaction = \Yii::$app->db->beginTransaction();
+
+        $screen = Console::getScreenSize();
+        $fileProgress = new ProgressBar([
+            'label' => $logDir . ': ',
+            'lineNumber' => $screen[1] - 2,
+            'progressColor' => [Console::FG_BLUE, Console::BOLD],
+        ]);
+        $fileProgress->start($total);
+        $i = 0;
+        foreach ($files as $file) {
+            $parser = new LogParser();
+            $parser->setFormat('%h %l %u %t "%r" %>s %b "%{Referer}i" "%{User-Agent}i"');
+            $lines = file($file, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+            $fileProgress->label = $file;
+            $j = 1;
+
+            foreach ($lines as $line) {
+                try {
+                    $fileProgress->update($i++);
+                    $this->showMsg(Console::ansiFormat("Line $j", [Console::FG_GREEN, Console::BOLD]));
+                    $j++;
+                    $entry = $parser->parse($line);
+                    if (empty($ip = $entry->host)) {
+                        continue;
+                    }
+                    if (strstr($entry->request, 'GET /assets') || strstr($entry->request, 'GET /css') || strstr($entry->request, 'GET /favicon.png')) {
+                        continue;
+                    }
+                    $request = split(' ', $entry->request);
+                    $request = isset($request[1]) ? [1] : $entry->request;
+
+                    /**
+                     * Try to find existing visitor record, and creates a new one if not found
+                     * Also logs this visit in the access_log
+                     */
+                    $visitor = Visitor::findOne($ip);
+                    if (is_null($visitor)) {
+                        $visitor = new Visitor(['ip' => $ip]);
+                        if (!$visitor->save()) {
+                            die(json_encode($visitor->errors));
+                        }
+                        $visitor->refresh();
+                    }
+
+                    /*
+                     * don't put in log table
+                     */
+                    if (array_key_exists('whitelist', $ipFilter->ignorables) && in_array($ip, $ipFilter->ignorables['whitelist'])) {
+                        continue;
+                    }
+                    $dt = new \DateTime;
+                    $log = new VisitorLog([
+                        'ip' => $ip,
+                        'request' => $request,
+                        'referer' => $entry->HeaderReferer !== '-' ? $entry->HeaderReferer : null,
+                        'user_agent' => $entry->HeaderUserAgent,
+                        'created_at' => $dt->setTimestamp($entry->stamp),
+                    ]);
+                    $log->save(false);
+                    Visitor::incrementCount($ip);
+                    VisitorAgent::log($log->user_agent);
+
+                    if ($j % 1000) {
+                        $transaction->commit();
+                        $transaction = \Yii::$app->db->beginTransaction();
+                    }
+                } catch (\Exception $e) {
+
+                    $this->showMsg(Console::ansiFormat($this->exception2arr($e), [Console::FG_RED, Console::BOLD]), true);
+                    continue;
+                }
             }
         }
-        Console::moveCursorTo(1, (int) $h / 2);
-        Console::clearScreenBeforeCursor();
+        $fileProgress->endProgress();
+        $transaction->commit();
     }
 
     /**
      * @inheritdoc
      */
-    private function showMsg($msg) {
+    private function showMsg($msg, $err = false) {
+        $screen = Console::getScreenSize();
+        $lineNo = $err ? 1 : $screen[1] - 5;
+        Console::moveCursorTo(1, $lineNo);
         Console::clearLine();
+        Console::moveCursorTo(1, $lineNo + 1);
+        Console::clearLine();
+        Console::moveCursorTo(1, $lineNo);
         echo Console::renderColoredString($msg);
-    }
-
-    /**
-     * @inheritdoc
-     */
-    private function showProgress($prog, $tot = null, $label = null) {
-        static $Total;
-
-        if (!is_null($tot))
-            $Total = $tot;
-        Console::saveCursorPosition();
-        list($w, $h) = Console::getScreenSize();
-        Console::moveCursorTo(1, $h);
-        if (!is_null($label) || $prog == 0) {
-            Console::startProgress($prog, $Total, $label, $w);
-        } else {
-            Console::updateProgress($prog, $Total);
-        }
-        Console::restoreCursorPosition();
     }
 
     private function exception2arr($e) {
@@ -77,7 +189,7 @@ class ImportController extends \yii\console\Controller {
         $out['message'] = $e->getMessage();
         $out['file'] = $e->getFile();
         $out['line'] = $e->getLine();
-        $out['trace'] = $e->getTraceAsString();
+        $out['trace'] = $e->getTrace();
         return json_encode($out, 224);
     }
 

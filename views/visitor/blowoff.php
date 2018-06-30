@@ -1,7 +1,12 @@
 <?php
-//use yii\helpers\Html;
-//use yii\widgets\DetailView;
-
+/**
+ * This file is part of the Yii2 extension module, yii2-ip-filter
+ *
+ * @author John Snook
+ * @date 2018-06-28
+ * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @copyright 2018 John Snook Consulting
+ */
 /* @var $this yii\web\View */
 /* @var $visitor johnsnook\ipFilter\models\Visitor */
 $name = (!empty($visitor->name) ? $visitor->name : 'Stranger');

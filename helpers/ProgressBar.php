@@ -1,14 +1,17 @@
 <?php
 
-namespace console\helpers;
+/**
+ * This file is part of the Yii2 extension module, yii2-ip-filter
+ *
+ * @author John Snook
+ * @date 2018-06-28
+ * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @copyright 2018 John Snook Consulting
+ */
+
+namespace johnsnook\ipFilter\helpers;
 
 use yii\helpers\Console;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  * Description of ProgressBar
@@ -25,10 +28,10 @@ class ProgressBar extends \yii\base\Object {
     public $labelColor = null;
     public $progressColor = null;
     public $infoColor = null;
-    private $_startTime;
-    private $_progressEta;
-    private $_progressEtaLastDone = 0;
-    private $_progressEtaLastUpdate;
+    private $startTime;
+    private $progressEta;
+    private $progressEtaLastDone = 0;
+    private $progressEtaLastUpdate;
 
     public function __construct($config) {
         parent::__construct($config);
@@ -74,20 +77,21 @@ class ProgressBar extends \yii\base\Object {
      * @see endProgress
      */
     public function start($total = null) {
-        if (!is_null($total))
+        if (!is_null($total)) {
             $this->total = $total;
+        }
 
-        $this->_startTime = time();
-        $this->_progressEta = null;
-        $this->_progressEtaLastDone = 0;
-        $this->_progressEtaLastUpdate = time();
+        $this->startTime = time();
+        $this->progressEta = null;
+        $this->progressEtaLastDone = 0;
+        $this->progressEtaLastUpdate = time();
 
         $this->update($this->progress);
         $this->eta(0, 0);
     }
 
     private function eta($position, $total) {
-        static $startTime; //TimeType 
+        static $startTime; //TimeType
 
         if ($position == 0) {
             $startTime = time();
@@ -95,14 +99,8 @@ class ProgressBar extends \yii\base\Object {
         }
 
         $elapsedTime = time() - $startTime;
-        //$estimatedRemaining = $elapsedTime * $total / $position;
         $estimatedRemaining = ($elapsedTime * ($total / $position)) - $elapsedTime;
-        //$estimatedEndTime = time() + $estimatedRemaining;
-
         return $estimatedRemaining;
-
-
-        // Print the results here
     }
 
     /**
@@ -142,18 +140,18 @@ class ProgressBar extends \yii\base\Object {
         $info = sprintf('%d%% (%d/%d)', $percent * 100, $progress, $this->total);
 
         if ($progress > $this->total || $progress == 0) {
-            $this->_progressEta = null;
-            $this->_progressEtaLastUpdate = time();
+            $this->progressEta = null;
+            $this->progressEtaLastUpdate = time();
         } elseif ($progress < $this->total) {
             // update ETA once per second to avoid flapping
-            if (time() - $this->_progressEtaLastUpdate > 1 && $progress > $this->_progressEtaLastDone) {
-                $this->_progressEta = $this->eta($progress, $this->total);
+            if (time() - $this->progressEtaLastUpdate > 1 && $progress > $this->progressEtaLastDone) {
+                $this->progressEta = $this->eta($progress, $this->total);
             }
         }
-        if ($this->_progressEta === null) {
+        if ($this->progressEta === null) {
             $info .= ' ETA: n/a';
         } else {
-            $info .= sprintf(' ETA: %s', gmdate("H:i:s", $this->_progressEta));
+            $info .= sprintf(' ETA: %s', gmdate("H:i:s", $this->progressEta));
         }
 
         if ($this->infoColor !== null)
@@ -217,12 +215,12 @@ class ProgressBar extends \yii\base\Object {
         flush();
         Console::restoreCursorPosition();
 
-        $this->_startTime = null;
+        $this->startTime = null;
         $this->width = null;
         $this->label = '';
-        $this->_progressEta = null;
-        $this->_progressEtaLastDone = 0;
-        $this->_progressEtaLastUpdate = null;
+        $this->progressEta = null;
+        $this->progressEtaLastDone = 0;
+        $this->progressEtaLastUpdate = null;
     }
 
 }

@@ -1,26 +1,19 @@
 <?php
 
-namespace johnsnook\ipFilter\models;
+/**
+ * This file is part of the Yii2 extension module, yii2-ip-filter
+ *
+ * @author John Snook
+ * @date 2018-06-28
+ * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @copyright 2018 John Snook Consulting
+ */
 
-use Yii;
+namespace johnsnook\ipFilter\models;
 
 /**
  * This is the model class for table "visitor_agent", holder of this json structure:
  * <code>
- *    {
- *        "agent_type": "Browser",
- *        "agent_name": "Opera",
- *        "agent_version": "9.70",
- *        "os_type": "Linux",
- *        "os_name": "Linux",
- *        "os_versionName": "",
- *        "os_versionNumber": "",
- *        "os_producer": "",
- *        "os_producerURL": "",
- *        "linux_distibution": "Null",
- *        "agent_language": "English - United States",
- *        "agent_languageTag": "en-us"
- *    }
  * </code>
  *
  * @property string $user_agent
@@ -195,6 +188,70 @@ class VisitorAgent extends \yii\db\ActiveRecord {
     public function getAgentLanguageTag() {
         if (isset($this->info->agent_languageTag)) {
             return $this->info->agent_languageTag;
+        }
+    }
+
+    /**
+     * Requests proxy information from http://www.useragentstring.com/
+     * <code>
+     * {
+     *     "parse": {
+     *         "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36",
+     *         "software_name": "Chrome",
+     *         "operating_system": "Mac OS X (Mavericks)",
+     *         "software_version": 64,
+     *         "operating_system_name": "Mac OS X",
+     *         "operating_system_version_full": [
+     *             10,
+     *             9,
+     *             5
+     *         ],
+     *         "software_name_code": "chrome",
+     *         "simple_operating_platform_string": null,
+     *         "operating_system_version": "Mavericks",
+     *         "simple_sub_description_string": null,
+     *         "is_abusive": false,
+     *         "operating_system_flavour_code": null,
+     *         "software_version_full": [
+     *             64,
+     *             0,
+     *             3282,
+     *             140
+     *         ],
+     *         "simple_software_string": "Chrome 64 on Mac OS X (Mavericks)",
+     *         "operating_system_flavour": null,
+     *         "operating_system_name_code": "mac-os-x",
+     *         "software": "Chrome 64"
+     *     },
+     *     "result": {
+     *         "message": "The user agent was parsed successfully.",
+     *         "code": "success",
+     *         "message_code": "user_agent_parsed"
+     *     }
+     * }
+     * </code>
+     *
+     * @return array
+     */
+    public static function log($userAgent) {
+        if (empty($userAgent)) {
+            return;
+        }
+        if (is_null($vaModel = VisitorAgent::findOne($userAgent))) {
+
+            $yii = self::getRealYiiPath();
+            exec("php $yii ipFilter/service/user-agent '$userAgent' > /dev/null 2>&1 &");
+        }
+    }
+
+    private static function getRealYiiPath() {
+        $path = \Yii::$app->basePath;
+        if (file_exists($path . '/yii')) {
+            return $path . '/yii';
+        } elseif (file_exists($path . '/../yii')) {
+            return $path . '/../yii';
+        } else {
+            throw new \Exception("Couldn't find yii executable to run user agent script");
         }
     }
 

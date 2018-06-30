@@ -1,11 +1,19 @@
 <?php
 
+/**
+ * This file is part of the Yii2 extension module, yii2-ip-filter
+ *
+ * @author John Snook
+ * @date 2018-06-28
+ * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @copyright 2018 John Snook Consulting
+ */
 /* @var $model frontend\models\Visitor */
 
 /**
  * Uses mapquest/osm static map
  * @see https://developer.mapquest.com/documentation/static-map-api/v4/map/get/
- * //https://open.mapquestapi.com/staticmap/v4/getmap?key=KEY&size=600,400&zoom=13&center=47.6062,-122.3321
+ * @example https://open.mapquestapi.com/staticmap/v4/getmap?key=KEY&size=600,400&zoom=13&center=47.6062,-122.3321
  */
 use yii\helpers\Html;
 

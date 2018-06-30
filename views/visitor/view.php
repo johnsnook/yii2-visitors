@@ -1,11 +1,15 @@
 <?php
 
-use johnsnook\ipFilter\models\VisitorAgent;
-use johnsnook\ipFilter\models\Visitor;
+/**
+ * This file is part of the Yii2 extension module, yii2-ip-filter
+ *
+ * @author John Snook
+ * @date 2018-06-28
+ * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @copyright 2018 John Snook Consulting
+ */
 use yii\helpers\Html;
-use yii\helpers\Url;
 use yii\widgets\DetailView;
-//use yii\widgets\Pjax;
 use yii\bootstrap\Tabs;
 
 /* @var $this yii\web\View */

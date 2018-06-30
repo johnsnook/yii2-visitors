@@ -12,6 +12,7 @@
 namespace johnsnook\ipFilter;
 
 use johnsnook\ipFilter\lib\RemoteAddress;
+use johnsnook\ipFilter\models\Country;
 use johnsnook\ipFilter\models\Visitor;
 use johnsnook\ipFilter\models\VisitorAgent;
 use johnsnook\ipFilter\models\VisitorLog;
@@ -32,7 +33,7 @@ use yii\web\Application;
  *
  * @author John Snook <jsnook@gmail.com>
  */
-class Module extends BaseModule implements BootstrapInterface {
+class ModuleBak extends BaseModule implements BootstrapInterface {
 
     /**
      * @var string The next release version string
@@ -154,11 +155,22 @@ class Module extends BaseModule implements BootstrapInterface {
          */
         $visitor = Visitor::findOne($ip);
         if (is_null($visitor)) {
-            $visitor = new Visitor([
-                'ip' => $ip,
-                'ipInfoKey' => $this->ipInfoKey,
-                'proxyCheckKey' => $this->proxyCheckKey,
-            ]);
+            $visitor = new Visitor(['ip' => $ip]);
+            $info = $this->getIpInfo($ip);
+            $visitor->city = $info->city;
+            $visitor->region = $info->region;
+            $country = Country::findOne(['code' => $info->country]);
+            $visitor->country = $country->name;
+            if ($info->loc) {
+                $visitor->latitude = floatval(explode(',', $info->loc)[0]);
+                $visitor->longitude = floatval(explode(',', $info->loc)[1]);
+            }
+            $visitor->organization = $info->org;
+            $pcheck = $this->getProxyInfo($ip);
+            $visitor->proxy = ($pcheck->proxy === 'yes' ? $pcheck->type : 'no');
+            if ($visitor->proxy !== 'no') {
+                $visitor->is_blacklisted = true;
+            }
             if (!$visitor->save()) {
                 die(json_encode($visitor->errors));
             }
@@ -170,7 +182,7 @@ class Module extends BaseModule implements BootstrapInterface {
         }
 
         $log = VisitorLog::log($ip);
-        VisitorAgent::log($log->user_agent);
+        $this->logUserAgentInfo($log->user_agent);
         $alreadyFuckingOff = ($event->action->controller->route === $this->blowOff);
         $this->visitor = $visitor;
         if ($alreadyFuckingOff) {
@@ -179,6 +191,92 @@ class Module extends BaseModule implements BootstrapInterface {
             $event->handled = true;
             return \Yii::$app->getResponse()->redirect([$this->blowOff, 'visitor' => $visitor])->send();
         }
+    }
+
+    /**
+     * Request ip information from ipinfo.io which looks like
+     * <code>
+     *    {
+     *        "hostname": "c-24-99-237-149.hsd1.ga.comcast.net",
+     *        "city": "Decatur",
+     *        "region": "Georgia",
+     *        "country": "US",
+     *        "loc": "33.8110,-84.2869",
+     *        "visitoral": 30033,
+     *        "org": "AS7922 Comcast Cable Communications, LLC"
+     *    }
+     * </code>
+     *
+     * @return array
+     */
+    public function getIpInfo($ip) {
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $this->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
+        if (!empty($data = json_decode(file_get_contents($url)))) {
+            return $data;
+        }
+        return (object) [];
+    }
+
+    /**
+     * Requests proxy information from proxycheck.io
+     * <code>
+     *     {
+     *         "status": "ok",
+     *         "185.220.101.34": {
+     *             "proxy": "yes",
+     *             "type": "TOR"
+     *         }
+     *     }
+     * </code>
+     *
+     * @return array
+     */
+    public function getProxyInfo($ip) {
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $this->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
+        if (!empty($data = json_decode(file_get_contents($url), true))) {
+            return (object) $data[$ip];
+        }
+        return (object) [];
+    }
+
+    /**
+     * Requests proxy information from http://www.useragentstring.com/
+     * <code>
+     *    {
+     *        "agent_type": "Browser",
+     *        "agent_name": "Opera",
+     *        "agent_version": "9.70",
+     *        "os_type": "Linux",
+     *        "os_name": "Linux",
+     *        "os_versionName": "",
+     *        "os_versionNumber": "",
+     *        "os_producer": "",
+     *        "os_producerURL": "",
+     *        "linux_distibution": "Null",
+     *        "agent_language": "English - United States",
+     *        "agent_languageTag": "en-us"
+     *    }
+     * </code>
+     *
+     * @return array
+     */
+    public function logUserAgentInfo($userAgent) {
+        if (empty($userAgent)) {
+            return;
+        }
+        if (is_null($vaModel = VisitorAgent::findOne($userAgent))) {
+
+            $yii = \Yii::getAlias('@app') . '/../yii';
+            shell_exec("php $yii ipFilter/service/user-agent $userAgent " . self::TEMPLATE_USER_AGENT_URL . ' > /dev/null 2>&1 &');
+
+
+            $vaModel = new VisitorAgent(['user_agent' => $userAgent]);
+            $userAgent = urlencode($userAgent);
+            $url = str_replace('{user_agent}', $userAgent, self::TEMPLATE_USER_AGENT_URL);
+            $vaModel->info = file_get_contents($url);
+            $vaModel->save();
+        }
+        return $vaModel;
     }
 
     /**

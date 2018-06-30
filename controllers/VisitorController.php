@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * This file is part of the Yii2 extension module, yii2-ip-filter
+ *
+ * @author John Snook
+ * @date 2018-06-28
+ * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @copyright 2018 John Snook Consulting
+ */
+
 namespace johnsnook\ipFilter\controllers;
 
 use Yii;
@@ -11,7 +20,7 @@ use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
 
 /**
- * VisitorController implements the CRUD actions for Visitor model.
+ * VisitorController implements the CRUD actions for the Visitor model.
  */
 class VisitorController extends Controller {
 
@@ -41,7 +50,7 @@ class VisitorController extends Controller {
 
     /**
      * Lists all Visitor models.
-     * @return mixed
+     * @return string A rendered view of the list of visitors
      */
     public function actionIndex($search = "", $field = "") {
         if (empty($search)) {
@@ -58,8 +67,6 @@ class VisitorController extends Controller {
         } else {
             $query = Visitor::find()->where(['ilike', $field, "$search"]);
         }
-
-        //$subquery = (new Query)->from('visitor_log')->where(['active' => true])
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -80,9 +87,12 @@ class VisitorController extends Controller {
     }
 
     /**
-     * Displays a single Visitor model.
+     * Displays a single Visitor model and a GridView from VisitorLog of this
+     * Visitor's activity on your site
+     *
      * @param string $id The IP address to be viewed
-     * @return mixed
+     * @return string  A rendered view of the Vistor's details and a list of
+     * activity
      */
     public function actionView($id) {
         $searchModel = new VisitorLogSearch();
@@ -97,7 +107,7 @@ class VisitorController extends Controller {
     }
 
     /**
-     * Displays a blowoff Visitor message.
+     * Sets the [[is_blacklisted]] flag of this particular individual.
      * @return mixed
      */
     public function actionBlacklist($id) {

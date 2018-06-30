@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * This file is part of the Yii2 extension module, yii2-ip-filter
+ *
+ * @author John Snook
+ * @date 2018-06-28
+ * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @copyright 2018 John Snook Consulting
+ */
+
 namespace johnsnook\ipFilter\commands;
 
 use yii;
@@ -7,20 +16,13 @@ use yii\helpers\Console;
 use yii\console\Controller;
 use johnsnook\ipFilter\models\Visitor;
 use johnsnook\ipFilter\models\VisitorAgent;
-use johnsnook\ipFilter\models\VisitorLog;
 use johnsnook\ipFilter\models\VisitorServiceError;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- * ImportController - it imports things
- *
- *
- * @author John
+ * ServiceController provides 3 commands to request various information for websites
+ * They are her as commands so that they can be executed in the background
+ * suffixed by "> /dev/null 2>&1 &", thus free the web app from waiting for a
+ * response.
  */
 class ServiceController extends Controller {
 
@@ -62,9 +64,11 @@ class ServiceController extends Controller {
      * @param string $ip The IP address of the current visitor
      * @param string $apiKey The API key
      */
-    public function actionIpinfo($ip, $apiKey = null) {
+    public function actionIpinfo($ip) {
+        $ipFilter = \Yii::$app->controller->module;
+
         if (!is_null($visitor = Visitor::findOne($ip))) {
-            $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $this->$apiKey], self::TEMPLATE_IP_INFO_URL);
+            $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $ipFilter->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             if (($response = curl_exec($ch) ) === false) {
@@ -105,9 +109,10 @@ class ServiceController extends Controller {
      * @param string $ip The IP address of the current visitor
      * @param string $apiKey The API key
      */
-    public function actionProxyCheck($ip, $apiKey = null) {
+    public function actionProxyCheck($ip) {
+        $ipFilter = \Yii::$app->controller->module;
         if (!is_null($visitor = Visitor::findOne($ip))) {
-            $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $this->$apiKey], self::TEMPLATE_PROXY_CHECK_URL);
+            $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $ipFilter->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             if (($response = curl_exec($ch) ) === false) {
@@ -172,7 +177,9 @@ class ServiceController extends Controller {
      * @param string $userAgent The browser reported string returned by $_[USER_AGENT]
      * @param string $apiKey
      */
-    public function actionUserAgent($userAgent, $apiKey = null) {
+    public function actionUserAgent($userAgent) {
+        $ipFilter = \Yii::$app->controller->module;
+
         if (is_null($agent = VisitorAgent::findOne($userAgent))) {
             $data = ["user_agent" => $userAgent];
 
@@ -183,7 +190,7 @@ class ServiceController extends Controller {
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, ['X-API-KEY: ' . $apiKey]);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, ['X-API-KEY: ' . $ipFilter->whatsmybrowswerKey]);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             if (($response = curl_exec($ch) ) === false) {
                 $vse = new VisitorServiceError;
