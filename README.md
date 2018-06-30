@@ -123,4 +123,26 @@ If you want to find out information on the current user, you can get the visitor
     }
 ```
 
+Importing Existing Apache Access Logs
+-----
+
+To kickstart your visitor data, you can import apache2 logs, as long as you (not www-data) have permissions to view them and they are in the standard apache format.
+
+This is achieved via the very excellent parser library which can be found at https://github.com/kassner/log-parser.
+
+By default, it assumes that your access logs are at '/etc/httpd/logs' since that's where mine are.  You can specify another path as the first argument.
+
+The second argument is for specifying which files you'd like to import.  By default, it looks for access*. but a comma delimted list with no spaces can be provided instead.
+
+```bash
+# The default, looks for /etc/httpd/logs/access*
+php yii ipFilter/import/logs
+
+# Looks for /my/own/private/idaho/access*
+php yii ipFilter/import/logs '/my/own/private/idaho'
+
+# Will process /etc/httpd/log/access_log-20180603 and /etc/httpd/log/access_log-20180610 ONLY.
+php yii ipFilter/import/logs '/etc/httpd/logs' access_log-20180603,access_log-20180610
+```
+
 To see it live, check out https://snooky.biz/visitor
