@@ -65,7 +65,9 @@ class ServiceController extends Controller {
      * @param string $apiKey The API key
      */
     public function actionIpinfo($ip) {
-        $ipFilter = \Yii::$app->controller->module;
+#        $ipFilter = \Yii::$app->controller->module;
+        $ipFilter = \Yii::$app->getModule('ipFilter');
+
 
         if (!is_null($visitor = Visitor::findOne($ip))) {
             $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $ipFilter->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
@@ -110,7 +112,9 @@ class ServiceController extends Controller {
      * @param string $apiKey The API key
      */
     public function actionProxyCheck($ip) {
-        $ipFilter = \Yii::$app->controller->module;
+        #$ipFilter = \Yii::$app->controller->module;
+        $ipFilter = \Yii::$app->getModule('ipFilter');
+
         if (!is_null($visitor = Visitor::findOne($ip))) {
             $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $ipFilter->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
             $ch = curl_init($url);
@@ -178,7 +182,8 @@ class ServiceController extends Controller {
      * @param string $apiKey
      */
     public function actionUserAgent($userAgent) {
-        $ipFilter = \Yii::$app->controller->module;
+        //$ipFilter = \Yii::$app->controller->module;
+        $ipFilter = \Yii::$app->getModule('ipFilter');
 
         if (is_null($agent = VisitorAgent::findOne($userAgent))) {
             $data = ["user_agent" => $userAgent];

@@ -206,7 +206,7 @@ class Visitor extends ActiveRecord {
      * @return object|null
      */
     private function getIpInfo() {
-        $ipFilter = \Yii::$app->controller->module;
+        $ipFilter = \Yii::$app->getModule('ipFilter');
 
         $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, $ipFilter->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
         try {
@@ -233,7 +233,7 @@ class Visitor extends ActiveRecord {
      * @return object|null
      */
     private function getProxyInfo() {
-        $ipFilter = \Yii::$app->controller->module;
+        $ipFilter = \Yii::$app->getModule('ipFilter');
 
         $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, $ipFilter->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
         try {
