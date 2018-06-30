@@ -22,13 +22,15 @@ use yii\base\Module as BaseModule;
 use yii\web\Application;
 
 /**
- * This is the main module class for the Yii2-user.
+ * This is the main module class for the Yii2-ip-filter extension.
  *
- * @property string $ipInfoKey
- * @property string $mapquestKey
- * @property string $proxyCheckKey
- * @property string $proxyCheckKey
- * @property string $proxyCheckKey
+ * @property string $ipInfoKey Api key
+ * @property string $mapquestKey Api key
+ * @property string $proxyCheckKey Api key
+ * @property string $whatsmybrowswerKey Api key
+ * @property Visitor $visitor The current visitor
+ * @property array $ignorables Array of controller actions and IPs to ignore
+ * @property array $urlRules Array of rules for a UrlManger configured to pretty Url
  *
  * @author John Snook <jsnook@gmail.com>
  */
@@ -37,7 +39,7 @@ class Module extends BaseModule implements BootstrapInterface {
     /**
      * @var string The next release version string
      */
-    const VERSION = 'v0.9.1';
+    const VERSION = 'v0.9.3';
 
     /**
      * @var array The replacements template
@@ -109,6 +111,11 @@ class Module extends BaseModule implements BootstrapInterface {
         'visitor/update/<id>' => 'ipFilter/visitor/update',
     ];
 
+    /**
+     * {@inheritdoc}
+     *
+     * If we're running from the console, change the controller namespace
+     */
     public function init() {
         parent::init();
         if (Yii::$app instanceof \yii\console\Application) {
@@ -182,7 +189,7 @@ class Module extends BaseModule implements BootstrapInterface {
     }
 
     /**
-     * @return string
+     * @return Database connection
      */
     public function getDb() {
         return \Yii::$app->get($this->dbConnection);
