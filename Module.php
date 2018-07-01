@@ -39,7 +39,7 @@ class Module extends BaseModule implements BootstrapInterface {
     /**
      * @var string The next release version string
      */
-    const VERSION = 'v0.9.4444';
+    const VERSION = 'v0.9.3';
 
     /**
      * @var array The replacements template
@@ -90,6 +90,7 @@ class Module extends BaseModule implements BootstrapInterface {
      * @var string $whatsmybrowswerKey Go to https://proxycheck.io/ for a free API key
      */
     public $whatsmybrowswerKey = '';
+    public $proxyBan = ['VPN', 'Compromised Server', 'SOCKS', 'SOCKS4', 'HTTP', 'SOCKS5', 'HTTPS', 'TOR'];
 
     /**
      * @var array These are the controller actions that will not be logged
@@ -183,6 +184,9 @@ class Module extends BaseModule implements BootstrapInterface {
         $this->visitor = $visitor;
         if ($alreadyFuckingOff) {
             return true;
+        } elseif (!$alreadyFuckingOff && in_array($visitor->proxy, $this->proxyBan)) {
+            $event->handled = true;
+            return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
         } elseif (!$alreadyFuckingOff && $visitor->is_blacklisted) {
             $event->handled = true;
             return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();

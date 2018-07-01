@@ -30,6 +30,6 @@ $this->title = 'Don\'t go away mad, just go away.';
         <h1>Dear <?= $name ?>,</h1>
         <p><?= $message ?></p>
         <p>If you feel this is in error, you can contact an <a href="mailto:<?= \Yii::$app->params['adminEmail'] ?>">administrator</a> </p>
-    </div>>
+    </div>
 
 </div>

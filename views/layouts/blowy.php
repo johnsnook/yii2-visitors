@@ -10,7 +10,7 @@
  */
 use yii\helpers\Html;
 use yii\bootstrap\NavBar;
-use app\assets\AppAsset;
+use johnsnook\ipFilter\assets\AppAsset;
 
 AppAsset::register($this);
 ?>

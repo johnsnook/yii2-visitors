@@ -58,11 +58,11 @@ class VisitorController extends Controller {
         } elseif (strpos($field, 'log') === 0) {
             $field = explode('-', $field)[1];
             $query = Visitor::find()
-                    ->select(['t.ip'])
+                    ->select(['v.ip'])
                     ->distinct()
                     ->addSelect(['city', 'region', 'country', 'visits', 'updated_at'])
-                    ->from('visitor t')
-                    ->leftJoin('visitor_log vl', 't.ip = vl.ip')
+                    ->from('visitor v')
+                    ->leftJoin('visitor_log vl', 'v.ip = vl.ip')
                     ->where(['ilike', $field, "$search"]);
         } else {
             $query = Visitor::find()->where(['ilike', $field, "$search"]);

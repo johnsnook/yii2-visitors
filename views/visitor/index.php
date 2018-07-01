@@ -43,7 +43,7 @@ $route = Url::to([Yii::$app->controller->id . '/index']);
                             <li><a href="javascript:setField('updated_at')" class="dropdown-item">Date</a></li>
                             <li role="separator" class="divider dropdown-divider"></li>
                             <li><a href="javascript:setField('log-request')" class="dropdown-item">Request</a></li>
-                            <li><a href="javascript:setField('log-request')" class="dropdown-item">Referer</a></li>
+                            <li><a href="javascript:setField('log-referer')" class="dropdown-item">Referer</a></li>
                             <li><a href="javascript:setField('log-user_agent')" class="dropdown-item">User Agent</a></li>
                         </ul>
                     </div><!-- /btn-group -->
@@ -54,7 +54,7 @@ $route = Url::to([Yii::$app->controller->id . '/index']);
             </div>
             <div class="col-lg-1"></div>
         </div>
-        <div class="row"><?php #echo $dataProvider->query->createCommand()->getRawSql()         ?></div>
+        <div class="row"><?php #echo $dataProvider->query->createCommand()->getRawSql()           ?></div>
     </form>
     <h1><?php echo $dataProvider->totalCount . ' ' . Html::encode($this->title) ?>!</h1>
 
