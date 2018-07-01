@@ -121,11 +121,9 @@ class VisitorController extends Controller {
      * Displays a blowoff Visitor message.
      * @return mixed
      */
-    public function actionBlowoff($visitor) {
+    public function actionBlowoff() {
         $this->layout = 'blowy';
-        return $this->render('blowoff', [
-                    'visitor' => $visitor,
-        ]);
+        return $this->render('blowoff');
     }
 
     /**

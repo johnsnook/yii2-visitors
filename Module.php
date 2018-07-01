@@ -32,7 +32,7 @@ use yii\web\Application;
  * @property array $ignorables Array of controller actions and IPs to ignore
  * @property array $urlRules Array of rules for a UrlManger configured to pretty Url
  *
- * @author John Snook <jsnook@gmail.com> The masta with a blasta
+ * @author John Snook <jsnook@gmail.com>
  */
 class Module extends BaseModule implements BootstrapInterface {
 
@@ -69,7 +69,7 @@ class Module extends BaseModule implements BootstrapInterface {
     /**
      * @var string The route to your blowoff page telling the user to pound sand
      */
-    public $blowOff = 'visitor/blowoff';
+    public $blowOff = 'ipFilter/visitor/blowoff';
 
     /**
      * @var string $ipInfoKey Go to https://ipinfo.io/signup for a free API key
@@ -104,11 +104,11 @@ class Module extends BaseModule implements BootstrapInterface {
     /** @var array The rules to be used in URL management. */
     public $urlRules = [
 //        'visitor/<action:\w+>' => '/ipFilter/visitor/<action>',
-        'visitor' => '/ipFilter/visitor/index',
-        'visitor/index' => '/ipFilter/visitor/index',
-        'visitor/blowoff' => '/ipFilter/visitor/blowoff',
-        'visitor/<id>' => 'ipFilter/visitor/view',
-        'visitor/update/<id>' => 'ipFilter/visitor/update',
+        'visitor' => 'ipFilter/visitor/index',
+        '/visitor/index' => 'ipFilter/visitor/index',
+        '/visitor/blowoff' => 'ipFilter/visitor/blowoff',
+        '/visitor/<id>' => '/ipFilter/visitor/view',
+        '/visitor/update/<id>' => '/ipFilter/visitor/update',
     ];
 
     /**
@@ -129,9 +129,10 @@ class Module extends BaseModule implements BootstrapInterface {
      */
     public function bootstrap($app) {
 
+
         if ($app->hasModule('ipFilter') && ($module = $app->getModule('ipFilter')) instanceof Module) {
             $app->getUrlManager()->addRules($this->urlRules, false);
-
+            //die(json_encode($app->getUrlManager()->rules));
             /** this allows me to do some importing from my old security system */
             if ($app instanceof \yii\console\Application) {
                 $this->controllerNamespace = 'johnsnook\ipFilter\commands';
@@ -184,7 +185,7 @@ class Module extends BaseModule implements BootstrapInterface {
             return true;
         } elseif (!$alreadyFuckingOff && $visitor->is_blacklisted) {
             $event->handled = true;
-            return \Yii::$app->getResponse()->redirect([$this->blowOff, 'visitor' => $visitor])->send();
+            return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
         }
     }
 

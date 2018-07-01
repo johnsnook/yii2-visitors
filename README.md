@@ -146,3 +146,19 @@ php yii ipFilter/import/logs '/etc/httpd/logs' access_log-20180603,access_log-20
 ```
 
 To see it live, check out https://snooky.biz/visitor
+
+Screenshots!
+-----
+
+The main screen
+![ipfilter1](https://user-images.githubusercontent.com/4065107/42129954-e352eaea-7ca1-11e8-8db8-8cb44ce4f2fc.png)
+
+Detail visitor view
+![ipfilter2](https://user-images.githubusercontent.com/4065107/42129951-e330717c-7ca1-11e8-9337-52f16c8c8a5e.png)
+
+Updating the name and/or message for a visitor.
+![ipfilter3](https://user-images.githubusercontent.com/4065107/42129952-e33bce3c-7ca1-11e8-9fd2-9e06a9833a2f.png)
+
+The default blocked user view. (As seen from Tor)
+![ipfilter4](https://user-images.githubusercontent.com/4065107/42129953-e3476580-7ca1-11e8-84cf-aef11158446b.png)
+
