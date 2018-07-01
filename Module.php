@@ -39,7 +39,7 @@ class Module extends BaseModule implements BootstrapInterface {
     /**
      * @var string The next release version string
      */
-    const VERSION = 'v0.9.3';
+    const VERSION = 'v0.9.4444';
 
     /**
      * @var array The replacements template
