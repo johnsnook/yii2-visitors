@@ -18,15 +18,23 @@ use johnsnook\ipFilter\assets\VisitorAsset;
 /* @var $searchModel frontend\models\VisitorSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 VisitorAsset::register($this);
+
 $this->title = 'Visitors';
 $this->params['breadcrumbs'][] = $this->title;
 $route = Url::to([Yii::$app->controller->id . '/index']);
+$ipFilter = Yii::$app->getModule(Yii::$app->controller->module->id);
+
+if ($ipFilter->bootstrapCssVersion === 4) {
+    $pager = 'johnsnook\ipFilter\widgets\LinkPager';
+} else {
+    $pager = 'yii\widgets\LinkPager';
+}
 ?>
 <div class="visitor-index" >
     <form id="search-form" action="<?= $route ?>" method="get" role="form">
         <div class="row">
-            <div class="col-lg-1"></div>
-            <div class="col-lg-10">
+            <div class="col-md-1 col-1"></div>
+            <div class="col-md-10 col-10">
                 <div class="input-group">
                     <input type="hidden" id="field" name="field" value="" class="form-control">
                     <input type="hidden" id="field" name="page" value="" class="form-control" value="1">
@@ -52,9 +60,9 @@ $route = Url::to([Yii::$app->controller->id . '/index']);
                     </div>
                 </div><!-- /input-group -->
             </div>
-            <div class="col-lg-1"></div>
+            <div class="col-md-1 col-1"></div>
         </div>
-        <div class="row"><?php #echo $dataProvider->query->createCommand()->getRawSql()           ?></div>
+        <div class="row"><?php #echo $dataProvider->query->createCommand()->getRawSql()                         ?></div>
     </form>
     <h1><?php echo $dataProvider->totalCount . ' ' . Html::encode($this->title) ?>!</h1>
 
@@ -64,6 +72,7 @@ $route = Url::to([Yii::$app->controller->id . '/index']);
         'dataProvider' => $dataProvider,
         #'filterModel' => $searchModel,
         'summary' => false,
+        'pager' => ['class' => $pager],
         'columns' => [
             [
                 'class' => 'yii\grid\ActionColumn',

@@ -17,13 +17,16 @@
     },
     "autoload": {
         "psr-4": {
-            "johnsnook\\ipFilter\\": ""
+            "johnsnook\\ipFilter\\": "/src"
         }
     },
     "repositories": [
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        }
+        },
+        {
+            "type": "file",
+            "url": "/var/www/johnsnook/yii2-stacked"
     ]
 }

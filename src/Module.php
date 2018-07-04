@@ -110,7 +110,9 @@ class Module extends BaseModule implements BootstrapInterface {
         '/visitor/blowoff' => 'ipFilter/visitor/blowoff',
         '/visitor/<id>' => '/ipFilter/visitor/view',
         '/visitor/update/<id>' => '/ipFilter/visitor/update',
+        '/individual/<id>' => '/ipFilter/individual/view',
     ];
+    public $bootstrapCssVersion = 3;
 
     /**
      * {@inheritdoc}

@@ -13,7 +13,8 @@ use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-// echo $this->render('_search', ['model' => $searchModel]);
+/* @var $this yii\web\View */
+
 echo GridView::widget([
     'dataProvider' => $dataProvider,
     'filterModel' => $searchModel,
