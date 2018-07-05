@@ -13,6 +13,8 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
+        "yiisoft/yii2-bootstrap": "*",
+        "yiisoft/yii2-bootstrap4": "*",
         "kassner/log-parser": "~1.0"
     },
     "autoload": {
