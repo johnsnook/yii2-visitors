@@ -24,10 +24,6 @@
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
-        },
-        {
-            "type": "path",
-            "url": "/var/www/johnsnook/yii2-stacked"
         }
     ]
 }
