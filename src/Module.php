@@ -25,7 +25,7 @@ use yii\web\Application;
  * This is the main module class for the Yii2-ip-filter extension.
  *
  * @property string $ipInfoKey Api key
- * @property string $mapquestKey Api key
+ * @property string $googleMapsApiKey Api key
  * @property string $proxyCheckKey Api key
  * @property string $whatsmybrowswerKey Api key
  * @property Visitor $visitor The current visitor
@@ -77,9 +77,9 @@ class Module extends BaseModule implements BootstrapInterface {
     public $ipInfoKey = '';
 
     /**
-     * @var string $mapquestKey Go to https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register for a free API key
+     * @var string $googleMapsApiKey Go to https://developers.google.com/maps/documentation/javascript/get-api-key for a free API key
      */
-    public $mapquestKey;
+    public $googleMapsApiKey;
 
     /**
      * @var string $proxyCheckKey Go to https://proxycheck.io/ for a free API key
@@ -91,6 +91,12 @@ class Module extends BaseModule implements BootstrapInterface {
      */
     public $whatsmybrowswerKey = '';
     public $proxyBan = ['VPN', 'Compromised Server', 'SOCKS', 'SOCKS4', 'HTTP', 'SOCKS5', 'HTTPS', 'TOR'];
+
+    /**
+     * @var string Controllers will use this value if set to allow the user to
+     * define their own custom views.
+     */
+    //public $viewPath;
 
     /**
      * @var array These are the controller actions that will not be logged
@@ -188,6 +194,7 @@ class Module extends BaseModule implements BootstrapInterface {
             return true;
         } elseif (!$alreadyFuckingOff && in_array($visitor->proxy, $this->proxyBan)) {
             $event->handled = true;
+            die(json_encode(['$event->action->controller->route' => $event->action->controller->route, '$this->blowOff' => $this->blowOff]));
             return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
         } elseif (!$alreadyFuckingOff && $visitor->is_blacklisted) {
             $event->handled = true;

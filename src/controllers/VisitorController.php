@@ -13,7 +13,9 @@ namespace johnsnook\ipFilter\controllers;
 
 use Yii;
 use johnsnook\ipFilter\models\Visitor;
+use johnsnook\ipFilter\models\VisitorSearch;
 use johnsnook\ipFilter\models\VisitorLogSearch;
+use johnsnook\parsel\ParselQuery;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\data\ActiveDataProvider;
@@ -23,6 +25,10 @@ use yii\filters\AccessControl;
  * VisitorController implements the CRUD actions for the Visitor model.
  */
 class VisitorController extends Controller {
+//    public function getViewPath() {
+//        if (!empty($this->module->viewPath))
+//            parent::getViewPath();
+//    }
 
     /**
      * @inheritdoc
@@ -52,7 +58,42 @@ class VisitorController extends Controller {
      * Lists all Visitor models.
      * @return string A rendered view of the list of visitors
      */
-    public function actionIndex($search = "", $field = "") {
+    public function actionIndex() {
+        $searchModel = new VisitorSearch();
+        //$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        //$query = $dataProvider->query;
+
+        return $this->render('index', [
+                    'searchModel' => $searchModel,
+                    'dataProvider' => $searchModel->search(Yii::$app->request->queryParams),
+        ]);
+    }
+
+    /**
+     * Displays a single Visitor model and a GridView from VisitorLog of this
+     * Visitor's activity on your site
+     *
+     * @param string $id The IP address to be viewed
+     * @return string  A rendered view of the Vistor's details and a list of
+     * activity
+     */
+    public function actionView($id) {
+        $searchModel = new VisitorLogSearch();
+        $searchModel->ip = $id;
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider->setPagination(['pageSize' => 10]);
+        return $this->render('view', [
+                    'model' => $this->findModel($id),
+                    'searchModel' => $searchModel,
+                    'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    /**
+     * Lists all Visitor models.
+     * @return string A rendered view of the list of visitors
+     */
+    public function yeOldeActionIndex($search = "", $field = "") {
         if (empty($search)) {
             $query = Visitor::find();
         } elseif (strpos($field, 'log') === 0) {
@@ -83,26 +124,6 @@ class VisitorController extends Controller {
         return $this->render('index', [
                     'dataProvider' => $dataProvider,
                     'search' => $search
-        ]);
-    }
-
-    /**
-     * Displays a single Visitor model and a GridView from VisitorLog of this
-     * Visitor's activity on your site
-     *
-     * @param string $id The IP address to be viewed
-     * @return string  A rendered view of the Vistor's details and a list of
-     * activity
-     */
-    public function actionView($id) {
-        $searchModel = new VisitorLogSearch();
-        $searchModel->ip = $id;
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $this->render('view', [
-                    'model' => $this->findModel($id),
-                    'searchModel' => $searchModel,
-                    'dataProvider' => $dataProvider,
         ]);
     }
 

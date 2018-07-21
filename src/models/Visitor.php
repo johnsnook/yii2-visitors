@@ -205,7 +205,7 @@ class Visitor extends ActiveRecord {
      *
      * @return object|null
      */
-    private function getIpInfo() {
+    public function getIpInfo() {
         $ipFilter = \Yii::$app->getModule('ipFilter');
 
         $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, $ipFilter->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
@@ -243,6 +243,10 @@ class Visitor extends ActiveRecord {
         } catch (\yii\base\Exception $e) {
             return null;
         }
+    }
+
+    public function getLoggedVisits() {
+        return $this->hasMany(VisitorLog::className(), ['ip' => 'ip']);
     }
 
 }

@@ -10,6 +10,7 @@ namespace johnsnook\ipFilter\filters;
 use yii\filters\AccessRule as BaseAccessRule;
 
 class AccessRule extends BaseAccessRule {
+    /** properties * */
 
     /**
      * @var array list of user cities that this rule applies to.
@@ -33,31 +34,6 @@ class AccessRule extends BaseAccessRule {
     public $countries;
 
     /** methods * */
-    protected function matchRole($user) {
-        if (empty($this->roles)) {
-            return true;
-        }
-
-        foreach ($this->roles as $role) {
-            if ($role === '?') {
-                if (\Yii::$app->user->isGuest) {
-                    return true;
-                }
-            } elseif ($role === '@') {
-                if (!\Yii::$app->user->isGuest) {
-                    return true;
-                }
-            } elseif (($role === 'admin' ) || ($role === '!' )) {
-                if (!\Yii::$app->user->isGuest && \Yii::$app->user->identity->isAdmin) {
-                    return true;
-                }
-            } elseif ($user->can($role)) {
-                return true;
-            }
-        }
-
-        return false;
-    }
 
     /**
      * Checks whether the Web user is allowed to perform the specified action.
@@ -74,6 +50,11 @@ class AccessRule extends BaseAccessRule {
                 return $this->allow ? true : false;
             }
         }
+//        else {
+//            if ($this->matchAction($action) && $this->matchRole($user) && $this->matchIP($request->getUserIP()) && $this->matchVerb($request->getMethod()) && $this->matchController($action->controller) && $this->matchCustom($action)) {
+//                return $this->allow ? true : false;
+//            }
+//        }
         return null;
     }
 

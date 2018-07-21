@@ -86,7 +86,7 @@ $this->params['breadcrumbs'][] = $this->title;
             ?>
         </div>
     </div>
-    <div id="StackAttack" class="stack">
+    <div id="StackAttack" class="stack" style="display: block; position: relative;margin-bottom:200px">
         <?php
         $title = 'Map';
         $body = $this->render('_map', ['model' => $model]);

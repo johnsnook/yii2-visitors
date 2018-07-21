@@ -8,7 +8,7 @@ namespace johnsnook\ipFilter\widgets\Stacked;
  * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
  * @copyright 2018 John Snook Consulting
  */
-use yii\bootstrap\Html;
+use yii\helpers\Html;
 
 class PanelWidget extends \yii\bootstrap\Widget {
 
