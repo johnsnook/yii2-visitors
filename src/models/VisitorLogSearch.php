@@ -53,6 +53,9 @@ class VisitorLogSearch extends VisitorLog {
 
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
+            'pagination' => [
+                'pageSize' => 25,
+            ],
             'sort' => ['defaultOrder' => ['created_at' => SORT_DESC]]
         ]);
 

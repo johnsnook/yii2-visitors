@@ -109,31 +109,17 @@ class ServiceController extends Controller {
      * </code>
      *
      * @param string $ip The IP address of the current visitor
-     * @param string $apiKey The API key
      */
     public function actionProxyCheck($ip) {
         #$ipFilter = \Yii::$app->controller->module;
         $ipFilter = \Yii::$app->getModule('ipFilter');
 
         if (!is_null($visitor = Visitor::findOne($ip))) {
-            $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $ipFilter->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
-            $ch = curl_init($url);
-            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            if (($response = curl_exec($ch) ) === false) {
-                $vse = new VisitorServiceError;
-                $vse->service = "Proxy Check";
-                $vse->url = "url";
-                $vse->message = curl_error($ch);
-                $vse->save();
-            } else {
-                $pcheck = json_decode($response);
-                $visitor->proxy = ($pcheck->proxy === 'yes' ? $pcheck->type : 'no');
-                if ($visitor->proxy !== 'no') {
-                    $visitor->is_blacklisted = true;
-                }
-                $visitor->save();
+            $visitor->proxy = Visitor::proxyCheck($ip);
+            if ($visitor->proxy !== 'no' && in_array($visitor->proxy, $ipFilter->proxyBan)) {
+                $visitor->is_blacklisted = true;
             }
-            curl_close($ch);
+            $visitor->save();
         }
     }
 
@@ -200,7 +186,7 @@ class ServiceController extends Controller {
             if (($response = curl_exec($ch) ) === false) {
                 $vse = new VisitorServiceError;
                 $vse->service = "User Agent";
-                $vse->url = "url";
+                $vse->url = $url;
                 $vse->params = json_encode($data);
                 $vse->message = curl_error($ch);
                 $vse->save();

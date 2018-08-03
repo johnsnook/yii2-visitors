@@ -22,6 +22,7 @@ use yii\filters\AccessControl;
  * VisitorController implements the CRUD actions for the Visitor model.
  */
 class IndividualController extends Controller {
+    //public $viewPath = __dir__ . '/../views/individual';
 
     /**
      * @inheritdoc
@@ -54,7 +55,9 @@ class IndividualController extends Controller {
         $searchModel = new VisitorLogSearch();
         $searchModel->ip = $id;
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
+        $this->setViewPath(__dir__ . '/../views/individual');
+        //dump($this->viewPath);
+        //die();
         return $this->render('view', [
                     'model' => $this->findModel($id),
                     'searchModel' => $searchModel,

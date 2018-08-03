@@ -13,12 +13,14 @@ use yii\db\ActiveRecord;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
 use johnsnook\ipFilter\models\Country;
+use johnsnook\ipFilter\helpers\IpHelper;
 
 /**
  * This is the model class for table "visitor".
  *
  * @property string $ip
  * @property boolean $is_blacklisted
+ * @property string $blacklist_reason;
  * @property string $created_at
  * @property string $updated_at
  * @property integer $user_id
@@ -34,6 +36,12 @@ use johnsnook\ipFilter\models\Country;
  *
  */
 class Visitor extends ActiveRecord {
+
+    const BL_NULL = NULL;
+    const NOT_BLACKLISTED = '';
+    CONST BL_PROXY = 'Proxy';
+    CONST BL_AUTOBAN = 'Autoban';
+    CONST BL_MANUAL = 'Manual';
 
     /**
      * @var array The replacements template
@@ -88,7 +96,7 @@ class Visitor extends ActiveRecord {
         return [
             [['ip'], 'required'],
             //['ip', 'ip', 'ipv6' => false], // IPv4 address (IPv6 is disabled)
-            [['name', 'message', 'ip', 'city', 'region', 'organization', 'proxy'], 'string'],
+            [['name', 'message', 'ip', 'city', 'region', 'organization', 'proxy', 'blacklist_reason'], 'string'],
             [['is_blacklisted'], 'boolean'],
             [['created_at', 'updated_at'], 'safe'],
             [['latitude', 'longitude'], 'double'],
@@ -134,7 +142,8 @@ class Visitor extends ActiveRecord {
     public function attributeLabels() {
         return [
             'ip' => 'Ip Address',
-            'is_blacklisted' => 'Blacklisted?',
+            'is_blacklisted' => 'Banned?',
+            'blacklist_reason' => 'Ban Reason',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'user_id' => 'User ID',
@@ -171,22 +180,49 @@ class Visitor extends ActiveRecord {
                     $this->region = $info->region;
                     $country = Country::findOne(['code' => $info->country]);
                     $this->country = $country->name;
+
                     if ($info->loc) {
                         $this->latitude = floatval(explode(',', $info->loc)[0]);
                         $this->longitude = floatval(explode(',', $info->loc)[1]);
                     }
                     $this->organization = $info->org;
                 }
-                if (($pcheck = $this->getProxyInfo($this->ip)) !== null) {
-                    $this->proxy = ($pcheck->proxy === 'yes' ? $pcheck->type : 'no');
-                    if ($this->proxy !== 'no') {
-                        $this->is_blacklisted = true;
-                    }
-                }
+            }
+            if (is_null($this->proxy) || $this->proxy === 'ERROR') {
+                $this->proxy = self::proxyCheck($this->ip);
+                $this->is_blacklisted = $this->isBlacklisted(true);
             }
             return true;
         }
         return false;
+    }
+
+    /**
+     * Is this visitor blacklisted from a previous check or are they blacklisted by
+     * applying the rules now.
+     *
+     * @param boolean $forceCheck
+     * @return boolean
+     */
+    public function isBlacklisted($forceCheck = false) {
+        if ($forceCheck === false) {
+            return $this->is_blacklisted;
+        }
+        $ipFilter = \Yii::$app->getModule('ipFilter');
+        $return = false;
+        if ($this->proxy !== 'no' && in_array($this->proxy, $ipFilter->proxyBan, true)) {
+            $this->blacklist_reason = self::BL_PROXY;
+            return true;
+        }
+
+        foreach ($ipFilter->autoBan as $ban) {
+            if (IpHelper::inRange($this->ip, $ban)) {
+                $this->blacklist_reason = self::BL_AUTOBAN;
+                $return = true;
+                break;
+            }
+        }
+        return $return;
     }
 
     /**
@@ -230,11 +266,29 @@ class Visitor extends ActiveRecord {
      *     }
      * </code>
      *
+     * @param string $ip The IP address of the current visitor
      * @return object|null
      */
+    public static function proxyCheck($ip) {
+        $ipFilter = \Yii::$app->getModule('ipFilter');
+        $proxy = null;
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $ipFilter->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
+
+        try {
+            if (!empty($data = json_decode(file_get_contents($url), true))) {
+                $pcheck = (object) $data[$ip];
+                $proxy = ($pcheck->proxy === 'yes' ? $pcheck->type : 'no');
+            }
+        } catch (\yii\base\Exception $e) {
+            VisitorServiceError::log("Proxy Check", $url, $e->getMessage());
+            $proxy = 'ERROR';
+        }
+
+        return $proxy;
+    }
+
     private function getProxyInfo() {
         $ipFilter = \Yii::$app->getModule('ipFilter');
-
         $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, $ipFilter->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
         try {
             if (!empty($data = json_decode(file_get_contents($url), true))) {

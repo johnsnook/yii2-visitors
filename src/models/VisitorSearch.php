@@ -32,7 +32,7 @@ class VisitorSearch extends Visitor {
     /**
      * @var array The fields to search with ParselQuery
      */
-    private $fields = ['v.city', 'v.region', 'v.country', 'v.organization', 'vl.request', 'vl.referer'];
+    private $fields = ['ip' => 'v.ip', 'city', 'region', 'country', 'organization', 'proxy', 'request', 'referer'];
 
     /**
      * {@inheritdoc}
@@ -62,23 +62,33 @@ class VisitorSearch extends Visitor {
     public function search($params) {
         $this->load($params);
 
-        if (empty($this->userQuery)) {
-            $query = Visitor::find();
-        } else {
-            $query = Visitor::find()
+//        if (empty($this->userQuery)) {
+//            $query = Visitor::find();
+//        } else {
+//            $query = Visitor::find()
+//                    ->select(['v.ip'])
+//                    ->distinct()
+//                    ->addSelect(['city', 'region', 'country', 'visits', 'updated_at'])
+//                    ->from('visitor v')
+//                    ->leftJoin('visitor_log vl', 'v.ip = vl.ip');
+//            $query = ParselQuery::build($query, $this->userQuery, $this->fields);
+//            $this->sql = SqlFormatter::format($query->createCommand()->getRawSql());
+//            $this->queryError = ParselQuery::$lastError;
+//        }
+        $parsel = new ParselQuery([
+            'userQuery' => $this->userQuery,
+            'searchFields' => $this->fields,
+            'dbQuery' => Visitor::find()
                     ->select(['v.ip'])
                     ->distinct()
                     ->addSelect(['city', 'region', 'country', 'visits', 'updated_at'])
                     ->from('visitor v')
-                    ->leftJoin('visitor_log vl', 'v.ip = vl.ip');
-            $query = ParselQuery::build($query, $this->userQuery, $this->fields);
-            $this->sql = SqlFormatter::format($query->createCommand()->getRawSql());
-            $this->queryError = ParselQuery::$lastError;
-        }
+                    ->leftJoin('visitor_log vl', 'v.ip = vl.ip')
+        ]);
 
 
         $dataProvider = new ActiveDataProvider([
-            'query' => $query,
+            'query' => $parsel->dbQuery,
             'pagination' => [
                 'pageSize' => 20,
             ],

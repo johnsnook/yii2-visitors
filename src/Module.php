@@ -90,13 +90,27 @@ class Module extends BaseModule implements BootstrapInterface {
      * @var string $whatsmybrowswerKey Go to https://proxycheck.io/ for a free API key
      */
     public $whatsmybrowswerKey = '';
+
+    /**
+     * @var array The list of proxy types we autoban
+     */
     public $proxyBan = ['VPN', 'Compromised Server', 'SOCKS', 'SOCKS4', 'HTTP', 'SOCKS5', 'HTTPS', 'TOR'];
+
+    /**
+     *
+     * @var array The list of CIDRs we automatically ban
+     */
+    public $autoBan = [];
 
     /**
      * @var string Controllers will use this value if set to allow the user to
      * define their own custom views.
      */
     //public $viewPath;
+    /**
+     * @var boolean Whether to rely on blacklist flag or calculate it every time
+     */
+    public $forceCheck = false;
 
     /**
      * @var array These are the controller actions that will not be logged
@@ -111,9 +125,9 @@ class Module extends BaseModule implements BootstrapInterface {
     /** @var array The rules to be used in URL management. */
     public $urlRules = [
 //        'visitor/<action:\w+>' => '/ipFilter/visitor/<action>',
-        'visitor' => 'ipFilter/visitor/index',
-        '/visitor/index' => 'ipFilter/visitor/index',
-        '/visitor/blowoff' => 'ipFilter/visitor/blowoff',
+        '/visitor' => '/ipFilter/visitor/index',
+        '/visitor/index' => '/ipFilter/visitor/index',
+        '/visitor/blowoff' => '/ipFilter/visitor/blowoff',
         '/visitor/<id>' => '/ipFilter/visitor/view',
         '/visitor/update/<id>' => '/ipFilter/visitor/update',
         '/individual/<id>' => '/ipFilter/individual/view',
@@ -133,6 +147,7 @@ class Module extends BaseModule implements BootstrapInterface {
     }
 
     /**
+     * Why don't you pull yourself up by the bootstraps?
      *
      * @param Application $app
      */
@@ -146,22 +161,44 @@ class Module extends BaseModule implements BootstrapInterface {
             if ($app instanceof \yii\console\Application) {
                 $this->controllerNamespace = 'johnsnook\ipFilter\commands';
             } else {
-                $app->on(Application::EVENT_BEFORE_ACTION, [$module, 'metalDetector']);
+                $app->on(Application::EVENT_BEFORE_ACTION, [$module, 'leGauntlet']);
             }
         }
     }
 
     /**
-     * Handles the BeforeAction event
+     * Called on the BeforeAction event, it logs the current visitor, and if it's
+     * a new visitor, gather their ipInfo, proxy information and browser info.
+     * Then, check their blacklist status or compares their info against the
+     * blacklist criteria.
+     *
+     * If the visitor IS blacklisted, redirect them to the blowoff action.  If
+     * they're going to the blowoff action, let them and don't redirect them so
+     * much the browser throws a fucking error.
      *
      * @param ActionEvent $event
+     * @return boolean whether the current action should continue
      */
-    public function metalDetector(ActionEvent $event) {
-        $remoteAddress = new RemoteAddress();
-        $ip = $remoteAddress->getIpAddress();
+    public function leGauntlet(ActionEvent $event) {
 
+        /** get user ip, if null, send them to the blowoff */
+        if (is_null($ip = Yii::$app->request->getUserIP())) {
+            $event->handled = true;
+            if ($event->action->controller->route !== $this->blowOff) {
+                return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
+            } else {
+                return true;
+            }
+        }
+
+        /**
+         * Check to see if this action is listed in the ignorables array or if
+         * the visitors ip is in the whitelist
+         */
         $controllerId = $event->action->controller->id;
         if (array_key_exists($controllerId, $this->ignorables) && in_array($event->action->id, $this->ignorables[$controllerId])) {
+            return true;
+        } elseif (array_key_exists('whitelist', $this->ignorables) && in_array($ip, $this->ignorables['whitelist'])) {
             return true;
         }
 
@@ -169,37 +206,38 @@ class Module extends BaseModule implements BootstrapInterface {
          * Try to find existing visitor record, and creates a new one if not found
          * Also logs this visit in the access_log
          */
-        $visitor = Visitor::findOne($ip);
-        if (is_null($visitor)) {
-            $visitor = new Visitor([
+        $this->visitor = Visitor::findOne($ip);
+        if (is_null($this->visitor)) {
+            $this->visitor = new Visitor([
                 'ip' => $ip,
                 'ipInfoKey' => $this->ipInfoKey,
                 'proxyCheckKey' => $this->proxyCheckKey,
             ]);
-            if (!$visitor->save()) {
-                die(json_encode($visitor->errors));
+            if (!$this->visitor->save()) {
+                die(json_encode($this->visitor->errors));
             }
-            $visitor->refresh();
+            $this->visitor->refresh();
         }
-        $this->visitor = $visitor;
-        if (array_key_exists('whitelist', $this->ignorables) && in_array($ip, $this->ignorables['whitelist'])) {
+
+        /** Log the visit */
+        $log = VisitorLog::log($ip);
+        VisitorAgent::log($log->user_agent);
+
+        /** Allow the blacklisted visitor to reach the blowoff actioin */
+        if ($event->action->controller->route === $this->blowOff) {
             return true;
         }
 
-        $log = VisitorLog::log($ip);
-        VisitorAgent::log($log->user_agent);
-        $alreadyFuckingOff = ($event->action->controller->route === $this->blowOff);
-        $this->visitor = $visitor;
-        if ($alreadyFuckingOff) {
-            return true;
-        } elseif (!$alreadyFuckingOff && in_array($visitor->proxy, $this->proxyBan)) {
-            $event->handled = true;
-            die(json_encode(['$event->action->controller->route' => $event->action->controller->route, '$this->blowOff' => $this->blowOff]));
-            return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
-        } elseif (!$alreadyFuckingOff && $visitor->is_blacklisted) {
+        if ($this->isBlacklisted()) {
             $event->handled = true;
             return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
         }
+
+        return true;
+    }
+
+    public function isBlacklisted() {
+        return $this->visitor->isBlacklisted($this->forceCheck);
     }
 
     /**

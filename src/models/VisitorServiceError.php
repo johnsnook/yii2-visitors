@@ -55,4 +55,21 @@ class VisitorServiceError extends \yii\db\ActiveRecord {
         ];
     }
 
+    /**
+     * Logs an error from a service.
+     *
+     * @param string $service
+     * @param string $url
+     * @param string $message
+     * @param array $params
+     */
+    public static function log($service, $url, $message, $params = []) {
+        $vse = new VisitorServiceError;
+        $vse->service = $service;
+        $vse->url = $url;
+        $vse->message = $message;
+        $vse->params = json_encode($params);
+        $vse->save();
+    }
+
 }

@@ -15,7 +15,6 @@ use Yii;
 use johnsnook\ipFilter\models\Visitor;
 use johnsnook\ipFilter\models\VisitorSearch;
 use johnsnook\ipFilter\models\VisitorLogSearch;
-use johnsnook\parsel\ParselQuery;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\data\ActiveDataProvider;
@@ -90,49 +89,12 @@ class VisitorController extends Controller {
     }
 
     /**
-     * Lists all Visitor models.
-     * @return string A rendered view of the list of visitors
-     */
-    public function yeOldeActionIndex($search = "", $field = "") {
-        if (empty($search)) {
-            $query = Visitor::find();
-        } elseif (strpos($field, 'log') === 0) {
-            $field = explode('-', $field)[1];
-            $query = Visitor::find()
-                    ->select(['v.ip'])
-                    ->distinct()
-                    ->addSelect(['city', 'region', 'country', 'visits', 'updated_at'])
-                    ->from('visitor v')
-                    ->leftJoin('visitor_log vl', 'v.ip = vl.ip')
-                    ->where(['ilike', $field, "$search"]);
-        } else {
-            $query = Visitor::find()->where(['ilike', $field, "$search"]);
-        }
-
-        $dataProvider = new ActiveDataProvider([
-            'query' => $query,
-            'pagination' => [
-                'pageSize' => 20,
-            ],
-            'sort' => [
-                'defaultOrder' => [
-                    'updated_at' => SORT_DESC,
-                ]
-            ],
-        ]);
-
-        return $this->render('index', [
-                    'dataProvider' => $dataProvider,
-                    'search' => $search
-        ]);
-    }
-
-    /**
      * Sets the [[is_blacklisted]] flag of this particular individual.
      * @return mixed
      */
     public function actionBlacklist($id) {
         $model = $this->findModel($id);
+        $this->blacklist_reason = Visitor::BL_MANUAL;
         $model->is_blacklisted = true;
         $model->save();
         return $this->actionView($id);
