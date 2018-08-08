@@ -2,12 +2,10 @@
 
 namespace johnsnook\ipFilter\models;
 
-use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use johnsnook\ipFilter\models\Visitor;
 use johnsnook\parsel\ParselQuery;
-use johnsnook\parsel\lib\SqlFormatter;
 
 /**
  * VisitorSearch represents the model behind the search form of `johnsnook\ipFilter\models\Visitor`.
@@ -62,19 +60,6 @@ class VisitorSearch extends Visitor {
     public function search($params) {
         $this->load($params);
 
-//        if (empty($this->userQuery)) {
-//            $query = Visitor::find();
-//        } else {
-//            $query = Visitor::find()
-//                    ->select(['v.ip'])
-//                    ->distinct()
-//                    ->addSelect(['city', 'region', 'country', 'visits', 'updated_at'])
-//                    ->from('visitor v')
-//                    ->leftJoin('visitor_log vl', 'v.ip = vl.ip');
-//            $query = ParselQuery::build($query, $this->userQuery, $this->fields);
-//            $this->sql = SqlFormatter::format($query->createCommand()->getRawSql());
-//            $this->queryError = ParselQuery::$lastError;
-//        }
         $parsel = new ParselQuery([
             'userQuery' => $this->userQuery,
             'searchFields' => $this->fields,

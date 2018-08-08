@@ -11,7 +11,6 @@
 
 namespace johnsnook\ipFilter;
 
-use johnsnook\ipFilter\lib\RemoteAddress;
 use johnsnook\ipFilter\models\Visitor;
 use johnsnook\ipFilter\models\VisitorAgent;
 use johnsnook\ipFilter\models\VisitorLog;
@@ -219,12 +218,16 @@ class Module extends BaseModule implements BootstrapInterface {
             $this->visitor->refresh();
         }
 
+        /** Attach the visitor behavior to the user */
+        $visitorBehavior = new behaviors\VisitorBehavior(['visitor' => $this->visitor]);
+        \Yii::$app->user->attachBehavior('visitor', $visitorBehavior);
+
         /** Log the visit */
         $log = VisitorLog::log($ip);
         VisitorAgent::log($log->user_agent);
-
-        /** Allow the blacklisted visitor to reach the blowoff actioin */
+        /** Allow the blacklisted visitor to reach the blowoff action */
         if ($event->action->controller->route === $this->blowOff) {
+            $event->handled = true;
             return true;
         }
 

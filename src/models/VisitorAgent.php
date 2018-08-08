@@ -38,6 +38,11 @@ namespace johnsnook\ipFilter\models;
 class VisitorAgent extends \yii\db\ActiveRecord {
 
     /**
+     * @var string The template for the user agent API.
+     */
+    const USER_AGENT_URL = 'https://api.whatismybrowser.com/api/v2/user_agent_parse';
+
+    /**
      * @inheritdoc
      */
     public static function tableName() {
@@ -233,7 +238,7 @@ class VisitorAgent extends \yii\db\ActiveRecord {
      *
      * @return array
      */
-    public static function log($userAgent) {
+    public static function log1($userAgent) {
         if (empty($userAgent)) {
             return;
         }
@@ -253,6 +258,84 @@ class VisitorAgent extends \yii\db\ActiveRecord {
         } else {
             throw new \Exception("Couldn't find yii executable to run user agent script");
         }
+    }
+
+    /**
+     * Requests user agent info from https://whatismybrowser.com
+     * <code>
+     * Response received
+     * {
+     *     "parse": {
+     *         "user_agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36",
+     *         "software_name": "Chrome",
+     *         "operating_system": "Mac OS X (Mavericks)",
+     *         "software_version": 64,
+     *         "operating_system_name": "Mac OS X",
+     *         "operating_system_version_full": [
+     *             10,
+     *             9,
+     *             5
+     *         ],
+     *         "software_name_code": "chrome",
+     *         "simple_operating_platform_string": null,
+     *         "operating_system_version": "Mavericks",
+     *         "simple_sub_description_string": null,
+     *         "is_abusive": false,
+     *         "operating_system_flavour_code": null,
+     *         "software_version_full": [
+     *             64,
+     *             0,
+     *             3282,
+     *             140
+     *         ],
+     *         "simple_software_string": "Chrome 64 on Mac OS X (Mavericks)",
+     *         "operating_system_flavour": null,
+     *         "operating_system_name_code": "mac-os-x",
+     *         "software": "Chrome 64"
+     *     },
+     *     "result": {
+     *         "message": "The user agent was parsed successfully.",
+     *         "code": "success",
+     *         "message_code": "user_agent_parsed"
+     *     }
+     * }
+     * </code>
+     *
+     * @param string $userAgent The browser reported string returned by $_[USER_AGENT]
+     * @param string $apiKey
+     */
+    public static function log($userAgent) {
+        //$ipFilter = \Yii::$app->controller->module;
+        $ipFilter = \Yii::$app->getModule('ipFilter');
+
+        if (is_null($agent = VisitorAgent::findOne($userAgent))) {
+            $data = ["user_agent" => $userAgent];
+
+            $agent = new VisitorAgent($data);
+            echo "New agent\n";
+
+            $ch = curl_init(self::USER_AGENT_URL);
+            curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, ['X-API-KEY: ' . $ipFilter->whatsmybrowswerKey]);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            if (($response = curl_exec($ch) ) === false) {
+                die("Error" . curl_error($ch) . PHP_EOL);
+            } else {
+                $agent->info = json_decode($response);
+                //echo "Response received\n" . json_encode($agent->info, 224);
+                if ($agent->save()) {
+                    //  echo "Agent Saved\n";
+                } else {
+                    //echo "Agent NOT Saved\n";
+                    die(json_encode($agent->errors, 224) . PHP_EOL);
+                }
+            }
+            curl_close($ch);
+            return;
+        }
+        //echo "Agent already exists.\n";
     }
 
 }
