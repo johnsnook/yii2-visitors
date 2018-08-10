@@ -21,7 +21,7 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
     <?= $form->field($model, 'name')->textInput() ?>
     <?= $form->field($model, 'message')->textarea(['rows' => 6]) ?>
-    <?= $form->field($model, 'is_blacklisted')->checkbox() ?>
+    <?= $form->field($model, 'banned')->checkbox() ?>
     <div class="form-group field-visitor-created_at">
         <label class="control-label" for="visitor-created_at">Creation</label>
         <div type="text" id="visitor-created_at" class="form-control" name="Visitor[created_at]">

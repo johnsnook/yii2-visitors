@@ -23,18 +23,6 @@ class VisitorBehavior extends \yii\base\Behavior {
         return $this->visitor->ip;
     }
 
-    public function getName() {
-        return $this->visitor->name;
-    }
-
-    public function getMessage() {
-        return $this->visitor->message;
-    }
-
-    public function getBlacklistReason() {
-        return $this->visitor->blacklist_reason;
-    }
-
     public function getCity() {
         return $this->visitor->city;
     }
@@ -47,13 +35,24 @@ class VisitorBehavior extends \yii\base\Behavior {
         return $this->visitor->country;
     }
 
+    public function getPostal() {
+        return $this->visitor->postal;
+    }
+
     public function getProxy() {
         return $this->visitor->proxy;
     }
 
-    public function getIsBlacklisted() {
-        $ipFilter = \Yii::$app->getModule('ipFilter');
-        return $ipFilter->isBlacklisted();
+    public function getBanned() {
+        return $this->visitor->banned;
+    }
+
+    public function getHat_color() {
+        return $this->visitor->hat_color;
+    }
+
+    public function getHat_rule() {
+        return $this->visitor->hat_rule;
     }
 
 }

@@ -84,7 +84,7 @@ if ($ipFilter->bootstrapCssVersion === 4) {
                 'format' => 'html',
                 'value' => function($data) {
                     $style = '';
-                    if ($data->is_blacklisted) {
+                    if ($data->banned) {
                         $style = 'background-color: Black; color: White';
                     }
                     return Html::a($data->ip, ['view', 'id' => $data->ip], ['style' => $style]);

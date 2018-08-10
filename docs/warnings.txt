@@ -18,7 +18,7 @@ Array
         (
             [line] => 242
             [file] => src/Module.php
-            [message] => No docblock for element 'isBlacklisted'
+            [message] => No docblock for element 'isBanned'
         )
 
     [3] => Array
@@ -340,7 +340,7 @@ Array
         (
             [line] => 54
             [file] => src/behaviors/VisitorBehavior.php
-            [message] => No docblock for element 'getIsBlacklisted'
+            [message] => No docblock for element 'getIsBanned'
         )
 
     [49] => Array

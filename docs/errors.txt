@@ -38,13 +38,13 @@ Array
     [5] => Array
         (
             [file] => src/controllers/VisitorController.php
-            [message] => broken link to \johnsnook\ipFilter\controllers\is_blacklisted in johnsnook\ipFilter\controllers\VisitorController
+            [message] => broken link to \johnsnook\ipFilter\controllers\banned in johnsnook\ipFilter\controllers\VisitorController
         )
 
     [6] => Array
         (
             [file] => src/controllers/VisitorController.php
-            [message] => broken link to \johnsnook\ipFilter\controllers\is_blacklisted in johnsnook\ipFilter\controllers\VisitorController
+            [message] => broken link to \johnsnook\ipFilter\controllers\banned in johnsnook\ipFilter\controllers\VisitorController
         )
 
     [7] => Array

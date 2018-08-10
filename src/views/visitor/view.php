@@ -33,7 +33,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-md-6 col-6" ><?= Html::encode($this->title); ?></div>
         <div class="col-md-6 col-6" style="text-align: right"><?php
             if (!Yii::$app->user->isGuest) {
-                if (!$model->is_blacklisted) {
+                if (!$model->banned) {
                     echo Html::a('Blacklist', ['blacklist', 'id' => $model->ip], ['class' => 'btn btn-danger']);
                 }
                 echo Html::a('Update', ['update', 'id' => $model->ip], ['class' => 'btn btn-default']);
@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 'model' => $model,
                 'attributes' => [
                     'ip',
-                    'is_blacklisted:boolean',
+                    'banned:boolean',
                     [
                         'attribute' => 'created_at',
                         'value' => function($data) {

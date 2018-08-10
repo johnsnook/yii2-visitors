@@ -89,13 +89,13 @@ class VisitorController extends Controller {
     }
 
     /**
-     * Sets the [[is_blacklisted]] flag of this particular individual.
+     * Sets the [[banned]] flag of this particular individual.
      * @return mixed
      */
     public function actionBlacklist($id) {
         $model = $this->findModel($id);
         $this->blacklist_reason = Visitor::BL_MANUAL;
-        $model->is_blacklisted = true;
+        $model->banned = true;
         $model->save();
         return $this->actionView($id);
     }

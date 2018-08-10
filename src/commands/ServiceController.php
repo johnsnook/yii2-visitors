@@ -117,7 +117,7 @@ class ServiceController extends Controller {
         if (!is_null($visitor = Visitor::findOne($ip))) {
             $visitor->proxy = Visitor::proxyCheck($ip);
             if ($visitor->proxy !== 'no' && in_array($visitor->proxy, $ipFilter->proxyBan)) {
-                $visitor->is_blacklisted = true;
+                $visitor->banned = true;
             }
             $visitor->save();
         }

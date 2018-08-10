@@ -11,6 +11,7 @@
 
 namespace johnsnook\ipFilter;
 
+use johnsnook\ipFilter\helpers\IpHelper;
 use johnsnook\ipFilter\models\Visitor;
 use johnsnook\ipFilter\models\VisitorAgent;
 use johnsnook\ipFilter\models\VisitorLog;
@@ -93,7 +94,7 @@ class Module extends BaseModule implements BootstrapInterface {
     /**
      * @var array The list of proxy types we autoban
      */
-    public $proxyBan = ['VPN', 'Compromised Server', 'SOCKS', 'SOCKS4', 'HTTP', 'SOCKS5', 'HTTPS', 'TOR'];
+    protected $defaultBlackProxies = ['VPN', 'Compromised Server', 'SOCKS', 'SOCKS4', 'HTTP', 'SOCKS5', 'HTTPS', 'TOR'];
 
     /**
      * @var array The list of CIDRs we automatically ban
@@ -103,13 +104,10 @@ class Module extends BaseModule implements BootstrapInterface {
     /**
      * @var array Rules that show the visitor the door
      */
-    public $blackRules = [
-        'proxy' => ['VPN', 'Compromised Server', 'SOCKS', 'SOCKS4', 'HTTP', 'SOCKS5', 'HTTPS', 'TOR'],
-        'referer' => ['translate.googleusercontent.com'],
-    ];
+    public $blackRules = [];
 
     /**
-     * @var array Rules that welcome a visitor in
+     * @var array Rules that welcomes a visitor in
      */
     public $whiteRules = [
         'ip' => [
@@ -162,13 +160,15 @@ class Module extends BaseModule implements BootstrapInterface {
     }
 
     /**
-     * Why don't you pull yourself up by the bootstraps?
+     * Why don't you pull yourself up by the bootstraps like I did by being born
+     * middle class and having parents who could help pay for college?
+     *
+     * If we're running in console mode set the controller space to our commands
+     * folder.  If not, attach our main event to the the [[ap beforeAction
      *
      * @param Application $app
      */
     public function bootstrap($app) {
-
-
         if ($app->hasModule('ipFilter') && ($module = $app->getModule('ipFilter')) instanceof Module) {
             $app->getUrlManager()->addRules($this->urlRules, false);
             //die(json_encode($app->getUrlManager()->rules));
@@ -241,22 +241,81 @@ class Module extends BaseModule implements BootstrapInterface {
         /** Log the visit */
         $this->visitor->visit = VisitorLog::log($ip);
         VisitorAgent::log($this->visitor->visit->user_agent);
-        /** Allow the blacklisted visitor to reach the blowoff action */
+
+        /** Allow the rejected visitor to reach the blowoff action */
         if ($event->action->controller->route === $this->blowOff) {
-            $event->handled = true;
-            return true;
+            return $event->handled = true;
         }
 
-        if ($this->isBlacklisted()) {
+        /** the banned don't need to be checked, they can just go. * */
+        if ($this->visitor->banned) {
             $event->handled = true;
             return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
         }
 
+        /** White list */
+        if (!is_null($checkEm = static::checkList($this->whiteRules, $this->visitor))) {
+            $this->visitor->hat_color = Visitor::HAT_COLOR_WHITE;
+            $this->visitor->hat_rule = implode(array_keys($checkEm)) . ' ' . implode($checkEm);
+            $this->visitor->save();
+            $event->handled = true;
+            return true;
+        }
+        echo str_repeat('*', 20) . PHP_EOL;
+
+        /** Black list (that's racist!) */
+        if (!is_null($checkEm = static::checkList($this->blackRules, $this->visitor))) {
+            $this->visitor->hat_color = Visitor::HAT_COLOR_BLACK;
+            $this->visitor->hat_rule = implode(array_keys($checkEm)) . ' ' . implode($checkEm);
+            $this->visitor->save();
+            $event->handled = true;
+            return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
+        }
+        die();
         return true;
     }
 
-    public function isBlacklisted() {
-        return $this->visitor->isBlacklisted($this->forceCheck);
+    /**
+     * Compares properties against a indexed array of arrays of values.  String
+     * values are compared using stripos, ip values should be in CIDR format.
+     *
+     * @param array $list
+     * @param Visitor $visitor
+     * @return array The list element that matched
+     */
+    protected static function checkList($list, $visitor) {
+        dump($list, $visitor);
+        if (isset($list['ip'])) {
+            foreach ($list['ip'] as $ip) {
+                if (IpHelper::inRange($visitor->ip, $ip)) {
+                    return ['ip' => $ip];
+                }
+            }
+        }
+
+        $stringAttributes = ['city', 'region', 'country', 'postal', 'asn', 'organization', 'proxy'];
+        foreach ($stringAttributes as $sAttr) {
+            if (isset($list[$sAttr])) {
+                foreach ($list[$sAttr] as $val) {
+                    if (stripos($visitor->$sAttr, $val) !== false) {
+                        return [$sAttr => $val];
+                    }
+                }
+            }
+        }
+
+        $stringAttributes = ['referer', 'request', 'user_agent'];
+        foreach ($stringAttributes as $sAttr) {
+            if (isset($list[$sAttr])) {
+                foreach ($list[$sAttr] as $val) {
+                    if (stripos($visitor->visit->$sAttr, $val) !== false) {
+                        return [$sAttr => $val];
+                    }
+                }
+            }
+        }
+
+        return null;
     }
 
     /**

@@ -27,7 +27,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'ip') ?>
 
-    <?= $form->field($model, 'is_blacklisted') ?>
+    <?= $form->field($model, 'banned') ?>
 
     <?= $form->field($model, 'created_at') ?>
 

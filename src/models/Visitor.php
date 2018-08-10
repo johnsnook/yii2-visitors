@@ -13,35 +13,33 @@ use yii\db\ActiveRecord;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
 use johnsnook\ipFilter\models\Country;
-use johnsnook\ipFilter\helpers\IpHelper;
 
 /**
  * This is the model class for table "visitor".
  *
  * @property string $ip
- * @property boolean $is_blacklisted
- * @property string $blacklist_reason;
+ * @property boolean $banned
  * @property string $created_at
  * @property string $updated_at
  * @property integer $user_id
- * @property string $name
- * @property string $message
  * @property string $city
  * @property string $region
  * @property string $country
+ * @property string $postal
  * @property double $latitude
  * @property double $longitude
+ * @property string $asn
  * @property string $organization
  * @property string $proxy
+ * @property string $hat_color
+ * @property string $hat_rule
  *
  */
 class Visitor extends ActiveRecord {
 
-    const BL_NULL = NULL;
-    const NOT_BLACKLISTED = '';
-    CONST BL_PROXY = 'Proxy';
-    CONST BL_AUTOBAN = 'Autoban';
-    CONST BL_MANUAL = 'Manual';
+    const HAT_COLOR_WHITE = 'White';
+    const HAT_COLOR_NONE = 'None';
+    const HAT_COLOR_BLACK = 'Black';
 
     /**
      * @var array The replacements template
@@ -101,11 +99,10 @@ class Visitor extends ActiveRecord {
         return [
             [['ip'], 'required'],
             //['ip', 'ip', 'ipv6' => false], // IPv4 address (IPv6 is disabled)
-            [['name', 'message', 'ip', 'city', 'region', 'organization', 'proxy', 'blacklist_reason'], 'string'],
-            [['is_blacklisted'], 'boolean'],
+            [['ip', 'city', 'region', 'asn', 'organization', 'proxy', 'hat_color', 'hat_rule'], 'string'],
+            [['banned'], 'boolean'],
             [['created_at', 'updated_at'], 'safe'],
             [['latitude', 'longitude'], 'double'],
-            [['user_id'], 'integer'],
         ];
     }
 
@@ -147,13 +144,12 @@ class Visitor extends ActiveRecord {
     public function attributeLabels() {
         return [
             'ip' => 'Ip Address',
-            'is_blacklisted' => 'Banned?',
-            'blacklist_reason' => 'Ban Reason',
+            'banned' => 'Banned?',
             'created_at' => 'Created At',
             'updated_at' => 'Updated At',
             'user_id' => 'User ID',
-            'name' => 'Name',
-            'message' => 'Message',
+            'hat_color' => 'Hat Color',
+            'hat_rule' => 'Hat Color Reason',
             'info' => 'Ip Info',
             'hostname' => 'Host Name',
             'city' => 'City',
@@ -190,76 +186,18 @@ class Visitor extends ActiveRecord {
                         $this->latitude = floatval(explode(',', $info->loc)[0]);
                         $this->longitude = floatval(explode(',', $info->loc)[1]);
                     }
-                    $this->organization = $info->org;
+                    $organs = explode(' ', $info->org);
+                    $this->asn = $organs[0];
+                    $this->organization = implode(' ', array_slice($organs, 1));
                 }
             }
             if (is_null($this->proxy) || $this->proxy === 'ERROR') {
                 $this->proxy = self::proxyCheck($this->ip);
-                $this->is_blacklisted = $this->isBlacklisted(true);
+//                $this->banned = $this->isBanned(true);
             }
             return true;
         }
         return false;
-    }
-
-    /**
-     * Compares properties against a indexed array of arrays of values.  String
-     * values are compared using stripos, ip values should be in CIDR format.
-     *
-     * @param array $list
-     * @return array
-     */
-    public function checkList($list) {
-        if (isset($list['ip'])) {
-            foreach ($list['ip'] as $ip) {
-                if (IpHelper::inRange($this->ip, $ip)) {
-                    return ['ip' => $ip];
-                }
-            }
-        }
-        if (isset($list['city'])) {
-            foreach ($list['city'] as $city) {
-                if (stripos($this->city, $city) !== false) {
-                    return ['city' => $city];
-                }
-            }
-        }
-        if (isset($list['region'])) {
-            foreach ($list['region'] as $region) {
-                if (stripos($this->region, $region) !== false) {
-                    return ['region' => $region];
-                }
-            }
-        }
-        if (isset($list['country'])) {
-            foreach ($list['country'] as $country) {
-                if (stripos($this->country, $country) !== false) {
-                    return ['country' => $country];
-                }
-            }
-        }
-        if (isset($list['postal'])) {
-            foreach ($list['postal'] as $postal) {
-                if ($this->postal === $postal) {
-                    return ['postal' => $postal];
-                }
-            }
-        }
-        if (isset($list['organization'])) {
-            foreach ($list['organization'] as $organization) {
-                if (stripos($this->organization, $organization) !== false) {
-                    return ['organization' => $organization];
-                }
-            }
-        }
-        if (isset($list['referer'])) {
-            foreach ($list['referer'] as $referer) {
-                if (stripos($this->visit->referer, $referer) !== false) {
-                    return ['referer' => $referer];
-                }
-            }
-        }
-        return null;
     }
 
     /**
@@ -269,25 +207,27 @@ class Visitor extends ActiveRecord {
      * @param boolean $forceCheck
      * @return boolean
      */
-    public function isBlacklisted($forceCheck = false) {
+    public function isBanned($forceCheck = false) {
         if ($forceCheck === false) {
-            return $this->is_blacklisted;
+            return $this->banned;
         }
-        $ipFilter = \Yii::$app->getModule('ipFilter');
-        $return = false;
-        if ($this->proxy !== 'no' && in_array($this->proxy, $ipFilter->proxyBan, true)) {
-            $this->blacklist_reason = self::BL_PROXY;
-            return true;
-        }
-
-        foreach ($ipFilter->autoBan as $ban) {
-            if (IpHelper::inRange($this->ip, $ban)) {
-                $this->blacklist_reason = self::BL_AUTOBAN;
-                $return = true;
-                break;
-            }
-        }
-        return $return;
+        return ($this->hat_color === static::HAT_COLOR_BLACK);
+//            public $hat = ['color' => static::HAT_COLOR_NONE, 'why' => null];
+//        $ipFilter = \Yii::$app->getModule('ipFilter');
+//        $return = false;
+//        if ($this->proxy !== 'no' && in_array($this->proxy, $ipFilter->proxyBan, true)) {
+//            $this->blacklist_reason = self::BL_PROXY;
+//            return true;
+//        }
+//
+//        foreach ($ipFilter->autoBan as $ban) {
+//            if (IpHelper::inRange($this->ip, $ban)) {
+//                //$this->blacklist_reason = self::BL_AUTOBAN;
+//                $return = true;
+//                break;
+//            }
+//        }
+//        return $return;
     }
 
     /**
