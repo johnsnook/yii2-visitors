@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/afb459d7/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/72d2d9ed/solarized_light.css" rel="stylesheet">
+<link href="./assets/30c3cdd9/style.css" rel="stylesheet">
+<script src="./assets/de5d4282/jquery.js"></script>
+<script src="./assets/afb459d7/js/bootstrap.js"></script>
+<script src="./assets/6cd15ed1/jssearch.js"></script>    <title>RemoteAddress, johnsnook\ipFilter\lib\RemoteAddress - Yii2 IP Filter API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w403" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w403-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii2 IP Filter API Documentation</a></div><div id="w403-collapse" class="collapse navbar-collapse"><ul id="w404" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-390" data-toggle="collapse" data-parent="#navigation">Not namespaced classes <b class="caret"></b></a><div id="navigation-390" class="submenu panel-collapse collapse"><a class="list-group-item" href="./stackedasset.html">StackedAsset</a></div>
+<a class="list-group-item" href="#navigation-391" data-toggle="collapse" data-parent="#navigation">dektrium\user\filters <b class="caret"></b></a><div id="navigation-391" class="submenu panel-collapse collapse"><a class="list-group-item" href="./dektrium-user-filters-backendfilter.html">BackendFilter</a></div>
+<a class="list-group-item" href="#navigation-392" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter <b class="caret"></b></a><div id="navigation-392" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-module.html">Module</a></div>
+<a class="list-group-item" href="#navigation-393" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\assets <b class="caret"></b></a><div id="navigation-393" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-assets-appasset.html">AppAsset</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-assets-visitorasset.html">VisitorAsset</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-assets-visitorasset4.html">VisitorAsset4</a></div>
+<a class="list-group-item" href="#navigation-394" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\behaviors <b class="caret"></b></a><div id="navigation-394" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-behaviors-visitorbehavior.html">VisitorBehavior</a></div>
+<a class="list-group-item" href="#navigation-395" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\commands <b class="caret"></b></a><div id="navigation-395" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-commands-importcontroller.html">ImportController</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-commands-servicecontroller.html">ServiceController</a></div>
+<a class="list-group-item" href="#navigation-396" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\controllers <b class="caret"></b></a><div id="navigation-396" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-controllers-individualcontroller.html">IndividualController</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-controllers-visitorcontroller.html">VisitorController</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-controllers-visitorserviceerrorcontroller.html">VisitorServiceErrorController</a></div>
+<a class="list-group-item" href="#navigation-397" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\filters <b class="caret"></b></a><div id="navigation-397" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-filters-accessrule.html">AccessRule</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-filters-frontendfilter.html">FrontendFilter</a></div>
+<a class="list-group-item" href="#navigation-398" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\helpers <b class="caret"></b></a><div id="navigation-398" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-helpers-iphelper.html">IpHelper</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-helpers-progressbar.html">ProgressBar</a></div>
+<a class="list-group-item active" href="#navigation-399" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\lib <b class="caret"></b></a><div id="navigation-399" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./johnsnook-ipfilter-lib-remoteaddress.html">RemoteAddress</a></div>
+<a class="list-group-item" href="#navigation-400" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\models <b class="caret"></b></a><div id="navigation-400" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-models-country.html">Country</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-models-visitor.html">Visitor</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-models-visitoragent.html">VisitorAgent</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-models-visitorlog.html">VisitorLog</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-models-visitorlogsearch.html">VisitorLogSearch</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-models-visitorsearch.html">VisitorSearch</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-models-visitorserviceerror.html">VisitorServiceError</a></div>
+<a class="list-group-item" href="#navigation-401" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\widgets <b class="caret"></b></a><div id="navigation-401" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-widgets-linkpager.html">LinkPager</a></div>
+<a class="list-group-item" href="#navigation-402" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\widgets\Stacked <b class="caret"></b></a><div id="navigation-402" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-widgets-stacked-cardlwidget.html">CardlWidget</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-widgets-stacked-panelwidget.html">PanelWidget</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class johnsnook\ipFilter\lib\RemoteAddress</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></td></tr>
+                                        </table>
+
+<div class="class-description">
+    <p><strong>Functionality for determining client IP address.</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Protected Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$proxyHeader">
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html#$proxyHeader-detail">$proxyHeader</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td></td>
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></td>
+    </tr>
+            <tr id="$trustedProxies">
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html#$trustedProxies-detail">$trustedProxies</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td></td>
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></td>
+    </tr>
+            <tr id="$useProxy">
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html#$useProxy-detail">$useProxy</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td></td>
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="getIpAddress()">
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html#getIpAddress()-detail">getIpAddress()</a></td>
+        <td>Returns client IP address.</td>
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></td>
+    </tr>
+                <tr id="getUseProxy()">
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html#getUseProxy()-detail">getUseProxy()</a></td>
+        <td>Checks proxy handling setting.</td>
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></td>
+    </tr>
+                <tr id="setProxyHeader()">
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html#setProxyHeader()-detail">setProxyHeader()</a></td>
+        <td>Set the header to introspect for proxy IPs</td>
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></td>
+    </tr>
+            <tr id="setTrustedProxies()">
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html#setTrustedProxies()-detail">setTrustedProxies()</a></td>
+        <td>Set list of trusted proxy addresses</td>
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></td>
+    </tr>
+            <tr id="setUseProxy()">
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html#setUseProxy()-detail">setUseProxy()</a></td>
+        <td>Changes proxy handling setting.</td>
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+            <tr id="getIpAddressFromProxy()">
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html#getIpAddressFromProxy()-detail">getIpAddressFromProxy()</a></td>
+        <td>Attempt to get the IP address for a proxied client</td>
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></td>
+    </tr>
+                <tr id="normalizeProxyHeader()">
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html#normalizeProxyHeader()-detail">normalizeProxyHeader()</a></td>
+        <td>Normalize a header string</td>
+        <td><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></td>
+    </tr>
+                </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$proxyHeader-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-ipfilter-lib-remoteaddress.html#$proxyHeader-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $proxyHeader        <span class="detail-header-tag small">
+            protected                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="johnsnook-ipfilter-lib-remoteaddress.html#$proxyHeader-detail">$proxyHeader</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'HTTP_X_FORWARDED_FOR'</span></div>
+
+
+    <div class="detail-header h3" id="$trustedProxies-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-ipfilter-lib-remoteaddress.html#$trustedProxies-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $trustedProxies        <span class="detail-header-tag small">
+            protected                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="johnsnook-ipfilter-lib-remoteaddress.html#$trustedProxies-detail">$trustedProxies</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$useProxy-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-ipfilter-lib-remoteaddress.html#$useProxy-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $useProxy        <span class="detail-header-tag small">
+            protected                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="johnsnook-ipfilter-lib-remoteaddress.html#$useProxy-detail">$useProxy</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="getIpAddress()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-ipfilter-lib-remoteaddress.html#getIpAddress()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        getIpAddress()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns client IP address.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="johnsnook-ipfilter-lib-remoteaddress.html#getIpAddress()-detail">getIpAddress</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>IP address.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getIpAddressFromProxy()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-ipfilter-lib-remoteaddress.html#getIpAddressFromProxy()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        getIpAddressFromProxy()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Attempt to get the IP address for a proxied client</strong></p>
+
+        
+        <p>See also <a href="http://tools.ietf.org/html/draft-ietf-appsawg-http-forwarded-10#section-5.2">http://tools.ietf.org/html/draft-ietf-appsawg-http-forwarded-10#section-5.2</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">false</a>|<a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="johnsnook-ipfilter-lib-remoteaddress.html#getIpAddressFromProxy()-detail">getIpAddressFromProxy</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getUseProxy()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-ipfilter-lib-remoteaddress.html#getUseProxy()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        getUseProxy()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Checks proxy handling setting.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="johnsnook-ipfilter-lib-remoteaddress.html#getUseProxy()-detail">getUseProxy</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Current setting value.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="normalizeProxyHeader()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-ipfilter-lib-remoteaddress.html#normalizeProxyHeader()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        normalizeProxyHeader()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Normalize a header string</strong></p>
+
+        <p>Normalizes a header string to a format that is compatible with
+$_SERVER</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="johnsnook-ipfilter-lib-remoteaddress.html#normalizeProxyHeader()-detail">normalizeProxyHeader</a></strong> ( <span style="color: #0000BB">$header</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$header</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setProxyHeader()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-ipfilter-lib-remoteaddress.html#setProxyHeader()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        setProxyHeader()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Set the header to introspect for proxy IPs</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></span> <strong><a href="johnsnook-ipfilter-lib-remoteaddress.html#setProxyHeader()-detail">setProxyHeader</a></strong> ( <span style="color: #0000BB">$header&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'X-Forwarded-For'</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$header</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setTrustedProxies()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-ipfilter-lib-remoteaddress.html#setTrustedProxies()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        setTrustedProxies()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Set list of trusted proxy addresses</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></span> <strong><a href="johnsnook-ipfilter-lib-remoteaddress.html#setTrustedProxies()-detail">setTrustedProxies</a></strong> ( <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <span style="color: #0000BB">$trustedProxies</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$trustedProxies</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setUseProxy()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-ipfilter-lib-remoteaddress.html#setUseProxy()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        setUseProxy()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Changes proxy handling setting.</strong></p>
+
+        <p>This must be static method, since validators are recovered automatically
+at session read, so this is the only way to switch setting.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="johnsnook-ipfilter-lib-remoteaddress.html">johnsnook\ipFilter\lib\RemoteAddress</a></span> <strong><a href="johnsnook-ipfilter-lib-remoteaddress.html#setUseProxy()-detail">setUseProxy</a></strong> ( <span style="color: #0000BB">$useProxy&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$useProxy</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to check also proxied IP addresses.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Wed, 08 Aug 2018 23:10:00 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

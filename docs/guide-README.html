@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/afb459d7/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/72d2d9ed/solarized_light.css" rel="stylesheet">
+<link href="./assets/30c3cdd9/style.css" rel="stylesheet">
+<script src="./assets/de5d4282/jquery.js"></script>
+<script src="./assets/afb459d7/js/bootstrap.js"></script>
+<script src="./assets/6cd15ed1/jssearch.js"></script>    <title>The Definitive Guide to Yii2 IP Filter</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w12" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w12-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">The Definitive Guide to Yii2 IP Filter</a></div><div id="w12-collapse" class="collapse navbar-collapse"><ul id="w13" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li><a href="./guide-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-0" data-toggle="collapse" data-parent="#navigation">Installation <b class="caret"></b></a><div id="navigation-0" class="submenu panel-collapse collapse"></div>
+<a class="list-group-item" href="#navigation-1" data-toggle="collapse" data-parent="#navigation">1. Download <b class="caret"></b></a><div id="navigation-1" class="submenu panel-collapse collapse"></div>
+<a class="list-group-item" href="#navigation-2" data-toggle="collapse" data-parent="#navigation">2. Configure <b class="caret"></b></a><div id="navigation-2" class="submenu panel-collapse collapse"></div>
+<a class="list-group-item" href="#navigation-3" data-toggle="collapse" data-parent="#navigation">3. Update database schema <b class="caret"></b></a><div id="navigation-3" class="submenu panel-collapse collapse"></div>
+<a class="list-group-item" href="#navigation-4" data-toggle="collapse" data-parent="#navigation">Free API Keys <b class="caret"></b></a><div id="navigation-4" class="submenu panel-collapse collapse"></div>
+<a class="list-group-item" href="#navigation-5" data-toggle="collapse" data-parent="#navigation">Customization <b class="caret"></b></a><div id="navigation-5" class="submenu panel-collapse collapse"></div>
+<a class="list-group-item" href="#navigation-6" data-toggle="collapse" data-parent="#navigation">Usage <b class="caret"></b></a><div id="navigation-6" class="submenu panel-collapse collapse"></div>
+<a class="list-group-item" href="#navigation-7" data-toggle="collapse" data-parent="#navigation">Importing Existing Apache Access Logs <b class="caret"></b></a><div id="navigation-7" class="submenu panel-collapse collapse"></div>
+<a class="list-group-item" href="#navigation-8" data-toggle="collapse" data-parent="#navigation">The default, looks for /etc/httpd/logs/access* <b class="caret"></b></a><div id="navigation-8" class="submenu panel-collapse collapse"></div>
+<a class="list-group-item" href="#navigation-9" data-toggle="collapse" data-parent="#navigation">Looks for /my/own/private/idaho/access* <b class="caret"></b></a><div id="navigation-9" class="submenu panel-collapse collapse"></div>
+<a class="list-group-item" href="#navigation-10" data-toggle="collapse" data-parent="#navigation">Will process /etc/httpd/log/access_log-20180603 and /etc/httpd/log/access_log-20180610 ONLY. <b class="caret"></b></a><div id="navigation-10" class="submenu panel-collapse collapse"></div>
+<a class="list-group-item" href="#navigation-11" data-toggle="collapse" data-parent="#navigation">Screenshots! <b class="caret"></b></a><div id="navigation-11" class="submenu panel-collapse collapse"></div></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>Ip filtering for Yii2 <span id="ip-filtering-for-yii2"></span><a href="#ip-filtering-for-yii2" class="hashlink">&para;</a></h1>
+<div class="toc"><ol><li><a href="#installation">Installation</a></li>
+<li><a href="#free-api-keys">Free API Keys</a></li>
+<li><a href="#customization">Customization</a></li>
+<li><a href="#importing-existing-apache-access-logs">Importing Existing Apache Access Logs</a></li>
+<li><a href="#screenshots">Screenshots!</a></li></ol></div>
+<p>This extension gets the visitors ip address, logs the access and checks if it's blacklisted or whitelisted.  If it's a blacklist ip address, it redirects them to a blowoff page.</p>
+<h2>Installation <span id="installation"></span><a href="#installation" class="hashlink">&para;</a></h2><h3>1. Download <span id="1-download"></span><a href="#1-download" class="hashlink">&para;</a></h3><p>The preferred way to install this extension is through <a href="http://getcomposer.org/download/">composer</a>.</p>
+<p>Either run</p>
+<pre><code class="hljs bash language-bash">php composer.phar require --prefer-dist johnsnook/yii2-ip-filter <span class="hljs-string">"*"</span>
+</code></pre>
+<p>or add</p>
+<pre><code class="hljs bash"><span class="hljs-string">"johnsnook/yii2-ip-filter"</span>: <span class="hljs-string">"*"</span>
+</code></pre>
+<p>to the require section of your <code>composer.json</code> file.</p>
+<h3>2. Configure <span id="2-configure"></span><a href="#2-configure" class="hashlink">&para;</a></h3><p>Once the extension is installed, add 'ipFilter' to the bootstrap section of your configuration file  :</p>
+<pre><code class="hljs php language-php">    <span class="hljs-string">'bootstrap'</span> =&gt; [
+        <span class="hljs-string">'log'</span>,
+        <span class="hljs-string">'ipFilter'</span>,
+    ],
+</code></pre>
+<p>Then add the bare-minimum module definition
+<code>`</code>php</p>
+<pre><code class="hljs php"><span class="hljs-string">'modules'</span> =&gt; [
+    ...
+    <span class="hljs-string">'ipFilter'</span> =&gt; [
+        <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'johnsnook\ipFilter\Module'</span>,
+    ],
+    ...
+],
+</code></pre>
+<pre><code class="hljs php">
+The routes are defined in the Module file <span class="hljs-keyword">as</span> <span class="hljs-variable">$urlRules</span>.  These can also be redefined in the module definition.  By <span class="hljs-keyword">default</span>, they look like this <span class="hljs-keyword">for</span> prettyUrls:
+```php
+    <span class="hljs-string">'visitor'</span> =&gt; <span class="hljs-string">'/ipFilter/visitor/index'</span>,
+    <span class="hljs-string">'visitor/index'</span> =&gt; <span class="hljs-string">'/ipFilter/visitor/index'</span>,
+    <span class="hljs-string">'visitor/blowoff'</span> =&gt; <span class="hljs-string">'/ipFilter/visitor/blowoff'</span>,
+    <span class="hljs-string">'visitor/&lt;id&gt;'</span> =&gt; <span class="hljs-string">'ipFilter/visitor/view'</span>,
+    <span class="hljs-string">'visitor/update/&lt;id&gt;'</span> =&gt; <span class="hljs-string">'ipFilter/visitor/update'</span>,
+</code></pre>
+<h3>3. Update database schema <span id="3-update-database-schema"></span><a href="#3-update-database-schema" class="hashlink">&para;</a></h3><p>The last thing you need to do is updating your database schema by applying the
+migrations. Make sure that you have properly configured <code>db</code> application component
+and run the following command:</p>
+<pre><code class="hljs bash language-bash">$ php yii migrate/up --migrationPath=@vendor/johnsnook/yii2-ip-filter/migrations
+</code></pre>
+<h2>Free API Keys <span id="free-api-keys"></span><a href="#free-api-keys" class="hashlink">&para;</a></h2><p>1) For the map to render in Visitor view, you must have a MapQuest key.  Go to <a href="https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register">https://developer.mapquest.com/plan_purchase/steps/business_edition/business_edition_free/register</a> for a free API key.
+If you don't have this set, the map won't display.</p>
+<p>2) Ipinfo.io limits the number of requests each day to 100 but with a key you can make 1000 a day.  Go to <a href="https://ipinfo.io/signup">https://ipinfo.io/signup</a> for a free API key
+If you don't have this set, you'll be limited to 100 requests per day.</p>
+<p>3) Proxycheck.io limits the number of requests each day to 100 but with a key you can make 1000 a day.  Go to <a href="https://proxycheck.io/">https://proxycheck.io/</a> for a free API key
+If you don't have this set, you'll be limited to 100 requests per day.</p>
+<p>4) Whatismybrowser.com is serious business, so having an API is mandatory to use their service.  Go to <a href="https://developers.whatismybrowser.com/api/signup/basic">https://developers.whatismybrowser.com/api/signup/basic</a> for a free API key, but be prepared to provide an "app name" and website.
+If you don't have this set, no data beyond the basic USER_AGENT string will be captured.</p>
+<h2>Customization <span id="customization"></span><a href="#customization" class="hashlink">&para;</a></h2><p>So, you should be able to go to  <code>`</code><a href="http://yoursit.biz/index.php?r=ipFilter/visitor/index```">http://yoursit.biz/index.php?r=ipFilter/visitor/index```</a> or, if you have prettyUrl enabled, <code>`</code><a href="http://yoursite.com/visitor```">http://yoursite.com/visitor```</a> and see the visitor index.</p>
+<p>But you'll probably want to make your own views.  If it was me, I'd copy the controller and views to your backend or basic controllers &amp; views directories.  But maybe there's some best practices way to do it.</p>
+<p>I have left the layout empty so that the pages should be rendered with your layouts/theme.</p>
+<p>When you're done getting all your keys, and deciding that there are some controller actions you're not interested in tracking, your module configuration might look something like this:
+<code>`</code>php</p>
+<pre><code class="hljs php"><span class="hljs-string">'modules'</span> =&gt; [
+    ...
+    <span class="hljs-string">'ipFilter'</span> =&gt; [
+        <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'johnsnook\ipFilter\Module'</span>,
+        <span class="hljs-string">'ipInfoKey'</span> =&gt; <span class="hljs-string">'Not a real key, obviously'</span>,
+        <span class="hljs-string">'proxyCheckKey'</span> =&gt; <span class="hljs-string">'Not a real key, obviously'</span>,
+        <span class="hljs-string">'mapquestKey'</span> =&gt; <span class="hljs-string">'Not a real key, obviously'</span>,
+        <span class="hljs-string">'blowOff'</span> =&gt; <span class="hljs-string">'site/nope'</span>,
+        <span class="hljs-string">'ignorables'</span> =&gt; [
+            <span class="hljs-string">'acontroller'</span> =&gt; [<span class="hljs-string">'ignore-me'</span>, <span class="hljs-string">'ignore-that'</span>],
+            <span class="hljs-string">'whitelist'</span> =&gt; [<span class="hljs-string">'127.0.0.1'</span>, <span class="hljs-string">'24.99.155.86'</span>]
+        ]
+    ],
+    ...
+],
+</code></pre>
+<pre><code class="hljs php"><span class="hljs-keyword">As</span> you see, you can add a custom <span class="hljs-string">'blowoff'</span> controller action.  The visitor will be passed in so you can display the name <span class="hljs-keyword">and</span> blowoff message.
+
+A couple of things to note here about the <span class="hljs-string">'ignorables'</span> configuration <span class="hljs-keyword">array</span>.  You can add a controller <span class="hljs-keyword">and</span> actions to ignore <span class="hljs-keyword">as</span> well <span class="hljs-keyword">as</span> a whitelist of IP addresses to ignore.  These will not be added to the access log.
+
+Usage
+-----
+
+
+
+<span class="hljs-keyword">If</span> you want to find out information on the current user, you can get the visitor model from the module <span class="hljs-keyword">and</span> <span class="hljs-keyword">use</span> <span class="hljs-title">it</span> <span class="hljs-title">like</span> <span class="hljs-title">so</span>:
+```<span class="hljs-title">php</span>
+    $<span class="hljs-title">visitor</span> = \<span class="hljs-title">Yii</span>::$<span class="hljs-title">app</span>-&gt;<span class="hljs-title">getModule</span>('<span class="hljs-title">ipFilter</span>')-&gt;<span class="hljs-title">visitor</span>;
+    <span class="hljs-comment">// give a special hello to people in Atlanta or your ex wife</span>
+    <span class="hljs-keyword">if</span> (<span class="hljs-variable">$visitor</span>-&gt;info-&gt;city === <span class="hljs-string">'Atlanta'</span> || <span class="hljs-variable">$visitor</span>-&gt;info-&gt;ip_address === <span class="hljs-string">'99.203.4.238'</span>) {
+        <span class="hljs-keyword">echo</span> <span class="hljs-string">"Your city sucks balls"</span>;
+    }
+</code></pre>
+<h2>Importing Existing Apache Access Logs <span id="importing-existing-apache-access-logs"></span><a href="#importing-existing-apache-access-logs" class="hashlink">&para;</a></h2><p>To kickstart your visitor data, you can import apache2 logs, as long as you (not www-data) have permissions to view them and they are in the standard apache format.</p>
+<p>This is achieved via the very excellent parser library which can be found at <a href="https://github.com/kassner/log-parser">https://github.com/kassner/log-parser</a>.</p>
+<p>By default, it assumes that your access logs are at '/etc/httpd/logs' since that's where mine are.  You can specify another path as the first argument.</p>
+<p>The second argument is for specifying which files you'd like to import.  By default, it looks for access*. but a comma delimted list with no spaces can be provided instead.</p>
+<pre><code class="hljs bash language-bash"><span class="hljs-comment"># The default, looks for /etc/httpd/logs/access*</span>
+php yii ipFilter/import/logs
+
+<span class="hljs-comment"># Looks for /my/own/private/idaho/access*</span>
+php yii ipFilter/import/logs <span class="hljs-string">'/my/own/private/idaho'</span>
+
+<span class="hljs-comment"># Will process /etc/httpd/log/access_log-20180603 and /etc/httpd/log/access_log-20180610 ONLY.</span>
+php yii ipFilter/import/logs <span class="hljs-string">'/etc/httpd/logs'</span> access_<span class="hljs-built_in">log</span>-<span class="hljs-number">20180603</span>,access_<span class="hljs-built_in">log</span>-<span class="hljs-number">20180610</span>
+</code></pre>
+<p>To see it live, check out <a href="https://snooky.biz/visitor">https://snooky.biz/visitor</a></p>
+<h2>Screenshots! <span id="screenshots"></span><a href="#screenshots" class="hashlink">&para;</a></h2><p>The main screen
+<img src="https://user-images.githubusercontent.com/4065107/42129954-e352eaea-7ca1-11e8-8db8-8cb44ce4f2fc.png" alt="ipfilter1" /></p>
+<p>Detail visitor view
+<img src="https://user-images.githubusercontent.com/4065107/42129951-e330717c-7ca1-11e8-9337-52f16c8c8a5e.png" alt="ipfilter2" /></p>
+<p>Updating the name and/or message for a visitor.
+<img src="https://user-images.githubusercontent.com/4065107/42129952-e33bce3c-7ca1-11e8-9fd2-9e06a9833a2f.png" alt="ipfilter3" /></p>
+<p>The default blocked user view. (As seen from Tor)
+<img src="https://user-images.githubusercontent.com/4065107/42129953-e3476580-7ca1-11e8-84cf-aef11158446b.png" alt="ipfilter4" /></p>
+<p><a href="https://snooky.biz/post/section/Ragedump">.</a> <a href="https://snooky.biz/post/the-sixth-general-order">.</a> <a href="https://snooky.biz/post/legal-threats">.</a> <a href="https://snooky.biz/post/taking-out-the-trash">.</a> <a href="https://snooky.biz/post/jeez-babe-i-dont-know-whats-wrong">.</a> <a href="https://snooky.biz/post/my-stupid-vitriol">.</a> <a href="https://snooky.biz/post/the-drama-train-just-keeps-a-chuggin">.</a> <a href="https://snooky.biz/post/hypocrisy">.</a> <a href="https://snooky.biz/post/marjorie-snook-isnt-your-name">.</a> <a href="https://snooky.biz/post/inconstant-hooer">.</a> <a href="https://snooky.biz/post/mother-of-the-year">.</a> </p>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Wed, 08 Aug 2018 23:10:04 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

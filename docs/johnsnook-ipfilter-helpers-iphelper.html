@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/afb459d7/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/72d2d9ed/solarized_light.css" rel="stylesheet">
+<link href="./assets/30c3cdd9/style.css" rel="stylesheet">
+<script src="./assets/de5d4282/jquery.js"></script>
+<script src="./assets/afb459d7/js/bootstrap.js"></script>
+<script src="./assets/6cd15ed1/jssearch.js"></script>    <title>IpHelper, johnsnook\ipFilter\helpers\IpHelper - Yii2 IP Filter API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w223" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w223-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii2 IP Filter API Documentation</a></div><div id="w223-collapse" class="collapse navbar-collapse"><ul id="w224" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-210" data-toggle="collapse" data-parent="#navigation">Not namespaced classes <b class="caret"></b></a><div id="navigation-210" class="submenu panel-collapse collapse"><a class="list-group-item" href="./stackedasset.html">StackedAsset</a></div>
+<a class="list-group-item" href="#navigation-211" data-toggle="collapse" data-parent="#navigation">dektrium\user\filters <b class="caret"></b></a><div id="navigation-211" class="submenu panel-collapse collapse"><a class="list-group-item" href="./dektrium-user-filters-backendfilter.html">BackendFilter</a></div>
+<a class="list-group-item" href="#navigation-212" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter <b class="caret"></b></a><div id="navigation-212" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-module.html">Module</a></div>
+<a class="list-group-item" href="#navigation-213" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\assets <b class="caret"></b></a><div id="navigation-213" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-assets-appasset.html">AppAsset</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-assets-visitorasset.html">VisitorAsset</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-assets-visitorasset4.html">VisitorAsset4</a></div>
+<a class="list-group-item" href="#navigation-214" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\behaviors <b class="caret"></b></a><div id="navigation-214" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-behaviors-visitorbehavior.html">VisitorBehavior</a></div>
+<a class="list-group-item" href="#navigation-215" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\commands <b class="caret"></b></a><div id="navigation-215" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-commands-importcontroller.html">ImportController</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-commands-servicecontroller.html">ServiceController</a></div>
+<a class="list-group-item" href="#navigation-216" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\controllers <b class="caret"></b></a><div id="navigation-216" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-controllers-individualcontroller.html">IndividualController</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-controllers-visitorcontroller.html">VisitorController</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-controllers-visitorserviceerrorcontroller.html">VisitorServiceErrorController</a></div>
+<a class="list-group-item" href="#navigation-217" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\filters <b class="caret"></b></a><div id="navigation-217" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-filters-accessrule.html">AccessRule</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-filters-frontendfilter.html">FrontendFilter</a></div>
+<a class="list-group-item active" href="#navigation-218" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\helpers <b class="caret"></b></a><div id="navigation-218" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./johnsnook-ipfilter-helpers-iphelper.html">IpHelper</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-helpers-progressbar.html">ProgressBar</a></div>
+<a class="list-group-item" href="#navigation-219" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\lib <b class="caret"></b></a><div id="navigation-219" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-lib-remoteaddress.html">RemoteAddress</a></div>
+<a class="list-group-item" href="#navigation-220" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\models <b class="caret"></b></a><div id="navigation-220" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-models-country.html">Country</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-models-visitor.html">Visitor</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-models-visitoragent.html">VisitorAgent</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-models-visitorlog.html">VisitorLog</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-models-visitorlogsearch.html">VisitorLogSearch</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-models-visitorsearch.html">VisitorSearch</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-models-visitorserviceerror.html">VisitorServiceError</a></div>
+<a class="list-group-item" href="#navigation-221" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\widgets <b class="caret"></b></a><div id="navigation-221" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-widgets-linkpager.html">LinkPager</a></div>
+<a class="list-group-item" href="#navigation-222" data-toggle="collapse" data-parent="#navigation">johnsnook\ipFilter\widgets\Stacked <b class="caret"></b></a><div id="navigation-222" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-ipfilter-widgets-stacked-cardlwidget.html">CardlWidget</a>
+<a class="list-group-item" href="./johnsnook-ipfilter-widgets-stacked-panelwidget.html">PanelWidget</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class johnsnook\ipFilter\helpers\IpHelper</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="johnsnook-ipfilter-helpers-iphelper.html">johnsnook\ipFilter\helpers\IpHelper</a> &raquo;
+yii\helpers\BaseIpHelper</td></tr>
+                                        </table>
+
+<div class="class-description">
+    <p><strong></strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="cidrToRange()">
+        <td><a href="johnsnook-ipfilter-helpers-iphelper.html#cidrToRange()-detail">cidrToRange()</a></td>
+        <td><code>
+var_dump(cidrToRange("73.35.143.32/27"));
+array(2) {
+    [0]=&gt;
+    string(12) "73.35.143.32"
+    [1]=&gt;
+    string(12) "73.35.143.63"
+}
+</code></td>
+        <td><a href="johnsnook-ipfilter-helpers-iphelper.html">johnsnook\ipFilter\helpers\IpHelper</a></td>
+    </tr>
+            <tr id="rangeToCdrList()">
+        <td><a href="johnsnook-ipfilter-helpers-iphelper.html#rangeToCdrList()-detail">rangeToCdrList()</a></td>
+        <td>Returns an array of cidr lists that map the range given</td>
+        <td><a href="johnsnook-ipfilter-helpers-iphelper.html">johnsnook\ipFilter\helpers\IpHelper</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="cidrToRange()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-ipfilter-helpers-iphelper.html#cidrToRange()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        cidrToRange()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong><code>
+var_dump(cidrToRange("73.35.143.32/27"));
+array(2) {
+    [0]=&gt;
+    string(12) "73.35.143.32"
+    [1]=&gt;
+    string(12) "73.35.143.63"
+}
+</code></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="johnsnook-ipfilter-helpers-iphelper.html#cidrToRange()-detail">cidrToRange</a></strong> ( <span style="color: #0000BB">$cidr</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$cidr</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="rangeToCdrList()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-ipfilter-helpers-iphelper.html#rangeToCdrList()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        rangeToCdrList()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns an array of cidr lists that map the range given</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">\johnsnook\ipFilter\helpers\type</span> <strong><a href="johnsnook-ipfilter-helpers-iphelper.html#rangeToCdrList()-detail">rangeToCdrList</a></strong> ( <span style="color: #0000BB">$start</span>, <span style="color: #0000BB">$end</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$start</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$end</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Wed, 08 Aug 2018 23:09:59 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

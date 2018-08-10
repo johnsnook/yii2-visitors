@@ -1,0 +1,871 @@
+Array
+(
+    [0] => Array
+        (
+            [line] => 134
+            [file] => src/Module.php
+            [message] => No docblock for element '$bootstrapCssVersion'
+        )
+
+    [1] => Array
+        (
+            [line] => 134
+            [file] => src/Module.php
+            [message] => No short description for element '$bootstrapCssVersion'
+        )
+
+    [2] => Array
+        (
+            [line] => 242
+            [file] => src/Module.php
+            [message] => No docblock for element 'isBlacklisted'
+        )
+
+    [3] => Array
+        (
+            [line] => 21
+            [file] => src/assets/AppAsset.php
+            [message] => No docblock for element '$basePath'
+        )
+
+    [4] => Array
+        (
+            [line] => 21
+            [file] => src/assets/AppAsset.php
+            [message] => No short description for element '$basePath'
+        )
+
+    [5] => Array
+        (
+            [line] => 22
+            [file] => src/assets/AppAsset.php
+            [message] => No docblock for element '$baseUrl'
+        )
+
+    [6] => Array
+        (
+            [line] => 22
+            [file] => src/assets/AppAsset.php
+            [message] => No short description for element '$baseUrl'
+        )
+
+    [7] => Array
+        (
+            [line] => 23
+            [file] => src/assets/AppAsset.php
+            [message] => No docblock for element '$css'
+        )
+
+    [8] => Array
+        (
+            [line] => 23
+            [file] => src/assets/AppAsset.php
+            [message] => No short description for element '$css'
+        )
+
+    [9] => Array
+        (
+            [line] => 26
+            [file] => src/assets/AppAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [10] => Array
+        (
+            [line] => 26
+            [file] => src/assets/AppAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [11] => Array
+        (
+            [line] => 28
+            [file] => src/assets/AppAsset.php
+            [message] => No docblock for element '$depends'
+        )
+
+    [12] => Array
+        (
+            [line] => 28
+            [file] => src/assets/AppAsset.php
+            [message] => No short description for element '$depends'
+        )
+
+    [13] => Array
+        (
+            [line] => 13
+            [file] => src/assets/VisitorAsset.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [14] => Array
+        (
+            [line] => 13
+            [file] => src/assets/VisitorAsset.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [15] => Array
+        (
+            [line] => 14
+            [file] => src/assets/VisitorAsset.php
+            [message] => No docblock for element '$css'
+        )
+
+    [16] => Array
+        (
+            [line] => 14
+            [file] => src/assets/VisitorAsset.php
+            [message] => No short description for element '$css'
+        )
+
+    [17] => Array
+        (
+            [line] => 16
+            [file] => src/assets/VisitorAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [18] => Array
+        (
+            [line] => 16
+            [file] => src/assets/VisitorAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [19] => Array
+        (
+            [line] => 19
+            [file] => src/assets/VisitorAsset.php
+            [message] => No docblock for element '$publishOptions'
+        )
+
+    [20] => Array
+        (
+            [line] => 19
+            [file] => src/assets/VisitorAsset.php
+            [message] => No short description for element '$publishOptions'
+        )
+
+    [21] => Array
+        (
+            [line] => 20
+            [file] => src/assets/VisitorAsset.php
+            [message] => No docblock for element '$jsOptions'
+        )
+
+    [22] => Array
+        (
+            [line] => 20
+            [file] => src/assets/VisitorAsset.php
+            [message] => No short description for element '$jsOptions'
+        )
+
+    [23] => Array
+        (
+            [line] => 21
+            [file] => src/assets/VisitorAsset.php
+            [message] => No docblock for element '$depends'
+        )
+
+    [24] => Array
+        (
+            [line] => 21
+            [file] => src/assets/VisitorAsset.php
+            [message] => No short description for element '$depends'
+        )
+
+    [25] => Array
+        (
+            [line] => 21
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [26] => Array
+        (
+            [line] => 21
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [27] => Array
+        (
+            [line] => 22
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No docblock for element '$css'
+        )
+
+    [28] => Array
+        (
+            [line] => 22
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No short description for element '$css'
+        )
+
+    [29] => Array
+        (
+            [line] => 25
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No docblock for element '$js'
+        )
+
+    [30] => Array
+        (
+            [line] => 25
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No short description for element '$js'
+        )
+
+    [31] => Array
+        (
+            [line] => 29
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No docblock for element '$publishOptions'
+        )
+
+    [32] => Array
+        (
+            [line] => 29
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No short description for element '$publishOptions'
+        )
+
+    [33] => Array
+        (
+            [line] => 30
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No docblock for element '$jsOptions'
+        )
+
+    [34] => Array
+        (
+            [line] => 30
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No short description for element '$jsOptions'
+        )
+
+    [35] => Array
+        (
+            [line] => 31
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No docblock for element '$depends'
+        )
+
+    [36] => Array
+        (
+            [line] => 31
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No short description for element '$depends'
+        )
+
+    [37] => Array
+        (
+            [line] => 37
+            [file] => src/assets/VisitorAsset4.php
+            [message] => No docblock for element 'init'
+        )
+
+    [38] => Array
+        (
+            [line] => 15
+            [file] => src/behaviors/VisitorBehavior.php
+            [message] => No docblock for element 'johnsnook\ipFilter\behaviors\VisitorBehavior'
+        )
+
+    [39] => Array
+        (
+            [line] => 20
+            [file] => src/behaviors/VisitorBehavior.php
+            [message] => No short description for element '$visitor'
+        )
+
+    [40] => Array
+        (
+            [line] => 22
+            [file] => src/behaviors/VisitorBehavior.php
+            [message] => No docblock for element 'getIp'
+        )
+
+    [41] => Array
+        (
+            [line] => 26
+            [file] => src/behaviors/VisitorBehavior.php
+            [message] => No docblock for element 'getName'
+        )
+
+    [42] => Array
+        (
+            [line] => 30
+            [file] => src/behaviors/VisitorBehavior.php
+            [message] => No docblock for element 'getMessage'
+        )
+
+    [43] => Array
+        (
+            [line] => 34
+            [file] => src/behaviors/VisitorBehavior.php
+            [message] => No docblock for element 'getBlacklistReason'
+        )
+
+    [44] => Array
+        (
+            [line] => 38
+            [file] => src/behaviors/VisitorBehavior.php
+            [message] => No docblock for element 'getCity'
+        )
+
+    [45] => Array
+        (
+            [line] => 42
+            [file] => src/behaviors/VisitorBehavior.php
+            [message] => No docblock for element 'getRegion'
+        )
+
+    [46] => Array
+        (
+            [line] => 46
+            [file] => src/behaviors/VisitorBehavior.php
+            [message] => No docblock for element 'getCountry'
+        )
+
+    [47] => Array
+        (
+            [line] => 50
+            [file] => src/behaviors/VisitorBehavior.php
+            [message] => No docblock for element 'getProxy'
+        )
+
+    [48] => Array
+        (
+            [line] => 54
+            [file] => src/behaviors/VisitorBehavior.php
+            [message] => No docblock for element 'getIsBlacklisted'
+        )
+
+    [49] => Array
+        (
+            [line] => 46
+            [file] => src/commands/ImportController.php
+            [message] => No docblock for element 'countAndConfirm'
+        )
+
+    [50] => Array
+        (
+            [line] => 52
+            [file] => src/controllers/QuickController.php
+            [message] => No docblock for element 'actionIndex'
+        )
+
+    [51] => Array
+        (
+            [line] => 56
+            [file] => src/controllers/QuickController.php
+            [message] => No docblock for element 'actionLookup'
+        )
+
+    [52] => Array
+        (
+            [line] => 12
+            [file] => src/filters/AccessRule.php
+            [message] => No docblock for element 'johnsnook\ipFilter\filters\AccessRule'
+        )
+
+    [53] => Array
+        (
+            [line] => 28
+            [file] => src/filters/BackendFilter.php
+            [message] => No short description for element '$controllers'
+        )
+
+    [54] => Array
+        (
+            [line] => 28
+            [file] => src/filters/FrontendFilter.php
+            [message] => No short description for element '$controllers'
+        )
+
+    [55] => Array
+        (
+            [line] => 13
+            [file] => src/helpers/IpHelper.php
+            [message] => No docblock for element 'johnsnook\ipFilter\helpers\IpHelper'
+        )
+
+    [56] => Array
+        (
+            [line] => 23
+            [file] => src/helpers/ProgressBar.php
+            [message] => No docblock for element '$lineNumber'
+        )
+
+    [57] => Array
+        (
+            [line] => 23
+            [file] => src/helpers/ProgressBar.php
+            [message] => No short description for element '$lineNumber'
+        )
+
+    [58] => Array
+        (
+            [line] => 24
+            [file] => src/helpers/ProgressBar.php
+            [message] => No docblock for element '$total'
+        )
+
+    [59] => Array
+        (
+            [line] => 24
+            [file] => src/helpers/ProgressBar.php
+            [message] => No short description for element '$total'
+        )
+
+    [60] => Array
+        (
+            [line] => 25
+            [file] => src/helpers/ProgressBar.php
+            [message] => No docblock for element '$progress'
+        )
+
+    [61] => Array
+        (
+            [line] => 25
+            [file] => src/helpers/ProgressBar.php
+            [message] => No short description for element '$progress'
+        )
+
+    [62] => Array
+        (
+            [line] => 26
+            [file] => src/helpers/ProgressBar.php
+            [message] => No docblock for element '$width'
+        )
+
+    [63] => Array
+        (
+            [line] => 26
+            [file] => src/helpers/ProgressBar.php
+            [message] => No short description for element '$width'
+        )
+
+    [64] => Array
+        (
+            [line] => 27
+            [file] => src/helpers/ProgressBar.php
+            [message] => No docblock for element '$label'
+        )
+
+    [65] => Array
+        (
+            [line] => 27
+            [file] => src/helpers/ProgressBar.php
+            [message] => No short description for element '$label'
+        )
+
+    [66] => Array
+        (
+            [line] => 28
+            [file] => src/helpers/ProgressBar.php
+            [message] => No docblock for element '$labelColor'
+        )
+
+    [67] => Array
+        (
+            [line] => 28
+            [file] => src/helpers/ProgressBar.php
+            [message] => No short description for element '$labelColor'
+        )
+
+    [68] => Array
+        (
+            [line] => 29
+            [file] => src/helpers/ProgressBar.php
+            [message] => No docblock for element '$progressColor'
+        )
+
+    [69] => Array
+        (
+            [line] => 29
+            [file] => src/helpers/ProgressBar.php
+            [message] => No short description for element '$progressColor'
+        )
+
+    [70] => Array
+        (
+            [line] => 30
+            [file] => src/helpers/ProgressBar.php
+            [message] => No docblock for element '$infoColor'
+        )
+
+    [71] => Array
+        (
+            [line] => 30
+            [file] => src/helpers/ProgressBar.php
+            [message] => No short description for element '$infoColor'
+        )
+
+    [72] => Array
+        (
+            [line] => 36
+            [file] => src/helpers/ProgressBar.php
+            [message] => No docblock for element '__construct'
+        )
+
+    [73] => Array
+        (
+            [line] => 26
+            [file] => src/lib/RemoteAddress.php
+            [message] => No short description for element '$useProxy'
+        )
+
+    [74] => Array
+        (
+            [line] => 33
+            [file] => src/lib/RemoteAddress.php
+            [message] => No short description for element '$trustedProxies'
+        )
+
+    [75] => Array
+        (
+            [line] => 40
+            [file] => src/lib/RemoteAddress.php
+            [message] => No short description for element '$proxyHeader'
+        )
+
+    [76] => Array
+        (
+            [line] => 302
+            [file] => src/models/Visitor.php
+            [message] => No docblock for element 'getLoggedVisits'
+        )
+
+    [77] => Array
+        (
+            [line] => 52
+            [file] => src/models/VisitorAgent.php
+            [message] => No docblock for element 'beforeSave'
+        )
+
+    [78] => Array
+        (
+            [line] => 58
+            [file] => src/models/VisitorAgent.php
+            [message] => No docblock for element 'afterFind'
+        )
+
+    [79] => Array
+        (
+            [line] => 72
+            [file] => src/models/VisitorLog.php
+            [message] => No docblock for element 'getCreatedAt'
+        )
+
+    [80] => Array
+        (
+            [line] => 101
+            [file] => src/models/VisitorLog.php
+            [message] => No docblock for element 'getMostRecentVisit'
+        )
+
+    [81] => Array
+        (
+            [line] => 37
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No docblock for element '$title'
+        )
+
+    [82] => Array
+        (
+            [line] => 37
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No short description for element '$title'
+        )
+
+    [83] => Array
+        (
+            [line] => 38
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No docblock for element '$titleOptions'
+        )
+
+    [84] => Array
+        (
+            [line] => 38
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No short description for element '$titleOptions'
+        )
+
+    [85] => Array
+        (
+            [line] => 39
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No docblock for element '$useHeader'
+        )
+
+    [86] => Array
+        (
+            [line] => 39
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No short description for element '$useHeader'
+        )
+
+    [87] => Array
+        (
+            [line] => 40
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No docblock for element '$headerOptions'
+        )
+
+    [88] => Array
+        (
+            [line] => 40
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No short description for element '$headerOptions'
+        )
+
+    [89] => Array
+        (
+            [line] => 41
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No docblock for element '$body'
+        )
+
+    [90] => Array
+        (
+            [line] => 41
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No short description for element '$body'
+        )
+
+    [91] => Array
+        (
+            [line] => 42
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No docblock for element '$bodyOptions'
+        )
+
+    [92] => Array
+        (
+            [line] => 42
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No short description for element '$bodyOptions'
+        )
+
+    [93] => Array
+        (
+            [line] => 43
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No docblock for element '$footer'
+        )
+
+    [94] => Array
+        (
+            [line] => 43
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No short description for element '$footer'
+        )
+
+    [95] => Array
+        (
+            [line] => 44
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No docblock for element '$footerOptions'
+        )
+
+    [96] => Array
+        (
+            [line] => 44
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No short description for element '$footerOptions'
+        )
+
+    [97] => Array
+        (
+            [line] => 61
+            [file] => src/widgets/Stacked/CardlWidget.php
+            [message] => No docblock for element 'run'
+        )
+
+    [98] => Array
+        (
+            [line] => 13
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No docblock for element 'johnsnook\ipFilter\widgets\Stacked\PanelWidget'
+        )
+
+    [99] => Array
+        (
+            [line] => 17
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No docblock for element '$title'
+        )
+
+    [100] => Array
+        (
+            [line] => 17
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No short description for element '$title'
+        )
+
+    [101] => Array
+        (
+            [line] => 18
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No docblock for element '$titleOptions'
+        )
+
+    [102] => Array
+        (
+            [line] => 18
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No short description for element '$titleOptions'
+        )
+
+    [103] => Array
+        (
+            [line] => 19
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No docblock for element '$useHeading'
+        )
+
+    [104] => Array
+        (
+            [line] => 19
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No short description for element '$useHeading'
+        )
+
+    [105] => Array
+        (
+            [line] => 20
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No docblock for element '$headingOptions'
+        )
+
+    [106] => Array
+        (
+            [line] => 20
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No short description for element '$headingOptions'
+        )
+
+    [107] => Array
+        (
+            [line] => 21
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No docblock for element '$body'
+        )
+
+    [108] => Array
+        (
+            [line] => 21
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No short description for element '$body'
+        )
+
+    [109] => Array
+        (
+            [line] => 22
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No docblock for element '$bodyOptions'
+        )
+
+    [110] => Array
+        (
+            [line] => 22
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No short description for element '$bodyOptions'
+        )
+
+    [111] => Array
+        (
+            [line] => 23
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No docblock for element '$footer'
+        )
+
+    [112] => Array
+        (
+            [line] => 23
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No short description for element '$footer'
+        )
+
+    [113] => Array
+        (
+            [line] => 24
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No docblock for element '$footerOptions'
+        )
+
+    [114] => Array
+        (
+            [line] => 24
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No short description for element '$footerOptions'
+        )
+
+    [115] => Array
+        (
+            [line] => 41
+            [file] => src/widgets/Stacked/PanelWidget.php
+            [message] => No docblock for element 'run'
+        )
+
+    [116] => Array
+        (
+            [line] => 12
+            [file] => src/widgets/Stacked/StackedAsset.php
+            [message] => No docblock for element '$sourcePath'
+        )
+
+    [117] => Array
+        (
+            [line] => 12
+            [file] => src/widgets/Stacked/StackedAsset.php
+            [message] => No short description for element '$sourcePath'
+        )
+
+    [118] => Array
+        (
+            [line] => 13
+            [file] => src/widgets/Stacked/StackedAsset.php
+            [message] => No docblock for element '$js'
+        )
+
+    [119] => Array
+        (
+            [line] => 13
+            [file] => src/widgets/Stacked/StackedAsset.php
+            [message] => No short description for element '$js'
+        )
+
+    [120] => Array
+        (
+            [line] => 16
+            [file] => src/widgets/Stacked/StackedAsset.php
+            [message] => No docblock for element '$depends'
+        )
+
+    [121] => Array
+        (
+            [line] => 16
+            [file] => src/widgets/Stacked/StackedAsset.php
+            [message] => No short description for element '$depends'
+        )
+
+    [122] => Array
+        (
+            [line] => 20
+            [file] => src/widgets/Stacked/StackedAsset.php
+            [message] => No docblock for element 'init'
+        )
+
+    [123] => Array
+        (
+            [line] => 35
+            [file] => src/widgets/Stacked/StackedWidget.php
+            [message] => No docblock for element 'run'
+        )
+
+)

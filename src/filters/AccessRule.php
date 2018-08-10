@@ -1,16 +1,18 @@
 <?php
 
+/**
+ * @author John Snook
+ * @date Aug 4, 2018
+ * @license https://snooky.biz/site/license
+ * @copyright 2018 John Snook Consulting
+ * AccessRule
+ */
+
 namespace johnsnook\ipFilter\filters;
 
-/**
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 use yii\filters\AccessRule as BaseAccessRule;
 
 class AccessRule extends BaseAccessRule {
-    /** properties * */
 
     /**
      * @var array list of user cities that this rule applies to.
@@ -32,8 +34,6 @@ class AccessRule extends BaseAccessRule {
      * @see Visitor::country
      */
     public $countries;
-
-    /** methods * */
 
     /**
      * Checks whether the Web user is allowed to perform the specified action.
@@ -80,6 +80,53 @@ class AccessRule extends BaseAccessRule {
      */
     protected function matchCountry($country) {
         return empty($this->countries) || in_array($country, $this->countries, true);
+    }
+
+    /**
+     * @param User $user the user object
+     * @return bool whether the rule applies to the role
+     * @throws InvalidConfigException if User component is detached
+     */
+    protected function matchRole($user) {
+        if ($user)
+            $items = empty($this->roles) ? [] : $this->roles;
+
+        if (!empty($this->permissions)) {
+            $items = array_merge($items, $this->permissions);
+        }
+
+        if (empty($items)) {
+            return true;
+        }
+
+        if ($user === false) {
+            throw new InvalidConfigException('The user application component must be available to specify roles in AccessRule.');
+        }
+
+        foreach ($items as $item) {
+            if ($item === '?') {
+                if ($user->getIsGuest()) {
+                    return true;
+                }
+            } elseif ($item === '@') {
+                if (!$user->getIsGuest()) {
+                    return true;
+                }
+            } elseif ($item === '!') {
+                if (!\Yii::$app->user->isGuest && \Yii::$app->user->identity->canGetProperty('isAdmin') && \Yii::$app->user->identity->isAdmin) {
+                    return true;
+                }
+            } else {
+                if (!isset($roleParams)) {
+                    $roleParams = $this->roleParams instanceof Closure ? call_user_func($this->roleParams, $this) : $this->roleParams;
+                }
+                if ($user->can($item, $roleParams)) {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
 }

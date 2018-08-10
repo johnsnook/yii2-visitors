@@ -96,10 +96,26 @@ class Module extends BaseModule implements BootstrapInterface {
     public $proxyBan = ['VPN', 'Compromised Server', 'SOCKS', 'SOCKS4', 'HTTP', 'SOCKS5', 'HTTPS', 'TOR'];
 
     /**
-     *
      * @var array The list of CIDRs we automatically ban
      */
     public $autoBan = [];
+
+    /**
+     * @var array Rules that show the visitor the door
+     */
+    public $blackRules = [
+        'proxy' => ['VPN', 'Compromised Server', 'SOCKS', 'SOCKS4', 'HTTP', 'SOCKS5', 'HTTPS', 'TOR'],
+        'referer' => ['translate.googleusercontent.com'],
+    ];
+
+    /**
+     * @var array Rules that welcome a visitor in
+     */
+    public $whiteRules = [
+        'ip' => [
+            '52.0.0.0/15',
+        ]
+    ];
 
     /**
      * @var string Controllers will use this value if set to allow the user to
@@ -223,8 +239,8 @@ class Module extends BaseModule implements BootstrapInterface {
         \Yii::$app->user->attachBehavior('visitor', $visitorBehavior);
 
         /** Log the visit */
-        $log = VisitorLog::log($ip);
-        VisitorAgent::log($log->user_agent);
+        $this->visitor->visit = VisitorLog::log($ip);
+        VisitorAgent::log($this->visitor->visit->user_agent);
         /** Allow the blacklisted visitor to reach the blowoff action */
         if ($event->action->controller->route === $this->blowOff) {
             $event->handled = true;

@@ -69,6 +69,11 @@ class Visitor extends ActiveRecord {
     public $proxyCheckKey = '';
 
     /**
+     * @var VisitorLog The log record of this visit
+     */
+    public $visit;
+
+    /**
      * Set up timestamp behavior here
      *
      * @return array
@@ -198,6 +203,66 @@ class Visitor extends ActiveRecord {
     }
 
     /**
+     * Compares properties against a indexed array of arrays of values.  String
+     * values are compared using stripos, ip values should be in CIDR format.
+     *
+     * @param array $list
+     * @return array
+     */
+    public function checkList($list) {
+        if (isset($list['ip'])) {
+            foreach ($list['ip'] as $ip) {
+                if (IpHelper::inRange($this->ip, $ip)) {
+                    return ['ip' => $ip];
+                }
+            }
+        }
+        if (isset($list['city'])) {
+            foreach ($list['city'] as $city) {
+                if (stripos($this->city, $city) !== false) {
+                    return ['city' => $city];
+                }
+            }
+        }
+        if (isset($list['region'])) {
+            foreach ($list['region'] as $region) {
+                if (stripos($this->region, $region) !== false) {
+                    return ['region' => $region];
+                }
+            }
+        }
+        if (isset($list['country'])) {
+            foreach ($list['country'] as $country) {
+                if (stripos($this->country, $country) !== false) {
+                    return ['country' => $country];
+                }
+            }
+        }
+        if (isset($list['postal'])) {
+            foreach ($list['postal'] as $postal) {
+                if ($this->postal === $postal) {
+                    return ['postal' => $postal];
+                }
+            }
+        }
+        if (isset($list['organization'])) {
+            foreach ($list['organization'] as $organization) {
+                if (stripos($this->organization, $organization) !== false) {
+                    return ['organization' => $organization];
+                }
+            }
+        }
+        if (isset($list['referer'])) {
+            foreach ($list['referer'] as $referer) {
+                if (stripos($this->visit->referer, $referer) !== false) {
+                    return ['referer' => $referer];
+                }
+            }
+        }
+        return null;
+    }
+
+    /**
      * Is this visitor blacklisted from a previous check or are they blacklisted by
      * applying the rules now.
      *
@@ -234,7 +299,7 @@ class Visitor extends ActiveRecord {
      *        "region": "Georgia",
      *        "country": "US",
      *        "loc": "33.8110,-84.2869",
-     *        "visitoral": 30033,
+     *        "postal": 30033,
      *        "org": "AS7922 Comcast Cable Communications, LLC"
      *    }
      * </code>
