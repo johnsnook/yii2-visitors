@@ -43,9 +43,10 @@ $this->title = empty($model->name) ? $model->ip : $model->name;
                         }
                     ],
                     //'user_id',
-                    'name',
-                    'message:ntext',
+                    'hat_color',
+                    'hat_rule',
                     'visits',
+                    'proxy'
                 ],
             ]);
             ?>
@@ -58,10 +59,10 @@ $this->title = empty($model->name) ? $model->ip : $model->name;
                     'city',
                     'region',
                     'country',
+                    'asn',
+                    'organization',
                     'latitude',
                     'longitude',
-                    'organization',
-                    'proxy'
             ]]);
             ?>
         </div>

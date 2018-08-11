@@ -261,8 +261,8 @@ class Module extends BaseModule implements BootstrapInterface {
             $event->handled = true;
             return true;
         }
-        echo str_repeat('*', 20) . PHP_EOL;
-
+//        echo str_repeat('*', 20) . PHP_EOL;
+//        die();
         /** Black list (that's racist!) */
         if (!is_null($checkEm = static::checkList($this->blackRules, $this->visitor))) {
             $this->visitor->hat_color = Visitor::HAT_COLOR_BLACK;
@@ -271,7 +271,7 @@ class Module extends BaseModule implements BootstrapInterface {
             $event->handled = true;
             return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
         }
-        die();
+
         return true;
     }
 
@@ -284,15 +284,21 @@ class Module extends BaseModule implements BootstrapInterface {
      * @return array The list element that matched
      */
     protected static function checkList($list, $visitor) {
-        dump($list, $visitor);
+//        dump($list, $visitor);
         if (isset($list['ip'])) {
+//            $c = count($list['ip']);
+//            echo "list['ip'] is set [$c]<br>";
             foreach ($list['ip'] as $ip) {
+//                echo "$visitor->ip in $ip = " . IpHelper::inRange($visitor->ip, $ip) . '<br>';
                 if (IpHelper::inRange($visitor->ip, $ip)) {
+//                    echo "found: $visitor->ip in $ip<br>";
+//                    die();
+
                     return ['ip' => $ip];
                 }
             }
         }
-
+//        die();
         $stringAttributes = ['city', 'region', 'country', 'postal', 'asn', 'organization', 'proxy'];
         foreach ($stringAttributes as $sAttr) {
             if (isset($list[$sAttr])) {

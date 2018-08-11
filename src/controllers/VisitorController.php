@@ -59,8 +59,6 @@ class VisitorController extends Controller {
      */
     public function actionIndex() {
         $searchModel = new VisitorSearch();
-        //$dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        //$query = $dataProvider->query;
 
         return $this->render('index', [
                     'searchModel' => $searchModel,
