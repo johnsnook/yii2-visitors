@@ -1,11 +1,11 @@
 <?php
 
-namespace johnsnook\ipFilter\commands;
+namespace johnsnook\visitor\commands;
 
-use johnsnook\ipFilter\helpers\ProgressBar;
-use johnsnook\ipFilter\models\Visitor;
-use johnsnook\ipFilter\models\VisitorLog;
-use johnsnook\ipFilter\models\VisitorAgent;
+use johnsnook\visitor\helpers\ProgressBar;
+use johnsnook\visitor\models\Visitor;
+use johnsnook\visitor\models\VisitorLog;
+use johnsnook\visitor\models\VisitorAgent;
 use Kassner\LogParser\LogParser;
 use yii\helpers\Console;
 
@@ -77,7 +77,7 @@ class ImportController extends \yii\console\Controller {
             echo "Invalid log directory";
         }
 
-        $ipFilter = \Yii::$app->controller->module;
+        $visitor = \Yii::$app->controller->module;
         if (!empty($list)) {
             $files = explode(',', $list);
             foreach ($files as &$file) {
@@ -140,7 +140,7 @@ class ImportController extends \yii\console\Controller {
                     /*
                      * don't put in log table
                      */
-                    if (array_key_exists('whitelist', $ipFilter->ignorables) && in_array($ip, $ipFilter->ignorables['whitelist'])) {
+                    if (array_key_exists('whitelist', $visitor->ignorables) && in_array($ip, $visitor->ignorables['whitelist'])) {
                         continue;
                     }
                     $dt = new \DateTime;

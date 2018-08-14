@@ -1,27 +1,23 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\ipFilter\controllers;
+namespace johnsnook\visitor\controllers;
 
 use Yii;
-use johnsnook\ipFilter\models\Visitor;
-use johnsnook\ipFilter\models\VisitorLogSearch;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
 
 /**
  * VisitorController implements the CRUD actions for the Visitor model.
  */
-class IndividualController extends Controller {
+class IndividualController extends \yii\web\Controller {
 
     const REPLACEMENTS_TEMPLATE = ['{ip_address}', '{key}'];
 
@@ -31,7 +27,7 @@ class IndividualController extends Controller {
     const TEMPLATE_IP_INFO_URL = 'http://ipinfo.io/{ip_address}?token={key}';
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
     public function behaviors() {
         return [
@@ -49,14 +45,24 @@ class IndividualController extends Controller {
         ];
     }
 
+    /**
+     * Displays the index page
+     *
+     * @return string
+     */
     public function actionIndex() {
         return $this->render('quick');
     }
 
+    /**
+     * Performs ip info query
+     *
+     * @return string|null
+     */
     public function actionLookup($ip) {
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-        $ipFilter = Yii::$app->getModule('ipFilter');
-        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $ipFilter->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
+        $visitor = Yii::$app->getModule('visitor');
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $visitor->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
         try {
             if (!empty($data = json_decode(file_get_contents($url)))) {
                 return $data;

@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>    <title>BaseHtml, yii\bootstrap\BaseHtml - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w513" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w513-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w513-collapse" class="collapse navbar-collapse"><ul id="w514" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w515" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-512" data-toggle="collapse" data-parent="#navigation">yii\bootstrap <b class="caret"></b></a><div id="navigation-512" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-bootstrap-activefield.html">ActiveField</a>
+<a class="list-group-item" href="./yii-bootstrap-activeform.html">ActiveForm</a>
+<a class="list-group-item" href="./yii-bootstrap-alert.html">Alert</a>
+<a class="list-group-item active" href="./yii-bootstrap-basehtml.html">BaseHtml</a>
+<a class="list-group-item" href="./yii-bootstrap-bootstrapasset.html">BootstrapAsset</a>
+<a class="list-group-item" href="./yii-bootstrap-bootstrappluginasset.html">BootstrapPluginAsset</a>
+<a class="list-group-item" href="./yii-bootstrap-bootstrapthemeasset.html">BootstrapThemeAsset</a>
+<a class="list-group-item" href="./yii-bootstrap-bootstrapwidgettrait.html">BootstrapWidgetTrait</a>
+<a class="list-group-item" href="./yii-bootstrap-button.html">Button</a>
+<a class="list-group-item" href="./yii-bootstrap-buttondropdown.html">ButtonDropdown</a>
+<a class="list-group-item" href="./yii-bootstrap-buttongroup.html">ButtonGroup</a>
+<a class="list-group-item" href="./yii-bootstrap-carousel.html">Carousel</a>
+<a class="list-group-item" href="./yii-bootstrap-collapse.html">Collapse</a>
+<a class="list-group-item" href="./yii-bootstrap-dropdown.html">Dropdown</a>
+<a class="list-group-item" href="./yii-bootstrap-html.html">Html</a>
+<a class="list-group-item" href="./yii-bootstrap-inputwidget.html">InputWidget</a>
+<a class="list-group-item" href="./yii-bootstrap-modal.html">Modal</a>
+<a class="list-group-item" href="./yii-bootstrap-nav.html">Nav</a>
+<a class="list-group-item" href="./yii-bootstrap-navbar.html">NavBar</a>
+<a class="list-group-item" href="./yii-bootstrap-progress.html">Progress</a>
+<a class="list-group-item" href="./yii-bootstrap-tabs.html">Tabs</a>
+<a class="list-group-item" href="./yii-bootstrap-togglebuttongroup.html">ToggleButtonGroup</a>
+<a class="list-group-item" href="./yii-bootstrap-widget.html">Widget</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\bootstrap\BaseHtml</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-bootstrap-basehtml.html">yii\bootstrap\BaseHtml</a> &raquo;
+<a href="yii-helpers-html.html">yii\helpers\Html</a> &raquo;
+<a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td></tr>
+                            <tr><th>Subclasses</th><td><a href="yii-bootstrap-html.html">yii\bootstrap\Html</a></td></tr>
+                        <tr><th>Available since version</th><td>2.0.5</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-bootstrap/blob/master/BaseHtml.php">https://github.com/yiisoft/yii2-bootstrap/blob/master/BaseHtml.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>BaseHtml provides concrete implementation for <a href="yii-bootstrap-html.html">yii\bootstrap\Html</a>.</strong></p>
+    <p>Do not use BaseHtml. Use <a href="yii-bootstrap-html.html">yii\bootstrap\Html</a> instead.</p>
+
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="$attributeOrder">
+        <td><a href="yii-helpers-basehtml.html#$attributeOrder-detail">$attributeOrder</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The preferred order of attributes in a tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="$attributeRegex">
+        <td><a href="yii-helpers-basehtml.html#$attributeRegex-detail">$attributeRegex</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Regular expression used for attribute name validation.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="$dataAttributes">
+        <td><a href="yii-helpers-basehtml.html#$dataAttributes-detail">$dataAttributes</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>List of tag attributes that should be specially handled when their values are of array type.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="$voidElements">
+        <td><a href="yii-helpers-basehtml.html#$voidElements-detail">$voidElements</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>List of void elements (element name =&gt; 1)</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="a()">
+        <td><a href="yii-helpers-basehtml.html#a()-detail">a()</a></td>
+        <td>Generates a hyperlink tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+                <tr class="inherited" id="activeCheckbox()">
+        <td><a href="yii-helpers-basehtml.html#activeCheckbox()-detail">activeCheckbox()</a></td>
+        <td>Generates a checkbox tag together with a label for the given model attribute.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="activeCheckboxList()">
+        <td><a href="yii-helpers-basehtml.html#activeCheckboxList()-detail">activeCheckboxList()</a></td>
+        <td>Generates a list of checkboxes.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="activeDropDownList()">
+        <td><a href="yii-helpers-basehtml.html#activeDropDownList()-detail">activeDropDownList()</a></td>
+        <td>Generates a drop-down list for the given model attribute.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="activeFileInput()">
+        <td><a href="yii-helpers-basehtml.html#activeFileInput()-detail">activeFileInput()</a></td>
+        <td>Generates a file input tag for the given model attribute.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="activeHiddenInput()">
+        <td><a href="yii-helpers-basehtml.html#activeHiddenInput()-detail">activeHiddenInput()</a></td>
+        <td>Generates a hidden input tag for the given model attribute.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="activeHint()">
+        <td><a href="yii-helpers-basehtml.html#activeHint()-detail">activeHint()</a></td>
+        <td>Generates a hint tag for the given model attribute.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="activeInput()">
+        <td><a href="yii-helpers-basehtml.html#activeInput()-detail">activeInput()</a></td>
+        <td>Generates an input tag for the given model attribute.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="activeLabel()">
+        <td><a href="yii-helpers-basehtml.html#activeLabel()-detail">activeLabel()</a></td>
+        <td>Generates a label tag for the given model attribute.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="activeListBox()">
+        <td><a href="yii-helpers-basehtml.html#activeListBox()-detail">activeListBox()</a></td>
+        <td>Generates a list box.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+                <tr class="inherited" id="activePasswordInput()">
+        <td><a href="yii-helpers-basehtml.html#activePasswordInput()-detail">activePasswordInput()</a></td>
+        <td>Generates a password input tag for the given model attribute.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="activeRadio()">
+        <td><a href="yii-helpers-basehtml.html#activeRadio()-detail">activeRadio()</a></td>
+        <td>Generates a radio button tag together with a label for the given model attribute.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="activeRadioList()">
+        <td><a href="yii-helpers-basehtml.html#activeRadioList()-detail">activeRadioList()</a></td>
+        <td>Generates a list of radio buttons.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr id="activeStaticControl()">
+        <td><a href="yii-bootstrap-basehtml.html#activeStaticControl()-detail">activeStaticControl()</a></td>
+        <td>Generates a Bootstrap static form control for the given model attribute.</td>
+        <td><a href="yii-bootstrap-basehtml.html">yii\bootstrap\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="activeTextInput()">
+        <td><a href="yii-helpers-basehtml.html#activeTextInput()-detail">activeTextInput()</a></td>
+        <td>Generates a text input tag for the given model attribute.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="activeTextarea()">
+        <td><a href="yii-helpers-basehtml.html#activeTextarea()-detail">activeTextarea()</a></td>
+        <td>Generates a textarea tag for the given model attribute.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="addCssClass()">
+        <td><a href="yii-helpers-basehtml.html#addCssClass()-detail">addCssClass()</a></td>
+        <td>Adds a CSS class (or several classes) to the specified options.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="addCssStyle()">
+        <td><a href="yii-helpers-basehtml.html#addCssStyle()-detail">addCssStyle()</a></td>
+        <td>Adds the specified CSS style to the HTML options.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="beginForm()">
+        <td><a href="yii-helpers-basehtml.html#beginForm()-detail">beginForm()</a></td>
+        <td>Generates a form start tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="beginTag()">
+        <td><a href="yii-helpers-basehtml.html#beginTag()-detail">beginTag()</a></td>
+        <td>Generates a start tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+                <tr class="inherited" id="button()">
+        <td><a href="yii-helpers-basehtml.html#button()-detail">button()</a></td>
+        <td>Generates a button tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="buttonInput()">
+        <td><a href="yii-helpers-basehtml.html#buttonInput()-detail">buttonInput()</a></td>
+        <td>Generates an input button.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="checkbox()">
+        <td><a href="yii-helpers-basehtml.html#checkbox()-detail">checkbox()</a></td>
+        <td>Generates a checkbox input.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr id="checkboxList()">
+        <td><a href="yii-bootstrap-basehtml.html#checkboxList()-detail">checkboxList()</a></td>
+        <td>Generates a list of checkboxes.</td>
+        <td><a href="yii-bootstrap-basehtml.html">yii\bootstrap\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="csrfMetaTags()">
+        <td><a href="yii-helpers-basehtml.html#csrfMetaTags()-detail">csrfMetaTags()</a></td>
+        <td>Generates the meta tags containing CSRF token information.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="cssFile()">
+        <td><a href="yii-helpers-basehtml.html#cssFile()-detail">cssFile()</a></td>
+        <td>Generates a link tag that refers to an external CSS file.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="cssStyleFromArray()">
+        <td><a href="yii-helpers-basehtml.html#cssStyleFromArray()-detail">cssStyleFromArray()</a></td>
+        <td>Converts a CSS style array into a string representation.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="cssStyleToArray()">
+        <td><a href="yii-helpers-basehtml.html#cssStyleToArray()-detail">cssStyleToArray()</a></td>
+        <td>Converts a CSS style string into an array representation.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="decode()">
+        <td><a href="yii-helpers-basehtml.html#decode()-detail">decode()</a></td>
+        <td>Decodes special HTML entities back to the corresponding characters.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="dropDownList()">
+        <td><a href="yii-helpers-basehtml.html#dropDownList()-detail">dropDownList()</a></td>
+        <td>Generates a drop-down list.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="encode()">
+        <td><a href="yii-helpers-basehtml.html#encode()-detail">encode()</a></td>
+        <td>Encodes special characters into HTML entities.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="endForm()">
+        <td><a href="yii-helpers-basehtml.html#endForm()-detail">endForm()</a></td>
+        <td>Generates a form end tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="endTag()">
+        <td><a href="yii-helpers-basehtml.html#endTag()-detail">endTag()</a></td>
+        <td>Generates an end tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr id="error()">
+        <td><a href="yii-bootstrap-basehtml.html#error()-detail">error()</a></td>
+        <td>Generates a tag that contains the first validation error of the specified model attribute.</td>
+        <td><a href="yii-bootstrap-basehtml.html">yii\bootstrap\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="errorSummary()">
+        <td><a href="yii-helpers-basehtml.html#errorSummary()-detail">errorSummary()</a></td>
+        <td>Generates a summary of the validation errors.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="escapeJsRegularExpression()">
+        <td><a href="yii-helpers-basehtml.html#escapeJsRegularExpression()-detail">escapeJsRegularExpression()</a></td>
+        <td>Escapes regular expression to use in JavaScript.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="fileInput()">
+        <td><a href="yii-helpers-basehtml.html#fileInput()-detail">fileInput()</a></td>
+        <td>Generates a file input field.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="getAttributeName()">
+        <td><a href="yii-helpers-basehtml.html#getAttributeName()-detail">getAttributeName()</a></td>
+        <td>Returns the real attribute name from the given attribute expression.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="getAttributeValue()">
+        <td><a href="yii-helpers-basehtml.html#getAttributeValue()-detail">getAttributeValue()</a></td>
+        <td>Returns the value of the specified attribute name or expression.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="getInputId()">
+        <td><a href="yii-helpers-basehtml.html#getInputId()-detail">getInputId()</a></td>
+        <td>Generates an appropriate input ID for the specified attribute name or expression.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="getInputName()">
+        <td><a href="yii-helpers-basehtml.html#getInputName()-detail">getInputName()</a></td>
+        <td>Generates an appropriate input name for the specified attribute name or expression.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="hiddenInput()">
+        <td><a href="yii-helpers-basehtml.html#hiddenInput()-detail">hiddenInput()</a></td>
+        <td>Generates a hidden input field.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr id="icon()">
+        <td><a href="yii-bootstrap-basehtml.html#icon()-detail">icon()</a></td>
+        <td>Composes icon HTML for bootstrap Glyphicons.</td>
+        <td><a href="yii-bootstrap-basehtml.html">yii\bootstrap\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="img()">
+        <td><a href="yii-helpers-basehtml.html#img()-detail">img()</a></td>
+        <td>Generates an image tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="input()">
+        <td><a href="yii-helpers-basehtml.html#input()-detail">input()</a></td>
+        <td>Generates an input type of the given type.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="jsFile()">
+        <td><a href="yii-helpers-basehtml.html#jsFile()-detail">jsFile()</a></td>
+        <td>Generates a script tag that refers to an external JavaScript file.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="label()">
+        <td><a href="yii-helpers-basehtml.html#label()-detail">label()</a></td>
+        <td>Generates a label tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="listBox()">
+        <td><a href="yii-helpers-basehtml.html#listBox()-detail">listBox()</a></td>
+        <td>Generates a list box.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="mailto()">
+        <td><a href="yii-helpers-basehtml.html#mailto()-detail">mailto()</a></td>
+        <td>Generates a mailto hyperlink.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="ol()">
+        <td><a href="yii-helpers-basehtml.html#ol()-detail">ol()</a></td>
+        <td>Generates an ordered list.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="passwordInput()">
+        <td><a href="yii-helpers-basehtml.html#passwordInput()-detail">passwordInput()</a></td>
+        <td>Generates a password input field.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="radio()">
+        <td><a href="yii-helpers-basehtml.html#radio()-detail">radio()</a></td>
+        <td>Generates a radio button input.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr id="radioList()">
+        <td><a href="yii-bootstrap-basehtml.html#radioList()-detail">radioList()</a></td>
+        <td>Generates a list of radio buttons.</td>
+        <td><a href="yii-bootstrap-basehtml.html">yii\bootstrap\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="removeCssClass()">
+        <td><a href="yii-helpers-basehtml.html#removeCssClass()-detail">removeCssClass()</a></td>
+        <td>Removes a CSS class from the specified options.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="removeCssStyle()">
+        <td><a href="yii-helpers-basehtml.html#removeCssStyle()-detail">removeCssStyle()</a></td>
+        <td>Removes the specified CSS style from the HTML options.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="renderSelectOptions()">
+        <td><a href="yii-helpers-basehtml.html#renderSelectOptions()-detail">renderSelectOptions()</a></td>
+        <td>Renders the option tags that can be used by <a href="yii-helpers-basehtml.html#dropDownList()-detail">dropDownList()</a> and <a href="yii-helpers-basehtml.html#listBox()-detail">listBox()</a>.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="renderTagAttributes()">
+        <td><a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">renderTagAttributes()</a></td>
+        <td>Renders the HTML tag attributes.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="resetButton()">
+        <td><a href="yii-helpers-basehtml.html#resetButton()-detail">resetButton()</a></td>
+        <td>Generates a reset button tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="resetInput()">
+        <td><a href="yii-helpers-basehtml.html#resetInput()-detail">resetInput()</a></td>
+        <td>Generates a reset input button.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="script()">
+        <td><a href="yii-helpers-basehtml.html#script()-detail">script()</a></td>
+        <td>Generates a script tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+                <tr id="staticControl()">
+        <td><a href="yii-bootstrap-basehtml.html#staticControl()-detail">staticControl()</a></td>
+        <td>Renders Bootstrap static form control.</td>
+        <td><a href="yii-bootstrap-basehtml.html">yii\bootstrap\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="style()">
+        <td><a href="yii-helpers-basehtml.html#style()-detail">style()</a></td>
+        <td>Generates a style tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="submitButton()">
+        <td><a href="yii-helpers-basehtml.html#submitButton()-detail">submitButton()</a></td>
+        <td>Generates a submit button tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="submitInput()">
+        <td><a href="yii-helpers-basehtml.html#submitInput()-detail">submitInput()</a></td>
+        <td>Generates a submit input button.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="tag()">
+        <td><a href="yii-helpers-basehtml.html#tag()-detail">tag()</a></td>
+        <td>Generates a complete HTML tag.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="textInput()">
+        <td><a href="yii-helpers-basehtml.html#textInput()-detail">textInput()</a></td>
+        <td>Generates a text input field.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="textarea()">
+        <td><a href="yii-helpers-basehtml.html#textarea()-detail">textarea()</a></td>
+        <td>Generates a text area input.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+            <tr class="inherited" id="ul()">
+        <td><a href="yii-helpers-basehtml.html#ul()-detail">ul()</a></td>
+        <td>Generates an unordered list.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+            <tr class="inherited" id="activeBooleanInput()">
+        <td><a href="yii-helpers-basehtml.html#activeBooleanInput()-detail">activeBooleanInput()</a></td>
+        <td>Generates a boolean input
+This method is mainly called by <a href="yii-helpers-basehtml.html#activeCheckbox()-detail">activeCheckbox()</a> and <a href="yii-helpers-basehtml.html#activeRadio()-detail">activeRadio()</a>.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+                                                <tr class="inherited" id="activeListInput()">
+        <td><a href="yii-helpers-basehtml.html#activeListInput()-detail">activeListInput()</a></td>
+        <td>Generates a list of input fields.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+                                                    <tr class="inherited" id="booleanInput()">
+        <td><a href="yii-helpers-basehtml.html#booleanInput()-detail">booleanInput()</a></td>
+        <td>Generates a boolean input.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+                                                                                                                                                                            <tr class="inherited" id="setActivePlaceholder()">
+        <td><a href="yii-helpers-basehtml.html#setActivePlaceholder()-detail">setActivePlaceholder()</a></td>
+        <td>Generate placeholder from model attribute label.</td>
+        <td><a href="yii-helpers-basehtml.html">yii\helpers\BaseHtml</a></td>
+    </tr>
+                                    </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="activeStaticControl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-basehtml.html#activeStaticControl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-bootstrap/edit/master/BaseHtml.php#L78" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-bootstrap/blob/master/BaseHtml.php#L78" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        activeStaticControl()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates a Bootstrap static form control for the given model attribute.</strong></p>
+
+        
+        <p>See also <a href="yii-bootstrap-basehtml.html#staticControl()-detail">staticControl()</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-bootstrap-basehtml.html#activeStaticControl()-detail">activeStaticControl</a></strong> ( <span style="color: #0000BB">$model</span>, <span style="color: #0000BB">$attribute</span>, <span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$model</span></td>
+                  <td class="param-type-col"><a href="yii-base-model.html">yii\base\Model</a></td>
+                  <td class="param-desc-col"><p>The model object.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$attribute</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The attribute name or expression. See <a href="yii-helpers-basehtml.html#getAttributeName()-detail">getAttributeName()</a> for the format
+about attribute expression.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The tag options in terms of name-value pairs. See <a href="yii-bootstrap-basehtml.html#staticControl()-detail">staticControl()</a> for details.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Generated HTML</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="checkboxList()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-basehtml.html#checkboxList()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-bootstrap/edit/master/BaseHtml.php#L114" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-bootstrap/blob/master/BaseHtml.php#L114" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        checkboxList()
+        <span class="detail-header-tag small">
+            public                        static            method
+                            (available since version 2.0.8)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates a list of checkboxes.</strong></p>
+
+        <p>A checkbox list allows multiple selection, like <a href="yii-helpers-basehtml.html#listBox()-detail">listBox()</a>.
+As a result, the corresponding submitted value is an array.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-bootstrap-basehtml.html#checkboxList()-detail">checkboxList</a></strong> ( <span style="color: #0000BB">$name</span>, <span style="color: #0000BB">$selection&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span>, <span style="color: #0000BB">$items&nbsp;</span><span style="color: #007700">=&nbsp;[]</span>, <span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The name attribute of each checkbox.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$selection</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>The selected value(s). String for single or array for multiple selection(s).</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$items</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The data item used to generate the checkboxes.
+The array keys are the checkbox values, while the array values are the corresponding labels.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Options (name =&gt; config) for the checkbox list container tag.
+The following options are specially handled:</p>
+<ul>
+<li>tag: string|false, the tag name of the container element. False to render checkbox without container.
+See also <a href="yii-helpers-basehtml.html#tag()-detail">tag()</a>.</li>
+<li>unselect: string, the value that should be submitted when none of the checkboxes is selected.
+By setting this option, a hidden input will be generated.</li>
+<li>encode: boolean, whether to HTML-encode the checkbox labels. Defaults to true.
+This option is ignored if <code>item</code> option is set.</li>
+<li>separator: string, the HTML code that separates items.</li>
+<li>itemOptions: array, the options for generating the checkbox tag using <a href="yii-helpers-basehtml.html#checkbox()-detail">checkbox()</a>.</li>
+<li><p>item: callable, a callback that can be used to customize the generation of the HTML code
+corresponding to a single item in $items. The signature of this callback must be:</p>
+<pre><code class="hljs php language-php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(<span class="hljs-variable">$index</span>, <span class="hljs-variable">$label</span>, <span class="hljs-variable">$name</span>, <span class="hljs-variable">$checked</span>, <span class="hljs-variable">$value</span>)</span>
+</span></code></pre>
+<p>where $index is the zero-based index of the checkbox in the whole list; $label
+is the label for the checkbox; and $name, $value and $checked represent the name,
+value and the checked status of the checkbox input, respectively.</p>
+</li>
+</ul>
+<p>See <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">renderTagAttributes()</a> for details on how attributes are being rendered.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The generated checkbox list</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="error()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-basehtml.html#error()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-bootstrap/edit/master/BaseHtml.php#L135" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-bootstrap/blob/master/BaseHtml.php#L135" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        error()
+        <span class="detail-header-tag small">
+            public                        static            method
+                            (available since version 2.0.8)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates a tag that contains the first validation error of the specified model attribute.</strong></p>
+
+        <p>Note that even if there is no validation error, this method will still return an empty error tag.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-bootstrap-basehtml.html#error()-detail">error</a></strong> ( <span style="color: #0000BB">$model</span>, <span style="color: #0000BB">$attribute</span>, <span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$model</span></td>
+                  <td class="param-type-col"><a href="yii-base-model.html">yii\base\Model</a></td>
+                  <td class="param-desc-col"><p>The model object</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$attribute</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The attribute name or expression. See <a href="yii-helpers-basehtml.html#getAttributeName()-detail">getAttributeName()</a> for the format
+about attribute expression.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The tag options in terms of name-value pairs. The values will be HTML-encoded
+using <a href="yii-helpers-basehtml.html#encode()-detail">encode()</a>. If a value is null, the corresponding attribute will not be rendered.</p>
+<p>The following options are specially handled:</p>
+<ul>
+<li>tag: this specifies the tag name. If not set, "div" will be used.
+See also <a href="yii-helpers-basehtml.html#tag()-detail">tag()</a>.</li>
+<li>encode: boolean, if set to false then the error message won't be encoded.</li>
+<li>errorSource (since 2.0.14): \Closure|callable, callback that will be called to obtain an error message.
+The signature of the callback must be: <code>function ($model, $attribute)</code> and return a string.
+When not set, the <code>$model-&gt;getFirstError()</code> method will be called.</li>
+</ul>
+<p>See <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">renderTagAttributes()</a> for details on how attributes are being rendered.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The generated label tag</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="icon()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-basehtml.html#icon()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-bootstrap/edit/master/BaseHtml.php#L34" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-bootstrap/blob/master/BaseHtml.php#L34" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        icon()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Composes icon HTML for bootstrap Glyphicons.</strong></p>
+
+        
+        <p>See also <a href="http://getbootstrap.com/components/#glyphicons">http://getbootstrap.com/components/#glyphicons</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-bootstrap-basehtml.html#icon()-detail">icon</a></strong> ( <span style="color: #0000BB">$name</span>, <span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Icon short name, for example: 'star'</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The tag options in terms of name-value pairs. These will be rendered as
+the attributes of the resulting tag. There are also a special options:</p>
+<ul>
+<li>tag: string, tag to be rendered, by default 'span' is used.</li>
+<li>prefix: string, prefix which should be used to compose tag class, by default 'glyphicon glyphicon-' is used.</li>
+</ul>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Icon HTML.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="radioList()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-basehtml.html#radioList()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-bootstrap/edit/master/BaseHtml.php#L93" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-bootstrap/blob/master/BaseHtml.php#L93" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        radioList()
+        <span class="detail-header-tag small">
+            public                        static            method
+                            (available since version 2.0.8)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates a list of radio buttons.</strong></p>
+
+        <p>A radio button list is like a checkbox list, except that it only allows single selection.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-bootstrap-basehtml.html#radioList()-detail">radioList</a></strong> ( <span style="color: #0000BB">$name</span>, <span style="color: #0000BB">$selection&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span>, <span style="color: #0000BB">$items&nbsp;</span><span style="color: #007700">=&nbsp;[]</span>, <span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The name attribute of each radio button.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$selection</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>The selected value(s). String for single or array for multiple selection(s).</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$items</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The data item used to generate the radio buttons.
+The array keys are the radio button values, while the array values are the corresponding labels.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Options (name =&gt; config) for the radio button list container tag.
+The following options are specially handled:</p>
+<ul>
+<li>tag: string|false, the tag name of the container element. False to render radio buttons without container.
+See also <a href="yii-helpers-basehtml.html#tag()-detail">tag()</a>.</li>
+<li>unselect: string, the value that should be submitted when none of the radio buttons is selected.
+By setting this option, a hidden input will be generated.</li>
+<li>encode: boolean, whether to HTML-encode the checkbox labels. Defaults to true.
+This option is ignored if <code>item</code> option is set.</li>
+<li>separator: string, the HTML code that separates items.</li>
+<li>itemOptions: array, the options for generating the radio button tag using <a href="yii-helpers-basehtml.html#radio()-detail">radio()</a>.</li>
+<li><p>item: callable, a callback that can be used to customize the generation of the HTML code
+corresponding to a single item in $items. The signature of this callback must be:</p>
+<pre><code class="hljs php language-php"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-params">(<span class="hljs-variable">$index</span>, <span class="hljs-variable">$label</span>, <span class="hljs-variable">$name</span>, <span class="hljs-variable">$checked</span>, <span class="hljs-variable">$value</span>)</span>
+</span></code></pre>
+<p>where $index is the zero-based index of the radio button in the whole list; $label
+is the label for the radio button; and $name, $value and $checked represent the name,
+value and the checked status of the radio button input, respectively.</p>
+</li>
+</ul>
+<p>See <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">renderTagAttributes()</a> for details on how attributes are being rendered.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The generated radio button list</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="staticControl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap-basehtml.html#staticControl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-bootstrap/edit/master/BaseHtml.php#L56" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-bootstrap/blob/master/BaseHtml.php#L56" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        staticControl()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Renders Bootstrap static form control.</strong></p>
+
+        <p>By default value will be HTML-encoded using <a href="yii-helpers-basehtml.html#encode()-detail">encode()</a>, you may control this behavior
+via 'encode' option.</p>
+
+        <p>See also <a href="http://getbootstrap.com/css/#forms-controls-static">http://getbootstrap.com/css/#forms-controls-static</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-bootstrap-basehtml.html#staticControl()-detail">staticControl</a></strong> ( <span style="color: #0000BB">$value</span>, <span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$value</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Static control value.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The tag options in terms of name-value pairs. These will be rendered as
+the attributes of the resulting tag. There are also a special options:</p>
+<ul>
+<li>encode: bool, whether value should be HTML-encoded or not.</li>
+</ul>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Generated HTML</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Tue, 14 Aug 2018 17:48:05 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

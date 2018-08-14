@@ -1,36 +1,30 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\ipFilter\controllers;
+namespace johnsnook\visitor\controllers;
 
 use Yii;
-use johnsnook\ipFilter\models\Visitor;
-use johnsnook\ipFilter\models\VisitorSearch;
-use johnsnook\ipFilter\models\VisitorLogSearch;
-use yii\web\Controller;
+use johnsnook\visitor\models\Visitor;
+use johnsnook\visitor\models\VisitorSearch;
+use johnsnook\visitor\models\VisitorLogSearch;
 use yii\web\NotFoundHttpException;
-use yii\data\ActiveDataProvider;
 use yii\filters\AccessControl;
 
 /**
  * VisitorController implements the CRUD actions for the Visitor model.
  */
-class VisitorController extends Controller {
-//    public function getViewPath() {
-//        if (!empty($this->module->viewPath))
-//            parent::getViewPath();
-//    }
+class VisitorController extends \yii\web\Controller {
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
     public function behaviors() {
         return [
@@ -87,7 +81,7 @@ class VisitorController extends Controller {
     }
 
     /**
-     * Sets the [[banned]] flag of this particular individual.
+     * Sets the [[Visitor::banned]] flag of this particular individual.
      * @return mixed
      */
     public function actionBlacklist($id) {

@@ -1,130 +1,140 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
-use johnsnook\ipFilter\widgets\Stacked\PanelWidget;
-use johnsnook\ipFilter\widgets\Stacked\CardlWidget;
-use johnsnook\ipFilter\assets\VisitorAsset;
+/* @var $this yii\web\View */
+/* @var $model frontend\models\Visitor */
+
+use johnsnook\visitor\widgets\Panel;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
 
-$ipFilter = Yii::$app->getModule(Yii::$app->controller->module->id);
+$visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
 
-//use yii\bootstrap\Tabs;
-
-/* @var $this yii\web\View */
-/* @var $model frontend\models\Visitor */
-VisitorAsset::register($this);
-$this->title = empty($model->name) ? $model->ip : $model->name;
+$this->title = $model->ip;
 $this->params['breadcrumbs'][] = ['label' => 'Visitors', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
-//$ipFilter = Yii::$app->getModule(Yii::$app->controller->module->id);
-//$panel = $ipFilter->bootstrapCssVersion === 3 ? 'panel' : 'card';
-//$this->params['bootstrapCssVersion'];
+
+$visitor = Yii::$app->getModule('visitor');
 ?>
-<div class="visitor-view">
-    <div class="row" style="font-size: 36px">
-        <div class="col-md-6 col-6" ><?= Html::encode($this->title); ?></div>
-        <div class="col-md-6 col-6" style="text-align: right"><?php
-            if (!Yii::$app->user->isGuest) {
-                if (!$model->banned) {
-                    echo Html::a('Blacklist', ['blacklist', 'id' => $model->ip], ['class' => 'btn btn-danger']);
-                }
-                echo Html::a('Update', ['update', 'id' => $model->ip], ['class' => 'btn btn-default']);
-            }
-            ?></div>
-    </div>
-    <div class="row">
-        <div class="col-5 col-md-5">
-            <?php
-            echo DetailView::widget([
-                'model' => $model,
-                'attributes' => [
-                    'ip',
-                    'banned:boolean',
-                    [
-                        'attribute' => 'created_at',
-                        'value' => function($data) {
-                            $dt = new DateTime($data->created_at);
-                            return $dt->format('Y-m-d g:i A');
-                        }
-                    ],
-                    [
-                        'attribute' => 'updated_at',
-                        'value' => function($data) {
-                            $dt = new DateTime($data->updated_at);
-                            return $dt->format('Y-m-d g:i A');
-                        }
-                    ],
-                    //'user_id',
-                    'name',
-                    'message:ntext',
-                    'visits',
-                ],
-            ]);
-            ?>
-        </div>
-        <div class="col-lg-7 col-7">
-            <?php
-            echo DetailView::widget([
-                'model' => $model,
-                'attributes' => [
-                    'city',
-                    'region',
-                    'country',
-                    'latitude',
-                    'longitude',
-                    'organization',
-                    'proxy'
-            ]]);
-            ?>
-        </div>
-    </div>
-    <div id="StackAttack" class="stack" style="display: block; position: relative;margin-bottom:200px">
-        <?php
-        $title = 'Map';
-        $body = $this->render('_map', ['model' => $model]);
-        if ($ipFilter->bootstrapCssVersion === 3) {
-            echo PanelWidget::widget([
-                'containerOptions' => ['class' => 'stackItem'],
-                'headingOptions' => ['class' => 'bg-primary'],
-                'title' => $title,
-                'body' => $body,
-            ]);
-        } else {
-            echo CardlWidget::widget([
-                'containerOptions' => ['class' => 'stackItem border border-secondary'],
-                'useHeader' => false,
-                'headerOptions' => ['class' => 'bg-secondary'],
-                'title' => 'Top',
-                'body' => $body,
-            ]);
+<div class="container-fluid ">
+    <!--    <div class="col-md-10 col-md-offset-2">-->
+    <?php
+    $lie = '<li class="nav-item">';
+    if (!Yii::$app->user->isGuest) {
+        if (!$model->banned) {
+            echo $lie . Html::a('Blacklist', ['blacklist', 'id' => $model->ip], ['class' => 'mr-sm-2 btn btn-outline-danger text-danger']) . '</li>';
         }
-        $title = 'Visits';
-        $body = $this->render('_visitsGrid', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-        if ($ipFilter->bootstrapCssVersion === 3) {
-            echo PanelWidget::widget([
-                'containerOptions' => ['class' => 'stackItem panel-success'],
-                'title' => $title,
-                'body' => $body,
-            ]);
-        } else {
-            echo CardlWidget::widget([
-                'containerOptions' => ['class' => 'stackItem  mb-3 border border-info'],
-                'headerOptions' => ['class' => 'bg-info'],
-                'title' => $title,
-                'body' => $body,
-            ]);
-        }
-        ?>
-    </div>
+        echo $lie . Html::a('Update', ['update', 'id' => $model->ip], ['class' => 'btn btn-outline-warning text-warning my-2 my-sm-0']) . '</li>';
+    }
+    ?>
 </div>
+<div class="d-flex mx-auto card-group " >
+    <?php
+    /** Visitor Info Panel */
+    $template = '<tr><th{captionOptions} style="text-align: right">{label}</th><td{contentOptions}>{value}</td></tr>';
+
+    Panel::begin([
+        'containerOptions' => [
+            'class' => 'col-lg-4',
+        ],
+        'useHeader' => false,
+    ]);
+    echo DetailView::widget([
+        'options' => ['class' => 'table table-striped table-sm'],
+        'model' => $model,
+        'template' => $template,
+        'attributes' => [
+            'ip',
+            //'banned:boolean',
+            [
+                'attribute' => 'banned',
+                'format' => 'text',
+                'value' => function($data) {
+                    return ($data->banned ? 'Yes' : 'No');
+                }
+            ],
+            [
+                'attribute' => 'created_at',
+                'value' => function($data) {
+                    $dt = new DateTime($data->created_at);
+                    return $dt->format('Y-m-d g:i A');
+                }
+            ],
+            [
+                'attribute' => 'updated_at',
+                'value' => function($data) {
+                    $dt = new DateTime($data->updated_at);
+                    return $dt->format('Y-m-d g:i A');
+                }
+            ],
+            'hat_color',
+            'hat_rule',
+            'visits',
+        ],
+    ]);
+    Panel::end();
+
+
+    /** Map Panel */
+    Panel::begin([
+        'containerOptions' => [
+            'class' => 'col-lg-4',
+            'style' => 'overflow:hidden;display: flex;justify-content: center; align-items: center;  ',
+        ],
+            //'body' => ,
+            //'title' => "Map"
+    ]);
+    echo $this->render('_map', ['model' => $model]);
+    Panel::end();
+
+
+    Panel::begin([
+        'containerOptions' => [
+            'class' => 'col-lg-4',
+        ],
+        'useHeader' => false,
+    ]);
+    echo DetailView::widget([
+        'options' => ['class' => 'table table-striped table-sm'],
+        'model' => $model,
+        'template' => $template,
+        'attributes' => [
+            'city',
+            'region',
+            'country',
+            'postal',
+            'latitude',
+            'longitude',
+            'asn',
+            'organization',
+            'proxy'
+        ]
+    ]);
+    Panel::end();
+    ?>
+
+</div>
+<?php
+/** Visitor Log Panel */
+echo Panel::widget([
+    'containerOptions' => ['class' => 'bg-secondary border-light mx-auto'],
+    'titleOptions' => ['class' => 'text-white'],
+    'bodyOptions' => ['class' => 'bg-white text-dark'],
+    //'title' => "Log",
+    'body' => $this->render('_visitsGrid', [
+        'searchModel' => $searchModel,
+        'dataProvider' => $dataProvider,
+    ])
+]);
+?>
+<!--</div>-->
+<!--<div class="d-flex mx-auto ">-->
+
+

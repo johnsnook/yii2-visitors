@@ -1,6 +1,6 @@
 Ip filtering for Yii2
 =====================
-This extension gets the visitors ip address, logs the access and checks if it's blacklisted or whitelisted.  If it's a blacklist ip address, it redirects them to a blowoff page.
+This extension gets the visitor information associated with their ip address, including proxy and geographical information and logs the access and checks if it's blacklisted or whitelisted and takes appropriate action.
 
 Installation
 ------------
@@ -12,13 +12,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-php composer.phar require --prefer-dist johnsnook/yii2-ip-filter "*"
+php composer.phar require --prefer-dist johnsnook/yii2-visitor "*"
 ```
 
 or add
 
 ```
-"johnsnook/yii2-ip-filter": "*"
+"johnsnook/yii2-visitor": "*"
 ```
 
 to the require section of your `composer.json` file.
@@ -26,12 +26,12 @@ to the require section of your `composer.json` file.
 ### 2. Configure
 
 
-Once the extension is installed, add 'ipFilter' to the bootstrap section of your configuration file  :
+Once the extension is installed, add 'visitor' to the bootstrap section of your configuration file  :
 
 ```php
     'bootstrap' => [
         'log',
-        'ipFilter',
+        'visitor',
     ],
 ```
 
@@ -39,8 +39,8 @@ Then add the bare-minimum module definition
 ```php
     'modules' => [
         ...
-        'ipFilter' => [
-            'class' => 'johnsnook\ipFilter\Module',
+        'visitor' => [
+            'class' => 'johnsnook\visitor\Module',
         ],
         ...
     ],
@@ -48,11 +48,11 @@ Then add the bare-minimum module definition
 
 The routes are defined in the Module file as $urlRules.  These can also be redefined in the module definition.  By default, they look like this for prettyUrls:
 ```php
-    'visitor' => '/ipFilter/visitor/index',
-    'visitor/index' => '/ipFilter/visitor/index',
-    'visitor/blowoff' => '/ipFilter/visitor/blowoff',
-    'visitor/<id>' => 'ipFilter/visitor/view',
-    'visitor/update/<id>' => 'ipFilter/visitor/update',
+    'visitor' => '/visitor/visitor/index',
+    'visitor/index' => '/visitor/visitor/index',
+    'visitor/blowoff' => '/visitor/visitor/blowoff',
+    'visitor/<id>' => 'visitor/visitor/view',
+    'visitor/update/<id>' => 'visitor/visitor/update',
 ```
 
 ### 3. Update database schema
@@ -62,7 +62,7 @@ migrations. Make sure that you have properly configured `db` application compone
 and run the following command:
 
 ```bash
-$ php yii migrate/up --migrationPath=@vendor/johnsnook/yii2-ip-filter/migrations
+$ php yii migrate/up --migrationPath=@vendor/johnsnook/yii2-visitor/migrations
 ```
 
 Free API Keys
@@ -81,7 +81,7 @@ If you don't have this set, no data beyond the basic USER_AGENT string will be c
 
 Customization
 -----
-So, you should be able to go to  ```http://yoursit.biz/index.php?r=ipFilter/visitor/index``` or, if you have prettyUrl enabled, ```http://yoursite.com/visitor``` and see the visitor index.
+So, you should be able to go to  ```http://yoursit.biz/index.php?r=visitor/visitor/index``` or, if you have prettyUrl enabled, ```http://yoursite.com/visitor``` and see the visitor index.
 
 But you'll probably want to make your own views.  If it was me, I'd copy the controller and views to your backend or basic controllers & views directories.  But maybe there's some best practices way to do it.
 
@@ -91,8 +91,8 @@ When you're done getting all your keys, and deciding that there are some control
 ```php
     'modules' => [
         ...
-        'ipFilter' => [
-            'class' => 'johnsnook\ipFilter\Module',
+        'visitor' => [
+            'class' => 'johnsnook\visitor\Module',
             'ipInfoKey' => 'Not a real key, obviously',
             'proxyCheckKey' => 'Not a real key, obviously',
             'mapquestKey' => 'Not a real key, obviously',
@@ -116,7 +116,7 @@ Usage
 
 If you want to find out information on the current user, you can get the visitor model from the module and use it like so:
 ```php
-    $visitor = \Yii::$app->getModule('ipFilter')->visitor;
+    $visitor = \Yii::$app->getModule('visitor')->visitor;
     // give a special hello to people in Atlanta or your ex wife
     if ($visitor->info->city === 'Atlanta' || $visitor->info->ip_address === '99.203.4.238') {
         echo "Your city sucks balls";
@@ -136,13 +136,13 @@ The second argument is for specifying which files you'd like to import.  By defa
 
 ```bash
 # The default, looks for /etc/httpd/logs/access*
-php yii ipFilter/import/logs
+php yii visitor/import/logs
 
 # Looks for /my/own/private/idaho/access*
-php yii ipFilter/import/logs '/my/own/private/idaho'
+php yii visitor/import/logs '/my/own/private/idaho'
 
 # Will process /etc/httpd/log/access_log-20180603 and /etc/httpd/log/access_log-20180610 ONLY.
-php yii ipFilter/import/logs '/etc/httpd/logs' access_log-20180603,access_log-20180610
+php yii visitor/import/logs '/etc/httpd/logs' access_log-20180603,access_log-20180610
 ```
 
 To see it live, check out https://snooky.biz/visitor
@@ -162,4 +162,4 @@ Updating the name and/or message for a visitor.
 The default blocked user view. (As seen from Tor)
 ![ipfilter4](https://user-images.githubusercontent.com/4065107/42129953-e3476580-7ca1-11e8-84cf-aef11158446b.png)
 
-[.](https://snooky.biz/post/section/Ragedump) [.](https://snooky.biz/post/the-sixth-general-order) [.](https://snooky.biz/post/legal-threats) [.](https://snooky.biz/post/taking-out-the-trash) [.](https://snooky.biz/post/jeez-babe-i-dont-know-whats-wrong) [.](https://snooky.biz/post/my-stupid-vitriol) [.](https://snooky.biz/post/the-drama-train-just-keeps-a-chuggin) [.](https://snooky.biz/post/hypocrisy) [.](https://snooky.biz/post/marjorie-snook-isnt-your-name) [.](https://snooky.biz/post/inconstant-hooer) [.](https://snooky.biz/post/mother-of-the-year) 
+[.](https://snooky.biz/post/section/Ragedump) [.](https://snooky.biz/post/the-sixth-general-order) [.](https://snooky.biz/post/legal-threats) [.](https://snooky.biz/post/taking-out-the-trash) [.](https://snooky.biz/post/jeez-babe-i-dont-know-whats-wrong) [.](https://snooky.biz/post/my-stupid-vitriol) [.](https://snooky.biz/post/the-drama-train-just-keeps-a-chuggin) [.](https://snooky.biz/post/hypocrisy) [.](https://snooky.biz/post/marjorie-snook-isnt-your-name) [.](https://snooky.biz/post/inconstant-hooer) [.](https://snooky.biz/post/mother-of-the-year)

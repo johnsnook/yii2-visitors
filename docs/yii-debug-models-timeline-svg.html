@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>    <title>Svg, yii\debug\models\timeline\Svg - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w16713" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w16713-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w16713-collapse" class="collapse navbar-collapse"><ul id="w16714" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w16715" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-16704" data-toggle="collapse" data-parent="#navigation">yii\debug <b class="caret"></b></a><div id="navigation-16704" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-debugasset.html">DebugAsset</a>
+<a class="list-group-item" href="./yii-debug-flattenexception.html">FlattenException</a>
+<a class="list-group-item" href="./yii-debug-logtarget.html">LogTarget</a>
+<a class="list-group-item" href="./yii-debug-module.html">Module</a>
+<a class="list-group-item" href="./yii-debug-panel.html">Panel</a>
+<a class="list-group-item" href="./yii-debug-timelineasset.html">TimelineAsset</a>
+<a class="list-group-item" href="./yii-debug-userswitchasset.html">UserswitchAsset</a></div>
+<a class="list-group-item" href="#navigation-16705" data-toggle="collapse" data-parent="#navigation">yii\debug\actions\db <b class="caret"></b></a><div id="navigation-16705" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-actions-db-explainaction.html">ExplainAction</a></div>
+<a class="list-group-item" href="#navigation-16706" data-toggle="collapse" data-parent="#navigation">yii\debug\components\search <b class="caret"></b></a><div id="navigation-16706" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-components-search-filter.html">Filter</a></div>
+<a class="list-group-item" href="#navigation-16707" data-toggle="collapse" data-parent="#navigation">yii\debug\components\search\matchers <b class="caret"></b></a><div id="navigation-16707" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-components-search-matchers-base.html">Base</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-greaterthan.html">GreaterThan</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-greaterthanorequal.html">GreaterThanOrEqual</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-lowerthan.html">LowerThan</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-matcherinterface.html">MatcherInterface</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-sameas.html">SameAs</a></div>
+<a class="list-group-item" href="#navigation-16708" data-toggle="collapse" data-parent="#navigation">yii\debug\controllers <b class="caret"></b></a><div id="navigation-16708" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-controllers-defaultcontroller.html">DefaultController</a>
+<a class="list-group-item" href="./yii-debug-controllers-usercontroller.html">UserController</a></div>
+<a class="list-group-item" href="#navigation-16709" data-toggle="collapse" data-parent="#navigation">yii\debug\models <b class="caret"></b></a><div id="navigation-16709" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-models-router.html">Router</a>
+<a class="list-group-item" href="./yii-debug-models-userswitch.html">UserSwitch</a></div>
+<a class="list-group-item" href="#navigation-16710" data-toggle="collapse" data-parent="#navigation">yii\debug\models\search <b class="caret"></b></a><div id="navigation-16710" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-models-search-base.html">Base</a>
+<a class="list-group-item" href="./yii-debug-models-search-db.html">Db</a>
+<a class="list-group-item" href="./yii-debug-models-search-debug.html">Debug</a>
+<a class="list-group-item" href="./yii-debug-models-search-event.html">Event</a>
+<a class="list-group-item" href="./yii-debug-models-search-log.html">Log</a>
+<a class="list-group-item" href="./yii-debug-models-search-mail.html">Mail</a>
+<a class="list-group-item" href="./yii-debug-models-search-profile.html">Profile</a>
+<a class="list-group-item" href="./yii-debug-models-search-user.html">User</a>
+<a class="list-group-item" href="./yii-debug-models-search-usersearchinterface.html">UserSearchInterface</a></div>
+<a class="list-group-item active" href="#navigation-16711" data-toggle="collapse" data-parent="#navigation">yii\debug\models\timeline <b class="caret"></b></a><div id="navigation-16711" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-debug-models-timeline-dataprovider.html">DataProvider</a>
+<a class="list-group-item" href="./yii-debug-models-timeline-search.html">Search</a>
+<a class="list-group-item active" href="./yii-debug-models-timeline-svg.html">Svg</a></div>
+<a class="list-group-item" href="#navigation-16712" data-toggle="collapse" data-parent="#navigation">yii\debug\panels <b class="caret"></b></a><div id="navigation-16712" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-panels-assetpanel.html">AssetPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-configpanel.html">ConfigPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-dbpanel.html">DbPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-eventpanel.html">EventPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-logpanel.html">LogPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-mailpanel.html">MailPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-profilingpanel.html">ProfilingPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-requestpanel.html">RequestPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-routerpanel.html">RouterPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-timelinepanel.html">TimelinePanel</a>
+<a class="list-group-item" href="./yii-debug-panels-userpanel.html">UserPanel</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\debug\models\timeline\Svg</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a></td></tr>
+                                    <tr><th>Available since version</th><td>2.0.8</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php">https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>Svg is used to draw a graph using SVG</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$gradient">
+        <td><a href="yii-debug-models-timeline-svg.html#$gradient-detail">$gradient</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Color indicators svg graph.</td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+            <tr id="$listenMessages">
+        <td><a href="yii-debug-models-timeline-svg.html#$listenMessages-detail">$listenMessages</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Listen messages panels</td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+                    <tr id="$stroke">
+        <td><a href="yii-debug-models-timeline-svg.html#$stroke-detail">$stroke</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Stroke color</td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+            <tr id="$template">
+        <td><a href="yii-debug-models-timeline-svg.html#$template-detail">$template</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Svg template</td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+            <tr id="$x">
+        <td><a href="yii-debug-models-timeline-svg.html#$x-detail">$x</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>Max X coordinate</td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+            <tr id="$y">
+        <td><a href="yii-debug-models-timeline-svg.html#$y-detail">$y</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>Max Y coordinate</td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-property">
+<h2>Protected Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+                <tr id="$panel">
+        <td><a href="yii-debug-models-timeline-svg.html#$panel-detail">$panel</a></td>
+        <td><a href="yii-debug-panels-timelinepanel.html">yii\debug\panels\TimelinePanel</a></td>
+        <td></td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+            <tr id="$points">
+        <td><a href="yii-debug-models-timeline-svg.html#$points-detail">$points</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Each point is define by a X and a Y coordinate.</td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+                    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-baseobject.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr id="__construct()">
+        <td><a href="yii-debug-models-timeline-svg.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-baseobject.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-baseobject.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-baseobject.html#__set()-detail">__set()</a></td>
+        <td>Sets value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr id="__toString()">
+        <td><a href="yii-debug-models-timeline-svg.html#__toString()-detail">__toString()</a></td>
+        <td></td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-baseobject.html#__unset()-detail">__unset()</a></td>
+        <td>Sets an object property to null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+                <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-baseobject.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-baseobject.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-baseobject.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr id="hasPoints()">
+        <td><a href="yii-debug-models-timeline-svg.html#hasPoints()-detail">hasPoints()</a></td>
+        <td></td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-baseobject.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-base-baseobject.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+                </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                    <tr id="addPoints()">
+        <td><a href="yii-debug-models-timeline-svg.html#addPoints()-detail">addPoints()</a></td>
+        <td></td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+                                        <tr id="linearGradient()">
+        <td><a href="yii-debug-models-timeline-svg.html#linearGradient()-detail">linearGradient()</a></td>
+        <td></td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+            <tr id="polygon()">
+        <td><a href="yii-debug-models-timeline-svg.html#polygon()-detail">polygon()</a></td>
+        <td></td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+            <tr id="polyline()">
+        <td><a href="yii-debug-models-timeline-svg.html#polyline()-detail">polyline()</a></td>
+        <td></td>
+        <td><a href="yii-debug-models-timeline-svg.html">yii\debug\models\timeline\Svg</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$gradient-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#$gradient-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L41" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L41" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $gradient        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Color indicators svg graph.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-debug-models-timeline-svg.html#$gradient-detail">$gradient</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #0000BB">10&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'#d6e685'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">60&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'#8cc665'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">90&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'#44a340'</span><span style="color: #007700">,&nbsp;</span><span style="color: #0000BB">100&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'#1e6823'</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$listenMessages-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#$listenMessages-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L37" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L37" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $listenMessages        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Listen messages panels</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-debug-models-timeline-svg.html#$listenMessages-detail">$listenMessages</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'log'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'profiling'</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$panel-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#$panel-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L64" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L64" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $panel        <span class="detail-header-tag small">
+            protected                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="yii-debug-panels-timelinepanel.html">yii\debug\panels\TimelinePanel</a></span> <a href="yii-debug-models-timeline-svg.html#$panel-detail">$panel</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$points-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#$points-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L60" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L60" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $points        <span class="detail-header-tag small">
+            protected                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Each point is define by a X and a Y coordinate.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-debug-models-timeline-svg.html#$points-detail">$points</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$stroke-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#$stroke-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L33" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L33" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $stroke        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Stroke color</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-debug-models-timeline-svg.html#$stroke-detail">$stroke</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'#1e6823'</span></div>
+
+
+    <div class="detail-header h3" id="$template-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#$template-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L50" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L50" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $template        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Svg template</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-debug-models-timeline-svg.html#$template-detail">$template</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'&lt;svg&nbsp;width="{x}"&nbsp;height="{y}"&nbsp;viewBox="0&nbsp;0&nbsp;{x}&nbsp;{y}"&nbsp;preserveAspectRatio="none"&gt;&lt;defs&gt;{linearGradient}&lt;/defs&gt;&lt;g&gt;&lt;polygon&nbsp;points="{polygon}"&nbsp;fill="url(#gradient)"/&gt;&lt;polyline&nbsp;points="{polyline}"&nbsp;fill="none"&nbsp;stroke="{stroke}"&nbsp;stroke-width="1"/&gt;&lt;/g&gt;&lt;/svg&gt;'</span></div>
+
+
+    <div class="detail-header h3" id="$x-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#$x-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L25" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L25" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $x        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Max X coordinate</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <a href="yii-debug-models-timeline-svg.html#$x-detail">$x</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1920</span></div>
+
+
+    <div class="detail-header h3" id="$y-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#$y-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L29" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L29" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $y        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Max Y coordinate</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <a href="yii-debug-models-timeline-svg.html#$y-detail">$y</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">40</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="__construct()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#__construct()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L70" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L70" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        __construct()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Constructor.</strong></p>
+
+        <p>The default implementation does two things:</p>
+<ul>
+<li>Initializes the object with the given configuration <code>$config</code>.</li>
+<li>Call <a href="yii-base-baseobject.html#init()-detail">init()</a>.</li>
+</ul>
+<p>If this method is overridden in a child class, it is recommended that</p>
+<ul>
+<li>the last parameter of the constructor is a configuration array, like <code>$config</code> here.</li>
+<li>call the parent implementation at the end of the constructor.</li>
+</ul>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-debug-models-timeline-svg.html#__construct()-detail">__construct</a></strong> ( <span class="signature-type"><a href="yii-debug-panels-timelinepanel.html">yii\debug\panels\TimelinePanel</a></span> <span style="color: #0000BB">$panel</span>, <span style="color: #0000BB">$config&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$panel</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$config</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Name-value pairs that will be used to initialize the object properties</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="__toString()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#__toString()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L84" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L84" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        __toString()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-models-timeline-svg.html#__toString()-detail">__toString</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="addPoints()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#addPoints()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L112" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L112" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        addPoints()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <strong><a href="yii-debug-models-timeline-svg.html#addPoints()-detail">addPoints</a></strong> ( <span style="color: #0000BB">$messages</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$messages</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Log messages. See <span class="broken-link">\yii\debug\models\timeline\Logger::messages</span> for the structure</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Added points</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="hasPoints()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#hasPoints()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L103" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L103" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        hasPoints()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-debug-models-timeline-svg.html#hasPoints()-detail">hasPoints</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Has points</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="linearGradient()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#linearGradient()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L171" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L171" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        linearGradient()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-models-timeline-svg.html#linearGradient()-detail">linearGradient</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="polygon()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#polygon()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L143" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L143" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        polygon()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-models-timeline-svg.html#polygon()-detail">polygon</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Points attribute for polygon path</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="polyline()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-models-timeline-svg.html#polyline()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/models/timeline/Svg.php#L157" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/models/timeline/Svg.php#L157" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        polyline()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-models-timeline-svg.html#polyline()-detail">polyline</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Points attribute for polyline path</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Tue, 14 Aug 2018 17:48:44 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

@@ -1,14 +1,14 @@
 <?php
 
-namespace johnsnook\ipFilter\models;
+namespace johnsnook\visitor\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use johnsnook\ipFilter\models\Visitor;
+use johnsnook\visitor\models\Visitor;
 use johnsnook\parsel\ParselQuery;
 
 /**
- * VisitorSearch represents the model behind the search form of `johnsnook\ipFilter\models\Visitor`.
+ * VisitorSearch represents the model behind the search form of `johnsnook\visitor\models\Visitor`.
  */
 class VisitorSearch extends Visitor {
 

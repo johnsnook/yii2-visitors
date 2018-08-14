@@ -1,11 +1,11 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
 /* @var $model frontend\models\Visitor */
@@ -17,8 +17,8 @@
  */
 use yii\helpers\Html;
 
-$ipFilter = Yii::$app->getModule('ipFilter');
-$mapKey = $ipFilter->googleMapsApiKey;
+$visitor = Yii::$app->getModule('visitor');
+$mapKey = $visitor->googleMapsApiKey;
 
 
 

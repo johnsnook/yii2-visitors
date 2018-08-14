@@ -1,18 +1,18 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model \johnsnook\ipFilter\models\Visitor */
+/* @var $model \johnsnook\visitor\models\Visitor */
 /* @var $form yii\widgets\ActiveForm */
 
 $this->title = 'Update Visitor: ' . empty($model->name) ? $model->ip : "$model->name - $model->ip ";

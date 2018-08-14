@@ -1,8 +1,8 @@
 {
-    "name": "johnsnook/yii2-ip-filter",
-    "description": "This extension gets the visitors ip address, logs the access and checks if it's blacklisted or whitelisted.  If it's a blacklist ip address, it redirects them to a blowoff page.",
+    "name": "johnsnook/yii2-visitor",
+    "description": "This extension gets the visitor information associated with their ip address, including proxy and geographical information and logs the access and checks if it's blacklisted or whitelisted and takes appropriate action.",
     "type": "yii2-extension",
-    "keywords": ["yii2", "extension", "access_log", "proxy", "tor", "blacklist", "ip address", "security", "hackers"],
+    "keywords": ["yii2", "extension", "access_log", "cidr", "ip tables", "proxy", "tor", "blacklist", "ip address", "security", "hackers"],
     "homepage": "https://snooky.biz/",
     "license": "Apache-2.0",
     "authors": [
@@ -13,13 +13,13 @@
     ],
     "require": {
         "yiisoft/yii2": "*",
-        "yiisoft/yii2-bootstrap4": "*",
+        "yiisoft/yii2-bootstrap": "*",
         "kassner/log-parser": "~1.0",
         "johnsnook/yii2-parsel": "*"
     },
     "autoload": {
         "psr-4": {
-            "johnsnook\\ipFilter\\": "/src"
+            "johnsnook\\visitor\\": "/src"
         }
     },
     "repositories": [

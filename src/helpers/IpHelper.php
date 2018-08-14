@@ -8,7 +8,7 @@
  * Description of IpHelper
  */
 
-namespace johnsnook\ipFilter\helpers;
+namespace johnsnook\visitor\helpers;
 
 class IpHelper extends \yii\helpers\BaseIpHelper {
 

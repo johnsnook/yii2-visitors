@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>    <title>DbPanel, yii\debug\panels\DbPanel - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w16497" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w16497-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w16497-collapse" class="collapse navbar-collapse"><ul id="w16498" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w16499" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-16488" data-toggle="collapse" data-parent="#navigation">yii\debug <b class="caret"></b></a><div id="navigation-16488" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-debugasset.html">DebugAsset</a>
+<a class="list-group-item" href="./yii-debug-flattenexception.html">FlattenException</a>
+<a class="list-group-item" href="./yii-debug-logtarget.html">LogTarget</a>
+<a class="list-group-item" href="./yii-debug-module.html">Module</a>
+<a class="list-group-item" href="./yii-debug-panel.html">Panel</a>
+<a class="list-group-item" href="./yii-debug-timelineasset.html">TimelineAsset</a>
+<a class="list-group-item" href="./yii-debug-userswitchasset.html">UserswitchAsset</a></div>
+<a class="list-group-item" href="#navigation-16489" data-toggle="collapse" data-parent="#navigation">yii\debug\actions\db <b class="caret"></b></a><div id="navigation-16489" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-actions-db-explainaction.html">ExplainAction</a></div>
+<a class="list-group-item" href="#navigation-16490" data-toggle="collapse" data-parent="#navigation">yii\debug\components\search <b class="caret"></b></a><div id="navigation-16490" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-components-search-filter.html">Filter</a></div>
+<a class="list-group-item" href="#navigation-16491" data-toggle="collapse" data-parent="#navigation">yii\debug\components\search\matchers <b class="caret"></b></a><div id="navigation-16491" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-components-search-matchers-base.html">Base</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-greaterthan.html">GreaterThan</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-greaterthanorequal.html">GreaterThanOrEqual</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-lowerthan.html">LowerThan</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-matcherinterface.html">MatcherInterface</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-sameas.html">SameAs</a></div>
+<a class="list-group-item" href="#navigation-16492" data-toggle="collapse" data-parent="#navigation">yii\debug\controllers <b class="caret"></b></a><div id="navigation-16492" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-controllers-defaultcontroller.html">DefaultController</a>
+<a class="list-group-item" href="./yii-debug-controllers-usercontroller.html">UserController</a></div>
+<a class="list-group-item" href="#navigation-16493" data-toggle="collapse" data-parent="#navigation">yii\debug\models <b class="caret"></b></a><div id="navigation-16493" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-models-router.html">Router</a>
+<a class="list-group-item" href="./yii-debug-models-userswitch.html">UserSwitch</a></div>
+<a class="list-group-item" href="#navigation-16494" data-toggle="collapse" data-parent="#navigation">yii\debug\models\search <b class="caret"></b></a><div id="navigation-16494" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-models-search-base.html">Base</a>
+<a class="list-group-item" href="./yii-debug-models-search-db.html">Db</a>
+<a class="list-group-item" href="./yii-debug-models-search-debug.html">Debug</a>
+<a class="list-group-item" href="./yii-debug-models-search-event.html">Event</a>
+<a class="list-group-item" href="./yii-debug-models-search-log.html">Log</a>
+<a class="list-group-item" href="./yii-debug-models-search-mail.html">Mail</a>
+<a class="list-group-item" href="./yii-debug-models-search-profile.html">Profile</a>
+<a class="list-group-item" href="./yii-debug-models-search-user.html">User</a>
+<a class="list-group-item" href="./yii-debug-models-search-usersearchinterface.html">UserSearchInterface</a></div>
+<a class="list-group-item" href="#navigation-16495" data-toggle="collapse" data-parent="#navigation">yii\debug\models\timeline <b class="caret"></b></a><div id="navigation-16495" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-models-timeline-dataprovider.html">DataProvider</a>
+<a class="list-group-item" href="./yii-debug-models-timeline-search.html">Search</a>
+<a class="list-group-item" href="./yii-debug-models-timeline-svg.html">Svg</a></div>
+<a class="list-group-item active" href="#navigation-16496" data-toggle="collapse" data-parent="#navigation">yii\debug\panels <b class="caret"></b></a><div id="navigation-16496" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-debug-panels-assetpanel.html">AssetPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-configpanel.html">ConfigPanel</a>
+<a class="list-group-item active" href="./yii-debug-panels-dbpanel.html">DbPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-eventpanel.html">EventPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-logpanel.html">LogPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-mailpanel.html">MailPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-profilingpanel.html">ProfilingPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-requestpanel.html">RequestPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-routerpanel.html">RouterPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-timelinepanel.html">TimelinePanel</a>
+<a class="list-group-item" href="./yii-debug-panels-userpanel.html">UserPanel</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\debug\panels\DbPanel</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a> &raquo;
+<a href="yii-debug-panel.html">yii\debug\Panel</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a></td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php">https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>Debugger panel that collects and displays database queries performed.</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="$actions">
+        <td><a href="yii-debug-panel.html#$actions-detail">$actions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Array of actions to add to the debug modules default controller.</td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+            <tr class="inherited" id="$behaviors">
+        <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
+        <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
+        <td>List of behaviors attached to this component</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="$criticalQueryThreshold">
+        <td><a href="yii-debug-panels-dbpanel.html#$criticalQueryThreshold-detail">$criticalQueryThreshold</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>The threshold for determining whether the request has involved
+critical number of DB queries.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr class="inherited" id="$data">
+        <td><a href="yii-debug-panel.html#$data-detail">$data</a></td>
+        <td>mixed</td>
+        <td>Data associated with panel</td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+            <tr id="$db">
+        <td><a href="yii-debug-panels-dbpanel.html#$db-detail">$db</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The name of the database component to use for executing (explain) queries</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr id="$defaultFilter">
+        <td><a href="yii-debug-panels-dbpanel.html#$defaultFilter-detail">$defaultFilter</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The default filter to apply to the database queries.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr id="$defaultOrder">
+        <td><a href="yii-debug-panels-dbpanel.html#$defaultOrder-detail">$defaultOrder</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The default ordering of the database queries.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr id="$detail">
+        <td><a href="yii-debug-panels-dbpanel.html#$detail-detail">$detail</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Content that is displayed in debugger detail view</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+                <tr class="inherited" id="$id">
+        <td><a href="yii-debug-panel.html#$id-detail">$id</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Panel unique identifier.</td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+            <tr class="inherited" id="$module">
+        <td><a href="yii-debug-panel.html#$module-detail">$module</a></td>
+        <td><a href="yii-debug-module.html">yii\debug\Module</a></td>
+        <td></td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+            <tr id="$name">
+        <td><a href="yii-debug-panels-dbpanel.html#$name-detail">$name</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Name of the panel</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr id="$profileLogs">
+        <td><a href="yii-debug-panels-dbpanel.html#$profileLogs-detail">$profileLogs</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td></td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr id="$summary">
+        <td><a href="yii-debug-panels-dbpanel.html#$summary-detail">$summary</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Content that is displayed at debug toolbar</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr id="$summaryName">
+        <td><a href="yii-debug-panels-dbpanel.html#$summaryName-detail">$summaryName</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Short name of the panel, which will be use in summary.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr class="inherited" id="$tag">
+        <td><a href="yii-debug-panel.html#$tag-detail">$tag</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Request data set identifier.</td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+            <tr id="$types">
+        <td><a href="yii-debug-panels-dbpanel.html#$types-detail">$types</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td></td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr class="inherited" id="$url">
+        <td><a href="yii-debug-panel.html#$url-detail">$url</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>URL pointing to panel detail view</td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-property">
+<h2>Protected Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+                                        <tr class="inherited" id="$error">
+        <td><a href="yii-debug-panel.html#$error-detail">$error</a></td>
+        <td><a href="yii-debug-flattenexception.html">yii\debug\FlattenException</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+        <td>Error while saving the panel</td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+                                        </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-component.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-baseobject.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-component.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-component.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-component.html#__set()-detail">__set()</a></td>
+        <td>Sets the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-component.html#__unset()-detail">__unset()</a></td>
+        <td>Sets a component property to be null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="behaviors()">
+        <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="calculateTimings()">
+        <td><a href="yii-debug-panels-dbpanel.html#calculateTimings()-detail">calculateTimings()</a></td>
+        <td>Calculates given request profile timings.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr id="canBeExplained()">
+        <td><a href="yii-debug-panels-dbpanel.html#canBeExplained()-detail">canBeExplained()</a></td>
+        <td>Check if given query type can be explained.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-component.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr id="countDuplicateQuery()">
+        <td><a href="yii-debug-panels-dbpanel.html#countDuplicateQuery()-detail">countDuplicateQuery()</a></td>
+        <td>Return associative array, where key is query string
+and value is number of occurrences the same query in array.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="getDb()">
+        <td><a href="yii-debug-panels-dbpanel.html#getDb()-detail">getDb()</a></td>
+        <td>Returns a reference to the DB component associated with the panel</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr id="getDetail()">
+        <td><a href="yii-debug-panels-dbpanel.html#getDetail()-detail">getDetail()</a></td>
+        <td></td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr class="inherited" id="getError()">
+        <td><a href="yii-debug-panel.html#getError()-detail">getError()</a></td>
+        <td></td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+                <tr id="getName()">
+        <td><a href="yii-debug-panels-dbpanel.html#getName()-detail">getName()</a></td>
+        <td></td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr id="getProfileLogs()">
+        <td><a href="yii-debug-panels-dbpanel.html#getProfileLogs()-detail">getProfileLogs()</a></td>
+        <td>Returns all profile logs of the current request for this panel. It includes categories such as:
+'yii\db\Command::query', 'yii\db\Command::execute'.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+                <tr id="getSummary()">
+        <td><a href="yii-debug-panels-dbpanel.html#getSummary()-detail">getSummary()</a></td>
+        <td></td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr id="getSummaryName()">
+        <td><a href="yii-debug-panels-dbpanel.html#getSummaryName()-detail">getSummaryName()</a></td>
+        <td></td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+                <tr class="inherited" id="getTraceLine()">
+        <td><a href="yii-debug-panel.html#getTraceLine()-detail">getTraceLine()</a></td>
+        <td>Returns a trace line</td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+            <tr id="getTypes()">
+        <td><a href="yii-debug-panels-dbpanel.html#getTypes()-detail">getTypes()</a></td>
+        <td>Returns array query types</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr class="inherited" id="getUrl()">
+        <td><a href="yii-debug-panel.html#getUrl()-detail">getUrl()</a></td>
+        <td></td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+            <tr class="inherited" id="hasError()">
+        <td><a href="yii-debug-panel.html#hasError()-detail">hasError()</a></td>
+        <td></td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-component.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-component.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined for this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="init()">
+        <td><a href="yii-debug-panels-dbpanel.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr id="isEnabled()">
+        <td><a href="yii-debug-panels-dbpanel.html#isEnabled()-detail">isEnabled()</a></td>
+        <td>Checks whether this panel is enabled.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr id="isQueryCountCritical()">
+        <td><a href="yii-debug-panels-dbpanel.html#isQueryCountCritical()-detail">isQueryCountCritical()</a></td>
+        <td>Check if given queries count is critical according settings.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr class="inherited" id="load()">
+        <td><a href="yii-debug-panel.html#load()-detail">load()</a></td>
+        <td>Loads data into the panel</td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+            <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="save()">
+        <td><a href="yii-debug-panels-dbpanel.html#save()-detail">save()</a></td>
+        <td>Saves data to be later used in debugger detail view.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr class="inherited" id="setError()">
+        <td><a href="yii-debug-panel.html#setError()-detail">setError()</a></td>
+        <td></td>
+        <td><a href="yii-debug-panel.html">yii\debug\Panel</a></td>
+    </tr>
+            <tr id="sumDuplicateQueries()">
+        <td><a href="yii-debug-panels-dbpanel.html#sumDuplicateQueries()-detail">sumDuplicateQueries()</a></td>
+        <td>Returns sum of all duplicated queries</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+            <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                                                                                        <tr id="getModels()">
+        <td><a href="yii-debug-panels-dbpanel.html#getModels()-detail">getModels()</a></td>
+        <td>Returns an  array of models that represents logs of the current request.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+                    <tr id="getQueryType()">
+        <td><a href="yii-debug-panels-dbpanel.html#getQueryType()-detail">getQueryType()</a></td>
+        <td>Returns database query type.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+                    <tr id="getTotalQueryTime()">
+        <td><a href="yii-debug-panels-dbpanel.html#getTotalQueryTime()-detail">getTotalQueryTime()</a></td>
+        <td>Returns total query time.</td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+                                <tr id="hasExplain()">
+        <td><a href="yii-debug-panels-dbpanel.html#hasExplain()-detail">hasExplain()</a></td>
+        <td></td>
+        <td><a href="yii-debug-panels-dbpanel.html">yii\debug\panels\DbPanel</a></td>
+    </tr>
+                                                    </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$criticalQueryThreshold-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#$criticalQueryThreshold-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L34" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L34" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $criticalQueryThreshold        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The threshold for determining whether the request has involved
+critical number of DB queries. If the number of queries exceeds this number,
+the execution is considered taking critical number of DB queries.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <a href="yii-debug-panels-dbpanel.html#$criticalQueryThreshold-detail">$criticalQueryThreshold</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$db-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#$db-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L38" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L38" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $db        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The name of the database component to use for executing (explain) queries</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-db-connection.html">yii\db\Connection</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getDb()-detail">getDb</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$defaultFilter-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#$defaultFilter-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L52" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L52" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $defaultFilter        <span class="detail-header-tag small">
+            public                                                property
+                            (available since version 2.0.7)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The default filter to apply to the database queries. In the format
+of [ property => value ], for example: [ 'type' => 'SELECT' ]</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-debug-panels-dbpanel.html#$defaultFilter-detail">$defaultFilter</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$defaultOrder-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#$defaultOrder-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L44" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L44" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $defaultOrder        <span class="detail-header-tag small">
+            public                                                property
+                            (available since version 2.0.7)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The default ordering of the database queries. In the format of
+[ property => sort direction ], for example: [ 'duration' => SORT_DESC ]</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-debug-panels-dbpanel.html#$defaultOrder-detail">$defaultOrder</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'seq'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">SORT_ASC</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$detail-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#$detail-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $detail        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Content that is displayed in debugger detail view</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getDetail()-detail">getDetail</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$name-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#$name-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $name        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Name of the panel</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getName()-detail">getName</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$profileLogs-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#$profileLogs-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $profileLogs        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getProfileLogs()-detail">getProfileLogs</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$summary-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#$summary-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $summary        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Content that is displayed at debug toolbar</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getSummary()-detail">getSummary</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$summaryName-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#$summaryName-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $summaryName        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Short name of the panel, which will be use in summary.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getSummaryName()-detail">getSummaryName</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$types-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#$types-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $types        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getTypes()-detail">getTypes</a></strong> ( )</div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="calculateTimings()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#calculateTimings()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L138" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L138" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        calculateTimings()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Calculates given request profile timings.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-debug-panels-dbpanel.html#calculateTimings()-detail">calculateTimings</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Timings [token, category, timestamp, traces, nesting level, elapsed time]</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="canBeExplained()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#canBeExplained()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L333" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L333" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        canBeExplained()
+        <span class="detail-header-tag small">
+            public                        static            method
+                            (available since version 2.0.5)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Check if given query type can be explained.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-debug-panels-dbpanel.html#canBeExplained()-detail">canBeExplained</a></strong> ( <span style="color: #0000BB">$type</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$type</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Query type</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="countDuplicateQuery()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#countDuplicateQuery()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L220" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L220" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        countDuplicateQuery()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.0.13)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Return associative array, where key is query string
+and value is number of occurrences the same query in array.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-debug-panels-dbpanel.html#countDuplicateQuery()-detail">countDuplicateQuery</a></strong> ( <span style="color: #0000BB">$timings</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$timings</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getDb()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#getDb()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L344" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L344" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getDb()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.0.5)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns a reference to the DB component associated with the panel</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-db-connection.html">yii\db\Connection</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getDb()-detail">getDb</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getDetail()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#getDetail()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L111" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L111" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getDetail()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getDetail()-detail">getDetail</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Content that is displayed in debugger detail view</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getModels()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#getModels()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L189" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L189" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getModels()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns an  array of models that represents logs of the current request.</strong></p>
+
+        <p>Can be used with data providers such as \yii\data\ArrayDataProvider.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getModels()-detail">getModels</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Models</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#getName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L78" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L78" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getName()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getName()-detail">getName</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Name of the panel</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getProfileLogs()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#getProfileLogs()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L160" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L160" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getProfileLogs()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns all profile logs of the current request for this panel. It includes categories such as:
+'yii\db\Command::query', 'yii\db\Command::execute'.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getProfileLogs()-detail">getProfileLogs</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getQueryType()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#getQueryType()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L253" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L253" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getQueryType()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns database query type.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getQueryType()-detail">getQueryType</a></strong> ( <span style="color: #0000BB">$timing</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$timing</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Timing procedure string</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Query type such as select, insert, delete, etc.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getSummary()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#getSummary()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L94" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L94" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getSummary()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getSummary()-detail">getSummary</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Content that is displayed at debug toolbar</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getSummaryName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#getSummaryName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L86" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L86" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getSummaryName()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getSummaryName()-detail">getSummaryName</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Short name of the panel, which will be use in summary.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getTotalQueryTime()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#getTotalQueryTime()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L173" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L173" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getTotalQueryTime()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns total query time.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getTotalQueryTime()-detail">getTotalQueryTime</a></strong> ( <span style="color: #0000BB">$timings</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$timings</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Total time</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getTypes()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#getTypes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L278" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L278" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getTypes()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.0.3)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns array query types</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-debug-panels-dbpanel.html#getTypes()-detail">getTypes</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="hasExplain()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#hasExplain()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L308" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L308" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        hasExplain()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.0.5)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-debug-panels-dbpanel.html#hasExplain()-detail">hasExplain</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the DB component has support for EXPLAIN queries</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="init()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L67" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L67" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        init()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Initializes the object.</strong></p>
+
+        <p>This method is invoked at the end of the constructor after the object is initialized with the
+given configuration.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-debug-panels-dbpanel.html#init()-detail">init</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="isEnabled()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#isEnabled()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L293" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L293" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        isEnabled()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Checks whether this panel is enabled.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-debug-panels-dbpanel.html#isEnabled()-detail">isEnabled</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether this panel is enabled.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="isQueryCountCritical()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#isQueryCountCritical()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L267" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L267" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        isQueryCountCritical()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Check if given queries count is critical according settings.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-debug-panels-dbpanel.html#isQueryCountCritical()-detail">isQueryCountCritical</a></strong> ( <span style="color: #0000BB">$count</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$count</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Queries count</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="save()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#save()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L150" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L150" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        save()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Saves data to be later used in debugger detail view.</strong></p>
+
+        <p>This method is called on every page where debugger is enabled.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">mixed</span> <strong><a href="yii-debug-panels-dbpanel.html#save()-detail">save</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col">mixed</td>
+                  <td class="param-desc-col"><p>Data to be saved</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="sumDuplicateQueries()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-panels-dbpanel.html#sumDuplicateQueries()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/panels/DbPanel.php#L234" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/panels/DbPanel.php#L234" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        sumDuplicateQueries()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.0.13)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns sum of all duplicated queries</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <strong><a href="yii-debug-panels-dbpanel.html#sumDuplicateQueries()-detail">sumDuplicateQueries</a></strong> ( <span style="color: #0000BB">$modelData</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$modelData</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Tue, 14 Aug 2018 17:48:43 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

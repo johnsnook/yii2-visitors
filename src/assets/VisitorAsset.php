@@ -1,6 +1,6 @@
 <?php
 
-namespace johnsnook\ipFilter\assets;
+namespace johnsnook\visitor\assets;
 
 use yii\web\AssetBundle;
 use yii\web\View;

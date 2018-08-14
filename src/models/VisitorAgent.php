@@ -1,15 +1,15 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\ipFilter\models;
+namespace johnsnook\visitor\models;
 
 /**
  * This is the model class for table "visitor_agent", holder of this json structure:
@@ -245,7 +245,7 @@ class VisitorAgent extends \yii\db\ActiveRecord {
         if (is_null($vaModel = VisitorAgent::findOne($userAgent))) {
 
             $yii = self::getRealYiiPath();
-            exec("php $yii ipFilter/service/user-agent '$userAgent' > /dev/null 2>&1 &");
+            exec("php $yii visitor/service/user-agent '$userAgent' > /dev/null 2>&1 &");
         }
     }
 
@@ -305,8 +305,8 @@ class VisitorAgent extends \yii\db\ActiveRecord {
      * @param string $apiKey
      */
     public static function log($userAgent) {
-        //$ipFilter = \Yii::$app->controller->module;
-        $ipFilter = \Yii::$app->getModule('ipFilter');
+        //$visitor = \Yii::$app->controller->module;
+        $visitor = \Yii::$app->getModule('visitor');
 
         if (is_null($agent = VisitorAgent::findOne($userAgent))) {
             $data = ["user_agent" => $userAgent];
@@ -318,7 +318,7 @@ class VisitorAgent extends \yii\db\ActiveRecord {
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, ['X-API-KEY: ' . $ipFilter->whatsmybrowswerKey]);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, ['X-API-KEY: ' . $visitor->whatsmybrowswerKey]);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             if (($response = curl_exec($ch) ) === false) {
                 die("Error" . curl_error($ch) . PHP_EOL);

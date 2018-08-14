@@ -1,19 +1,19 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\ipFilter\models;
+namespace johnsnook\visitor\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use johnsnook\ipFilter\models\VisitorLog;
+use johnsnook\visitor\models\VisitorLog;
 use johnsnook\parsel\ParselQuery;
 
 /**

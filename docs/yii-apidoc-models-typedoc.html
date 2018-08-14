@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>    <title>TypeDoc, yii\apidoc\models\TypeDoc - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w369" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w369-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w369-collapse" class="collapse navbar-collapse"><ul id="w370" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w371" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-358" data-toggle="collapse" data-parent="#navigation">yii\apidoc\commands <b class="caret"></b></a><div id="navigation-358" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-commands-apicontroller.html">ApiController</a>
+<a class="list-group-item" href="./yii-apidoc-commands-guidecontroller.html">GuideController</a></div>
+<a class="list-group-item" href="#navigation-359" data-toggle="collapse" data-parent="#navigation">yii\apidoc\components <b class="caret"></b></a><div id="navigation-359" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-components-basecontroller.html">BaseController</a></div>
+<a class="list-group-item" href="#navigation-360" data-toggle="collapse" data-parent="#navigation">yii\apidoc\helpers <b class="caret"></b></a><div id="navigation-360" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-helpers-apiindexer.html">ApiIndexer</a>
+<a class="list-group-item" href="./yii-apidoc-helpers-apimarkdown.html">ApiMarkdown</a>
+<a class="list-group-item" href="./yii-apidoc-helpers-apimarkdownlatex.html">ApiMarkdownLaTeX</a>
+<a class="list-group-item" href="./yii-apidoc-helpers-apimarkdowntrait.html">ApiMarkdownTrait</a>
+<a class="list-group-item" href="./yii-apidoc-helpers-indexfileanalyzer.html">IndexFileAnalyzer</a>
+<a class="list-group-item" href="./yii-apidoc-helpers-markdownhighlighttrait.html">MarkdownHighlightTrait</a>
+<a class="list-group-item" href="./yii-apidoc-helpers-prettyprinter.html">PrettyPrinter</a></div>
+<a class="list-group-item active" href="#navigation-361" data-toggle="collapse" data-parent="#navigation">yii\apidoc\models <b class="caret"></b></a><div id="navigation-361" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-apidoc-models-basedoc.html">BaseDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-classdoc.html">ClassDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-constdoc.html">ConstDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-context.html">Context</a>
+<a class="list-group-item" href="./yii-apidoc-models-eventdoc.html">EventDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-functiondoc.html">FunctionDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-interfacedoc.html">InterfaceDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-methoddoc.html">MethodDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-paramdoc.html">ParamDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-propertydoc.html">PropertyDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-traitdoc.html">TraitDoc</a>
+<a class="list-group-item active" href="./yii-apidoc-models-typedoc.html">TypeDoc</a></div>
+<a class="list-group-item" href="#navigation-362" data-toggle="collapse" data-parent="#navigation">yii\apidoc\renderers <b class="caret"></b></a><div id="navigation-362" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-renderers-apirenderer.html">ApiRenderer</a>
+<a class="list-group-item" href="./yii-apidoc-renderers-baserenderer.html">BaseRenderer</a>
+<a class="list-group-item" href="./yii-apidoc-renderers-guiderenderer.html">GuideRenderer</a></div>
+<a class="list-group-item" href="#navigation-363" data-toggle="collapse" data-parent="#navigation">yii\apidoc\templates\bootstrap <b class="caret"></b></a><div id="navigation-363" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-templates-bootstrap-apirenderer.html">ApiRenderer</a>
+<a class="list-group-item" href="./yii-apidoc-templates-bootstrap-guiderenderer.html">GuideRenderer</a>
+<a class="list-group-item" href="./yii-apidoc-templates-bootstrap-renderertrait.html">RendererTrait</a>
+<a class="list-group-item" href="./yii-apidoc-templates-bootstrap-sidenavwidget.html">SideNavWidget</a></div>
+<a class="list-group-item" href="#navigation-364" data-toggle="collapse" data-parent="#navigation">yii\apidoc\templates\bootstrap\assets <b class="caret"></b></a><div id="navigation-364" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-templates-bootstrap-assets-assetbundle.html">AssetBundle</a>
+<a class="list-group-item" href="./yii-apidoc-templates-bootstrap-assets-highlightbundle.html">HighlightBundle</a>
+<a class="list-group-item" href="./yii-apidoc-templates-bootstrap-assets-jssearchasset.html">JsSearchAsset</a></div>
+<a class="list-group-item" href="#navigation-365" data-toggle="collapse" data-parent="#navigation">yii\apidoc\templates\html <b class="caret"></b></a><div id="navigation-365" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-templates-html-apirenderer.html">ApiRenderer</a>
+<a class="list-group-item" href="./yii-apidoc-templates-html-guiderenderer.html">GuideRenderer</a></div>
+<a class="list-group-item" href="#navigation-366" data-toggle="collapse" data-parent="#navigation">yii\apidoc\templates\json <b class="caret"></b></a><div id="navigation-366" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-templates-json-apirenderer.html">ApiRenderer</a></div>
+<a class="list-group-item" href="#navigation-367" data-toggle="collapse" data-parent="#navigation">yii\apidoc\templates\online <b class="caret"></b></a><div id="navigation-367" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-templates-online-apirenderer.html">ApiRenderer</a></div>
+<a class="list-group-item" href="#navigation-368" data-toggle="collapse" data-parent="#navigation">yii\apidoc\templates\pdf <b class="caret"></b></a><div id="navigation-368" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-templates-pdf-guiderenderer.html">GuideRenderer</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\apidoc\models\TypeDoc</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a> &raquo;
+<a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a></td></tr>
+                        <tr><th>Subclasses</th><td><a href="yii-apidoc-models-classdoc.html">yii\apidoc\models\ClassDoc</a>, <a href="yii-apidoc-models-interfacedoc.html">yii\apidoc\models\InterfaceDoc</a>, <a href="yii-apidoc-models-traitdoc.html">yii\apidoc\models\TraitDoc</a></td></tr>
+                        <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php">https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>Base class for API documentation information for classes, interfaces and traits.</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$authors">
+        <td><a href="yii-apidoc-models-typedoc.html#$authors-detail">$authors</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr class="inherited" id="$deprecatedReason">
+        <td><a href="yii-apidoc-models-basedoc.html#$deprecatedReason-detail">$deprecatedReason</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr class="inherited" id="$deprecatedSince">
+        <td><a href="yii-apidoc-models-basedoc.html#$deprecatedSince-detail">$deprecatedSince</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr class="inherited" id="$description">
+        <td><a href="yii-apidoc-models-basedoc.html#$description-detail">$description</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr class="inherited" id="$endLine">
+        <td><a href="yii-apidoc-models-basedoc.html#$endLine-detail">$endLine</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr id="$methods">
+        <td><a href="yii-apidoc-models-typedoc.html#$methods-detail">$methods</a></td>
+        <td><a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>[]</td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr class="inherited" id="$name">
+        <td><a href="yii-apidoc-models-basedoc.html#$name-detail">$name</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr id="$namespace">
+        <td><a href="yii-apidoc-models-typedoc.html#$namespace-detail">$namespace</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr id="$nativeMethods">
+        <td><a href="yii-apidoc-models-typedoc.html#$nativeMethods-detail">$nativeMethods</a></td>
+        <td><a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>[]</td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr id="$nativeProperties">
+        <td><a href="yii-apidoc-models-typedoc.html#$nativeProperties-detail">$nativeProperties</a></td>
+        <td><a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a>[]</td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr class="inherited" id="$phpDocContext">
+        <td><a href="yii-apidoc-models-basedoc.html#$phpDocContext-detail">$phpDocContext</a></td>
+        <td>\phpDocumentor\Reflection\DocBlock\Context</td>
+        <td></td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr id="$properties">
+        <td><a href="yii-apidoc-models-typedoc.html#$properties-detail">$properties</a></td>
+        <td><a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a>[]</td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr id="$protectedMethods">
+        <td><a href="yii-apidoc-models-typedoc.html#$protectedMethods-detail">$protectedMethods</a></td>
+        <td><a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>[]</td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr id="$protectedProperties">
+        <td><a href="yii-apidoc-models-typedoc.html#$protectedProperties-detail">$protectedProperties</a></td>
+        <td><a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a>[]</td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr id="$publicMethods">
+        <td><a href="yii-apidoc-models-typedoc.html#$publicMethods-detail">$publicMethods</a></td>
+        <td><a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>[]</td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr id="$publicProperties">
+        <td><a href="yii-apidoc-models-typedoc.html#$publicProperties-detail">$publicProperties</a></td>
+        <td><a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a>[]</td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr class="inherited" id="$shortDescription">
+        <td><a href="yii-apidoc-models-basedoc.html#$shortDescription-detail">$shortDescription</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr class="inherited" id="$since">
+        <td><a href="yii-apidoc-models-basedoc.html#$since-detail">$since</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr class="inherited" id="$sourceFile">
+        <td><a href="yii-apidoc-models-basedoc.html#$sourceFile-detail">$sourceFile</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr class="inherited" id="$startLine">
+        <td><a href="yii-apidoc-models-basedoc.html#$startLine-detail">$startLine</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr class="inherited" id="$tags">
+        <td><a href="yii-apidoc-models-basedoc.html#$tags-detail">$tags</a></td>
+        <td>\phpDocumentor\Reflection\DocBlock\Tag[]</td>
+        <td></td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-baseobject.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr id="__construct()">
+        <td><a href="yii-apidoc-models-typedoc.html#__construct()-detail">__construct()</a></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-baseobject.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-baseobject.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-baseobject.html#__set()-detail">__set()</a></td>
+        <td>Sets value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-baseobject.html#__unset()-detail">__unset()</a></td>
+        <td>Sets an object property to null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-baseobject.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-baseobject.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="extractFirstSentence()">
+        <td><a href="yii-apidoc-models-basedoc.html#extractFirstSentence()-detail">extractFirstSentence()</a></td>
+        <td>Extracts first sentence out of text</td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr id="findSubject()">
+        <td><a href="yii-apidoc-models-typedoc.html#findSubject()-detail">findSubject()</a></td>
+        <td>Finds subject (method or property) by name</td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr class="inherited" id="getFirstTag()">
+        <td><a href="yii-apidoc-models-basedoc.html#getFirstTag()-detail">getFirstTag()</a></td>
+        <td>Get the first tag of a given name</td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr id="getNativeMethods()">
+        <td><a href="yii-apidoc-models-typedoc.html#getNativeMethods()-detail">getNativeMethods()</a></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr id="getNativeProperties()">
+        <td><a href="yii-apidoc-models-typedoc.html#getNativeProperties()-detail">getNativeProperties()</a></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr id="getProtectedMethods()">
+        <td><a href="yii-apidoc-models-typedoc.html#getProtectedMethods()-detail">getProtectedMethods()</a></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr id="getProtectedProperties()">
+        <td><a href="yii-apidoc-models-typedoc.html#getProtectedProperties()-detail">getProtectedProperties()</a></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr id="getPublicMethods()">
+        <td><a href="yii-apidoc-models-typedoc.html#getPublicMethods()-detail">getPublicMethods()</a></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr id="getPublicProperties()">
+        <td><a href="yii-apidoc-models-typedoc.html#getPublicProperties()-detail">getPublicProperties()</a></td>
+        <td></td>
+        <td><a href="yii-apidoc-models-typedoc.html">yii\apidoc\models\TypeDoc</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-baseobject.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-baseobject.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="hasTag()">
+        <td><a href="yii-apidoc-models-basedoc.html#hasTag()-detail">hasTag()</a></td>
+        <td>Checks if doc has tag of a given name</td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-base-baseobject.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+                <tr class="inherited" id="removeTag()">
+        <td><a href="yii-apidoc-models-basedoc.html#removeTag()-detail">removeTag()</a></td>
+        <td>Removes tag of a given name</td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                                                                                <tr class="inherited" id="mbUcFirst()">
+        <td><a href="yii-apidoc-models-basedoc.html#mbUcFirst()-detail">mbUcFirst()</a></td>
+        <td>Multibyte version of ucfirst()</td>
+        <td><a href="yii-apidoc-models-basedoc.html">yii\apidoc\models\BaseDoc</a></td>
+    </tr>
+        </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$authors-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#$authors-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php#L28" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php#L28" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $authors        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-apidoc-models-typedoc.html#$authors-detail">$authors</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$methods-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#$methods-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php#L32" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php#L32" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $methods        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>[]</span> <a href="yii-apidoc-models-typedoc.html#$methods-detail">$methods</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$namespace-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#$namespace-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php#L37" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php#L37" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $namespace        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-apidoc-models-typedoc.html#$namespace-detail">$namespace</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$nativeMethods-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#$nativeMethods-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $nativeMethods        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>[]</span> <strong><a href="yii-apidoc-models-typedoc.html#getNativeMethods()-detail">getNativeMethods</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$nativeProperties-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#$nativeProperties-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $nativeProperties        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a>[]</span> <strong><a href="yii-apidoc-models-typedoc.html#getNativeProperties()-detail">getNativeProperties</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$properties-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#$properties-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php#L36" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php#L36" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $properties        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a>[]</span> <a href="yii-apidoc-models-typedoc.html#$properties-detail">$properties</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$protectedMethods-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#$protectedMethods-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $protectedMethods        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>[]</span> <strong><a href="yii-apidoc-models-typedoc.html#getProtectedMethods()-detail">getProtectedMethods</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$protectedProperties-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#$protectedProperties-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $protectedProperties        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a>[]</span> <strong><a href="yii-apidoc-models-typedoc.html#getProtectedProperties()-detail">getProtectedProperties</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$publicMethods-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#$publicMethods-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $publicMethods        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>[]</span> <strong><a href="yii-apidoc-models-typedoc.html#getPublicMethods()-detail">getPublicMethods</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$publicProperties-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#$publicProperties-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $publicProperties        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a>[]</span> <strong><a href="yii-apidoc-models-typedoc.html#getPublicProperties()-detail">getPublicProperties</a></strong> ( )</div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="__construct()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#__construct()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php#L180" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php#L180" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        __construct()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-apidoc-models-typedoc.html#__construct()-detail">__construct</a></strong> ( <span style="color: #0000BB">$reflector&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span>, <span style="color: #0000BB">$context&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span>, <span style="color: #0000BB">$config&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$reflector</span></td>
+                  <td class="param-type-col">\phpDocumentor\Reflection\InterfaceReflector</td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$context</span></td>
+                  <td class="param-type-col"><a href="yii-apidoc-models-context.html">yii\apidoc\models\Context</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$config</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="findSubject()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#findSubject()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php#L55" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php#L55" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        findSubject()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Finds subject (method or property) by name</strong></p>
+
+        <p>If there is a property with the same as a method, the method will be returned if the name is not stated
+explicitly by prefixing with <code>$</code>.</p>
+<p>Example for method <code>attributes()</code> and property <code>$attributes</code> which both may exist:</p>
+<ul>
+<li><code>$subjectName = '$attributes'</code> finds a property or nothing.</li>
+<li><code>$subjectName = 'attributes()'</code> finds a method or nothing.</li>
+<li><code>$subjectName = 'attributes'</code> finds the method if it exists, if not it will find the property.</li>
+</ul>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.null">null</a>|<a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>|<a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a></span> <strong><a href="yii-apidoc-models-typedoc.html#findSubject()-detail">findSubject</a></strong> ( <span style="color: #0000BB">$subjectName</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$subjectName</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getNativeMethods()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#getNativeMethods()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php#L85" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php#L85" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getNativeMethods()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>[]</span> <strong><a href="yii-apidoc-models-typedoc.html#getNativeMethods()-detail">getNativeMethods</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getNativeProperties()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#getNativeProperties()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php#L130" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php#L130" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getNativeProperties()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a>[]</span> <strong><a href="yii-apidoc-models-typedoc.html#getNativeProperties()-detail">getNativeProperties</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getProtectedMethods()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#getProtectedMethods()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php#L101" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php#L101" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getProtectedMethods()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>[]</span> <strong><a href="yii-apidoc-models-typedoc.html#getProtectedMethods()-detail">getProtectedMethods</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getProtectedProperties()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#getProtectedProperties()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php#L146" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php#L146" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getProtectedProperties()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a>[]</span> <strong><a href="yii-apidoc-models-typedoc.html#getProtectedProperties()-detail">getProtectedProperties</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getPublicMethods()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#getPublicMethods()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php#L93" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php#L93" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getPublicMethods()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-methoddoc.html">yii\apidoc\models\MethodDoc</a>[]</span> <strong><a href="yii-apidoc-models-typedoc.html#getPublicMethods()-detail">getPublicMethods</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getPublicProperties()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-models-typedoc.html#getPublicProperties()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/models/TypeDoc.php#L138" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/models/TypeDoc.php#L138" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getPublicProperties()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-apidoc-models-propertydoc.html">yii\apidoc\models\PropertyDoc</a>[]</span> <strong><a href="yii-apidoc-models-typedoc.html#getPublicProperties()-detail">getPublicProperties</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Tue, 14 Aug 2018 17:48:04 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

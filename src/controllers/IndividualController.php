@@ -1,31 +1,30 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\ipFilter\controllers;
+namespace johnsnook\visitor\controllers;
 
 use Yii;
-use johnsnook\ipFilter\models\Visitor;
-use johnsnook\ipFilter\models\VisitorLogSearch;
-use yii\web\Controller;
+use johnsnook\visitor\models\Visitor;
+use johnsnook\visitor\models\VisitorLogSearch;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
 
 /**
  * VisitorController implements the CRUD actions for the Visitor model.
  */
-class IndividualController extends Controller {
+class IndividualController extends \yii\web\Controller {
     //public $viewPath = __dir__ . '/../views/individual';
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
     public function behaviors() {
         return [

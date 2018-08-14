@@ -1,0 +1,2442 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>    <title>View, yii\web\View - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w9849" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w9849-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w9849-collapse" class="collapse navbar-collapse"><ul id="w9850" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w9851" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-9812" data-toggle="collapse" data-parent="#navigation">Not namespaced classes <b class="caret"></b></a><div id="navigation-9812" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii.html">Yii</a>
+<a class="list-group-item" href="./yiirequirementchecker.html">YiiRequirementChecker</a></div>
+<a class="list-group-item" href="#navigation-9813" data-toggle="collapse" data-parent="#navigation">yii <b class="caret"></b></a><div id="navigation-9813" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-baseyii.html">BaseYii</a></div>
+<a class="list-group-item" href="#navigation-9814" data-toggle="collapse" data-parent="#navigation">yii\base <b class="caret"></b></a><div id="navigation-9814" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-base-action.html">Action</a>
+<a class="list-group-item" href="./yii-base-actionevent.html">ActionEvent</a>
+<a class="list-group-item" href="./yii-base-actionfilter.html">ActionFilter</a>
+<a class="list-group-item" href="./yii-base-application.html">Application</a>
+<a class="list-group-item" href="./yii-base-arrayaccesstrait.html">ArrayAccessTrait</a>
+<a class="list-group-item" href="./yii-base-arrayable.html">Arrayable</a>
+<a class="list-group-item" href="./yii-base-arrayabletrait.html">ArrayableTrait</a>
+<a class="list-group-item" href="./yii-base-baseobject.html">BaseObject</a>
+<a class="list-group-item" href="./yii-base-behavior.html">Behavior</a>
+<a class="list-group-item" href="./yii-base-bootstrapinterface.html">BootstrapInterface</a>
+<a class="list-group-item" href="./yii-base-component.html">Component</a>
+<a class="list-group-item" href="./yii-base-configurable.html">Configurable</a>
+<a class="list-group-item" href="./yii-base-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-base-dynamiccontentawareinterface.html">DynamicContentAwareInterface</a>
+<a class="list-group-item" href="./yii-base-dynamiccontentawaretrait.html">DynamicContentAwareTrait</a>
+<a class="list-group-item" href="./yii-base-dynamicmodel.html">DynamicModel</a>
+<a class="list-group-item" href="./yii-base-errorexception.html">ErrorException</a>
+<a class="list-group-item" href="./yii-base-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-base-event.html">Event</a>
+<a class="list-group-item" href="./yii-base-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-base-exitexception.html">ExitException</a>
+<a class="list-group-item" href="./yii-base-inlineaction.html">InlineAction</a>
+<a class="list-group-item" href="./yii-base-invalidargumentexception.html">InvalidArgumentException</a>
+<a class="list-group-item" href="./yii-base-invalidcallexception.html">InvalidCallException</a>
+<a class="list-group-item" href="./yii-base-invalidconfigexception.html">InvalidConfigException</a>
+<a class="list-group-item" href="./yii-base-invalidparamexception.html">InvalidParamException</a>
+<a class="list-group-item" href="./yii-base-invalidrouteexception.html">InvalidRouteException</a>
+<a class="list-group-item" href="./yii-base-invalidvalueexception.html">InvalidValueException</a>
+<a class="list-group-item" href="./yii-base-model.html">Model</a>
+<a class="list-group-item" href="./yii-base-modelevent.html">ModelEvent</a>
+<a class="list-group-item" href="./yii-base-module.html">Module</a>
+<a class="list-group-item" href="./yii-base-notsupportedexception.html">NotSupportedException</a>
+<a class="list-group-item" href="./yii-base-object.html">Object</a>
+<a class="list-group-item" href="./yii-base-request.html">Request</a>
+<a class="list-group-item" href="./yii-base-response.html">Response</a>
+<a class="list-group-item" href="./yii-base-security.html">Security</a>
+<a class="list-group-item" href="./yii-base-staticinstanceinterface.html">StaticInstanceInterface</a>
+<a class="list-group-item" href="./yii-base-staticinstancetrait.html">StaticInstanceTrait</a>
+<a class="list-group-item" href="./yii-base-theme.html">Theme</a>
+<a class="list-group-item" href="./yii-base-unknownclassexception.html">UnknownClassException</a>
+<a class="list-group-item" href="./yii-base-unknownmethodexception.html">UnknownMethodException</a>
+<a class="list-group-item" href="./yii-base-unknownpropertyexception.html">UnknownPropertyException</a>
+<a class="list-group-item" href="./yii-base-userexception.html">UserException</a>
+<a class="list-group-item" href="./yii-base-view.html">View</a>
+<a class="list-group-item" href="./yii-base-viewcontextinterface.html">ViewContextInterface</a>
+<a class="list-group-item" href="./yii-base-viewevent.html">ViewEvent</a>
+<a class="list-group-item" href="./yii-base-viewnotfoundexception.html">ViewNotFoundException</a>
+<a class="list-group-item" href="./yii-base-viewrenderer.html">ViewRenderer</a>
+<a class="list-group-item" href="./yii-base-widget.html">Widget</a>
+<a class="list-group-item" href="./yii-base-widgetevent.html">WidgetEvent</a></div>
+<a class="list-group-item" href="#navigation-9815" data-toggle="collapse" data-parent="#navigation">yii\behaviors <b class="caret"></b></a><div id="navigation-9815" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-behaviors-attributebehavior.html">AttributeBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-attributetypecastbehavior.html">AttributeTypecastBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-attributesbehavior.html">AttributesBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-blameablebehavior.html">BlameableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-cacheablewidgetbehavior.html">CacheableWidgetBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-optimisticlockbehavior.html">OptimisticLockBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-sluggablebehavior.html">SluggableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-timestampbehavior.html">TimestampBehavior</a></div>
+<a class="list-group-item" href="#navigation-9816" data-toggle="collapse" data-parent="#navigation">yii\caching <b class="caret"></b></a><div id="navigation-9816" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-caching-apccache.html">ApcCache</a>
+<a class="list-group-item" href="./yii-caching-arraycache.html">ArrayCache</a>
+<a class="list-group-item" href="./yii-caching-cache.html">Cache</a>
+<a class="list-group-item" href="./yii-caching-cacheinterface.html">CacheInterface</a>
+<a class="list-group-item" href="./yii-caching-chaineddependency.html">ChainedDependency</a>
+<a class="list-group-item" href="./yii-caching-dbcache.html">DbCache</a>
+<a class="list-group-item" href="./yii-caching-dbdependency.html">DbDependency</a>
+<a class="list-group-item" href="./yii-caching-dbquerydependency.html">DbQueryDependency</a>
+<a class="list-group-item" href="./yii-caching-dependency.html">Dependency</a>
+<a class="list-group-item" href="./yii-caching-dummycache.html">DummyCache</a>
+<a class="list-group-item" href="./yii-caching-expressiondependency.html">ExpressionDependency</a>
+<a class="list-group-item" href="./yii-caching-filecache.html">FileCache</a>
+<a class="list-group-item" href="./yii-caching-filedependency.html">FileDependency</a>
+<a class="list-group-item" href="./yii-caching-memcache.html">MemCache</a>
+<a class="list-group-item" href="./yii-caching-memcacheserver.html">MemCacheServer</a>
+<a class="list-group-item" href="./yii-caching-tagdependency.html">TagDependency</a>
+<a class="list-group-item" href="./yii-caching-wincache.html">WinCache</a>
+<a class="list-group-item" href="./yii-caching-xcache.html">XCache</a>
+<a class="list-group-item" href="./yii-caching-zenddatacache.html">ZendDataCache</a></div>
+<a class="list-group-item" href="#navigation-9817" data-toggle="collapse" data-parent="#navigation">yii\captcha <b class="caret"></b></a><div id="navigation-9817" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-captcha-captcha.html">Captcha</a>
+<a class="list-group-item" href="./yii-captcha-captchaaction.html">CaptchaAction</a>
+<a class="list-group-item" href="./yii-captcha-captchaasset.html">CaptchaAsset</a>
+<a class="list-group-item" href="./yii-captcha-captchavalidator.html">CaptchaValidator</a></div>
+<a class="list-group-item" href="#navigation-9818" data-toggle="collapse" data-parent="#navigation">yii\console <b class="caret"></b></a><div id="navigation-9818" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-application.html">Application</a>
+<a class="list-group-item" href="./yii-console-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-console-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-console-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-console-exitcode.html">ExitCode</a>
+<a class="list-group-item" href="./yii-console-markdown.html">Markdown</a>
+<a class="list-group-item" href="./yii-console-request.html">Request</a>
+<a class="list-group-item" href="./yii-console-response.html">Response</a>
+<a class="list-group-item" href="./yii-console-unknowncommandexception.html">UnknownCommandException</a></div>
+<a class="list-group-item" href="#navigation-9819" data-toggle="collapse" data-parent="#navigation">yii\console\controllers <b class="caret"></b></a><div id="navigation-9819" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-controllers-assetcontroller.html">AssetController</a>
+<a class="list-group-item" href="./yii-console-controllers-basemigratecontroller.html">BaseMigrateController</a>
+<a class="list-group-item" href="./yii-console-controllers-cachecontroller.html">CacheController</a>
+<a class="list-group-item" href="./yii-console-controllers-fixturecontroller.html">FixtureController</a>
+<a class="list-group-item" href="./yii-console-controllers-helpcontroller.html">HelpController</a>
+<a class="list-group-item" href="./yii-console-controllers-messagecontroller.html">MessageController</a>
+<a class="list-group-item" href="./yii-console-controllers-migratecontroller.html">MigrateController</a>
+<a class="list-group-item" href="./yii-console-controllers-servecontroller.html">ServeController</a></div>
+<a class="list-group-item" href="#navigation-9820" data-toggle="collapse" data-parent="#navigation">yii\console\widgets <b class="caret"></b></a><div id="navigation-9820" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-widgets-table.html">Table</a></div>
+<a class="list-group-item" href="#navigation-9821" data-toggle="collapse" data-parent="#navigation">yii\data <b class="caret"></b></a><div id="navigation-9821" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-data-activedatafilter.html">ActiveDataFilter</a>
+<a class="list-group-item" href="./yii-data-activedataprovider.html">ActiveDataProvider</a>
+<a class="list-group-item" href="./yii-data-arraydataprovider.html">ArrayDataProvider</a>
+<a class="list-group-item" href="./yii-data-basedataprovider.html">BaseDataProvider</a>
+<a class="list-group-item" href="./yii-data-datafilter.html">DataFilter</a>
+<a class="list-group-item" href="./yii-data-dataproviderinterface.html">DataProviderInterface</a>
+<a class="list-group-item" href="./yii-data-pagination.html">Pagination</a>
+<a class="list-group-item" href="./yii-data-sort.html">Sort</a>
+<a class="list-group-item" href="./yii-data-sqldataprovider.html">SqlDataProvider</a></div>
+<a class="list-group-item" href="#navigation-9822" data-toggle="collapse" data-parent="#navigation">yii\db <b class="caret"></b></a><div id="navigation-9822" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-activequery.html">ActiveQuery</a>
+<a class="list-group-item" href="./yii-db-activequeryinterface.html">ActiveQueryInterface</a>
+<a class="list-group-item" href="./yii-db-activequerytrait.html">ActiveQueryTrait</a>
+<a class="list-group-item" href="./yii-db-activerecord.html">ActiveRecord</a>
+<a class="list-group-item" href="./yii-db-activerecordinterface.html">ActiveRecordInterface</a>
+<a class="list-group-item" href="./yii-db-activerelationtrait.html">ActiveRelationTrait</a>
+<a class="list-group-item" href="./yii-db-aftersaveevent.html">AfterSaveEvent</a>
+<a class="list-group-item" href="./yii-db-arrayexpression.html">ArrayExpression</a>
+<a class="list-group-item" href="./yii-db-baseactiverecord.html">BaseActiveRecord</a>
+<a class="list-group-item" href="./yii-db-batchqueryresult.html">BatchQueryResult</a>
+<a class="list-group-item" href="./yii-db-checkconstraint.html">CheckConstraint</a>
+<a class="list-group-item" href="./yii-db-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-command.html">Command</a>
+<a class="list-group-item" href="./yii-db-connection.html">Connection</a>
+<a class="list-group-item" href="./yii-db-constraint.html">Constraint</a>
+<a class="list-group-item" href="./yii-db-constraintfinderinterface.html">ConstraintFinderInterface</a>
+<a class="list-group-item" href="./yii-db-constraintfindertrait.html">ConstraintFinderTrait</a>
+<a class="list-group-item" href="./yii-db-datareader.html">DataReader</a>
+<a class="list-group-item" href="./yii-db-defaultvalueconstraint.html">DefaultValueConstraint</a>
+<a class="list-group-item" href="./yii-db-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-db-expression.html">Expression</a>
+<a class="list-group-item" href="./yii-db-expressionbuilder.html">ExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-expressionbuilderinterface.html">ExpressionBuilderInterface</a>
+<a class="list-group-item" href="./yii-db-expressionbuildertrait.html">ExpressionBuilderTrait</a>
+<a class="list-group-item" href="./yii-db-expressioninterface.html">ExpressionInterface</a>
+<a class="list-group-item" href="./yii-db-foreignkeyconstraint.html">ForeignKeyConstraint</a>
+<a class="list-group-item" href="./yii-db-indexconstraint.html">IndexConstraint</a>
+<a class="list-group-item" href="./yii-db-integrityexception.html">IntegrityException</a>
+<a class="list-group-item" href="./yii-db-jsonexpression.html">JsonExpression</a>
+<a class="list-group-item" href="./yii-db-migration.html">Migration</a>
+<a class="list-group-item" href="./yii-db-migrationinterface.html">MigrationInterface</a>
+<a class="list-group-item" href="./yii-db-pdovalue.html">PdoValue</a>
+<a class="list-group-item" href="./yii-db-pdovaluebuilder.html">PdoValueBuilder</a>
+<a class="list-group-item" href="./yii-db-query.html">Query</a>
+<a class="list-group-item" href="./yii-db-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-queryexpressionbuilder.html">QueryExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-queryinterface.html">QueryInterface</a>
+<a class="list-group-item" href="./yii-db-querytrait.html">QueryTrait</a>
+<a class="list-group-item" href="./yii-db-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-schemabuildertrait.html">SchemaBuilderTrait</a>
+<a class="list-group-item" href="./yii-db-sqltoken.html">SqlToken</a>
+<a class="list-group-item" href="./yii-db-sqltokenizer.html">SqlTokenizer</a>
+<a class="list-group-item" href="./yii-db-staleobjectexception.html">StaleObjectException</a>
+<a class="list-group-item" href="./yii-db-tableschema.html">TableSchema</a>
+<a class="list-group-item" href="./yii-db-transaction.html">Transaction</a>
+<a class="list-group-item" href="./yii-db-viewfindertrait.html">ViewFinderTrait</a></div>
+<a class="list-group-item" href="#navigation-9823" data-toggle="collapse" data-parent="#navigation">yii\db\conditions <b class="caret"></b></a><div id="navigation-9823" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-conditions-andcondition.html">AndCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencolumnscondition.html">BetweenColumnsCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencolumnsconditionbuilder.html">BetweenColumnsConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencondition.html">BetweenCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweenconditionbuilder.html">BetweenConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-conditioninterface.html">ConditionInterface</a>
+<a class="list-group-item" href="./yii-db-conditions-conjunctioncondition.html">ConjunctionCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-conjunctionconditionbuilder.html">ConjunctionConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-existscondition.html">ExistsCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-existsconditionbuilder.html">ExistsConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-hashcondition.html">HashCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-hashconditionbuilder.html">HashConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-incondition.html">InCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-likecondition.html">LikeCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-likeconditionbuilder.html">LikeConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-notcondition.html">NotCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-notconditionbuilder.html">NotConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-orcondition.html">OrCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-simplecondition.html">SimpleCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-simpleconditionbuilder.html">SimpleConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-9824" data-toggle="collapse" data-parent="#navigation">yii\db\cubrid <b class="caret"></b></a><div id="navigation-9824" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-cubrid-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-cubrid-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-cubrid-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-9825" data-toggle="collapse" data-parent="#navigation">yii\db\cubrid\conditions <b class="caret"></b></a><div id="navigation-9825" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-cubrid-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-9826" data-toggle="collapse" data-parent="#navigation">yii\db\mssql <b class="caret"></b></a><div id="navigation-9826" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mssql-pdo.html">PDO</a>
+<a class="list-group-item" href="./yii-db-mssql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-mssql-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-mssql-sqlsrvpdo.html">SqlsrvPDO</a>
+<a class="list-group-item" href="./yii-db-mssql-tableschema.html">TableSchema</a></div>
+<a class="list-group-item" href="#navigation-9827" data-toggle="collapse" data-parent="#navigation">yii\db\mssql\conditions <b class="caret"></b></a><div id="navigation-9827" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mssql-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-mssql-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-9828" data-toggle="collapse" data-parent="#navigation">yii\db\mysql <b class="caret"></b></a><div id="navigation-9828" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mysql-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-mysql-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-jsonexpressionbuilder.html">JsonExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-9829" data-toggle="collapse" data-parent="#navigation">yii\db\oci <b class="caret"></b></a><div id="navigation-9829" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-oci-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-9830" data-toggle="collapse" data-parent="#navigation">yii\db\oci\conditions <b class="caret"></b></a><div id="navigation-9830" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-oci-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-9831" data-toggle="collapse" data-parent="#navigation">yii\db\pgsql <b class="caret"></b></a><div id="navigation-9831" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-pgsql-arrayexpressionbuilder.html">ArrayExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-arrayparser.html">ArrayParser</a>
+<a class="list-group-item" href="./yii-db-pgsql-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-pgsql-jsonexpressionbuilder.html">JsonExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-9832" data-toggle="collapse" data-parent="#navigation">yii\db\sqlite <b class="caret"></b></a><div id="navigation-9832" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-sqlite-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-command.html">Command</a>
+<a class="list-group-item" href="./yii-db-sqlite-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-sqlite-sqltokenizer.html">SqlTokenizer</a></div>
+<a class="list-group-item" href="#navigation-9833" data-toggle="collapse" data-parent="#navigation">yii\db\sqlite\conditions <b class="caret"></b></a><div id="navigation-9833" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-sqlite-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-9834" data-toggle="collapse" data-parent="#navigation">yii\di <b class="caret"></b></a><div id="navigation-9834" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-di-container.html">Container</a>
+<a class="list-group-item" href="./yii-di-instance.html">Instance</a>
+<a class="list-group-item" href="./yii-di-notinstantiableexception.html">NotInstantiableException</a>
+<a class="list-group-item" href="./yii-di-servicelocator.html">ServiceLocator</a></div>
+<a class="list-group-item" href="#navigation-9835" data-toggle="collapse" data-parent="#navigation">yii\filters <b class="caret"></b></a><div id="navigation-9835" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-accesscontrol.html">AccessControl</a>
+<a class="list-group-item" href="./yii-filters-accessrule.html">AccessRule</a>
+<a class="list-group-item" href="./yii-filters-ajaxfilter.html">AjaxFilter</a>
+<a class="list-group-item" href="./yii-filters-contentnegotiator.html">ContentNegotiator</a>
+<a class="list-group-item" href="./yii-filters-cors.html">Cors</a>
+<a class="list-group-item" href="./yii-filters-hostcontrol.html">HostControl</a>
+<a class="list-group-item" href="./yii-filters-httpcache.html">HttpCache</a>
+<a class="list-group-item" href="./yii-filters-pagecache.html">PageCache</a>
+<a class="list-group-item" href="./yii-filters-ratelimitinterface.html">RateLimitInterface</a>
+<a class="list-group-item" href="./yii-filters-ratelimiter.html">RateLimiter</a>
+<a class="list-group-item" href="./yii-filters-verbfilter.html">VerbFilter</a></div>
+<a class="list-group-item" href="#navigation-9836" data-toggle="collapse" data-parent="#navigation">yii\filters\auth <b class="caret"></b></a><div id="navigation-9836" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-auth-authinterface.html">AuthInterface</a>
+<a class="list-group-item" href="./yii-filters-auth-authmethod.html">AuthMethod</a>
+<a class="list-group-item" href="./yii-filters-auth-compositeauth.html">CompositeAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpbasicauth.html">HttpBasicAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpbearerauth.html">HttpBearerAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpheaderauth.html">HttpHeaderAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-queryparamauth.html">QueryParamAuth</a></div>
+<a class="list-group-item" href="#navigation-9837" data-toggle="collapse" data-parent="#navigation">yii\grid <b class="caret"></b></a><div id="navigation-9837" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-grid-actioncolumn.html">ActionColumn</a>
+<a class="list-group-item" href="./yii-grid-checkboxcolumn.html">CheckboxColumn</a>
+<a class="list-group-item" href="./yii-grid-column.html">Column</a>
+<a class="list-group-item" href="./yii-grid-datacolumn.html">DataColumn</a>
+<a class="list-group-item" href="./yii-grid-gridview.html">GridView</a>
+<a class="list-group-item" href="./yii-grid-gridviewasset.html">GridViewAsset</a>
+<a class="list-group-item" href="./yii-grid-radiobuttoncolumn.html">RadioButtonColumn</a>
+<a class="list-group-item" href="./yii-grid-serialcolumn.html">SerialColumn</a></div>
+<a class="list-group-item" href="#navigation-9838" data-toggle="collapse" data-parent="#navigation">yii\helpers <b class="caret"></b></a><div id="navigation-9838" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-helpers-arrayhelper.html">ArrayHelper</a>
+<a class="list-group-item" href="./yii-helpers-basearrayhelper.html">BaseArrayHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseconsole.html">BaseConsole</a>
+<a class="list-group-item" href="./yii-helpers-basefilehelper.html">BaseFileHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseformatconverter.html">BaseFormatConverter</a>
+<a class="list-group-item" href="./yii-helpers-basehtml.html">BaseHtml</a>
+<a class="list-group-item" href="./yii-helpers-basehtmlpurifier.html">BaseHtmlPurifier</a>
+<a class="list-group-item" href="./yii-helpers-baseinflector.html">BaseInflector</a>
+<a class="list-group-item" href="./yii-helpers-baseiphelper.html">BaseIpHelper</a>
+<a class="list-group-item" href="./yii-helpers-basejson.html">BaseJson</a>
+<a class="list-group-item" href="./yii-helpers-basemarkdown.html">BaseMarkdown</a>
+<a class="list-group-item" href="./yii-helpers-basestringhelper.html">BaseStringHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseurl.html">BaseUrl</a>
+<a class="list-group-item" href="./yii-helpers-basevardumper.html">BaseVarDumper</a>
+<a class="list-group-item" href="./yii-helpers-console.html">Console</a>
+<a class="list-group-item" href="./yii-helpers-filehelper.html">FileHelper</a>
+<a class="list-group-item" href="./yii-helpers-formatconverter.html">FormatConverter</a>
+<a class="list-group-item" href="./yii-helpers-html.html">Html</a>
+<a class="list-group-item" href="./yii-helpers-htmlpurifier.html">HtmlPurifier</a>
+<a class="list-group-item" href="./yii-helpers-inflector.html">Inflector</a>
+<a class="list-group-item" href="./yii-helpers-iphelper.html">IpHelper</a>
+<a class="list-group-item" href="./yii-helpers-json.html">Json</a>
+<a class="list-group-item" href="./yii-helpers-markdown.html">Markdown</a>
+<a class="list-group-item" href="./yii-helpers-replacearrayvalue.html">ReplaceArrayValue</a>
+<a class="list-group-item" href="./yii-helpers-stringhelper.html">StringHelper</a>
+<a class="list-group-item" href="./yii-helpers-unsetarrayvalue.html">UnsetArrayValue</a>
+<a class="list-group-item" href="./yii-helpers-url.html">Url</a>
+<a class="list-group-item" href="./yii-helpers-vardumper.html">VarDumper</a></div>
+<a class="list-group-item" href="#navigation-9839" data-toggle="collapse" data-parent="#navigation">yii\i18n <b class="caret"></b></a><div id="navigation-9839" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-i18n-dbmessagesource.html">DbMessageSource</a>
+<a class="list-group-item" href="./yii-i18n-formatter.html">Formatter</a>
+<a class="list-group-item" href="./yii-i18n-gettextfile.html">GettextFile</a>
+<a class="list-group-item" href="./yii-i18n-gettextmessagesource.html">GettextMessageSource</a>
+<a class="list-group-item" href="./yii-i18n-gettextmofile.html">GettextMoFile</a>
+<a class="list-group-item" href="./yii-i18n-gettextpofile.html">GettextPoFile</a>
+<a class="list-group-item" href="./yii-i18n-i18n.html">I18N</a>
+<a class="list-group-item" href="./yii-i18n-locale.html">Locale</a>
+<a class="list-group-item" href="./yii-i18n-messageformatter.html">MessageFormatter</a>
+<a class="list-group-item" href="./yii-i18n-messagesource.html">MessageSource</a>
+<a class="list-group-item" href="./yii-i18n-missingtranslationevent.html">MissingTranslationEvent</a>
+<a class="list-group-item" href="./yii-i18n-phpmessagesource.html">PhpMessageSource</a></div>
+<a class="list-group-item" href="#navigation-9840" data-toggle="collapse" data-parent="#navigation">yii\log <b class="caret"></b></a><div id="navigation-9840" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-log-dbtarget.html">DbTarget</a>
+<a class="list-group-item" href="./yii-log-dispatcher.html">Dispatcher</a>
+<a class="list-group-item" href="./yii-log-emailtarget.html">EmailTarget</a>
+<a class="list-group-item" href="./yii-log-filetarget.html">FileTarget</a>
+<a class="list-group-item" href="./yii-log-logruntimeexception.html">LogRuntimeException</a>
+<a class="list-group-item" href="./yii-log-logger.html">Logger</a>
+<a class="list-group-item" href="./yii-log-syslogtarget.html">SyslogTarget</a>
+<a class="list-group-item" href="./yii-log-target.html">Target</a></div>
+<a class="list-group-item" href="#navigation-9841" data-toggle="collapse" data-parent="#navigation">yii\mail <b class="caret"></b></a><div id="navigation-9841" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mail-basemailer.html">BaseMailer</a>
+<a class="list-group-item" href="./yii-mail-basemessage.html">BaseMessage</a>
+<a class="list-group-item" href="./yii-mail-mailevent.html">MailEvent</a>
+<a class="list-group-item" href="./yii-mail-mailerinterface.html">MailerInterface</a>
+<a class="list-group-item" href="./yii-mail-messageinterface.html">MessageInterface</a></div>
+<a class="list-group-item" href="#navigation-9842" data-toggle="collapse" data-parent="#navigation">yii\mutex <b class="caret"></b></a><div id="navigation-9842" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mutex-dbmutex.html">DbMutex</a>
+<a class="list-group-item" href="./yii-mutex-filemutex.html">FileMutex</a>
+<a class="list-group-item" href="./yii-mutex-mutex.html">Mutex</a>
+<a class="list-group-item" href="./yii-mutex-mysqlmutex.html">MysqlMutex</a>
+<a class="list-group-item" href="./yii-mutex-oraclemutex.html">OracleMutex</a>
+<a class="list-group-item" href="./yii-mutex-pgsqlmutex.html">PgsqlMutex</a></div>
+<a class="list-group-item" href="#navigation-9843" data-toggle="collapse" data-parent="#navigation">yii\rbac <b class="caret"></b></a><div id="navigation-9843" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rbac-assignment.html">Assignment</a>
+<a class="list-group-item" href="./yii-rbac-basemanager.html">BaseManager</a>
+<a class="list-group-item" href="./yii-rbac-checkaccessinterface.html">CheckAccessInterface</a>
+<a class="list-group-item" href="./yii-rbac-dbmanager.html">DbManager</a>
+<a class="list-group-item" href="./yii-rbac-item.html">Item</a>
+<a class="list-group-item" href="./yii-rbac-managerinterface.html">ManagerInterface</a>
+<a class="list-group-item" href="./yii-rbac-permission.html">Permission</a>
+<a class="list-group-item" href="./yii-rbac-phpmanager.html">PhpManager</a>
+<a class="list-group-item" href="./yii-rbac-role.html">Role</a>
+<a class="list-group-item" href="./yii-rbac-rule.html">Rule</a></div>
+<a class="list-group-item" href="#navigation-9844" data-toggle="collapse" data-parent="#navigation">yii\rest <b class="caret"></b></a><div id="navigation-9844" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rest-action.html">Action</a>
+<a class="list-group-item" href="./yii-rest-activecontroller.html">ActiveController</a>
+<a class="list-group-item" href="./yii-rest-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-rest-createaction.html">CreateAction</a>
+<a class="list-group-item" href="./yii-rest-deleteaction.html">DeleteAction</a>
+<a class="list-group-item" href="./yii-rest-indexaction.html">IndexAction</a>
+<a class="list-group-item" href="./yii-rest-optionsaction.html">OptionsAction</a>
+<a class="list-group-item" href="./yii-rest-serializer.html">Serializer</a>
+<a class="list-group-item" href="./yii-rest-updateaction.html">UpdateAction</a>
+<a class="list-group-item" href="./yii-rest-urlrule.html">UrlRule</a>
+<a class="list-group-item" href="./yii-rest-viewaction.html">ViewAction</a></div>
+<a class="list-group-item" href="#navigation-9845" data-toggle="collapse" data-parent="#navigation">yii\test <b class="caret"></b></a><div id="navigation-9845" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-test-activefixture.html">ActiveFixture</a>
+<a class="list-group-item" href="./yii-test-arrayfixture.html">ArrayFixture</a>
+<a class="list-group-item" href="./yii-test-baseactivefixture.html">BaseActiveFixture</a>
+<a class="list-group-item" href="./yii-test-dbfixture.html">DbFixture</a>
+<a class="list-group-item" href="./yii-test-filefixturetrait.html">FileFixtureTrait</a>
+<a class="list-group-item" href="./yii-test-fixture.html">Fixture</a>
+<a class="list-group-item" href="./yii-test-fixturetrait.html">FixtureTrait</a>
+<a class="list-group-item" href="./yii-test-initdbfixture.html">InitDbFixture</a></div>
+<a class="list-group-item" href="#navigation-9846" data-toggle="collapse" data-parent="#navigation">yii\validators <b class="caret"></b></a><div id="navigation-9846" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-validators-booleanvalidator.html">BooleanValidator</a>
+<a class="list-group-item" href="./yii-validators-comparevalidator.html">CompareValidator</a>
+<a class="list-group-item" href="./yii-validators-datevalidator.html">DateValidator</a>
+<a class="list-group-item" href="./yii-validators-defaultvaluevalidator.html">DefaultValueValidator</a>
+<a class="list-group-item" href="./yii-validators-eachvalidator.html">EachValidator</a>
+<a class="list-group-item" href="./yii-validators-emailvalidator.html">EmailValidator</a>
+<a class="list-group-item" href="./yii-validators-existvalidator.html">ExistValidator</a>
+<a class="list-group-item" href="./yii-validators-filevalidator.html">FileValidator</a>
+<a class="list-group-item" href="./yii-validators-filtervalidator.html">FilterValidator</a>
+<a class="list-group-item" href="./yii-validators-imagevalidator.html">ImageValidator</a>
+<a class="list-group-item" href="./yii-validators-inlinevalidator.html">InlineValidator</a>
+<a class="list-group-item" href="./yii-validators-ipvalidator.html">IpValidator</a>
+<a class="list-group-item" href="./yii-validators-numbervalidator.html">NumberValidator</a>
+<a class="list-group-item" href="./yii-validators-punycodeasset.html">PunycodeAsset</a>
+<a class="list-group-item" href="./yii-validators-rangevalidator.html">RangeValidator</a>
+<a class="list-group-item" href="./yii-validators-regularexpressionvalidator.html">RegularExpressionValidator</a>
+<a class="list-group-item" href="./yii-validators-requiredvalidator.html">RequiredValidator</a>
+<a class="list-group-item" href="./yii-validators-safevalidator.html">SafeValidator</a>
+<a class="list-group-item" href="./yii-validators-stringvalidator.html">StringValidator</a>
+<a class="list-group-item" href="./yii-validators-uniquevalidator.html">UniqueValidator</a>
+<a class="list-group-item" href="./yii-validators-urlvalidator.html">UrlValidator</a>
+<a class="list-group-item" href="./yii-validators-validationasset.html">ValidationAsset</a>
+<a class="list-group-item" href="./yii-validators-validator.html">Validator</a></div>
+<a class="list-group-item active" href="#navigation-9847" data-toggle="collapse" data-parent="#navigation">yii\web <b class="caret"></b></a><div id="navigation-9847" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-web-application.html">Application</a>
+<a class="list-group-item" href="./yii-web-assetbundle.html">AssetBundle</a>
+<a class="list-group-item" href="./yii-web-assetconverter.html">AssetConverter</a>
+<a class="list-group-item" href="./yii-web-assetconverterinterface.html">AssetConverterInterface</a>
+<a class="list-group-item" href="./yii-web-assetmanager.html">AssetManager</a>
+<a class="list-group-item" href="./yii-web-badrequesthttpexception.html">BadRequestHttpException</a>
+<a class="list-group-item" href="./yii-web-cachesession.html">CacheSession</a>
+<a class="list-group-item" href="./yii-web-compositeurlrule.html">CompositeUrlRule</a>
+<a class="list-group-item" href="./yii-web-conflicthttpexception.html">ConflictHttpException</a>
+<a class="list-group-item" href="./yii-web-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-web-cookie.html">Cookie</a>
+<a class="list-group-item" href="./yii-web-cookiecollection.html">CookieCollection</a>
+<a class="list-group-item" href="./yii-web-dbsession.html">DbSession</a>
+<a class="list-group-item" href="./yii-web-erroraction.html">ErrorAction</a>
+<a class="list-group-item" href="./yii-web-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-web-forbiddenhttpexception.html">ForbiddenHttpException</a>
+<a class="list-group-item" href="./yii-web-gonehttpexception.html">GoneHttpException</a>
+<a class="list-group-item" href="./yii-web-groupurlrule.html">GroupUrlRule</a>
+<a class="list-group-item" href="./yii-web-headercollection.html">HeaderCollection</a>
+<a class="list-group-item" href="./yii-web-headersalreadysentexception.html">HeadersAlreadySentException</a>
+<a class="list-group-item" href="./yii-web-htmlresponseformatter.html">HtmlResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-httpexception.html">HttpException</a>
+<a class="list-group-item" href="./yii-web-identityinterface.html">IdentityInterface</a>
+<a class="list-group-item" href="./yii-web-jqueryasset.html">JqueryAsset</a>
+<a class="list-group-item" href="./yii-web-jsexpression.html">JsExpression</a>
+<a class="list-group-item" href="./yii-web-jsonparser.html">JsonParser</a>
+<a class="list-group-item" href="./yii-web-jsonresponseformatter.html">JsonResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-link.html">Link</a>
+<a class="list-group-item" href="./yii-web-linkable.html">Linkable</a>
+<a class="list-group-item" href="./yii-web-methodnotallowedhttpexception.html">MethodNotAllowedHttpException</a>
+<a class="list-group-item" href="./yii-web-multifieldsession.html">MultiFieldSession</a>
+<a class="list-group-item" href="./yii-web-multipartformdataparser.html">MultipartFormDataParser</a>
+<a class="list-group-item" href="./yii-web-notacceptablehttpexception.html">NotAcceptableHttpException</a>
+<a class="list-group-item" href="./yii-web-notfoundhttpexception.html">NotFoundHttpException</a>
+<a class="list-group-item" href="./yii-web-rangenotsatisfiablehttpexception.html">RangeNotSatisfiableHttpException</a>
+<a class="list-group-item" href="./yii-web-request.html">Request</a>
+<a class="list-group-item" href="./yii-web-requestparserinterface.html">RequestParserInterface</a>
+<a class="list-group-item" href="./yii-web-response.html">Response</a>
+<a class="list-group-item" href="./yii-web-responseformatterinterface.html">ResponseFormatterInterface</a>
+<a class="list-group-item" href="./yii-web-servererrorhttpexception.html">ServerErrorHttpException</a>
+<a class="list-group-item" href="./yii-web-session.html">Session</a>
+<a class="list-group-item" href="./yii-web-sessioniterator.html">SessionIterator</a>
+<a class="list-group-item" href="./yii-web-toomanyrequestshttpexception.html">TooManyRequestsHttpException</a>
+<a class="list-group-item" href="./yii-web-unauthorizedhttpexception.html">UnauthorizedHttpException</a>
+<a class="list-group-item" href="./yii-web-unprocessableentityhttpexception.html">UnprocessableEntityHttpException</a>
+<a class="list-group-item" href="./yii-web-unsupportedmediatypehttpexception.html">UnsupportedMediaTypeHttpException</a>
+<a class="list-group-item" href="./yii-web-uploadedfile.html">UploadedFile</a>
+<a class="list-group-item" href="./yii-web-urlmanager.html">UrlManager</a>
+<a class="list-group-item" href="./yii-web-urlnormalizer.html">UrlNormalizer</a>
+<a class="list-group-item" href="./yii-web-urlnormalizerredirectexception.html">UrlNormalizerRedirectException</a>
+<a class="list-group-item" href="./yii-web-urlrule.html">UrlRule</a>
+<a class="list-group-item" href="./yii-web-urlruleinterface.html">UrlRuleInterface</a>
+<a class="list-group-item" href="./yii-web-user.html">User</a>
+<a class="list-group-item" href="./yii-web-userevent.html">UserEvent</a>
+<a class="list-group-item active" href="./yii-web-view.html">View</a>
+<a class="list-group-item" href="./yii-web-viewaction.html">ViewAction</a>
+<a class="list-group-item" href="./yii-web-xmlresponseformatter.html">XmlResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-yiiasset.html">YiiAsset</a></div>
+<a class="list-group-item" href="#navigation-9848" data-toggle="collapse" data-parent="#navigation">yii\widgets <b class="caret"></b></a><div id="navigation-9848" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-widgets-activefield.html">ActiveField</a>
+<a class="list-group-item" href="./yii-widgets-activeform.html">ActiveForm</a>
+<a class="list-group-item" href="./yii-widgets-activeformasset.html">ActiveFormAsset</a>
+<a class="list-group-item" href="./yii-widgets-baselistview.html">BaseListView</a>
+<a class="list-group-item" href="./yii-widgets-block.html">Block</a>
+<a class="list-group-item" href="./yii-widgets-breadcrumbs.html">Breadcrumbs</a>
+<a class="list-group-item" href="./yii-widgets-contentdecorator.html">ContentDecorator</a>
+<a class="list-group-item" href="./yii-widgets-detailview.html">DetailView</a>
+<a class="list-group-item" href="./yii-widgets-fragmentcache.html">FragmentCache</a>
+<a class="list-group-item" href="./yii-widgets-inputwidget.html">InputWidget</a>
+<a class="list-group-item" href="./yii-widgets-linkpager.html">LinkPager</a>
+<a class="list-group-item" href="./yii-widgets-linksorter.html">LinkSorter</a>
+<a class="list-group-item" href="./yii-widgets-listview.html">ListView</a>
+<a class="list-group-item" href="./yii-widgets-maskedinput.html">MaskedInput</a>
+<a class="list-group-item" href="./yii-widgets-maskedinputasset.html">MaskedInputAsset</a>
+<a class="list-group-item" href="./yii-widgets-menu.html">Menu</a>
+<a class="list-group-item" href="./yii-widgets-pjax.html">Pjax</a>
+<a class="list-group-item" href="./yii-widgets-pjaxasset.html">PjaxAsset</a>
+<a class="list-group-item" href="./yii-widgets-spaceless.html">Spaceless</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\web\View</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+                | <a href="#events">Events</a>
+                | <a href="#constants">Constants</a>
+    </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-web-view.html">yii\web\View</a> &raquo;
+<a href="yii-base-view.html">yii\base\View</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a>, <a href="yii-base-dynamiccontentawareinterface.html">yii\base\DynamicContentAwareInterface</a></td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php">https://github.com/yiisoft/yii2/blob/master/framework/web/View.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>View represents a view object in the MVC pattern.</strong></p>
+    <p>View provides a set of methods (e.g. <a href="yii-base-view.html#render()-detail">render()</a>) for rendering purpose.</p>
+<p>View is configured as an application component in <a href="yii-base-application.html">yii\base\Application</a> by default.
+You can access that instance via <code>Yii::$app-&gt;view</code>.</p>
+<p>You can modify its configuration by adding an array to your application config under <code>components</code>
+as it is shown in the following example:</p>
+<pre><code class="hljs php language-php"><span class="hljs-string">'view'</span> =&gt; [
+    <span class="hljs-string">'theme'</span> =&gt; <span class="hljs-string">'app\themes\MyTheme'</span>,
+    <span class="hljs-string">'renderers'</span> =&gt; [
+        <span class="hljs-comment">// you may add Smarty or Twig renderer here</span>
+    ]
+    <span class="hljs-comment">// ...</span>
+]
+</code></pre>
+<p>For more details and usage information on View, see the <a href="/guide-structure-views.html">guide article on views</a>.</p>
+
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$assetBundles">
+        <td><a href="yii-web-view.html#$assetBundles-detail">$assetBundles</a></td>
+        <td><a href="yii-web-assetbundle.html">yii\web\AssetBundle</a>[]</td>
+        <td>List of the registered asset bundles.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="$assetManager">
+        <td><a href="yii-web-view.html#$assetManager-detail">$assetManager</a></td>
+        <td><a href="yii-web-assetmanager.html">yii\web\AssetManager</a></td>
+        <td>The asset manager.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr class="inherited" id="$behaviors">
+        <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
+        <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
+        <td>List of behaviors attached to this component</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="$blocks">
+        <td><a href="yii-base-view.html#$blocks-detail">$blocks</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>A list of named output blocks.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="$cacheStack">
+        <td><a href="yii-base-view.html#$cacheStack-detail">$cacheStack</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a>|<a href="yii-base-dynamiccontentawareinterface.html">yii\base\DynamicContentAwareInterface</a>[]</td>
+        <td>A list of currently active dynamic content class instances.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="$context">
+        <td><a href="yii-base-view.html#$context-detail">$context</a></td>
+        <td><a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td>
+        <td>The context under which the <a href="yii-base-view.html#renderFile()-detail">renderFile()</a> method is being invoked.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr id="$css">
+        <td><a href="yii-web-view.html#$css-detail">$css</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The registered CSS code blocks.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="$cssFiles">
+        <td><a href="yii-web-view.html#$cssFiles-detail">$cssFiles</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The registered CSS files.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr class="inherited" id="$defaultExtension">
+        <td><a href="yii-base-view.html#$defaultExtension-detail">$defaultExtension</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The default view file extension.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="$dynamicContents">
+        <td><a href="yii-base-view.html#$dynamicContents-detail">$dynamicContents</a></td>
+        <td><a href="yii-base-dynamiccontentawareinterface.html">yii\base\DynamicContentAwareInterface</a>[]</td>
+        <td>Class instances supporting dynamic contents.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="$dynamicPlaceholders">
+        <td><a href="yii-base-view.html#$dynamicPlaceholders-detail">$dynamicPlaceholders</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>A list of placeholders for embedding dynamic contents.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr id="$js">
+        <td><a href="yii-web-view.html#$js-detail">$js</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The registered JS code blocks</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="$jsFiles">
+        <td><a href="yii-web-view.html#$jsFiles-detail">$jsFiles</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The registered JS files.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="$linkTags">
+        <td><a href="yii-web-view.html#$linkTags-detail">$linkTags</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The registered link tags.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="$metaTags">
+        <td><a href="yii-web-view.html#$metaTags-detail">$metaTags</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The registered meta tags.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr class="inherited" id="$params">
+        <td><a href="yii-base-view.html#$params-detail">$params</a></td>
+        <td>mixed</td>
+        <td>Custom parameters that are shared among view templates.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="$renderers">
+        <td><a href="yii-base-view.html#$renderers-detail">$renderers</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>A list of available renderers indexed by their corresponding supported file extensions.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="$theme">
+        <td><a href="yii-base-view.html#$theme-detail">$theme</a></td>
+        <td><a href="yii-base-theme.html">yii\base\Theme</a>|<a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The theme object or the configuration for creating the theme object.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr id="$title">
+        <td><a href="yii-web-view.html#$title-detail">$title</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The page title</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr class="inherited" id="$viewFile">
+        <td><a href="yii-base-view.html#$viewFile-detail">$viewFile</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>The view file currently being rendered.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-baseobject.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-baseobject.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-baseobject.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-baseobject.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-baseobject.html#__set()-detail">__set()</a></td>
+        <td>Sets value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-baseobject.html#__unset()-detail">__unset()</a></td>
+        <td>Sets an object property to null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="addDynamicPlaceholder()">
+        <td><a href="yii-base-view.html#addDynamicPlaceholder()-detail">addDynamicPlaceholder()</a></td>
+        <td>Adds a placeholder for dynamic content.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="afterRender()">
+        <td><a href="yii-base-view.html#afterRender()-detail">afterRender()</a></td>
+        <td>This method is invoked right after <a href="yii-base-view.html#renderFile()-detail">renderFile()</a> renders a view file.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="beforeRender()">
+        <td><a href="yii-base-view.html#beforeRender()-detail">beforeRender()</a></td>
+        <td>This method is invoked right before <a href="yii-base-view.html#renderFile()-detail">renderFile()</a> renders a view file.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="beginBlock()">
+        <td><a href="yii-base-view.html#beginBlock()-detail">beginBlock()</a></td>
+        <td>Begins recording a block.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr id="beginBody()">
+        <td><a href="yii-web-view.html#beginBody()-detail">beginBody()</a></td>
+        <td>Marks the beginning of an HTML body section.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr class="inherited" id="beginCache()">
+        <td><a href="yii-base-view.html#beginCache()-detail">beginCache()</a></td>
+        <td>Begins fragment caching.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="beginContent()">
+        <td><a href="yii-base-view.html#beginContent()-detail">beginContent()</a></td>
+        <td>Begins the rendering of content that is to be decorated by the specified view.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="beginPage()">
+        <td><a href="yii-base-view.html#beginPage()-detail">beginPage()</a></td>
+        <td>Marks the beginning of a page.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="behaviors()">
+        <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-baseobject.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-baseobject.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr id="clear()">
+        <td><a href="yii-web-view.html#clear()-detail">clear()</a></td>
+        <td>Clears up the registered meta tags, link tags, css/js scripts and files.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="endBlock()">
+        <td><a href="yii-base-view.html#endBlock()-detail">endBlock()</a></td>
+        <td>Ends recording a block.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr id="endBody()">
+        <td><a href="yii-web-view.html#endBody()-detail">endBody()</a></td>
+        <td>Marks the ending of an HTML body section.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr class="inherited" id="endCache()">
+        <td><a href="yii-base-view.html#endCache()-detail">endCache()</a></td>
+        <td>Ends fragment caching.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="endContent()">
+        <td><a href="yii-base-view.html#endContent()-detail">endContent()</a></td>
+        <td>Ends the rendering of content.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr id="endPage()">
+        <td><a href="yii-web-view.html#endPage()-detail">endPage()</a></td>
+        <td>Marks the ending of an HTML page.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="evaluateDynamicContent()">
+        <td><a href="yii-base-view.html#evaluateDynamicContent()-detail">evaluateDynamicContent()</a></td>
+        <td>Evaluates the given PHP statements.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+                <tr id="getAssetManager()">
+        <td><a href="yii-web-view.html#getAssetManager()-detail">getAssetManager()</a></td>
+        <td>Registers the asset manager being used by this view object.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getDynamicContents()">
+        <td><a href="yii-base-view.html#getDynamicContents()-detail">getDynamicContents()</a></td>
+        <td>Returns a list of currently active dynamic content class instances.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="getDynamicPlaceholders()">
+        <td><a href="yii-base-view.html#getDynamicPlaceholders()-detail">getDynamicPlaceholders()</a></td>
+        <td>Returns a list of placeholders for dynamic content. This method
+is used internally to implement the content caching feature.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+                <tr class="inherited" id="getViewFile()">
+        <td><a href="yii-base-view.html#getViewFile()-detail">getViewFile()</a></td>
+        <td></td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-baseobject.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-baseobject.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr id="head()">
+        <td><a href="yii-web-view.html#head()-detail">head()</a></td>
+        <td>Marks the position of an HTML head section.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-base-view.html#init()-detail">init()</a></td>
+        <td>Initializes the view component.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="popDynamicContent()">
+        <td><a href="yii-base-view.html#popDynamicContent()-detail">popDynamicContent()</a></td>
+        <td>Removes a last class instance supporting dynamic contents from a list of currently active
+dynamic content class instances.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="pushDynamicContent()">
+        <td><a href="yii-base-view.html#pushDynamicContent()-detail">pushDynamicContent()</a></td>
+        <td>Adds a class instance supporting dynamic contents to the end of a list of currently active
+dynamic content class instances.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr id="registerAssetBundle()">
+        <td><a href="yii-web-view.html#registerAssetBundle()-detail">registerAssetBundle()</a></td>
+        <td>Registers the named asset bundle.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+                <tr id="registerCsrfMetaTags()">
+        <td><a href="yii-web-view.html#registerCsrfMetaTags()-detail">registerCsrfMetaTags()</a></td>
+        <td>Registers CSRF meta tags.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="registerCss()">
+        <td><a href="yii-web-view.html#registerCss()-detail">registerCss()</a></td>
+        <td>Registers a CSS code block.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="registerCssFile()">
+        <td><a href="yii-web-view.html#registerCssFile()-detail">registerCssFile()</a></td>
+        <td>Registers a CSS file.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="registerJs()">
+        <td><a href="yii-web-view.html#registerJs()-detail">registerJs()</a></td>
+        <td>Registers a JS code block.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="registerJsFile()">
+        <td><a href="yii-web-view.html#registerJsFile()-detail">registerJsFile()</a></td>
+        <td>Registers a JS file.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="registerJsVar()">
+        <td><a href="yii-web-view.html#registerJsVar()-detail">registerJsVar()</a></td>
+        <td>Registers a JS code block defining a variable. The name of variable will be
+used as key, preventing duplicated variable names.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="registerLinkTag()">
+        <td><a href="yii-web-view.html#registerLinkTag()-detail">registerLinkTag()</a></td>
+        <td>Registers a link tag.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="registerMetaTag()">
+        <td><a href="yii-web-view.html#registerMetaTag()-detail">registerMetaTag()</a></td>
+        <td>Registers a meta tag.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr class="inherited" id="render()">
+        <td><a href="yii-base-view.html#render()-detail">render()</a></td>
+        <td>Renders a view.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr id="renderAjax()">
+        <td><a href="yii-web-view.html#renderAjax()-detail">renderAjax()</a></td>
+        <td>Renders a view in response to an AJAX request.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+                    <tr class="inherited" id="renderDynamic()">
+        <td><a href="yii-base-view.html#renderDynamic()-detail">renderDynamic()</a></td>
+        <td>Renders dynamic content returned by the given PHP statements.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="renderFile()">
+        <td><a href="yii-base-view.html#renderFile()-detail">renderFile()</a></td>
+        <td>Renders a view file.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+                <tr class="inherited" id="renderPhpFile()">
+        <td><a href="yii-base-view.html#renderPhpFile()-detail">renderPhpFile()</a></td>
+        <td>Renders a view file as a PHP script.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr id="setAssetManager()">
+        <td><a href="yii-web-view.html#setAssetManager()-detail">setAssetManager()</a></td>
+        <td>Sets the asset manager.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr class="inherited" id="setDynamicPlaceholders()">
+        <td><a href="yii-base-view.html#setDynamicPlaceholders()-detail">setDynamicPlaceholders()</a></td>
+        <td>Sets a list of placeholders for dynamic content. This method
+is used internally to implement the content caching feature.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+            <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                                                                                                                    <tr class="inherited" id="findViewFile()">
+        <td><a href="yii-base-view.html#findViewFile()-detail">findViewFile()</a></td>
+        <td>Finds the view file based on the given view name.</td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+                                <tr class="inherited" id="getRequestedViewFile()">
+        <td><a href="yii-base-view.html#getRequestedViewFile()-detail">getRequestedViewFile()</a></td>
+        <td></td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+                                                        <tr id="registerAssetFiles()">
+        <td><a href="yii-web-view.html#registerAssetFiles()-detail">registerAssetFiles()</a></td>
+        <td>Registers all files provided by an asset bundle including depending bundles files.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+                                                    <tr id="renderBodyBeginHtml()">
+        <td><a href="yii-web-view.html#renderBodyBeginHtml()-detail">renderBodyBeginHtml()</a></td>
+        <td>Renders the content to be inserted at the beginning of the body section.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+            <tr id="renderBodyEndHtml()">
+        <td><a href="yii-web-view.html#renderBodyEndHtml()-detail">renderBodyEndHtml()</a></td>
+        <td>Renders the content to be inserted at the end of the body section.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+                    <tr id="renderHeadHtml()">
+        <td><a href="yii-web-view.html#renderHeadHtml()-detail">renderHeadHtml()</a></td>
+        <td>Renders the content to be inserted in the head section.</td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+                    </table>
+</div>
+
+<a id="events"></a>
+<div class="summary doc-event">
+    <h2>Events</h2>
+
+    <p><a href="#" class="toggle">Hide inherited events</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-event" />
+        <col class="col-type" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Event</th><th>Type</th><th>Description</th><th>Defined By</th>
+    </tr>
+        <tr class="inherited" id="EVENT_AFTER_RENDER">
+        <td><a href="yii-base-view.html#EVENT_AFTER_RENDER-detail">EVENT_AFTER_RENDER</a></td>
+        <td><a href="yii-base-viewevent.html">yii\base\ViewEvent</a></td>
+        <td>
+            An event that is triggered by <a href="yii-base-view.html#renderFile()-detail">renderFile()</a> right after it renders a view file.                    </td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_BEFORE_RENDER">
+        <td><a href="yii-base-view.html#EVENT_BEFORE_RENDER-detail">EVENT_BEFORE_RENDER</a></td>
+        <td><a href="yii-base-viewevent.html">yii\base\ViewEvent</a></td>
+        <td>
+            An event that is triggered by <a href="yii-base-view.html#renderFile()-detail">renderFile()</a> right before it renders a view file.                    </td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+        <tr id="EVENT_BEGIN_BODY">
+        <td><a href="yii-web-view.html#EVENT_BEGIN_BODY-detail">EVENT_BEGIN_BODY</a></td>
+        <td>\yii\web\Event</td>
+        <td>
+            An event that is triggered by <a href="yii-web-view.html#beginBody()-detail">beginBody()</a>.                    </td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_BEGIN_PAGE">
+        <td><a href="yii-base-view.html#EVENT_BEGIN_PAGE-detail">EVENT_BEGIN_PAGE</a></td>
+        <td><a href="yii-base-event.html">yii\base\Event</a></td>
+        <td>
+            An event that is triggered by <a href="yii-base-view.html#beginPage()-detail">beginPage()</a>.                    </td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+        <tr id="EVENT_END_BODY">
+        <td><a href="yii-web-view.html#EVENT_END_BODY-detail">EVENT_END_BODY</a></td>
+        <td>\yii\web\Event</td>
+        <td>
+            An event that is triggered by <a href="yii-web-view.html#endBody()-detail">endBody()</a>.                    </td>
+        <td><a href="yii-web-view.html">yii\web\View</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_END_PAGE">
+        <td><a href="yii-base-view.html#EVENT_END_PAGE-detail">EVENT_END_PAGE</a></td>
+        <td><a href="yii-base-event.html">yii\base\Event</a></td>
+        <td>
+            An event that is triggered by <a href="yii-base-view.html#endPage()-detail">endPage()</a>.                    </td>
+        <td><a href="yii-base-view.html">yii\base\View</a></td>
+    </tr>
+        </table>
+</div>
+
+<a id="constants"></a>
+<div class="summary doc-const">
+    <h2>Constants</h2>
+
+    <p><a href="#" class="toggle">Hide inherited constants</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-const" />
+        <col class="col-value" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Constant</th><th>Value</th><th>Description</th><th>Defined By</th>
+    </tr>
+            <tr id="PH_BODY_BEGIN">
+          <td id="PH_BODY_BEGIN-detail">PH_BODY_BEGIN</td>
+          <td>''</td>
+          <td>This is internally used as the placeholder for receiving the content registered for the beginning of the body section.
+                        </td>
+          <td><a href="yii-web-view.html">yii\web\View</a></td>
+        </tr>
+            <tr id="PH_BODY_END">
+          <td id="PH_BODY_END-detail">PH_BODY_END</td>
+          <td>'<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script>'</td>
+          <td>This is internally used as the placeholder for receiving the content registered for the end of the body section.
+                        </td>
+          <td><a href="yii-web-view.html">yii\web\View</a></td>
+        </tr>
+            <tr id="PH_HEAD">
+          <td id="PH_HEAD-detail">PH_HEAD</td>
+          <td>'<link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>'</td>
+          <td>This is internally used as the placeholder for receiving the content registered for the head section.
+                        </td>
+          <td><a href="yii-web-view.html">yii\web\View</a></td>
+        </tr>
+            <tr id="POS_BEGIN">
+          <td id="POS_BEGIN-detail">POS_BEGIN</td>
+          <td>2</td>
+          <td>The location of registered JavaScript code block or files.
+This means the location is at the beginning of the body section.                        </td>
+          <td><a href="yii-web-view.html">yii\web\View</a></td>
+        </tr>
+            <tr id="POS_END">
+          <td id="POS_END-detail">POS_END</td>
+          <td>3</td>
+          <td>The location of registered JavaScript code block or files.
+This means the location is at the end of the body section.                        </td>
+          <td><a href="yii-web-view.html">yii\web\View</a></td>
+        </tr>
+            <tr id="POS_HEAD">
+          <td id="POS_HEAD-detail">POS_HEAD</td>
+          <td>1</td>
+          <td>The location of registered JavaScript code block or files.
+This means the location is in the head section.                        </td>
+          <td><a href="yii-web-view.html">yii\web\View</a></td>
+        </tr>
+            <tr id="POS_LOAD">
+          <td id="POS_LOAD-detail">POS_LOAD</td>
+          <td>5</td>
+          <td>The location of registered JavaScript code block.
+This means the JavaScript code block will be enclosed within <code>jQuery(window).load()</code>.                        </td>
+          <td><a href="yii-web-view.html">yii\web\View</a></td>
+        </tr>
+            <tr id="POS_READY">
+          <td id="POS_READY-detail">POS_READY</td>
+          <td>4</td>
+          <td>The location of registered JavaScript code block.
+This means the JavaScript code block will be enclosed within <code>jQuery(document).ready()</code>.                        </td>
+          <td><a href="yii-web-view.html">yii\web\View</a></td>
+        </tr>
+        </table>
+</div>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$assetBundles-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#$assetBundles-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L97" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L97" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $assetBundles        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>List of the registered asset bundles. The keys are the bundle names, and the values
+are the registered <a href="yii-web-assetbundle.html">yii\web\AssetBundle</a> objects.</p>
+
+        <p>See also <a href="yii-web-view.html#registerAssetBundle()-detail">registerAssetBundle()</a>.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-web-assetbundle.html">yii\web\AssetBundle</a>[]</span> <a href="yii-web-view.html#$assetBundles-detail">$assetBundles</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$assetManager-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#$assetManager-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $assetManager        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The asset manager. Defaults to the "assetManager" application component.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-web-assetmanager.html">yii\web\AssetManager</a></span> <strong><a href="yii-web-view.html#getAssetManager()-detail">getAssetManager</a></strong> ( )<br /><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#setAssetManager()-detail">setAssetManager</a></strong> ( <span style="color: #0000BB">$value</span> )</div>
+
+
+    <div class="detail-header h3" id="$css-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#$css-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L116" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L116" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $css        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The registered CSS code blocks.</p>
+
+        <p>See also <a href="yii-web-view.html#registerCss()-detail">registerCss()</a>.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-web-view.html#$css-detail">$css</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$cssFiles-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#$cssFiles-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L121" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L121" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $cssFiles        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The registered CSS files.</p>
+
+        <p>See also <a href="yii-web-view.html#registerCssFile()-detail">registerCssFile()</a>.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-web-view.html#$cssFiles-detail">$cssFiles</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$js-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#$js-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L126" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L126" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $js        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The registered JS code blocks</p>
+
+        <p>See also <a href="yii-web-view.html#registerJs()-detail">registerJs()</a>.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-web-view.html#$js-detail">$js</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$jsFiles-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#$jsFiles-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L131" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L131" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $jsFiles        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The registered JS files.</p>
+
+        <p>See also <a href="yii-web-view.html#registerJsFile()-detail">registerJsFile()</a>.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-web-view.html#$jsFiles-detail">$jsFiles</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$linkTags-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#$linkTags-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L111" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L111" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $linkTags        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The registered link tags.</p>
+
+        <p>See also <a href="yii-web-view.html#registerLinkTag()-detail">registerLinkTag()</a>.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-web-view.html#$linkTags-detail">$linkTags</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$metaTags-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#$metaTags-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L106" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L106" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $metaTags        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The registered meta tags.</p>
+
+        <p>See also <a href="yii-web-view.html#registerMetaTag()-detail">registerMetaTag()</a>.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-web-view.html#$metaTags-detail">$metaTags</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$title-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#$title-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L101" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L101" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $title        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The page title</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-web-view.html#$title-detail">$title</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="beginBody()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#beginBody()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L147" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L147" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        beginBody()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Marks the beginning of an HTML body section.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#beginBody()-detail">beginBody</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="clear()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#clear()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L240" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L240" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        clear()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Clears up the registered meta tags, link tags, css/js scripts and files.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#clear()-detail">clear</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="endBody()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#endBody()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L156" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L156" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        endBody()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Marks the ending of an HTML body section.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#endBody()-detail">endBody</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="endPage()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#endPage()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L172" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L172" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        endPage()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Marks the ending of an HTML page.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#endPage()-detail">endPage</a></strong> ( <span style="color: #0000BB">$ajaxMode&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$ajaxMode</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the view is rendering in AJAX mode.
+If true, the JS scripts registered at <a href="yii-web-view.html#POS_READY-detail">POS_READY</a> and <a href="yii-web-view.html#POS_LOAD-detail">POS_LOAD</a> positions
+will be rendered at the end of the view like normal scripts.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getAssetManager()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#getAssetManager()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L223" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L223" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getAssetManager()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Registers the asset manager being used by this view object.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-web-assetmanager.html">yii\web\AssetManager</a></span> <strong><a href="yii-web-view.html#getAssetManager()-detail">getAssetManager</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-assetmanager.html">yii\web\AssetManager</a></td>
+                  <td class="param-desc-col"><p>The asset manager. Defaults to the "assetManager" application component.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="head()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#head()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L139" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L139" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        head()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Marks the position of an HTML head section.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#head()-detail">head</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="registerAssetBundle()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#registerAssetBundle()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L282" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L282" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        registerAssetBundle()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Registers the named asset bundle.</strong></p>
+
+        <p>All dependent asset bundles will be registered.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-web-assetbundle.html">yii\web\AssetBundle</a></span> <strong><a href="yii-web-view.html#registerAssetBundle()-detail">registerAssetBundle</a></strong> ( <span style="color: #0000BB">$name</span>, <span style="color: #0000BB">$position&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The class name of the asset bundle (without the leading backslash)</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$position</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>If set, this forces a minimum position for javascript files.
+This will adjust depending assets javascript file position or fail if requirement can not be met.
+If this is null, asset bundles position settings will not be changed.
+See <a href="yii-web-view.html#registerJsFile()-detail">registerJsFile()</a> for more details on javascript position.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-assetbundle.html">yii\web\AssetBundle</a></td>
+                  <td class="param-desc-col"><p>The registered asset bundle instance</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
+                  <td class="param-desc-col"><p>if the asset bundle does not exist or a circular dependency is detected</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="registerAssetFiles()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#registerAssetFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L256" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L256" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        registerAssetFiles()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Registers all files provided by an asset bundle including depending bundles files.</strong></p>
+
+        <p>Removes a bundle from <a href="yii-web-view.html#$assetBundles-detail">$assetBundles</a> once files are registered.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#registerAssetFiles()-detail">registerAssetFiles</a></strong> ( <span style="color: #0000BB">$name</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Name of the bundle to register</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="registerCsrfMetaTags()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#registerCsrfMetaTags()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L360" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L360" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        registerCsrfMetaTags()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.0.13)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Registers CSRF meta tags.</strong></p>
+
+        <p>They are rendered dynamically to retrieve a new CSRF token for each request.</p>
+<pre><code class="hljs php language-php"><span class="hljs-variable">$view</span>-&gt;registerCsrfMetaTags();
+</code></pre>
+<p>The above code will result in <code>&lt;meta name="csrf-param" content="[yii\web\Request::$csrfParam]"&gt;</code>
+and <code>&lt;meta name="csrf-token" content="tTNpWKpdy-bx8ZmIq9R72...K1y8IP3XGkzZA=="&gt;</code> added to the page.</p>
+<p>Note: Hidden CSRF input of ActiveForm will be automatically refreshed by calling <code>window.yii.refreshCsrfToken()</code>
+from <code>yii.js</code>.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#registerCsrfMetaTags()-detail">registerCsrfMetaTags</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="registerCss()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#registerCss()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L402" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L402" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        registerCss()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Registers a CSS code block.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#registerCss()-detail">registerCss</a></strong> ( <span style="color: #0000BB">$css</span>, <span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]</span>, <span style="color: #0000BB">$key&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$css</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The content of the CSS code block to be registered</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The HTML attributes for the <code>&lt;style&gt;</code>-tag.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$key</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The key that identifies the CSS code block. If null, it will use
+$css as the key. If two CSS code blocks are registered with the same key, the latter
+will overwrite the former.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="registerCssFile()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#registerCssFile()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L425" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L425" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        registerCssFile()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Registers a CSS file.</strong></p>
+
+        <p>This method should be used for simple registration of CSS files. If you want to use features of
+<a href="yii-web-assetmanager.html">yii\web\AssetManager</a> like appending timestamps to the URL and file publishing options, use <a href="yii-web-assetbundle.html">yii\web\AssetBundle</a>
+and <a href="yii-web-view.html#registerAssetBundle()-detail">registerAssetBundle()</a> instead.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#registerCssFile()-detail">registerCssFile</a></strong> ( <span style="color: #0000BB">$url</span>, <span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]</span>, <span style="color: #0000BB">$key&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$url</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The CSS file to be registered.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The HTML attributes for the link tag. Please refer to <a href="yii-helpers-basehtml.html#cssFile()-detail">yii\helpers\Html::cssFile()</a> for
+the supported options. The following options are specially handled and are not treated as HTML attributes:</p>
+<ul>
+<li><code>depends</code>: array, specifies the names of the asset bundles that this CSS file depends on.</li>
+</ul>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$key</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The key that identifies the CSS script file. If null, it will use
+$url as the key. If two CSS files are registered with the same key, the latter
+will overwrite the former.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="registerJs()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#registerJs()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L464" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L464" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        registerJs()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Registers a JS code block.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#registerJs()-detail">registerJs</a></strong> ( <span style="color: #0000BB">$js</span>, <span style="color: #0000BB">$position&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">self</span><span style="color: #007700">::</span><span style="color: #0000BB">POS_READY</span>, <span style="color: #0000BB">$key&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$js</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The JS code block to be registered</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$position</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The position at which the JS script tag should be inserted
+in a page. The possible values are:</p>
+<ul>
+<li><a href="yii-web-view.html#POS_HEAD-detail">POS_HEAD</a>: in the head section</li>
+<li><a href="yii-web-view.html#POS_BEGIN-detail">POS_BEGIN</a>: at the beginning of the body section</li>
+<li><a href="yii-web-view.html#POS_END-detail">POS_END</a>: at the end of the body section</li>
+<li><a href="yii-web-view.html#POS_LOAD-detail">POS_LOAD</a>: enclosed within jQuery(window).load().
+Note that by using this position, the method will automatically register the jQuery js file.</li>
+<li><a href="yii-web-view.html#POS_READY-detail">POS_READY</a>: enclosed within jQuery(document).ready(). This is the default value.
+Note that by using this position, the method will automatically register the jQuery js file.</li>
+</ul>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$key</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The key that identifies the JS code block. If null, it will use
+$js as the key. If two JS code blocks are registered with the same key, the latter
+will overwrite the former.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="registerJsFile()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#registerJsFile()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L497" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L497" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        registerJsFile()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Registers a JS file.</strong></p>
+
+        <p>This method should be used for simple registration of JS files. If you want to use features of
+<a href="yii-web-assetmanager.html">yii\web\AssetManager</a> like appending timestamps to the URL and file publishing options, use <a href="yii-web-assetbundle.html">yii\web\AssetBundle</a>
+and <a href="yii-web-view.html#registerAssetBundle()-detail">registerAssetBundle()</a> instead.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#registerJsFile()-detail">registerJsFile</a></strong> ( <span style="color: #0000BB">$url</span>, <span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]</span>, <span style="color: #0000BB">$key&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$url</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The JS file to be registered.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The HTML attributes for the script tag. The following options are specially handled
+and are not treated as HTML attributes:</p>
+<ul>
+<li><code>depends</code>: array, specifies the names of the asset bundles that this JS file depends on.</li>
+<li><code>position</code>: specifies where the JS script tag should be inserted in a page. The possible values are:<ul>
+<li><a href="yii-web-view.html#POS_HEAD-detail">POS_HEAD</a>: in the head section</li>
+<li><a href="yii-web-view.html#POS_BEGIN-detail">POS_BEGIN</a>: at the beginning of the body section</li>
+<li><a href="yii-web-view.html#POS_END-detail">POS_END</a>: at the end of the body section. This is the default value.</li>
+</ul>
+</li>
+</ul>
+<p>Please refer to <a href="yii-helpers-basehtml.html#jsFile()-detail">yii\helpers\Html::jsFile()</a> for other supported options.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$key</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The key that identifies the JS script file. If null, it will use
+$url as the key. If two JS files are registered with the same key at the same position, the latter
+will overwrite the former. Note that position option takes precedence, thus files registered with the same key,
+but different position option will not override each other.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="registerJsVar()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#registerJsVar()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L538" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L538" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        registerJsVar()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.0.14)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Registers a JS code block defining a variable. The name of variable will be
+used as key, preventing duplicated variable names.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#registerJsVar()-detail">registerJsVar</a></strong> ( <span style="color: #0000BB">$name</span>, <span style="color: #0000BB">$value</span>, <span style="color: #0000BB">$position&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">self</span><span style="color: #007700">::</span><span style="color: #0000BB">POS_HEAD</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Name of the variable</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$value</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Value of the variable</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$position</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The position in a page at which the JavaScript variable should be inserted.
+The possible values are:</p>
+<ul>
+<li><a href="yii-web-view.html#POS_HEAD-detail">POS_HEAD</a>: in the head section. This is the default value.</li>
+<li><a href="yii-web-view.html#POS_BEGIN-detail">POS_BEGIN</a>: at the beginning of the body section.</li>
+<li><a href="yii-web-view.html#POS_END-detail">POS_END</a>: at the end of the body section.</li>
+<li><a href="yii-web-view.html#POS_LOAD-detail">POS_LOAD</a>: enclosed within jQuery(window).load().
+Note that by using this position, the method will automatically register the jQuery js file.</li>
+<li><a href="yii-web-view.html#POS_READY-detail">POS_READY</a>: enclosed within jQuery(document).ready().
+Note that by using this position, the method will automatically register the jQuery js file.</li>
+</ul>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="registerLinkTag()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#registerLinkTag()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L385" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L385" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        registerLinkTag()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Registers a link tag.</strong></p>
+
+        <p>For example, a link tag for a custom <a href="http://www.w3.org/2005/10/howto-favicon">favicon</a>
+can be added like the following:</p>
+<pre><code class="hljs php language-php"><span class="hljs-variable">$view</span>-&gt;registerLinkTag([<span class="hljs-string">'rel'</span> =&gt; <span class="hljs-string">'icon'</span>, <span class="hljs-string">'type'</span> =&gt; <span class="hljs-string">'image/png'</span>, <span class="hljs-string">'href'</span> =&gt; <span class="hljs-string">'/myicon.png'</span>]);
+</code></pre>
+<p>which will result in the following HTML: <code>&lt;link rel="icon" type="image/png" href="/myicon.png"&gt;</code>.</p>
+<p><strong>Note:</strong> To register link tags for CSS stylesheets, use <a href="yii-web-view.html#registerCssFile()-detail">registerCssFile()</a> instead, which
+has more options for this kind of link tag.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#registerLinkTag()-detail">registerLinkTag</a></strong> ( <span style="color: #0000BB">$options</span>, <span style="color: #0000BB">$key&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The HTML attributes for the link tag.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$key</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The key that identifies the link tag. If two link tags are registered
+with the same key, the latter will overwrite the former. If this is null, the new link tag
+will be appended to the existing ones.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="registerMetaTag()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#registerMetaTag()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L335" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L335" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        registerMetaTag()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Registers a meta tag.</strong></p>
+
+        <p>For example, a description meta tag can be added like the following:</p>
+<pre><code class="hljs php language-php"><span class="hljs-variable">$view</span>-&gt;registerMetaTag([
+    <span class="hljs-string">'name'</span> =&gt; <span class="hljs-string">'description'</span>,
+    <span class="hljs-string">'content'</span> =&gt; <span class="hljs-string">'This website is about funny raccoons.'</span>
+]);
+</code></pre>
+<p>will result in the meta tag <code>&lt;meta name="description" content="This website is about funny raccoons."&gt;</code>.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#registerMetaTag()-detail">registerMetaTag</a></strong> ( <span style="color: #0000BB">$options</span>, <span style="color: #0000BB">$key&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The HTML attributes for the meta tag.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$key</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The key that identifies the meta tag. If two meta tags are registered
+with the same key, the latter will overwrite the former. If this is null, the new meta tag
+will be appended to the existing ones.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renderAjax()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#renderAjax()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L202" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L202" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renderAjax()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Renders a view in response to an AJAX request.</strong></p>
+
+        <p>This method is similar to <a href="yii-base-view.html#render()-detail">render()</a> except that it will surround the view being rendered
+with the calls of <a href="yii-base-view.html#beginPage()-detail">beginPage()</a>, <a href="yii-web-view.html#head()-detail">head()</a>, <a href="yii-web-view.html#beginBody()-detail">beginBody()</a>, <a href="yii-web-view.html#endBody()-detail">endBody()</a> and <a href="yii-web-view.html#endPage()-detail">endPage()</a>.
+By doing so, the method is able to inject into the rendering result with JS/CSS scripts and files
+that are registered with the view.</p>
+
+        <p>See also <a href="yii-base-view.html#render()-detail">render()</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-web-view.html#renderAjax()-detail">renderAjax</a></strong> ( <span style="color: #0000BB">$view</span>, <span style="color: #0000BB">$params&nbsp;</span><span style="color: #007700">=&nbsp;[]</span>, <span style="color: #0000BB">$context&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$view</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The view name. Please refer to <a href="yii-base-view.html#render()-detail">render()</a> on how to specify this parameter.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The parameters (name-value pairs) that will be extracted and made available in the view file.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$context</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.object">object</a></td>
+                  <td class="param-desc-col"><p>The context that the view should use for rendering the view. If null,
+existing <a href="yii-base-view.html#$context-detail">$context</a> will be used.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The rendering result</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renderBodyBeginHtml()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#renderBodyBeginHtml()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L580" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L580" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renderBodyBeginHtml()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Renders the content to be inserted at the beginning of the body section.</strong></p>
+
+        <p>The content is rendered using the registered JS code blocks and files.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-web-view.html#renderBodyBeginHtml()-detail">renderBodyBeginHtml</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The rendered content</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renderBodyEndHtml()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#renderBodyEndHtml()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L601" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L601" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renderBodyEndHtml()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Renders the content to be inserted at the end of the body section.</strong></p>
+
+        <p>The content is rendered using the registered JS code blocks and files.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-web-view.html#renderBodyEndHtml()-detail">renderBodyEndHtml</a></strong> ( <span style="color: #0000BB">$ajaxMode</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$ajaxMode</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the view is rendering in AJAX mode.
+If true, the JS scripts registered at <a href="yii-web-view.html#POS_READY-detail">POS_READY</a> and <a href="yii-web-view.html#POS_LOAD-detail">POS_LOAD</a> positions
+will be rendered at the end of the view like normal scripts.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The rendered content</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renderHeadHtml()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#renderHeadHtml()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L549" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L549" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renderHeadHtml()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Renders the content to be inserted in the head section.</strong></p>
+
+        <p>The content is rendered using the registered meta tags, link tags, CSS/JS code blocks and files.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-web-view.html#renderHeadHtml()-detail">renderHeadHtml</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The rendered content</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setAssetManager()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#setAssetManager()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L232" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L232" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        setAssetManager()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Sets the asset manager.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-view.html#setAssetManager()-detail">setAssetManager</a></strong> ( <span style="color: #0000BB">$value</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$value</span></td>
+                  <td class="param-type-col"><a href="yii-web-assetmanager.html">yii\web\AssetManager</a></td>
+                  <td class="param-desc-col"><p>The asset manager</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+</div>
+    <h2>Event Details</h2>
+
+<div class="event-doc">
+    <div class="detail-header h3" id="EVENT_BEGIN_BODY-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#EVENT_BEGIN_BODY-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L49" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L49" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        EVENT_BEGIN_BODY        <span class="detail-header-tag small">
+        event
+        of type \yii\web\Event                </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>An event that is triggered by <a href="yii-web-view.html#beginBody()-detail">beginBody()</a>.</p>
+
+            </div>
+
+    <div class="detail-header h3" id="EVENT_END_BODY-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-view.html#EVENT_END_BODY-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/View.php#L53" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/View.php#L53" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        EVENT_END_BODY        <span class="detail-header-tag small">
+        event
+        of type \yii\web\Event                </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>An event that is triggered by <a href="yii-web-view.html#endBody()-detail">endBody()</a>.</p>
+
+            </div>
+
+</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Tue, 14 Aug 2018 17:48:26 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

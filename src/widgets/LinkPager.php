@@ -1,6 +1,6 @@
 <?php
 
-namespace johnsnook\ipFilter\widgets;
+namespace johnsnook\visitor\widgets;
 
 /**
  * Link Pager Widget.

@@ -1,0 +1,1649 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>    <title>BaseInflector, yii\helpers\BaseInflector - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w11409" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11409-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11409-collapse" class="collapse navbar-collapse"><ul id="w11410" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w11411" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-11372" data-toggle="collapse" data-parent="#navigation">Not namespaced classes <b class="caret"></b></a><div id="navigation-11372" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii.html">Yii</a>
+<a class="list-group-item" href="./yiirequirementchecker.html">YiiRequirementChecker</a></div>
+<a class="list-group-item" href="#navigation-11373" data-toggle="collapse" data-parent="#navigation">yii <b class="caret"></b></a><div id="navigation-11373" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-baseyii.html">BaseYii</a></div>
+<a class="list-group-item" href="#navigation-11374" data-toggle="collapse" data-parent="#navigation">yii\base <b class="caret"></b></a><div id="navigation-11374" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-base-action.html">Action</a>
+<a class="list-group-item" href="./yii-base-actionevent.html">ActionEvent</a>
+<a class="list-group-item" href="./yii-base-actionfilter.html">ActionFilter</a>
+<a class="list-group-item" href="./yii-base-application.html">Application</a>
+<a class="list-group-item" href="./yii-base-arrayaccesstrait.html">ArrayAccessTrait</a>
+<a class="list-group-item" href="./yii-base-arrayable.html">Arrayable</a>
+<a class="list-group-item" href="./yii-base-arrayabletrait.html">ArrayableTrait</a>
+<a class="list-group-item" href="./yii-base-baseobject.html">BaseObject</a>
+<a class="list-group-item" href="./yii-base-behavior.html">Behavior</a>
+<a class="list-group-item" href="./yii-base-bootstrapinterface.html">BootstrapInterface</a>
+<a class="list-group-item" href="./yii-base-component.html">Component</a>
+<a class="list-group-item" href="./yii-base-configurable.html">Configurable</a>
+<a class="list-group-item" href="./yii-base-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-base-dynamiccontentawareinterface.html">DynamicContentAwareInterface</a>
+<a class="list-group-item" href="./yii-base-dynamiccontentawaretrait.html">DynamicContentAwareTrait</a>
+<a class="list-group-item" href="./yii-base-dynamicmodel.html">DynamicModel</a>
+<a class="list-group-item" href="./yii-base-errorexception.html">ErrorException</a>
+<a class="list-group-item" href="./yii-base-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-base-event.html">Event</a>
+<a class="list-group-item" href="./yii-base-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-base-exitexception.html">ExitException</a>
+<a class="list-group-item" href="./yii-base-inlineaction.html">InlineAction</a>
+<a class="list-group-item" href="./yii-base-invalidargumentexception.html">InvalidArgumentException</a>
+<a class="list-group-item" href="./yii-base-invalidcallexception.html">InvalidCallException</a>
+<a class="list-group-item" href="./yii-base-invalidconfigexception.html">InvalidConfigException</a>
+<a class="list-group-item" href="./yii-base-invalidparamexception.html">InvalidParamException</a>
+<a class="list-group-item" href="./yii-base-invalidrouteexception.html">InvalidRouteException</a>
+<a class="list-group-item" href="./yii-base-invalidvalueexception.html">InvalidValueException</a>
+<a class="list-group-item" href="./yii-base-model.html">Model</a>
+<a class="list-group-item" href="./yii-base-modelevent.html">ModelEvent</a>
+<a class="list-group-item" href="./yii-base-module.html">Module</a>
+<a class="list-group-item" href="./yii-base-notsupportedexception.html">NotSupportedException</a>
+<a class="list-group-item" href="./yii-base-object.html">Object</a>
+<a class="list-group-item" href="./yii-base-request.html">Request</a>
+<a class="list-group-item" href="./yii-base-response.html">Response</a>
+<a class="list-group-item" href="./yii-base-security.html">Security</a>
+<a class="list-group-item" href="./yii-base-staticinstanceinterface.html">StaticInstanceInterface</a>
+<a class="list-group-item" href="./yii-base-staticinstancetrait.html">StaticInstanceTrait</a>
+<a class="list-group-item" href="./yii-base-theme.html">Theme</a>
+<a class="list-group-item" href="./yii-base-unknownclassexception.html">UnknownClassException</a>
+<a class="list-group-item" href="./yii-base-unknownmethodexception.html">UnknownMethodException</a>
+<a class="list-group-item" href="./yii-base-unknownpropertyexception.html">UnknownPropertyException</a>
+<a class="list-group-item" href="./yii-base-userexception.html">UserException</a>
+<a class="list-group-item" href="./yii-base-view.html">View</a>
+<a class="list-group-item" href="./yii-base-viewcontextinterface.html">ViewContextInterface</a>
+<a class="list-group-item" href="./yii-base-viewevent.html">ViewEvent</a>
+<a class="list-group-item" href="./yii-base-viewnotfoundexception.html">ViewNotFoundException</a>
+<a class="list-group-item" href="./yii-base-viewrenderer.html">ViewRenderer</a>
+<a class="list-group-item" href="./yii-base-widget.html">Widget</a>
+<a class="list-group-item" href="./yii-base-widgetevent.html">WidgetEvent</a></div>
+<a class="list-group-item" href="#navigation-11375" data-toggle="collapse" data-parent="#navigation">yii\behaviors <b class="caret"></b></a><div id="navigation-11375" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-behaviors-attributebehavior.html">AttributeBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-attributetypecastbehavior.html">AttributeTypecastBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-attributesbehavior.html">AttributesBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-blameablebehavior.html">BlameableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-cacheablewidgetbehavior.html">CacheableWidgetBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-optimisticlockbehavior.html">OptimisticLockBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-sluggablebehavior.html">SluggableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-timestampbehavior.html">TimestampBehavior</a></div>
+<a class="list-group-item" href="#navigation-11376" data-toggle="collapse" data-parent="#navigation">yii\caching <b class="caret"></b></a><div id="navigation-11376" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-caching-apccache.html">ApcCache</a>
+<a class="list-group-item" href="./yii-caching-arraycache.html">ArrayCache</a>
+<a class="list-group-item" href="./yii-caching-cache.html">Cache</a>
+<a class="list-group-item" href="./yii-caching-cacheinterface.html">CacheInterface</a>
+<a class="list-group-item" href="./yii-caching-chaineddependency.html">ChainedDependency</a>
+<a class="list-group-item" href="./yii-caching-dbcache.html">DbCache</a>
+<a class="list-group-item" href="./yii-caching-dbdependency.html">DbDependency</a>
+<a class="list-group-item" href="./yii-caching-dbquerydependency.html">DbQueryDependency</a>
+<a class="list-group-item" href="./yii-caching-dependency.html">Dependency</a>
+<a class="list-group-item" href="./yii-caching-dummycache.html">DummyCache</a>
+<a class="list-group-item" href="./yii-caching-expressiondependency.html">ExpressionDependency</a>
+<a class="list-group-item" href="./yii-caching-filecache.html">FileCache</a>
+<a class="list-group-item" href="./yii-caching-filedependency.html">FileDependency</a>
+<a class="list-group-item" href="./yii-caching-memcache.html">MemCache</a>
+<a class="list-group-item" href="./yii-caching-memcacheserver.html">MemCacheServer</a>
+<a class="list-group-item" href="./yii-caching-tagdependency.html">TagDependency</a>
+<a class="list-group-item" href="./yii-caching-wincache.html">WinCache</a>
+<a class="list-group-item" href="./yii-caching-xcache.html">XCache</a>
+<a class="list-group-item" href="./yii-caching-zenddatacache.html">ZendDataCache</a></div>
+<a class="list-group-item" href="#navigation-11377" data-toggle="collapse" data-parent="#navigation">yii\captcha <b class="caret"></b></a><div id="navigation-11377" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-captcha-captcha.html">Captcha</a>
+<a class="list-group-item" href="./yii-captcha-captchaaction.html">CaptchaAction</a>
+<a class="list-group-item" href="./yii-captcha-captchaasset.html">CaptchaAsset</a>
+<a class="list-group-item" href="./yii-captcha-captchavalidator.html">CaptchaValidator</a></div>
+<a class="list-group-item" href="#navigation-11378" data-toggle="collapse" data-parent="#navigation">yii\console <b class="caret"></b></a><div id="navigation-11378" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-application.html">Application</a>
+<a class="list-group-item" href="./yii-console-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-console-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-console-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-console-exitcode.html">ExitCode</a>
+<a class="list-group-item" href="./yii-console-markdown.html">Markdown</a>
+<a class="list-group-item" href="./yii-console-request.html">Request</a>
+<a class="list-group-item" href="./yii-console-response.html">Response</a>
+<a class="list-group-item" href="./yii-console-unknowncommandexception.html">UnknownCommandException</a></div>
+<a class="list-group-item" href="#navigation-11379" data-toggle="collapse" data-parent="#navigation">yii\console\controllers <b class="caret"></b></a><div id="navigation-11379" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-controllers-assetcontroller.html">AssetController</a>
+<a class="list-group-item" href="./yii-console-controllers-basemigratecontroller.html">BaseMigrateController</a>
+<a class="list-group-item" href="./yii-console-controllers-cachecontroller.html">CacheController</a>
+<a class="list-group-item" href="./yii-console-controllers-fixturecontroller.html">FixtureController</a>
+<a class="list-group-item" href="./yii-console-controllers-helpcontroller.html">HelpController</a>
+<a class="list-group-item" href="./yii-console-controllers-messagecontroller.html">MessageController</a>
+<a class="list-group-item" href="./yii-console-controllers-migratecontroller.html">MigrateController</a>
+<a class="list-group-item" href="./yii-console-controllers-servecontroller.html">ServeController</a></div>
+<a class="list-group-item" href="#navigation-11380" data-toggle="collapse" data-parent="#navigation">yii\console\widgets <b class="caret"></b></a><div id="navigation-11380" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-widgets-table.html">Table</a></div>
+<a class="list-group-item" href="#navigation-11381" data-toggle="collapse" data-parent="#navigation">yii\data <b class="caret"></b></a><div id="navigation-11381" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-data-activedatafilter.html">ActiveDataFilter</a>
+<a class="list-group-item" href="./yii-data-activedataprovider.html">ActiveDataProvider</a>
+<a class="list-group-item" href="./yii-data-arraydataprovider.html">ArrayDataProvider</a>
+<a class="list-group-item" href="./yii-data-basedataprovider.html">BaseDataProvider</a>
+<a class="list-group-item" href="./yii-data-datafilter.html">DataFilter</a>
+<a class="list-group-item" href="./yii-data-dataproviderinterface.html">DataProviderInterface</a>
+<a class="list-group-item" href="./yii-data-pagination.html">Pagination</a>
+<a class="list-group-item" href="./yii-data-sort.html">Sort</a>
+<a class="list-group-item" href="./yii-data-sqldataprovider.html">SqlDataProvider</a></div>
+<a class="list-group-item" href="#navigation-11382" data-toggle="collapse" data-parent="#navigation">yii\db <b class="caret"></b></a><div id="navigation-11382" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-activequery.html">ActiveQuery</a>
+<a class="list-group-item" href="./yii-db-activequeryinterface.html">ActiveQueryInterface</a>
+<a class="list-group-item" href="./yii-db-activequerytrait.html">ActiveQueryTrait</a>
+<a class="list-group-item" href="./yii-db-activerecord.html">ActiveRecord</a>
+<a class="list-group-item" href="./yii-db-activerecordinterface.html">ActiveRecordInterface</a>
+<a class="list-group-item" href="./yii-db-activerelationtrait.html">ActiveRelationTrait</a>
+<a class="list-group-item" href="./yii-db-aftersaveevent.html">AfterSaveEvent</a>
+<a class="list-group-item" href="./yii-db-arrayexpression.html">ArrayExpression</a>
+<a class="list-group-item" href="./yii-db-baseactiverecord.html">BaseActiveRecord</a>
+<a class="list-group-item" href="./yii-db-batchqueryresult.html">BatchQueryResult</a>
+<a class="list-group-item" href="./yii-db-checkconstraint.html">CheckConstraint</a>
+<a class="list-group-item" href="./yii-db-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-command.html">Command</a>
+<a class="list-group-item" href="./yii-db-connection.html">Connection</a>
+<a class="list-group-item" href="./yii-db-constraint.html">Constraint</a>
+<a class="list-group-item" href="./yii-db-constraintfinderinterface.html">ConstraintFinderInterface</a>
+<a class="list-group-item" href="./yii-db-constraintfindertrait.html">ConstraintFinderTrait</a>
+<a class="list-group-item" href="./yii-db-datareader.html">DataReader</a>
+<a class="list-group-item" href="./yii-db-defaultvalueconstraint.html">DefaultValueConstraint</a>
+<a class="list-group-item" href="./yii-db-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-db-expression.html">Expression</a>
+<a class="list-group-item" href="./yii-db-expressionbuilder.html">ExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-expressionbuilderinterface.html">ExpressionBuilderInterface</a>
+<a class="list-group-item" href="./yii-db-expressionbuildertrait.html">ExpressionBuilderTrait</a>
+<a class="list-group-item" href="./yii-db-expressioninterface.html">ExpressionInterface</a>
+<a class="list-group-item" href="./yii-db-foreignkeyconstraint.html">ForeignKeyConstraint</a>
+<a class="list-group-item" href="./yii-db-indexconstraint.html">IndexConstraint</a>
+<a class="list-group-item" href="./yii-db-integrityexception.html">IntegrityException</a>
+<a class="list-group-item" href="./yii-db-jsonexpression.html">JsonExpression</a>
+<a class="list-group-item" href="./yii-db-migration.html">Migration</a>
+<a class="list-group-item" href="./yii-db-migrationinterface.html">MigrationInterface</a>
+<a class="list-group-item" href="./yii-db-pdovalue.html">PdoValue</a>
+<a class="list-group-item" href="./yii-db-pdovaluebuilder.html">PdoValueBuilder</a>
+<a class="list-group-item" href="./yii-db-query.html">Query</a>
+<a class="list-group-item" href="./yii-db-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-queryexpressionbuilder.html">QueryExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-queryinterface.html">QueryInterface</a>
+<a class="list-group-item" href="./yii-db-querytrait.html">QueryTrait</a>
+<a class="list-group-item" href="./yii-db-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-schemabuildertrait.html">SchemaBuilderTrait</a>
+<a class="list-group-item" href="./yii-db-sqltoken.html">SqlToken</a>
+<a class="list-group-item" href="./yii-db-sqltokenizer.html">SqlTokenizer</a>
+<a class="list-group-item" href="./yii-db-staleobjectexception.html">StaleObjectException</a>
+<a class="list-group-item" href="./yii-db-tableschema.html">TableSchema</a>
+<a class="list-group-item" href="./yii-db-transaction.html">Transaction</a>
+<a class="list-group-item" href="./yii-db-viewfindertrait.html">ViewFinderTrait</a></div>
+<a class="list-group-item" href="#navigation-11383" data-toggle="collapse" data-parent="#navigation">yii\db\conditions <b class="caret"></b></a><div id="navigation-11383" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-conditions-andcondition.html">AndCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencolumnscondition.html">BetweenColumnsCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencolumnsconditionbuilder.html">BetweenColumnsConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencondition.html">BetweenCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweenconditionbuilder.html">BetweenConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-conditioninterface.html">ConditionInterface</a>
+<a class="list-group-item" href="./yii-db-conditions-conjunctioncondition.html">ConjunctionCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-conjunctionconditionbuilder.html">ConjunctionConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-existscondition.html">ExistsCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-existsconditionbuilder.html">ExistsConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-hashcondition.html">HashCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-hashconditionbuilder.html">HashConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-incondition.html">InCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-likecondition.html">LikeCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-likeconditionbuilder.html">LikeConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-notcondition.html">NotCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-notconditionbuilder.html">NotConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-orcondition.html">OrCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-simplecondition.html">SimpleCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-simpleconditionbuilder.html">SimpleConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-11384" data-toggle="collapse" data-parent="#navigation">yii\db\cubrid <b class="caret"></b></a><div id="navigation-11384" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-cubrid-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-cubrid-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-cubrid-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-11385" data-toggle="collapse" data-parent="#navigation">yii\db\cubrid\conditions <b class="caret"></b></a><div id="navigation-11385" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-cubrid-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-11386" data-toggle="collapse" data-parent="#navigation">yii\db\mssql <b class="caret"></b></a><div id="navigation-11386" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mssql-pdo.html">PDO</a>
+<a class="list-group-item" href="./yii-db-mssql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-mssql-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-mssql-sqlsrvpdo.html">SqlsrvPDO</a>
+<a class="list-group-item" href="./yii-db-mssql-tableschema.html">TableSchema</a></div>
+<a class="list-group-item" href="#navigation-11387" data-toggle="collapse" data-parent="#navigation">yii\db\mssql\conditions <b class="caret"></b></a><div id="navigation-11387" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mssql-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-mssql-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-11388" data-toggle="collapse" data-parent="#navigation">yii\db\mysql <b class="caret"></b></a><div id="navigation-11388" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mysql-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-mysql-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-jsonexpressionbuilder.html">JsonExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-11389" data-toggle="collapse" data-parent="#navigation">yii\db\oci <b class="caret"></b></a><div id="navigation-11389" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-oci-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-11390" data-toggle="collapse" data-parent="#navigation">yii\db\oci\conditions <b class="caret"></b></a><div id="navigation-11390" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-oci-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-11391" data-toggle="collapse" data-parent="#navigation">yii\db\pgsql <b class="caret"></b></a><div id="navigation-11391" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-pgsql-arrayexpressionbuilder.html">ArrayExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-arrayparser.html">ArrayParser</a>
+<a class="list-group-item" href="./yii-db-pgsql-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-pgsql-jsonexpressionbuilder.html">JsonExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-11392" data-toggle="collapse" data-parent="#navigation">yii\db\sqlite <b class="caret"></b></a><div id="navigation-11392" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-sqlite-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-command.html">Command</a>
+<a class="list-group-item" href="./yii-db-sqlite-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-sqlite-sqltokenizer.html">SqlTokenizer</a></div>
+<a class="list-group-item" href="#navigation-11393" data-toggle="collapse" data-parent="#navigation">yii\db\sqlite\conditions <b class="caret"></b></a><div id="navigation-11393" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-sqlite-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-11394" data-toggle="collapse" data-parent="#navigation">yii\di <b class="caret"></b></a><div id="navigation-11394" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-di-container.html">Container</a>
+<a class="list-group-item" href="./yii-di-instance.html">Instance</a>
+<a class="list-group-item" href="./yii-di-notinstantiableexception.html">NotInstantiableException</a>
+<a class="list-group-item" href="./yii-di-servicelocator.html">ServiceLocator</a></div>
+<a class="list-group-item" href="#navigation-11395" data-toggle="collapse" data-parent="#navigation">yii\filters <b class="caret"></b></a><div id="navigation-11395" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-accesscontrol.html">AccessControl</a>
+<a class="list-group-item" href="./yii-filters-accessrule.html">AccessRule</a>
+<a class="list-group-item" href="./yii-filters-ajaxfilter.html">AjaxFilter</a>
+<a class="list-group-item" href="./yii-filters-contentnegotiator.html">ContentNegotiator</a>
+<a class="list-group-item" href="./yii-filters-cors.html">Cors</a>
+<a class="list-group-item" href="./yii-filters-hostcontrol.html">HostControl</a>
+<a class="list-group-item" href="./yii-filters-httpcache.html">HttpCache</a>
+<a class="list-group-item" href="./yii-filters-pagecache.html">PageCache</a>
+<a class="list-group-item" href="./yii-filters-ratelimitinterface.html">RateLimitInterface</a>
+<a class="list-group-item" href="./yii-filters-ratelimiter.html">RateLimiter</a>
+<a class="list-group-item" href="./yii-filters-verbfilter.html">VerbFilter</a></div>
+<a class="list-group-item" href="#navigation-11396" data-toggle="collapse" data-parent="#navigation">yii\filters\auth <b class="caret"></b></a><div id="navigation-11396" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-auth-authinterface.html">AuthInterface</a>
+<a class="list-group-item" href="./yii-filters-auth-authmethod.html">AuthMethod</a>
+<a class="list-group-item" href="./yii-filters-auth-compositeauth.html">CompositeAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpbasicauth.html">HttpBasicAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpbearerauth.html">HttpBearerAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpheaderauth.html">HttpHeaderAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-queryparamauth.html">QueryParamAuth</a></div>
+<a class="list-group-item" href="#navigation-11397" data-toggle="collapse" data-parent="#navigation">yii\grid <b class="caret"></b></a><div id="navigation-11397" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-grid-actioncolumn.html">ActionColumn</a>
+<a class="list-group-item" href="./yii-grid-checkboxcolumn.html">CheckboxColumn</a>
+<a class="list-group-item" href="./yii-grid-column.html">Column</a>
+<a class="list-group-item" href="./yii-grid-datacolumn.html">DataColumn</a>
+<a class="list-group-item" href="./yii-grid-gridview.html">GridView</a>
+<a class="list-group-item" href="./yii-grid-gridviewasset.html">GridViewAsset</a>
+<a class="list-group-item" href="./yii-grid-radiobuttoncolumn.html">RadioButtonColumn</a>
+<a class="list-group-item" href="./yii-grid-serialcolumn.html">SerialColumn</a></div>
+<a class="list-group-item active" href="#navigation-11398" data-toggle="collapse" data-parent="#navigation">yii\helpers <b class="caret"></b></a><div id="navigation-11398" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-helpers-arrayhelper.html">ArrayHelper</a>
+<a class="list-group-item" href="./yii-helpers-basearrayhelper.html">BaseArrayHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseconsole.html">BaseConsole</a>
+<a class="list-group-item" href="./yii-helpers-basefilehelper.html">BaseFileHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseformatconverter.html">BaseFormatConverter</a>
+<a class="list-group-item" href="./yii-helpers-basehtml.html">BaseHtml</a>
+<a class="list-group-item" href="./yii-helpers-basehtmlpurifier.html">BaseHtmlPurifier</a>
+<a class="list-group-item active" href="./yii-helpers-baseinflector.html">BaseInflector</a>
+<a class="list-group-item" href="./yii-helpers-baseiphelper.html">BaseIpHelper</a>
+<a class="list-group-item" href="./yii-helpers-basejson.html">BaseJson</a>
+<a class="list-group-item" href="./yii-helpers-basemarkdown.html">BaseMarkdown</a>
+<a class="list-group-item" href="./yii-helpers-basestringhelper.html">BaseStringHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseurl.html">BaseUrl</a>
+<a class="list-group-item" href="./yii-helpers-basevardumper.html">BaseVarDumper</a>
+<a class="list-group-item" href="./yii-helpers-console.html">Console</a>
+<a class="list-group-item" href="./yii-helpers-filehelper.html">FileHelper</a>
+<a class="list-group-item" href="./yii-helpers-formatconverter.html">FormatConverter</a>
+<a class="list-group-item" href="./yii-helpers-html.html">Html</a>
+<a class="list-group-item" href="./yii-helpers-htmlpurifier.html">HtmlPurifier</a>
+<a class="list-group-item" href="./yii-helpers-inflector.html">Inflector</a>
+<a class="list-group-item" href="./yii-helpers-iphelper.html">IpHelper</a>
+<a class="list-group-item" href="./yii-helpers-json.html">Json</a>
+<a class="list-group-item" href="./yii-helpers-markdown.html">Markdown</a>
+<a class="list-group-item" href="./yii-helpers-replacearrayvalue.html">ReplaceArrayValue</a>
+<a class="list-group-item" href="./yii-helpers-stringhelper.html">StringHelper</a>
+<a class="list-group-item" href="./yii-helpers-unsetarrayvalue.html">UnsetArrayValue</a>
+<a class="list-group-item" href="./yii-helpers-url.html">Url</a>
+<a class="list-group-item" href="./yii-helpers-vardumper.html">VarDumper</a></div>
+<a class="list-group-item" href="#navigation-11399" data-toggle="collapse" data-parent="#navigation">yii\i18n <b class="caret"></b></a><div id="navigation-11399" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-i18n-dbmessagesource.html">DbMessageSource</a>
+<a class="list-group-item" href="./yii-i18n-formatter.html">Formatter</a>
+<a class="list-group-item" href="./yii-i18n-gettextfile.html">GettextFile</a>
+<a class="list-group-item" href="./yii-i18n-gettextmessagesource.html">GettextMessageSource</a>
+<a class="list-group-item" href="./yii-i18n-gettextmofile.html">GettextMoFile</a>
+<a class="list-group-item" href="./yii-i18n-gettextpofile.html">GettextPoFile</a>
+<a class="list-group-item" href="./yii-i18n-i18n.html">I18N</a>
+<a class="list-group-item" href="./yii-i18n-locale.html">Locale</a>
+<a class="list-group-item" href="./yii-i18n-messageformatter.html">MessageFormatter</a>
+<a class="list-group-item" href="./yii-i18n-messagesource.html">MessageSource</a>
+<a class="list-group-item" href="./yii-i18n-missingtranslationevent.html">MissingTranslationEvent</a>
+<a class="list-group-item" href="./yii-i18n-phpmessagesource.html">PhpMessageSource</a></div>
+<a class="list-group-item" href="#navigation-11400" data-toggle="collapse" data-parent="#navigation">yii\log <b class="caret"></b></a><div id="navigation-11400" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-log-dbtarget.html">DbTarget</a>
+<a class="list-group-item" href="./yii-log-dispatcher.html">Dispatcher</a>
+<a class="list-group-item" href="./yii-log-emailtarget.html">EmailTarget</a>
+<a class="list-group-item" href="./yii-log-filetarget.html">FileTarget</a>
+<a class="list-group-item" href="./yii-log-logruntimeexception.html">LogRuntimeException</a>
+<a class="list-group-item" href="./yii-log-logger.html">Logger</a>
+<a class="list-group-item" href="./yii-log-syslogtarget.html">SyslogTarget</a>
+<a class="list-group-item" href="./yii-log-target.html">Target</a></div>
+<a class="list-group-item" href="#navigation-11401" data-toggle="collapse" data-parent="#navigation">yii\mail <b class="caret"></b></a><div id="navigation-11401" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mail-basemailer.html">BaseMailer</a>
+<a class="list-group-item" href="./yii-mail-basemessage.html">BaseMessage</a>
+<a class="list-group-item" href="./yii-mail-mailevent.html">MailEvent</a>
+<a class="list-group-item" href="./yii-mail-mailerinterface.html">MailerInterface</a>
+<a class="list-group-item" href="./yii-mail-messageinterface.html">MessageInterface</a></div>
+<a class="list-group-item" href="#navigation-11402" data-toggle="collapse" data-parent="#navigation">yii\mutex <b class="caret"></b></a><div id="navigation-11402" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mutex-dbmutex.html">DbMutex</a>
+<a class="list-group-item" href="./yii-mutex-filemutex.html">FileMutex</a>
+<a class="list-group-item" href="./yii-mutex-mutex.html">Mutex</a>
+<a class="list-group-item" href="./yii-mutex-mysqlmutex.html">MysqlMutex</a>
+<a class="list-group-item" href="./yii-mutex-oraclemutex.html">OracleMutex</a>
+<a class="list-group-item" href="./yii-mutex-pgsqlmutex.html">PgsqlMutex</a></div>
+<a class="list-group-item" href="#navigation-11403" data-toggle="collapse" data-parent="#navigation">yii\rbac <b class="caret"></b></a><div id="navigation-11403" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rbac-assignment.html">Assignment</a>
+<a class="list-group-item" href="./yii-rbac-basemanager.html">BaseManager</a>
+<a class="list-group-item" href="./yii-rbac-checkaccessinterface.html">CheckAccessInterface</a>
+<a class="list-group-item" href="./yii-rbac-dbmanager.html">DbManager</a>
+<a class="list-group-item" href="./yii-rbac-item.html">Item</a>
+<a class="list-group-item" href="./yii-rbac-managerinterface.html">ManagerInterface</a>
+<a class="list-group-item" href="./yii-rbac-permission.html">Permission</a>
+<a class="list-group-item" href="./yii-rbac-phpmanager.html">PhpManager</a>
+<a class="list-group-item" href="./yii-rbac-role.html">Role</a>
+<a class="list-group-item" href="./yii-rbac-rule.html">Rule</a></div>
+<a class="list-group-item" href="#navigation-11404" data-toggle="collapse" data-parent="#navigation">yii\rest <b class="caret"></b></a><div id="navigation-11404" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rest-action.html">Action</a>
+<a class="list-group-item" href="./yii-rest-activecontroller.html">ActiveController</a>
+<a class="list-group-item" href="./yii-rest-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-rest-createaction.html">CreateAction</a>
+<a class="list-group-item" href="./yii-rest-deleteaction.html">DeleteAction</a>
+<a class="list-group-item" href="./yii-rest-indexaction.html">IndexAction</a>
+<a class="list-group-item" href="./yii-rest-optionsaction.html">OptionsAction</a>
+<a class="list-group-item" href="./yii-rest-serializer.html">Serializer</a>
+<a class="list-group-item" href="./yii-rest-updateaction.html">UpdateAction</a>
+<a class="list-group-item" href="./yii-rest-urlrule.html">UrlRule</a>
+<a class="list-group-item" href="./yii-rest-viewaction.html">ViewAction</a></div>
+<a class="list-group-item" href="#navigation-11405" data-toggle="collapse" data-parent="#navigation">yii\test <b class="caret"></b></a><div id="navigation-11405" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-test-activefixture.html">ActiveFixture</a>
+<a class="list-group-item" href="./yii-test-arrayfixture.html">ArrayFixture</a>
+<a class="list-group-item" href="./yii-test-baseactivefixture.html">BaseActiveFixture</a>
+<a class="list-group-item" href="./yii-test-dbfixture.html">DbFixture</a>
+<a class="list-group-item" href="./yii-test-filefixturetrait.html">FileFixtureTrait</a>
+<a class="list-group-item" href="./yii-test-fixture.html">Fixture</a>
+<a class="list-group-item" href="./yii-test-fixturetrait.html">FixtureTrait</a>
+<a class="list-group-item" href="./yii-test-initdbfixture.html">InitDbFixture</a></div>
+<a class="list-group-item" href="#navigation-11406" data-toggle="collapse" data-parent="#navigation">yii\validators <b class="caret"></b></a><div id="navigation-11406" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-validators-booleanvalidator.html">BooleanValidator</a>
+<a class="list-group-item" href="./yii-validators-comparevalidator.html">CompareValidator</a>
+<a class="list-group-item" href="./yii-validators-datevalidator.html">DateValidator</a>
+<a class="list-group-item" href="./yii-validators-defaultvaluevalidator.html">DefaultValueValidator</a>
+<a class="list-group-item" href="./yii-validators-eachvalidator.html">EachValidator</a>
+<a class="list-group-item" href="./yii-validators-emailvalidator.html">EmailValidator</a>
+<a class="list-group-item" href="./yii-validators-existvalidator.html">ExistValidator</a>
+<a class="list-group-item" href="./yii-validators-filevalidator.html">FileValidator</a>
+<a class="list-group-item" href="./yii-validators-filtervalidator.html">FilterValidator</a>
+<a class="list-group-item" href="./yii-validators-imagevalidator.html">ImageValidator</a>
+<a class="list-group-item" href="./yii-validators-inlinevalidator.html">InlineValidator</a>
+<a class="list-group-item" href="./yii-validators-ipvalidator.html">IpValidator</a>
+<a class="list-group-item" href="./yii-validators-numbervalidator.html">NumberValidator</a>
+<a class="list-group-item" href="./yii-validators-punycodeasset.html">PunycodeAsset</a>
+<a class="list-group-item" href="./yii-validators-rangevalidator.html">RangeValidator</a>
+<a class="list-group-item" href="./yii-validators-regularexpressionvalidator.html">RegularExpressionValidator</a>
+<a class="list-group-item" href="./yii-validators-requiredvalidator.html">RequiredValidator</a>
+<a class="list-group-item" href="./yii-validators-safevalidator.html">SafeValidator</a>
+<a class="list-group-item" href="./yii-validators-stringvalidator.html">StringValidator</a>
+<a class="list-group-item" href="./yii-validators-uniquevalidator.html">UniqueValidator</a>
+<a class="list-group-item" href="./yii-validators-urlvalidator.html">UrlValidator</a>
+<a class="list-group-item" href="./yii-validators-validationasset.html">ValidationAsset</a>
+<a class="list-group-item" href="./yii-validators-validator.html">Validator</a></div>
+<a class="list-group-item" href="#navigation-11407" data-toggle="collapse" data-parent="#navigation">yii\web <b class="caret"></b></a><div id="navigation-11407" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-web-application.html">Application</a>
+<a class="list-group-item" href="./yii-web-assetbundle.html">AssetBundle</a>
+<a class="list-group-item" href="./yii-web-assetconverter.html">AssetConverter</a>
+<a class="list-group-item" href="./yii-web-assetconverterinterface.html">AssetConverterInterface</a>
+<a class="list-group-item" href="./yii-web-assetmanager.html">AssetManager</a>
+<a class="list-group-item" href="./yii-web-badrequesthttpexception.html">BadRequestHttpException</a>
+<a class="list-group-item" href="./yii-web-cachesession.html">CacheSession</a>
+<a class="list-group-item" href="./yii-web-compositeurlrule.html">CompositeUrlRule</a>
+<a class="list-group-item" href="./yii-web-conflicthttpexception.html">ConflictHttpException</a>
+<a class="list-group-item" href="./yii-web-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-web-cookie.html">Cookie</a>
+<a class="list-group-item" href="./yii-web-cookiecollection.html">CookieCollection</a>
+<a class="list-group-item" href="./yii-web-dbsession.html">DbSession</a>
+<a class="list-group-item" href="./yii-web-erroraction.html">ErrorAction</a>
+<a class="list-group-item" href="./yii-web-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-web-forbiddenhttpexception.html">ForbiddenHttpException</a>
+<a class="list-group-item" href="./yii-web-gonehttpexception.html">GoneHttpException</a>
+<a class="list-group-item" href="./yii-web-groupurlrule.html">GroupUrlRule</a>
+<a class="list-group-item" href="./yii-web-headercollection.html">HeaderCollection</a>
+<a class="list-group-item" href="./yii-web-headersalreadysentexception.html">HeadersAlreadySentException</a>
+<a class="list-group-item" href="./yii-web-htmlresponseformatter.html">HtmlResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-httpexception.html">HttpException</a>
+<a class="list-group-item" href="./yii-web-identityinterface.html">IdentityInterface</a>
+<a class="list-group-item" href="./yii-web-jqueryasset.html">JqueryAsset</a>
+<a class="list-group-item" href="./yii-web-jsexpression.html">JsExpression</a>
+<a class="list-group-item" href="./yii-web-jsonparser.html">JsonParser</a>
+<a class="list-group-item" href="./yii-web-jsonresponseformatter.html">JsonResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-link.html">Link</a>
+<a class="list-group-item" href="./yii-web-linkable.html">Linkable</a>
+<a class="list-group-item" href="./yii-web-methodnotallowedhttpexception.html">MethodNotAllowedHttpException</a>
+<a class="list-group-item" href="./yii-web-multifieldsession.html">MultiFieldSession</a>
+<a class="list-group-item" href="./yii-web-multipartformdataparser.html">MultipartFormDataParser</a>
+<a class="list-group-item" href="./yii-web-notacceptablehttpexception.html">NotAcceptableHttpException</a>
+<a class="list-group-item" href="./yii-web-notfoundhttpexception.html">NotFoundHttpException</a>
+<a class="list-group-item" href="./yii-web-rangenotsatisfiablehttpexception.html">RangeNotSatisfiableHttpException</a>
+<a class="list-group-item" href="./yii-web-request.html">Request</a>
+<a class="list-group-item" href="./yii-web-requestparserinterface.html">RequestParserInterface</a>
+<a class="list-group-item" href="./yii-web-response.html">Response</a>
+<a class="list-group-item" href="./yii-web-responseformatterinterface.html">ResponseFormatterInterface</a>
+<a class="list-group-item" href="./yii-web-servererrorhttpexception.html">ServerErrorHttpException</a>
+<a class="list-group-item" href="./yii-web-session.html">Session</a>
+<a class="list-group-item" href="./yii-web-sessioniterator.html">SessionIterator</a>
+<a class="list-group-item" href="./yii-web-toomanyrequestshttpexception.html">TooManyRequestsHttpException</a>
+<a class="list-group-item" href="./yii-web-unauthorizedhttpexception.html">UnauthorizedHttpException</a>
+<a class="list-group-item" href="./yii-web-unprocessableentityhttpexception.html">UnprocessableEntityHttpException</a>
+<a class="list-group-item" href="./yii-web-unsupportedmediatypehttpexception.html">UnsupportedMediaTypeHttpException</a>
+<a class="list-group-item" href="./yii-web-uploadedfile.html">UploadedFile</a>
+<a class="list-group-item" href="./yii-web-urlmanager.html">UrlManager</a>
+<a class="list-group-item" href="./yii-web-urlnormalizer.html">UrlNormalizer</a>
+<a class="list-group-item" href="./yii-web-urlnormalizerredirectexception.html">UrlNormalizerRedirectException</a>
+<a class="list-group-item" href="./yii-web-urlrule.html">UrlRule</a>
+<a class="list-group-item" href="./yii-web-urlruleinterface.html">UrlRuleInterface</a>
+<a class="list-group-item" href="./yii-web-user.html">User</a>
+<a class="list-group-item" href="./yii-web-userevent.html">UserEvent</a>
+<a class="list-group-item" href="./yii-web-view.html">View</a>
+<a class="list-group-item" href="./yii-web-viewaction.html">ViewAction</a>
+<a class="list-group-item" href="./yii-web-xmlresponseformatter.html">XmlResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-yiiasset.html">YiiAsset</a></div>
+<a class="list-group-item" href="#navigation-11408" data-toggle="collapse" data-parent="#navigation">yii\widgets <b class="caret"></b></a><div id="navigation-11408" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-widgets-activefield.html">ActiveField</a>
+<a class="list-group-item" href="./yii-widgets-activeform.html">ActiveForm</a>
+<a class="list-group-item" href="./yii-widgets-activeformasset.html">ActiveFormAsset</a>
+<a class="list-group-item" href="./yii-widgets-baselistview.html">BaseListView</a>
+<a class="list-group-item" href="./yii-widgets-block.html">Block</a>
+<a class="list-group-item" href="./yii-widgets-breadcrumbs.html">Breadcrumbs</a>
+<a class="list-group-item" href="./yii-widgets-contentdecorator.html">ContentDecorator</a>
+<a class="list-group-item" href="./yii-widgets-detailview.html">DetailView</a>
+<a class="list-group-item" href="./yii-widgets-fragmentcache.html">FragmentCache</a>
+<a class="list-group-item" href="./yii-widgets-inputwidget.html">InputWidget</a>
+<a class="list-group-item" href="./yii-widgets-linkpager.html">LinkPager</a>
+<a class="list-group-item" href="./yii-widgets-linksorter.html">LinkSorter</a>
+<a class="list-group-item" href="./yii-widgets-listview.html">ListView</a>
+<a class="list-group-item" href="./yii-widgets-maskedinput.html">MaskedInput</a>
+<a class="list-group-item" href="./yii-widgets-maskedinputasset.html">MaskedInputAsset</a>
+<a class="list-group-item" href="./yii-widgets-menu.html">Menu</a>
+<a class="list-group-item" href="./yii-widgets-pjax.html">Pjax</a>
+<a class="list-group-item" href="./yii-widgets-pjaxasset.html">PjaxAsset</a>
+<a class="list-group-item" href="./yii-widgets-spaceless.html">Spaceless</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\helpers\BaseInflector</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+                    | <a href="#constants">Constants</a>
+    </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td></tr>
+                            <tr><th>Subclasses</th><td><a href="yii-helpers-inflector.html">yii\helpers\Inflector</a></td></tr>
+                        <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php">https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>BaseInflector provides concrete implementation for <a href="yii-helpers-inflector.html">yii\helpers\Inflector</a>.</strong></p>
+    <p>Do not use BaseInflector. Use <a href="yii-helpers-inflector.html">yii\helpers\Inflector</a> instead.</p>
+
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$plurals">
+        <td><a href="yii-helpers-baseinflector.html#$plurals-detail">$plurals</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The rules for converting a word into its plural form.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="$singulars">
+        <td><a href="yii-helpers-baseinflector.html#$singulars-detail">$singulars</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The rules for converting a word into its singular form.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="$specials">
+        <td><a href="yii-helpers-baseinflector.html#$specials-detail">$specials</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The special rules for converting a word between its plural form and singular form.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="$transliteration">
+        <td><a href="yii-helpers-baseinflector.html#$transliteration-detail">$transliteration</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Fallback map for transliteration used by <a href="yii-helpers-baseinflector.html#transliterate()-detail">transliterate()</a> when intl isn't available.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="$transliterator">
+        <td><a href="yii-helpers-baseinflector.html#$transliterator-detail">$transliterator</a></td>
+        <td>mixed</td>
+        <td>Either a <span class="broken-link">\Transliterator</span>, or a string from which a <span class="broken-link">\Transliterator</span> can be built
+for transliteration.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="camel2id()">
+        <td><a href="yii-helpers-baseinflector.html#camel2id()-detail">camel2id()</a></td>
+        <td>Converts a CamelCase name into an ID in lowercase.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="camel2words()">
+        <td><a href="yii-helpers-baseinflector.html#camel2words()-detail">camel2words()</a></td>
+        <td>Converts a CamelCase name into space-separated words.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="camelize()">
+        <td><a href="yii-helpers-baseinflector.html#camelize()-detail">camelize()</a></td>
+        <td>Returns given word as CamelCased.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="classify()">
+        <td><a href="yii-helpers-baseinflector.html#classify()-detail">classify()</a></td>
+        <td>Converts a table name to its class name.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+                <tr id="humanize()">
+        <td><a href="yii-helpers-baseinflector.html#humanize()-detail">humanize()</a></td>
+        <td>Returns a human-readable string from $word.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="id2camel()">
+        <td><a href="yii-helpers-baseinflector.html#id2camel()-detail">id2camel()</a></td>
+        <td>Converts an ID into a CamelCase name.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="ordinalize()">
+        <td><a href="yii-helpers-baseinflector.html#ordinalize()-detail">ordinalize()</a></td>
+        <td>Converts number to its ordinal English form. For example, converts 13 to 13th, 2 to 2nd .</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="pluralize()">
+        <td><a href="yii-helpers-baseinflector.html#pluralize()-detail">pluralize()</a></td>
+        <td>Converts a word to its plural form.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="sentence()">
+        <td><a href="yii-helpers-baseinflector.html#sentence()-detail">sentence()</a></td>
+        <td>Converts a list of words into a sentence.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="singularize()">
+        <td><a href="yii-helpers-baseinflector.html#singularize()-detail">singularize()</a></td>
+        <td>Returns the singular of the $word.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="slug()">
+        <td><a href="yii-helpers-baseinflector.html#slug()-detail">slug()</a></td>
+        <td>Returns a string with all spaces converted to given replacement,
+non word characters removed and the rest of characters transliterated.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="tableize()">
+        <td><a href="yii-helpers-baseinflector.html#tableize()-detail">tableize()</a></td>
+        <td>Converts a class name to its table name (pluralized) naming conventions.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="titleize()">
+        <td><a href="yii-helpers-baseinflector.html#titleize()-detail">titleize()</a></td>
+        <td>Converts an underscored or CamelCase word into a English
+sentence.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="transliterate()">
+        <td><a href="yii-helpers-baseinflector.html#transliterate()-detail">transliterate()</a></td>
+        <td>Returns transliterated version of a string.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="underscore()">
+        <td><a href="yii-helpers-baseinflector.html#underscore()-detail">underscore()</a></td>
+        <td>Converts any "CamelCased" into an "underscored_word".</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+            <tr id="variablize()">
+        <td><a href="yii-helpers-baseinflector.html#variablize()-detail">variablize()</a></td>
+        <td>Same as camelize but first char is in lowercase.</td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                        <tr id="hasIntl()">
+        <td><a href="yii-helpers-baseinflector.html#hasIntl()-detail">hasIntl()</a></td>
+        <td></td>
+        <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+    </tr>
+                                                    </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+<div class="summary doc-const">
+    <h2>Constants</h2>
+
+    <p><a href="#" class="toggle">Hide inherited constants</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-const" />
+        <col class="col-value" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Constant</th><th>Value</th><th>Description</th><th>Defined By</th>
+    </tr>
+            <tr id="TRANSLITERATE_LOOSE">
+          <td id="TRANSLITERATE_LOOSE-detail">TRANSLITERATE_LOOSE</td>
+          <td>'Any-Latin; Latin-ASCII; [\u0080-\uffff] remove'</td>
+          <td>Shortcut for <code>Any-Latin; Latin-ASCII; [\u0080-\uffff] remove</code> transliteration rule.
+The rule is loose,
+letters will be transliterated with the characters of Basic Latin Unicode Block.
+For example:
+<code>获取到 どちら Українська: ґ,є, Српска: ђ, њ, џ! ¿Español?</code> will be transliterated to
+<code>huo qu dao dochira Ukrainska: g,e, Srpska: d, n, d! Espanol?</code>.
+
+Used in <a href="yii-helpers-baseinflector.html#transliterate()-detail">transliterate()</a>.
+For detailed information see <a href="http://unicode.org/reports/tr15/#Normalization_Forms_Table">unicode normalization forms</a>                        </td>
+          <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+        </tr>
+            <tr id="TRANSLITERATE_MEDIUM">
+          <td id="TRANSLITERATE_MEDIUM-detail">TRANSLITERATE_MEDIUM</td>
+          <td>'Any-Latin; Latin-ASCII'</td>
+          <td>Shortcut for <code>Any-Latin; Latin-ASCII</code> transliteration rule.
+The rule is medium, letters will be
+transliterated to characters of Latin-1 (ISO 8859-1) ASCII table. For example:
+<code>获取到 どちら Українська: ґ,є, Српска: ђ, њ, џ! ¿Español?</code> will be transliterated to
+<code>huo qu dao dochira Ukrainsʹka: g,e, Srpska: d, n, d! ¿Espanol?</code>.
+
+Used in <a href="yii-helpers-baseinflector.html#transliterate()-detail">transliterate()</a>.
+For detailed information see <a href="http://unicode.org/reports/tr15/#Normalization_Forms_Table">unicode normalization forms</a>                        </td>
+          <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+        </tr>
+            <tr id="TRANSLITERATE_STRICT">
+          <td id="TRANSLITERATE_STRICT-detail">TRANSLITERATE_STRICT</td>
+          <td>'Any-Latin; NFKD'</td>
+          <td>Shortcut for <code>Any-Latin; NFKD</code> transliteration rule.
+The rule is strict, letters will be transliterated with
+the closest sound-representation chars. The result may contain any UTF-8 chars. For example:
+<code>获取到 どちら Українська: ґ,є, Српска: ђ, њ, џ! ¿Español?</code> will be transliterated to
+<code>huò qǔ dào dochira Ukraí̈nsʹka: g̀,ê, Srpska: đ, n̂, d̂! ¿Español?</code>.
+
+Used in <a href="yii-helpers-baseinflector.html#transliterate()-detail">transliterate()</a>.
+For detailed information see <a href="http://unicode.org/reports/tr15/#Normalization_Forms_Table">unicode normalization forms</a>                        </td>
+          <td><a href="yii-helpers-baseinflector.html">yii\helpers\BaseInflector</a></td>
+        </tr>
+        </table>
+</div>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$plurals-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#$plurals-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L27" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L27" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $plurals        <span class="detail-header-tag small">
+            public            static                                    property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The rules for converting a word into its plural form.
+The keys are the regular expressions and the values are the corresponding replacements.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-helpers-baseinflector.html#$plurals-detail">$plurals</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'/([nrlm]ese|deer|fish|sheep|measles|ois|pox|media)$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/^(sea[-&nbsp;]bass)$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(m)ove$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1oves'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(f)oot$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1eet'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(h)uman$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1umans'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(s)tatus$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1tatuses'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(s)taff$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1taff'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(t)ooth$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1eeth'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(quiz)$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1zes'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/^(ox)$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1\2en'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/([m|l])ouse$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1ice'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(matr|vert|ind)(ix|ex)$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1ices'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(x|ch|ss|sh)$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1es'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/([^aeiouy]|qu)y$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1ies'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(hive)$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1s'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(?:([^f])fe|([lr])f)$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1\2ves'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/sis$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'ses'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/([ti])um$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1a'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(p)erson$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1eople'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(m)an$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1en'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(c)hild$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1hildren'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(buffal|tomat|potat|ech|her|vet)o$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1oes'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(alumn|bacill|cact|foc|fung|nucle|radi|stimul|syllab|termin|vir)us$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1i'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/us$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'uses'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(alias)$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1es'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(ax|cris|test)is$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1es'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(currenc)y$/'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1ies'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/s$/'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'s'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/^$/'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">''</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/$/'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'s'</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$singulars-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#$singulars-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L63" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L63" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $singulars        <span class="detail-header-tag small">
+            public            static                                    property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The rules for converting a word into its singular form.
+The keys are the regular expressions and the values are the corresponding replacements.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-helpers-baseinflector.html#$singulars-detail">$singulars</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'/([nrlm]ese|deer|fish|sheep|measles|ois|pox|media|ss)$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/^(sea[-&nbsp;]bass)$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(s)tatuses$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1tatus'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(f)eet$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1oot'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(t)eeth$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1ooth'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/^(.*)(menu)s$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1\2'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(quiz)zes$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(matr)ices$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1ix'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(vert|ind)ices$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1ex'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/^(ox)en/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(alias)(es)*$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(alumn|bacill|cact|foc|fung|nucle|radi|stimul|syllab|termin|viri?)i$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1us'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/([ftw]ax)es/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(cris|ax|test)es$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1is'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(shoe|slave)s$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(o)es$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/ouses$/'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'ouse'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/([^a])uses$/'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1us'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/([m|l])ice$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1ouse'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(x|ch|ss|sh)es$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(m)ovies$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1\2ovie'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(s)eries$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1\2eries'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/([^aeiouy]|qu)ies$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1y'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/([lr])ves$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1f'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(tive)s$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(hive)s$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(drive)s$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/([^fo])ves$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1fe'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(^analy)ses$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1sis'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(analy|diagno|^ba|(p)arenthe|(p)rogno|(s)ynop|(t)he)ses$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1\2sis'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/([ti])a$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1um'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(p)eople$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1\2erson'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(m)en$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1an'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(c)hildren$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1\2hild'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(n)ews$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1\2ews'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(n)etherlands$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1\2etherlands'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/eaus$/'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'eau'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/(currenc)ies$/'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\1y'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/^(.*us)$/'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'\\1'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/s$/i'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">''</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$specials-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#$specials-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L109" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L109" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $specials        <span class="detail-header-tag small">
+            public            static                                    property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The special rules for converting a word between its plural form and singular form.
+The keys are the special words in singular form, and the values are the corresponding plural form.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-helpers-baseinflector.html#$specials-detail">$specials</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'atlas'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'atlases'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'beef'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'beefs'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'brother'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'brothers'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'cafe'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'cafes'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'child'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'children'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'cookie'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'cookies'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'corpus'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'corpuses'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'cow'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'cows'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'curve'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'curves'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'foe'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'foes'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ganglion'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'ganglions'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'genie'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'genies'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'genus'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'genera'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'graffito'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'graffiti'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'hoof'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'hoofs'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'loaf'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'loaves'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'man'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'men'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'money'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'monies'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'mongoose'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'mongooses'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'move'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'moves'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'mythos'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'mythoi'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'niche'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'niches'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'numen'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'numina'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'occiput'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'occiputs'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'octopus'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'octopuses'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'opus'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'opuses'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ox'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'oxen'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'pasta'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'pasta'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'penis'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'penises'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'sex'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'sexes'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'soliloquy'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'soliloquies'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'testis'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'testes'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'trilby'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'trilbys'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'turf'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'turfs'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'wave'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'waves'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Amoyese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Amoyese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'bison'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'bison'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Borghese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Borghese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'bream'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'bream'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'breeches'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'breeches'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'britches'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'britches'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'buffalo'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'buffalo'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'cantus'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'cantus'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'carp'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'carp'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'chassis'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'chassis'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'clippers'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'clippers'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'cod'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'cod'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'coitus'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'coitus'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Congoese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Congoese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'contretemps'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'contretemps'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'corps'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'corps'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'debris'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'debris'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'diabetes'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'diabetes'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'djinn'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'djinn'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'eland'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'eland'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'elk'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'elk'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'equipment'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'equipment'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Faroese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Faroese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'flounder'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'flounder'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Foochowese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Foochowese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'gallows'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'gallows'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Genevese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Genevese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Genoese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Genoese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Gilbertese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Gilbertese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'graffiti'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'graffiti'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'headquarters'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'headquarters'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'herpes'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'herpes'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'hijinks'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'hijinks'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Hottentotese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Hottentotese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'information'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'information'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'innings'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'innings'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'jackanapes'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'jackanapes'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Kiplingese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Kiplingese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Kongoese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Kongoese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Lucchese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Lucchese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'mackerel'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'mackerel'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Maltese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Maltese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'mews'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'mews'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'moose'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'moose'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'mumps'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'mumps'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Nankingese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Nankingese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'news'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'news'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'nexus'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'nexus'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Niasese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Niasese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Pekingese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Pekingese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Piedmontese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Piedmontese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'pincers'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'pincers'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Pistoiese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Pistoiese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'pliers'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'pliers'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Portuguese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Portuguese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'proceedings'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'proceedings'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'rabies'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'rabies'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'rice'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'rice'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'rhinoceros'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'rhinoceros'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'salmon'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'salmon'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Sarawakese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Sarawakese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'scissors'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'scissors'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'series'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'series'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Shavese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Shavese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'shears'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'shears'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'siemens'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'siemens'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'species'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'species'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'swine'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'swine'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'testes'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'testes'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'trousers'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'trousers'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'trout'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'trout'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'tuna'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'tuna'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Vermontese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Vermontese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Wenchowese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Wenchowese'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'whiting'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'whiting'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'wildebeest'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'wildebeest'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Yengeese'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Yengeese'</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$transliteration-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#$transliteration-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L226" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L226" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $transliteration        <span class="detail-header-tag small">
+            public            static                                    property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Fallback map for transliteration used by <a href="yii-helpers-baseinflector.html#transliterate()-detail">transliterate()</a> when intl isn't available.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-helpers-baseinflector.html#$transliteration-detail">$transliteration</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'À'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'A'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Á'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'A'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Â'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'A'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ã'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'A'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ä'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'A'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Å'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'A'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Æ'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'AE'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ç'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'C'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'È'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'E'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'É'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'E'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ê'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'E'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ë'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'E'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ì'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'I'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Í'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'I'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Î'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'I'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ï'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'I'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ð'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'D'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ñ'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'N'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ò'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'O'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ó'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'O'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ô'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'O'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Õ'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'O'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ö'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'O'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ő'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'O'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ø'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'O'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ù'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'U'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ú'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'U'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Û'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'U'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ü'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'U'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ű'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'U'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Ý'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'Y'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'Þ'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'TH'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ß'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'ss'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'à'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'a'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'á'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'a'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'â'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'a'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ã'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'a'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ä'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'a'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'å'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'a'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'æ'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'ae'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ç'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'c'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'è'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'e'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'é'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'e'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ê'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'e'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ë'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'e'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ì'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'i'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'í'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'i'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'î'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'i'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ï'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'i'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ð'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'d'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ñ'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'n'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ò'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'o'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ó'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'o'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ô'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'o'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'õ'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'o'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ö'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'o'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ő'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'o'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ø'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'o'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ù'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'u'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ú'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'u'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'û'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'u'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ü'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'u'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ű'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'u'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ý'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'y'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'þ'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'th'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'ÿ'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'y'</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$transliterator-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#$transliterator-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L290" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L290" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $transliterator        <span class="detail-header-tag small">
+            public            static                                    property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Either a <span class="broken-link">\Transliterator</span>, or a string from which a <span class="broken-link">\Transliterator</span> can be built
+for transliteration. Used by <a href="yii-helpers-baseinflector.html#transliterate()-detail">transliterate()</a> when intl is available. Defaults to <a href="yii-helpers-baseinflector.html#TRANSLITERATE_LOOSE-detail">TRANSLITERATE_LOOSE</a></p>
+
+        <p>See also <a href="http://php.net/manual/en/transliterator.transliterate.php">http://php.net/manual/en/transliterator.transliterate.php</a>.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public static</span> <span class="signature-type">mixed</span> <a href="yii-helpers-baseinflector.html#$transliterator-detail">$transliterator</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">self</span><span style="color: #007700">::</span><span style="color: #0000BB">TRANSLITERATE_LOOSE</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="camel2id()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#camel2id()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L390" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L390" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        camel2id()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts a CamelCase name into an ID in lowercase.</strong></p>
+
+        <p>Words in the ID may be concatenated using the specified character (defaults to '-').
+For example, 'PostTag' will be converted to 'post-tag'.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#camel2id()-detail">camel2id</a></strong> ( <span style="color: #0000BB">$name</span>, <span style="color: #0000BB">$separator&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'-'</span>, <span style="color: #0000BB">$strict&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The string to be converted</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$separator</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The character used to concatenate the words in the ID</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$strict</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a>|<a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Whether to insert a separator between two consecutive uppercase chars, defaults to false</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The resulting ID</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="camel2words()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#camel2words()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L370" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L370" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        camel2words()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts a CamelCase name into space-separated words.</strong></p>
+
+        <p>For example, 'PostTag' will be converted to 'Post Tag'.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#camel2words()-detail">camel2words</a></strong> ( <span style="color: #0000BB">$name</span>, <span style="color: #0000BB">$ucwords&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The string to be converted</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$ucwords</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to capitalize the first letter in each word</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The resulting words</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="camelize()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#camelize()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L358" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L358" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        camelize()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns given word as CamelCased.</strong></p>
+
+        <p>Converts a word like "send_email" to "SendEmail". It
+will remove non alphanumeric character from the word, so
+"who's online" will be converted to "WhoSOnline".</p>
+
+        <p>See also <a href="yii-helpers-baseinflector.html#variablize()-detail">variablize()</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#camelize()-detail">camelize</a></strong> ( <span style="color: #0000BB">$word</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$word</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The word to CamelCase</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="classify()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#classify()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L529" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L529" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        classify()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts a table name to its class name.</strong></p>
+
+        <p>For example, converts "people" to "Person".</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#classify()-detail">classify</a></strong> ( <span style="color: #0000BB">$tableName</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$tableName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="hasIntl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#hasIntl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L517" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L517" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        hasIntl()
+        <span class="detail-header-tag small">
+            protected                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected static</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-helpers-baseinflector.html#hasIntl()-detail">hasIntl</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>If intl extension is loaded</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="humanize()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#humanize()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L429" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L429" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        humanize()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns a human-readable string from $word.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#humanize()-detail">humanize</a></strong> ( <span style="color: #0000BB">$word</span>, <span style="color: #0000BB">$ucAll&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$word</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The string to humanize</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$ucAll</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to set all words to uppercase or not</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="id2camel()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#id2camel()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L408" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L408" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        id2camel()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts an ID into a CamelCase name.</strong></p>
+
+        <p>Words in the ID separated by <code>$separator</code> (defaults to '-') will be concatenated into a CamelCase name.
+For example, 'post-tag' is converted to 'PostTag'.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#id2camel()-detail">id2camel</a></strong> ( <span style="color: #0000BB">$id</span>, <span style="color: #0000BB">$separator&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'-'</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$id</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The ID to be converted</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$separator</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The character used to separate the words in the ID</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The resulting CamelCase name</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="ordinalize()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#ordinalize()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L539" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L539" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        ordinalize()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts number to its ordinal English form. For example, converts 13 to 13th, 2 to 2nd .</strong></p>
+
+        <p>..</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#ordinalize()-detail">ordinalize</a></strong> ( <span style="color: #0000BB">$number</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$number</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The number to get its ordinal value</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="pluralize()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#pluralize()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L300" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L300" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        pluralize()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts a word to its plural form.</strong></p>
+
+        <p>Note that this is for English only!
+For example, 'apple' will become 'apples', and 'child' will become 'children'.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#pluralize()-detail">pluralize</a></strong> ( <span style="color: #0000BB">$word</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$word</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The word to be pluralized</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The pluralized word</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="sentence()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#sentence()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L584" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L584" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        sentence()
+        <span class="detail-header-tag small">
+            public                        static            method
+                            (available since version 2.0.1)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts a list of words into a sentence.</strong></p>
+
+        <p>Special treatment is done for the last few words. For example,</p>
+<pre><code class="hljs php language-php"><span class="hljs-variable">$words</span> = [<span class="hljs-string">'Spain'</span>, <span class="hljs-string">'France'</span>];
+<span class="hljs-keyword">echo</span> Inflector::sentence(<span class="hljs-variable">$words</span>);
+<span class="hljs-comment">// output: Spain and France</span>
+
+<span class="hljs-variable">$words</span> = [<span class="hljs-string">'Spain'</span>, <span class="hljs-string">'France'</span>, <span class="hljs-string">'Italy'</span>];
+<span class="hljs-keyword">echo</span> Inflector::sentence(<span class="hljs-variable">$words</span>);
+<span class="hljs-comment">// output: Spain, France and Italy</span>
+
+<span class="hljs-variable">$words</span> = [<span class="hljs-string">'Spain'</span>, <span class="hljs-string">'France'</span>, <span class="hljs-string">'Italy'</span>];
+<span class="hljs-keyword">echo</span> Inflector::sentence(<span class="hljs-variable">$words</span>, <span class="hljs-string">' &amp; '</span>);
+<span class="hljs-comment">// output: Spain, France &amp; Italy</span>
+</code></pre>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#sentence()-detail">sentence</a></strong> ( <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <span style="color: #0000BB">$words</span>, <span style="color: #0000BB">$twoWordsConnector&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span>, <span style="color: #0000BB">$lastWordConnector&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span>, <span style="color: #0000BB">$connector&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">',&nbsp;'</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$words</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The words to be converted into an string</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$twoWordsConnector</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The string connecting words when there are only two</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$lastWordConnector</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The string connecting the last two words. If this is null, it will
+take the value of <code>$twoWordsConnector</code>.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$connector</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The string connecting words other than those connected by
+$lastWordConnector and $twoWordsConnector</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The generated sentence</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="singularize()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#singularize()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L319" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L319" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        singularize()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the singular of the $word.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#singularize()-detail">singularize</a></strong> ( <span style="color: #0000BB">$word</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$word</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The english word to singularize</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Singular noun.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="slug()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#slug()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L478" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L478" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        slug()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns a string with all spaces converted to given replacement,
+non word characters removed and the rest of characters transliterated.</strong></p>
+
+        <p>If intl extension isn't available uses fallback that converts latin characters only
+and removes the rest. You may customize characters map via $transliteration property
+of the helper.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#slug()-detail">slug</a></strong> ( <span style="color: #0000BB">$string</span>, <span style="color: #0000BB">$replacement&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'-'</span>, <span style="color: #0000BB">$lowercase&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$string</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>An arbitrary string to convert</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$replacement</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The replacement to use for spaces</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$lowercase</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to return the string in lowercase or not. Defaults to <code>true</code>.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The converted string.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="tableize()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#tableize()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L460" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L460" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        tableize()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts a class name to its table name (pluralized) naming conventions.</strong></p>
+
+        <p>For example, converts "Person" to "people".</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#tableize()-detail">tableize</a></strong> ( <span style="color: #0000BB">$className</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$className</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The class name for getting related table_name</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="titleize()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#titleize()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L341" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L341" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        titleize()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts an underscored or CamelCase word into a English
+sentence.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#titleize()-detail">titleize</a></strong> ( <span style="color: #0000BB">$words</span>, <span style="color: #0000BB">$ucAll&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$words</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$ucAll</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to set all words to uppercase</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="transliterate()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#transliterate()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L501" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L501" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        transliterate()
+        <span class="detail-header-tag small">
+            public                        static            method
+                            (available since version 2.0.7)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns transliterated version of a string.</strong></p>
+
+        <p>If intl extension isn't available uses fallback that converts latin characters only
+and removes the rest. You may customize characters map via $transliteration property
+of the helper.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#transliterate()-detail">transliterate</a></strong> ( <span style="color: #0000BB">$string</span>, <span style="color: #0000BB">$transliterator&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$string</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Input string</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$transliterator</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|\Transliterator</td>
+                  <td class="param-desc-col"><p>Either a <span class="broken-link">\Transliterator</span> or a string
+from which a <span class="broken-link">\Transliterator</span> can be built.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="underscore()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#underscore()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L418" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L418" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        underscore()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts any "CamelCased" into an "underscored_word".</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#underscore()-detail">underscore</a></strong> ( <span style="color: #0000BB">$words</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$words</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The word(s) to underscore</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="variablize()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseinflector.html#variablize()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseInflector.php#L446" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseInflector.php#L446" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        variablize()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Same as camelize but first char is in lowercase.</strong></p>
+
+        <p>Converts a word like "send_email" to "sendEmail". It
+will remove non alphanumeric character from the word, so
+"who's online" will be converted to "whoSOnline".</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseinflector.html#variablize()-detail">variablize</a></strong> ( <span style="color: #0000BB">$word</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$word</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>To lowerCamelCase</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Tue, 14 Aug 2018 17:48:31 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

@@ -3,16 +3,15 @@
 /**
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\ipFilter\models;
+namespace johnsnook\visitor\models;
 
-use yii\db\ActiveRecord;
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
-use johnsnook\ipFilter\models\Country;
+use johnsnook\visitor\models\Country;
 
 /**
  * This is the model class for table "visitor".
@@ -35,7 +34,7 @@ use johnsnook\ipFilter\models\Country;
  * @property string $hat_rule
  *
  */
-class Visitor extends ActiveRecord {
+class Visitor extends \yii\db\ActiveRecord {
 
     const HAT_COLOR_WHITE = 'White';
     const HAT_COLOR_NONE = 'None';
@@ -213,14 +212,14 @@ class Visitor extends ActiveRecord {
         }
         return ($this->hat_color === static::HAT_COLOR_BLACK);
 //            public $hat = ['color' => static::HAT_COLOR_NONE, 'why' => null];
-//        $ipFilter = \Yii::$app->getModule('ipFilter');
+//        $visitor = \Yii::$app->getModule('visitor');
 //        $return = false;
-//        if ($this->proxy !== 'no' && in_array($this->proxy, $ipFilter->proxyBan, true)) {
+//        if ($this->proxy !== 'no' && in_array($this->proxy, $visitor->proxyBan, true)) {
 //            $this->blacklist_reason = self::BL_PROXY;
 //            return true;
 //        }
 //
-//        foreach ($ipFilter->autoBan as $ban) {
+//        foreach ($visitor->autoBan as $ban) {
 //            if (IpHelper::inRange($this->ip, $ban)) {
 //                //$this->blacklist_reason = self::BL_AUTOBAN;
 //                $return = true;
@@ -247,9 +246,9 @@ class Visitor extends ActiveRecord {
      * @return object|null
      */
     public function getIpInfo() {
-        $ipFilter = \Yii::$app->getModule('ipFilter');
+        $visitor = \Yii::$app->getModule('visitor');
 
-        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, $ipFilter->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, $visitor->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
         try {
             if (!empty($data = json_decode(file_get_contents($url)))) {
                 return $data;
@@ -275,9 +274,9 @@ class Visitor extends ActiveRecord {
      * @return object|null
      */
     public static function proxyCheck($ip) {
-        $ipFilter = \Yii::$app->getModule('ipFilter');
+        $visitor = \Yii::$app->getModule('visitor');
         $proxy = null;
-        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $ipFilter->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $visitor->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
 
         try {
             if (!empty($data = json_decode(file_get_contents($url), true))) {
@@ -293,8 +292,8 @@ class Visitor extends ActiveRecord {
     }
 
     private function getProxyInfo() {
-        $ipFilter = \Yii::$app->getModule('ipFilter');
-        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, $ipFilter->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
+        $visitor = \Yii::$app->getModule('visitor');
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, $visitor->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
         try {
             if (!empty($data = json_decode(file_get_contents($url), true))) {
                 return (object) $data[$this->ip];

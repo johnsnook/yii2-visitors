@@ -1,0 +1,2668 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>    <title>Generator, yii\gii\generators\model\Generator - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w16260" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w16260-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w16260-collapse" class="collapse navbar-collapse"><ul id="w16261" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w16262" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-16250" data-toggle="collapse" data-parent="#navigation">yii\gii <b class="caret"></b></a><div id="navigation-16250" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-gii-codefile.html">CodeFile</a>
+<a class="list-group-item" href="./yii-gii-generator.html">Generator</a>
+<a class="list-group-item" href="./yii-gii-giiasset.html">GiiAsset</a>
+<a class="list-group-item" href="./yii-gii-module.html">Module</a>
+<a class="list-group-item" href="./yii-gii-typeaheadasset.html">TypeAheadAsset</a></div>
+<a class="list-group-item" href="#navigation-16251" data-toggle="collapse" data-parent="#navigation">yii\gii\components <b class="caret"></b></a><div id="navigation-16251" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-gii-components-activefield.html">ActiveField</a>
+<a class="list-group-item" href="./yii-gii-components-diffrendererhtmlinline.html">DiffRendererHtmlInline</a></div>
+<a class="list-group-item" href="#navigation-16252" data-toggle="collapse" data-parent="#navigation">yii\gii\console <b class="caret"></b></a><div id="navigation-16252" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-gii-console-generateaction.html">GenerateAction</a>
+<a class="list-group-item" href="./yii-gii-console-generatecontroller.html">GenerateController</a></div>
+<a class="list-group-item" href="#navigation-16253" data-toggle="collapse" data-parent="#navigation">yii\gii\controllers <b class="caret"></b></a><div id="navigation-16253" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-gii-controllers-defaultcontroller.html">DefaultController</a></div>
+<a class="list-group-item" href="#navigation-16254" data-toggle="collapse" data-parent="#navigation">yii\gii\generators\controller <b class="caret"></b></a><div id="navigation-16254" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-gii-generators-controller-generator.html">Generator</a></div>
+<a class="list-group-item" href="#navigation-16255" data-toggle="collapse" data-parent="#navigation">yii\gii\generators\crud <b class="caret"></b></a><div id="navigation-16255" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-gii-generators-crud-generator.html">Generator</a></div>
+<a class="list-group-item" href="#navigation-16256" data-toggle="collapse" data-parent="#navigation">yii\gii\generators\extension <b class="caret"></b></a><div id="navigation-16256" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-gii-generators-extension-generator.html">Generator</a></div>
+<a class="list-group-item" href="#navigation-16257" data-toggle="collapse" data-parent="#navigation">yii\gii\generators\form <b class="caret"></b></a><div id="navigation-16257" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-gii-generators-form-generator.html">Generator</a></div>
+<a class="list-group-item active" href="#navigation-16258" data-toggle="collapse" data-parent="#navigation">yii\gii\generators\model <b class="caret"></b></a><div id="navigation-16258" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-gii-generators-model-generator.html">Generator</a></div>
+<a class="list-group-item" href="#navigation-16259" data-toggle="collapse" data-parent="#navigation">yii\gii\generators\module <b class="caret"></b></a><div id="navigation-16259" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-gii-generators-module-generator.html">Generator</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\gii\generators\model\Generator</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+                | <a href="#events">Events</a>
+                | <a href="#constants">Constants</a>
+    </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a> &raquo;
+<a href="yii-gii-generator.html">yii\gii\Generator</a> &raquo;
+<a href="yii-base-model.html">yii\base\Model</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="http://www.php.net/class.arrayaccess">ArrayAccess</a>, <a href="http://www.php.net/class.iteratoraggregate">IteratorAggregate</a>, <a href="yii-base-arrayable.html">yii\base\Arrayable</a>, <a href="yii-base-configurable.html">yii\base\Configurable</a>, <a href="yii-base-staticinstanceinterface.html">yii\base\StaticInstanceInterface</a></td></tr>
+                    <tr><th>Uses Traits</th><td><a href="yii-base-arrayabletrait.html">yii\base\ArrayableTrait</a>, <a href="yii-base-staticinstancetrait.html">yii\base\StaticInstanceTrait</a></td></tr>
+                            <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php">https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>This generator will generate one or multiple ActiveRecord classes for the specified database table.</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="$activeValidators">
+        <td><a href="yii-base-model.html#$activeValidators-detail">$activeValidators</a></td>
+        <td><a href="yii-validators-validator.html">yii\validators\Validator</a>[]</td>
+        <td>The validators applicable to the current <a href="yii-base-model.html#$scenario-detail">$scenario</a>.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="$attributes">
+        <td><a href="yii-base-model.html#$attributes-detail">$attributes</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Attribute values (name =&gt; value).</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr id="$baseClass">
+        <td><a href="yii-gii-generators-model-generator.html#$baseClass-detail">$baseClass</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$behaviors">
+        <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
+        <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
+        <td>List of behaviors attached to this component</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                <tr id="$db">
+        <td><a href="yii-gii-generators-model-generator.html#$db-detail">$db</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="$description">
+        <td><a href="yii-gii-generators-model-generator.html#$description-detail">$description</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The detailed description of the generator.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$enableI18N">
+        <td><a href="yii-gii-generator.html#$enableI18N-detail">$enableI18N</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether the strings will be generated using <code>Yii::t()</code> or normal strings.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$errors">
+        <td><a href="yii-base-model.html#$errors-detail">$errors</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Errors for all attributes or the specified attribute.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="$firstErrors">
+        <td><a href="yii-base-model.html#$firstErrors-detail">$firstErrors</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The first errors.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr id="$generateLabelsFromComments">
+        <td><a href="yii-gii-generators-model-generator.html#$generateLabelsFromComments-detail">$generateLabelsFromComments</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="$generateQuery">
+        <td><a href="yii-gii-generators-model-generator.html#$generateQuery-detail">$generateQuery</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="$generateRelations">
+        <td><a href="yii-gii-generators-model-generator.html#$generateRelations-detail">$generateRelations</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="$generateRelationsFromCurrentSchema">
+        <td><a href="yii-gii-generators-model-generator.html#$generateRelationsFromCurrentSchema-detail">$generateRelationsFromCurrentSchema</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$iterator">
+        <td><a href="yii-base-model.html#$iterator-detail">$iterator</a></td>
+        <td><a href="http://www.php.net/class.arrayiterator">ArrayIterator</a></td>
+        <td>An iterator for traversing the items in the list.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="$messageCategory">
+        <td><a href="yii-gii-generator.html#$messageCategory-detail">$messageCategory</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The message category used by <code>Yii::t()</code> when <code>$enableI18N</code> is <code>true</code>.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr id="$modelClass">
+        <td><a href="yii-gii-generators-model-generator.html#$modelClass-detail">$modelClass</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="$name">
+        <td><a href="yii-gii-generators-model-generator.html#$name-detail">$name</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Name of the code generator</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="$ns">
+        <td><a href="yii-gii-generators-model-generator.html#$ns-detail">$ns</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="$queryBaseClass">
+        <td><a href="yii-gii-generators-model-generator.html#$queryBaseClass-detail">$queryBaseClass</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="$queryClass">
+        <td><a href="yii-gii-generators-model-generator.html#$queryClass-detail">$queryClass</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="$queryNs">
+        <td><a href="yii-gii-generators-model-generator.html#$queryNs-detail">$queryNs</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$scenario">
+        <td><a href="yii-base-model.html#$scenario-detail">$scenario</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The scenario that this model is in.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr id="$standardizeCapitals">
+        <td><a href="yii-gii-generators-model-generator.html#$standardizeCapitals-detail">$standardizeCapitals</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$stickyDataFile">
+        <td><a href="yii-gii-generator.html#$stickyDataFile-detail">$stickyDataFile</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The file path that stores the sticky attribute values.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr id="$tableName">
+        <td><a href="yii-gii-generators-model-generator.html#$tableName-detail">$tableName</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                <tr id="$tablePrefix">
+        <td><a href="yii-gii-generators-model-generator.html#$tablePrefix-detail">$tablePrefix</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$template">
+        <td><a href="yii-gii-generator.html#$template-detail">$template</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The name of the code template that the user has selected.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$templatePath">
+        <td><a href="yii-gii-generator.html#$templatePath-detail">$templatePath</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The root path of the template files that are currently being used.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$templates">
+        <td><a href="yii-gii-generator.html#$templates-detail">$templates</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>A list of available code templates.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr id="$useSchemaName">
+        <td><a href="yii-gii-generators-model-generator.html#$useSchemaName-detail">$useSchemaName</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="$useTablePrefix">
+        <td><a href="yii-gii-generators-model-generator.html#$useTablePrefix-detail">$useTablePrefix</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="$validators">
+        <td><a href="yii-base-model.html#$validators-detail">$validators</a></td>
+        <td><a href="http://www.php.net/class.arrayobject">ArrayObject</a>|<a href="yii-validators-validator.html">yii\validators\Validator</a>[]</td>
+        <td>All the validators declared in the model.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-property">
+<h2>Protected Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+                        <tr id="$classNames">
+        <td><a href="yii-gii-generators-model-generator.html#$classNames-detail">$classNames</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                                                                                                <tr id="$tableNames">
+        <td><a href="yii-gii-generators-model-generator.html#$tableNames-detail">$tableNames</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                                </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-component.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-baseobject.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-component.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-component.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-component.html#__set()-detail">__set()</a></td>
+        <td>Sets the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-component.html#__unset()-detail">__unset()</a></td>
+        <td>Sets a component property to be null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="activeAttributes()">
+        <td><a href="yii-base-model.html#activeAttributes()-detail">activeAttributes()</a></td>
+        <td>Returns the attribute names that are subject to validation in the current scenario.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="addError()">
+        <td><a href="yii-base-model.html#addError()-detail">addError()</a></td>
+        <td>Adds a new error to the specified attribute.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="addErrors()">
+        <td><a href="yii-base-model.html#addErrors()-detail">addErrors()</a></td>
+        <td>Adds a list of errors.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+                <tr class="inherited" id="afterValidate()">
+        <td><a href="yii-base-model.html#afterValidate()-detail">afterValidate()</a></td>
+        <td>This method is invoked after validation ends.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attributeHints()">
+        <td><a href="yii-base-model.html#attributeHints()-detail">attributeHints()</a></td>
+        <td>Returns the attribute hints.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr id="attributeLabels()">
+        <td><a href="yii-gii-generators-model-generator.html#attributeLabels()-detail">attributeLabels()</a></td>
+        <td>Returns the attribute labels.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="attributes()">
+        <td><a href="yii-base-model.html#attributes()-detail">attributes()</a></td>
+        <td>Returns the list of attribute names.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr id="autoCompleteData()">
+        <td><a href="yii-gii-generators-model-generator.html#autoCompleteData()-detail">autoCompleteData()</a></td>
+        <td>Returns the list of auto complete values.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="beforeValidate()">
+        <td><a href="yii-base-model.html#beforeValidate()-detail">beforeValidate()</a></td>
+        <td>This method is invoked before validation starts.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="behaviors()">
+        <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-component.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="clearErrors()">
+        <td><a href="yii-base-model.html#clearErrors()-detail">clearErrors()</a></td>
+        <td>Removes errors for all attributes or a single attribute.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="createValidators()">
+        <td><a href="yii-base-model.html#createValidators()-detail">createValidators()</a></td>
+        <td>Creates validator objects based on the validation rules specified in <a href="yii-base-model.html#rules()-detail">rules()</a>.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="defaultTemplate()">
+        <td><a href="yii-gii-generator.html#defaultTemplate()-detail">defaultTemplate()</a></td>
+        <td>Returns the root path to the default code template files.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="extraFields()">
+        <td><a href="yii-base-arrayabletrait.html#extraFields()-detail">extraFields()</a></td>
+        <td>Returns the list of fields that can be expanded further and returned by <a href="yii-base-arrayabletrait.html#toArray()-detail">toArray()</a>.</td>
+        <td><a href="yii-base-arrayabletrait.html">yii\base\ArrayableTrait</a></td>
+    </tr>
+                    <tr class="inherited" id="fields()">
+        <td><a href="yii-base-arrayabletrait.html#fields()-detail">fields()</a></td>
+        <td>Returns the list of fields that should be returned by default by <a href="yii-base-arrayabletrait.html#toArray()-detail">toArray()</a> when no specific fields are specified.</td>
+        <td><a href="yii-base-arrayabletrait.html">yii\base\ArrayableTrait</a></td>
+    </tr>
+            <tr class="inherited" id="formName()">
+        <td><a href="yii-base-model.html#formName()-detail">formName()</a></td>
+        <td>Returns the form name that this model class should use.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="formView()">
+        <td><a href="yii-gii-generator.html#formView()-detail">formView()</a></td>
+        <td>Returns the view file for the input form of the generator.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr id="generate()">
+        <td><a href="yii-gii-generators-model-generator.html#generate()-detail">generate()</a></td>
+        <td>Generates the code based on the current user input and the specified code template files.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="generateAttributeLabel()">
+        <td><a href="yii-base-model.html#generateAttributeLabel()-detail">generateAttributeLabel()</a></td>
+        <td>Generates a user friendly attribute label based on the give attribute name.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+                <tr id="generateLabels()">
+        <td><a href="yii-gii-generators-model-generator.html#generateLabels()-detail">generateLabels()</a></td>
+        <td>Generates the attribute labels for the specified table.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                                <tr id="generateRules()">
+        <td><a href="yii-gii-generators-model-generator.html#generateRules()-detail">generateRules()</a></td>
+        <td>Generates validation rules for the specified table.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="generateString()">
+        <td><a href="yii-gii-generator.html#generateString()-detail">generateString()</a></td>
+        <td>Generates a string depending on enableI18N property</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr id="generateTableName()">
+        <td><a href="yii-gii-generators-model-generator.html#generateTableName()-detail">generateTableName()</a></td>
+        <td>Generates the table name by considering table prefix.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="getActiveValidators()">
+        <td><a href="yii-base-model.html#getActiveValidators()-detail">getActiveValidators()</a></td>
+        <td>Returns the validators applicable to the current <a href="yii-base-model.html#$scenario-detail">$scenario</a>.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="getAttributeHint()">
+        <td><a href="yii-base-model.html#getAttributeHint()-detail">getAttributeHint()</a></td>
+        <td>Returns the text hint for the specified attribute.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="getAttributeLabel()">
+        <td><a href="yii-base-model.html#getAttributeLabel()-detail">getAttributeLabel()</a></td>
+        <td>Returns the text label for the specified attribute.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="getAttributes()">
+        <td><a href="yii-base-model.html#getAttributes()-detail">getAttributes()</a></td>
+        <td>Returns attribute values.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                    <tr id="getDescription()">
+        <td><a href="yii-gii-generators-model-generator.html#getDescription()-detail">getDescription()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="getErrorSummary()">
+        <td><a href="yii-base-model.html#getErrorSummary()-detail">getErrorSummary()</a></td>
+        <td>Returns the errors for all attributes as a one-dimensional array.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="getErrors()">
+        <td><a href="yii-base-model.html#getErrors()-detail">getErrors()</a></td>
+        <td>Returns the errors for all attributes or a single attribute.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="getFirstError()">
+        <td><a href="yii-base-model.html#getFirstError()-detail">getFirstError()</a></td>
+        <td>Returns the first error of the specified attribute.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="getFirstErrors()">
+        <td><a href="yii-base-model.html#getFirstErrors()-detail">getFirstErrors()</a></td>
+        <td>Returns the first error of every attribute in the model.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="getIterator()">
+        <td><a href="yii-base-model.html#getIterator()-detail">getIterator()</a></td>
+        <td>Returns an iterator for traversing the attributes in the model.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr id="getName()">
+        <td><a href="yii-gii-generators-model-generator.html#getName()-detail">getName()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="getScenario()">
+        <td><a href="yii-base-model.html#getScenario()-detail">getScenario()</a></td>
+        <td>Returns the scenario that this model is used in.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+                <tr class="inherited" id="getStickyDataFile()">
+        <td><a href="yii-gii-generator.html#getStickyDataFile()-detail">getStickyDataFile()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+                <tr id="getTablePrefix()">
+        <td><a href="yii-gii-generators-model-generator.html#getTablePrefix()-detail">getTablePrefix()</a></td>
+        <td>Returns the <code>tablePrefix</code> property of the DB connection as specified</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="getTemplatePath()">
+        <td><a href="yii-gii-generator.html#getTemplatePath()-detail">getTemplatePath()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="getValidators()">
+        <td><a href="yii-base-model.html#getValidators()-detail">getValidators()</a></td>
+        <td>Returns all the validators declared in <a href="yii-base-model.html#rules()-detail">rules()</a>.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="hasErrors()">
+        <td><a href="yii-base-model.html#hasErrors()-detail">hasErrors()</a></td>
+        <td>Returns a value indicating whether there is any validation error.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-component.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-component.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined for this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="hints()">
+        <td><a href="yii-gii-generators-model-generator.html#hints()-detail">hints()</a></td>
+        <td>Returns the list of hint messages.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-gii-generator.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="instance()">
+        <td><a href="yii-base-staticinstancetrait.html#instance()-detail">instance()</a></td>
+        <td>Returns static class instance, which can be used to obtain meta information.</td>
+        <td><a href="yii-base-staticinstancetrait.html">yii\base\StaticInstanceTrait</a></td>
+    </tr>
+            <tr class="inherited" id="isAttributeActive()">
+        <td><a href="yii-base-model.html#isAttributeActive()-detail">isAttributeActive()</a></td>
+        <td>Returns a value indicating whether the attribute is active in the current scenario.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="isAttributeRequired()">
+        <td><a href="yii-base-model.html#isAttributeRequired()-detail">isAttributeRequired()</a></td>
+        <td>Returns a value indicating whether the attribute is required.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="isAttributeSafe()">
+        <td><a href="yii-base-model.html#isAttributeSafe()-detail">isAttributeSafe()</a></td>
+        <td>Returns a value indicating whether the attribute is safe for massive assignments.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+                    <tr class="inherited" id="isReservedKeyword()">
+        <td><a href="yii-gii-generator.html#isReservedKeyword()-detail">isReservedKeyword()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="load()">
+        <td><a href="yii-base-model.html#load()-detail">load()</a></td>
+        <td>Populates the model with input data.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="loadMultiple()">
+        <td><a href="yii-base-model.html#loadMultiple()-detail">loadMultiple()</a></td>
+        <td>Populates a set of models with the data from end user.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="loadStickyAttributes()">
+        <td><a href="yii-gii-generator.html#loadStickyAttributes()-detail">loadStickyAttributes()</a></td>
+        <td>Loads sticky attributes from an internal file and populates them into the generator.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="offsetExists()">
+        <td><a href="yii-base-model.html#offsetExists()-detail">offsetExists()</a></td>
+        <td>Returns whether there is an element at the specified offset.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="offsetGet()">
+        <td><a href="yii-base-model.html#offsetGet()-detail">offsetGet()</a></td>
+        <td>Returns the element at the specified offset.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="offsetSet()">
+        <td><a href="yii-base-model.html#offsetSet()-detail">offsetSet()</a></td>
+        <td>Sets the element at the specified offset.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="offsetUnset()">
+        <td><a href="yii-base-model.html#offsetUnset()-detail">offsetUnset()</a></td>
+        <td>Sets the element value at the specified offset to null.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="onUnsafeAttribute()">
+        <td><a href="yii-base-model.html#onUnsafeAttribute()-detail">onUnsafeAttribute()</a></td>
+        <td>This method is invoked when an unsafe attribute is being massively assigned.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="render()">
+        <td><a href="yii-gii-generator.html#render()-detail">render()</a></td>
+        <td>Generates code using the specified code template and parameters.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr id="requiredTemplates()">
+        <td><a href="yii-gii-generators-model-generator.html#requiredTemplates()-detail">requiredTemplates()</a></td>
+        <td>Returns a list of code template files that are required.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                <tr id="rules()">
+        <td><a href="yii-gii-generators-model-generator.html#rules()-detail">rules()</a></td>
+        <td>Returns the validation rules for attributes.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="safeAttributes()">
+        <td><a href="yii-base-model.html#safeAttributes()-detail">safeAttributes()</a></td>
+        <td>Returns the attribute names that are safe to be massively assigned in the current scenario.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="save()">
+        <td><a href="yii-gii-generator.html#save()-detail">save()</a></td>
+        <td>Saves the generated code into files.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="saveStickyAttributes()">
+        <td><a href="yii-gii-generator.html#saveStickyAttributes()-detail">saveStickyAttributes()</a></td>
+        <td>Saves sticky attributes into an internal file.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="scenarios()">
+        <td><a href="yii-base-model.html#scenarios()-detail">scenarios()</a></td>
+        <td>Returns a list of scenarios and the corresponding active attributes.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="setAttributes()">
+        <td><a href="yii-base-model.html#setAttributes()-detail">setAttributes()</a></td>
+        <td>Sets the attribute values in a massive way.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="setScenario()">
+        <td><a href="yii-base-model.html#setScenario()-detail">setScenario()</a></td>
+        <td>Sets the scenario for the model.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr id="stickyAttributes()">
+        <td><a href="yii-gii-generators-model-generator.html#stickyAttributes()-detail">stickyAttributes()</a></td>
+        <td>Returns the list of sticky attributes.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="successMessage()">
+        <td><a href="yii-gii-generator.html#successMessage()-detail">successMessage()</a></td>
+        <td>Returns the message to be displayed when the newly generated code is saved successfully.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="toArray()">
+        <td><a href="yii-base-arrayabletrait.html#toArray()-detail">toArray()</a></td>
+        <td>Converts the model into an array.</td>
+        <td><a href="yii-base-arrayabletrait.html">yii\base\ArrayableTrait</a></td>
+    </tr>
+            <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="validate()">
+        <td><a href="yii-base-model.html#validate()-detail">validate()</a></td>
+        <td>Performs the data validation.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr class="inherited" id="validateClass()">
+        <td><a href="yii-gii-generator.html#validateClass()-detail">validateClass()</a></td>
+        <td>An inline validator that checks if the attribute value refers to an existing class name.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr id="validateDb()">
+        <td><a href="yii-gii-generators-model-generator.html#validateDb()-detail">validateDb()</a></td>
+        <td>Validates the <a href="yii-gii-generators-model-generator.html#$db-detail">$db</a> attribute.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="validateMessageCategory()">
+        <td><a href="yii-gii-generator.html#validateMessageCategory()-detail">validateMessageCategory()</a></td>
+        <td>Checks if message category is not empty when I18N is enabled.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr id="validateModelClass()">
+        <td><a href="yii-gii-generators-model-generator.html#validateModelClass()-detail">validateModelClass()</a></td>
+        <td>Validates the <a href="yii-gii-generators-model-generator.html#$modelClass-detail">$modelClass</a> attribute.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="validateMultiple()">
+        <td><a href="yii-base-model.html#validateMultiple()-detail">validateMultiple()</a></td>
+        <td>Validates multiple models.</td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+            <tr id="validateNamespace()">
+        <td><a href="yii-gii-generators-model-generator.html#validateNamespace()-detail">validateNamespace()</a></td>
+        <td>Validates the namespace.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="validateNewClass()">
+        <td><a href="yii-gii-generator.html#validateNewClass()-detail">validateNewClass()</a></td>
+        <td>An inline validator that checks if the attribute value refers to a valid namespaced class name.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+            <tr id="validateTableName()">
+        <td><a href="yii-gii-generators-model-generator.html#validateTableName()-detail">validateTableName()</a></td>
+        <td>Validates the <a href="yii-gii-generators-model-generator.html#$tableName-detail">$tableName</a> attribute.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr class="inherited" id="validateTemplate()">
+        <td><a href="yii-gii-generator.html#validateTemplate()-detail">validateTemplate()</a></td>
+        <td>Validates the template selection.</td>
+        <td><a href="yii-gii-generator.html">yii\gii\Generator</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                                <tr id="addInverseRelations()">
+        <td><a href="yii-gii-generators-model-generator.html#addInverseRelations()-detail">addInverseRelations()</a></td>
+        <td>Adds inverse relations</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                                                        <tr id="checkJunctionTable()">
+        <td><a href="yii-gii-generators-model-generator.html#checkJunctionTable()-detail">checkJunctionTable()</a></td>
+        <td>Checks if the given table is a junction table, that is it has at least one pair of unique foreign keys.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                                            <tr class="inherited" id="extractFieldsFor()">
+        <td><a href="yii-base-arrayabletrait.html#extractFieldsFor()-detail">extractFieldsFor()</a></td>
+        <td>Extract nested fields from a fields collection for a given root field
+Nested fields are separated with dots (.). e.g: "item.id"
+The previous example would extract "id".</td>
+        <td><a href="yii-base-arrayabletrait.html">yii\base\ArrayableTrait</a></td>
+    </tr>
+            <tr class="inherited" id="extractRootFields()">
+        <td><a href="yii-base-arrayabletrait.html#extractRootFields()-detail">extractRootFields()</a></td>
+        <td>Extracts the root field names from nested fields.</td>
+        <td><a href="yii-base-arrayabletrait.html">yii\base\ArrayableTrait</a></td>
+    </tr>
+                                <tr id="generateClassName()">
+        <td><a href="yii-gii-generators-model-generator.html#generateClassName()-detail">generateClassName()</a></td>
+        <td>Generates a class name from the specified table name.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                <tr id="generateProperties()">
+        <td><a href="yii-gii-generators-model-generator.html#generateProperties()-detail">generateProperties()</a></td>
+        <td>Generates the properties for the specified table.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="generateQueryClassName()">
+        <td><a href="yii-gii-generators-model-generator.html#generateQueryClassName()-detail">generateQueryClassName()</a></td>
+        <td>Generates a query class name from the specified model class name.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="generateRelationLink()">
+        <td><a href="yii-gii-generators-model-generator.html#generateRelationLink()-detail">generateRelationLink()</a></td>
+        <td>Generates the link parameter to be used in generating the relation declaration.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="generateRelationName()">
+        <td><a href="yii-gii-generators-model-generator.html#generateRelationName()-detail">generateRelationName()</a></td>
+        <td>Generate a relation name for the specified table and a base name.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="generateRelations()">
+        <td><a href="yii-gii-generators-model-generator.html#generateRelations()-detail">generateRelations()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                                                <tr id="getDbConnection()">
+        <td><a href="yii-gii-generators-model-generator.html#getDbConnection()-detail">getDbConnection()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="getDbDriverName()">
+        <td><a href="yii-gii-generators-model-generator.html#getDbDriverName()-detail">getDbDriverName()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                                            <tr id="getSchemaNames()">
+        <td><a href="yii-gii-generators-model-generator.html#getSchemaNames()-detail">getSchemaNames()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                <tr id="getTableNames()">
+        <td><a href="yii-gii-generators-model-generator.html#getTableNames()-detail">getTableNames()</a></td>
+        <td></td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                                                                <tr id="isColumnAutoIncremental()">
+        <td><a href="yii-gii-generators-model-generator.html#isColumnAutoIncremental()-detail">isColumnAutoIncremental()</a></td>
+        <td>Checks if any of the specified columns is auto incremental.</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+            <tr id="isHasManyRelation()">
+        <td><a href="yii-gii-generators-model-generator.html#isHasManyRelation()-detail">isHasManyRelation()</a></td>
+        <td>Determines if relation is of has many type</td>
+        <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+    </tr>
+                                                                <tr class="inherited" id="resolveFields()">
+        <td><a href="yii-base-arrayabletrait.html#resolveFields()-detail">resolveFields()</a></td>
+        <td>Determines which fields can be returned by <a href="yii-base-arrayabletrait.html#toArray()-detail">toArray()</a>.</td>
+        <td><a href="yii-base-arrayabletrait.html">yii\base\ArrayableTrait</a></td>
+    </tr>
+                                                                                        </table>
+</div>
+
+<a id="events"></a>
+<div class="summary doc-event">
+    <h2>Events</h2>
+
+    <p><a href="#" class="toggle">Hide inherited events</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-event" />
+        <col class="col-type" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Event</th><th>Type</th><th>Description</th><th>Defined By</th>
+    </tr>
+        <tr class="inherited" id="EVENT_AFTER_VALIDATE">
+        <td><a href="yii-base-model.html#EVENT_AFTER_VALIDATE-detail">EVENT_AFTER_VALIDATE</a></td>
+        <td><a href="yii-base-event.html">yii\base\Event</a></td>
+        <td>
+            An event raised at the end of <a href="yii-base-model.html#validate()-detail">validate()</a>                    </td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_BEFORE_VALIDATE">
+        <td><a href="yii-base-model.html#EVENT_BEFORE_VALIDATE-detail">EVENT_BEFORE_VALIDATE</a></td>
+        <td><a href="yii-base-modelevent.html">yii\base\ModelEvent</a></td>
+        <td>
+            An event raised at the beginning of <a href="yii-base-model.html#validate()-detail">validate()</a>.                    </td>
+        <td><a href="yii-base-model.html">yii\base\Model</a></td>
+    </tr>
+        </table>
+</div>
+
+<a id="constants"></a>
+<div class="summary doc-const">
+    <h2>Constants</h2>
+
+    <p><a href="#" class="toggle">Hide inherited constants</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-const" />
+        <col class="col-value" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Constant</th><th>Value</th><th>Description</th><th>Defined By</th>
+    </tr>
+            <tr id="RELATIONS_ALL">
+          <td id="RELATIONS_ALL-detail">RELATIONS_ALL</td>
+          <td>'all'</td>
+          <td>
+                        </td>
+          <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+        </tr>
+            <tr id="RELATIONS_ALL_INVERSE">
+          <td id="RELATIONS_ALL_INVERSE-detail">RELATIONS_ALL_INVERSE</td>
+          <td>'all-inverse'</td>
+          <td>
+                        </td>
+          <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+        </tr>
+            <tr id="RELATIONS_NONE">
+          <td id="RELATIONS_NONE-detail">RELATIONS_NONE</td>
+          <td>'none'</td>
+          <td>
+                        </td>
+          <td><a href="yii-gii-generators-model-generator.html">yii\gii\generators\model\Generator</a></td>
+        </tr>
+            <tr class="inherited" id="SCENARIO_DEFAULT">
+          <td id="SCENARIO_DEFAULT-detail">SCENARIO_DEFAULT</td>
+          <td>'default'</td>
+          <td>The name of the default scenario.
+                        </td>
+          <td><a href="yii-base-model.html">yii\base\Model</a></td>
+        </tr>
+        </table>
+</div>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$baseClass-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$baseClass-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L37" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L37" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $baseClass        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$baseClass-detail">$baseClass</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'yii\db\ActiveRecord'</span></div>
+
+
+    <div class="detail-header h3" id="$classNames-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$classNames-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L806" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L806" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $classNames        <span class="detail-header-tag small">
+            protected                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">protected</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$classNames-detail">$classNames</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$db-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$db-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L33" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L33" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $db        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$db-detail">$db</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'db'</span></div>
+
+
+    <div class="detail-header h3" id="$description-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$description-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $description        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The detailed description of the generator.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-gii-generators-model-generator.html#getDescription()-detail">getDescription</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$generateLabelsFromComments-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$generateLabelsFromComments-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L40" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L40" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $generateLabelsFromComments        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$generateLabelsFromComments-detail">$generateLabelsFromComments</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+
+    <div class="detail-header h3" id="$generateQuery-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$generateQuery-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L44" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L44" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $generateQuery        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$generateQuery-detail">$generateQuery</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+
+    <div class="detail-header h3" id="$generateRelations-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$generateRelations-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L38" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L38" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $generateRelations        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$generateRelations-detail">$generateRelations</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">self</span><span style="color: #007700">::</span><span style="color: #0000BB">RELATIONS_ALL</span></div>
+
+
+    <div class="detail-header h3" id="$generateRelationsFromCurrentSchema-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$generateRelationsFromCurrentSchema-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L39" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L39" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $generateRelationsFromCurrentSchema        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$generateRelationsFromCurrentSchema-detail">$generateRelationsFromCurrentSchema</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+
+    <div class="detail-header h3" id="$modelClass-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$modelClass-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L36" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L36" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $modelClass        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$modelClass-detail">$modelClass</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$name-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$name-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $name        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Name of the code generator</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-gii-generators-model-generator.html#getName()-detail">getName</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$ns-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$ns-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L34" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L34" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $ns        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$ns-detail">$ns</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'app\models'</span></div>
+
+
+    <div class="detail-header h3" id="$queryBaseClass-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$queryBaseClass-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L47" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L47" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $queryBaseClass        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$queryBaseClass-detail">$queryBaseClass</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'yii\db\ActiveQuery'</span></div>
+
+
+    <div class="detail-header h3" id="$queryClass-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$queryClass-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L46" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L46" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $queryClass        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$queryClass-detail">$queryClass</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$queryNs-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$queryNs-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L45" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L45" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $queryNs        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$queryNs-detail">$queryNs</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'app\models'</span></div>
+
+
+    <div class="detail-header h3" id="$standardizeCapitals-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$standardizeCapitals-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L42" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L42" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $standardizeCapitals        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$standardizeCapitals-detail">$standardizeCapitals</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+
+    <div class="detail-header h3" id="$tableName-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$tableName-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L35" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L35" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $tableName        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$tableName-detail">$tableName</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$tableNames-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$tableNames-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L805" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L805" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $tableNames        <span class="detail-header-tag small">
+            protected                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">protected</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$tableNames-detail">$tableNames</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$tablePrefix-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$tablePrefix-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $tablePrefix        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-gii-generators-model-generator.html#getTablePrefix()-detail">getTablePrefix</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$useSchemaName-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$useSchemaName-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L43" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L43" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $useSchemaName        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$useSchemaName-detail">$useSchemaName</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+
+    <div class="detail-header h3" id="$useTablePrefix-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#$useTablePrefix-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L41" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L41" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $useTablePrefix        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-gii-generators-model-generator.html#$useTablePrefix-detail">$useTablePrefix</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="addInverseRelations()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#addInverseRelations()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L561" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L561" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        addInverseRelations()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.0.5)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Adds inverse relations</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-gii-generators-model-generator.html#addInverseRelations()-detail">addInverseRelations</a></strong> ( <span style="color: #0000BB">$relations</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$relations</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Relation declarations</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Relation declarations extended with inverse relation names</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="attributeLabels()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#attributeLabels()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L95" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L95" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        attributeLabels()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the attribute labels.</strong></p>
+
+        <p>Attribute labels are mainly used for display purpose. For example, given an attribute
+<code>firstName</code>, we can declare a label <code>First Name</code> which is more user-friendly and can
+be displayed to end users.</p>
+<p>By default an attribute label is generated using <a href="yii-base-model.html#generateAttributeLabel()-detail">generateAttributeLabel()</a>.
+This method allows you to explicitly specify attribute labels.</p>
+<p>Note, in order to inherit labels defined in the parent class, a child class needs to
+merge the parent labels with child labels using functions such as <code>array_merge()</code>.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-gii-generators-model-generator.html#attributeLabels()-detail">attributeLabels</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Attribute labels (name =&gt; label)</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="autoCompleteData()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#autoCompleteData()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L162" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L162" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        autoCompleteData()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the list of auto complete values.</strong></p>
+
+        <p>The array keys are the attribute names, and the array values are the corresponding auto complete values.
+Auto complete values can also be callable typed in order one want to make postponed data generation.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-gii-generators-model-generator.html#autoCompleteData()-detail">autoCompleteData</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The list of auto complete values</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="checkJunctionTable()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#checkJunctionTable()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L648" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L648" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        checkJunctionTable()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Checks if the given table is a junction table, that is it has at least one pair of unique foreign keys.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-gii-generators-model-generator.html#checkJunctionTable()-detail">checkJunctionTable</a></strong> ( <span style="color: #0000BB">$table</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>All unique foreign key pairs if the table is a junction table,
+or false if the table is not a junction table.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generate()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#generate()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L213" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L213" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generate()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates the code based on the current user input and the specified code template files.</strong></p>
+
+        <p>This is the main method that child classes should implement.
+Please refer to <a href="yii-gii-generators-controller-generator.html#generate()-detail">yii\gii\generators\controller\Generator::generate()</a> as an example
+on how to implement this method.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-gii-codefile.html">yii\gii\CodeFile</a>[]</span> <strong><a href="yii-gii-generators-model-generator.html#generate()-detail">generate</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-gii-codefile.html">yii\gii\CodeFile</a>[]</td>
+                  <td class="param-desc-col"><p>A list of code files to be created.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generateClassName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#generateClassName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L870" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L870" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generateClassName()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates a class name from the specified table name.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-gii-generators-model-generator.html#generateClassName()-detail">generateClassName</a></strong> ( <span style="color: #0000BB">$tableName</span>, <span style="color: #0000BB">$useSchemaName&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$tableName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table name (which may contain schema prefix)</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$useSchemaName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Should schema name be included in the class name, if present</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The generated class name</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generateLabels()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#generateLabels()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L285" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L285" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generateLabels()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates the attribute labels for the specified table.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-gii-generators-model-generator.html#generateLabels()-detail">generateLabels</a></strong> ( <span style="color: #0000BB">$table</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="yii-db-tableschema.html">yii\db\TableSchema</a></td>
+                  <td class="param-desc-col"><p>The table schema</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The generated attribute labels (name =&gt; label)</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generateProperties()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#generateProperties()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L258" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L258" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generateProperties()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.0.6)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates the properties for the specified table.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-gii-generators-model-generator.html#generateProperties()-detail">generateProperties</a></strong> ( <span style="color: #0000BB">$table</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="yii-db-tableschema.html">yii\db\TableSchema</a></td>
+                  <td class="param-desc-col"><p>The table schema</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The generated properties (property =&gt; type)</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generateQueryClassName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#generateQueryClassName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L919" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L919" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generateQueryClassName()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates a query class name from the specified model class name.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-gii-generators-model-generator.html#generateQueryClassName()-detail">generateQueryClassName</a></strong> ( <span style="color: #0000BB">$modelClassName</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$modelClassName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Model class name</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Generated class name</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generateRelationLink()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#generateRelationLink()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L632" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L632" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generateRelationLink()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates the link parameter to be used in generating the relation declaration.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-gii-generators-model-generator.html#generateRelationLink()-detail">generateRelationLink</a></strong> ( <span style="color: #0000BB">$refs</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$refs</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Reference constraint</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The generated link parameter.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generateRelationName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#generateRelationName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L693" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L693" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generateRelationName()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generate a relation name for the specified table and a base name.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-gii-generators-model-generator.html#generateRelationName()-detail">generateRelationName</a></strong> ( <span style="color: #0000BB">$relations</span>, <span style="color: #0000BB">$table</span>, <span style="color: #0000BB">$key</span>, <span style="color: #0000BB">$multiple</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$relations</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The relations being generated currently.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="yii-db-tableschema.html">yii\db\TableSchema</a></td>
+                  <td class="param-desc-col"><p>The table schema</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$key</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>A base name that the relation name may be generated from</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$multiple</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether this is a has-many relation</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The relation name</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generateRelations()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#generateRelations()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L496" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L496" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generateRelations()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-gii-generators-model-generator.html#generateRelations()-detail">generateRelations</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The generated relation declarations</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generateRules()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#generateRules()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L310" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L310" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generateRules()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates validation rules for the specified table.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-gii-generators-model-generator.html#generateRules()-detail">generateRules</a></strong> ( <span style="color: #0000BB">$table</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="yii-db-tableschema.html">yii\db\TableSchema</a></td>
+                  <td class="param-desc-col"><p>The table schema</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The generated validation rules</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generateTableName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#generateTableName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L849" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L849" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generateTableName()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates the table name by considering table prefix.</strong></p>
+
+        <p>If <a href="yii-gii-generators-model-generator.html#$useTablePrefix-detail">$useTablePrefix</a> is false, the table name will be returned without change.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-gii-generators-model-generator.html#generateTableName()-detail">generateTableName</a></strong> ( <span style="color: #0000BB">$tableName</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$tableName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table name (which may contain schema prefix)</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The generated table name</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getDbConnection()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#getDbConnection()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L931" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L931" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getDbConnection()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="yii-db-connection.html">yii\db\Connection</a></span> <strong><a href="yii-gii-generators-model-generator.html#getDbConnection()-detail">getDbConnection</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-db-connection.html">yii\db\Connection</a></td>
+                  <td class="param-desc-col"><p>The DB connection as specified by <a href="yii-gii-generators-model-generator.html#$db-detail">$db</a>.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getDbDriverName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#getDbDriverName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L941" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L941" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getDbDriverName()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.0.6)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.null">null</a></span> <strong><a href="yii-gii-generators-model-generator.html#getDbDriverName()-detail">getDbDriverName</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>Driver name of db connection.
+In case db is not instance of \yii\db\Connection null will be returned.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getDescription()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#getDescription()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L61" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L61" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getDescription()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-gii-generators-model-generator.html#getDescription()-detail">getDescription</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The detailed description of the generator.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#getName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L53" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L53" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getName()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-gii-generators-model-generator.html#getName()-detail">getName</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Name of the code generator</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getSchemaNames()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#getSchemaNames()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L464" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L464" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getSchemaNames()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.0.5)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a>[]</span> <strong><a href="yii-gii-generators-model-generator.html#getSchemaNames()-detail">getSchemaNames</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>[]</td>
+                  <td class="param-desc-col"><p>All db schema names or an array with a single empty string</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-notsupportedexception.html">yii\base\NotSupportedException</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getTableNames()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#getTableNames()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L811" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L811" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getTableNames()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-gii-generators-model-generator.html#getTableNames()-detail">getTableNames</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The table names that match the pattern specified by <a href="yii-gii-generators-model-generator.html#$tableName-detail">$tableName</a>.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getTablePrefix()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#getTablePrefix()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L200" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L200" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getTablePrefix()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.0.5)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the <code>tablePrefix</code> property of the DB connection as specified</strong></p>
+
+        
+        <p>See also <a href="yii-gii-generators-model-generator.html#getDbConnection()-detail">getDbConnection()</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-gii-generators-model-generator.html#getTablePrefix()-detail">getTablePrefix</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="hints()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#hints()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L118" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L118" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        hints()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the list of hint messages.</strong></p>
+
+        <p>The array keys are the attribute names, and the array values are the corresponding hint messages.
+Hint messages will be displayed to end users when they are filling the form for the generator.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-gii-generators-model-generator.html#hints()-detail">hints</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The list of hint messages</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="isColumnAutoIncremental()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#isColumnAutoIncremental()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L954" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L954" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        isColumnAutoIncremental()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Checks if any of the specified columns is auto incremental.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-gii-generators-model-generator.html#isColumnAutoIncremental()-detail">isColumnAutoIncremental</a></strong> ( <span style="color: #0000BB">$table</span>, <span style="color: #0000BB">$columns</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="yii-db-tableschema.html">yii\db\TableSchema</a></td>
+                  <td class="param-desc-col"><p>The table schema</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$columns</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Columns to check for autoIncrement property</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether any of the specified columns is auto incremental.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="isHasManyRelation()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#isHasManyRelation()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L611" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L611" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        isHasManyRelation()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.0.5)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Determines if relation is of has many type</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-gii-generators-model-generator.html#isHasManyRelation()-detail">isHasManyRelation</a></strong> ( <span style="color: #0000BB">$table</span>, <span style="color: #0000BB">$fks</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="yii-db-tableschema.html">yii\db\TableSchema</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$fks</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="requiredTemplates()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#requiredTemplates()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L179" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L179" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        requiredTemplates()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns a list of code template files that are required.</strong></p>
+
+        <p>Derived classes usually should override this method if they require the existence of
+certain template files.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-gii-generators-model-generator.html#requiredTemplates()-detail">requiredTemplates</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>List of code template files that are required. They should be file paths
+relative to <a href="yii-gii-generator.html#$templatePath-detail">$templatePath</a>.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="rules()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#rules()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L69" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L69" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        rules()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the validation rules for attributes.</strong></p>
+
+        <p>Child classes should override this method like the following so that the parent
+rules are included:</p>
+<pre><code class="hljs php"><span class="hljs-keyword">return</span> array_merge(<span class="hljs-keyword">parent</span>::rules(), [
+    ...rules <span class="hljs-keyword">for</span> the child <span class="hljs-class"><span class="hljs-keyword">class</span>...
+]);
+</span></code></pre>
+<p>Validation rules are used by <a href="yii-base-model.html#validate()-detail">validate()</a> to check if attribute values are valid.
+Child classes may override this method to declare different validation rules.</p>
+<p>Each rule is an array with the following structure:</p>
+<pre><code class="hljs php language-php">[
+    [<span class="hljs-string">'attribute1'</span>, <span class="hljs-string">'attribute2'</span>],
+    <span class="hljs-string">'validator type'</span>,
+    <span class="hljs-string">'on'</span> =&gt; [<span class="hljs-string">'scenario1'</span>, <span class="hljs-string">'scenario2'</span>],
+    <span class="hljs-comment">//...other parameters...</span>
+]
+</code></pre>
+<p>where</p>
+<ul>
+<li>attribute list: required, specifies the attributes array to be validated, for single attribute you can pass a string;</li>
+<li>validator type: required, specifies the validator to be used. It can be a built-in validator name,
+a method name of the model class, an anonymous function, or a validator class name.</li>
+<li>on: optional, specifies the <a href="yii-base-model.html#$scenario-detail">scenarios</a> array in which the validation
+rule can be applied. If this option is not set, the rule will apply to all scenarios.</li>
+<li>additional name-value pairs can be specified to initialize the corresponding validator properties.
+Please refer to individual validator class API for possible properties.</li>
+</ul>
+<p>A validator can be either an object of a class extending <span class="broken-link">\yii\gii\generators\model\Validator</span>, or a model class method
+(called <em>inline validator</em>) that has the following signature:</p>
+<pre><code class="hljs php language-php"><span class="hljs-comment">// $params refers to validation parameters given in the rule</span>
+<span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">validatorName</span><span class="hljs-params">(<span class="hljs-variable">$attribute</span>, <span class="hljs-variable">$params</span>)</span>
+</span></code></pre>
+<p>In the above <code>$attribute</code> refers to the attribute currently being validated while <code>$params</code> contains an array of
+validator configuration options such as <code>max</code> in case of <code>string</code> validator. The value of the attribute currently being validated
+can be accessed as <code>$this-&gt;$attribute</code>. Note the <code>$</code> before <code>attribute</code>; this is taking the value of the variable
+<code>$attribute</code> and using it as the name of the property to access.</p>
+<p>Yii also provides a set of <span class="broken-link">\yii\gii\generators\model\Validator::builtInValidators</span>.
+Each one has an alias name which can be used when specifying a validation rule.</p>
+<p>Below are some examples:</p>
+<pre><code class="hljs php language-php">[
+    <span class="hljs-comment">// built-in "required" validator</span>
+    [[<span class="hljs-string">'username'</span>, <span class="hljs-string">'password'</span>], <span class="hljs-string">'required'</span>],
+    <span class="hljs-comment">// built-in "string" validator customized with "min" and "max" properties</span>
+    [<span class="hljs-string">'username'</span>, <span class="hljs-string">'string'</span>, <span class="hljs-string">'min'</span> =&gt; <span class="hljs-number">3</span>, <span class="hljs-string">'max'</span> =&gt; <span class="hljs-number">12</span>],
+    <span class="hljs-comment">// built-in "compare" validator that is used in "register" scenario only</span>
+    [<span class="hljs-string">'password'</span>, <span class="hljs-string">'compare'</span>, <span class="hljs-string">'compareAttribute'</span> =&gt; <span class="hljs-string">'password2'</span>, <span class="hljs-string">'on'</span> =&gt; <span class="hljs-string">'register'</span>],
+    <span class="hljs-comment">// an inline validator defined via the "authenticate()" method in the model class</span>
+    [<span class="hljs-string">'password'</span>, <span class="hljs-string">'authenticate'</span>, <span class="hljs-string">'on'</span> =&gt; <span class="hljs-string">'login'</span>],
+    <span class="hljs-comment">// a validator of class "DateRangeValidator"</span>
+    [<span class="hljs-string">'dateRange'</span>, <span class="hljs-string">'DateRangeValidator'</span>],
+];
+</code></pre>
+<p>Note, in order to inherit rules defined in the parent class, a child class needs to
+merge the parent rules with child rules using functions such as <code>array_merge()</code>.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-gii-generators-model-generator.html#rules()-detail">rules</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Validation rules</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="stickyAttributes()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#stickyAttributes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L188" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L188" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        stickyAttributes()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the list of sticky attributes.</strong></p>
+
+        <p>A sticky attribute will remember its value and will initialize the attribute with this value
+when the generator is restarted.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-gii-generators-model-generator.html#stickyAttributes()-detail">stickyAttributes</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>List of sticky attributes</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="validateDb()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#validateDb()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L744" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L744" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        validateDb()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Validates the <a href="yii-gii-generators-model-generator.html#$db-detail">$db</a> attribute.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-gii-generators-model-generator.html#validateDb()-detail">validateDb</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="validateModelClass()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#validateModelClass()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L771" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L771" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        validateModelClass()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Validates the <a href="yii-gii-generators-model-generator.html#$modelClass-detail">$modelClass</a> attribute.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-gii-generators-model-generator.html#validateModelClass()-detail">validateModelClass</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="validateNamespace()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#validateNamespace()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L758" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L758" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        validateNamespace()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Validates the namespace.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-gii-generators-model-generator.html#validateNamespace()-detail">validateNamespace</a></strong> ( <span style="color: #0000BB">$attribute</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$attribute</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Namespace variable.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="validateTableName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-gii-generators-model-generator.html#validateTableName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-gii/edit/master/generators/model/Generator.php#L784" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-gii/blob/master/generators/model/Generator.php#L784" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        validateTableName()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Validates the <a href="yii-gii-generators-model-generator.html#$tableName-detail">$tableName</a> attribute.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-gii-generators-model-generator.html#validateTableName()-detail">validateTableName</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Tue, 14 Aug 2018 17:48:42 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

@@ -1,30 +1,30 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\ipFilter\controllers;
+namespace johnsnook\visitor\controllers;
 
 use Yii;
 use common\models\VisitorServiceError;
 use yii\data\ActiveDataProvider;
-use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 
 /**
  * VisitorServiceErrorController implements the CRUD actions for VisitorServiceError model.
+ * @inherits [[yii\web\Controller]]
  */
-class VisitorServiceErrorController extends Controller {
+class VisitorServiceErrorController extends \yii\web\Controller {
 
     /**
-     * @inheritdoc
+     * @inheritDoc
      */
     public function behaviors() {
         return [

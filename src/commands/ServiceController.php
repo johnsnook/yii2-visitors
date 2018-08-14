@@ -1,22 +1,22 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\ipFilter\commands;
+namespace johnsnook\visitor\commands;
 
 use yii;
 use yii\helpers\Console;
 use yii\console\Controller;
-use johnsnook\ipFilter\models\Visitor;
-use johnsnook\ipFilter\models\VisitorAgent;
-use johnsnook\ipFilter\models\VisitorServiceError;
+use johnsnook\visitor\models\Visitor;
+use johnsnook\visitor\models\VisitorAgent;
+use johnsnook\visitor\models\VisitorServiceError;
 
 /**
  * ServiceController provides 3 commands to request various information for websites
@@ -62,15 +62,14 @@ class ServiceController extends Controller {
      * </code>
      *
      * @param string $ip The IP address of the current visitor
-     * @param string $apiKey The API key
      */
     public function actionIpinfo($ip) {
-#        $ipFilter = \Yii::$app->controller->module;
-        $ipFilter = \Yii::$app->getModule('ipFilter');
+#        $visitor = \Yii::$app->controller->module;
+        $visitor = \Yii::$app->getModule('visitor');
 
 
         if (!is_null($visitor = Visitor::findOne($ip))) {
-            $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $ipFilter->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
+            $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $visitor->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
             $ch = curl_init($url);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             if (($response = curl_exec($ch) ) === false) {
@@ -111,12 +110,12 @@ class ServiceController extends Controller {
      * @param string $ip The IP address of the current visitor
      */
     public function actionProxyCheck($ip) {
-        #$ipFilter = \Yii::$app->controller->module;
-        $ipFilter = \Yii::$app->getModule('ipFilter');
+        #$visitor = \Yii::$app->controller->module;
+        $visitor = \Yii::$app->getModule('visitor');
 
         if (!is_null($visitor = Visitor::findOne($ip))) {
             $visitor->proxy = Visitor::proxyCheck($ip);
-            if ($visitor->proxy !== 'no' && in_array($visitor->proxy, $ipFilter->proxyBan)) {
+            if ($visitor->proxy !== 'no' && in_array($visitor->proxy, $visitor->proxyBan)) {
                 $visitor->banned = true;
             }
             $visitor->save();
@@ -165,11 +164,9 @@ class ServiceController extends Controller {
      * </code>
      *
      * @param string $userAgent The browser reported string returned by $_[USER_AGENT]
-     * @param string $apiKey
      */
     public function actionUserAgent($userAgent) {
-        //$ipFilter = \Yii::$app->controller->module;
-        $ipFilter = \Yii::$app->getModule('ipFilter');
+        $visitor = \Yii::$app->getModule('visitor');
 
         if (is_null($agent = VisitorAgent::findOne($userAgent))) {
             $data = ["user_agent" => $userAgent];
@@ -181,7 +178,7 @@ class ServiceController extends Controller {
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, ['X-API-KEY: ' . $ipFilter->whatsmybrowswerKey]);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, ['X-API-KEY: ' . $visitor->whatsmybrowswerKey]);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             if (($response = curl_exec($ch) ) === false) {
                 $vse = new VisitorServiceError;

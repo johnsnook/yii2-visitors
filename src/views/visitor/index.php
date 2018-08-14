@@ -1,18 +1,19 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
+use johnsnook\visitor\assets\VisitorAsset;
+use johnsnook\visitor\models\Visitor;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
-use johnsnook\ipFilter\assets\VisitorAsset;
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\VisitorSearch */
@@ -22,74 +23,49 @@ VisitorAsset::register($this);
 $this->title = 'Visitors';
 $this->params['breadcrumbs'][] = $this->title;
 $route = Url::to([Yii::$app->controller->id . '/index']);
-$ipFilter = Yii::$app->getModule(Yii::$app->controller->module->id);
+$visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
 
-if ($ipFilter->bootstrapCssVersion === 4) {
-    $pager = 'johnsnook\ipFilter\widgets\LinkPager';
+if ($visitor->bootstrapCssVersion === 4) {
+    $pager = 'johnsnook\visitor\widgets\LinkPager';
 } else {
     $pager = 'yii\widgets\LinkPager';
 }
 ?>
 <div class="visitor-index" >
-    <form id="search-form" action="<?= $route ?>" method="get" role="form">
-        <div class="row">
-            <div class="col-md-1 col-1"></div>
-            <div class="col-md-10 col-10">
-                <div class="input-group">
-                    <input type="hidden" id="field" name="field" value="" class="form-control">
-                    <input type="hidden" id="field" name="page" value="" class="form-control" value="1">
-                    <input type="text" name="search" class="form-control" aria-label="Visitor Search" autofocus="true" value="<?= $search ?>">
-                    <div class="input-group-btn">
-                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Search <span class="caret"></span></button>
-                        <ul class="dropdown-menu dropdown-menu-right">
-                            <li><a href="javascript:setField('ip')" class="dropdown-item">IP Address</a></li>
-                            <li><a href="javascript:setField('city')" class="dropdown-item">City</a></li>
-                            <li><a href="javascript:setField('region')" class="dropdown-item">Region</a></li>
-                            <li><a href="javascript:setField('country')" class="dropdown-item">Country</a></li>
-                            <li><a href="javascript:setField('proxy')" class="dropdown-item">Proxy Type</a></li>
-                            <li><a href="javascript:setField('organization')" class="dropdown-item">Organization</a></li>
-                            <li><a href="javascript:setField('updated_at')" class="dropdown-item">Date</a></li>
-                            <li role="separator" class="divider dropdown-divider"></li>
-                            <li><a href="javascript:setField('log-request')" class="dropdown-item">Request</a></li>
-                            <li><a href="javascript:setField('log-referer')" class="dropdown-item">Referer</a></li>
-                            <li><a href="javascript:setField('log-user_agent')" class="dropdown-item">User Agent</a></li>
-                        </ul>
-                    </div><!-- /btn-group -->
-                    <div class="input-group-btn">
-                        <a href="<?= $route ?>" type="button" class="btn btn-default btn-outline-dark" role="button">Reset</a>
-                    </div>
-                </div><!-- /input-group -->
-            </div>
-            <div class="col-md-1 col-1"></div>
-        </div>
-        <div class="row"><?php #echo $dataProvider->query->createCommand()->getRawSql()                         ?></div>
-    </form>
-    <h1><?php echo $dataProvider->totalCount . ' ' . Html::encode($this->title) ?>!</h1>
 
+    <h1><?php echo $dataProvider->totalCount . ' ' . Html::encode($this->title) ?>!</h1>
+    <div class="row">
+        <div class="offset-1 col-10">
+            <?php
+            echo $this->render('_search', [
+                'model' => $searchModel,
+            ]);
+            ?>
+        </div>
+    </div>
     <?php Pjax::begin(['formSelector' => 'search-form']); ?>
     <?=
     GridView::widget([
+        'caption' => $dataProvider->totalCount . ' ' . Html::encode($this->title) . '!',
         'dataProvider' => $dataProvider,
-        #'filterModel' => $searchModel,
-        'summary' => false,
+        'filterRowOptions' => ['style' => 'visibility: collapse'],
+        'tableOptions' => ['class' => 'table table-striped table-sm'],
         'pager' => ['class' => $pager],
         'columns' => [
-            [
-                'class' => 'yii\grid\ActionColumn',
-                'template' => '{view} {update}'
-            ],
             [
                 'class' => '\yii\grid\DataColumn',
                 'attribute' => 'ip',
                 'format' => 'html',
                 'value' => function($data) {
                     $style = '';
-                    if ($data->banned) {
+                    if ($data->banned || $data->hat_color === Visitor::HAT_COLOR_BLACK) {
                         $style = 'background-color: Black; color: White';
                     }
                     return Html::a($data->ip, ['view', 'id' => $data->ip], ['style' => $style]);
                 }
             ],
+            'asn',
+            'organization',
             [
                 'class' => '\yii\grid\DataColumn',
                 'attribute' => 'city',

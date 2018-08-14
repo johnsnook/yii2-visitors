@@ -1,0 +1,2537 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>    <title>User, yii\web\User - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w8889" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w8889-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w8889-collapse" class="collapse navbar-collapse"><ul id="w8890" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w8891" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-8852" data-toggle="collapse" data-parent="#navigation">Not namespaced classes <b class="caret"></b></a><div id="navigation-8852" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii.html">Yii</a>
+<a class="list-group-item" href="./yiirequirementchecker.html">YiiRequirementChecker</a></div>
+<a class="list-group-item" href="#navigation-8853" data-toggle="collapse" data-parent="#navigation">yii <b class="caret"></b></a><div id="navigation-8853" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-baseyii.html">BaseYii</a></div>
+<a class="list-group-item" href="#navigation-8854" data-toggle="collapse" data-parent="#navigation">yii\base <b class="caret"></b></a><div id="navigation-8854" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-base-action.html">Action</a>
+<a class="list-group-item" href="./yii-base-actionevent.html">ActionEvent</a>
+<a class="list-group-item" href="./yii-base-actionfilter.html">ActionFilter</a>
+<a class="list-group-item" href="./yii-base-application.html">Application</a>
+<a class="list-group-item" href="./yii-base-arrayaccesstrait.html">ArrayAccessTrait</a>
+<a class="list-group-item" href="./yii-base-arrayable.html">Arrayable</a>
+<a class="list-group-item" href="./yii-base-arrayabletrait.html">ArrayableTrait</a>
+<a class="list-group-item" href="./yii-base-baseobject.html">BaseObject</a>
+<a class="list-group-item" href="./yii-base-behavior.html">Behavior</a>
+<a class="list-group-item" href="./yii-base-bootstrapinterface.html">BootstrapInterface</a>
+<a class="list-group-item" href="./yii-base-component.html">Component</a>
+<a class="list-group-item" href="./yii-base-configurable.html">Configurable</a>
+<a class="list-group-item" href="./yii-base-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-base-dynamiccontentawareinterface.html">DynamicContentAwareInterface</a>
+<a class="list-group-item" href="./yii-base-dynamiccontentawaretrait.html">DynamicContentAwareTrait</a>
+<a class="list-group-item" href="./yii-base-dynamicmodel.html">DynamicModel</a>
+<a class="list-group-item" href="./yii-base-errorexception.html">ErrorException</a>
+<a class="list-group-item" href="./yii-base-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-base-event.html">Event</a>
+<a class="list-group-item" href="./yii-base-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-base-exitexception.html">ExitException</a>
+<a class="list-group-item" href="./yii-base-inlineaction.html">InlineAction</a>
+<a class="list-group-item" href="./yii-base-invalidargumentexception.html">InvalidArgumentException</a>
+<a class="list-group-item" href="./yii-base-invalidcallexception.html">InvalidCallException</a>
+<a class="list-group-item" href="./yii-base-invalidconfigexception.html">InvalidConfigException</a>
+<a class="list-group-item" href="./yii-base-invalidparamexception.html">InvalidParamException</a>
+<a class="list-group-item" href="./yii-base-invalidrouteexception.html">InvalidRouteException</a>
+<a class="list-group-item" href="./yii-base-invalidvalueexception.html">InvalidValueException</a>
+<a class="list-group-item" href="./yii-base-model.html">Model</a>
+<a class="list-group-item" href="./yii-base-modelevent.html">ModelEvent</a>
+<a class="list-group-item" href="./yii-base-module.html">Module</a>
+<a class="list-group-item" href="./yii-base-notsupportedexception.html">NotSupportedException</a>
+<a class="list-group-item" href="./yii-base-object.html">Object</a>
+<a class="list-group-item" href="./yii-base-request.html">Request</a>
+<a class="list-group-item" href="./yii-base-response.html">Response</a>
+<a class="list-group-item" href="./yii-base-security.html">Security</a>
+<a class="list-group-item" href="./yii-base-staticinstanceinterface.html">StaticInstanceInterface</a>
+<a class="list-group-item" href="./yii-base-staticinstancetrait.html">StaticInstanceTrait</a>
+<a class="list-group-item" href="./yii-base-theme.html">Theme</a>
+<a class="list-group-item" href="./yii-base-unknownclassexception.html">UnknownClassException</a>
+<a class="list-group-item" href="./yii-base-unknownmethodexception.html">UnknownMethodException</a>
+<a class="list-group-item" href="./yii-base-unknownpropertyexception.html">UnknownPropertyException</a>
+<a class="list-group-item" href="./yii-base-userexception.html">UserException</a>
+<a class="list-group-item" href="./yii-base-view.html">View</a>
+<a class="list-group-item" href="./yii-base-viewcontextinterface.html">ViewContextInterface</a>
+<a class="list-group-item" href="./yii-base-viewevent.html">ViewEvent</a>
+<a class="list-group-item" href="./yii-base-viewnotfoundexception.html">ViewNotFoundException</a>
+<a class="list-group-item" href="./yii-base-viewrenderer.html">ViewRenderer</a>
+<a class="list-group-item" href="./yii-base-widget.html">Widget</a>
+<a class="list-group-item" href="./yii-base-widgetevent.html">WidgetEvent</a></div>
+<a class="list-group-item" href="#navigation-8855" data-toggle="collapse" data-parent="#navigation">yii\behaviors <b class="caret"></b></a><div id="navigation-8855" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-behaviors-attributebehavior.html">AttributeBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-attributetypecastbehavior.html">AttributeTypecastBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-attributesbehavior.html">AttributesBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-blameablebehavior.html">BlameableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-cacheablewidgetbehavior.html">CacheableWidgetBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-optimisticlockbehavior.html">OptimisticLockBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-sluggablebehavior.html">SluggableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-timestampbehavior.html">TimestampBehavior</a></div>
+<a class="list-group-item" href="#navigation-8856" data-toggle="collapse" data-parent="#navigation">yii\caching <b class="caret"></b></a><div id="navigation-8856" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-caching-apccache.html">ApcCache</a>
+<a class="list-group-item" href="./yii-caching-arraycache.html">ArrayCache</a>
+<a class="list-group-item" href="./yii-caching-cache.html">Cache</a>
+<a class="list-group-item" href="./yii-caching-cacheinterface.html">CacheInterface</a>
+<a class="list-group-item" href="./yii-caching-chaineddependency.html">ChainedDependency</a>
+<a class="list-group-item" href="./yii-caching-dbcache.html">DbCache</a>
+<a class="list-group-item" href="./yii-caching-dbdependency.html">DbDependency</a>
+<a class="list-group-item" href="./yii-caching-dbquerydependency.html">DbQueryDependency</a>
+<a class="list-group-item" href="./yii-caching-dependency.html">Dependency</a>
+<a class="list-group-item" href="./yii-caching-dummycache.html">DummyCache</a>
+<a class="list-group-item" href="./yii-caching-expressiondependency.html">ExpressionDependency</a>
+<a class="list-group-item" href="./yii-caching-filecache.html">FileCache</a>
+<a class="list-group-item" href="./yii-caching-filedependency.html">FileDependency</a>
+<a class="list-group-item" href="./yii-caching-memcache.html">MemCache</a>
+<a class="list-group-item" href="./yii-caching-memcacheserver.html">MemCacheServer</a>
+<a class="list-group-item" href="./yii-caching-tagdependency.html">TagDependency</a>
+<a class="list-group-item" href="./yii-caching-wincache.html">WinCache</a>
+<a class="list-group-item" href="./yii-caching-xcache.html">XCache</a>
+<a class="list-group-item" href="./yii-caching-zenddatacache.html">ZendDataCache</a></div>
+<a class="list-group-item" href="#navigation-8857" data-toggle="collapse" data-parent="#navigation">yii\captcha <b class="caret"></b></a><div id="navigation-8857" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-captcha-captcha.html">Captcha</a>
+<a class="list-group-item" href="./yii-captcha-captchaaction.html">CaptchaAction</a>
+<a class="list-group-item" href="./yii-captcha-captchaasset.html">CaptchaAsset</a>
+<a class="list-group-item" href="./yii-captcha-captchavalidator.html">CaptchaValidator</a></div>
+<a class="list-group-item" href="#navigation-8858" data-toggle="collapse" data-parent="#navigation">yii\console <b class="caret"></b></a><div id="navigation-8858" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-application.html">Application</a>
+<a class="list-group-item" href="./yii-console-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-console-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-console-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-console-exitcode.html">ExitCode</a>
+<a class="list-group-item" href="./yii-console-markdown.html">Markdown</a>
+<a class="list-group-item" href="./yii-console-request.html">Request</a>
+<a class="list-group-item" href="./yii-console-response.html">Response</a>
+<a class="list-group-item" href="./yii-console-unknowncommandexception.html">UnknownCommandException</a></div>
+<a class="list-group-item" href="#navigation-8859" data-toggle="collapse" data-parent="#navigation">yii\console\controllers <b class="caret"></b></a><div id="navigation-8859" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-controllers-assetcontroller.html">AssetController</a>
+<a class="list-group-item" href="./yii-console-controllers-basemigratecontroller.html">BaseMigrateController</a>
+<a class="list-group-item" href="./yii-console-controllers-cachecontroller.html">CacheController</a>
+<a class="list-group-item" href="./yii-console-controllers-fixturecontroller.html">FixtureController</a>
+<a class="list-group-item" href="./yii-console-controllers-helpcontroller.html">HelpController</a>
+<a class="list-group-item" href="./yii-console-controllers-messagecontroller.html">MessageController</a>
+<a class="list-group-item" href="./yii-console-controllers-migratecontroller.html">MigrateController</a>
+<a class="list-group-item" href="./yii-console-controllers-servecontroller.html">ServeController</a></div>
+<a class="list-group-item" href="#navigation-8860" data-toggle="collapse" data-parent="#navigation">yii\console\widgets <b class="caret"></b></a><div id="navigation-8860" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-widgets-table.html">Table</a></div>
+<a class="list-group-item" href="#navigation-8861" data-toggle="collapse" data-parent="#navigation">yii\data <b class="caret"></b></a><div id="navigation-8861" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-data-activedatafilter.html">ActiveDataFilter</a>
+<a class="list-group-item" href="./yii-data-activedataprovider.html">ActiveDataProvider</a>
+<a class="list-group-item" href="./yii-data-arraydataprovider.html">ArrayDataProvider</a>
+<a class="list-group-item" href="./yii-data-basedataprovider.html">BaseDataProvider</a>
+<a class="list-group-item" href="./yii-data-datafilter.html">DataFilter</a>
+<a class="list-group-item" href="./yii-data-dataproviderinterface.html">DataProviderInterface</a>
+<a class="list-group-item" href="./yii-data-pagination.html">Pagination</a>
+<a class="list-group-item" href="./yii-data-sort.html">Sort</a>
+<a class="list-group-item" href="./yii-data-sqldataprovider.html">SqlDataProvider</a></div>
+<a class="list-group-item" href="#navigation-8862" data-toggle="collapse" data-parent="#navigation">yii\db <b class="caret"></b></a><div id="navigation-8862" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-activequery.html">ActiveQuery</a>
+<a class="list-group-item" href="./yii-db-activequeryinterface.html">ActiveQueryInterface</a>
+<a class="list-group-item" href="./yii-db-activequerytrait.html">ActiveQueryTrait</a>
+<a class="list-group-item" href="./yii-db-activerecord.html">ActiveRecord</a>
+<a class="list-group-item" href="./yii-db-activerecordinterface.html">ActiveRecordInterface</a>
+<a class="list-group-item" href="./yii-db-activerelationtrait.html">ActiveRelationTrait</a>
+<a class="list-group-item" href="./yii-db-aftersaveevent.html">AfterSaveEvent</a>
+<a class="list-group-item" href="./yii-db-arrayexpression.html">ArrayExpression</a>
+<a class="list-group-item" href="./yii-db-baseactiverecord.html">BaseActiveRecord</a>
+<a class="list-group-item" href="./yii-db-batchqueryresult.html">BatchQueryResult</a>
+<a class="list-group-item" href="./yii-db-checkconstraint.html">CheckConstraint</a>
+<a class="list-group-item" href="./yii-db-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-command.html">Command</a>
+<a class="list-group-item" href="./yii-db-connection.html">Connection</a>
+<a class="list-group-item" href="./yii-db-constraint.html">Constraint</a>
+<a class="list-group-item" href="./yii-db-constraintfinderinterface.html">ConstraintFinderInterface</a>
+<a class="list-group-item" href="./yii-db-constraintfindertrait.html">ConstraintFinderTrait</a>
+<a class="list-group-item" href="./yii-db-datareader.html">DataReader</a>
+<a class="list-group-item" href="./yii-db-defaultvalueconstraint.html">DefaultValueConstraint</a>
+<a class="list-group-item" href="./yii-db-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-db-expression.html">Expression</a>
+<a class="list-group-item" href="./yii-db-expressionbuilder.html">ExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-expressionbuilderinterface.html">ExpressionBuilderInterface</a>
+<a class="list-group-item" href="./yii-db-expressionbuildertrait.html">ExpressionBuilderTrait</a>
+<a class="list-group-item" href="./yii-db-expressioninterface.html">ExpressionInterface</a>
+<a class="list-group-item" href="./yii-db-foreignkeyconstraint.html">ForeignKeyConstraint</a>
+<a class="list-group-item" href="./yii-db-indexconstraint.html">IndexConstraint</a>
+<a class="list-group-item" href="./yii-db-integrityexception.html">IntegrityException</a>
+<a class="list-group-item" href="./yii-db-jsonexpression.html">JsonExpression</a>
+<a class="list-group-item" href="./yii-db-migration.html">Migration</a>
+<a class="list-group-item" href="./yii-db-migrationinterface.html">MigrationInterface</a>
+<a class="list-group-item" href="./yii-db-pdovalue.html">PdoValue</a>
+<a class="list-group-item" href="./yii-db-pdovaluebuilder.html">PdoValueBuilder</a>
+<a class="list-group-item" href="./yii-db-query.html">Query</a>
+<a class="list-group-item" href="./yii-db-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-queryexpressionbuilder.html">QueryExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-queryinterface.html">QueryInterface</a>
+<a class="list-group-item" href="./yii-db-querytrait.html">QueryTrait</a>
+<a class="list-group-item" href="./yii-db-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-schemabuildertrait.html">SchemaBuilderTrait</a>
+<a class="list-group-item" href="./yii-db-sqltoken.html">SqlToken</a>
+<a class="list-group-item" href="./yii-db-sqltokenizer.html">SqlTokenizer</a>
+<a class="list-group-item" href="./yii-db-staleobjectexception.html">StaleObjectException</a>
+<a class="list-group-item" href="./yii-db-tableschema.html">TableSchema</a>
+<a class="list-group-item" href="./yii-db-transaction.html">Transaction</a>
+<a class="list-group-item" href="./yii-db-viewfindertrait.html">ViewFinderTrait</a></div>
+<a class="list-group-item" href="#navigation-8863" data-toggle="collapse" data-parent="#navigation">yii\db\conditions <b class="caret"></b></a><div id="navigation-8863" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-conditions-andcondition.html">AndCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencolumnscondition.html">BetweenColumnsCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencolumnsconditionbuilder.html">BetweenColumnsConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencondition.html">BetweenCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweenconditionbuilder.html">BetweenConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-conditioninterface.html">ConditionInterface</a>
+<a class="list-group-item" href="./yii-db-conditions-conjunctioncondition.html">ConjunctionCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-conjunctionconditionbuilder.html">ConjunctionConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-existscondition.html">ExistsCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-existsconditionbuilder.html">ExistsConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-hashcondition.html">HashCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-hashconditionbuilder.html">HashConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-incondition.html">InCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-likecondition.html">LikeCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-likeconditionbuilder.html">LikeConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-notcondition.html">NotCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-notconditionbuilder.html">NotConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-orcondition.html">OrCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-simplecondition.html">SimpleCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-simpleconditionbuilder.html">SimpleConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-8864" data-toggle="collapse" data-parent="#navigation">yii\db\cubrid <b class="caret"></b></a><div id="navigation-8864" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-cubrid-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-cubrid-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-cubrid-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-8865" data-toggle="collapse" data-parent="#navigation">yii\db\cubrid\conditions <b class="caret"></b></a><div id="navigation-8865" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-cubrid-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-8866" data-toggle="collapse" data-parent="#navigation">yii\db\mssql <b class="caret"></b></a><div id="navigation-8866" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mssql-pdo.html">PDO</a>
+<a class="list-group-item" href="./yii-db-mssql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-mssql-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-mssql-sqlsrvpdo.html">SqlsrvPDO</a>
+<a class="list-group-item" href="./yii-db-mssql-tableschema.html">TableSchema</a></div>
+<a class="list-group-item" href="#navigation-8867" data-toggle="collapse" data-parent="#navigation">yii\db\mssql\conditions <b class="caret"></b></a><div id="navigation-8867" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mssql-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-mssql-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-8868" data-toggle="collapse" data-parent="#navigation">yii\db\mysql <b class="caret"></b></a><div id="navigation-8868" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mysql-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-mysql-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-jsonexpressionbuilder.html">JsonExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-8869" data-toggle="collapse" data-parent="#navigation">yii\db\oci <b class="caret"></b></a><div id="navigation-8869" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-oci-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-8870" data-toggle="collapse" data-parent="#navigation">yii\db\oci\conditions <b class="caret"></b></a><div id="navigation-8870" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-oci-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-8871" data-toggle="collapse" data-parent="#navigation">yii\db\pgsql <b class="caret"></b></a><div id="navigation-8871" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-pgsql-arrayexpressionbuilder.html">ArrayExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-arrayparser.html">ArrayParser</a>
+<a class="list-group-item" href="./yii-db-pgsql-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-pgsql-jsonexpressionbuilder.html">JsonExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-8872" data-toggle="collapse" data-parent="#navigation">yii\db\sqlite <b class="caret"></b></a><div id="navigation-8872" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-sqlite-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-command.html">Command</a>
+<a class="list-group-item" href="./yii-db-sqlite-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-sqlite-sqltokenizer.html">SqlTokenizer</a></div>
+<a class="list-group-item" href="#navigation-8873" data-toggle="collapse" data-parent="#navigation">yii\db\sqlite\conditions <b class="caret"></b></a><div id="navigation-8873" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-sqlite-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-8874" data-toggle="collapse" data-parent="#navigation">yii\di <b class="caret"></b></a><div id="navigation-8874" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-di-container.html">Container</a>
+<a class="list-group-item" href="./yii-di-instance.html">Instance</a>
+<a class="list-group-item" href="./yii-di-notinstantiableexception.html">NotInstantiableException</a>
+<a class="list-group-item" href="./yii-di-servicelocator.html">ServiceLocator</a></div>
+<a class="list-group-item" href="#navigation-8875" data-toggle="collapse" data-parent="#navigation">yii\filters <b class="caret"></b></a><div id="navigation-8875" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-accesscontrol.html">AccessControl</a>
+<a class="list-group-item" href="./yii-filters-accessrule.html">AccessRule</a>
+<a class="list-group-item" href="./yii-filters-ajaxfilter.html">AjaxFilter</a>
+<a class="list-group-item" href="./yii-filters-contentnegotiator.html">ContentNegotiator</a>
+<a class="list-group-item" href="./yii-filters-cors.html">Cors</a>
+<a class="list-group-item" href="./yii-filters-hostcontrol.html">HostControl</a>
+<a class="list-group-item" href="./yii-filters-httpcache.html">HttpCache</a>
+<a class="list-group-item" href="./yii-filters-pagecache.html">PageCache</a>
+<a class="list-group-item" href="./yii-filters-ratelimitinterface.html">RateLimitInterface</a>
+<a class="list-group-item" href="./yii-filters-ratelimiter.html">RateLimiter</a>
+<a class="list-group-item" href="./yii-filters-verbfilter.html">VerbFilter</a></div>
+<a class="list-group-item" href="#navigation-8876" data-toggle="collapse" data-parent="#navigation">yii\filters\auth <b class="caret"></b></a><div id="navigation-8876" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-auth-authinterface.html">AuthInterface</a>
+<a class="list-group-item" href="./yii-filters-auth-authmethod.html">AuthMethod</a>
+<a class="list-group-item" href="./yii-filters-auth-compositeauth.html">CompositeAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpbasicauth.html">HttpBasicAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpbearerauth.html">HttpBearerAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpheaderauth.html">HttpHeaderAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-queryparamauth.html">QueryParamAuth</a></div>
+<a class="list-group-item" href="#navigation-8877" data-toggle="collapse" data-parent="#navigation">yii\grid <b class="caret"></b></a><div id="navigation-8877" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-grid-actioncolumn.html">ActionColumn</a>
+<a class="list-group-item" href="./yii-grid-checkboxcolumn.html">CheckboxColumn</a>
+<a class="list-group-item" href="./yii-grid-column.html">Column</a>
+<a class="list-group-item" href="./yii-grid-datacolumn.html">DataColumn</a>
+<a class="list-group-item" href="./yii-grid-gridview.html">GridView</a>
+<a class="list-group-item" href="./yii-grid-gridviewasset.html">GridViewAsset</a>
+<a class="list-group-item" href="./yii-grid-radiobuttoncolumn.html">RadioButtonColumn</a>
+<a class="list-group-item" href="./yii-grid-serialcolumn.html">SerialColumn</a></div>
+<a class="list-group-item" href="#navigation-8878" data-toggle="collapse" data-parent="#navigation">yii\helpers <b class="caret"></b></a><div id="navigation-8878" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-helpers-arrayhelper.html">ArrayHelper</a>
+<a class="list-group-item" href="./yii-helpers-basearrayhelper.html">BaseArrayHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseconsole.html">BaseConsole</a>
+<a class="list-group-item" href="./yii-helpers-basefilehelper.html">BaseFileHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseformatconverter.html">BaseFormatConverter</a>
+<a class="list-group-item" href="./yii-helpers-basehtml.html">BaseHtml</a>
+<a class="list-group-item" href="./yii-helpers-basehtmlpurifier.html">BaseHtmlPurifier</a>
+<a class="list-group-item" href="./yii-helpers-baseinflector.html">BaseInflector</a>
+<a class="list-group-item" href="./yii-helpers-baseiphelper.html">BaseIpHelper</a>
+<a class="list-group-item" href="./yii-helpers-basejson.html">BaseJson</a>
+<a class="list-group-item" href="./yii-helpers-basemarkdown.html">BaseMarkdown</a>
+<a class="list-group-item" href="./yii-helpers-basestringhelper.html">BaseStringHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseurl.html">BaseUrl</a>
+<a class="list-group-item" href="./yii-helpers-basevardumper.html">BaseVarDumper</a>
+<a class="list-group-item" href="./yii-helpers-console.html">Console</a>
+<a class="list-group-item" href="./yii-helpers-filehelper.html">FileHelper</a>
+<a class="list-group-item" href="./yii-helpers-formatconverter.html">FormatConverter</a>
+<a class="list-group-item" href="./yii-helpers-html.html">Html</a>
+<a class="list-group-item" href="./yii-helpers-htmlpurifier.html">HtmlPurifier</a>
+<a class="list-group-item" href="./yii-helpers-inflector.html">Inflector</a>
+<a class="list-group-item" href="./yii-helpers-iphelper.html">IpHelper</a>
+<a class="list-group-item" href="./yii-helpers-json.html">Json</a>
+<a class="list-group-item" href="./yii-helpers-markdown.html">Markdown</a>
+<a class="list-group-item" href="./yii-helpers-replacearrayvalue.html">ReplaceArrayValue</a>
+<a class="list-group-item" href="./yii-helpers-stringhelper.html">StringHelper</a>
+<a class="list-group-item" href="./yii-helpers-unsetarrayvalue.html">UnsetArrayValue</a>
+<a class="list-group-item" href="./yii-helpers-url.html">Url</a>
+<a class="list-group-item" href="./yii-helpers-vardumper.html">VarDumper</a></div>
+<a class="list-group-item" href="#navigation-8879" data-toggle="collapse" data-parent="#navigation">yii\i18n <b class="caret"></b></a><div id="navigation-8879" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-i18n-dbmessagesource.html">DbMessageSource</a>
+<a class="list-group-item" href="./yii-i18n-formatter.html">Formatter</a>
+<a class="list-group-item" href="./yii-i18n-gettextfile.html">GettextFile</a>
+<a class="list-group-item" href="./yii-i18n-gettextmessagesource.html">GettextMessageSource</a>
+<a class="list-group-item" href="./yii-i18n-gettextmofile.html">GettextMoFile</a>
+<a class="list-group-item" href="./yii-i18n-gettextpofile.html">GettextPoFile</a>
+<a class="list-group-item" href="./yii-i18n-i18n.html">I18N</a>
+<a class="list-group-item" href="./yii-i18n-locale.html">Locale</a>
+<a class="list-group-item" href="./yii-i18n-messageformatter.html">MessageFormatter</a>
+<a class="list-group-item" href="./yii-i18n-messagesource.html">MessageSource</a>
+<a class="list-group-item" href="./yii-i18n-missingtranslationevent.html">MissingTranslationEvent</a>
+<a class="list-group-item" href="./yii-i18n-phpmessagesource.html">PhpMessageSource</a></div>
+<a class="list-group-item" href="#navigation-8880" data-toggle="collapse" data-parent="#navigation">yii\log <b class="caret"></b></a><div id="navigation-8880" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-log-dbtarget.html">DbTarget</a>
+<a class="list-group-item" href="./yii-log-dispatcher.html">Dispatcher</a>
+<a class="list-group-item" href="./yii-log-emailtarget.html">EmailTarget</a>
+<a class="list-group-item" href="./yii-log-filetarget.html">FileTarget</a>
+<a class="list-group-item" href="./yii-log-logruntimeexception.html">LogRuntimeException</a>
+<a class="list-group-item" href="./yii-log-logger.html">Logger</a>
+<a class="list-group-item" href="./yii-log-syslogtarget.html">SyslogTarget</a>
+<a class="list-group-item" href="./yii-log-target.html">Target</a></div>
+<a class="list-group-item" href="#navigation-8881" data-toggle="collapse" data-parent="#navigation">yii\mail <b class="caret"></b></a><div id="navigation-8881" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mail-basemailer.html">BaseMailer</a>
+<a class="list-group-item" href="./yii-mail-basemessage.html">BaseMessage</a>
+<a class="list-group-item" href="./yii-mail-mailevent.html">MailEvent</a>
+<a class="list-group-item" href="./yii-mail-mailerinterface.html">MailerInterface</a>
+<a class="list-group-item" href="./yii-mail-messageinterface.html">MessageInterface</a></div>
+<a class="list-group-item" href="#navigation-8882" data-toggle="collapse" data-parent="#navigation">yii\mutex <b class="caret"></b></a><div id="navigation-8882" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mutex-dbmutex.html">DbMutex</a>
+<a class="list-group-item" href="./yii-mutex-filemutex.html">FileMutex</a>
+<a class="list-group-item" href="./yii-mutex-mutex.html">Mutex</a>
+<a class="list-group-item" href="./yii-mutex-mysqlmutex.html">MysqlMutex</a>
+<a class="list-group-item" href="./yii-mutex-oraclemutex.html">OracleMutex</a>
+<a class="list-group-item" href="./yii-mutex-pgsqlmutex.html">PgsqlMutex</a></div>
+<a class="list-group-item" href="#navigation-8883" data-toggle="collapse" data-parent="#navigation">yii\rbac <b class="caret"></b></a><div id="navigation-8883" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rbac-assignment.html">Assignment</a>
+<a class="list-group-item" href="./yii-rbac-basemanager.html">BaseManager</a>
+<a class="list-group-item" href="./yii-rbac-checkaccessinterface.html">CheckAccessInterface</a>
+<a class="list-group-item" href="./yii-rbac-dbmanager.html">DbManager</a>
+<a class="list-group-item" href="./yii-rbac-item.html">Item</a>
+<a class="list-group-item" href="./yii-rbac-managerinterface.html">ManagerInterface</a>
+<a class="list-group-item" href="./yii-rbac-permission.html">Permission</a>
+<a class="list-group-item" href="./yii-rbac-phpmanager.html">PhpManager</a>
+<a class="list-group-item" href="./yii-rbac-role.html">Role</a>
+<a class="list-group-item" href="./yii-rbac-rule.html">Rule</a></div>
+<a class="list-group-item" href="#navigation-8884" data-toggle="collapse" data-parent="#navigation">yii\rest <b class="caret"></b></a><div id="navigation-8884" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rest-action.html">Action</a>
+<a class="list-group-item" href="./yii-rest-activecontroller.html">ActiveController</a>
+<a class="list-group-item" href="./yii-rest-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-rest-createaction.html">CreateAction</a>
+<a class="list-group-item" href="./yii-rest-deleteaction.html">DeleteAction</a>
+<a class="list-group-item" href="./yii-rest-indexaction.html">IndexAction</a>
+<a class="list-group-item" href="./yii-rest-optionsaction.html">OptionsAction</a>
+<a class="list-group-item" href="./yii-rest-serializer.html">Serializer</a>
+<a class="list-group-item" href="./yii-rest-updateaction.html">UpdateAction</a>
+<a class="list-group-item" href="./yii-rest-urlrule.html">UrlRule</a>
+<a class="list-group-item" href="./yii-rest-viewaction.html">ViewAction</a></div>
+<a class="list-group-item" href="#navigation-8885" data-toggle="collapse" data-parent="#navigation">yii\test <b class="caret"></b></a><div id="navigation-8885" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-test-activefixture.html">ActiveFixture</a>
+<a class="list-group-item" href="./yii-test-arrayfixture.html">ArrayFixture</a>
+<a class="list-group-item" href="./yii-test-baseactivefixture.html">BaseActiveFixture</a>
+<a class="list-group-item" href="./yii-test-dbfixture.html">DbFixture</a>
+<a class="list-group-item" href="./yii-test-filefixturetrait.html">FileFixtureTrait</a>
+<a class="list-group-item" href="./yii-test-fixture.html">Fixture</a>
+<a class="list-group-item" href="./yii-test-fixturetrait.html">FixtureTrait</a>
+<a class="list-group-item" href="./yii-test-initdbfixture.html">InitDbFixture</a></div>
+<a class="list-group-item" href="#navigation-8886" data-toggle="collapse" data-parent="#navigation">yii\validators <b class="caret"></b></a><div id="navigation-8886" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-validators-booleanvalidator.html">BooleanValidator</a>
+<a class="list-group-item" href="./yii-validators-comparevalidator.html">CompareValidator</a>
+<a class="list-group-item" href="./yii-validators-datevalidator.html">DateValidator</a>
+<a class="list-group-item" href="./yii-validators-defaultvaluevalidator.html">DefaultValueValidator</a>
+<a class="list-group-item" href="./yii-validators-eachvalidator.html">EachValidator</a>
+<a class="list-group-item" href="./yii-validators-emailvalidator.html">EmailValidator</a>
+<a class="list-group-item" href="./yii-validators-existvalidator.html">ExistValidator</a>
+<a class="list-group-item" href="./yii-validators-filevalidator.html">FileValidator</a>
+<a class="list-group-item" href="./yii-validators-filtervalidator.html">FilterValidator</a>
+<a class="list-group-item" href="./yii-validators-imagevalidator.html">ImageValidator</a>
+<a class="list-group-item" href="./yii-validators-inlinevalidator.html">InlineValidator</a>
+<a class="list-group-item" href="./yii-validators-ipvalidator.html">IpValidator</a>
+<a class="list-group-item" href="./yii-validators-numbervalidator.html">NumberValidator</a>
+<a class="list-group-item" href="./yii-validators-punycodeasset.html">PunycodeAsset</a>
+<a class="list-group-item" href="./yii-validators-rangevalidator.html">RangeValidator</a>
+<a class="list-group-item" href="./yii-validators-regularexpressionvalidator.html">RegularExpressionValidator</a>
+<a class="list-group-item" href="./yii-validators-requiredvalidator.html">RequiredValidator</a>
+<a class="list-group-item" href="./yii-validators-safevalidator.html">SafeValidator</a>
+<a class="list-group-item" href="./yii-validators-stringvalidator.html">StringValidator</a>
+<a class="list-group-item" href="./yii-validators-uniquevalidator.html">UniqueValidator</a>
+<a class="list-group-item" href="./yii-validators-urlvalidator.html">UrlValidator</a>
+<a class="list-group-item" href="./yii-validators-validationasset.html">ValidationAsset</a>
+<a class="list-group-item" href="./yii-validators-validator.html">Validator</a></div>
+<a class="list-group-item active" href="#navigation-8887" data-toggle="collapse" data-parent="#navigation">yii\web <b class="caret"></b></a><div id="navigation-8887" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-web-application.html">Application</a>
+<a class="list-group-item" href="./yii-web-assetbundle.html">AssetBundle</a>
+<a class="list-group-item" href="./yii-web-assetconverter.html">AssetConverter</a>
+<a class="list-group-item" href="./yii-web-assetconverterinterface.html">AssetConverterInterface</a>
+<a class="list-group-item" href="./yii-web-assetmanager.html">AssetManager</a>
+<a class="list-group-item" href="./yii-web-badrequesthttpexception.html">BadRequestHttpException</a>
+<a class="list-group-item" href="./yii-web-cachesession.html">CacheSession</a>
+<a class="list-group-item" href="./yii-web-compositeurlrule.html">CompositeUrlRule</a>
+<a class="list-group-item" href="./yii-web-conflicthttpexception.html">ConflictHttpException</a>
+<a class="list-group-item" href="./yii-web-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-web-cookie.html">Cookie</a>
+<a class="list-group-item" href="./yii-web-cookiecollection.html">CookieCollection</a>
+<a class="list-group-item" href="./yii-web-dbsession.html">DbSession</a>
+<a class="list-group-item" href="./yii-web-erroraction.html">ErrorAction</a>
+<a class="list-group-item" href="./yii-web-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-web-forbiddenhttpexception.html">ForbiddenHttpException</a>
+<a class="list-group-item" href="./yii-web-gonehttpexception.html">GoneHttpException</a>
+<a class="list-group-item" href="./yii-web-groupurlrule.html">GroupUrlRule</a>
+<a class="list-group-item" href="./yii-web-headercollection.html">HeaderCollection</a>
+<a class="list-group-item" href="./yii-web-headersalreadysentexception.html">HeadersAlreadySentException</a>
+<a class="list-group-item" href="./yii-web-htmlresponseformatter.html">HtmlResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-httpexception.html">HttpException</a>
+<a class="list-group-item" href="./yii-web-identityinterface.html">IdentityInterface</a>
+<a class="list-group-item" href="./yii-web-jqueryasset.html">JqueryAsset</a>
+<a class="list-group-item" href="./yii-web-jsexpression.html">JsExpression</a>
+<a class="list-group-item" href="./yii-web-jsonparser.html">JsonParser</a>
+<a class="list-group-item" href="./yii-web-jsonresponseformatter.html">JsonResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-link.html">Link</a>
+<a class="list-group-item" href="./yii-web-linkable.html">Linkable</a>
+<a class="list-group-item" href="./yii-web-methodnotallowedhttpexception.html">MethodNotAllowedHttpException</a>
+<a class="list-group-item" href="./yii-web-multifieldsession.html">MultiFieldSession</a>
+<a class="list-group-item" href="./yii-web-multipartformdataparser.html">MultipartFormDataParser</a>
+<a class="list-group-item" href="./yii-web-notacceptablehttpexception.html">NotAcceptableHttpException</a>
+<a class="list-group-item" href="./yii-web-notfoundhttpexception.html">NotFoundHttpException</a>
+<a class="list-group-item" href="./yii-web-rangenotsatisfiablehttpexception.html">RangeNotSatisfiableHttpException</a>
+<a class="list-group-item" href="./yii-web-request.html">Request</a>
+<a class="list-group-item" href="./yii-web-requestparserinterface.html">RequestParserInterface</a>
+<a class="list-group-item" href="./yii-web-response.html">Response</a>
+<a class="list-group-item" href="./yii-web-responseformatterinterface.html">ResponseFormatterInterface</a>
+<a class="list-group-item" href="./yii-web-servererrorhttpexception.html">ServerErrorHttpException</a>
+<a class="list-group-item" href="./yii-web-session.html">Session</a>
+<a class="list-group-item" href="./yii-web-sessioniterator.html">SessionIterator</a>
+<a class="list-group-item" href="./yii-web-toomanyrequestshttpexception.html">TooManyRequestsHttpException</a>
+<a class="list-group-item" href="./yii-web-unauthorizedhttpexception.html">UnauthorizedHttpException</a>
+<a class="list-group-item" href="./yii-web-unprocessableentityhttpexception.html">UnprocessableEntityHttpException</a>
+<a class="list-group-item" href="./yii-web-unsupportedmediatypehttpexception.html">UnsupportedMediaTypeHttpException</a>
+<a class="list-group-item" href="./yii-web-uploadedfile.html">UploadedFile</a>
+<a class="list-group-item" href="./yii-web-urlmanager.html">UrlManager</a>
+<a class="list-group-item" href="./yii-web-urlnormalizer.html">UrlNormalizer</a>
+<a class="list-group-item" href="./yii-web-urlnormalizerredirectexception.html">UrlNormalizerRedirectException</a>
+<a class="list-group-item" href="./yii-web-urlrule.html">UrlRule</a>
+<a class="list-group-item" href="./yii-web-urlruleinterface.html">UrlRuleInterface</a>
+<a class="list-group-item active" href="./yii-web-user.html">User</a>
+<a class="list-group-item" href="./yii-web-userevent.html">UserEvent</a>
+<a class="list-group-item" href="./yii-web-view.html">View</a>
+<a class="list-group-item" href="./yii-web-viewaction.html">ViewAction</a>
+<a class="list-group-item" href="./yii-web-xmlresponseformatter.html">XmlResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-yiiasset.html">YiiAsset</a></div>
+<a class="list-group-item" href="#navigation-8888" data-toggle="collapse" data-parent="#navigation">yii\widgets <b class="caret"></b></a><div id="navigation-8888" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-widgets-activefield.html">ActiveField</a>
+<a class="list-group-item" href="./yii-widgets-activeform.html">ActiveForm</a>
+<a class="list-group-item" href="./yii-widgets-activeformasset.html">ActiveFormAsset</a>
+<a class="list-group-item" href="./yii-widgets-baselistview.html">BaseListView</a>
+<a class="list-group-item" href="./yii-widgets-block.html">Block</a>
+<a class="list-group-item" href="./yii-widgets-breadcrumbs.html">Breadcrumbs</a>
+<a class="list-group-item" href="./yii-widgets-contentdecorator.html">ContentDecorator</a>
+<a class="list-group-item" href="./yii-widgets-detailview.html">DetailView</a>
+<a class="list-group-item" href="./yii-widgets-fragmentcache.html">FragmentCache</a>
+<a class="list-group-item" href="./yii-widgets-inputwidget.html">InputWidget</a>
+<a class="list-group-item" href="./yii-widgets-linkpager.html">LinkPager</a>
+<a class="list-group-item" href="./yii-widgets-linksorter.html">LinkSorter</a>
+<a class="list-group-item" href="./yii-widgets-listview.html">ListView</a>
+<a class="list-group-item" href="./yii-widgets-maskedinput.html">MaskedInput</a>
+<a class="list-group-item" href="./yii-widgets-maskedinputasset.html">MaskedInputAsset</a>
+<a class="list-group-item" href="./yii-widgets-menu.html">Menu</a>
+<a class="list-group-item" href="./yii-widgets-pjax.html">Pjax</a>
+<a class="list-group-item" href="./yii-widgets-pjaxasset.html">PjaxAsset</a>
+<a class="list-group-item" href="./yii-widgets-spaceless.html">Spaceless</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\web\User</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+                    | <a href="#constants">Constants</a>
+    </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-web-user.html">yii\web\User</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a></td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php">https://github.com/yiisoft/yii2/blob/master/framework/web/User.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>User is the class for the <code>user</code> application component that manages the user authentication status.</strong></p>
+    <p>You may use <a href="yii-web-user.html#$isGuest-detail">$isGuest</a> to determine whether the current user is a guest or not.
+If the user is a guest, the <a href="yii-web-user.html#$identity-detail">$identity</a> property would return <code>null</code>. Otherwise, it would
+be an instance of <a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a>.</p>
+<p>You may call various methods to change the user authentication status:</p>
+<ul>
+<li><a href="yii-web-user.html#login()-detail">login()</a>: sets the specified identity and remembers the authentication status in session and cookie;</li>
+<li><a href="yii-web-user.html#logout()-detail">logout()</a>: marks the user as a guest and clears the relevant information from session and cookie;</li>
+<li><a href="yii-web-user.html#setIdentity()-detail">setIdentity()</a>: changes the user identity without touching session or cookie
+(this is best used in stateless RESTful API implementation).</li>
+</ul>
+<p>Note that User only maintains the user authentication status. It does NOT handle how to authenticate
+a user. The logic of how to authenticate a user should be done in the class implementing <a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a>.
+You are also required to set <a href="yii-web-user.html#$identityClass-detail">$identityClass</a> with the name of this class.</p>
+<p>User is configured as an application component in <a href="yii-web-application.html">yii\web\Application</a> by default.
+You can access that instance via <code>Yii::$app-&gt;user</code>.</p>
+<p>You can modify its configuration by adding an array to your application config under <code>components</code>
+as it is shown in the following example:</p>
+<pre><code class="hljs php language-php"><span class="hljs-string">'user'</span> =&gt; [
+    <span class="hljs-string">'identityClass'</span> =&gt; <span class="hljs-string">'app\models\User'</span>, <span class="hljs-comment">// User must implement the IdentityInterface</span>
+    <span class="hljs-string">'enableAutoLogin'</span> =&gt; <span class="hljs-keyword">true</span>,
+    <span class="hljs-comment">// 'loginUrl' =&gt; ['user/login'],</span>
+    <span class="hljs-comment">// ...</span>
+]
+</code></pre>
+
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$absoluteAuthTimeout">
+        <td><a href="yii-web-user.html#$absoluteAuthTimeout-detail">$absoluteAuthTimeout</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>The number of seconds in which the user will be logged out automatically
+regardless of activity.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$absoluteAuthTimeoutParam">
+        <td><a href="yii-web-user.html#$absoluteAuthTimeoutParam-detail">$absoluteAuthTimeoutParam</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The session variable name used to store the value of absolute expiration timestamp of the authenticated state.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$acceptableRedirectTypes">
+        <td><a href="yii-web-user.html#$acceptableRedirectTypes-detail">$acceptableRedirectTypes</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>MIME types for which this component should redirect to the <a href="yii-web-user.html#$loginUrl-detail">$loginUrl</a>.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$accessChecker">
+        <td><a href="yii-web-user.html#$accessChecker-detail">$accessChecker</a></td>
+        <td><a href="yii-rbac-checkaccessinterface.html">yii\rbac\CheckAccessInterface</a></td>
+        <td>The access checker to use for checking access.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$authTimeout">
+        <td><a href="yii-web-user.html#$authTimeout-detail">$authTimeout</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>The number of seconds in which the user will be logged out automatically if he
+remains inactive.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$authTimeoutParam">
+        <td><a href="yii-web-user.html#$authTimeoutParam-detail">$authTimeoutParam</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The session variable name used to store the value of expiration timestamp of the authenticated state.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$autoRenewCookie">
+        <td><a href="yii-web-user.html#$autoRenewCookie-detail">$autoRenewCookie</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to automatically renew the identity cookie each time a page is requested.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr class="inherited" id="$behaviors">
+        <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
+        <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
+        <td>List of behaviors attached to this component</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="$enableAutoLogin">
+        <td><a href="yii-web-user.html#$enableAutoLogin-detail">$enableAutoLogin</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to enable cookie-based login.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$enableSession">
+        <td><a href="yii-web-user.html#$enableSession-detail">$enableSession</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to use session to persist authentication status across multiple requests.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$id">
+        <td><a href="yii-web-user.html#$id-detail">$id</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>The unique identifier for the user.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$idParam">
+        <td><a href="yii-web-user.html#$idParam-detail">$idParam</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The session variable name used to store the value of <a href="yii-web-user.html#$id-detail">$id</a>.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$identity">
+        <td><a href="yii-web-user.html#$identity-detail">$identity</a></td>
+        <td><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+        <td>The identity object associated with the currently logged-in user.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$identityClass">
+        <td><a href="yii-web-user.html#$identityClass-detail">$identityClass</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The class name of the <a href="yii-web-user.html#$identity-detail">$identity</a> object.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$identityCookie">
+        <td><a href="yii-web-user.html#$identityCookie-detail">$identityCookie</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The configuration of the identity cookie.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$isGuest">
+        <td><a href="yii-web-user.html#$isGuest-detail">$isGuest</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether the current user is a guest.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$loginUrl">
+        <td><a href="yii-web-user.html#$loginUrl-detail">$loginUrl</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The URL for login when <a href="yii-web-user.html#loginRequired()-detail">loginRequired()</a> is called.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$returnUrl">
+        <td><a href="yii-web-user.html#$returnUrl-detail">$returnUrl</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The URL that the user should be redirected to after login.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="$returnUrlParam">
+        <td><a href="yii-web-user.html#$returnUrlParam-detail">$returnUrlParam</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The session variable name used to store the value of <a href="yii-web-user.html#$returnUrl-detail">$returnUrl</a>.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-component.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-baseobject.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-component.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-component.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-component.html#__set()-detail">__set()</a></td>
+        <td>Sets the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-component.html#__unset()-detail">__unset()</a></td>
+        <td>Sets a component property to be null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                    <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                    <tr class="inherited" id="behaviors()">
+        <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="can()">
+        <td><a href="yii-web-user.html#can()-detail">can()</a></td>
+        <td>Checks if the user can perform the operation as specified by the given permission.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-component.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                    <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="getId()">
+        <td><a href="yii-web-user.html#getId()-detail">getId()</a></td>
+        <td>Returns a value that uniquely represents the user.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="getIdentity()">
+        <td><a href="yii-web-user.html#getIdentity()-detail">getIdentity()</a></td>
+        <td>Returns the identity object associated with the currently logged-in user.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+                <tr id="getIsGuest()">
+        <td><a href="yii-web-user.html#getIsGuest()-detail">getIsGuest()</a></td>
+        <td>Returns a value indicating whether the user is a guest (not authenticated).</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="getReturnUrl()">
+        <td><a href="yii-web-user.html#getReturnUrl()-detail">getReturnUrl()</a></td>
+        <td>Returns the URL that the browser should be redirected to after successful login.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-component.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-component.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined for this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="init()">
+        <td><a href="yii-web-user.html#init()-detail">init()</a></td>
+        <td>Initializes the application component.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="login()">
+        <td><a href="yii-web-user.html#login()-detail">login()</a></td>
+        <td>Logs in a user.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="loginByAccessToken()">
+        <td><a href="yii-web-user.html#loginByAccessToken()-detail">loginByAccessToken()</a></td>
+        <td>Logs in a user by the given access token.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+                <tr id="loginRequired()">
+        <td><a href="yii-web-user.html#loginRequired()-detail">loginRequired()</a></td>
+        <td>Redirects the user browser to the login page.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="logout()">
+        <td><a href="yii-web-user.html#logout()-detail">logout()</a></td>
+        <td>Logs out the current user.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                                <tr id="setIdentity()">
+        <td><a href="yii-web-user.html#setIdentity()-detail">setIdentity()</a></td>
+        <td>Sets the user identity object.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="setReturnUrl()">
+        <td><a href="yii-web-user.html#setReturnUrl()-detail">setReturnUrl()</a></td>
+        <td>Remembers the URL in the session so that it can be retrieved back later by <a href="yii-web-user.html#getReturnUrl()-detail">getReturnUrl()</a>.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="switchIdentity()">
+        <td><a href="yii-web-user.html#switchIdentity()-detail">switchIdentity()</a></td>
+        <td>Switches to a new identity for the current user.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                    <tr id="afterLogin()">
+        <td><a href="yii-web-user.html#afterLogin()-detail">afterLogin()</a></td>
+        <td>This method is called after the user is successfully logged in.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="afterLogout()">
+        <td><a href="yii-web-user.html#afterLogout()-detail">afterLogout()</a></td>
+        <td>This method is invoked right after a user is logged out via <a href="yii-web-user.html#logout()-detail">logout()</a>.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+                    <tr id="beforeLogin()">
+        <td><a href="yii-web-user.html#beforeLogin()-detail">beforeLogin()</a></td>
+        <td>This method is called before logging in a user.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="beforeLogout()">
+        <td><a href="yii-web-user.html#beforeLogout()-detail">beforeLogout()</a></td>
+        <td>This method is invoked when calling <a href="yii-web-user.html#logout()-detail">logout()</a> to log out a user.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+                            <tr id="checkRedirectAcceptable()">
+        <td><a href="yii-web-user.html#checkRedirectAcceptable()-detail">checkRedirectAcceptable()</a></td>
+        <td>Checks if the <code>Accept</code> header contains a content type that allows redirection to the login page.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+                            <tr id="getAccessChecker()">
+        <td><a href="yii-web-user.html#getAccessChecker()-detail">getAccessChecker()</a></td>
+        <td>Returns the access checker used for checking access.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="getAuthManager()">
+        <td><a href="yii-web-user.html#getAuthManager()-detail">getAuthManager()</a></td>
+        <td>Returns auth manager associated with the user component.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+                            <tr id="getIdentityAndDurationFromCookie()">
+        <td><a href="yii-web-user.html#getIdentityAndDurationFromCookie()-detail">getIdentityAndDurationFromCookie()</a></td>
+        <td>Determines if an identity cookie has a valid format and contains a valid auth key.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+                                            <tr id="loginByCookie()">
+        <td><a href="yii-web-user.html#loginByCookie()-detail">loginByCookie()</a></td>
+        <td>Logs in a user by cookie.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+                            <tr id="regenerateCsrfToken()">
+        <td><a href="yii-web-user.html#regenerateCsrfToken()-detail">regenerateCsrfToken()</a></td>
+        <td>Regenerates CSRF token</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="removeIdentityCookie()">
+        <td><a href="yii-web-user.html#removeIdentityCookie()-detail">removeIdentityCookie()</a></td>
+        <td>Removes the identity cookie.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="renewAuthStatus()">
+        <td><a href="yii-web-user.html#renewAuthStatus()-detail">renewAuthStatus()</a></td>
+        <td>Updates the authentication status using the information from session and cookie.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="renewIdentityCookie()">
+        <td><a href="yii-web-user.html#renewIdentityCookie()-detail">renewIdentityCookie()</a></td>
+        <td>Renews the identity cookie.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+            <tr id="sendIdentityCookie()">
+        <td><a href="yii-web-user.html#sendIdentityCookie()-detail">sendIdentityCookie()</a></td>
+        <td>Sends an identity cookie.</td>
+        <td><a href="yii-web-user.html">yii\web\User</a></td>
+    </tr>
+                    </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+<div class="summary doc-const">
+    <h2>Constants</h2>
+
+    <p><a href="#" class="toggle">Hide inherited constants</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-const" />
+        <col class="col-value" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Constant</th><th>Value</th><th>Description</th><th>Defined By</th>
+    </tr>
+            <tr id="EVENT_AFTER_LOGIN">
+          <td id="EVENT_AFTER_LOGIN-detail">EVENT_AFTER_LOGIN</td>
+          <td>'afterLogin'</td>
+          <td>
+                        </td>
+          <td><a href="yii-web-user.html">yii\web\User</a></td>
+        </tr>
+            <tr id="EVENT_AFTER_LOGOUT">
+          <td id="EVENT_AFTER_LOGOUT-detail">EVENT_AFTER_LOGOUT</td>
+          <td>'afterLogout'</td>
+          <td>
+                        </td>
+          <td><a href="yii-web-user.html">yii\web\User</a></td>
+        </tr>
+            <tr id="EVENT_BEFORE_LOGIN">
+          <td id="EVENT_BEFORE_LOGIN-detail">EVENT_BEFORE_LOGIN</td>
+          <td>'beforeLogin'</td>
+          <td>
+                        </td>
+          <td><a href="yii-web-user.html">yii\web\User</a></td>
+        </tr>
+            <tr id="EVENT_BEFORE_LOGOUT">
+          <td id="EVENT_BEFORE_LOGOUT-detail">EVENT_BEFORE_LOGOUT</td>
+          <td>'beforeLogout'</td>
+          <td>
+                        </td>
+          <td><a href="yii-web-user.html">yii\web\User</a></td>
+        </tr>
+        </table>
+</div>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$absoluteAuthTimeout-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$absoluteAuthTimeout-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L118" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L118" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $absoluteAuthTimeout        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The number of seconds in which the user will be logged out automatically
+regardless of activity.
+Note that this will not work if <a href="yii-web-user.html#$enableAutoLogin-detail">$enableAutoLogin</a> is <code>true</code>.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <a href="yii-web-user.html#$absoluteAuthTimeout-detail">$absoluteAuthTimeout</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$absoluteAuthTimeoutParam-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$absoluteAuthTimeoutParam-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L141" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L141" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $absoluteAuthTimeoutParam        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The session variable name used to store the value of absolute expiration timestamp of the authenticated state.
+This is used when <a href="yii-web-user.html#$absoluteAuthTimeout-detail">$absoluteAuthTimeout</a> is set.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-web-user.html#$absoluteAuthTimeoutParam-detail">$absoluteAuthTimeoutParam</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'__absoluteExpire'</span></div>
+
+
+    <div class="detail-header h3" id="$acceptableRedirectTypes-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$acceptableRedirectTypes-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L150" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L150" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $acceptableRedirectTypes        <span class="detail-header-tag small">
+            public                                                property
+                            (available since version 2.0.8)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>MIME types for which this component should redirect to the <a href="yii-web-user.html#$loginUrl-detail">$loginUrl</a>.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-web-user.html#$acceptableRedirectTypes-detail">$acceptableRedirectTypes</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'text/html'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'application/xhtml+xml'</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$accessChecker-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$accessChecker-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L112" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L112" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $accessChecker        <span class="detail-header-tag small">
+            public                                                property
+                            (available since version 2.0.9)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The access checker to use for checking access.
+If not set the application auth manager will be used.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-rbac-checkaccessinterface.html">yii\rbac\CheckAccessInterface</a></span> <a href="yii-web-user.html#$accessChecker-detail">$accessChecker</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$authTimeout-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$authTimeout-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L106" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L106" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $authTimeout        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The number of seconds in which the user will be logged out automatically if he
+remains inactive. If this property is not set, the user will be logged out after
+the current session expires (c.f. <a href="yii-web-session.html#$timeout-detail">yii\web\Session::$timeout</a>).
+Note that this will not work if <a href="yii-web-user.html#$enableAutoLogin-detail">$enableAutoLogin</a> is <code>true</code>.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <a href="yii-web-user.html#$authTimeout-detail">$authTimeout</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$authTimeoutParam-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$authTimeoutParam-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L136" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L136" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $authTimeoutParam        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The session variable name used to store the value of expiration timestamp of the authenticated state.
+This is used when <a href="yii-web-user.html#$authTimeout-detail">$authTimeout</a> is set.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-web-user.html#$authTimeoutParam-detail">$authTimeoutParam</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'__expire'</span></div>
+
+
+    <div class="detail-header h3" id="$autoRenewCookie-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$autoRenewCookie-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L127" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L127" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $autoRenewCookie        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether to automatically renew the identity cookie each time a page is requested.
+This property is effective only when <a href="yii-web-user.html#$enableAutoLogin-detail">$enableAutoLogin</a> is <code>true</code>.
+When this is <code>false</code>, the identity cookie will expire after the specified duration since the user
+is initially logged in. When this is <code>true</code>, the identity cookie will expire after the specified duration
+since the user visits the site the last time.</p>
+
+        <p>See also <a href="yii-web-user.html#$enableAutoLogin-detail">$enableAutoLogin</a>.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="yii-web-user.html#$autoRenewCookie-detail">$autoRenewCookie</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+
+    <div class="detail-header h3" id="$enableAutoLogin-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$enableAutoLogin-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L75" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L75" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $enableAutoLogin        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether to enable cookie-based login. Defaults to <code>false</code>.
+Note that this property will be ignored if <a href="yii-web-user.html#$enableSession-detail">$enableSession</a> is <code>false</code>.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="yii-web-user.html#$enableAutoLogin-detail">$enableAutoLogin</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+
+    <div class="detail-header h3" id="$enableSession-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$enableSession-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L81" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L81" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $enableSession        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether to use session to persist authentication status across multiple requests.
+You set this property to be <code>false</code> if your application is stateless, which is often the case
+for RESTful APIs.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="yii-web-user.html#$enableSession-detail">$enableSession</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+
+    <div class="detail-header h3" id="$id-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$id-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $id        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The unique identifier for the user. If <code>null</code>, it means the user is a guest.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.integer">integer</a></span> <strong><a href="yii-web-user.html#getId()-detail">getId</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$idParam-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$idParam-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L131" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L131" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $idParam        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The session variable name used to store the value of <a href="yii-web-user.html#$id-detail">$id</a>.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-web-user.html#$idParam-detail">$idParam</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'__id'</span></div>
+
+
+    <div class="detail-header h3" id="$identity-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$identity-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $identity        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The identity object associated with the currently logged-in user.
+<code>null</code> is returned if the user is not logged in (not authenticated).</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a>|<a href="http://www.php.net/language.types.null">null</a></span> <strong><a href="yii-web-user.html#getIdentity()-detail">getIdentity</a></strong> ( <span style="color: #0000BB">$autoRenew&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span> )<br /><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#setIdentity()-detail">setIdentity</a></strong> ( <span style="color: #0000BB">$identity</span> )</div>
+
+
+    <div class="detail-header h3" id="$identityClass-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$identityClass-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L70" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L70" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $identityClass        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The class name of the <a href="yii-web-user.html#$identity-detail">$identity</a> object.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-web-user.html#$identityClass-detail">$identityClass</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$identityCookie-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$identityCookie-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L99" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L99" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $identityCookie        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The configuration of the identity cookie. This property is used only when <a href="yii-web-user.html#$enableAutoLogin-detail">$enableAutoLogin</a> is <code>true</code>.</p>
+
+        <p>See also <a href="yii-web-cookie.html">yii\web\Cookie</a>.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-web-user.html#$identityCookie-detail">$identityCookie</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'name'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'_identity'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'httpOnly'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #0000BB">true</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$isGuest-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$isGuest-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $isGuest        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether the current user is a guest.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-web-user.html#getIsGuest()-detail">getIsGuest</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$loginUrl-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$loginUrl-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L94" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L94" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $loginUrl        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The URL for login when <a href="yii-web-user.html#loginRequired()-detail">loginRequired()</a> is called.
+If an array is given, <a href="yii-web-urlmanager.html#createUrl()-detail">yii\web\UrlManager::createUrl()</a> will be called to create the corresponding URL.
+The first element of the array should be the route to the login action, and the rest of
+the name-value pairs are GET parameters used to construct the login URL. For example,</p>
+<pre><code class="hljs php language-php">[<span class="hljs-string">'site/login'</span>, <span class="hljs-string">'ref'</span> =&gt; <span class="hljs-number">1</span>]
+</code></pre>
+<p>If this property is <code>null</code>, a 403 HTTP exception will be raised when <a href="yii-web-user.html#loginRequired()-detail">loginRequired()</a> is called.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-web-user.html#$loginUrl-detail">$loginUrl</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'site/login'</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$returnUrl-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$returnUrl-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $returnUrl        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The URL that the user should be redirected to after login.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-web-user.html#getReturnUrl()-detail">getReturnUrl</a></strong> ( <span style="color: #0000BB">$defaultUrl&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )<br /><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#setReturnUrl()-detail">setReturnUrl</a></strong> ( <span style="color: #0000BB">$url</span> )</div>
+
+
+    <div class="detail-header h3" id="$returnUrlParam-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#$returnUrlParam-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L145" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L145" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $returnUrlParam        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The session variable name used to store the value of <a href="yii-web-user.html#$returnUrl-detail">$returnUrl</a>.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-web-user.html#$returnUrlParam-detail">$returnUrlParam</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'__returnUrl'</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="afterLogin()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#afterLogin()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L490" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L490" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        afterLogin()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>This method is called after the user is successfully logged in.</strong></p>
+
+        <p>The default implementation will trigger the <a href="yii-web-user.html#EVENT_AFTER_LOGIN-detail">EVENT_AFTER_LOGIN</a> event.
+If you override this method, make sure you call the parent implementation
+so that the event is triggered.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#afterLogin()-detail">afterLogin</a></strong> ( <span style="color: #0000BB">$identity</span>, <span style="color: #0000BB">$cookieBased</span>, <span style="color: #0000BB">$duration</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$identity</span></td>
+                  <td class="param-type-col"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a></td>
+                  <td class="param-desc-col"><p>The user identity information</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$cookieBased</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the login is cookie-based</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$duration</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of seconds that the user can remain in logged-in status.
+If 0, it means login till the user closes the browser or the session is manually destroyed.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="afterLogout()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#afterLogout()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L524" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L524" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        afterLogout()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>This method is invoked right after a user is logged out via <a href="yii-web-user.html#logout()-detail">logout()</a>.</strong></p>
+
+        <p>The default implementation will trigger the <a href="yii-web-user.html#EVENT_AFTER_LOGOUT-detail">EVENT_AFTER_LOGOUT</a> event.
+If you override this method, make sure you call the parent implementation
+so that the event is triggered.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#afterLogout()-detail">afterLogout</a></strong> ( <span style="color: #0000BB">$identity</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$identity</span></td>
+                  <td class="param-type-col"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a></td>
+                  <td class="param-desc-col"><p>The user identity information</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="beforeLogin()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#beforeLogin()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L468" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L468" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        beforeLogin()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>This method is called before logging in a user.</strong></p>
+
+        <p>The default implementation will trigger the <a href="yii-web-user.html#EVENT_BEFORE_LOGIN-detail">EVENT_BEFORE_LOGIN</a> event.
+If you override this method, make sure you call the parent implementation
+so that the event is triggered.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-web-user.html#beforeLogin()-detail">beforeLogin</a></strong> ( <span style="color: #0000BB">$identity</span>, <span style="color: #0000BB">$cookieBased</span>, <span style="color: #0000BB">$duration</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$identity</span></td>
+                  <td class="param-type-col"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a></td>
+                  <td class="param-desc-col"><p>The user identity information</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$cookieBased</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the login is cookie-based</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$duration</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of seconds that the user can remain in logged-in status.
+If 0, it means login till the user closes the browser or the session is manually destroyed.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the user should continue to be logged in</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="beforeLogout()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#beforeLogout()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L507" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L507" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        beforeLogout()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>This method is invoked when calling <a href="yii-web-user.html#logout()-detail">logout()</a> to log out a user.</strong></p>
+
+        <p>The default implementation will trigger the <a href="yii-web-user.html#EVENT_BEFORE_LOGOUT-detail">EVENT_BEFORE_LOGOUT</a> event.
+If you override this method, make sure you call the parent implementation
+so that the event is triggered.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-web-user.html#beforeLogout()-detail">beforeLogout</a></strong> ( <span style="color: #0000BB">$identity</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$identity</span></td>
+                  <td class="param-type-col"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a></td>
+                  <td class="param-desc-col"><p>The user identity information</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the user should continue to be logged out</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="can()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#can()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L731" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L731" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        can()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Checks if the user can perform the operation as specified by the given permission.</strong></p>
+
+        <p>Note that you must configure "authManager" application component in order to use this method.
+Otherwise it will always return false.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-web-user.html#can()-detail">can</a></strong> ( <span style="color: #0000BB">$permissionName</span>, <span style="color: #0000BB">$params&nbsp;</span><span style="color: #007700">=&nbsp;[]</span>, <span style="color: #0000BB">$allowCaching&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$permissionName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The name of the permission (e.g. "edit post") that needs access check.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Name-value pairs that would be passed to the rules associated
+with the roles and permissions assigned to the user.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$allowCaching</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to allow caching the result of access check.
+When this parameter is true (default), if the access check of an operation was performed
+before, its result will be directly returned when calling this method to check the same
+operation. If this parameter is false, this method will always call
+<a href="yii-rbac-checkaccessinterface.html#checkAccess()-detail">yii\rbac\CheckAccessInterface::checkAccess()</a> to obtain the up-to-date access result. Note that this
+caching is effective only within the same request and only works when <code>$params = []</code>.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the user can perform the operation as specified by the given permission.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="checkRedirectAcceptable()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#checkRedirectAcceptable()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L755" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L755" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        checkRedirectAcceptable()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.0.8)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Checks if the <code>Accept</code> header contains a content type that allows redirection to the login page.</strong></p>
+
+        <p>The login page is assumed to serve <code>text/html</code> or <code>application/xhtml+xml</code> by default. You can change acceptable
+content types by modifying <a href="yii-web-user.html#$acceptableRedirectTypes-detail">$acceptableRedirectTypes</a> property.</p>
+
+        <p>See also <a href="yii-web-user.html#$acceptableRedirectTypes-detail">$acceptableRedirectTypes</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-web-user.html#checkRedirectAcceptable()-detail">checkRedirectAcceptable</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether this request may be redirected to the login page.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getAccessChecker()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#getAccessChecker()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L790" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L790" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getAccessChecker()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.0.9)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the access checker used for checking access.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="yii-rbac-checkaccessinterface.html">yii\rbac\CheckAccessInterface</a></span> <strong><a href="yii-web-user.html#getAccessChecker()-detail">getAccessChecker</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getAuthManager()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#getAuthManager()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L780" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L780" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getAuthManager()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.0.6)
+                    </span>
+    </div>
+
+            <div class="doc-description deprecated">
+            <strong>Deprecated since version 2.0.9, to be removed in 2.1. Use <a href="yii-web-user.html#getAccessChecker()-detail">getAccessChecker()</a> instead.</strong>
+        </div>
+    
+    <div class="doc-description">
+        <p><strong>Returns auth manager associated with the user component.</strong></p>
+
+        <p>By default this is the <code>authManager</code> application component.
+You may override this method to return a different auth manager instance if needed.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="yii-rbac-managerinterface.html">yii\rbac\ManagerInterface</a></span> <strong><a href="yii-web-user.html#getAuthManager()-detail">getAuthManager</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getId()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#getId()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L368" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L368" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getId()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns a value that uniquely represents the user.</strong></p>
+
+        
+        <p>See also <a href="yii-web-user.html#getIdentity()-detail">getIdentity()</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.integer">integer</a></span> <strong><a href="yii-web-user.html#getId()-detail">getId</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The unique identifier for the user. If <code>null</code>, it means the user is a guest.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getIdentity()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#getIdentity()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L186" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L186" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getIdentity()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the identity object associated with the currently logged-in user.</strong></p>
+
+        <p>When <a href="yii-web-user.html#$enableSession-detail">$enableSession</a> is true, this method may attempt to read the user's authentication data
+stored in session and reconstruct the corresponding identity object, if it has not done so before.</p>
+
+        <p>See also:</p><ul><li><a href="yii-web-user.html#login()-detail">login()</a></li><li><a href="yii-web-user.html#logout()-detail">logout()</a></li></ul>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a>|<a href="http://www.php.net/language.types.null">null</a></span> <strong><a href="yii-web-user.html#getIdentity()-detail">getIdentity</a></strong> ( <span style="color: #0000BB">$autoRenew&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$autoRenew</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to automatically renew authentication status if it has not been done so before.
+This is only useful when <a href="yii-web-user.html#$enableSession-detail">$enableSession</a> is true.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>The identity object associated with the currently logged-in user.
+<code>null</code> is returned if the user is not logged in (not authenticated).</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getIdentityAndDurationFromCookie()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#getIdentityAndDurationFromCookie()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L584" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L584" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getIdentityAndDurationFromCookie()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.0.9)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Determines if an identity cookie has a valid format and contains a valid auth key.</strong></p>
+
+        <p>This method is used when <a href="yii-web-user.html#$enableAutoLogin-detail">$enableAutoLogin</a> is true.
+This method attempts to authenticate a user using the information in the identity cookie.</p>
+
+        <p>See also <a href="yii-web-user.html#loginByCookie()-detail">loginByCookie()</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.null">null</a></span> <strong><a href="yii-web-user.html#getIdentityAndDurationFromCookie()-detail">getIdentityAndDurationFromCookie</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>Returns an array of 'identity' and 'duration' if valid, otherwise null.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getIsGuest()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#getIsGuest()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L358" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L358" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getIsGuest()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns a value indicating whether the user is a guest (not authenticated).</strong></p>
+
+        
+        <p>See also <a href="yii-web-user.html#getIdentity()-detail">getIdentity()</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-web-user.html#getIsGuest()-detail">getIsGuest</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the current user is a guest.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getReturnUrl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#getReturnUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L387" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L387" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getReturnUrl()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the URL that the browser should be redirected to after successful login.</strong></p>
+
+        <p>This method reads the return URL from the session. It is usually used by the login action which
+may call this method to redirect the browser to where it goes after successful authentication.</p>
+
+        <p>See also <a href="yii-web-user.html#loginRequired()-detail">loginRequired()</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-web-user.html#getReturnUrl()-detail">getReturnUrl</a></strong> ( <span style="color: #0000BB">$defaultUrl&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$defaultUrl</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The default return URL in case it was not set previously.
+If this is null and the return URL was not set previously, <a href="yii-web-application.html#$homeUrl-detail">yii\web\Application::$homeUrl</a> will be redirected to.
+Please refer to <a href="yii-web-user.html#setReturnUrl()-detail">setReturnUrl()</a> on accepted format of the URL.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The URL that the user should be redirected to after login.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="init()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L158" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L158" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        init()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Initializes the application component.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#init()-detail">init</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="login()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#login()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L249" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L249" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        login()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Logs in a user.</strong></p>
+
+        <p>After logging in a user:</p>
+<ul>
+<li>the user's identity information is obtainable from the <a href="yii-web-user.html#$identity-detail">$identity</a> property</li>
+</ul>
+<p>If <a href="yii-web-user.html#$enableSession-detail">$enableSession</a> is <code>true</code>:</p>
+<ul>
+<li>the identity information will be stored in session and be available in the next requests</li>
+<li>in case of <code>$duration == 0</code>: as long as the session remains active or till the user closes the browser</li>
+<li>in case of <code>$duration &gt; 0</code>: as long as the session remains active or as long as the cookie
+remains valid by it's <code>$duration</code> in seconds when <a href="yii-web-user.html#$enableAutoLogin-detail">$enableAutoLogin</a> is set <code>true</code>.</li>
+</ul>
+<p>If <a href="yii-web-user.html#$enableSession-detail">$enableSession</a> is <code>false</code>:</p>
+<ul>
+<li>the <code>$duration</code> parameter will be ignored</li>
+</ul>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-web-user.html#login()-detail">login</a></strong> ( <span class="signature-type"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a></span> <span style="color: #0000BB">$identity</span>, <span style="color: #0000BB">$duration&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$identity</span></td>
+                  <td class="param-type-col"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a></td>
+                  <td class="param-desc-col"><p>The user identity (which should already be authenticated)</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$duration</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of seconds that the user can remain in logged-in status, defaults to <code>0</code></p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the user is logged in</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="loginByAccessToken()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#loginByAccessToken()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L294" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L294" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        loginByAccessToken()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Logs in a user by the given access token.</strong></p>
+
+        <p>This method will first authenticate the user by calling <a href="yii-web-identityinterface.html#findIdentityByAccessToken()-detail">yii\web\IdentityInterface::findIdentityByAccessToken()</a>
+with the provided access token. If successful, it will call <a href="yii-web-user.html#login()-detail">login()</a> to log in the authenticated user.
+If authentication fails or <a href="yii-web-user.html#login()-detail">login()</a> is unsuccessful, it will return null.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a>|<a href="http://www.php.net/language.types.null">null</a></span> <strong><a href="yii-web-user.html#loginByAccessToken()-detail">loginByAccessToken</a></strong> ( <span style="color: #0000BB">$token</span>, <span style="color: #0000BB">$type&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$token</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The access token</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$type</span></td>
+                  <td class="param-type-col">mixed</td>
+                  <td class="param-desc-col"><p>The type of the token. The value of this parameter depends on the implementation.
+For example, <a href="yii-filters-auth-httpbearerauth.html">yii\filters\auth\HttpBearerAuth</a> will set this parameter to be <code>yii\filters\auth\HttpBearerAuth</code>.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>The identity associated with the given access token. Null is returned if
+the access token is invalid or <a href="yii-web-user.html#login()-detail">login()</a> is unsuccessful.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="loginByCookie()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#loginByCookie()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L312" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L312" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        loginByCookie()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Logs in a user by cookie.</strong></p>
+
+        <p>This method attempts to log in a user using the ID and authKey information
+provided by the <a href="yii-web-user.html#$identityCookie-detail">identity cookie</a>.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#loginByCookie()-detail">loginByCookie</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="loginRequired()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#loginRequired()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L437" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L437" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        loginRequired()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Redirects the user browser to the login page.</strong></p>
+
+        <p>Before the redirection, the current URL (if it's not an AJAX url) will be kept as <a href="yii-web-user.html#$returnUrl-detail">$returnUrl</a> so that
+the user browser may be redirected back to the current page after successful login.</p>
+<p>Make sure you set <a href="yii-web-user.html#$loginUrl-detail">$loginUrl</a> so that the user browser can be redirected to the specified login URL after
+calling this method.</p>
+<p>Note that when <a href="yii-web-user.html#$loginUrl-detail">$loginUrl</a> is set, calling this method will NOT terminate the application execution.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-web-response.html">yii\web\Response</a></span> <strong><a href="yii-web-user.html#loginRequired()-detail">loginRequired</a></strong> ( <span style="color: #0000BB">$checkAjax&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span>, <span style="color: #0000BB">$checkAcceptHeader&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$checkAjax</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to check if the request is an AJAX request. When this is true and the request
+is an AJAX request, the current URL (for AJAX request) will NOT be set as the return URL.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$checkAcceptHeader</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to check if the request accepts HTML responses. Defaults to <code>true</code>. When this is true and
+the request does not accept HTML responses the current URL will not be SET as the return URL. Also instead of
+redirecting the user an ForbiddenHttpException is thrown. This parameter is available since version 2.0.8.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-response.html">yii\web\Response</a></td>
+                  <td class="param-desc-col"><p>The redirection response if <a href="yii-web-user.html#$loginUrl-detail">$loginUrl</a> is set</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-web-forbiddenhttpexception.html">yii\web\ForbiddenHttpException</a></td>
+                  <td class="param-desc-col"><p>the "Access Denied" HTTP exception if <a href="yii-web-user.html#$loginUrl-detail">$loginUrl</a> is not set or a redirect is
+not applicable.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="logout()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#logout()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L336" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L336" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        logout()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Logs out the current user.</strong></p>
+
+        <p>This will remove authentication-related session data.
+If <code>$destroySession</code> is true, all session data will be removed.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-web-user.html#logout()-detail">logout</a></strong> ( <span style="color: #0000BB">$destroySession&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$destroySession</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to destroy the whole session. Defaults to true.
+This parameter is ignored if <a href="yii-web-user.html#$enableSession-detail">$enableSession</a> is false.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the user is logged out</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="regenerateCsrfToken()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#regenerateCsrfToken()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L275" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L275" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        regenerateCsrfToken()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.0.14.2)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Regenerates CSRF token</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#regenerateCsrfToken()-detail">regenerateCsrfToken</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="removeIdentityCookie()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#removeIdentityCookie()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L615" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L615" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        removeIdentityCookie()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.0.9)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Removes the identity cookie.</strong></p>
+
+        <p>This method is used when <a href="yii-web-user.html#$enableAutoLogin-detail">$enableAutoLogin</a> is true.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#removeIdentityCookie()-detail">removeIdentityCookie</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renewAuthStatus()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#renewAuthStatus()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L680" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L680" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renewAuthStatus()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Updates the authentication status using the information from session and cookie.</strong></p>
+
+        <p>This method will try to determine the user identity using the <a href="yii-web-user.html#$idParam-detail">$idParam</a> session variable.</p>
+<p>If <a href="yii-web-user.html#$authTimeout-detail">$authTimeout</a> is set, this method will refresh the timer.</p>
+<p>If the user identity cannot be determined by session, this method will try to <a href="yii-web-user.html#loginByCookie()-detail">login by cookie</a>
+if <a href="yii-web-user.html#$enableAutoLogin-detail">$enableAutoLogin</a> is true.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#renewAuthStatus()-detail">renewAuthStatus</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renewIdentityCookie()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#renewIdentityCookie()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L536" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L536" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renewIdentityCookie()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Renews the identity cookie.</strong></p>
+
+        <p>This method will set the expiration time of the identity cookie to be the current time
+plus the originally specified cookie duration.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#renewIdentityCookie()-detail">renewIdentityCookie</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="sendIdentityCookie()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#sendIdentityCookie()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L562" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L562" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        sendIdentityCookie()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Sends an identity cookie.</strong></p>
+
+        <p>This method is used when <a href="yii-web-user.html#$enableAutoLogin-detail">$enableAutoLogin</a> is true.
+It saves <a href="yii-web-user.html#$id-detail">$id</a>, <a href="yii-web-identityinterface.html#getAuthKey()-detail">auth key</a>, and the duration of cookie-based login
+information in the cookie.</p>
+
+        <p>See also <a href="yii-web-user.html#loginByCookie()-detail">loginByCookie()</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#sendIdentityCookie()-detail">sendIdentityCookie</a></strong> ( <span style="color: #0000BB">$identity</span>, <span style="color: #0000BB">$duration</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$identity</span></td>
+                  <td class="param-type-col"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$duration</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of seconds that the user can remain in logged-in status.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setIdentity()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#setIdentity()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L218" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L218" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        setIdentity()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Sets the user identity object.</strong></p>
+
+        <p>Note that this method does not deal with session or cookie. You should usually use <a href="yii-web-user.html#switchIdentity()-detail">switchIdentity()</a>
+to change the identity of the current user.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#setIdentity()-detail">setIdentity</a></strong> ( <span style="color: #0000BB">$identity</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$identity</span></td>
+                  <td class="param-type-col"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>The identity object associated with the currently logged user.
+If null, it means the current user will be a guest without any associated identity.</p>
+</td>
+                </tr>
+                                                    <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidvalueexception.html">yii\base\InvalidValueException</a></td>
+                  <td class="param-desc-col"><p>if <code>$identity</code> object does not implement <a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a>.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setReturnUrl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#setReturnUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L412" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L412" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        setReturnUrl()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Remembers the URL in the session so that it can be retrieved back later by <a href="yii-web-user.html#getReturnUrl()-detail">getReturnUrl()</a>.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#setReturnUrl()-detail">setReturnUrl</a></strong> ( <span style="color: #0000BB">$url</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$url</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The URL that the user should be redirected to after login.
+If an array is given, <a href="yii-web-urlmanager.html#createUrl()-detail">yii\web\UrlManager::createUrl()</a> will be called to create the corresponding URL.
+The first element of the array should be the route, and the rest of
+the name-value pairs are GET parameters used to construct the URL. For example,</p>
+<pre><code class="hljs php language-php">[<span class="hljs-string">'admin/index'</span>, <span class="hljs-string">'ref'</span> =&gt; <span class="hljs-number">1</span>]
+</code></pre>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="switchIdentity()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-web-user.html#switchIdentity()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/web/User.php#L636" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/web/User.php#L636" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        switchIdentity()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Switches to a new identity for the current user.</strong></p>
+
+        <p>When <a href="yii-web-user.html#$enableSession-detail">$enableSession</a> is true, this method may use session and/or cookie to store the user identity information,
+according to the value of <code>$duration</code>. Please refer to <a href="yii-web-user.html#login()-detail">login()</a> for more details.</p>
+<p>This method is mainly called by <a href="yii-web-user.html#login()-detail">login()</a>, <a href="yii-web-user.html#logout()-detail">logout()</a> and <a href="yii-web-user.html#loginByCookie()-detail">loginByCookie()</a>
+when the current user needs to be associated with the corresponding identity information.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-web-user.html#switchIdentity()-detail">switchIdentity</a></strong> ( <span style="color: #0000BB">$identity</span>, <span style="color: #0000BB">$duration&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$identity</span></td>
+                  <td class="param-type-col"><a href="yii-web-identityinterface.html">yii\web\IdentityInterface</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>The identity information to be associated with the current user.
+If null, it means switching the current user to be a guest.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$duration</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of seconds that the user can remain in logged-in status.
+This parameter is used only when <code>$identity</code> is not null.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Tue, 14 Aug 2018 17:48:25 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

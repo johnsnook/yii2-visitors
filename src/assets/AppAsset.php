@@ -6,7 +6,7 @@
  * @license http://www.yiiframework.com/license/
  */
 
-namespace johnsnook\ipFilter\assets;
+namespace johnsnook\visitor\assets;
 
 use yii\web\AssetBundle;
 

@@ -1,28 +1,27 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\ipFilter;
+namespace johnsnook\visitor;
 
-use johnsnook\ipFilter\helpers\IpHelper;
-use johnsnook\ipFilter\models\Visitor;
-use johnsnook\ipFilter\models\VisitorAgent;
-use johnsnook\ipFilter\models\VisitorLog;
+use johnsnook\visitor\helpers\IpHelper;
+use johnsnook\visitor\models\Visitor;
+use johnsnook\visitor\models\VisitorAgent;
+use johnsnook\visitor\models\VisitorLog;
 use Yii;
 use yii\base\ActionEvent;
-use yii\base\BootstrapInterface;
-use yii\base\Module as BaseModule;
 use yii\web\Application;
+use yii\helpers\Url;
 
 /**
- * This is the main module class for the Yii2-ip-filter extension.
+ * This is the main module class for the Yii2-ip-freely extension.
  *
  * @property string $ipInfoKey Api key
  * @property string $googleMapsApiKey Api key
@@ -34,12 +33,12 @@ use yii\web\Application;
  *
  * @author John Snook <jsnook@gmail.com>
  */
-class Module extends BaseModule implements BootstrapInterface {
+class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
 
     /**
      * @var string The next release version string
      */
-    const VERSION = 'v0.9.3';
+    const VERSION = 'v0.9.5';
 
     /**
      * @var array The replacements template
@@ -69,7 +68,7 @@ class Module extends BaseModule implements BootstrapInterface {
     /**
      * @var string The route to your blowoff page telling the user to pound sand
      */
-    public $blowOff = 'ipFilter/visitor/blowoff';
+    public $blowOff = ['visitor/visitor/blowoff'];
 
     /**
      * @var string $ipInfoKey Go to https://ipinfo.io/signup for a free API key
@@ -92,16 +91,6 @@ class Module extends BaseModule implements BootstrapInterface {
     public $whatsmybrowswerKey = '';
 
     /**
-     * @var array The list of proxy types we autoban
-     */
-    protected $defaultBlackProxies = ['VPN', 'Compromised Server', 'SOCKS', 'SOCKS4', 'HTTP', 'SOCKS5', 'HTTPS', 'TOR'];
-
-    /**
-     * @var array The list of CIDRs we automatically ban
-     */
-    public $autoBan = [];
-
-    /**
      * @var array Rules that show the visitor the door
      */
     public $blackRules = [];
@@ -109,21 +98,7 @@ class Module extends BaseModule implements BootstrapInterface {
     /**
      * @var array Rules that welcomes a visitor in
      */
-    public $whiteRules = [
-        'ip' => [
-            '52.0.0.0/15',
-        ]
-    ];
-
-    /**
-     * @var string Controllers will use this value if set to allow the user to
-     * define their own custom views.
-     */
-    //public $viewPath;
-    /**
-     * @var boolean Whether to rely on blacklist flag or calculate it every time
-     */
-    public $forceCheck = false;
+    public $whiteRules = [];
 
     /**
      * @var array These are the controller actions that will not be logged
@@ -137,25 +112,26 @@ class Module extends BaseModule implements BootstrapInterface {
 
     /** @var array The rules to be used in URL management. */
     public $urlRules = [
-//        'visitor/<action:\w+>' => '/ipFilter/visitor/<action>',
-        '/visitor' => '/ipFilter/visitor/index',
-        '/visitor/index' => '/ipFilter/visitor/index',
-        '/visitor/blowoff' => '/ipFilter/visitor/blowoff',
-        '/visitor/<id>' => '/ipFilter/visitor/view',
-        '/visitor/update/<id>' => '/ipFilter/visitor/update',
-        '/individual/<id>' => '/ipFilter/individual/view',
+//        'visitor/<action:\w+>' => '/visitor/visitor/<action>',
+        '/visitor' => '/visitor/visitor/index',
+        '/visitor/index' => '/visitor/visitor/index',
+        '/visitor/blowoff' => '/visitor/visitor/blowoff',
+        '/visitor/<id>' => '/visitor/visitor/view',
+        '/visitor/update/<id>' => '/visitor/visitor/update',
+        '/individual/<id>' => '/visitor/individual/view',
     ];
-    public $bootstrapCssVersion = 3;
 
     /**
-     * {@inheritdoc}
+     * @inheritDoc
      *
      * If we're running from the console, change the controller namespace
      */
     public function init() {
         parent::init();
         if (Yii::$app instanceof \yii\console\Application) {
-            $this->controllerNamespace = 'johnsnook\ipFilter\commands';
+            $this->controllerNamespace = 'johnsnook\visitor\commands';
+        } else {
+            Yii::$app->setModule('gridview', ['class' => '\kartik\grid\Module']);
         }
     }
 
@@ -169,12 +145,15 @@ class Module extends BaseModule implements BootstrapInterface {
      * @param Application $app
      */
     public function bootstrap($app) {
-        if ($app->hasModule('ipFilter') && ($module = $app->getModule('ipFilter')) instanceof Module) {
-            $app->getUrlManager()->addRules($this->urlRules, false);
+        if ($app->hasModule('visitor') && ($module = $app->getModule('visitor')) instanceof Module) {
+            $um = $app->getUrlManager();
+            if ($um->enablePrettyUrl) {
+                $um->addRules($this->urlRules, false);
+            }
             //die(json_encode($app->getUrlManager()->rules));
             /** this allows me to do some importing from my old security system */
             if ($app instanceof \yii\console\Application) {
-                $this->controllerNamespace = 'johnsnook\ipFilter\commands';
+                $this->controllerNamespace = 'johnsnook\visitor\commands';
             } else {
                 $app->on(Application::EVENT_BEFORE_ACTION, [$module, 'leGauntlet']);
             }
@@ -199,22 +178,11 @@ class Module extends BaseModule implements BootstrapInterface {
         /** get user ip, if null, send them to the blowoff */
         if (is_null($ip = Yii::$app->request->getUserIP())) {
             $event->handled = true;
-            if ($event->action->controller->route !== $this->blowOff) {
-                return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
+            if ([$event->action->controller->route] !== $this->blowOff) {
+                return \Yii::$app->getResponse()->redirect(Url::to($this->blowOff))->send();
             } else {
                 return true;
             }
-        }
-
-        /**
-         * Check to see if this action is listed in the ignorables array or if
-         * the visitors ip is in the whitelist
-         */
-        $controllerId = $event->action->controller->id;
-        if (array_key_exists($controllerId, $this->ignorables) && in_array($event->action->id, $this->ignorables[$controllerId])) {
-            return true;
-        } elseif (array_key_exists('whitelist', $this->ignorables) && in_array($ip, $this->ignorables['whitelist'])) {
-            return true;
         }
 
         /**
@@ -238,40 +206,46 @@ class Module extends BaseModule implements BootstrapInterface {
         $visitorBehavior = new behaviors\VisitorBehavior(['visitor' => $this->visitor]);
         \Yii::$app->user->attachBehavior('visitor', $visitorBehavior);
 
+        /** Check to see if this action is listed in the ignorables array */
+        $controllerId = $event->action->controller->id;
+        if (array_key_exists($controllerId, $this->ignorables) && in_array($event->action->id, $this->ignorables[$controllerId])) {
+            return true;
+        }
+
         /** Log the visit */
         $this->visitor->visit = VisitorLog::log($ip);
         VisitorAgent::log($this->visitor->visit->user_agent);
 
         /** Allow the rejected visitor to reach the blowoff action */
-        if ($event->action->controller->route === $this->blowOff) {
+        if ([$event->action->controller->route] === $this->blowOff) {
             return $event->handled = true;
         }
 
         /** the banned don't need to be checked, they can just go. * */
         if ($this->visitor->banned) {
             $event->handled = true;
-            return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
+            return \Yii::$app->getResponse()->redirect(Url::to($this->blowOff))->send();
         }
+        $this->visitor->hat_color = Visitor::HAT_COLOR_NONE;
+        $this->visitor->hat_rule = null;
 
         /** White list */
         if (!is_null($checkEm = static::checkList($this->whiteRules, $this->visitor))) {
             $this->visitor->hat_color = Visitor::HAT_COLOR_WHITE;
             $this->visitor->hat_rule = implode(array_keys($checkEm)) . ' ' . implode($checkEm);
             $this->visitor->save();
-            $event->handled = true;
             return true;
         }
-//        echo str_repeat('*', 20) . PHP_EOL;
-//        die();
+
         /** Black list (that's racist!) */
         if (!is_null($checkEm = static::checkList($this->blackRules, $this->visitor))) {
             $this->visitor->hat_color = Visitor::HAT_COLOR_BLACK;
             $this->visitor->hat_rule = implode(array_keys($checkEm)) . ' ' . implode($checkEm);
             $this->visitor->save();
-            $event->handled = true;
-            return \Yii::$app->getResponse()->redirect([$this->blowOff])->send();
+            return \Yii::$app->getResponse()->redirect(Url::to($this->blowOff))->send();
         }
 
+        $this->visitor->save();
         return true;
     }
 
@@ -284,21 +258,14 @@ class Module extends BaseModule implements BootstrapInterface {
      * @return array The list element that matched
      */
     protected static function checkList($list, $visitor) {
-//        dump($list, $visitor);
         if (isset($list['ip'])) {
-//            $c = count($list['ip']);
-//            echo "list['ip'] is set [$c]<br>";
             foreach ($list['ip'] as $ip) {
-//                echo "$visitor->ip in $ip = " . IpHelper::inRange($visitor->ip, $ip) . '<br>';
                 if (IpHelper::inRange($visitor->ip, $ip)) {
-//                    echo "found: $visitor->ip in $ip<br>";
-//                    die();
-
                     return ['ip' => $ip];
                 }
             }
         }
-//        die();
+
         $stringAttributes = ['city', 'region', 'country', 'postal', 'asn', 'organization', 'proxy'];
         foreach ($stringAttributes as $sAttr) {
             if (isset($list[$sAttr])) {

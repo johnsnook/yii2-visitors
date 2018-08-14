@@ -1,25 +1,25 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
-use johnsnook\ipFilter\models\VisitorAgent;
+use johnsnook\visitor\models\VisitorAgent;
 use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\helpers\Url;
-use johnsnook\ipFilter\widgets\LinkPager;
+use johnsnook\visitor\widgets\LinkPager;
 
 /* @var $this yii\web\View */
 
-$ipFilter = Yii::$app->getModule(Yii::$app->controller->module->id);
+$visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
 
-if ($ipFilter->bootstrapCssVersion === 4) {
-    $pager = 'johnsnook\ipFilter\widgets\LinkPager';
+if ($visitor->bootstrapCssVersion === 4) {
+    $pager = 'johnsnook\visitor\widgets\LinkPager';
 } else {
     $pager = 'yii\widgets\LinkPager';
 }
@@ -28,7 +28,9 @@ if ($ipFilter->bootstrapCssVersion === 4) {
 echo GridView::widget([
     'dataProvider' => $dataProvider,
     'filterModel' => $searchModel,
+    'filterRowOptions' => ['style' => 'visibility: collapse'],
     'pager' => ['class' => $pager],
+    'tableOptions' => ['class' => 'table table-striped table-sm'],
     'columns' => [
         [
             'class' => '\yii\grid\DataColumn',

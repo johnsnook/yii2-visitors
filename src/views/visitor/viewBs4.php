@@ -1,11 +1,11 @@
 <?php
 
 /**
- * This file is part of the Yii2 extension module, yii2-ip-filter
+ * This file is part of the Yii2 extension module, yii2-visitor
  *
  * @author John Snook
  * @date 2018-06-28
- * @license https://github.com/johnsnook/yii2-ip-filter/LICENSE
+ * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
 use yii\helpers\Html;
@@ -19,8 +19,8 @@ use yii\widgets\DetailView;
 $this->title = empty($model->name) ? $model->ip : $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Visitors', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
-$ipFilter = Yii::$app->getModule(Yii::$app->controller->module->id);
-$panel = $ipFilter->bootstrapCssVersion === 3 ? 'panel' : 'card';
+$visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
+$panel = $visitor->bootstrapCssVersion === 3 ? 'panel' : 'card';
 ?>
 <div class="visitor-view">
     <div class="row" style="font-size: 36px">

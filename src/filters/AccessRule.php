@@ -8,32 +8,53 @@
  * AccessRule
  */
 
-namespace johnsnook\ipFilter\filters;
+namespace johnsnook\visitor\filters;
 
 use yii\filters\AccessRule as BaseAccessRule;
 
 class AccessRule extends BaseAccessRule {
 
     /**
+     * @var array list of user ip that this rule applies to.
+     * If not set or empty, it means this rule applies to all ips.
+     * @see [[Visitor::ip]]
+     */
+    public $ip;
+
+    /**
      * @var array list of user cities that this rule applies to.
      * If not set or empty, it means this rule applies to all cities.
-     * @see Visitor::city
+     * @see [[Visitor::city]]
      */
-    public $cities;
+    public $city;
 
     /**
      * @var array list of user regions that this rule applies to.
      * If not set or empty, it means this rule applies to all regions.
-     * @see Visitor::region
+     * @see [[Visitor::region]]
      */
-    public $regions;
+    public $region;
 
     /**
      * @var array list of user countries that this rule applies to.
      * If not set or empty, it means this rule applies to all countries.
-     * @see Visitor::country
+     * @see [[Visitor::country]]
      */
-    public $countries;
+    public $country;
+
+    /**
+     * @var array list of user proxies that this rule applies to.
+     * If not set or empty, it means this rule applies to all proxies.
+     * @see [[Visitor::proxy]]
+     */
+    public $proxy;
+
+    /**
+     * @var array list of user hat_color that this rule applies to.
+     * If not set or empty, it means this rule applies to all hat_colors.
+     * @see [[Visitor::proxy]]
+     */
+    public $hat_color;
 
     /**
      * Checks whether the Web user is allowed to perform the specified action.
@@ -43,12 +64,18 @@ class AccessRule extends BaseAccessRule {
      * @return bool|null `true` if the user is allowed, `false` if the user is denied, `null` if the rule does not apply to the user
      */
     public function allows($action, $user, $request) {
-        $visitor = \Yii::$app->getModule('ipFilter')->visitor;
-        if (!is_null($visitor)) {
-            if ($this->matchCity($visitor->city) && $this->matchRegion($visitor->region) && $this->matchCountry($visitor->country) && $this->matchAction($action) && $this->matchRole($user) && $this->matchIP($request->getUserIP()) && $this->matchVerb($request->getMethod()) && $this->matchController($action->controller) && $this->matchCustom($action)) {
+        #$visitor = \Yii::$app->getModule('visitor')->visitor;
 
-                return $this->allow ? true : false;
-            }
+        $m1 = $this->matchIP($request->getUserIP()) && $this->matchCity($user->city);
+        $m2 = $this->matchRegion($user->region) && $this->matchCountry($user->country);
+        $m3 = $this->matchProxy($user->proxy) && $this->matchHatColor($user->hat_color);
+        $m4 = $this->matchAction($action) && $this->matchRole($user);
+        $m5 = $this->matchVerb($request->getMethod()) && $this->matchController($action->controller);
+        $m6 = $this->matchCustom($action);
+
+        if ($m1 && $m2 && $m3 && $m4 && $m5 && $m6) {
+
+            return $this->allow ? true : false;
         }
 //        else {
 //            if ($this->matchAction($action) && $this->matchRole($user) && $this->matchIP($request->getUserIP()) && $this->matchVerb($request->getMethod()) && $this->matchController($action->controller) && $this->matchCustom($action)) {
@@ -56,6 +83,14 @@ class AccessRule extends BaseAccessRule {
 //            }
 //        }
         return null;
+    }
+
+    /**
+     * @param string|null $ip the ip address
+     * @return bool whether the rule applies to the Ip
+     */
+    protected function matchIp($ip) {
+        return empty($this->ip) || in_array($ip, $this->ip, true);
     }
 
     /**
@@ -71,7 +106,7 @@ class AccessRule extends BaseAccessRule {
      * @return bool whether the rule applies to the Region
      */
     protected function matchRegion($region) {
-        return empty($this->regions) || in_array($region, $this->regions, true);
+        return empty($this->region) || in_array($region, $this->region, true);
     }
 
     /**
@@ -79,7 +114,23 @@ class AccessRule extends BaseAccessRule {
      * @return bool whether the rule applies to the Country
      */
     protected function matchCountry($country) {
-        return empty($this->countries) || in_array($country, $this->countries, true);
+        return empty($this->country) || in_array($country, $this->country, true);
+    }
+
+    /**
+     * @param string|null $proxy the Proxy
+     * @return bool whether the rule applies to the Proxy
+     */
+    protected function matchProxy($proxy) {
+        return empty($this->proxy) || in_array($proxy, $this->proxy, true);
+    }
+
+    /**
+     * @param string|null $hat_color the hat_color
+     * @return bool whether the rule applies to the hat_color
+     */
+    protected function matchHatColor($hat_color) {
+        return empty($this->hat_color) || in_array($hat_color, $this->hat_color, true);
     }
 
     /**

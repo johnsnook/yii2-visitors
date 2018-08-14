@@ -1,0 +1,2853 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>    <title>BaseConsole, yii\helpers\BaseConsole - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w11249" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w11249-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w11249-collapse" class="collapse navbar-collapse"><ul id="w11250" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w11251" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-11212" data-toggle="collapse" data-parent="#navigation">Not namespaced classes <b class="caret"></b></a><div id="navigation-11212" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii.html">Yii</a>
+<a class="list-group-item" href="./yiirequirementchecker.html">YiiRequirementChecker</a></div>
+<a class="list-group-item" href="#navigation-11213" data-toggle="collapse" data-parent="#navigation">yii <b class="caret"></b></a><div id="navigation-11213" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-baseyii.html">BaseYii</a></div>
+<a class="list-group-item" href="#navigation-11214" data-toggle="collapse" data-parent="#navigation">yii\base <b class="caret"></b></a><div id="navigation-11214" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-base-action.html">Action</a>
+<a class="list-group-item" href="./yii-base-actionevent.html">ActionEvent</a>
+<a class="list-group-item" href="./yii-base-actionfilter.html">ActionFilter</a>
+<a class="list-group-item" href="./yii-base-application.html">Application</a>
+<a class="list-group-item" href="./yii-base-arrayaccesstrait.html">ArrayAccessTrait</a>
+<a class="list-group-item" href="./yii-base-arrayable.html">Arrayable</a>
+<a class="list-group-item" href="./yii-base-arrayabletrait.html">ArrayableTrait</a>
+<a class="list-group-item" href="./yii-base-baseobject.html">BaseObject</a>
+<a class="list-group-item" href="./yii-base-behavior.html">Behavior</a>
+<a class="list-group-item" href="./yii-base-bootstrapinterface.html">BootstrapInterface</a>
+<a class="list-group-item" href="./yii-base-component.html">Component</a>
+<a class="list-group-item" href="./yii-base-configurable.html">Configurable</a>
+<a class="list-group-item" href="./yii-base-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-base-dynamiccontentawareinterface.html">DynamicContentAwareInterface</a>
+<a class="list-group-item" href="./yii-base-dynamiccontentawaretrait.html">DynamicContentAwareTrait</a>
+<a class="list-group-item" href="./yii-base-dynamicmodel.html">DynamicModel</a>
+<a class="list-group-item" href="./yii-base-errorexception.html">ErrorException</a>
+<a class="list-group-item" href="./yii-base-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-base-event.html">Event</a>
+<a class="list-group-item" href="./yii-base-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-base-exitexception.html">ExitException</a>
+<a class="list-group-item" href="./yii-base-inlineaction.html">InlineAction</a>
+<a class="list-group-item" href="./yii-base-invalidargumentexception.html">InvalidArgumentException</a>
+<a class="list-group-item" href="./yii-base-invalidcallexception.html">InvalidCallException</a>
+<a class="list-group-item" href="./yii-base-invalidconfigexception.html">InvalidConfigException</a>
+<a class="list-group-item" href="./yii-base-invalidparamexception.html">InvalidParamException</a>
+<a class="list-group-item" href="./yii-base-invalidrouteexception.html">InvalidRouteException</a>
+<a class="list-group-item" href="./yii-base-invalidvalueexception.html">InvalidValueException</a>
+<a class="list-group-item" href="./yii-base-model.html">Model</a>
+<a class="list-group-item" href="./yii-base-modelevent.html">ModelEvent</a>
+<a class="list-group-item" href="./yii-base-module.html">Module</a>
+<a class="list-group-item" href="./yii-base-notsupportedexception.html">NotSupportedException</a>
+<a class="list-group-item" href="./yii-base-object.html">Object</a>
+<a class="list-group-item" href="./yii-base-request.html">Request</a>
+<a class="list-group-item" href="./yii-base-response.html">Response</a>
+<a class="list-group-item" href="./yii-base-security.html">Security</a>
+<a class="list-group-item" href="./yii-base-staticinstanceinterface.html">StaticInstanceInterface</a>
+<a class="list-group-item" href="./yii-base-staticinstancetrait.html">StaticInstanceTrait</a>
+<a class="list-group-item" href="./yii-base-theme.html">Theme</a>
+<a class="list-group-item" href="./yii-base-unknownclassexception.html">UnknownClassException</a>
+<a class="list-group-item" href="./yii-base-unknownmethodexception.html">UnknownMethodException</a>
+<a class="list-group-item" href="./yii-base-unknownpropertyexception.html">UnknownPropertyException</a>
+<a class="list-group-item" href="./yii-base-userexception.html">UserException</a>
+<a class="list-group-item" href="./yii-base-view.html">View</a>
+<a class="list-group-item" href="./yii-base-viewcontextinterface.html">ViewContextInterface</a>
+<a class="list-group-item" href="./yii-base-viewevent.html">ViewEvent</a>
+<a class="list-group-item" href="./yii-base-viewnotfoundexception.html">ViewNotFoundException</a>
+<a class="list-group-item" href="./yii-base-viewrenderer.html">ViewRenderer</a>
+<a class="list-group-item" href="./yii-base-widget.html">Widget</a>
+<a class="list-group-item" href="./yii-base-widgetevent.html">WidgetEvent</a></div>
+<a class="list-group-item" href="#navigation-11215" data-toggle="collapse" data-parent="#navigation">yii\behaviors <b class="caret"></b></a><div id="navigation-11215" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-behaviors-attributebehavior.html">AttributeBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-attributetypecastbehavior.html">AttributeTypecastBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-attributesbehavior.html">AttributesBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-blameablebehavior.html">BlameableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-cacheablewidgetbehavior.html">CacheableWidgetBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-optimisticlockbehavior.html">OptimisticLockBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-sluggablebehavior.html">SluggableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-timestampbehavior.html">TimestampBehavior</a></div>
+<a class="list-group-item" href="#navigation-11216" data-toggle="collapse" data-parent="#navigation">yii\caching <b class="caret"></b></a><div id="navigation-11216" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-caching-apccache.html">ApcCache</a>
+<a class="list-group-item" href="./yii-caching-arraycache.html">ArrayCache</a>
+<a class="list-group-item" href="./yii-caching-cache.html">Cache</a>
+<a class="list-group-item" href="./yii-caching-cacheinterface.html">CacheInterface</a>
+<a class="list-group-item" href="./yii-caching-chaineddependency.html">ChainedDependency</a>
+<a class="list-group-item" href="./yii-caching-dbcache.html">DbCache</a>
+<a class="list-group-item" href="./yii-caching-dbdependency.html">DbDependency</a>
+<a class="list-group-item" href="./yii-caching-dbquerydependency.html">DbQueryDependency</a>
+<a class="list-group-item" href="./yii-caching-dependency.html">Dependency</a>
+<a class="list-group-item" href="./yii-caching-dummycache.html">DummyCache</a>
+<a class="list-group-item" href="./yii-caching-expressiondependency.html">ExpressionDependency</a>
+<a class="list-group-item" href="./yii-caching-filecache.html">FileCache</a>
+<a class="list-group-item" href="./yii-caching-filedependency.html">FileDependency</a>
+<a class="list-group-item" href="./yii-caching-memcache.html">MemCache</a>
+<a class="list-group-item" href="./yii-caching-memcacheserver.html">MemCacheServer</a>
+<a class="list-group-item" href="./yii-caching-tagdependency.html">TagDependency</a>
+<a class="list-group-item" href="./yii-caching-wincache.html">WinCache</a>
+<a class="list-group-item" href="./yii-caching-xcache.html">XCache</a>
+<a class="list-group-item" href="./yii-caching-zenddatacache.html">ZendDataCache</a></div>
+<a class="list-group-item" href="#navigation-11217" data-toggle="collapse" data-parent="#navigation">yii\captcha <b class="caret"></b></a><div id="navigation-11217" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-captcha-captcha.html">Captcha</a>
+<a class="list-group-item" href="./yii-captcha-captchaaction.html">CaptchaAction</a>
+<a class="list-group-item" href="./yii-captcha-captchaasset.html">CaptchaAsset</a>
+<a class="list-group-item" href="./yii-captcha-captchavalidator.html">CaptchaValidator</a></div>
+<a class="list-group-item" href="#navigation-11218" data-toggle="collapse" data-parent="#navigation">yii\console <b class="caret"></b></a><div id="navigation-11218" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-application.html">Application</a>
+<a class="list-group-item" href="./yii-console-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-console-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-console-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-console-exitcode.html">ExitCode</a>
+<a class="list-group-item" href="./yii-console-markdown.html">Markdown</a>
+<a class="list-group-item" href="./yii-console-request.html">Request</a>
+<a class="list-group-item" href="./yii-console-response.html">Response</a>
+<a class="list-group-item" href="./yii-console-unknowncommandexception.html">UnknownCommandException</a></div>
+<a class="list-group-item" href="#navigation-11219" data-toggle="collapse" data-parent="#navigation">yii\console\controllers <b class="caret"></b></a><div id="navigation-11219" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-controllers-assetcontroller.html">AssetController</a>
+<a class="list-group-item" href="./yii-console-controllers-basemigratecontroller.html">BaseMigrateController</a>
+<a class="list-group-item" href="./yii-console-controllers-cachecontroller.html">CacheController</a>
+<a class="list-group-item" href="./yii-console-controllers-fixturecontroller.html">FixtureController</a>
+<a class="list-group-item" href="./yii-console-controllers-helpcontroller.html">HelpController</a>
+<a class="list-group-item" href="./yii-console-controllers-messagecontroller.html">MessageController</a>
+<a class="list-group-item" href="./yii-console-controllers-migratecontroller.html">MigrateController</a>
+<a class="list-group-item" href="./yii-console-controllers-servecontroller.html">ServeController</a></div>
+<a class="list-group-item" href="#navigation-11220" data-toggle="collapse" data-parent="#navigation">yii\console\widgets <b class="caret"></b></a><div id="navigation-11220" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-widgets-table.html">Table</a></div>
+<a class="list-group-item" href="#navigation-11221" data-toggle="collapse" data-parent="#navigation">yii\data <b class="caret"></b></a><div id="navigation-11221" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-data-activedatafilter.html">ActiveDataFilter</a>
+<a class="list-group-item" href="./yii-data-activedataprovider.html">ActiveDataProvider</a>
+<a class="list-group-item" href="./yii-data-arraydataprovider.html">ArrayDataProvider</a>
+<a class="list-group-item" href="./yii-data-basedataprovider.html">BaseDataProvider</a>
+<a class="list-group-item" href="./yii-data-datafilter.html">DataFilter</a>
+<a class="list-group-item" href="./yii-data-dataproviderinterface.html">DataProviderInterface</a>
+<a class="list-group-item" href="./yii-data-pagination.html">Pagination</a>
+<a class="list-group-item" href="./yii-data-sort.html">Sort</a>
+<a class="list-group-item" href="./yii-data-sqldataprovider.html">SqlDataProvider</a></div>
+<a class="list-group-item" href="#navigation-11222" data-toggle="collapse" data-parent="#navigation">yii\db <b class="caret"></b></a><div id="navigation-11222" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-activequery.html">ActiveQuery</a>
+<a class="list-group-item" href="./yii-db-activequeryinterface.html">ActiveQueryInterface</a>
+<a class="list-group-item" href="./yii-db-activequerytrait.html">ActiveQueryTrait</a>
+<a class="list-group-item" href="./yii-db-activerecord.html">ActiveRecord</a>
+<a class="list-group-item" href="./yii-db-activerecordinterface.html">ActiveRecordInterface</a>
+<a class="list-group-item" href="./yii-db-activerelationtrait.html">ActiveRelationTrait</a>
+<a class="list-group-item" href="./yii-db-aftersaveevent.html">AfterSaveEvent</a>
+<a class="list-group-item" href="./yii-db-arrayexpression.html">ArrayExpression</a>
+<a class="list-group-item" href="./yii-db-baseactiverecord.html">BaseActiveRecord</a>
+<a class="list-group-item" href="./yii-db-batchqueryresult.html">BatchQueryResult</a>
+<a class="list-group-item" href="./yii-db-checkconstraint.html">CheckConstraint</a>
+<a class="list-group-item" href="./yii-db-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-command.html">Command</a>
+<a class="list-group-item" href="./yii-db-connection.html">Connection</a>
+<a class="list-group-item" href="./yii-db-constraint.html">Constraint</a>
+<a class="list-group-item" href="./yii-db-constraintfinderinterface.html">ConstraintFinderInterface</a>
+<a class="list-group-item" href="./yii-db-constraintfindertrait.html">ConstraintFinderTrait</a>
+<a class="list-group-item" href="./yii-db-datareader.html">DataReader</a>
+<a class="list-group-item" href="./yii-db-defaultvalueconstraint.html">DefaultValueConstraint</a>
+<a class="list-group-item" href="./yii-db-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-db-expression.html">Expression</a>
+<a class="list-group-item" href="./yii-db-expressionbuilder.html">ExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-expressionbuilderinterface.html">ExpressionBuilderInterface</a>
+<a class="list-group-item" href="./yii-db-expressionbuildertrait.html">ExpressionBuilderTrait</a>
+<a class="list-group-item" href="./yii-db-expressioninterface.html">ExpressionInterface</a>
+<a class="list-group-item" href="./yii-db-foreignkeyconstraint.html">ForeignKeyConstraint</a>
+<a class="list-group-item" href="./yii-db-indexconstraint.html">IndexConstraint</a>
+<a class="list-group-item" href="./yii-db-integrityexception.html">IntegrityException</a>
+<a class="list-group-item" href="./yii-db-jsonexpression.html">JsonExpression</a>
+<a class="list-group-item" href="./yii-db-migration.html">Migration</a>
+<a class="list-group-item" href="./yii-db-migrationinterface.html">MigrationInterface</a>
+<a class="list-group-item" href="./yii-db-pdovalue.html">PdoValue</a>
+<a class="list-group-item" href="./yii-db-pdovaluebuilder.html">PdoValueBuilder</a>
+<a class="list-group-item" href="./yii-db-query.html">Query</a>
+<a class="list-group-item" href="./yii-db-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-queryexpressionbuilder.html">QueryExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-queryinterface.html">QueryInterface</a>
+<a class="list-group-item" href="./yii-db-querytrait.html">QueryTrait</a>
+<a class="list-group-item" href="./yii-db-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-schemabuildertrait.html">SchemaBuilderTrait</a>
+<a class="list-group-item" href="./yii-db-sqltoken.html">SqlToken</a>
+<a class="list-group-item" href="./yii-db-sqltokenizer.html">SqlTokenizer</a>
+<a class="list-group-item" href="./yii-db-staleobjectexception.html">StaleObjectException</a>
+<a class="list-group-item" href="./yii-db-tableschema.html">TableSchema</a>
+<a class="list-group-item" href="./yii-db-transaction.html">Transaction</a>
+<a class="list-group-item" href="./yii-db-viewfindertrait.html">ViewFinderTrait</a></div>
+<a class="list-group-item" href="#navigation-11223" data-toggle="collapse" data-parent="#navigation">yii\db\conditions <b class="caret"></b></a><div id="navigation-11223" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-conditions-andcondition.html">AndCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencolumnscondition.html">BetweenColumnsCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencolumnsconditionbuilder.html">BetweenColumnsConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencondition.html">BetweenCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweenconditionbuilder.html">BetweenConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-conditioninterface.html">ConditionInterface</a>
+<a class="list-group-item" href="./yii-db-conditions-conjunctioncondition.html">ConjunctionCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-conjunctionconditionbuilder.html">ConjunctionConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-existscondition.html">ExistsCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-existsconditionbuilder.html">ExistsConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-hashcondition.html">HashCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-hashconditionbuilder.html">HashConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-incondition.html">InCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-likecondition.html">LikeCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-likeconditionbuilder.html">LikeConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-notcondition.html">NotCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-notconditionbuilder.html">NotConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-orcondition.html">OrCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-simplecondition.html">SimpleCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-simpleconditionbuilder.html">SimpleConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-11224" data-toggle="collapse" data-parent="#navigation">yii\db\cubrid <b class="caret"></b></a><div id="navigation-11224" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-cubrid-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-cubrid-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-cubrid-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-11225" data-toggle="collapse" data-parent="#navigation">yii\db\cubrid\conditions <b class="caret"></b></a><div id="navigation-11225" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-cubrid-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-11226" data-toggle="collapse" data-parent="#navigation">yii\db\mssql <b class="caret"></b></a><div id="navigation-11226" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mssql-pdo.html">PDO</a>
+<a class="list-group-item" href="./yii-db-mssql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-mssql-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-mssql-sqlsrvpdo.html">SqlsrvPDO</a>
+<a class="list-group-item" href="./yii-db-mssql-tableschema.html">TableSchema</a></div>
+<a class="list-group-item" href="#navigation-11227" data-toggle="collapse" data-parent="#navigation">yii\db\mssql\conditions <b class="caret"></b></a><div id="navigation-11227" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mssql-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-mssql-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-11228" data-toggle="collapse" data-parent="#navigation">yii\db\mysql <b class="caret"></b></a><div id="navigation-11228" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mysql-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-mysql-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-jsonexpressionbuilder.html">JsonExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-11229" data-toggle="collapse" data-parent="#navigation">yii\db\oci <b class="caret"></b></a><div id="navigation-11229" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-oci-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-11230" data-toggle="collapse" data-parent="#navigation">yii\db\oci\conditions <b class="caret"></b></a><div id="navigation-11230" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-oci-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-11231" data-toggle="collapse" data-parent="#navigation">yii\db\pgsql <b class="caret"></b></a><div id="navigation-11231" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-pgsql-arrayexpressionbuilder.html">ArrayExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-arrayparser.html">ArrayParser</a>
+<a class="list-group-item" href="./yii-db-pgsql-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-pgsql-jsonexpressionbuilder.html">JsonExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-11232" data-toggle="collapse" data-parent="#navigation">yii\db\sqlite <b class="caret"></b></a><div id="navigation-11232" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-sqlite-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-command.html">Command</a>
+<a class="list-group-item" href="./yii-db-sqlite-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-sqlite-sqltokenizer.html">SqlTokenizer</a></div>
+<a class="list-group-item" href="#navigation-11233" data-toggle="collapse" data-parent="#navigation">yii\db\sqlite\conditions <b class="caret"></b></a><div id="navigation-11233" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-sqlite-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-11234" data-toggle="collapse" data-parent="#navigation">yii\di <b class="caret"></b></a><div id="navigation-11234" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-di-container.html">Container</a>
+<a class="list-group-item" href="./yii-di-instance.html">Instance</a>
+<a class="list-group-item" href="./yii-di-notinstantiableexception.html">NotInstantiableException</a>
+<a class="list-group-item" href="./yii-di-servicelocator.html">ServiceLocator</a></div>
+<a class="list-group-item" href="#navigation-11235" data-toggle="collapse" data-parent="#navigation">yii\filters <b class="caret"></b></a><div id="navigation-11235" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-accesscontrol.html">AccessControl</a>
+<a class="list-group-item" href="./yii-filters-accessrule.html">AccessRule</a>
+<a class="list-group-item" href="./yii-filters-ajaxfilter.html">AjaxFilter</a>
+<a class="list-group-item" href="./yii-filters-contentnegotiator.html">ContentNegotiator</a>
+<a class="list-group-item" href="./yii-filters-cors.html">Cors</a>
+<a class="list-group-item" href="./yii-filters-hostcontrol.html">HostControl</a>
+<a class="list-group-item" href="./yii-filters-httpcache.html">HttpCache</a>
+<a class="list-group-item" href="./yii-filters-pagecache.html">PageCache</a>
+<a class="list-group-item" href="./yii-filters-ratelimitinterface.html">RateLimitInterface</a>
+<a class="list-group-item" href="./yii-filters-ratelimiter.html">RateLimiter</a>
+<a class="list-group-item" href="./yii-filters-verbfilter.html">VerbFilter</a></div>
+<a class="list-group-item" href="#navigation-11236" data-toggle="collapse" data-parent="#navigation">yii\filters\auth <b class="caret"></b></a><div id="navigation-11236" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-auth-authinterface.html">AuthInterface</a>
+<a class="list-group-item" href="./yii-filters-auth-authmethod.html">AuthMethod</a>
+<a class="list-group-item" href="./yii-filters-auth-compositeauth.html">CompositeAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpbasicauth.html">HttpBasicAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpbearerauth.html">HttpBearerAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpheaderauth.html">HttpHeaderAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-queryparamauth.html">QueryParamAuth</a></div>
+<a class="list-group-item" href="#navigation-11237" data-toggle="collapse" data-parent="#navigation">yii\grid <b class="caret"></b></a><div id="navigation-11237" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-grid-actioncolumn.html">ActionColumn</a>
+<a class="list-group-item" href="./yii-grid-checkboxcolumn.html">CheckboxColumn</a>
+<a class="list-group-item" href="./yii-grid-column.html">Column</a>
+<a class="list-group-item" href="./yii-grid-datacolumn.html">DataColumn</a>
+<a class="list-group-item" href="./yii-grid-gridview.html">GridView</a>
+<a class="list-group-item" href="./yii-grid-gridviewasset.html">GridViewAsset</a>
+<a class="list-group-item" href="./yii-grid-radiobuttoncolumn.html">RadioButtonColumn</a>
+<a class="list-group-item" href="./yii-grid-serialcolumn.html">SerialColumn</a></div>
+<a class="list-group-item active" href="#navigation-11238" data-toggle="collapse" data-parent="#navigation">yii\helpers <b class="caret"></b></a><div id="navigation-11238" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-helpers-arrayhelper.html">ArrayHelper</a>
+<a class="list-group-item" href="./yii-helpers-basearrayhelper.html">BaseArrayHelper</a>
+<a class="list-group-item active" href="./yii-helpers-baseconsole.html">BaseConsole</a>
+<a class="list-group-item" href="./yii-helpers-basefilehelper.html">BaseFileHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseformatconverter.html">BaseFormatConverter</a>
+<a class="list-group-item" href="./yii-helpers-basehtml.html">BaseHtml</a>
+<a class="list-group-item" href="./yii-helpers-basehtmlpurifier.html">BaseHtmlPurifier</a>
+<a class="list-group-item" href="./yii-helpers-baseinflector.html">BaseInflector</a>
+<a class="list-group-item" href="./yii-helpers-baseiphelper.html">BaseIpHelper</a>
+<a class="list-group-item" href="./yii-helpers-basejson.html">BaseJson</a>
+<a class="list-group-item" href="./yii-helpers-basemarkdown.html">BaseMarkdown</a>
+<a class="list-group-item" href="./yii-helpers-basestringhelper.html">BaseStringHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseurl.html">BaseUrl</a>
+<a class="list-group-item" href="./yii-helpers-basevardumper.html">BaseVarDumper</a>
+<a class="list-group-item" href="./yii-helpers-console.html">Console</a>
+<a class="list-group-item" href="./yii-helpers-filehelper.html">FileHelper</a>
+<a class="list-group-item" href="./yii-helpers-formatconverter.html">FormatConverter</a>
+<a class="list-group-item" href="./yii-helpers-html.html">Html</a>
+<a class="list-group-item" href="./yii-helpers-htmlpurifier.html">HtmlPurifier</a>
+<a class="list-group-item" href="./yii-helpers-inflector.html">Inflector</a>
+<a class="list-group-item" href="./yii-helpers-iphelper.html">IpHelper</a>
+<a class="list-group-item" href="./yii-helpers-json.html">Json</a>
+<a class="list-group-item" href="./yii-helpers-markdown.html">Markdown</a>
+<a class="list-group-item" href="./yii-helpers-replacearrayvalue.html">ReplaceArrayValue</a>
+<a class="list-group-item" href="./yii-helpers-stringhelper.html">StringHelper</a>
+<a class="list-group-item" href="./yii-helpers-unsetarrayvalue.html">UnsetArrayValue</a>
+<a class="list-group-item" href="./yii-helpers-url.html">Url</a>
+<a class="list-group-item" href="./yii-helpers-vardumper.html">VarDumper</a></div>
+<a class="list-group-item" href="#navigation-11239" data-toggle="collapse" data-parent="#navigation">yii\i18n <b class="caret"></b></a><div id="navigation-11239" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-i18n-dbmessagesource.html">DbMessageSource</a>
+<a class="list-group-item" href="./yii-i18n-formatter.html">Formatter</a>
+<a class="list-group-item" href="./yii-i18n-gettextfile.html">GettextFile</a>
+<a class="list-group-item" href="./yii-i18n-gettextmessagesource.html">GettextMessageSource</a>
+<a class="list-group-item" href="./yii-i18n-gettextmofile.html">GettextMoFile</a>
+<a class="list-group-item" href="./yii-i18n-gettextpofile.html">GettextPoFile</a>
+<a class="list-group-item" href="./yii-i18n-i18n.html">I18N</a>
+<a class="list-group-item" href="./yii-i18n-locale.html">Locale</a>
+<a class="list-group-item" href="./yii-i18n-messageformatter.html">MessageFormatter</a>
+<a class="list-group-item" href="./yii-i18n-messagesource.html">MessageSource</a>
+<a class="list-group-item" href="./yii-i18n-missingtranslationevent.html">MissingTranslationEvent</a>
+<a class="list-group-item" href="./yii-i18n-phpmessagesource.html">PhpMessageSource</a></div>
+<a class="list-group-item" href="#navigation-11240" data-toggle="collapse" data-parent="#navigation">yii\log <b class="caret"></b></a><div id="navigation-11240" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-log-dbtarget.html">DbTarget</a>
+<a class="list-group-item" href="./yii-log-dispatcher.html">Dispatcher</a>
+<a class="list-group-item" href="./yii-log-emailtarget.html">EmailTarget</a>
+<a class="list-group-item" href="./yii-log-filetarget.html">FileTarget</a>
+<a class="list-group-item" href="./yii-log-logruntimeexception.html">LogRuntimeException</a>
+<a class="list-group-item" href="./yii-log-logger.html">Logger</a>
+<a class="list-group-item" href="./yii-log-syslogtarget.html">SyslogTarget</a>
+<a class="list-group-item" href="./yii-log-target.html">Target</a></div>
+<a class="list-group-item" href="#navigation-11241" data-toggle="collapse" data-parent="#navigation">yii\mail <b class="caret"></b></a><div id="navigation-11241" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mail-basemailer.html">BaseMailer</a>
+<a class="list-group-item" href="./yii-mail-basemessage.html">BaseMessage</a>
+<a class="list-group-item" href="./yii-mail-mailevent.html">MailEvent</a>
+<a class="list-group-item" href="./yii-mail-mailerinterface.html">MailerInterface</a>
+<a class="list-group-item" href="./yii-mail-messageinterface.html">MessageInterface</a></div>
+<a class="list-group-item" href="#navigation-11242" data-toggle="collapse" data-parent="#navigation">yii\mutex <b class="caret"></b></a><div id="navigation-11242" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mutex-dbmutex.html">DbMutex</a>
+<a class="list-group-item" href="./yii-mutex-filemutex.html">FileMutex</a>
+<a class="list-group-item" href="./yii-mutex-mutex.html">Mutex</a>
+<a class="list-group-item" href="./yii-mutex-mysqlmutex.html">MysqlMutex</a>
+<a class="list-group-item" href="./yii-mutex-oraclemutex.html">OracleMutex</a>
+<a class="list-group-item" href="./yii-mutex-pgsqlmutex.html">PgsqlMutex</a></div>
+<a class="list-group-item" href="#navigation-11243" data-toggle="collapse" data-parent="#navigation">yii\rbac <b class="caret"></b></a><div id="navigation-11243" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rbac-assignment.html">Assignment</a>
+<a class="list-group-item" href="./yii-rbac-basemanager.html">BaseManager</a>
+<a class="list-group-item" href="./yii-rbac-checkaccessinterface.html">CheckAccessInterface</a>
+<a class="list-group-item" href="./yii-rbac-dbmanager.html">DbManager</a>
+<a class="list-group-item" href="./yii-rbac-item.html">Item</a>
+<a class="list-group-item" href="./yii-rbac-managerinterface.html">ManagerInterface</a>
+<a class="list-group-item" href="./yii-rbac-permission.html">Permission</a>
+<a class="list-group-item" href="./yii-rbac-phpmanager.html">PhpManager</a>
+<a class="list-group-item" href="./yii-rbac-role.html">Role</a>
+<a class="list-group-item" href="./yii-rbac-rule.html">Rule</a></div>
+<a class="list-group-item" href="#navigation-11244" data-toggle="collapse" data-parent="#navigation">yii\rest <b class="caret"></b></a><div id="navigation-11244" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rest-action.html">Action</a>
+<a class="list-group-item" href="./yii-rest-activecontroller.html">ActiveController</a>
+<a class="list-group-item" href="./yii-rest-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-rest-createaction.html">CreateAction</a>
+<a class="list-group-item" href="./yii-rest-deleteaction.html">DeleteAction</a>
+<a class="list-group-item" href="./yii-rest-indexaction.html">IndexAction</a>
+<a class="list-group-item" href="./yii-rest-optionsaction.html">OptionsAction</a>
+<a class="list-group-item" href="./yii-rest-serializer.html">Serializer</a>
+<a class="list-group-item" href="./yii-rest-updateaction.html">UpdateAction</a>
+<a class="list-group-item" href="./yii-rest-urlrule.html">UrlRule</a>
+<a class="list-group-item" href="./yii-rest-viewaction.html">ViewAction</a></div>
+<a class="list-group-item" href="#navigation-11245" data-toggle="collapse" data-parent="#navigation">yii\test <b class="caret"></b></a><div id="navigation-11245" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-test-activefixture.html">ActiveFixture</a>
+<a class="list-group-item" href="./yii-test-arrayfixture.html">ArrayFixture</a>
+<a class="list-group-item" href="./yii-test-baseactivefixture.html">BaseActiveFixture</a>
+<a class="list-group-item" href="./yii-test-dbfixture.html">DbFixture</a>
+<a class="list-group-item" href="./yii-test-filefixturetrait.html">FileFixtureTrait</a>
+<a class="list-group-item" href="./yii-test-fixture.html">Fixture</a>
+<a class="list-group-item" href="./yii-test-fixturetrait.html">FixtureTrait</a>
+<a class="list-group-item" href="./yii-test-initdbfixture.html">InitDbFixture</a></div>
+<a class="list-group-item" href="#navigation-11246" data-toggle="collapse" data-parent="#navigation">yii\validators <b class="caret"></b></a><div id="navigation-11246" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-validators-booleanvalidator.html">BooleanValidator</a>
+<a class="list-group-item" href="./yii-validators-comparevalidator.html">CompareValidator</a>
+<a class="list-group-item" href="./yii-validators-datevalidator.html">DateValidator</a>
+<a class="list-group-item" href="./yii-validators-defaultvaluevalidator.html">DefaultValueValidator</a>
+<a class="list-group-item" href="./yii-validators-eachvalidator.html">EachValidator</a>
+<a class="list-group-item" href="./yii-validators-emailvalidator.html">EmailValidator</a>
+<a class="list-group-item" href="./yii-validators-existvalidator.html">ExistValidator</a>
+<a class="list-group-item" href="./yii-validators-filevalidator.html">FileValidator</a>
+<a class="list-group-item" href="./yii-validators-filtervalidator.html">FilterValidator</a>
+<a class="list-group-item" href="./yii-validators-imagevalidator.html">ImageValidator</a>
+<a class="list-group-item" href="./yii-validators-inlinevalidator.html">InlineValidator</a>
+<a class="list-group-item" href="./yii-validators-ipvalidator.html">IpValidator</a>
+<a class="list-group-item" href="./yii-validators-numbervalidator.html">NumberValidator</a>
+<a class="list-group-item" href="./yii-validators-punycodeasset.html">PunycodeAsset</a>
+<a class="list-group-item" href="./yii-validators-rangevalidator.html">RangeValidator</a>
+<a class="list-group-item" href="./yii-validators-regularexpressionvalidator.html">RegularExpressionValidator</a>
+<a class="list-group-item" href="./yii-validators-requiredvalidator.html">RequiredValidator</a>
+<a class="list-group-item" href="./yii-validators-safevalidator.html">SafeValidator</a>
+<a class="list-group-item" href="./yii-validators-stringvalidator.html">StringValidator</a>
+<a class="list-group-item" href="./yii-validators-uniquevalidator.html">UniqueValidator</a>
+<a class="list-group-item" href="./yii-validators-urlvalidator.html">UrlValidator</a>
+<a class="list-group-item" href="./yii-validators-validationasset.html">ValidationAsset</a>
+<a class="list-group-item" href="./yii-validators-validator.html">Validator</a></div>
+<a class="list-group-item" href="#navigation-11247" data-toggle="collapse" data-parent="#navigation">yii\web <b class="caret"></b></a><div id="navigation-11247" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-web-application.html">Application</a>
+<a class="list-group-item" href="./yii-web-assetbundle.html">AssetBundle</a>
+<a class="list-group-item" href="./yii-web-assetconverter.html">AssetConverter</a>
+<a class="list-group-item" href="./yii-web-assetconverterinterface.html">AssetConverterInterface</a>
+<a class="list-group-item" href="./yii-web-assetmanager.html">AssetManager</a>
+<a class="list-group-item" href="./yii-web-badrequesthttpexception.html">BadRequestHttpException</a>
+<a class="list-group-item" href="./yii-web-cachesession.html">CacheSession</a>
+<a class="list-group-item" href="./yii-web-compositeurlrule.html">CompositeUrlRule</a>
+<a class="list-group-item" href="./yii-web-conflicthttpexception.html">ConflictHttpException</a>
+<a class="list-group-item" href="./yii-web-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-web-cookie.html">Cookie</a>
+<a class="list-group-item" href="./yii-web-cookiecollection.html">CookieCollection</a>
+<a class="list-group-item" href="./yii-web-dbsession.html">DbSession</a>
+<a class="list-group-item" href="./yii-web-erroraction.html">ErrorAction</a>
+<a class="list-group-item" href="./yii-web-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-web-forbiddenhttpexception.html">ForbiddenHttpException</a>
+<a class="list-group-item" href="./yii-web-gonehttpexception.html">GoneHttpException</a>
+<a class="list-group-item" href="./yii-web-groupurlrule.html">GroupUrlRule</a>
+<a class="list-group-item" href="./yii-web-headercollection.html">HeaderCollection</a>
+<a class="list-group-item" href="./yii-web-headersalreadysentexception.html">HeadersAlreadySentException</a>
+<a class="list-group-item" href="./yii-web-htmlresponseformatter.html">HtmlResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-httpexception.html">HttpException</a>
+<a class="list-group-item" href="./yii-web-identityinterface.html">IdentityInterface</a>
+<a class="list-group-item" href="./yii-web-jqueryasset.html">JqueryAsset</a>
+<a class="list-group-item" href="./yii-web-jsexpression.html">JsExpression</a>
+<a class="list-group-item" href="./yii-web-jsonparser.html">JsonParser</a>
+<a class="list-group-item" href="./yii-web-jsonresponseformatter.html">JsonResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-link.html">Link</a>
+<a class="list-group-item" href="./yii-web-linkable.html">Linkable</a>
+<a class="list-group-item" href="./yii-web-methodnotallowedhttpexception.html">MethodNotAllowedHttpException</a>
+<a class="list-group-item" href="./yii-web-multifieldsession.html">MultiFieldSession</a>
+<a class="list-group-item" href="./yii-web-multipartformdataparser.html">MultipartFormDataParser</a>
+<a class="list-group-item" href="./yii-web-notacceptablehttpexception.html">NotAcceptableHttpException</a>
+<a class="list-group-item" href="./yii-web-notfoundhttpexception.html">NotFoundHttpException</a>
+<a class="list-group-item" href="./yii-web-rangenotsatisfiablehttpexception.html">RangeNotSatisfiableHttpException</a>
+<a class="list-group-item" href="./yii-web-request.html">Request</a>
+<a class="list-group-item" href="./yii-web-requestparserinterface.html">RequestParserInterface</a>
+<a class="list-group-item" href="./yii-web-response.html">Response</a>
+<a class="list-group-item" href="./yii-web-responseformatterinterface.html">ResponseFormatterInterface</a>
+<a class="list-group-item" href="./yii-web-servererrorhttpexception.html">ServerErrorHttpException</a>
+<a class="list-group-item" href="./yii-web-session.html">Session</a>
+<a class="list-group-item" href="./yii-web-sessioniterator.html">SessionIterator</a>
+<a class="list-group-item" href="./yii-web-toomanyrequestshttpexception.html">TooManyRequestsHttpException</a>
+<a class="list-group-item" href="./yii-web-unauthorizedhttpexception.html">UnauthorizedHttpException</a>
+<a class="list-group-item" href="./yii-web-unprocessableentityhttpexception.html">UnprocessableEntityHttpException</a>
+<a class="list-group-item" href="./yii-web-unsupportedmediatypehttpexception.html">UnsupportedMediaTypeHttpException</a>
+<a class="list-group-item" href="./yii-web-uploadedfile.html">UploadedFile</a>
+<a class="list-group-item" href="./yii-web-urlmanager.html">UrlManager</a>
+<a class="list-group-item" href="./yii-web-urlnormalizer.html">UrlNormalizer</a>
+<a class="list-group-item" href="./yii-web-urlnormalizerredirectexception.html">UrlNormalizerRedirectException</a>
+<a class="list-group-item" href="./yii-web-urlrule.html">UrlRule</a>
+<a class="list-group-item" href="./yii-web-urlruleinterface.html">UrlRuleInterface</a>
+<a class="list-group-item" href="./yii-web-user.html">User</a>
+<a class="list-group-item" href="./yii-web-userevent.html">UserEvent</a>
+<a class="list-group-item" href="./yii-web-view.html">View</a>
+<a class="list-group-item" href="./yii-web-viewaction.html">ViewAction</a>
+<a class="list-group-item" href="./yii-web-xmlresponseformatter.html">XmlResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-yiiasset.html">YiiAsset</a></div>
+<a class="list-group-item" href="#navigation-11248" data-toggle="collapse" data-parent="#navigation">yii\widgets <b class="caret"></b></a><div id="navigation-11248" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-widgets-activefield.html">ActiveField</a>
+<a class="list-group-item" href="./yii-widgets-activeform.html">ActiveForm</a>
+<a class="list-group-item" href="./yii-widgets-activeformasset.html">ActiveFormAsset</a>
+<a class="list-group-item" href="./yii-widgets-baselistview.html">BaseListView</a>
+<a class="list-group-item" href="./yii-widgets-block.html">Block</a>
+<a class="list-group-item" href="./yii-widgets-breadcrumbs.html">Breadcrumbs</a>
+<a class="list-group-item" href="./yii-widgets-contentdecorator.html">ContentDecorator</a>
+<a class="list-group-item" href="./yii-widgets-detailview.html">DetailView</a>
+<a class="list-group-item" href="./yii-widgets-fragmentcache.html">FragmentCache</a>
+<a class="list-group-item" href="./yii-widgets-inputwidget.html">InputWidget</a>
+<a class="list-group-item" href="./yii-widgets-linkpager.html">LinkPager</a>
+<a class="list-group-item" href="./yii-widgets-linksorter.html">LinkSorter</a>
+<a class="list-group-item" href="./yii-widgets-listview.html">ListView</a>
+<a class="list-group-item" href="./yii-widgets-maskedinput.html">MaskedInput</a>
+<a class="list-group-item" href="./yii-widgets-maskedinputasset.html">MaskedInputAsset</a>
+<a class="list-group-item" href="./yii-widgets-menu.html">Menu</a>
+<a class="list-group-item" href="./yii-widgets-pjax.html">Pjax</a>
+<a class="list-group-item" href="./yii-widgets-pjaxasset.html">PjaxAsset</a>
+<a class="list-group-item" href="./yii-widgets-spaceless.html">Spaceless</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\helpers\BaseConsole</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+                | <a href="#methods">Methods</a>
+                    | <a href="#constants">Constants</a>
+    </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td></tr>
+                            <tr><th>Subclasses</th><td><a href="yii-helpers-console.html">yii\helpers\Console</a></td></tr>
+                        <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php">https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>BaseConsole provides concrete implementation for <a href="yii-helpers-console.html">yii\helpers\Console</a>.</strong></p>
+    <p>Do not use BaseConsole. Use <a href="yii-helpers-console.html">yii\helpers\Console</a> instead.</p>
+
+    </div>
+
+<a id="properties"></a>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="ansiFormat()">
+        <td><a href="yii-helpers-baseconsole.html#ansiFormat()-detail">ansiFormat()</a></td>
+        <td>Will return a string formatted with the given ANSI style.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="ansiFormatCode()">
+        <td><a href="yii-helpers-baseconsole.html#ansiFormatCode()-detail">ansiFormatCode()</a></td>
+        <td>Returns the ANSI format code.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="ansiStrlen()">
+        <td><a href="yii-helpers-baseconsole.html#ansiStrlen()-detail">ansiStrlen()</a></td>
+        <td>Returns the length of the string without ANSI color codes.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="ansiToHtml()">
+        <td><a href="yii-helpers-baseconsole.html#ansiToHtml()-detail">ansiToHtml()</a></td>
+        <td>Converts an ANSI formatted string to HTML.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="beginAnsiFormat()">
+        <td><a href="yii-helpers-baseconsole.html#beginAnsiFormat()-detail">beginAnsiFormat()</a></td>
+        <td>Echoes an ANSI format code that affects the formatting of any text that is printed afterwards.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="clearLine()">
+        <td><a href="yii-helpers-baseconsole.html#clearLine()-detail">clearLine()</a></td>
+        <td>Clears the line, the cursor is currently on by sending ANSI control code EL with argument 2 to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="clearLineAfterCursor()">
+        <td><a href="yii-helpers-baseconsole.html#clearLineAfterCursor()-detail">clearLineAfterCursor()</a></td>
+        <td>Clears text from cursor position to the end of the line by sending ANSI control code EL with argument 0 to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="clearLineBeforeCursor()">
+        <td><a href="yii-helpers-baseconsole.html#clearLineBeforeCursor()-detail">clearLineBeforeCursor()</a></td>
+        <td>Clears text from cursor position to the beginning of the line by sending ANSI control code EL with argument 1 to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="clearScreen()">
+        <td><a href="yii-helpers-baseconsole.html#clearScreen()-detail">clearScreen()</a></td>
+        <td>Clears entire screen content by sending ANSI control code ED with argument 2 to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="clearScreenAfterCursor()">
+        <td><a href="yii-helpers-baseconsole.html#clearScreenAfterCursor()-detail">clearScreenAfterCursor()</a></td>
+        <td>Clears text from cursor to the end of the screen by sending ANSI control code ED with argument 0 to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="clearScreenBeforeCursor()">
+        <td><a href="yii-helpers-baseconsole.html#clearScreenBeforeCursor()-detail">clearScreenBeforeCursor()</a></td>
+        <td>Clears text from cursor to the beginning of the screen by sending ANSI control code ED with argument 1 to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="confirm()">
+        <td><a href="yii-helpers-baseconsole.html#confirm()-detail">confirm()</a></td>
+        <td>Asks user to confirm by typing y or n.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="endAnsiFormat()">
+        <td><a href="yii-helpers-baseconsole.html#endAnsiFormat()-detail">endAnsiFormat()</a></td>
+        <td>Resets any ANSI format set by previous method <a href="yii-helpers-baseconsole.html#beginAnsiFormat()-detail">beginAnsiFormat()</a>
+Any output after this will have default text format.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="endProgress()">
+        <td><a href="yii-helpers-baseconsole.html#endProgress()-detail">endProgress()</a></td>
+        <td>Ends a progress bar that has been started by <a href="yii-helpers-baseconsole.html#startProgress()-detail">startProgress()</a>.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="error()">
+        <td><a href="yii-helpers-baseconsole.html#error()-detail">error()</a></td>
+        <td>Prints text to STDERR appended with a carriage return (PHP_EOL).</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="errorSummary()">
+        <td><a href="yii-helpers-baseconsole.html#errorSummary()-detail">errorSummary()</a></td>
+        <td>Generates a summary of the validation errors.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="escape()">
+        <td><a href="yii-helpers-baseconsole.html#escape()-detail">escape()</a></td>
+        <td>Escapes % so they don't get interpreted as color codes when
+the string is parsed by <a href="yii-helpers-baseconsole.html#renderColoredString()-detail">renderColoredString()</a>.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="getScreenSize()">
+        <td><a href="yii-helpers-baseconsole.html#getScreenSize()-detail">getScreenSize()</a></td>
+        <td>Returns terminal screen size.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="hideCursor()">
+        <td><a href="yii-helpers-baseconsole.html#hideCursor()-detail">hideCursor()</a></td>
+        <td>Hides the cursor by sending ANSI DECTCEM code ?25l to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="input()">
+        <td><a href="yii-helpers-baseconsole.html#input()-detail">input()</a></td>
+        <td>Asks the user for input. Ends when the user types a carriage return (PHP_EOL). Optionally, It also provides a
+prompt.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="isRunningOnWindows()">
+        <td><a href="yii-helpers-baseconsole.html#isRunningOnWindows()-detail">isRunningOnWindows()</a></td>
+        <td>Returns true if the console is running on windows.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="markdownToAnsi()">
+        <td><a href="yii-helpers-baseconsole.html#markdownToAnsi()-detail">markdownToAnsi()</a></td>
+        <td>Converts Markdown to be better readable in console environments by applying some ANSI format.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="moveCursorBackward()">
+        <td><a href="yii-helpers-baseconsole.html#moveCursorBackward()-detail">moveCursorBackward()</a></td>
+        <td>Moves the terminal cursor backward by sending ANSI control code CUB to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="moveCursorDown()">
+        <td><a href="yii-helpers-baseconsole.html#moveCursorDown()-detail">moveCursorDown()</a></td>
+        <td>Moves the terminal cursor down by sending ANSI control code CUD to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="moveCursorForward()">
+        <td><a href="yii-helpers-baseconsole.html#moveCursorForward()-detail">moveCursorForward()</a></td>
+        <td>Moves the terminal cursor forward by sending ANSI control code CUF to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="moveCursorNextLine()">
+        <td><a href="yii-helpers-baseconsole.html#moveCursorNextLine()-detail">moveCursorNextLine()</a></td>
+        <td>Moves the terminal cursor to the beginning of the next line by sending ANSI control code CNL to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="moveCursorPrevLine()">
+        <td><a href="yii-helpers-baseconsole.html#moveCursorPrevLine()-detail">moveCursorPrevLine()</a></td>
+        <td>Moves the terminal cursor to the beginning of the previous line by sending ANSI control code CPL to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="moveCursorTo()">
+        <td><a href="yii-helpers-baseconsole.html#moveCursorTo()-detail">moveCursorTo()</a></td>
+        <td>Moves the cursor to an absolute position given as column and row by sending ANSI control code CUP or CHA to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="moveCursorUp()">
+        <td><a href="yii-helpers-baseconsole.html#moveCursorUp()-detail">moveCursorUp()</a></td>
+        <td>Moves the terminal cursor up by sending ANSI control code CUU to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="output()">
+        <td><a href="yii-helpers-baseconsole.html#output()-detail">output()</a></td>
+        <td>Prints text to STDOUT appended with a carriage return (PHP_EOL).</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="prompt()">
+        <td><a href="yii-helpers-baseconsole.html#prompt()-detail">prompt()</a></td>
+        <td>Prompts the user for input and validates it.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="renderColoredString()">
+        <td><a href="yii-helpers-baseconsole.html#renderColoredString()-detail">renderColoredString()</a></td>
+        <td>Converts a string to ansi formatted by replacing patterns like %y (for yellow) with ansi control codes.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="restoreCursorPosition()">
+        <td><a href="yii-helpers-baseconsole.html#restoreCursorPosition()-detail">restoreCursorPosition()</a></td>
+        <td>Restores the cursor position saved with <a href="yii-helpers-baseconsole.html#saveCursorPosition()-detail">saveCursorPosition()</a> by sending ANSI control code RCP to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="saveCursorPosition()">
+        <td><a href="yii-helpers-baseconsole.html#saveCursorPosition()-detail">saveCursorPosition()</a></td>
+        <td>Saves the current cursor position by sending ANSI control code SCP to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="scrollDown()">
+        <td><a href="yii-helpers-baseconsole.html#scrollDown()-detail">scrollDown()</a></td>
+        <td>Scrolls whole page down by sending ANSI control code SD to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="scrollUp()">
+        <td><a href="yii-helpers-baseconsole.html#scrollUp()-detail">scrollUp()</a></td>
+        <td>Scrolls whole page up by sending ANSI control code SU to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="select()">
+        <td><a href="yii-helpers-baseconsole.html#select()-detail">select()</a></td>
+        <td>Gives the user an option to choose from. Giving '?' as an input will show
+a list of options to choose from and their explanations.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="showCursor()">
+        <td><a href="yii-helpers-baseconsole.html#showCursor()-detail">showCursor()</a></td>
+        <td>Will show a cursor again when it has been hidden by <a href="yii-helpers-baseconsole.html#hideCursor()-detail">hideCursor()</a>  by sending ANSI DECTCEM code ?25h to the terminal.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="startProgress()">
+        <td><a href="yii-helpers-baseconsole.html#startProgress()-detail">startProgress()</a></td>
+        <td>Starts display of a progress bar on screen.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="stderr()">
+        <td><a href="yii-helpers-baseconsole.html#stderr()-detail">stderr()</a></td>
+        <td>Prints a string to STDERR.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="stdin()">
+        <td><a href="yii-helpers-baseconsole.html#stdin()-detail">stdin()</a></td>
+        <td>Gets input from STDIN and returns a string right-trimmed for EOLs.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="stdout()">
+        <td><a href="yii-helpers-baseconsole.html#stdout()-detail">stdout()</a></td>
+        <td>Prints a string to STDOUT.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="streamSupportsAnsiColors()">
+        <td><a href="yii-helpers-baseconsole.html#streamSupportsAnsiColors()-detail">streamSupportsAnsiColors()</a></td>
+        <td>Returns true if the stream supports colorization. ANSI colors are disabled if not supported by the stream.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="stripAnsiFormat()">
+        <td><a href="yii-helpers-baseconsole.html#stripAnsiFormat()-detail">stripAnsiFormat()</a></td>
+        <td>Strips ANSI control codes from a string.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="updateProgress()">
+        <td><a href="yii-helpers-baseconsole.html#updateProgress()-detail">updateProgress()</a></td>
+        <td>Updates a progress bar that has been started by <a href="yii-helpers-baseconsole.html#startProgress()-detail">startProgress()</a>.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="wrapText()">
+        <td><a href="yii-helpers-baseconsole.html#wrapText()-detail">wrapText()</a></td>
+        <td>Word wrap text with indentation to fit the screen size.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="xtermBgColor()">
+        <td><a href="yii-helpers-baseconsole.html#xtermBgColor()-detail">xtermBgColor()</a></td>
+        <td>Returns the ansi format code for xterm background color.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+            <tr id="xtermFgColor()">
+        <td><a href="yii-helpers-baseconsole.html#xtermFgColor()-detail">xtermFgColor()</a></td>
+        <td>Returns the ansi format code for xterm foreground color.</td>
+        <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+<div class="summary doc-const">
+    <h2>Constants</h2>
+
+    <p><a href="#" class="toggle">Hide inherited constants</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-const" />
+        <col class="col-value" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Constant</th><th>Value</th><th>Description</th><th>Defined By</th>
+    </tr>
+            <tr id="BG_BLACK">
+          <td id="BG_BLACK-detail">BG_BLACK</td>
+          <td>40</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="BG_BLUE">
+          <td id="BG_BLUE-detail">BG_BLUE</td>
+          <td>44</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="BG_CYAN">
+          <td id="BG_CYAN-detail">BG_CYAN</td>
+          <td>46</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="BG_GREEN">
+          <td id="BG_GREEN-detail">BG_GREEN</td>
+          <td>42</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="BG_GREY">
+          <td id="BG_GREY-detail">BG_GREY</td>
+          <td>47</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="BG_PURPLE">
+          <td id="BG_PURPLE-detail">BG_PURPLE</td>
+          <td>45</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="BG_RED">
+          <td id="BG_RED-detail">BG_RED</td>
+          <td>41</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="BG_YELLOW">
+          <td id="BG_YELLOW-detail">BG_YELLOW</td>
+          <td>43</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="BLINK">
+          <td id="BLINK-detail">BLINK</td>
+          <td>5</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="BOLD">
+          <td id="BOLD-detail">BOLD</td>
+          <td>1</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="CONCEALED">
+          <td id="CONCEALED-detail">CONCEALED</td>
+          <td>8</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="CROSSED_OUT">
+          <td id="CROSSED_OUT-detail">CROSSED_OUT</td>
+          <td>9</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="ENCIRCLED">
+          <td id="ENCIRCLED-detail">ENCIRCLED</td>
+          <td>52</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="FG_BLACK">
+          <td id="FG_BLACK-detail">FG_BLACK</td>
+          <td>30</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="FG_BLUE">
+          <td id="FG_BLUE-detail">FG_BLUE</td>
+          <td>34</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="FG_CYAN">
+          <td id="FG_CYAN-detail">FG_CYAN</td>
+          <td>36</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="FG_GREEN">
+          <td id="FG_GREEN-detail">FG_GREEN</td>
+          <td>32</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="FG_GREY">
+          <td id="FG_GREY-detail">FG_GREY</td>
+          <td>37</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="FG_PURPLE">
+          <td id="FG_PURPLE-detail">FG_PURPLE</td>
+          <td>35</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="FG_RED">
+          <td id="FG_RED-detail">FG_RED</td>
+          <td>31</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="FG_YELLOW">
+          <td id="FG_YELLOW-detail">FG_YELLOW</td>
+          <td>33</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="FRAMED">
+          <td id="FRAMED-detail">FRAMED</td>
+          <td>51</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="ITALIC">
+          <td id="ITALIC-detail">ITALIC</td>
+          <td>3</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="NEGATIVE">
+          <td id="NEGATIVE-detail">NEGATIVE</td>
+          <td>7</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="NORMAL">
+          <td id="NORMAL-detail">NORMAL</td>
+          <td>0</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="OVERLINED">
+          <td id="OVERLINED-detail">OVERLINED</td>
+          <td>53</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="RESET">
+          <td id="RESET-detail">RESET</td>
+          <td>0</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+            <tr id="UNDERLINE">
+          <td id="UNDERLINE-detail">UNDERLINE</td>
+          <td>4</td>
+          <td>
+                        </td>
+          <td><a href="yii-helpers-baseconsole.html">yii\helpers\BaseConsole</a></td>
+        </tr>
+        </table>
+</div>
+
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="ansiFormat()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#ansiFormat()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L288" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L288" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        ansiFormat()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Will return a string formatted with the given ANSI style.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#ansiFormat()-detail">ansiFormat</a></strong> ( <span style="color: #0000BB">$string</span>, <span style="color: #0000BB">$format&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$string</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The string to be formatted</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$format</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>An array containing formatting values.
+You can pass any of the <code>FG_*</code>, <code>BG_*</code> and <code>TEXT_*</code> constants
+and also <a href="yii-helpers-baseconsole.html#xtermFgColor()-detail">xtermFgColor()</a> and <a href="yii-helpers-baseconsole.html#xtermBgColor()-detail">xtermBgColor()</a> to specify a format.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="ansiFormatCode()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#ansiFormatCode()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L246" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L246" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        ansiFormatCode()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the ANSI format code.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#ansiFormatCode()-detail">ansiFormatCode</a></strong> ( <span style="color: #0000BB">$format</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$format</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>An array containing formatting values.
+You can pass any of the <code>FG_*</code>, <code>BG_*</code> and <code>TEXT_*</code> constants
+and also <a href="yii-helpers-baseconsole.html#xtermFgColor()-detail">xtermFgColor()</a> and <a href="yii-helpers-baseconsole.html#xtermBgColor()-detail">xtermBgColor()</a> to specify a format.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The ANSI format code according to the given formatting constants.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="ansiStrlen()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#ansiStrlen()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L341" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L341" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        ansiStrlen()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the length of the string without ANSI color codes.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <strong><a href="yii-helpers-baseconsole.html#ansiStrlen()-detail">ansiStrlen</a></strong> ( <span style="color: #0000BB">$string</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$string</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The string to measure</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The length of the string not counting ANSI format characters</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="ansiToHtml()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#ansiToHtml()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L359" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L359" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        ansiToHtml()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts an ANSI formatted string to HTML.</strong></p>
+
+        <p>Note: xTerm 256 bit colors are currently not supported.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#ansiToHtml()-detail">ansiToHtml</a></strong> ( <span style="color: #0000BB">$string</span>, <span style="color: #0000BB">$styleMap&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$string</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The string to convert.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$styleMap</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>An optional mapping of ANSI control codes such as
+FG_<em>COLOR</em> or <a href="yii-helpers-baseconsole.html#BOLD-detail">BOLD</a> to a set of css style definitions.
+The CSS style definitions are represented as an array where the array keys correspond
+to the css style attribute names and the values are the css values.
+values may be arrays that will be merged and imploded with <code>' '</code> when rendered.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>HTML representation of the ANSI formatted string</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="beginAnsiFormat()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#beginAnsiFormat()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L260" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L260" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        beginAnsiFormat()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Echoes an ANSI format code that affects the formatting of any text that is printed afterwards.</strong></p>
+
+        
+        <p>See also:</p><ul><li><a href="yii-helpers-baseconsole.html#ansiFormatCode()-detail">ansiFormatCode()</a></li><li><a href="yii-helpers-baseconsole.html#endAnsiFormat()-detail">endAnsiFormat()</a></li></ul>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#beginAnsiFormat()-detail">beginAnsiFormat</a></strong> ( <span style="color: #0000BB">$format</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$format</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>An array containing formatting values.
+You can pass any of the <code>FG_*</code>, <code>BG_*</code> and <code>TEXT_*</code> constants
+and also <a href="yii-helpers-baseconsole.html#xtermFgColor()-detail">xtermFgColor()</a> and <a href="yii-helpers-baseconsole.html#xtermBgColor()-detail">xtermBgColor()</a> to specify a format.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="clearLine()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#clearLine()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L215" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L215" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        clearLine()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Clears the line, the cursor is currently on by sending ANSI control code EL with argument 2 to the terminal.</strong></p>
+
+        <p>Cursor position will not be changed.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#clearLine()-detail">clearLine</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="clearLineAfterCursor()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#clearLineAfterCursor()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L233" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L233" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        clearLineAfterCursor()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Clears text from cursor position to the end of the line by sending ANSI control code EL with argument 0 to the terminal.</strong></p>
+
+        <p>Cursor position will not be changed.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#clearLineAfterCursor()-detail">clearLineAfterCursor</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="clearLineBeforeCursor()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#clearLineBeforeCursor()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L224" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L224" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        clearLineBeforeCursor()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Clears text from cursor position to the beginning of the line by sending ANSI control code EL with argument 1 to the terminal.</strong></p>
+
+        <p>Cursor position will not be changed.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#clearLineBeforeCursor()-detail">clearLineBeforeCursor</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="clearScreen()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#clearScreen()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L188" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L188" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        clearScreen()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Clears entire screen content by sending ANSI control code ED with argument 2 to the terminal.</strong></p>
+
+        <p>Cursor position will not be changed.
+<strong>Note:</strong> ANSI.SYS implementation used in windows will reset cursor position to upper left corner of the screen.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#clearScreen()-detail">clearScreen</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="clearScreenAfterCursor()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#clearScreenAfterCursor()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L206" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L206" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        clearScreenAfterCursor()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Clears text from cursor to the end of the screen by sending ANSI control code ED with argument 0 to the terminal.</strong></p>
+
+        <p>Cursor position will not be changed.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#clearScreenAfterCursor()-detail">clearScreenAfterCursor</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="clearScreenBeforeCursor()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#clearScreenBeforeCursor()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L197" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L197" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        clearScreenBeforeCursor()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Clears text from cursor to the beginning of the screen by sending ANSI control code ED with argument 1 to the terminal.</strong></p>
+
+        <p>Cursor position will not be changed.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#clearScreenBeforeCursor()-detail">clearScreenBeforeCursor</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="confirm()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#confirm()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L842" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L842" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        confirm()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Asks user to confirm by typing y or n.</strong></p>
+
+        <p>A typical usage looks like the following:</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">if</span> (Console::confirm(<span class="hljs-string">"Are you sure?"</span>)) {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">"user typed yes\n"</span>;
+} <span class="hljs-keyword">else</span> {
+    <span class="hljs-keyword">echo</span> <span class="hljs-string">"user typed no\n"</span>;
+}
+</code></pre>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-helpers-baseconsole.html#confirm()-detail">confirm</a></strong> ( <span style="color: #0000BB">$message</span>, <span style="color: #0000BB">$default&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$message</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>To print out before waiting for user input</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$default</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>This value is returned if no selection is made.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether user confirmed</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="endAnsiFormat()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#endAnsiFormat()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L274" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L274" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        endAnsiFormat()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Resets any ANSI format set by previous method <a href="yii-helpers-baseconsole.html#beginAnsiFormat()-detail">beginAnsiFormat()</a>
+Any output after this will have default text format.</strong></p>
+
+        <p>This is equal to calling.</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">echo</span> Console::ansiFormatCode([Console::RESET])
+</code></pre>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#endAnsiFormat()-detail">endAnsiFormat</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="endProgress()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#endProgress()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L1061" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L1061" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        endProgress()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Ends a progress bar that has been started by <a href="yii-helpers-baseconsole.html#startProgress()-detail">startProgress()</a>.</strong></p>
+
+        
+        <p>See also:</p><ul><li><a href="yii-helpers-baseconsole.html#startProgress()-detail">startProgress()</a></li><li><a href="yii-helpers-baseconsole.html#updateProgress()-detail">updateProgress()</a></li></ul>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#endProgress()-detail">endProgress</a></strong> ( <span style="color: #0000BB">$remove&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span>, <span style="color: #0000BB">$keepPrefix&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$remove</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>This can be <code>false</code> to leave the progress bar on screen and just print a newline.
+If set to <code>true</code>, the line of the progress bar will be cleared. This may also be a string to be displayed instead
+of the progress bar.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$keepPrefix</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to keep the prefix that has been specified for the progressbar when progressbar
+gets removed. Defaults to true.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="error()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#error()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L766" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L766" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        error()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Prints text to STDERR appended with a carriage return (PHP_EOL).</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-helpers-baseconsole.html#error()-detail">error</a></strong> ( <span style="color: #0000BB">$string&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$string</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The text to print</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Number of bytes printed or false on error.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="errorSummary()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#errorSummary()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L1092" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L1092" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        errorSummary()
+        <span class="detail-header-tag small">
+            public                        static            method
+                            (available since version 2.0.14)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates a summary of the validation errors.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#errorSummary()-detail">errorSummary</a></strong> ( <span style="color: #0000BB">$models</span>, <span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$models</span></td>
+                  <td class="param-type-col"><a href="yii-base-model.html">yii\base\Model</a>|<a href="yii-base-model.html">yii\base\Model</a>[]</td>
+                  <td class="param-desc-col"><p>The model(s) whose validation errors are to be displayed.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The tag options in terms of name-value pairs. The following options are specially handled:</p>
+<ul>
+<li>showAllErrors: boolean, if set to true every error message for each attribute will be shown otherwise
+only the first error message for each attribute will be shown. Defaults to <code>false</code>.</li>
+</ul>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The generated error summary</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="escape()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#escape()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L570" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L570" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        escape()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Escapes % so they don't get interpreted as color codes when
+the string is parsed by <a href="yii-helpers-baseconsole.html#renderColoredString()-detail">renderColoredString()</a>.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#escape()-detail">escape</a></strong> ( <span style="color: #0000BB">$string</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$string</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>String to escape</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getScreenSize()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#getScreenSize()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L615" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L615" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getScreenSize()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns terminal screen size.</strong></p>
+
+        <p>Usage:</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">list</span>(<span class="hljs-variable">$width</span>, <span class="hljs-variable">$height</span>) = ConsoleHelper::getScreenSize();
+</code></pre>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-helpers-baseconsole.html#getScreenSize()-detail">getScreenSize</a></strong> ( <span style="color: #0000BB">$refresh&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$refresh</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to force checking and not re-use cached size value.
+This is useful to detect changing window size while the application is running but may
+not get up to date values on every terminal.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>An array of ($width, $height) or false when it was not able to determine size.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="hideCursor()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#hideCursor()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L170" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L170" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        hideCursor()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Hides the cursor by sending ANSI DECTCEM code ?25l to the terminal.</strong></p>
+
+        <p>Use <a href="yii-helpers-baseconsole.html#showCursor()-detail">showCursor()</a> to bring it back.
+Do not forget to show cursor when your application exits. Cursor might stay hidden in terminal after exit.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#hideCursor()-detail">hideCursor</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="input()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#input()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L740" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L740" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        input()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Asks the user for input. Ends when the user types a carriage return (PHP_EOL). Optionally, It also provides a
+prompt.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#input()-detail">input</a></strong> ( <span style="color: #0000BB">$prompt&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$prompt</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The prompt to display before waiting for input (optional)</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The user's input</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="isRunningOnWindows()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#isRunningOnWindows()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L596" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L596" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        isRunningOnWindows()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns true if the console is running on windows.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-helpers-baseconsole.html#isRunningOnWindows()-detail">isRunningOnWindows</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="markdownToAnsi()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#markdownToAnsi()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L465" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L465" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        markdownToAnsi()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts Markdown to be better readable in console environments by applying some ANSI format.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#markdownToAnsi()-detail">markdownToAnsi</a></strong> ( <span style="color: #0000BB">$markdown</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$markdown</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The markdown string.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The parsed result as ANSI formatted string.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="moveCursorBackward()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#moveCursorBackward()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L91" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L91" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        moveCursorBackward()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Moves the terminal cursor backward by sending ANSI control code CUB to the terminal.</strong></p>
+
+        <p>If the cursor is already at the edge of the screen, this has no effect.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#moveCursorBackward()-detail">moveCursorBackward</a></strong> ( <span style="color: #0000BB">$steps&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$steps</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of steps the cursor should be moved backward</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="moveCursorDown()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#moveCursorDown()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L71" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L71" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        moveCursorDown()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Moves the terminal cursor down by sending ANSI control code CUD to the terminal.</strong></p>
+
+        <p>If the cursor is already at the edge of the screen, this has no effect.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#moveCursorDown()-detail">moveCursorDown</a></strong> ( <span style="color: #0000BB">$rows&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$rows</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of rows the cursor should be moved down</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="moveCursorForward()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#moveCursorForward()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L81" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L81" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        moveCursorForward()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Moves the terminal cursor forward by sending ANSI control code CUF to the terminal.</strong></p>
+
+        <p>If the cursor is already at the edge of the screen, this has no effect.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#moveCursorForward()-detail">moveCursorForward</a></strong> ( <span style="color: #0000BB">$steps&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$steps</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of steps the cursor should be moved forward</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="moveCursorNextLine()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#moveCursorNextLine()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L100" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L100" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        moveCursorNextLine()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Moves the terminal cursor to the beginning of the next line by sending ANSI control code CNL to the terminal.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#moveCursorNextLine()-detail">moveCursorNextLine</a></strong> ( <span style="color: #0000BB">$lines&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$lines</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of lines the cursor should be moved down</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="moveCursorPrevLine()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#moveCursorPrevLine()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L109" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L109" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        moveCursorPrevLine()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Moves the terminal cursor to the beginning of the previous line by sending ANSI control code CPL to the terminal.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#moveCursorPrevLine()-detail">moveCursorPrevLine</a></strong> ( <span style="color: #0000BB">$lines&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$lines</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of lines the cursor should be moved up</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="moveCursorTo()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#moveCursorTo()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L119" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L119" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        moveCursorTo()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Moves the cursor to an absolute position given as column and row by sending ANSI control code CUP or CHA to the terminal.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#moveCursorTo()-detail">moveCursorTo</a></strong> ( <span style="color: #0000BB">$column</span>, <span style="color: #0000BB">$row&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$column</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>1-based column number, 1 is the left edge of the screen.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$row</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>1-based row number, 1 is the top edge of the screen. if not set, will move cursor only in current line.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="moveCursorUp()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#moveCursorUp()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L61" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L61" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        moveCursorUp()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Moves the terminal cursor up by sending ANSI control code CUU to the terminal.</strong></p>
+
+        <p>If the cursor is already at the edge of the screen, this has no effect.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#moveCursorUp()-detail">moveCursorUp</a></strong> ( <span style="color: #0000BB">$rows&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$rows</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of rows the cursor should be moved up</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="output()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#output()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L755" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L755" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        output()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Prints text to STDOUT appended with a carriage return (PHP_EOL).</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-helpers-baseconsole.html#output()-detail">output</a></strong> ( <span style="color: #0000BB">$string&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$string</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The text to print</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Number of bytes printed or false on error.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="prompt()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#prompt()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L786" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L786" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        prompt()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Prompts the user for input and validates it.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#prompt()-detail">prompt</a></strong> ( <span style="color: #0000BB">$text</span>, <span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$text</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Prompt string</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The options to validate the input:</p>
+<ul>
+<li><code>required</code>: whether it is required or not</li>
+<li><code>default</code>: default value if no input is inserted by the user</li>
+<li><code>pattern</code>: regular expression pattern to validate user input</li>
+<li><code>validator</code>: a callable function to validate input. The function must accept two parameters:</li>
+<li><code>input</code>: the user input to validate</li>
+<li><code>error</code>: the error value passed by reference if validation failed.</li>
+</ul>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The user input</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renderColoredString()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#renderColoredString()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L506" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L506" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renderColoredString()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Converts a string to ansi formatted by replacing patterns like %y (for yellow) with ansi control codes.</strong></p>
+
+        <p>Uses almost the same syntax as <a href="https://github.com/pear/Console_Color2/blob/master/Console/Color2.php">https://github.com/pear/Console_Color2/blob/master/Console/Color2.php</a>
+The conversion table is: ('bold' meaning 'light' on some
+terminals). It's almost the same conversion table irssi uses.
+<pre></p>
+<pre><code class="hljs scss">             <span class="hljs-value">text</span>      <span class="hljs-value">text</span>            <span class="hljs-attribute">background</span>
+ ------------------------------------------------
+ %k %K %0    black     dark grey       black
+ %r %R %1    red       <span class="hljs-value">bold</span> red        red
+ %g %G %2    green     <span class="hljs-value">bold</span> green      green
+ %y %Y %3    yellow    <span class="hljs-value">bold</span> yellow     yellow
+ %<span class="hljs-tag">b</span> %<span class="hljs-tag">B</span> %4    blue      <span class="hljs-value">bold</span> blue       blue
+ %m %M %5    magenta   <span class="hljs-value">bold</span> magenta    magenta
+ %<span class="hljs-tag">p</span> %<span class="hljs-tag">P</span>       magenta (think<span class="hljs-value">: purple)
+ %c %C %<span class="hljs-number">6</span>    cyan      bold cyan       cyan
+ %w %W %<span class="hljs-number">7</span>    white     bold white      white
+
+ %F     Blinking, Flashing
+ %U     Underline
+ %<span class="hljs-number">8</span>     Reverse
+ %_,%<span class="hljs-number">9</span>  Bold
+
+ %n     Resets the color
+ %%     A single %
+</span></code></pre>
+<p></pre>
+First param is the string to convert, second is an optional flag if
+colors should be used. It defaults to true, if set to false, the
+color codes will just be removed (And %% will be transformed into %)</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#renderColoredString()-detail">renderColoredString</a></strong> ( <span style="color: #0000BB">$string</span>, <span style="color: #0000BB">$colored&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$string</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>String to convert</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$colored</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Should the string be colored?</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="restoreCursorPosition()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#restoreCursorPosition()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L160" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L160" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        restoreCursorPosition()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Restores the cursor position saved with <a href="yii-helpers-baseconsole.html#saveCursorPosition()-detail">saveCursorPosition()</a> by sending ANSI control code RCP to the terminal.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#restoreCursorPosition()-detail">restoreCursorPosition</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="saveCursorPosition()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#saveCursorPosition()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L152" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L152" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        saveCursorPosition()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Saves the current cursor position by sending ANSI control code SCP to the terminal.</strong></p>
+
+        <p>Position can then be restored with <a href="yii-helpers-baseconsole.html#restoreCursorPosition()-detail">restoreCursorPosition()</a>.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#saveCursorPosition()-detail">saveCursorPosition</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="scrollDown()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#scrollDown()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L143" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L143" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        scrollDown()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Scrolls whole page down by sending ANSI control code SD to the terminal.</strong></p>
+
+        <p>New lines are added at the top. This is not supported by ANSI.SYS used in windows.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#scrollDown()-detail">scrollDown</a></strong> ( <span style="color: #0000BB">$lines&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$lines</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of lines to scroll down</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="scrollUp()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#scrollUp()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L133" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L133" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        scrollUp()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Scrolls whole page up by sending ANSI control code SU to the terminal.</strong></p>
+
+        <p>New lines are added at the bottom. This is not supported by ANSI.SYS used in windows.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#scrollUp()-detail">scrollUp</a></strong> ( <span style="color: #0000BB">$lines&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">1</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$lines</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of lines to scroll up</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="select()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#select()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L872" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L872" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        select()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Gives the user an option to choose from. Giving '?' as an input will show
+a list of options to choose from and their explanations.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#select()-detail">select</a></strong> ( <span style="color: #0000BB">$prompt</span>, <span style="color: #0000BB">$options&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$prompt</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The prompt message</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$options</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Key-value array of options to choose from. Key is what is inputed and used, value is
+what's displayed to end user by help command.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>An option character the user chose</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="showCursor()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#showCursor()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L178" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L178" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        showCursor()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Will show a cursor again when it has been hidden by <a href="yii-helpers-baseconsole.html#hideCursor()-detail">hideCursor()</a>  by sending ANSI DECTCEM code ?25h to the terminal.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#showCursor()-detail">showCursor</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="startProgress()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#startProgress()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L936" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L936" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        startProgress()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Starts display of a progress bar on screen.</strong></p>
+
+        <p>This bar will be updated by <a href="yii-helpers-baseconsole.html#updateProgress()-detail">updateProgress()</a> and my be ended by <a href="yii-helpers-baseconsole.html#endProgress()-detail">endProgress()</a>.</p>
+<p>The following example shows a simple usage of a progress bar:</p>
+<pre><code class="hljs php language-php">Console::startProgress(<span class="hljs-number">0</span>, <span class="hljs-number">1000</span>);
+<span class="hljs-keyword">for</span> (<span class="hljs-variable">$n</span> = <span class="hljs-number">1</span>; <span class="hljs-variable">$n</span> &lt;= <span class="hljs-number">1000</span>; <span class="hljs-variable">$n</span>++) {
+    usleep(<span class="hljs-number">1000</span>);
+    Console::updateProgress(<span class="hljs-variable">$n</span>, <span class="hljs-number">1000</span>);
+}
+Console::endProgress();
+</code></pre>
+<p>Git clone like progress (showing only status information):
+<code>`</code>php
+Console::startProgress(0, 1000, 'Counting objects: ', false);
+for ($n = 1; $n &lt;= 1000; $n++) {</p>
+<pre><code class="hljs scss"><span class="hljs-function">usleep</span>(1000);
+Console<span class="hljs-value">::<span class="hljs-function">updateProgress</span>(<span class="hljs-variable">$n</span>, <span class="hljs-number">1000</span>);</span>
+</code></pre>
+<p>}
+Console::endProgress("done." . PHP_EOL);
+<code>`</code></p>
+
+        <p>See also:</p><ul><li><a href="yii-helpers-baseconsole.html#startProgress()-detail">startProgress()</a></li><li><a href="yii-helpers-baseconsole.html#updateProgress()-detail">updateProgress()</a></li><li><a href="yii-helpers-baseconsole.html#endProgress()-detail">endProgress()</a></li></ul>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#startProgress()-detail">startProgress</a></strong> ( <span style="color: #0000BB">$done</span>, <span style="color: #0000BB">$total</span>, <span style="color: #0000BB">$prefix&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">''</span>, <span style="color: #0000BB">$width&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$done</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The number of items that are completed.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$total</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The total value of items that are to be done.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$prefix</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>An optional string to display before the progress bar.
+Default to empty string which results in no prefix to be displayed.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$width</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Optional width of the progressbar. This can be an integer representing
+the number of characters to display for the progress bar or a float between 0 and 1 representing the
+percentage of screen with the progress bar may take. It can also be set to false to disable the
+bar and only show progress information like percent, number of items and ETA.
+If not set, the bar will be as wide as the screen. Screen size will be detected using <a href="yii-helpers-baseconsole.html#getScreenSize()-detail">getScreenSize()</a>.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="stderr()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#stderr()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L728" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L728" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        stderr()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Prints a string to STDERR.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-helpers-baseconsole.html#stderr()-detail">stderr</a></strong> ( <span style="color: #0000BB">$string</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$string</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The string to print</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Number of bytes printed or false on error</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="stdin()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#stdin()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L706" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L706" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        stdin()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Gets input from STDIN and returns a string right-trimmed for EOLs.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#stdin()-detail">stdin</a></strong> ( <span style="color: #0000BB">$raw&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$raw</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>If set to true, returns the raw string without trimming</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The string read from stdin</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="stdout()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#stdout()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L717" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L717" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        stdout()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Prints a string to STDOUT.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-helpers-baseconsole.html#stdout()-detail">stdout</a></strong> ( <span style="color: #0000BB">$string</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$string</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The string to print</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Number of bytes printed or false on error</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="streamSupportsAnsiColors()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#streamSupportsAnsiColors()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L585" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L585" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        streamSupportsAnsiColors()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns true if the stream supports colorization. ANSI colors are disabled if not supported by the stream.</strong></p>
+
+        <ul>
+<li>windows without ansicon</li>
+<li>not tty consoles</li>
+</ul>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-helpers-baseconsole.html#streamSupportsAnsiColors()-detail">streamSupportsAnsiColors</a></strong> ( <span style="color: #0000BB">$stream</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$stream</span></td>
+                  <td class="param-type-col">mixed</td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>True if the stream supports ANSI colors, otherwise false.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="stripAnsiFormat()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#stripAnsiFormat()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L331" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L331" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        stripAnsiFormat()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Strips ANSI control codes from a string.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#stripAnsiFormat()-detail">stripAnsiFormat</a></strong> ( <span style="color: #0000BB">$string</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$string</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>String to strip</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="updateProgress()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#updateProgress()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L959" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L959" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        updateProgress()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Updates a progress bar that has been started by <a href="yii-helpers-baseconsole.html#startProgress()-detail">startProgress()</a>.</strong></p>
+
+        
+        <p>See also:</p><ul><li><a href="yii-helpers-baseconsole.html#startProgress()-detail">startProgress()</a></li><li><a href="yii-helpers-baseconsole.html#endProgress()-detail">endProgress()</a></li></ul>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type">void</span> <strong><a href="yii-helpers-baseconsole.html#updateProgress()-detail">updateProgress</a></strong> ( <span style="color: #0000BB">$done</span>, <span style="color: #0000BB">$total</span>, <span style="color: #0000BB">$prefix&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$done</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The number of items that are completed.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$total</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The total value of items that are to be done.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$prefix</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>An optional string to display before the progress bar.
+Defaults to null meaning the prefix specified by <a href="yii-helpers-baseconsole.html#startProgress()-detail">startProgress()</a> will be used.
+If prefix is specified it will update the prefix that will be used by later calls.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="wrapText()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#wrapText()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L680" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L680" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        wrapText()
+        <span class="detail-header-tag small">
+            public                        static            method
+                            (available since version 2.0.4)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Word wrap text with indentation to fit the screen size.</strong></p>
+
+        <p>If screen size could not be detected, or the indentation is greater than the screen size, the text will not be wrapped.</p>
+<p>The first line will <strong>not</strong> be indented, so <code>Console::wrapText("Lorem ipsum dolor sit amet.", 4)</code> will result in the
+following output, given the screen width is 16 characters:</p>
+<pre><code class="hljs nginx"><span class="hljs-title">Lorem</span> ipsum
+    dolor sit
+    amet.
+</code></pre>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#wrapText()-detail">wrapText</a></strong> ( <span style="color: #0000BB">$text</span>, <span style="color: #0000BB">$indent&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span>, <span style="color: #0000BB">$refresh&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$text</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The text to be wrapped</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$indent</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Number of spaces to use for indentation.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$refresh</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to force refresh of screen size.
+This will be passed to <a href="yii-helpers-baseconsole.html#getScreenSize()-detail">getScreenSize()</a>.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The wrapped text.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="xtermBgColor()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#xtermBgColor()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L320" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L320" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        xtermBgColor()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the ansi format code for xterm background color.</strong></p>
+
+        <p>You can pass the return value of this to one of the formatting methods:
+<a href="yii-helpers-baseconsole.html#ansiFormat()-detail">ansiFormat()</a>, <a href="yii-helpers-baseconsole.html#ansiFormatCode()-detail">ansiFormatCode()</a>, <a href="yii-helpers-baseconsole.html#beginAnsiFormat()-detail">beginAnsiFormat()</a>.</p>
+
+        <p>See also <a href="http://en.wikipedia.org/wiki/Talk:ANSI_escape_code#xterm-256colors">http://en.wikipedia.org/wiki/Talk:ANSI_escape_code#xterm-256colors</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#xtermBgColor()-detail">xtermBgColor</a></strong> ( <span style="color: #0000BB">$colorCode</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$colorCode</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Xterm color code</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="xtermFgColor()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-helpers-baseconsole.html#xtermFgColor()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/helpers/BaseConsole.php#L305" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/helpers/BaseConsole.php#L305" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        xtermFgColor()
+        <span class="detail-header-tag small">
+            public                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the ansi format code for xterm foreground color.</strong></p>
+
+        <p>You can pass the return value of this to one of the formatting methods:
+<a href="yii-helpers-baseconsole.html#ansiFormat()-detail">ansiFormat()</a>, <a href="yii-helpers-baseconsole.html#ansiFormatCode()-detail">ansiFormatCode()</a>, <a href="yii-helpers-baseconsole.html#beginAnsiFormat()-detail">beginAnsiFormat()</a>.</p>
+
+        <p>See also <a href="http://en.wikipedia.org/wiki/Talk:ANSI_escape_code#xterm-256colors">http://en.wikipedia.org/wiki/Talk:ANSI_escape_code#xterm-256colors</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public static</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-helpers-baseconsole.html#xtermFgColor()-detail">xtermFgColor</a></strong> ( <span style="color: #0000BB">$colorCode</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$colorCode</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Xterm color code</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Tue, 14 Aug 2018 17:48:30 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

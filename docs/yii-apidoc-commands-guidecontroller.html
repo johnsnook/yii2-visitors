@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>    <title>GuideController, yii\apidoc\commands\GuideController - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w19" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w19-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w19-collapse" class="collapse navbar-collapse"><ul id="w20" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w21" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-8" data-toggle="collapse" data-parent="#navigation">yii\apidoc\commands <b class="caret"></b></a><div id="navigation-8" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-apidoc-commands-apicontroller.html">ApiController</a>
+<a class="list-group-item active" href="./yii-apidoc-commands-guidecontroller.html">GuideController</a></div>
+<a class="list-group-item" href="#navigation-9" data-toggle="collapse" data-parent="#navigation">yii\apidoc\components <b class="caret"></b></a><div id="navigation-9" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-components-basecontroller.html">BaseController</a></div>
+<a class="list-group-item" href="#navigation-10" data-toggle="collapse" data-parent="#navigation">yii\apidoc\helpers <b class="caret"></b></a><div id="navigation-10" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-helpers-apiindexer.html">ApiIndexer</a>
+<a class="list-group-item" href="./yii-apidoc-helpers-apimarkdown.html">ApiMarkdown</a>
+<a class="list-group-item" href="./yii-apidoc-helpers-apimarkdownlatex.html">ApiMarkdownLaTeX</a>
+<a class="list-group-item" href="./yii-apidoc-helpers-apimarkdowntrait.html">ApiMarkdownTrait</a>
+<a class="list-group-item" href="./yii-apidoc-helpers-indexfileanalyzer.html">IndexFileAnalyzer</a>
+<a class="list-group-item" href="./yii-apidoc-helpers-markdownhighlighttrait.html">MarkdownHighlightTrait</a>
+<a class="list-group-item" href="./yii-apidoc-helpers-prettyprinter.html">PrettyPrinter</a></div>
+<a class="list-group-item" href="#navigation-11" data-toggle="collapse" data-parent="#navigation">yii\apidoc\models <b class="caret"></b></a><div id="navigation-11" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-models-basedoc.html">BaseDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-classdoc.html">ClassDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-constdoc.html">ConstDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-context.html">Context</a>
+<a class="list-group-item" href="./yii-apidoc-models-eventdoc.html">EventDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-functiondoc.html">FunctionDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-interfacedoc.html">InterfaceDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-methoddoc.html">MethodDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-paramdoc.html">ParamDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-propertydoc.html">PropertyDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-traitdoc.html">TraitDoc</a>
+<a class="list-group-item" href="./yii-apidoc-models-typedoc.html">TypeDoc</a></div>
+<a class="list-group-item" href="#navigation-12" data-toggle="collapse" data-parent="#navigation">yii\apidoc\renderers <b class="caret"></b></a><div id="navigation-12" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-renderers-apirenderer.html">ApiRenderer</a>
+<a class="list-group-item" href="./yii-apidoc-renderers-baserenderer.html">BaseRenderer</a>
+<a class="list-group-item" href="./yii-apidoc-renderers-guiderenderer.html">GuideRenderer</a></div>
+<a class="list-group-item" href="#navigation-13" data-toggle="collapse" data-parent="#navigation">yii\apidoc\templates\bootstrap <b class="caret"></b></a><div id="navigation-13" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-templates-bootstrap-apirenderer.html">ApiRenderer</a>
+<a class="list-group-item" href="./yii-apidoc-templates-bootstrap-guiderenderer.html">GuideRenderer</a>
+<a class="list-group-item" href="./yii-apidoc-templates-bootstrap-renderertrait.html">RendererTrait</a>
+<a class="list-group-item" href="./yii-apidoc-templates-bootstrap-sidenavwidget.html">SideNavWidget</a></div>
+<a class="list-group-item" href="#navigation-14" data-toggle="collapse" data-parent="#navigation">yii\apidoc\templates\bootstrap\assets <b class="caret"></b></a><div id="navigation-14" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-templates-bootstrap-assets-assetbundle.html">AssetBundle</a>
+<a class="list-group-item" href="./yii-apidoc-templates-bootstrap-assets-highlightbundle.html">HighlightBundle</a>
+<a class="list-group-item" href="./yii-apidoc-templates-bootstrap-assets-jssearchasset.html">JsSearchAsset</a></div>
+<a class="list-group-item" href="#navigation-15" data-toggle="collapse" data-parent="#navigation">yii\apidoc\templates\html <b class="caret"></b></a><div id="navigation-15" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-templates-html-apirenderer.html">ApiRenderer</a>
+<a class="list-group-item" href="./yii-apidoc-templates-html-guiderenderer.html">GuideRenderer</a></div>
+<a class="list-group-item" href="#navigation-16" data-toggle="collapse" data-parent="#navigation">yii\apidoc\templates\json <b class="caret"></b></a><div id="navigation-16" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-templates-json-apirenderer.html">ApiRenderer</a></div>
+<a class="list-group-item" href="#navigation-17" data-toggle="collapse" data-parent="#navigation">yii\apidoc\templates\online <b class="caret"></b></a><div id="navigation-17" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-templates-online-apirenderer.html">ApiRenderer</a></div>
+<a class="list-group-item" href="#navigation-18" data-toggle="collapse" data-parent="#navigation">yii\apidoc\templates\pdf <b class="caret"></b></a><div id="navigation-18" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-apidoc-templates-pdf-guiderenderer.html">GuideRenderer</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\apidoc\commands\GuideController</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+                | <a href="#events">Events</a>
+                | <a href="#constants">Constants</a>
+    </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-apidoc-commands-guidecontroller.html">yii\apidoc\commands\GuideController</a> &raquo;
+<a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a> &raquo;
+<a href="yii-console-controller.html">yii\console\Controller</a> &raquo;
+<a href="yii-base-controller.html">yii\base\Controller</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a>, <a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-apidoc/blob/master/commands/GuideController.php">https://github.com/yiisoft/yii2-apidoc/blob/master/commands/GuideController.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>This command can render documentation stored as markdown files such as the yii guide
+or your own applications documentation setup.</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="$action">
+        <td><a href="yii-base-controller.html#$action-detail">$action</a></td>
+        <td><a href="yii-base-action.html">yii\base\Action</a></td>
+        <td>The action that is currently being executed.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr id="$apiDocs">
+        <td><a href="yii-apidoc-commands-guidecontroller.html#$apiDocs-detail">$apiDocs</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Path or URL to the api docs to allow links to classes and properties/methods.</td>
+        <td><a href="yii-apidoc-commands-guidecontroller.html">yii\apidoc\commands\GuideController</a></td>
+    </tr>
+            <tr class="inherited" id="$behaviors">
+        <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
+        <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
+        <td>List of behaviors attached to this component</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="$color">
+        <td><a href="yii-console-controller.html#$color-detail">$color</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to enable ANSI color in the output.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$defaultAction">
+        <td><a href="yii-base-controller.html#$defaultAction-detail">$defaultAction</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The ID of the action that is used when the action ID is not specified
+in the request.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$exclude">
+        <td><a href="yii-apidoc-components-basecontroller.html#$exclude-detail">$exclude</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Files to exclude.</td>
+        <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
+    </tr>
+            <tr id="$guidePrefix">
+        <td><a href="yii-apidoc-commands-guidecontroller.html#$guidePrefix-detail">$guidePrefix</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Prefix to prepend to all output file names generated for the guide.</td>
+        <td><a href="yii-apidoc-commands-guidecontroller.html">yii\apidoc\commands\GuideController</a></td>
+    </tr>
+            <tr class="inherited" id="$help">
+        <td><a href="yii-console-controller.html#$help-detail">$help</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to display help information about current command.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$helpSummary">
+        <td><a href="yii-console-controller.html#$helpSummary-detail">$helpSummary</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td></td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$id">
+        <td><a href="yii-base-controller.html#$id-detail">$id</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The ID of this controller.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$interactive">
+        <td><a href="yii-console-controller.html#$interactive-detail">$interactive</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to run the command interactively.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$layout">
+        <td><a href="yii-base-controller.html#$layout-detail">$layout</a></td>
+        <td><a href="http://www.php.net/language.types.null">null</a>|<a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.boolean">false</a></td>
+        <td>The name of the layout to be applied to this controller's views.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$module">
+        <td><a href="yii-base-controller.html#$module-detail">$module</a></td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+        <td>The module that this controller belongs to.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$modules">
+        <td><a href="yii-base-controller.html#$modules-detail">$modules</a></td>
+        <td><a href="yii-base-module.html">yii\base\Module</a>[]</td>
+        <td>All ancestor modules that this controller is located within.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$pageTitle">
+        <td><a href="yii-apidoc-components-basecontroller.html#$pageTitle-detail">$pageTitle</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Page title</td>
+        <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
+    </tr>
+            <tr class="inherited" id="$passedOptionValues">
+        <td><a href="yii-console-controller.html#$passedOptionValues-detail">$passedOptionValues</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The properties corresponding to the passed options</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$passedOptions">
+        <td><a href="yii-console-controller.html#$passedOptions-detail">$passedOptions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The names of the options passed during execution</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$route">
+        <td><a href="yii-base-controller.html#$route-detail">$route</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The route (module ID, controller ID and action ID) of the current request.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$template">
+        <td><a href="yii-apidoc-components-basecontroller.html#$template-detail">$template</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Template to use for rendering</td>
+        <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
+    </tr>
+            <tr class="inherited" id="$uniqueId">
+        <td><a href="yii-base-controller.html#$uniqueId-detail">$uniqueId</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The controller ID that is prefixed with the module ID (if any).</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$view">
+        <td><a href="yii-base-controller.html#$view-detail">$view</a></td>
+        <td><a href="yii-base-view.html">yii\base\View</a>|<a href="yii-web-view.html">yii\web\View</a></td>
+        <td>The view object that can be used to render views or view files.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$viewPath">
+        <td><a href="yii-base-viewcontextinterface.html#$viewPath-detail">$viewPath</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The view path that may be prefixed to a relative view name.</td>
+        <td><a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-baseobject.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-controller.html#__construct()-detail">__construct()</a></td>
+        <td></td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-baseobject.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-baseobject.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-baseobject.html#__set()-detail">__set()</a></td>
+        <td>Sets value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-baseobject.html#__unset()-detail">__unset()</a></td>
+        <td>Sets an object property to null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr id="actionIndex()">
+        <td><a href="yii-apidoc-commands-guidecontroller.html#actionIndex()-detail">actionIndex()</a></td>
+        <td>Renders API documentation files</td>
+        <td><a href="yii-apidoc-commands-guidecontroller.html">yii\apidoc\commands\GuideController</a></td>
+    </tr>
+            <tr class="inherited" id="actions()">
+        <td><a href="yii-base-controller.html#actions()-detail">actions()</a></td>
+        <td>Declares external actions for the controller.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="afterAction()">
+        <td><a href="yii-base-controller.html#afterAction()-detail">afterAction()</a></td>
+        <td>This method is invoked right after an action is executed.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="ansiFormat()">
+        <td><a href="yii-console-controller.html#ansiFormat()-detail">ansiFormat()</a></td>
+        <td>Formats a string with ANSI codes.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="beforeAction()">
+        <td><a href="yii-base-controller.html#beforeAction()-detail">beforeAction()</a></td>
+        <td>This method is invoked right before an action is executed.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="behaviors()">
+        <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="bindActionParams()">
+        <td><a href="yii-base-controller.html#bindActionParams()-detail">bindActionParams()</a></td>
+        <td>Binds the parameters to the action.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-baseobject.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-baseobject.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="confirm()">
+        <td><a href="yii-console-controller.html#confirm()-detail">confirm()</a></td>
+        <td>Asks user to confirm by typing y or n.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="createAction()">
+        <td><a href="yii-base-controller.html#createAction()-detail">createAction()</a></td>
+        <td>Creates an action based on the given action ID.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                <tr class="inherited" id="findLayoutFile()">
+        <td><a href="yii-base-controller.html#findLayoutFile()-detail">findLayoutFile()</a></td>
+        <td>Finds the applicable layout file.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+                <tr class="inherited" id="getActionArgsHelp()">
+        <td><a href="yii-console-controller.html#getActionArgsHelp()-detail">getActionArgsHelp()</a></td>
+        <td>Returns the help information for the anonymous arguments for the action.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getActionHelp()">
+        <td><a href="yii-console-controller.html#getActionHelp()-detail">getActionHelp()</a></td>
+        <td>Returns the detailed help information for the specified action.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getActionHelpSummary()">
+        <td><a href="yii-console-controller.html#getActionHelpSummary()-detail">getActionHelpSummary()</a></td>
+        <td>Returns a one-line short summary describing the specified action.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+                <tr class="inherited" id="getActionOptionsHelp()">
+        <td><a href="yii-console-controller.html#getActionOptionsHelp()-detail">getActionOptionsHelp()</a></td>
+        <td>Returns the help information for the options for the action.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getHelp()">
+        <td><a href="yii-console-controller.html#getHelp()-detail">getHelp()</a></td>
+        <td>Returns help information for this controller.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getHelpSummary()">
+        <td><a href="yii-console-controller.html#getHelpSummary()-detail">getHelpSummary()</a></td>
+        <td>Returns one-line short summary describing this controller.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getModules()">
+        <td><a href="yii-base-controller.html#getModules()-detail">getModules()</a></td>
+        <td>Returns all ancestor modules of this controller.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getOptionValues()">
+        <td><a href="yii-console-controller.html#getOptionValues()-detail">getOptionValues()</a></td>
+        <td>Returns properties corresponding to the options for the action id
+Child classes may override this method to specify possible properties.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getPassedOptionValues()">
+        <td><a href="yii-console-controller.html#getPassedOptionValues()-detail">getPassedOptionValues()</a></td>
+        <td>Returns the properties corresponding to the passed options.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getPassedOptions()">
+        <td><a href="yii-console-controller.html#getPassedOptions()-detail">getPassedOptions()</a></td>
+        <td>Returns the names of valid options passed during execution.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getRoute()">
+        <td><a href="yii-base-controller.html#getRoute()-detail">getRoute()</a></td>
+        <td>Returns the route of the current request.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getUniqueId()">
+        <td><a href="yii-base-controller.html#getUniqueId()-detail">getUniqueId()</a></td>
+        <td>Returns the unique ID of the controller.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getView()">
+        <td><a href="yii-base-controller.html#getView()-detail">getView()</a></td>
+        <td>Returns the view object that can be used to render views or view files.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getViewPath()">
+        <td><a href="yii-base-viewcontextinterface.html#getViewPath()-detail">getViewPath()</a></td>
+        <td></td>
+        <td><a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-baseobject.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-baseobject.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-base-baseobject.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="isColorEnabled()">
+        <td><a href="yii-console-controller.html#isColorEnabled()-detail">isColorEnabled()</a></td>
+        <td>Returns a value indicating whether ANSI color is enabled.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+                    <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="optionAliases()">
+        <td><a href="yii-console-controller.html#optionAliases()-detail">optionAliases()</a></td>
+        <td>Returns option alias names.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr id="options()">
+        <td><a href="yii-apidoc-commands-guidecontroller.html#options()-detail">options()</a></td>
+        <td>Returns the names of valid options for the action (id)
+An option requires the existence of a public member variable whose
+name is the option name.</td>
+        <td><a href="yii-apidoc-commands-guidecontroller.html">yii\apidoc\commands\GuideController</a></td>
+    </tr>
+                        <tr class="inherited" id="prompt()">
+        <td><a href="yii-console-controller.html#prompt()-detail">prompt()</a></td>
+        <td>Prompts the user for input and validates it.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="render()">
+        <td><a href="yii-base-controller.html#render()-detail">render()</a></td>
+        <td>Renders a view and applies layout if available.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="renderContent()">
+        <td><a href="yii-base-controller.html#renderContent()-detail">renderContent()</a></td>
+        <td>Renders a static string by applying a layout.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="renderFile()">
+        <td><a href="yii-base-controller.html#renderFile()-detail">renderFile()</a></td>
+        <td>Renders a view file.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="renderPartial()">
+        <td><a href="yii-base-controller.html#renderPartial()-detail">renderPartial()</a></td>
+        <td>Renders a view without applying layout.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="run()">
+        <td><a href="yii-base-controller.html#run()-detail">run()</a></td>
+        <td>Runs a request specified in terms of a route.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="runAction()">
+        <td><a href="yii-base-controller.html#runAction()-detail">runAction()</a></td>
+        <td>Runs an action within this controller with the specified action ID and parameters.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+                <tr class="inherited" id="select()">
+        <td><a href="yii-console-controller.html#select()-detail">select()</a></td>
+        <td>Gives the user an option to choose from. Giving '?' as an input will show
+a list of options to choose from and their explanations.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="setView()">
+        <td><a href="yii-base-controller.html#setView()-detail">setView()</a></td>
+        <td>Sets the view object to be used by this controller.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="setViewPath()">
+        <td><a href="yii-base-controller.html#setViewPath()-detail">setViewPath()</a></td>
+        <td>Sets the directory that contains the view files.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="stderr()">
+        <td><a href="yii-console-controller.html#stderr()-detail">stderr()</a></td>
+        <td>Prints a string to STDERR.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="stdout()">
+        <td><a href="yii-console-controller.html#stdout()-detail">stdout()</a></td>
+        <td>Prints a string to STDOUT.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+                <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+        </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                                                                                        <tr id="findFiles()">
+        <td><a href="yii-apidoc-commands-guidecontroller.html#findFiles()-detail">findFiles()</a></td>
+        <td>Finds files</td>
+        <td><a href="yii-apidoc-commands-guidecontroller.html">yii\apidoc\commands\GuideController</a></td>
+    </tr>
+                <tr id="findRenderer()">
+        <td><a href="yii-apidoc-commands-guidecontroller.html#findRenderer()-detail">findRenderer()</a></td>
+        <td></td>
+        <td><a href="yii-apidoc-commands-guidecontroller.html">yii\apidoc\commands\GuideController</a></td>
+    </tr>
+                        <tr class="inherited" id="getActionMethodReflection()">
+        <td><a href="yii-console-controller.html#getActionMethodReflection()-detail">getActionMethodReflection()</a></td>
+        <td></td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+                                                                                    <tr class="inherited" id="loadContext()">
+        <td><a href="yii-apidoc-components-basecontroller.html#loadContext()-detail">loadContext()</a></td>
+        <td>Loads context from cache</td>
+        <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
+    </tr>
+            <tr class="inherited" id="normalizeTargetDir()">
+        <td><a href="yii-apidoc-components-basecontroller.html#normalizeTargetDir()-detail">normalizeTargetDir()</a></td>
+        <td>Checks that target directory is valid. Asks questions in tricky cases.</td>
+        <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
+    </tr>
+                            <tr class="inherited" id="parseDocCommentDetail()">
+        <td><a href="yii-console-controller.html#parseDocCommentDetail()-detail">parseDocCommentDetail()</a></td>
+        <td>Returns full description from the docblock.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="parseDocCommentSummary()">
+        <td><a href="yii-console-controller.html#parseDocCommentSummary()-detail">parseDocCommentSummary()</a></td>
+        <td>Returns the first line of docblock.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="parseDocCommentTags()">
+        <td><a href="yii-console-controller.html#parseDocCommentTags()-detail">parseDocCommentTags()</a></td>
+        <td>Parses the comment block into tags.</td>
+        <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+    </tr>
+                                        <tr class="inherited" id="searchFiles()">
+        <td><a href="yii-apidoc-components-basecontroller.html#searchFiles()-detail">searchFiles()</a></td>
+        <td>Finds files to process</td>
+        <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
+    </tr>
+                                <tr class="inherited" id="storeContext()">
+        <td><a href="yii-apidoc-components-basecontroller.html#storeContext()-detail">storeContext()</a></td>
+        <td>Writes context into cache file</td>
+        <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
+    </tr>
+                <tr class="inherited" id="updateContext()">
+        <td><a href="yii-apidoc-components-basecontroller.html#updateContext()-detail">updateContext()</a></td>
+        <td></td>
+        <td><a href="yii-apidoc-components-basecontroller.html">yii\apidoc\components\BaseController</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="events"></a>
+<div class="summary doc-event">
+    <h2>Events</h2>
+
+    <p><a href="#" class="toggle">Hide inherited events</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-event" />
+        <col class="col-type" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Event</th><th>Type</th><th>Description</th><th>Defined By</th>
+    </tr>
+        <tr class="inherited" id="EVENT_AFTER_ACTION">
+        <td><a href="yii-base-controller.html#EVENT_AFTER_ACTION-detail">EVENT_AFTER_ACTION</a></td>
+        <td><a href="yii-base-actionevent.html">yii\base\ActionEvent</a></td>
+        <td>
+            An event raised right after executing a controller action.                    </td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_BEFORE_ACTION">
+        <td><a href="yii-base-controller.html#EVENT_BEFORE_ACTION-detail">EVENT_BEFORE_ACTION</a></td>
+        <td><a href="yii-base-actionevent.html">yii\base\ActionEvent</a></td>
+        <td>
+            An event raised right before executing a controller action.                    </td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+        </table>
+</div>
+
+<a id="constants"></a>
+<div class="summary doc-const">
+    <h2>Constants</h2>
+
+    <p><a href="#" class="toggle">Hide inherited constants</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-const" />
+        <col class="col-value" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Constant</th><th>Value</th><th>Description</th><th>Defined By</th>
+    </tr>
+            <tr class="inherited" id="EXIT_CODE_ERROR">
+          <td id="EXIT_CODE_ERROR-detail">EXIT_CODE_ERROR</td>
+          <td>1</td>
+          <td>
+                                <strong>Deprecated since 2.0.13. Use <span class="broken-link">\yii\apidoc\commands\ExitCode::UNSPECIFIED_ERROR</span> instead.</strong>
+                        </td>
+          <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+        </tr>
+            <tr class="inherited" id="EXIT_CODE_NORMAL">
+          <td id="EXIT_CODE_NORMAL-detail">EXIT_CODE_NORMAL</td>
+          <td>0</td>
+          <td>
+                                <strong>Deprecated since 2.0.13. Use <span class="broken-link">\yii\apidoc\commands\ExitCode::OK</span> instead.</strong>
+                        </td>
+          <td><a href="yii-console-controller.html">yii\console\Controller</a></td>
+        </tr>
+        </table>
+</div>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$apiDocs-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-commands-guidecontroller.html#$apiDocs-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/commands/GuideController.php#L31" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/commands/GuideController.php#L31" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $apiDocs        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Path or URL to the api docs to allow links to classes and properties/methods.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-apidoc-commands-guidecontroller.html#$apiDocs-detail">$apiDocs</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$guidePrefix-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-commands-guidecontroller.html#$guidePrefix-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/commands/GuideController.php#L35" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/commands/GuideController.php#L35" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $guidePrefix        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Prefix to prepend to all output file names generated for the guide.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-apidoc-commands-guidecontroller.html#$guidePrefix-detail">$guidePrefix</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'guide-'</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="actionIndex()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-commands-guidecontroller.html#actionIndex()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/commands/GuideController.php#L44" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/commands/GuideController.php#L44" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        actionIndex()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Renders API documentation files</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <strong><a href="yii-apidoc-commands-guidecontroller.html#actionIndex()-detail">actionIndex</a></strong> ( <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <span style="color: #0000BB">$sourceDirs</span>, <span style="color: #0000BB">$targetDir</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$sourceDirs</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$targetDir</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Status code.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="findFiles()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-commands-guidecontroller.html#findFiles()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/commands/GuideController.php#L114" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/commands/GuideController.php#L114" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        findFiles()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Finds files</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-apidoc-commands-guidecontroller.html#findFiles()-detail">findFiles</a></strong> ( <span style="color: #0000BB">$path</span>, <span style="color: #0000BB">$except&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$path</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$except</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>List of names to exclude from search.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Files found.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="findRenderer()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-commands-guidecontroller.html#findRenderer()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/commands/GuideController.php#L129" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/commands/GuideController.php#L129" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        findRenderer()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="yii-apidoc-renderers-guiderenderer.html">yii\apidoc\renderers\GuideRenderer</a></span> <strong><a href="yii-apidoc-commands-guidecontroller.html#findRenderer()-detail">findRenderer</a></strong> ( <span style="color: #0000BB">$template</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$template</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="options()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-apidoc-commands-guidecontroller.html#options()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-apidoc/edit/master/commands/GuideController.php#L149" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-apidoc/blob/master/commands/GuideController.php#L149" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        options()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns the names of valid options for the action (id)
+An option requires the existence of a public member variable whose
+name is the option name.</strong></p>
+
+        <p>Child classes may override this method to specify possible options.</p>
+<p>Note that the values setting via options are not available
+until <a href="yii-base-controller.html#beforeAction()-detail">beforeAction()</a> is being called.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a>[]</span> <strong><a href="yii-apidoc-commands-guidecontroller.html#options()-detail">options</a></strong> ( <span style="color: #0000BB">$actionID</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$actionID</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The action id of the current request</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>[]</td>
+                  <td class="param-desc-col"><p>The names of the options valid for the action</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Tue, 14 Aug 2018 17:48:03 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

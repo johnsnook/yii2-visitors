@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>    <title>QueryBuilder, yii\db\mssql\QueryBuilder - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w6529" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w6529-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w6529-collapse" class="collapse navbar-collapse"><ul id="w6530" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w6531" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-6492" data-toggle="collapse" data-parent="#navigation">Not namespaced classes <b class="caret"></b></a><div id="navigation-6492" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii.html">Yii</a>
+<a class="list-group-item" href="./yiirequirementchecker.html">YiiRequirementChecker</a></div>
+<a class="list-group-item" href="#navigation-6493" data-toggle="collapse" data-parent="#navigation">yii <b class="caret"></b></a><div id="navigation-6493" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-baseyii.html">BaseYii</a></div>
+<a class="list-group-item" href="#navigation-6494" data-toggle="collapse" data-parent="#navigation">yii\base <b class="caret"></b></a><div id="navigation-6494" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-base-action.html">Action</a>
+<a class="list-group-item" href="./yii-base-actionevent.html">ActionEvent</a>
+<a class="list-group-item" href="./yii-base-actionfilter.html">ActionFilter</a>
+<a class="list-group-item" href="./yii-base-application.html">Application</a>
+<a class="list-group-item" href="./yii-base-arrayaccesstrait.html">ArrayAccessTrait</a>
+<a class="list-group-item" href="./yii-base-arrayable.html">Arrayable</a>
+<a class="list-group-item" href="./yii-base-arrayabletrait.html">ArrayableTrait</a>
+<a class="list-group-item" href="./yii-base-baseobject.html">BaseObject</a>
+<a class="list-group-item" href="./yii-base-behavior.html">Behavior</a>
+<a class="list-group-item" href="./yii-base-bootstrapinterface.html">BootstrapInterface</a>
+<a class="list-group-item" href="./yii-base-component.html">Component</a>
+<a class="list-group-item" href="./yii-base-configurable.html">Configurable</a>
+<a class="list-group-item" href="./yii-base-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-base-dynamiccontentawareinterface.html">DynamicContentAwareInterface</a>
+<a class="list-group-item" href="./yii-base-dynamiccontentawaretrait.html">DynamicContentAwareTrait</a>
+<a class="list-group-item" href="./yii-base-dynamicmodel.html">DynamicModel</a>
+<a class="list-group-item" href="./yii-base-errorexception.html">ErrorException</a>
+<a class="list-group-item" href="./yii-base-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-base-event.html">Event</a>
+<a class="list-group-item" href="./yii-base-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-base-exitexception.html">ExitException</a>
+<a class="list-group-item" href="./yii-base-inlineaction.html">InlineAction</a>
+<a class="list-group-item" href="./yii-base-invalidargumentexception.html">InvalidArgumentException</a>
+<a class="list-group-item" href="./yii-base-invalidcallexception.html">InvalidCallException</a>
+<a class="list-group-item" href="./yii-base-invalidconfigexception.html">InvalidConfigException</a>
+<a class="list-group-item" href="./yii-base-invalidparamexception.html">InvalidParamException</a>
+<a class="list-group-item" href="./yii-base-invalidrouteexception.html">InvalidRouteException</a>
+<a class="list-group-item" href="./yii-base-invalidvalueexception.html">InvalidValueException</a>
+<a class="list-group-item" href="./yii-base-model.html">Model</a>
+<a class="list-group-item" href="./yii-base-modelevent.html">ModelEvent</a>
+<a class="list-group-item" href="./yii-base-module.html">Module</a>
+<a class="list-group-item" href="./yii-base-notsupportedexception.html">NotSupportedException</a>
+<a class="list-group-item" href="./yii-base-object.html">Object</a>
+<a class="list-group-item" href="./yii-base-request.html">Request</a>
+<a class="list-group-item" href="./yii-base-response.html">Response</a>
+<a class="list-group-item" href="./yii-base-security.html">Security</a>
+<a class="list-group-item" href="./yii-base-staticinstanceinterface.html">StaticInstanceInterface</a>
+<a class="list-group-item" href="./yii-base-staticinstancetrait.html">StaticInstanceTrait</a>
+<a class="list-group-item" href="./yii-base-theme.html">Theme</a>
+<a class="list-group-item" href="./yii-base-unknownclassexception.html">UnknownClassException</a>
+<a class="list-group-item" href="./yii-base-unknownmethodexception.html">UnknownMethodException</a>
+<a class="list-group-item" href="./yii-base-unknownpropertyexception.html">UnknownPropertyException</a>
+<a class="list-group-item" href="./yii-base-userexception.html">UserException</a>
+<a class="list-group-item" href="./yii-base-view.html">View</a>
+<a class="list-group-item" href="./yii-base-viewcontextinterface.html">ViewContextInterface</a>
+<a class="list-group-item" href="./yii-base-viewevent.html">ViewEvent</a>
+<a class="list-group-item" href="./yii-base-viewnotfoundexception.html">ViewNotFoundException</a>
+<a class="list-group-item" href="./yii-base-viewrenderer.html">ViewRenderer</a>
+<a class="list-group-item" href="./yii-base-widget.html">Widget</a>
+<a class="list-group-item" href="./yii-base-widgetevent.html">WidgetEvent</a></div>
+<a class="list-group-item" href="#navigation-6495" data-toggle="collapse" data-parent="#navigation">yii\behaviors <b class="caret"></b></a><div id="navigation-6495" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-behaviors-attributebehavior.html">AttributeBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-attributetypecastbehavior.html">AttributeTypecastBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-attributesbehavior.html">AttributesBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-blameablebehavior.html">BlameableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-cacheablewidgetbehavior.html">CacheableWidgetBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-optimisticlockbehavior.html">OptimisticLockBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-sluggablebehavior.html">SluggableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-timestampbehavior.html">TimestampBehavior</a></div>
+<a class="list-group-item" href="#navigation-6496" data-toggle="collapse" data-parent="#navigation">yii\caching <b class="caret"></b></a><div id="navigation-6496" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-caching-apccache.html">ApcCache</a>
+<a class="list-group-item" href="./yii-caching-arraycache.html">ArrayCache</a>
+<a class="list-group-item" href="./yii-caching-cache.html">Cache</a>
+<a class="list-group-item" href="./yii-caching-cacheinterface.html">CacheInterface</a>
+<a class="list-group-item" href="./yii-caching-chaineddependency.html">ChainedDependency</a>
+<a class="list-group-item" href="./yii-caching-dbcache.html">DbCache</a>
+<a class="list-group-item" href="./yii-caching-dbdependency.html">DbDependency</a>
+<a class="list-group-item" href="./yii-caching-dbquerydependency.html">DbQueryDependency</a>
+<a class="list-group-item" href="./yii-caching-dependency.html">Dependency</a>
+<a class="list-group-item" href="./yii-caching-dummycache.html">DummyCache</a>
+<a class="list-group-item" href="./yii-caching-expressiondependency.html">ExpressionDependency</a>
+<a class="list-group-item" href="./yii-caching-filecache.html">FileCache</a>
+<a class="list-group-item" href="./yii-caching-filedependency.html">FileDependency</a>
+<a class="list-group-item" href="./yii-caching-memcache.html">MemCache</a>
+<a class="list-group-item" href="./yii-caching-memcacheserver.html">MemCacheServer</a>
+<a class="list-group-item" href="./yii-caching-tagdependency.html">TagDependency</a>
+<a class="list-group-item" href="./yii-caching-wincache.html">WinCache</a>
+<a class="list-group-item" href="./yii-caching-xcache.html">XCache</a>
+<a class="list-group-item" href="./yii-caching-zenddatacache.html">ZendDataCache</a></div>
+<a class="list-group-item" href="#navigation-6497" data-toggle="collapse" data-parent="#navigation">yii\captcha <b class="caret"></b></a><div id="navigation-6497" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-captcha-captcha.html">Captcha</a>
+<a class="list-group-item" href="./yii-captcha-captchaaction.html">CaptchaAction</a>
+<a class="list-group-item" href="./yii-captcha-captchaasset.html">CaptchaAsset</a>
+<a class="list-group-item" href="./yii-captcha-captchavalidator.html">CaptchaValidator</a></div>
+<a class="list-group-item" href="#navigation-6498" data-toggle="collapse" data-parent="#navigation">yii\console <b class="caret"></b></a><div id="navigation-6498" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-application.html">Application</a>
+<a class="list-group-item" href="./yii-console-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-console-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-console-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-console-exitcode.html">ExitCode</a>
+<a class="list-group-item" href="./yii-console-markdown.html">Markdown</a>
+<a class="list-group-item" href="./yii-console-request.html">Request</a>
+<a class="list-group-item" href="./yii-console-response.html">Response</a>
+<a class="list-group-item" href="./yii-console-unknowncommandexception.html">UnknownCommandException</a></div>
+<a class="list-group-item" href="#navigation-6499" data-toggle="collapse" data-parent="#navigation">yii\console\controllers <b class="caret"></b></a><div id="navigation-6499" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-controllers-assetcontroller.html">AssetController</a>
+<a class="list-group-item" href="./yii-console-controllers-basemigratecontroller.html">BaseMigrateController</a>
+<a class="list-group-item" href="./yii-console-controllers-cachecontroller.html">CacheController</a>
+<a class="list-group-item" href="./yii-console-controllers-fixturecontroller.html">FixtureController</a>
+<a class="list-group-item" href="./yii-console-controllers-helpcontroller.html">HelpController</a>
+<a class="list-group-item" href="./yii-console-controllers-messagecontroller.html">MessageController</a>
+<a class="list-group-item" href="./yii-console-controllers-migratecontroller.html">MigrateController</a>
+<a class="list-group-item" href="./yii-console-controllers-servecontroller.html">ServeController</a></div>
+<a class="list-group-item" href="#navigation-6500" data-toggle="collapse" data-parent="#navigation">yii\console\widgets <b class="caret"></b></a><div id="navigation-6500" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-widgets-table.html">Table</a></div>
+<a class="list-group-item" href="#navigation-6501" data-toggle="collapse" data-parent="#navigation">yii\data <b class="caret"></b></a><div id="navigation-6501" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-data-activedatafilter.html">ActiveDataFilter</a>
+<a class="list-group-item" href="./yii-data-activedataprovider.html">ActiveDataProvider</a>
+<a class="list-group-item" href="./yii-data-arraydataprovider.html">ArrayDataProvider</a>
+<a class="list-group-item" href="./yii-data-basedataprovider.html">BaseDataProvider</a>
+<a class="list-group-item" href="./yii-data-datafilter.html">DataFilter</a>
+<a class="list-group-item" href="./yii-data-dataproviderinterface.html">DataProviderInterface</a>
+<a class="list-group-item" href="./yii-data-pagination.html">Pagination</a>
+<a class="list-group-item" href="./yii-data-sort.html">Sort</a>
+<a class="list-group-item" href="./yii-data-sqldataprovider.html">SqlDataProvider</a></div>
+<a class="list-group-item" href="#navigation-6502" data-toggle="collapse" data-parent="#navigation">yii\db <b class="caret"></b></a><div id="navigation-6502" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-activequery.html">ActiveQuery</a>
+<a class="list-group-item" href="./yii-db-activequeryinterface.html">ActiveQueryInterface</a>
+<a class="list-group-item" href="./yii-db-activequerytrait.html">ActiveQueryTrait</a>
+<a class="list-group-item" href="./yii-db-activerecord.html">ActiveRecord</a>
+<a class="list-group-item" href="./yii-db-activerecordinterface.html">ActiveRecordInterface</a>
+<a class="list-group-item" href="./yii-db-activerelationtrait.html">ActiveRelationTrait</a>
+<a class="list-group-item" href="./yii-db-aftersaveevent.html">AfterSaveEvent</a>
+<a class="list-group-item" href="./yii-db-arrayexpression.html">ArrayExpression</a>
+<a class="list-group-item" href="./yii-db-baseactiverecord.html">BaseActiveRecord</a>
+<a class="list-group-item" href="./yii-db-batchqueryresult.html">BatchQueryResult</a>
+<a class="list-group-item" href="./yii-db-checkconstraint.html">CheckConstraint</a>
+<a class="list-group-item" href="./yii-db-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-command.html">Command</a>
+<a class="list-group-item" href="./yii-db-connection.html">Connection</a>
+<a class="list-group-item" href="./yii-db-constraint.html">Constraint</a>
+<a class="list-group-item" href="./yii-db-constraintfinderinterface.html">ConstraintFinderInterface</a>
+<a class="list-group-item" href="./yii-db-constraintfindertrait.html">ConstraintFinderTrait</a>
+<a class="list-group-item" href="./yii-db-datareader.html">DataReader</a>
+<a class="list-group-item" href="./yii-db-defaultvalueconstraint.html">DefaultValueConstraint</a>
+<a class="list-group-item" href="./yii-db-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-db-expression.html">Expression</a>
+<a class="list-group-item" href="./yii-db-expressionbuilder.html">ExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-expressionbuilderinterface.html">ExpressionBuilderInterface</a>
+<a class="list-group-item" href="./yii-db-expressionbuildertrait.html">ExpressionBuilderTrait</a>
+<a class="list-group-item" href="./yii-db-expressioninterface.html">ExpressionInterface</a>
+<a class="list-group-item" href="./yii-db-foreignkeyconstraint.html">ForeignKeyConstraint</a>
+<a class="list-group-item" href="./yii-db-indexconstraint.html">IndexConstraint</a>
+<a class="list-group-item" href="./yii-db-integrityexception.html">IntegrityException</a>
+<a class="list-group-item" href="./yii-db-jsonexpression.html">JsonExpression</a>
+<a class="list-group-item" href="./yii-db-migration.html">Migration</a>
+<a class="list-group-item" href="./yii-db-migrationinterface.html">MigrationInterface</a>
+<a class="list-group-item" href="./yii-db-pdovalue.html">PdoValue</a>
+<a class="list-group-item" href="./yii-db-pdovaluebuilder.html">PdoValueBuilder</a>
+<a class="list-group-item" href="./yii-db-query.html">Query</a>
+<a class="list-group-item" href="./yii-db-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-queryexpressionbuilder.html">QueryExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-queryinterface.html">QueryInterface</a>
+<a class="list-group-item" href="./yii-db-querytrait.html">QueryTrait</a>
+<a class="list-group-item" href="./yii-db-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-schemabuildertrait.html">SchemaBuilderTrait</a>
+<a class="list-group-item" href="./yii-db-sqltoken.html">SqlToken</a>
+<a class="list-group-item" href="./yii-db-sqltokenizer.html">SqlTokenizer</a>
+<a class="list-group-item" href="./yii-db-staleobjectexception.html">StaleObjectException</a>
+<a class="list-group-item" href="./yii-db-tableschema.html">TableSchema</a>
+<a class="list-group-item" href="./yii-db-transaction.html">Transaction</a>
+<a class="list-group-item" href="./yii-db-viewfindertrait.html">ViewFinderTrait</a></div>
+<a class="list-group-item" href="#navigation-6503" data-toggle="collapse" data-parent="#navigation">yii\db\conditions <b class="caret"></b></a><div id="navigation-6503" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-conditions-andcondition.html">AndCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencolumnscondition.html">BetweenColumnsCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencolumnsconditionbuilder.html">BetweenColumnsConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencondition.html">BetweenCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweenconditionbuilder.html">BetweenConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-conditioninterface.html">ConditionInterface</a>
+<a class="list-group-item" href="./yii-db-conditions-conjunctioncondition.html">ConjunctionCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-conjunctionconditionbuilder.html">ConjunctionConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-existscondition.html">ExistsCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-existsconditionbuilder.html">ExistsConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-hashcondition.html">HashCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-hashconditionbuilder.html">HashConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-incondition.html">InCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-likecondition.html">LikeCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-likeconditionbuilder.html">LikeConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-notcondition.html">NotCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-notconditionbuilder.html">NotConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-orcondition.html">OrCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-simplecondition.html">SimpleCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-simpleconditionbuilder.html">SimpleConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-6504" data-toggle="collapse" data-parent="#navigation">yii\db\cubrid <b class="caret"></b></a><div id="navigation-6504" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-cubrid-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-cubrid-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-cubrid-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-6505" data-toggle="collapse" data-parent="#navigation">yii\db\cubrid\conditions <b class="caret"></b></a><div id="navigation-6505" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-cubrid-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item active" href="#navigation-6506" data-toggle="collapse" data-parent="#navigation">yii\db\mssql <b class="caret"></b></a><div id="navigation-6506" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-db-mssql-pdo.html">PDO</a>
+<a class="list-group-item active" href="./yii-db-mssql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-mssql-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-mssql-sqlsrvpdo.html">SqlsrvPDO</a>
+<a class="list-group-item" href="./yii-db-mssql-tableschema.html">TableSchema</a></div>
+<a class="list-group-item" href="#navigation-6507" data-toggle="collapse" data-parent="#navigation">yii\db\mssql\conditions <b class="caret"></b></a><div id="navigation-6507" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mssql-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-mssql-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-6508" data-toggle="collapse" data-parent="#navigation">yii\db\mysql <b class="caret"></b></a><div id="navigation-6508" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mysql-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-mysql-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-jsonexpressionbuilder.html">JsonExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-6509" data-toggle="collapse" data-parent="#navigation">yii\db\oci <b class="caret"></b></a><div id="navigation-6509" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-oci-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-6510" data-toggle="collapse" data-parent="#navigation">yii\db\oci\conditions <b class="caret"></b></a><div id="navigation-6510" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-oci-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-6511" data-toggle="collapse" data-parent="#navigation">yii\db\pgsql <b class="caret"></b></a><div id="navigation-6511" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-pgsql-arrayexpressionbuilder.html">ArrayExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-arrayparser.html">ArrayParser</a>
+<a class="list-group-item" href="./yii-db-pgsql-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-pgsql-jsonexpressionbuilder.html">JsonExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-6512" data-toggle="collapse" data-parent="#navigation">yii\db\sqlite <b class="caret"></b></a><div id="navigation-6512" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-sqlite-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-command.html">Command</a>
+<a class="list-group-item" href="./yii-db-sqlite-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-sqlite-sqltokenizer.html">SqlTokenizer</a></div>
+<a class="list-group-item" href="#navigation-6513" data-toggle="collapse" data-parent="#navigation">yii\db\sqlite\conditions <b class="caret"></b></a><div id="navigation-6513" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-sqlite-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-6514" data-toggle="collapse" data-parent="#navigation">yii\di <b class="caret"></b></a><div id="navigation-6514" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-di-container.html">Container</a>
+<a class="list-group-item" href="./yii-di-instance.html">Instance</a>
+<a class="list-group-item" href="./yii-di-notinstantiableexception.html">NotInstantiableException</a>
+<a class="list-group-item" href="./yii-di-servicelocator.html">ServiceLocator</a></div>
+<a class="list-group-item" href="#navigation-6515" data-toggle="collapse" data-parent="#navigation">yii\filters <b class="caret"></b></a><div id="navigation-6515" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-accesscontrol.html">AccessControl</a>
+<a class="list-group-item" href="./yii-filters-accessrule.html">AccessRule</a>
+<a class="list-group-item" href="./yii-filters-ajaxfilter.html">AjaxFilter</a>
+<a class="list-group-item" href="./yii-filters-contentnegotiator.html">ContentNegotiator</a>
+<a class="list-group-item" href="./yii-filters-cors.html">Cors</a>
+<a class="list-group-item" href="./yii-filters-hostcontrol.html">HostControl</a>
+<a class="list-group-item" href="./yii-filters-httpcache.html">HttpCache</a>
+<a class="list-group-item" href="./yii-filters-pagecache.html">PageCache</a>
+<a class="list-group-item" href="./yii-filters-ratelimitinterface.html">RateLimitInterface</a>
+<a class="list-group-item" href="./yii-filters-ratelimiter.html">RateLimiter</a>
+<a class="list-group-item" href="./yii-filters-verbfilter.html">VerbFilter</a></div>
+<a class="list-group-item" href="#navigation-6516" data-toggle="collapse" data-parent="#navigation">yii\filters\auth <b class="caret"></b></a><div id="navigation-6516" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-auth-authinterface.html">AuthInterface</a>
+<a class="list-group-item" href="./yii-filters-auth-authmethod.html">AuthMethod</a>
+<a class="list-group-item" href="./yii-filters-auth-compositeauth.html">CompositeAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpbasicauth.html">HttpBasicAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpbearerauth.html">HttpBearerAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpheaderauth.html">HttpHeaderAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-queryparamauth.html">QueryParamAuth</a></div>
+<a class="list-group-item" href="#navigation-6517" data-toggle="collapse" data-parent="#navigation">yii\grid <b class="caret"></b></a><div id="navigation-6517" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-grid-actioncolumn.html">ActionColumn</a>
+<a class="list-group-item" href="./yii-grid-checkboxcolumn.html">CheckboxColumn</a>
+<a class="list-group-item" href="./yii-grid-column.html">Column</a>
+<a class="list-group-item" href="./yii-grid-datacolumn.html">DataColumn</a>
+<a class="list-group-item" href="./yii-grid-gridview.html">GridView</a>
+<a class="list-group-item" href="./yii-grid-gridviewasset.html">GridViewAsset</a>
+<a class="list-group-item" href="./yii-grid-radiobuttoncolumn.html">RadioButtonColumn</a>
+<a class="list-group-item" href="./yii-grid-serialcolumn.html">SerialColumn</a></div>
+<a class="list-group-item" href="#navigation-6518" data-toggle="collapse" data-parent="#navigation">yii\helpers <b class="caret"></b></a><div id="navigation-6518" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-helpers-arrayhelper.html">ArrayHelper</a>
+<a class="list-group-item" href="./yii-helpers-basearrayhelper.html">BaseArrayHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseconsole.html">BaseConsole</a>
+<a class="list-group-item" href="./yii-helpers-basefilehelper.html">BaseFileHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseformatconverter.html">BaseFormatConverter</a>
+<a class="list-group-item" href="./yii-helpers-basehtml.html">BaseHtml</a>
+<a class="list-group-item" href="./yii-helpers-basehtmlpurifier.html">BaseHtmlPurifier</a>
+<a class="list-group-item" href="./yii-helpers-baseinflector.html">BaseInflector</a>
+<a class="list-group-item" href="./yii-helpers-baseiphelper.html">BaseIpHelper</a>
+<a class="list-group-item" href="./yii-helpers-basejson.html">BaseJson</a>
+<a class="list-group-item" href="./yii-helpers-basemarkdown.html">BaseMarkdown</a>
+<a class="list-group-item" href="./yii-helpers-basestringhelper.html">BaseStringHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseurl.html">BaseUrl</a>
+<a class="list-group-item" href="./yii-helpers-basevardumper.html">BaseVarDumper</a>
+<a class="list-group-item" href="./yii-helpers-console.html">Console</a>
+<a class="list-group-item" href="./yii-helpers-filehelper.html">FileHelper</a>
+<a class="list-group-item" href="./yii-helpers-formatconverter.html">FormatConverter</a>
+<a class="list-group-item" href="./yii-helpers-html.html">Html</a>
+<a class="list-group-item" href="./yii-helpers-htmlpurifier.html">HtmlPurifier</a>
+<a class="list-group-item" href="./yii-helpers-inflector.html">Inflector</a>
+<a class="list-group-item" href="./yii-helpers-iphelper.html">IpHelper</a>
+<a class="list-group-item" href="./yii-helpers-json.html">Json</a>
+<a class="list-group-item" href="./yii-helpers-markdown.html">Markdown</a>
+<a class="list-group-item" href="./yii-helpers-replacearrayvalue.html">ReplaceArrayValue</a>
+<a class="list-group-item" href="./yii-helpers-stringhelper.html">StringHelper</a>
+<a class="list-group-item" href="./yii-helpers-unsetarrayvalue.html">UnsetArrayValue</a>
+<a class="list-group-item" href="./yii-helpers-url.html">Url</a>
+<a class="list-group-item" href="./yii-helpers-vardumper.html">VarDumper</a></div>
+<a class="list-group-item" href="#navigation-6519" data-toggle="collapse" data-parent="#navigation">yii\i18n <b class="caret"></b></a><div id="navigation-6519" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-i18n-dbmessagesource.html">DbMessageSource</a>
+<a class="list-group-item" href="./yii-i18n-formatter.html">Formatter</a>
+<a class="list-group-item" href="./yii-i18n-gettextfile.html">GettextFile</a>
+<a class="list-group-item" href="./yii-i18n-gettextmessagesource.html">GettextMessageSource</a>
+<a class="list-group-item" href="./yii-i18n-gettextmofile.html">GettextMoFile</a>
+<a class="list-group-item" href="./yii-i18n-gettextpofile.html">GettextPoFile</a>
+<a class="list-group-item" href="./yii-i18n-i18n.html">I18N</a>
+<a class="list-group-item" href="./yii-i18n-locale.html">Locale</a>
+<a class="list-group-item" href="./yii-i18n-messageformatter.html">MessageFormatter</a>
+<a class="list-group-item" href="./yii-i18n-messagesource.html">MessageSource</a>
+<a class="list-group-item" href="./yii-i18n-missingtranslationevent.html">MissingTranslationEvent</a>
+<a class="list-group-item" href="./yii-i18n-phpmessagesource.html">PhpMessageSource</a></div>
+<a class="list-group-item" href="#navigation-6520" data-toggle="collapse" data-parent="#navigation">yii\log <b class="caret"></b></a><div id="navigation-6520" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-log-dbtarget.html">DbTarget</a>
+<a class="list-group-item" href="./yii-log-dispatcher.html">Dispatcher</a>
+<a class="list-group-item" href="./yii-log-emailtarget.html">EmailTarget</a>
+<a class="list-group-item" href="./yii-log-filetarget.html">FileTarget</a>
+<a class="list-group-item" href="./yii-log-logruntimeexception.html">LogRuntimeException</a>
+<a class="list-group-item" href="./yii-log-logger.html">Logger</a>
+<a class="list-group-item" href="./yii-log-syslogtarget.html">SyslogTarget</a>
+<a class="list-group-item" href="./yii-log-target.html">Target</a></div>
+<a class="list-group-item" href="#navigation-6521" data-toggle="collapse" data-parent="#navigation">yii\mail <b class="caret"></b></a><div id="navigation-6521" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mail-basemailer.html">BaseMailer</a>
+<a class="list-group-item" href="./yii-mail-basemessage.html">BaseMessage</a>
+<a class="list-group-item" href="./yii-mail-mailevent.html">MailEvent</a>
+<a class="list-group-item" href="./yii-mail-mailerinterface.html">MailerInterface</a>
+<a class="list-group-item" href="./yii-mail-messageinterface.html">MessageInterface</a></div>
+<a class="list-group-item" href="#navigation-6522" data-toggle="collapse" data-parent="#navigation">yii\mutex <b class="caret"></b></a><div id="navigation-6522" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mutex-dbmutex.html">DbMutex</a>
+<a class="list-group-item" href="./yii-mutex-filemutex.html">FileMutex</a>
+<a class="list-group-item" href="./yii-mutex-mutex.html">Mutex</a>
+<a class="list-group-item" href="./yii-mutex-mysqlmutex.html">MysqlMutex</a>
+<a class="list-group-item" href="./yii-mutex-oraclemutex.html">OracleMutex</a>
+<a class="list-group-item" href="./yii-mutex-pgsqlmutex.html">PgsqlMutex</a></div>
+<a class="list-group-item" href="#navigation-6523" data-toggle="collapse" data-parent="#navigation">yii\rbac <b class="caret"></b></a><div id="navigation-6523" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rbac-assignment.html">Assignment</a>
+<a class="list-group-item" href="./yii-rbac-basemanager.html">BaseManager</a>
+<a class="list-group-item" href="./yii-rbac-checkaccessinterface.html">CheckAccessInterface</a>
+<a class="list-group-item" href="./yii-rbac-dbmanager.html">DbManager</a>
+<a class="list-group-item" href="./yii-rbac-item.html">Item</a>
+<a class="list-group-item" href="./yii-rbac-managerinterface.html">ManagerInterface</a>
+<a class="list-group-item" href="./yii-rbac-permission.html">Permission</a>
+<a class="list-group-item" href="./yii-rbac-phpmanager.html">PhpManager</a>
+<a class="list-group-item" href="./yii-rbac-role.html">Role</a>
+<a class="list-group-item" href="./yii-rbac-rule.html">Rule</a></div>
+<a class="list-group-item" href="#navigation-6524" data-toggle="collapse" data-parent="#navigation">yii\rest <b class="caret"></b></a><div id="navigation-6524" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rest-action.html">Action</a>
+<a class="list-group-item" href="./yii-rest-activecontroller.html">ActiveController</a>
+<a class="list-group-item" href="./yii-rest-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-rest-createaction.html">CreateAction</a>
+<a class="list-group-item" href="./yii-rest-deleteaction.html">DeleteAction</a>
+<a class="list-group-item" href="./yii-rest-indexaction.html">IndexAction</a>
+<a class="list-group-item" href="./yii-rest-optionsaction.html">OptionsAction</a>
+<a class="list-group-item" href="./yii-rest-serializer.html">Serializer</a>
+<a class="list-group-item" href="./yii-rest-updateaction.html">UpdateAction</a>
+<a class="list-group-item" href="./yii-rest-urlrule.html">UrlRule</a>
+<a class="list-group-item" href="./yii-rest-viewaction.html">ViewAction</a></div>
+<a class="list-group-item" href="#navigation-6525" data-toggle="collapse" data-parent="#navigation">yii\test <b class="caret"></b></a><div id="navigation-6525" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-test-activefixture.html">ActiveFixture</a>
+<a class="list-group-item" href="./yii-test-arrayfixture.html">ArrayFixture</a>
+<a class="list-group-item" href="./yii-test-baseactivefixture.html">BaseActiveFixture</a>
+<a class="list-group-item" href="./yii-test-dbfixture.html">DbFixture</a>
+<a class="list-group-item" href="./yii-test-filefixturetrait.html">FileFixtureTrait</a>
+<a class="list-group-item" href="./yii-test-fixture.html">Fixture</a>
+<a class="list-group-item" href="./yii-test-fixturetrait.html">FixtureTrait</a>
+<a class="list-group-item" href="./yii-test-initdbfixture.html">InitDbFixture</a></div>
+<a class="list-group-item" href="#navigation-6526" data-toggle="collapse" data-parent="#navigation">yii\validators <b class="caret"></b></a><div id="navigation-6526" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-validators-booleanvalidator.html">BooleanValidator</a>
+<a class="list-group-item" href="./yii-validators-comparevalidator.html">CompareValidator</a>
+<a class="list-group-item" href="./yii-validators-datevalidator.html">DateValidator</a>
+<a class="list-group-item" href="./yii-validators-defaultvaluevalidator.html">DefaultValueValidator</a>
+<a class="list-group-item" href="./yii-validators-eachvalidator.html">EachValidator</a>
+<a class="list-group-item" href="./yii-validators-emailvalidator.html">EmailValidator</a>
+<a class="list-group-item" href="./yii-validators-existvalidator.html">ExistValidator</a>
+<a class="list-group-item" href="./yii-validators-filevalidator.html">FileValidator</a>
+<a class="list-group-item" href="./yii-validators-filtervalidator.html">FilterValidator</a>
+<a class="list-group-item" href="./yii-validators-imagevalidator.html">ImageValidator</a>
+<a class="list-group-item" href="./yii-validators-inlinevalidator.html">InlineValidator</a>
+<a class="list-group-item" href="./yii-validators-ipvalidator.html">IpValidator</a>
+<a class="list-group-item" href="./yii-validators-numbervalidator.html">NumberValidator</a>
+<a class="list-group-item" href="./yii-validators-punycodeasset.html">PunycodeAsset</a>
+<a class="list-group-item" href="./yii-validators-rangevalidator.html">RangeValidator</a>
+<a class="list-group-item" href="./yii-validators-regularexpressionvalidator.html">RegularExpressionValidator</a>
+<a class="list-group-item" href="./yii-validators-requiredvalidator.html">RequiredValidator</a>
+<a class="list-group-item" href="./yii-validators-safevalidator.html">SafeValidator</a>
+<a class="list-group-item" href="./yii-validators-stringvalidator.html">StringValidator</a>
+<a class="list-group-item" href="./yii-validators-uniquevalidator.html">UniqueValidator</a>
+<a class="list-group-item" href="./yii-validators-urlvalidator.html">UrlValidator</a>
+<a class="list-group-item" href="./yii-validators-validationasset.html">ValidationAsset</a>
+<a class="list-group-item" href="./yii-validators-validator.html">Validator</a></div>
+<a class="list-group-item" href="#navigation-6527" data-toggle="collapse" data-parent="#navigation">yii\web <b class="caret"></b></a><div id="navigation-6527" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-web-application.html">Application</a>
+<a class="list-group-item" href="./yii-web-assetbundle.html">AssetBundle</a>
+<a class="list-group-item" href="./yii-web-assetconverter.html">AssetConverter</a>
+<a class="list-group-item" href="./yii-web-assetconverterinterface.html">AssetConverterInterface</a>
+<a class="list-group-item" href="./yii-web-assetmanager.html">AssetManager</a>
+<a class="list-group-item" href="./yii-web-badrequesthttpexception.html">BadRequestHttpException</a>
+<a class="list-group-item" href="./yii-web-cachesession.html">CacheSession</a>
+<a class="list-group-item" href="./yii-web-compositeurlrule.html">CompositeUrlRule</a>
+<a class="list-group-item" href="./yii-web-conflicthttpexception.html">ConflictHttpException</a>
+<a class="list-group-item" href="./yii-web-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-web-cookie.html">Cookie</a>
+<a class="list-group-item" href="./yii-web-cookiecollection.html">CookieCollection</a>
+<a class="list-group-item" href="./yii-web-dbsession.html">DbSession</a>
+<a class="list-group-item" href="./yii-web-erroraction.html">ErrorAction</a>
+<a class="list-group-item" href="./yii-web-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-web-forbiddenhttpexception.html">ForbiddenHttpException</a>
+<a class="list-group-item" href="./yii-web-gonehttpexception.html">GoneHttpException</a>
+<a class="list-group-item" href="./yii-web-groupurlrule.html">GroupUrlRule</a>
+<a class="list-group-item" href="./yii-web-headercollection.html">HeaderCollection</a>
+<a class="list-group-item" href="./yii-web-headersalreadysentexception.html">HeadersAlreadySentException</a>
+<a class="list-group-item" href="./yii-web-htmlresponseformatter.html">HtmlResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-httpexception.html">HttpException</a>
+<a class="list-group-item" href="./yii-web-identityinterface.html">IdentityInterface</a>
+<a class="list-group-item" href="./yii-web-jqueryasset.html">JqueryAsset</a>
+<a class="list-group-item" href="./yii-web-jsexpression.html">JsExpression</a>
+<a class="list-group-item" href="./yii-web-jsonparser.html">JsonParser</a>
+<a class="list-group-item" href="./yii-web-jsonresponseformatter.html">JsonResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-link.html">Link</a>
+<a class="list-group-item" href="./yii-web-linkable.html">Linkable</a>
+<a class="list-group-item" href="./yii-web-methodnotallowedhttpexception.html">MethodNotAllowedHttpException</a>
+<a class="list-group-item" href="./yii-web-multifieldsession.html">MultiFieldSession</a>
+<a class="list-group-item" href="./yii-web-multipartformdataparser.html">MultipartFormDataParser</a>
+<a class="list-group-item" href="./yii-web-notacceptablehttpexception.html">NotAcceptableHttpException</a>
+<a class="list-group-item" href="./yii-web-notfoundhttpexception.html">NotFoundHttpException</a>
+<a class="list-group-item" href="./yii-web-rangenotsatisfiablehttpexception.html">RangeNotSatisfiableHttpException</a>
+<a class="list-group-item" href="./yii-web-request.html">Request</a>
+<a class="list-group-item" href="./yii-web-requestparserinterface.html">RequestParserInterface</a>
+<a class="list-group-item" href="./yii-web-response.html">Response</a>
+<a class="list-group-item" href="./yii-web-responseformatterinterface.html">ResponseFormatterInterface</a>
+<a class="list-group-item" href="./yii-web-servererrorhttpexception.html">ServerErrorHttpException</a>
+<a class="list-group-item" href="./yii-web-session.html">Session</a>
+<a class="list-group-item" href="./yii-web-sessioniterator.html">SessionIterator</a>
+<a class="list-group-item" href="./yii-web-toomanyrequestshttpexception.html">TooManyRequestsHttpException</a>
+<a class="list-group-item" href="./yii-web-unauthorizedhttpexception.html">UnauthorizedHttpException</a>
+<a class="list-group-item" href="./yii-web-unprocessableentityhttpexception.html">UnprocessableEntityHttpException</a>
+<a class="list-group-item" href="./yii-web-unsupportedmediatypehttpexception.html">UnsupportedMediaTypeHttpException</a>
+<a class="list-group-item" href="./yii-web-uploadedfile.html">UploadedFile</a>
+<a class="list-group-item" href="./yii-web-urlmanager.html">UrlManager</a>
+<a class="list-group-item" href="./yii-web-urlnormalizer.html">UrlNormalizer</a>
+<a class="list-group-item" href="./yii-web-urlnormalizerredirectexception.html">UrlNormalizerRedirectException</a>
+<a class="list-group-item" href="./yii-web-urlrule.html">UrlRule</a>
+<a class="list-group-item" href="./yii-web-urlruleinterface.html">UrlRuleInterface</a>
+<a class="list-group-item" href="./yii-web-user.html">User</a>
+<a class="list-group-item" href="./yii-web-userevent.html">UserEvent</a>
+<a class="list-group-item" href="./yii-web-view.html">View</a>
+<a class="list-group-item" href="./yii-web-viewaction.html">ViewAction</a>
+<a class="list-group-item" href="./yii-web-xmlresponseformatter.html">XmlResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-yiiasset.html">YiiAsset</a></div>
+<a class="list-group-item" href="#navigation-6528" data-toggle="collapse" data-parent="#navigation">yii\widgets <b class="caret"></b></a><div id="navigation-6528" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-widgets-activefield.html">ActiveField</a>
+<a class="list-group-item" href="./yii-widgets-activeform.html">ActiveForm</a>
+<a class="list-group-item" href="./yii-widgets-activeformasset.html">ActiveFormAsset</a>
+<a class="list-group-item" href="./yii-widgets-baselistview.html">BaseListView</a>
+<a class="list-group-item" href="./yii-widgets-block.html">Block</a>
+<a class="list-group-item" href="./yii-widgets-breadcrumbs.html">Breadcrumbs</a>
+<a class="list-group-item" href="./yii-widgets-contentdecorator.html">ContentDecorator</a>
+<a class="list-group-item" href="./yii-widgets-detailview.html">DetailView</a>
+<a class="list-group-item" href="./yii-widgets-fragmentcache.html">FragmentCache</a>
+<a class="list-group-item" href="./yii-widgets-inputwidget.html">InputWidget</a>
+<a class="list-group-item" href="./yii-widgets-linkpager.html">LinkPager</a>
+<a class="list-group-item" href="./yii-widgets-linksorter.html">LinkSorter</a>
+<a class="list-group-item" href="./yii-widgets-listview.html">ListView</a>
+<a class="list-group-item" href="./yii-widgets-maskedinput.html">MaskedInput</a>
+<a class="list-group-item" href="./yii-widgets-maskedinputasset.html">MaskedInputAsset</a>
+<a class="list-group-item" href="./yii-widgets-menu.html">Menu</a>
+<a class="list-group-item" href="./yii-widgets-pjax.html">Pjax</a>
+<a class="list-group-item" href="./yii-widgets-pjaxasset.html">PjaxAsset</a>
+<a class="list-group-item" href="./yii-widgets-spaceless.html">Spaceless</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\db\mssql\QueryBuilder</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+                    | <a href="#constants">Constants</a>
+    </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a> &raquo;
+<a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a></td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php">https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>QueryBuilder is the query builder for MS SQL Server databases (version 2008 and above).</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+                <tr class="inherited" id="$db">
+        <td><a href="yii-db-querybuilder.html#$db-detail">$db</a></td>
+        <td><a href="yii-db-connection.html">yii\db\Connection</a></td>
+        <td>The database connection.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+                <tr class="inherited" id="$separator">
+        <td><a href="yii-db-querybuilder.html#$separator-detail">$separator</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The separator between different fragments of a SQL statement.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr id="$typeMap">
+        <td><a href="yii-db-mssql-querybuilder.html#$typeMap-detail">$typeMap</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Mapping from abstract column types (keys) to physical column types (values).</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-property">
+<h2>Protected Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="$conditionBuilders">
+        <td><a href="yii-db-querybuilder.html#$conditionBuilders-detail">$conditionBuilders</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Map of query condition to builder methods.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="$conditionClasses">
+        <td><a href="yii-db-querybuilder.html#$conditionClasses-detail">$conditionClasses</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Map of condition aliases to condition classes.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+                <tr class="inherited" id="$expressionBuilders">
+        <td><a href="yii-db-querybuilder.html#$expressionBuilders-detail">$expressionBuilders</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a>[]|<a href="yii-db-expressionbuilderinterface.html">yii\db\ExpressionBuilderInterface</a>[]</td>
+        <td>Maps expression class to expression builder class.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-baseobject.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-db-querybuilder.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-baseobject.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-baseobject.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-baseobject.html#__set()-detail">__set()</a></td>
+        <td>Sets value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-baseobject.html#__unset()-detail">__unset()</a></td>
+        <td>Sets an object property to null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="addCheck()">
+        <td><a href="yii-db-querybuilder.html#addCheck()-detail">addCheck()</a></td>
+        <td>Creates a SQL command for adding a check constraint to an existing table.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="addColumn()">
+        <td><a href="yii-db-querybuilder.html#addColumn()-detail">addColumn()</a></td>
+        <td>Builds a SQL statement for adding a new DB column.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr id="addCommentOnColumn()">
+        <td><a href="yii-db-mssql-querybuilder.html#addCommentOnColumn()-detail">addCommentOnColumn()</a></td>
+        <td>Builds a SQL command for adding comment to column.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr id="addCommentOnTable()">
+        <td><a href="yii-db-mssql-querybuilder.html#addCommentOnTable()-detail">addCommentOnTable()</a></td>
+        <td>Builds a SQL command for adding comment to table.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr id="addDefaultValue()">
+        <td><a href="yii-db-mssql-querybuilder.html#addDefaultValue()-detail">addDefaultValue()</a></td>
+        <td>Creates a SQL command for adding a default value constraint to an existing table.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="addForeignKey()">
+        <td><a href="yii-db-querybuilder.html#addForeignKey()-detail">addForeignKey()</a></td>
+        <td>Builds a SQL statement for adding a foreign key constraint to an existing table.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="addPrimaryKey()">
+        <td><a href="yii-db-querybuilder.html#addPrimaryKey()-detail">addPrimaryKey()</a></td>
+        <td>Builds a SQL statement for adding a primary key constraint to an existing table.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="addUnique()">
+        <td><a href="yii-db-querybuilder.html#addUnique()-detail">addUnique()</a></td>
+        <td>Creates a SQL command for adding an unique constraint to an existing table.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr id="alterColumn()">
+        <td><a href="yii-db-mssql-querybuilder.html#alterColumn()-detail">alterColumn()</a></td>
+        <td>Builds a SQL statement for changing the definition of a column.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="batchInsert()">
+        <td><a href="yii-db-querybuilder.html#batchInsert()-detail">batchInsert()</a></td>
+        <td>Generates a batch INSERT SQL statement.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="bindParam()">
+        <td><a href="yii-db-querybuilder.html#bindParam()-detail">bindParam()</a></td>
+        <td>Helper method to add $value to $params array using <a href="yii-db-querybuilder.html#PARAM_PREFIX-detail">PARAM_PREFIX</a>.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="build()">
+        <td><a href="yii-db-querybuilder.html#build()-detail">build()</a></td>
+        <td>Generates a SELECT SQL statement from a <a href="yii-db-query.html">yii\db\Query</a> object.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildAndCondition()">
+        <td><a href="yii-db-querybuilder.html#buildAndCondition()-detail">buildAndCondition()</a></td>
+        <td>Connects two or more SQL expressions with the <code>AND</code> or <code>OR</code> operator.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildBetweenCondition()">
+        <td><a href="yii-db-querybuilder.html#buildBetweenCondition()-detail">buildBetweenCondition()</a></td>
+        <td>Creates an SQL expressions with the <code>BETWEEN</code> operator.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildColumns()">
+        <td><a href="yii-db-querybuilder.html#buildColumns()-detail">buildColumns()</a></td>
+        <td>Processes columns and properly quotes them if necessary.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildCondition()">
+        <td><a href="yii-db-querybuilder.html#buildCondition()-detail">buildCondition()</a></td>
+        <td>Parses the condition specification and generates the corresponding SQL expression.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildExistsCondition()">
+        <td><a href="yii-db-querybuilder.html#buildExistsCondition()-detail">buildExistsCondition()</a></td>
+        <td>Creates an SQL expressions with the <code>EXISTS</code> operator.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildExpression()">
+        <td><a href="yii-db-querybuilder.html#buildExpression()-detail">buildExpression()</a></td>
+        <td>Builds given $expression</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildFrom()">
+        <td><a href="yii-db-querybuilder.html#buildFrom()-detail">buildFrom()</a></td>
+        <td></td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildGroupBy()">
+        <td><a href="yii-db-querybuilder.html#buildGroupBy()-detail">buildGroupBy()</a></td>
+        <td></td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildHashCondition()">
+        <td><a href="yii-db-querybuilder.html#buildHashCondition()-detail">buildHashCondition()</a></td>
+        <td>Creates a condition based on column-value pairs.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildHaving()">
+        <td><a href="yii-db-querybuilder.html#buildHaving()-detail">buildHaving()</a></td>
+        <td></td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildInCondition()">
+        <td><a href="yii-db-querybuilder.html#buildInCondition()-detail">buildInCondition()</a></td>
+        <td>Creates an SQL expressions with the <code>IN</code> operator.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildJoin()">
+        <td><a href="yii-db-querybuilder.html#buildJoin()-detail">buildJoin()</a></td>
+        <td></td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildLikeCondition()">
+        <td><a href="yii-db-querybuilder.html#buildLikeCondition()-detail">buildLikeCondition()</a></td>
+        <td>Creates an SQL expressions with the <code>LIKE</code> operator.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildLimit()">
+        <td><a href="yii-db-querybuilder.html#buildLimit()-detail">buildLimit()</a></td>
+        <td></td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildNotCondition()">
+        <td><a href="yii-db-querybuilder.html#buildNotCondition()-detail">buildNotCondition()</a></td>
+        <td>Inverts an SQL expressions with <code>NOT</code> operator.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildOrderBy()">
+        <td><a href="yii-db-querybuilder.html#buildOrderBy()-detail">buildOrderBy()</a></td>
+        <td></td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr id="buildOrderByAndLimit()">
+        <td><a href="yii-db-mssql-querybuilder.html#buildOrderByAndLimit()-detail">buildOrderByAndLimit()</a></td>
+        <td>Builds the ORDER BY and LIMIT/OFFSET clauses and appends them to the given SQL.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildSelect()">
+        <td><a href="yii-db-querybuilder.html#buildSelect()-detail">buildSelect()</a></td>
+        <td></td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildSimpleCondition()">
+        <td><a href="yii-db-querybuilder.html#buildSimpleCondition()-detail">buildSimpleCondition()</a></td>
+        <td>Creates an SQL expressions like <code>"column" operator value</code>.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildUnion()">
+        <td><a href="yii-db-querybuilder.html#buildUnion()-detail">buildUnion()</a></td>
+        <td></td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="buildWhere()">
+        <td><a href="yii-db-querybuilder.html#buildWhere()-detail">buildWhere()</a></td>
+        <td></td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-baseobject.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-baseobject.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr id="checkIntegrity()">
+        <td><a href="yii-db-mssql-querybuilder.html#checkIntegrity()-detail">checkIntegrity()</a></td>
+        <td>Builds a SQL statement for enabling or disabling integrity check.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="createConditionFromArray()">
+        <td><a href="yii-db-querybuilder.html#createConditionFromArray()-detail">createConditionFromArray()</a></td>
+        <td>Transforms $condition defined in array format (as described in <a href="yii-db-query.html#where()-detail">yii\db\Query::where()</a>
+to instance of <span class="broken-link">\yii\db\yii\db\condition\ConditionInterface</span> according to
+<a href="yii-db-querybuilder.html#$conditionClasses-detail">$conditionClasses</a> map.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="createIndex()">
+        <td><a href="yii-db-querybuilder.html#createIndex()-detail">createIndex()</a></td>
+        <td>Builds a SQL statement for creating a new index.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="createTable()">
+        <td><a href="yii-db-querybuilder.html#createTable()-detail">createTable()</a></td>
+        <td>Builds a SQL statement for creating a new DB table.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="createView()">
+        <td><a href="yii-db-querybuilder.html#createView()-detail">createView()</a></td>
+        <td>Creates a SQL View.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+                    <tr class="inherited" id="delete()">
+        <td><a href="yii-db-querybuilder.html#delete()-detail">delete()</a></td>
+        <td>Creates a DELETE SQL statement.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="dropCheck()">
+        <td><a href="yii-db-querybuilder.html#dropCheck()-detail">dropCheck()</a></td>
+        <td>Creates a SQL command for dropping a check constraint.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="dropColumn()">
+        <td><a href="yii-db-querybuilder.html#dropColumn()-detail">dropColumn()</a></td>
+        <td>Builds a SQL statement for dropping a DB column.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr id="dropCommentFromColumn()">
+        <td><a href="yii-db-mssql-querybuilder.html#dropCommentFromColumn()-detail">dropCommentFromColumn()</a></td>
+        <td>Builds a SQL command for adding comment to column.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr id="dropCommentFromTable()">
+        <td><a href="yii-db-mssql-querybuilder.html#dropCommentFromTable()-detail">dropCommentFromTable()</a></td>
+        <td>Builds a SQL command for adding comment to table.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr id="dropDefaultValue()">
+        <td><a href="yii-db-mssql-querybuilder.html#dropDefaultValue()-detail">dropDefaultValue()</a></td>
+        <td>Creates a SQL command for dropping a default value constraint.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="dropForeignKey()">
+        <td><a href="yii-db-querybuilder.html#dropForeignKey()-detail">dropForeignKey()</a></td>
+        <td>Builds a SQL statement for dropping a foreign key constraint.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="dropIndex()">
+        <td><a href="yii-db-querybuilder.html#dropIndex()-detail">dropIndex()</a></td>
+        <td>Builds a SQL statement for dropping an index.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="dropPrimaryKey()">
+        <td><a href="yii-db-querybuilder.html#dropPrimaryKey()-detail">dropPrimaryKey()</a></td>
+        <td>Builds a SQL statement for removing a primary key constraint to an existing table.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="dropTable()">
+        <td><a href="yii-db-querybuilder.html#dropTable()-detail">dropTable()</a></td>
+        <td>Builds a SQL statement for dropping a DB table.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="dropUnique()">
+        <td><a href="yii-db-querybuilder.html#dropUnique()-detail">dropUnique()</a></td>
+        <td>Creates a SQL command for dropping an unique constraint.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="dropView()">
+        <td><a href="yii-db-querybuilder.html#dropView()-detail">dropView()</a></td>
+        <td>Drops a SQL View.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="executeResetSequence()">
+        <td><a href="yii-db-querybuilder.html#executeResetSequence()-detail">executeResetSequence()</a></td>
+        <td>Execute a SQL statement for resetting the sequence value of a table's primary key.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+                <tr class="inherited" id="getColumnType()">
+        <td><a href="yii-db-querybuilder.html#getColumnType()-detail">getColumnType()</a></td>
+        <td>Converts an abstract column type into a physical column type.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="getExpressionBuilder()">
+        <td><a href="yii-db-querybuilder.html#getExpressionBuilder()-detail">getExpressionBuilder()</a></td>
+        <td>Gets object of <a href="yii-db-expressionbuilderinterface.html">yii\db\ExpressionBuilderInterface</a> that is suitable for $expression.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+                <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-baseobject.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+                <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-baseobject.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-db-querybuilder.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr id="insert()">
+        <td><a href="yii-db-mssql-querybuilder.html#insert()-detail">insert()</a></td>
+        <td>Creates an INSERT SQL statement.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+                                        <tr id="renameColumn()">
+        <td><a href="yii-db-mssql-querybuilder.html#renameColumn()-detail">renameColumn()</a></td>
+        <td>Builds a SQL statement for renaming a column.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr id="renameTable()">
+        <td><a href="yii-db-mssql-querybuilder.html#renameTable()-detail">renameTable()</a></td>
+        <td>Builds a SQL statement for renaming a DB table.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr id="resetSequence()">
+        <td><a href="yii-db-mssql-querybuilder.html#resetSequence()-detail">resetSequence()</a></td>
+        <td>Creates a SQL statement for resetting the sequence value of a table's primary key.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr id="selectExists()">
+        <td><a href="yii-db-mssql-querybuilder.html#selectExists()-detail">selectExists()</a></td>
+        <td>Creates a SELECT EXISTS() SQL statement.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="setConditionClasses()">
+        <td><a href="yii-db-querybuilder.html#setConditionClasses()-detail">setConditionClasses()</a></td>
+        <td>Setter for <a href="yii-db-querybuilder.html#$conditionClasses-detail">$conditionClasses</a> property.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="setExpressionBuilders()">
+        <td><a href="yii-db-querybuilder.html#setExpressionBuilders()-detail">setExpressionBuilders()</a></td>
+        <td>Setter for <a href="yii-db-querybuilder.html#$expressionBuilders-detail">$expressionBuilders</a> property.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="truncateTable()">
+        <td><a href="yii-db-querybuilder.html#truncateTable()-detail">truncateTable()</a></td>
+        <td>Builds a SQL statement for truncating a DB table.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr id="update()">
+        <td><a href="yii-db-mssql-querybuilder.html#update()-detail">update()</a></td>
+        <td>Creates an UPDATE SQL statement.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr id="upsert()">
+        <td><a href="yii-db-mssql-querybuilder.html#upsert()-detail">upsert()</a></td>
+        <td>Creates an SQL statement to insert rows into a database table if
+they do not already exist (matching unique constraints),
+or update them if they do.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                                                                                                                                                                                    <tr class="inherited" id="defaultConditionClasses()">
+        <td><a href="yii-db-querybuilder.html#defaultConditionClasses()-detail">defaultConditionClasses()</a></td>
+        <td>Contains array of default condition classes. Extend this method, if you want to change
+default condition classes for the query builder. See <a href="yii-db-querybuilder.html#$conditionClasses-detail">$conditionClasses</a> docs for details.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr id="defaultExpressionBuilders()">
+        <td><a href="yii-db-mssql-querybuilder.html#defaultExpressionBuilders()-detail">defaultExpressionBuilders()</a></td>
+        <td>Contains array of default expression builders. Extend this method and override it, if you want to change
+default expression builders for this query builder. See <a href="yii-db-querybuilder.html#$expressionBuilders-detail">$expressionBuilders</a> docs for details.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+                                                                <tr id="getAllColumnNames()">
+        <td><a href="yii-db-mssql-querybuilder.html#getAllColumnNames()-detail">getAllColumnNames()</a></td>
+        <td>Returns an array of column names given model name.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+                    <tr class="inherited" id="hasLimit()">
+        <td><a href="yii-db-querybuilder.html#hasLimit()-detail">hasLimit()</a></td>
+        <td>Checks to see if the given limit is effective.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+                <tr class="inherited" id="hasOffset()">
+        <td><a href="yii-db-querybuilder.html#hasOffset()-detail">hasOffset()</a></td>
+        <td>Checks to see if the given offset is effective.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+                        <tr id="isOldMssql()">
+        <td><a href="yii-db-mssql-querybuilder.html#isOldMssql()-detail">isOldMssql()</a></td>
+        <td></td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr id="newBuildOrderByAndLimit()">
+        <td><a href="yii-db-mssql-querybuilder.html#newBuildOrderByAndLimit()-detail">newBuildOrderByAndLimit()</a></td>
+        <td>Builds the ORDER BY/LIMIT/OFFSET clauses for SQL SERVER 2012 or newer.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr id="oldBuildOrderByAndLimit()">
+        <td><a href="yii-db-mssql-querybuilder.html#oldBuildOrderByAndLimit()-detail">oldBuildOrderByAndLimit()</a></td>
+        <td>Builds the ORDER BY/LIMIT/OFFSET clauses for SQL SERVER 2005 to 2008.</td>
+        <td><a href="yii-db-mssql-querybuilder.html">yii\db\mssql\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="prepareInsertSelectSubQuery()">
+        <td><a href="yii-db-querybuilder.html#prepareInsertSelectSubQuery()-detail">prepareInsertSelectSubQuery()</a></td>
+        <td>Prepare select-subquery and field names for INSERT INTO .</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="prepareInsertValues()">
+        <td><a href="yii-db-querybuilder.html#prepareInsertValues()-detail">prepareInsertValues()</a></td>
+        <td>Prepares a <code>VALUES</code> part for an <code>INSERT</code> SQL statement.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="prepareUpdateSets()">
+        <td><a href="yii-db-querybuilder.html#prepareUpdateSets()-detail">prepareUpdateSets()</a></td>
+        <td>Prepares a <code>SET</code> parts for an <code>UPDATE</code> SQL statement.</td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+            <tr class="inherited" id="prepareUpsertColumns()">
+        <td><a href="yii-db-querybuilder.html#prepareUpsertColumns()-detail">prepareUpsertColumns()</a></td>
+        <td></td>
+        <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+    </tr>
+                                        </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+<div class="summary doc-const">
+    <h2>Constants</h2>
+
+    <p><a href="#" class="toggle">Hide inherited constants</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-const" />
+        <col class="col-value" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Constant</th><th>Value</th><th>Description</th><th>Defined By</th>
+    </tr>
+            <tr class="inherited" id="PARAM_PREFIX">
+          <td id="PARAM_PREFIX-detail">PARAM_PREFIX</td>
+          <td>':qp'</td>
+          <td>The prefix for automatically generated query binding parameters.
+                        </td>
+          <td><a href="yii-db-querybuilder.html">yii\db\QueryBuilder</a></td>
+        </tr>
+        </table>
+</div>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$typeMap-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#$typeMap-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L25" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L25" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $typeMap        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Mapping from abstract column types (keys) to physical column types (values).</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-db-mssql-querybuilder.html#$typeMap-detail">$typeMap</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_PK&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'int&nbsp;IDENTITY&nbsp;PRIMARY&nbsp;KEY'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_UPK&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'int&nbsp;IDENTITY&nbsp;PRIMARY&nbsp;KEY'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_BIGPK&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'bigint&nbsp;IDENTITY&nbsp;PRIMARY&nbsp;KEY'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_UBIGPK&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'bigint&nbsp;IDENTITY&nbsp;PRIMARY&nbsp;KEY'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_CHAR&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'nchar(1)'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_STRING&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'nvarchar(255)'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_TEXT&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'nvarchar(max)'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_TINYINT&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'tinyint'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_SMALLINT&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'smallint'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_INTEGER&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'int'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_BIGINT&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'bigint'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_FLOAT&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'float'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_DOUBLE&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'float'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_DECIMAL&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'decimal(18,0)'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_DATETIME&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'datetime'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_TIMESTAMP&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'datetime'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_TIME&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'time'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_DATE&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'date'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_BINARY&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'varbinary(max)'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_BOOLEAN&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'bit'</span><span style="color: #007700">,&nbsp;\</span><span style="color: #0000BB">yii</span><span style="color: #007700">\</span><span style="color: #0000BB">db</span><span style="color: #007700">\</span><span style="color: #0000BB">mssql</span><span style="color: #007700">\</span><span style="color: #0000BB">Schema</span><span style="color: #007700">::</span><span style="color: #0000BB">TYPE_MONEY&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'decimal(19,4)'</span><span style="color: #007700">]</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="addCommentOnColumn()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#addCommentOnColumn()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L257" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L257" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        addCommentOnColumn()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.0.8)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Builds a SQL command for adding comment to column.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#addCommentOnColumn()-detail">addCommentOnColumn</a></strong> ( <span style="color: #0000BB">$table</span>, <span style="color: #0000BB">$column</span>, <span style="color: #0000BB">$comment</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table whose column is to be commented. The table name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$column</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The name of the column to be commented. The column name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$comment</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The text of the comment to be added. The comment will be properly quoted by the method.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL statement for adding comment on column</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="addCommentOnTable()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#addCommentOnTable()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L266" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L266" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        addCommentOnTable()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.0.8)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Builds a SQL command for adding comment to table.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#addCommentOnTable()-detail">addCommentOnTable</a></strong> ( <span style="color: #0000BB">$table</span>, <span style="color: #0000BB">$comment</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table whose column is to be commented. The table name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$comment</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The text of the comment to be added. The comment will be properly quoted by the method.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL statement for adding comment on table</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="addDefaultValue()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#addDefaultValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L183" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L183" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        addDefaultValue()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates a SQL command for adding a default value constraint to an existing table.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#addDefaultValue()-detail">addDefaultValue</a></strong> ( <span style="color: #0000BB">$name</span>, <span style="color: #0000BB">$table</span>, <span style="color: #0000BB">$column</span>, <span style="color: #0000BB">$value</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The name of the default value constraint.
+The name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table that the default value constraint will be added to.
+The name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$column</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The name of the column to that the constraint will be added on.
+The name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$value</span></td>
+                  <td class="param-type-col">mixed</td>
+                  <td class="param-desc-col"><p>Default value.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL statement for adding a default value constraint to an existing table.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-notsupportedexception.html">yii\base\NotSupportedException</a></td>
+                  <td class="param-desc-col"><p>if this is not supported by the underlying DBMS.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="alterColumn()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#alterColumn()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L170" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L170" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        alterColumn()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Builds a SQL statement for changing the definition of a column.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#alterColumn()-detail">alterColumn</a></strong> ( <span style="color: #0000BB">$table</span>, <span style="color: #0000BB">$column</span>, <span style="color: #0000BB">$type</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table whose column is to be changed. The table name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$column</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The name of the column to be changed. The name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$type</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The new column type. The <a href="yii-db-querybuilder.html#getColumnType()-detail">getColumnType()</a> method will be invoked to convert abstract column type (if any)
+into the physical one. Anything that is not recognized as abstract type will be kept in the generated SQL.
+For example, 'string' will be turned into 'varchar(255)', while 'string not null' will become 'varchar(255) not null'.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL statement for changing the definition of a column.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="buildOrderByAndLimit()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#buildOrderByAndLimit()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L64" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L64" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        buildOrderByAndLimit()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Builds the ORDER BY and LIMIT/OFFSET clauses and appends them to the given SQL.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#buildOrderByAndLimit()-detail">buildOrderByAndLimit</a></strong> ( <span style="color: #0000BB">$sql</span>, <span style="color: #0000BB">$orderBy</span>, <span style="color: #0000BB">$limit</span>, <span style="color: #0000BB">$offset</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$sql</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The existing SQL (without ORDER BY/LIMIT/OFFSET)</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$orderBy</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The order by columns. See <span class="broken-link">\yii\db\mssql\Query::orderBy</span> for more details on how to specify this parameter.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$limit</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The limit number. See <span class="broken-link">\yii\db\mssql\Query::limit</span> for more details.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$offset</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The offset number. See <span class="broken-link">\yii\db\mssql\Query::offset</span> for more details.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL completed with ORDER BY/LIMIT/OFFSET (if any)</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="checkIntegrity()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#checkIntegrity()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L236" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L236" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        checkIntegrity()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Builds a SQL statement for enabling or disabling integrity check.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#checkIntegrity()-detail">checkIntegrity</a></strong> ( <span style="color: #0000BB">$check&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span>, <span style="color: #0000BB">$schema&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">''</span>, <span style="color: #0000BB">$table&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">''</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$check</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to turn on or off the integrity check.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$schema</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The schema of the tables.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table name.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL statement for checking integrity</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="defaultExpressionBuilders()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#defaultExpressionBuilders()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L53" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L53" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        defaultExpressionBuilders()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Contains array of default expression builders. Extend this method and override it, if you want to change
+default expression builders for this query builder. See <a href="yii-db-querybuilder.html#$expressionBuilders-detail">$expressionBuilders</a> docs for details.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-db-mssql-querybuilder.html#defaultExpressionBuilders()-detail">defaultExpressionBuilders</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="dropCommentFromColumn()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#dropCommentFromColumn()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L275" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L275" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        dropCommentFromColumn()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.0.8)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Builds a SQL command for adding comment to column.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#dropCommentFromColumn()-detail">dropCommentFromColumn</a></strong> ( <span style="color: #0000BB">$table</span>, <span style="color: #0000BB">$column</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table whose column is to be commented. The table name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$column</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The name of the column to be commented. The column name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL statement for adding comment on column</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="dropCommentFromTable()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#dropCommentFromTable()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L284" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L284" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        dropCommentFromTable()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.0.8)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Builds a SQL command for adding comment to table.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#dropCommentFromTable()-detail">dropCommentFromTable</a></strong> ( <span style="color: #0000BB">$table</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table whose column is to be commented. The table name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL statement for adding comment on column</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="dropDefaultValue()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#dropDefaultValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L193" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L193" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        dropDefaultValue()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates a SQL command for dropping a default value constraint.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#dropDefaultValue()-detail">dropDefaultValue</a></strong> ( <span style="color: #0000BB">$name</span>, <span style="color: #0000BB">$table</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The name of the default value constraint to be dropped.
+The name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table whose default value constraint is to be dropped.
+The name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL statement for dropping a default value constraint.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-notsupportedexception.html">yii\base\NotSupportedException</a></td>
+                  <td class="param-desc-col"><p>if this is not supported by the underlying DBMS.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getAllColumnNames()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#getAllColumnNames()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L295" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L295" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getAllColumnNames()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns an array of column names given model name.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.null">null</a></span> <strong><a href="yii-db-mssql-querybuilder.html#getAllColumnNames()-detail">getAllColumnNames</a></strong> ( <span style="color: #0000BB">$modelClass&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$modelClass</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Name of the model class</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>Array of column names</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="insert()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#insert()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L351" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L351" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        insert()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates an INSERT SQL statement.</strong></p>
+
+        <p>For example,
+<code>`</code>php
+$sql = $queryBuilder-&gt;insert('user', [</p>
+<pre><code class="hljs php"><span class="hljs-string">'name'</span> =&gt; <span class="hljs-string">'Sam'</span>,
+<span class="hljs-string">'age'</span> =&gt; <span class="hljs-number">30</span>,
+</code></pre>
+<p>], $params);
+<code>`</code>
+The method will properly escape the table and column names.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#insert()-detail">insert</a></strong> ( <span style="color: #0000BB">$table</span>, <span style="color: #0000BB">$columns</span>, <b>&</b><span style="color: #0000BB">$params</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table that new rows will be inserted into.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$columns</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="yii-db-query.html">yii\db\Query</a></td>
+                  <td class="param-desc-col"><p>The column data (name =&gt; value) to be inserted into the table or instance
+of <span class="broken-link">\yii\db\mssql\yii\db\Query</span> to perform INSERT INTO ... SELECT SQL statement.
+Passing of <span class="broken-link">\yii\db\mssql\yii\db\Query</span> is available since version 2.0.11.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The binding parameters that will be generated by this method.
+They should be bound to the DB command later.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The INSERT SQL</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="isOldMssql()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#isOldMssql()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L311" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L311" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        isOldMssql()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+            <div class="doc-description deprecated">
+            <strong>Deprecated since version 2.0.14: Use <a href="yii-db-schema.html#getServerVersion()-detail">yii\db\mssql\Schema::getServerVersion()</a> with <span class="broken-link">\version_compare()</span>.</strong>
+        </div>
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-db-mssql-querybuilder.html#isOldMssql()-detail">isOldMssql</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the version of the MSSQL being used is older than 2012.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-db-exception.html">yii\db\Exception</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="newBuildOrderByAndLimit()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#newBuildOrderByAndLimit()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L86" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L86" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        newBuildOrderByAndLimit()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Builds the ORDER BY/LIMIT/OFFSET clauses for SQL SERVER 2012 or newer.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#newBuildOrderByAndLimit()-detail">newBuildOrderByAndLimit</a></strong> ( <span style="color: #0000BB">$sql</span>, <span style="color: #0000BB">$orderBy</span>, <span style="color: #0000BB">$limit</span>, <span style="color: #0000BB">$offset</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$sql</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The existing SQL (without ORDER BY/LIMIT/OFFSET)</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$orderBy</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The order by columns. See <a href="yii-db-querytrait.html#orderBy()-detail">yii\db\Query::orderBy()</a> for more details on how to specify this parameter.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$limit</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The limit number. See <a href="yii-db-querytrait.html#limit()-detail">yii\db\Query::limit()</a> for more details.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$offset</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The offset number. See <a href="yii-db-querytrait.html#offset()-detail">yii\db\Query::offset()</a> for more details.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL completed with ORDER BY/LIMIT/OFFSET (if any)</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="oldBuildOrderByAndLimit()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#oldBuildOrderByAndLimit()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L113" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L113" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        oldBuildOrderByAndLimit()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Builds the ORDER BY/LIMIT/OFFSET clauses for SQL SERVER 2005 to 2008.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#oldBuildOrderByAndLimit()-detail">oldBuildOrderByAndLimit</a></strong> ( <span style="color: #0000BB">$sql</span>, <span style="color: #0000BB">$orderBy</span>, <span style="color: #0000BB">$limit</span>, <span style="color: #0000BB">$offset</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$sql</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The existing SQL (without ORDER BY/LIMIT/OFFSET)</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$orderBy</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The order by columns. See <a href="yii-db-querytrait.html#orderBy()-detail">yii\db\Query::orderBy()</a> for more details on how to specify this parameter.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$limit</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The limit number. See <a href="yii-db-querytrait.html#limit()-detail">yii\db\Query::limit()</a> for more details.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$offset</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The offset number. See <a href="yii-db-querytrait.html#offset()-detail">yii\db\Query::offset()</a> for more details.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL completed with ORDER BY/LIMIT/OFFSET (if any)</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renameColumn()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#renameColumn()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L153" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L153" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renameColumn()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Builds a SQL statement for renaming a column.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#renameColumn()-detail">renameColumn</a></strong> ( <span style="color: #0000BB">$table</span>, <span style="color: #0000BB">$oldName</span>, <span style="color: #0000BB">$newName</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table whose column is to be renamed. The name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$oldName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The old name of the column. The name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$newName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The new name of the column. The name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL statement for renaming a DB column.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renameTable()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#renameTable()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L141" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L141" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renameTable()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Builds a SQL statement for renaming a DB table.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#renameTable()-detail">renameTable</a></strong> ( <span style="color: #0000BB">$oldName</span>, <span style="color: #0000BB">$newName</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$oldName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table to be renamed. The name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$newName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The new table name. The name will be properly quoted by the method.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL statement for renaming a DB table.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="resetSequence()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#resetSequence()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L209" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L209" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        resetSequence()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates a SQL statement for resetting the sequence value of a table's primary key.</strong></p>
+
+        <p>The sequence will be reset such that the primary key of the next new row inserted
+will have the specified value or 1.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#resetSequence()-detail">resetSequence</a></strong> ( <span style="color: #0000BB">$tableName</span>, <span style="color: #0000BB">$value&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$tableName</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The name of the table whose primary key sequence will be reset</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$value</span></td>
+                  <td class="param-type-col">mixed</td>
+                  <td class="param-desc-col"><p>The value for the primary key of the next new row inserted. If this is not set,
+the next new row's primary key will have a value 1.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SQL statement for resetting sequence</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidargumentexception.html">yii\base\InvalidArgumentException</a></td>
+                  <td class="param-desc-col"><p>if the table does not exist or there is no sequence associated with the table.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="selectExists()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#selectExists()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L320" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L320" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        selectExists()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.0.8)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates a SELECT EXISTS() SQL statement.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#selectExists()-detail">selectExists</a></strong> ( <span style="color: #0000BB">$rawSql</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$rawSql</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The subquery in a raw form to select from.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The SELECT EXISTS() SQL statement.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="update()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#update()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L416" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L416" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        update()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates an UPDATE SQL statement.</strong></p>
+
+        <p>For example,</p>
+<pre><code class="hljs php language-php"><span class="hljs-variable">$params</span> = [];
+<span class="hljs-variable">$sql</span> = <span class="hljs-variable">$queryBuilder</span>-&gt;update(<span class="hljs-string">'user'</span>, [<span class="hljs-string">'status'</span> =&gt; <span class="hljs-number">1</span>], <span class="hljs-string">'age &gt; 30'</span>, <span class="hljs-variable">$params</span>);
+</code></pre>
+<p>The method will properly escape the table and column names.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#update()-detail">update</a></strong> ( <span style="color: #0000BB">$table</span>, <span style="color: #0000BB">$columns</span>, <span style="color: #0000BB">$condition</span>, <b>&</b><span style="color: #0000BB">$params</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table to be updated.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$columns</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The column data (name =&gt; value) to be updated.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$condition</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The condition that will be put in the WHERE part. Please
+refer to <span class="broken-link">\yii\db\mssql\Query::where()</span> on how to specify condition.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The binding parameters that will be modified by this method
+so that they can be bound to the DB command later.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The UPDATE SQL</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="upsert()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-db-mssql-querybuilder.html#upsert()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/db/mssql/QueryBuilder.php#L361" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/db/mssql/QueryBuilder.php#L361" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        upsert()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates an SQL statement to insert rows into a database table if
+they do not already exist (matching unique constraints),
+or update them if they do.</strong></p>
+
+        <p>For example,</p>
+<pre><code class="hljs php language-php"><span class="hljs-variable">$sql</span> = <span class="hljs-variable">$queryBuilder</span>-&gt;upsert(<span class="hljs-string">'pages'</span>, [
+    <span class="hljs-string">'name'</span> =&gt; <span class="hljs-string">'Front page'</span>,
+    <span class="hljs-string">'url'</span> =&gt; <span class="hljs-string">'http://example.com/'</span>, <span class="hljs-comment">// url is unique</span>
+    <span class="hljs-string">'visits'</span> =&gt; <span class="hljs-number">0</span>,
+], [
+    <span class="hljs-string">'visits'</span> =&gt; <span class="hljs-keyword">new</span> \yii\db\Expression(<span class="hljs-string">'visits + 1'</span>),
+], <span class="hljs-variable">$params</span>);
+</code></pre>
+<p>The method will properly escape the table and column names.</p>
+
+        <p>See also:</p><ul><li><a href="https://docs.microsoft.com/en-us/sql/t-sql/statements/merge-transact-sql">https://docs.microsoft.com/en-us/sql/t-sql/statements/merge-transact-sql</a></li><li><a href="http://weblogs.sqlteam.com/dang/archive/2009/01/31/UPSERT-Race-Condition-With-MERGE.aspx">http://weblogs.sqlteam.com/dang/archive/2009/01/31/UPSERT-Race-Condition-With-MERGE.aspx</a></li></ul>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-db-mssql-querybuilder.html#upsert()-detail">upsert</a></strong> ( <span style="color: #0000BB">$table</span>, <span style="color: #0000BB">$insertColumns</span>, <span style="color: #0000BB">$updateColumns</span>, <b>&</b><span style="color: #0000BB">$params</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$table</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The table that new rows will be inserted into/updated in.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$insertColumns</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="yii-db-query.html">yii\db\Query</a></td>
+                  <td class="param-desc-col"><p>The column data (name =&gt; value) to be inserted into the table or instance
+of <span class="broken-link">\yii\db\mssql\Query</span> to perform <code>INSERT INTO ... SELECT</code> SQL statement.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$updateColumns</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>The column data (name =&gt; value) to be updated if they already exist.
+If <code>true</code> is passed, the column data will be updated to match the insert column data.
+If <code>false</code> is passed, no update will be performed if the column data already exists.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The binding parameters that will be generated by this method.
+They should be bound to the DB command later.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The resulting SQL.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-notsupportedexception.html">yii\base\NotSupportedException</a></td>
+                  <td class="param-desc-col"><p>if this is not supported by the underlying DBMS.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Tue, 14 Aug 2018 17:48:19 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

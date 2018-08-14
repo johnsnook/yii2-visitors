@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/5746cc4f/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/cb07cf8/jssearch.js"></script>    <title>Base, yii\debug\components\search\matchers\Base - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w16653" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w16653-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w16653-collapse" class="collapse navbar-collapse"><ul id="w16654" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w16655" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-16644" data-toggle="collapse" data-parent="#navigation">yii\debug <b class="caret"></b></a><div id="navigation-16644" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-debugasset.html">DebugAsset</a>
+<a class="list-group-item" href="./yii-debug-flattenexception.html">FlattenException</a>
+<a class="list-group-item" href="./yii-debug-logtarget.html">LogTarget</a>
+<a class="list-group-item" href="./yii-debug-module.html">Module</a>
+<a class="list-group-item" href="./yii-debug-panel.html">Panel</a>
+<a class="list-group-item" href="./yii-debug-timelineasset.html">TimelineAsset</a>
+<a class="list-group-item" href="./yii-debug-userswitchasset.html">UserswitchAsset</a></div>
+<a class="list-group-item" href="#navigation-16645" data-toggle="collapse" data-parent="#navigation">yii\debug\actions\db <b class="caret"></b></a><div id="navigation-16645" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-actions-db-explainaction.html">ExplainAction</a></div>
+<a class="list-group-item" href="#navigation-16646" data-toggle="collapse" data-parent="#navigation">yii\debug\components\search <b class="caret"></b></a><div id="navigation-16646" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-components-search-filter.html">Filter</a></div>
+<a class="list-group-item active" href="#navigation-16647" data-toggle="collapse" data-parent="#navigation">yii\debug\components\search\matchers <b class="caret"></b></a><div id="navigation-16647" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-debug-components-search-matchers-base.html">Base</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-greaterthan.html">GreaterThan</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-greaterthanorequal.html">GreaterThanOrEqual</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-lowerthan.html">LowerThan</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-matcherinterface.html">MatcherInterface</a>
+<a class="list-group-item" href="./yii-debug-components-search-matchers-sameas.html">SameAs</a></div>
+<a class="list-group-item" href="#navigation-16648" data-toggle="collapse" data-parent="#navigation">yii\debug\controllers <b class="caret"></b></a><div id="navigation-16648" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-controllers-defaultcontroller.html">DefaultController</a>
+<a class="list-group-item" href="./yii-debug-controllers-usercontroller.html">UserController</a></div>
+<a class="list-group-item" href="#navigation-16649" data-toggle="collapse" data-parent="#navigation">yii\debug\models <b class="caret"></b></a><div id="navigation-16649" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-models-router.html">Router</a>
+<a class="list-group-item" href="./yii-debug-models-userswitch.html">UserSwitch</a></div>
+<a class="list-group-item" href="#navigation-16650" data-toggle="collapse" data-parent="#navigation">yii\debug\models\search <b class="caret"></b></a><div id="navigation-16650" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-models-search-base.html">Base</a>
+<a class="list-group-item" href="./yii-debug-models-search-db.html">Db</a>
+<a class="list-group-item" href="./yii-debug-models-search-debug.html">Debug</a>
+<a class="list-group-item" href="./yii-debug-models-search-event.html">Event</a>
+<a class="list-group-item" href="./yii-debug-models-search-log.html">Log</a>
+<a class="list-group-item" href="./yii-debug-models-search-mail.html">Mail</a>
+<a class="list-group-item" href="./yii-debug-models-search-profile.html">Profile</a>
+<a class="list-group-item" href="./yii-debug-models-search-user.html">User</a>
+<a class="list-group-item" href="./yii-debug-models-search-usersearchinterface.html">UserSearchInterface</a></div>
+<a class="list-group-item" href="#navigation-16651" data-toggle="collapse" data-parent="#navigation">yii\debug\models\timeline <b class="caret"></b></a><div id="navigation-16651" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-models-timeline-dataprovider.html">DataProvider</a>
+<a class="list-group-item" href="./yii-debug-models-timeline-search.html">Search</a>
+<a class="list-group-item" href="./yii-debug-models-timeline-svg.html">Svg</a></div>
+<a class="list-group-item" href="#navigation-16652" data-toggle="collapse" data-parent="#navigation">yii\debug\panels <b class="caret"></b></a><div id="navigation-16652" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-debug-panels-assetpanel.html">AssetPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-configpanel.html">ConfigPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-dbpanel.html">DbPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-eventpanel.html">EventPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-logpanel.html">LogPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-mailpanel.html">MailPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-profilingpanel.html">ProfilingPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-requestpanel.html">RequestPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-routerpanel.html">RouterPanel</a>
+<a class="list-group-item" href="./yii-debug-panels-timelinepanel.html">TimelinePanel</a>
+<a class="list-group-item" href="./yii-debug-panels-userpanel.html">UserPanel</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Abstract Class yii\debug\components\search\matchers\Base</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-debug-components-search-matchers-base.html">yii\debug\components\search\matchers\Base</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a>, <a href="yii-debug-components-search-matchers-matcherinterface.html">yii\debug\components\search\matchers\MatcherInterface</a></td></tr>
+                        <tr><th>Subclasses</th><td><a href="yii-debug-components-search-matchers-greaterthan.html">yii\debug\components\search\matchers\GreaterThan</a>, <a href="yii-debug-components-search-matchers-greaterthanorequal.html">yii\debug\components\search\matchers\GreaterThanOrEqual</a>, <a href="yii-debug-components-search-matchers-lowerthan.html">yii\debug\components\search\matchers\LowerThan</a>, <a href="yii-debug-components-search-matchers-sameas.html">yii\debug\components\search\matchers\SameAs</a></td></tr>
+                        <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-debug/blob/master/components/search/matchers/Base.php">https://github.com/yiisoft/yii2-debug/blob/master/components/search/matchers/Base.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>Base class for matchers that are used in a filter.</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+            <tr class="inherited" id="$behaviors">
+        <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
+        <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
+        <td>List of behaviors attached to this component</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="$value">
+        <td><a href="yii-debug-components-search-matchers-base.html#$value-detail">$value</a></td>
+        <td>mixed</td>
+        <td></td>
+        <td><a href="yii-debug-components-search-matchers-base.html">yii\debug\components\search\matchers\Base</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-property">
+<h2>Protected Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$baseValue">
+        <td><a href="yii-debug-components-search-matchers-base.html#$baseValue-detail">$baseValue</a></td>
+        <td>mixed</td>
+        <td>Base value to check</td>
+        <td><a href="yii-debug-components-search-matchers-base.html">yii\debug\components\search\matchers\Base</a></td>
+    </tr>
+            </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-component.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-baseobject.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-component.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-component.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-component.html#__set()-detail">__set()</a></td>
+        <td>Sets the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-component.html#__unset()-detail">__unset()</a></td>
+        <td>Sets a component property to be null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="behaviors()">
+        <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-component.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-component.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-component.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined for this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="hasValue()">
+        <td><a href="yii-debug-components-search-matchers-base.html#hasValue()-detail">hasValue()</a></td>
+        <td>Checks if base value is set</td>
+        <td><a href="yii-debug-components-search-matchers-base.html">yii\debug\components\search\matchers\Base</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-base-baseobject.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="match()">
+        <td><a href="yii-debug-components-search-matchers-matcherinterface.html#match()-detail">match()</a></td>
+        <td>Checks if the value passed matches base value.</td>
+        <td><a href="yii-debug-components-search-matchers-matcherinterface.html">yii\debug\components\search\matchers\MatcherInterface</a></td>
+    </tr>
+            <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="setValue()">
+        <td><a href="yii-debug-components-search-matchers-base.html#setValue()-detail">setValue()</a></td>
+        <td>Sets base value to match against</td>
+        <td><a href="yii-debug-components-search-matchers-base.html">yii\debug\components\search\matchers\Base</a></td>
+    </tr>
+            <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$baseValue-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-components-search-matchers-base.html#$baseValue-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/components/search/matchers/Base.php#L23" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/components/search/matchers/Base.php#L23" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $baseValue        <span class="detail-header-tag small">
+            protected                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Base value to check</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">protected</span> <span class="signature-type">mixed</span> <a href="yii-debug-components-search-matchers-base.html#$baseValue-detail">$baseValue</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$value-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-components-search-matchers-base.html#$value-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/components/search/matchers/Base.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/components/search/matchers/Base.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $value        <span class="detail-header-tag small">
+            public                                     <em>write-only</em>             property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-debug-components-search-matchers-base.html#setValue()-detail">setValue</a></strong> ( <span style="color: #0000BB">$value</span> )</div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="hasValue()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-components-search-matchers-base.html#hasValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/components/search/matchers/Base.php#L37" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/components/search/matchers/Base.php#L37" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        hasValue()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Checks if base value is set</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-debug-components-search-matchers-base.html#hasValue()-detail">hasValue</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>If base value is set</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setValue()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-debug-components-search-matchers-base.html#setValue()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-debug/edit/master/components/search/matchers/Base.php#L29" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-debug/blob/master/components/search/matchers/Base.php#L29" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        setValue()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Sets base value to match against</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-debug-components-search-matchers-base.html#setValue()-detail">setValue</a></strong> ( <span style="color: #0000BB">$value</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$value</span></td>
+                  <td class="param-type-col">mixed</td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Tue, 14 Aug 2018 17:48:44 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>
