@@ -1,6 +1,7 @@
 <?php
 
 /**
+ * This file is part of the Yii2 extension module, yii2-visitor
  * @author John Snook
  * @date Aug 4, 2018
  * @license https://snooky.biz/site/license
@@ -17,42 +18,42 @@ class AccessRule extends BaseAccessRule {
     /**
      * @var array list of user ip that this rule applies to.
      * If not set or empty, it means this rule applies to all ips.
-     * @see [[Visitor::ip]]
+     * @see [[\johnsnook\visitor\models\Visitor::ip]]
      */
     public $ip;
 
     /**
      * @var array list of user cities that this rule applies to.
      * If not set or empty, it means this rule applies to all cities.
-     * @see [[Visitor::city]]
+     * @see [[\johnsnook\visitor\models\Visitor::city]]
      */
     public $city;
 
     /**
      * @var array list of user regions that this rule applies to.
      * If not set or empty, it means this rule applies to all regions.
-     * @see [[Visitor::region]]
+     * @see [[\johnsnook\visitor\models\Visitor::region]]
      */
     public $region;
 
     /**
      * @var array list of user countries that this rule applies to.
      * If not set or empty, it means this rule applies to all countries.
-     * @see [[Visitor::country]]
+     * @see [[\johnsnook\visitor\models\Visitor::country]]
      */
     public $country;
 
     /**
      * @var array list of user proxies that this rule applies to.
      * If not set or empty, it means this rule applies to all proxies.
-     * @see [[Visitor::proxy]]
+     * @see [[\johnsnook\visitor\models\Visitor::proxy]]
      */
     public $proxy;
 
     /**
      * @var array list of user hat_color that this rule applies to.
      * If not set or empty, it means this rule applies to all hat_colors.
-     * @see [[Visitor::proxy]]
+     * @see [[\johnsnook\visitor\models\Visitor::proxy]]
      */
     public $hat_color;
 
@@ -64,8 +65,6 @@ class AccessRule extends BaseAccessRule {
      * @return bool|null `true` if the user is allowed, `false` if the user is denied, `null` if the rule does not apply to the user
      */
     public function allows($action, $user, $request) {
-        #$visitor = \Yii::$app->getModule('visitor')->visitor;
-
         $m1 = $this->matchIP($request->getUserIP()) && $this->matchCity($user->city);
         $m2 = $this->matchRegion($user->region) && $this->matchCountry($user->country);
         $m3 = $this->matchProxy($user->proxy) && $this->matchHatColor($user->hat_color);
@@ -77,11 +76,6 @@ class AccessRule extends BaseAccessRule {
 
             return $this->allow ? true : false;
         }
-//        else {
-//            if ($this->matchAction($action) && $this->matchRole($user) && $this->matchIP($request->getUserIP()) && $this->matchVerb($request->getMethod()) && $this->matchController($action->controller) && $this->matchCustom($action)) {
-//                return $this->allow ? true : false;
-//            }
-//        }
         return null;
     }
 

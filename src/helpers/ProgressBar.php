@@ -14,9 +14,9 @@ namespace johnsnook\visitor\helpers;
 use yii\helpers\Console;
 
 /**
- * Description of ProgressBar
+ * ProgressBar improves upon the Yii2 Console progress bar functions with better
+ * ETA calculation
  *
- * @author John
  */
 class ProgressBar extends \yii\base\Object {
 
@@ -33,48 +33,35 @@ class ProgressBar extends \yii\base\Object {
     private $progressEtaLastDone = 0;
     private $progressEtaLastUpdate;
 
-    public function __construct($config) {
-        parent::__construct($config);
-    }
-
     /**
      * Starts display of a progress bar on screen.
      *
-     * This bar will be updated by [[update()]] and my be ended by [[endProgress()]].
+     * This bar will be updated by [[update()]] and my be ended by [[end()]].
      *
      * The following example shows a simple usage of a progress bar:
      *
      * ```php
-     * Console::startProgress(0, 1000);
+     * ProgressBar::start(0, 1000);
      * for ($n = 1; $n <= 1000; $n++) {
      *     usleep(1000);
-     *     Console::update($n, 1000);
+     *     ProgressBar::update($n, 1000);
      * }
-     * Console::endProgress();
+     * ProgressBar::end();
      * ```
      *
      * Git clone like progress (showing only status information):
      * ```php
-     * Console::startProgress(0, 1000, 'Counting objects: ', false);
+     * ProgressBar::start(1000, false);
      * for ($n = 1; $n <= 1000; $n++) {
      *     usleep(1000);
-     *     Console::update($n, 1000);
+     *     ProgressBar::update($n, 1000);
      * }
-     * Console::endProgress("progress." . PHP_EOL);
+     * ProgressBar::end("progress." . PHP_EOL);
      * ```
      *
-     * @param int $progress the number of items that are completed.
-     * @param int $this->total the total value of items that are to be done.
-     * @param string $prefix an optional string to display before the progress bar.
-     * Default to empty string which results in no prefix to be displayed.
-     * @param int|bool $width optional width of the progressbar. This can be an integer representing
-     * the number of characters to display for the progress bar or a float between 0 and 1 representing the
-     * percentage of screen with the progress bar may take. It can also be set to false to disable the
-     * bar and only show progress information like percent, number of items and ETA.
-     * If not set, the bar will be as wide as the screen. Screen size will be detected using [[getScreenSize()]].
-     * @see startProgress
+     * @param int $total the total value of items that are to be done.
      * @see update
-     * @see endProgress
+     * @see end
      */
     public function start($total = null) {
         if (!is_null($total)) {
@@ -90,8 +77,15 @@ class ProgressBar extends \yii\base\Object {
         $this->eta(0, 0);
     }
 
+    /**
+     *
+     * @staticvar int $startTime
+     * @param int $position
+     * @param int $total
+     * @return int
+     */
     private function eta($position, $total) {
-        static $startTime; //TimeType
+        static $startTime = 0; //TimeType
 
         if ($position == 0) {
             $startTime = time();
@@ -107,12 +101,8 @@ class ProgressBar extends \yii\base\Object {
      * Updates a progress bar that has been started by [[startProgress()]].
      *
      * @param int $progress the number of items that are completed.
-     * @param int $this->total the total value of items that are to be done.
-     * @param string $prefix an optional string to display before the progress bar.
-     * Defaults to null meaning the prefix specified by [[startProgress()]] will be used.
-     * If prefix is specified it will update the prefix that will be used by later calls.
-     * @see startProgress
-     * @see endProgress
+     * @see start
+     * @see end
      */
     public function update($progress) {
         $this->progress = $progress;
@@ -154,8 +144,9 @@ class ProgressBar extends \yii\base\Object {
             $info .= sprintf(' ETA: %s', gmdate("H:i:s", $this->progressEta));
         }
 
-        if ($this->infoColor !== null)
+        if ($this->infoColor !== null) {
             $info = Console::ansiFormat($info, $this->infoColor);
+        }
 
         // Number extra characters outputted. These are opening [, closing ], and space before info
         // Since Windows uses \r\n\ for line endings, there's one more in the case
@@ -201,7 +192,7 @@ class ProgressBar extends \yii\base\Object {
      * @see startProgress
      * @see update
      */
-    public function endProgress($remove = false, $keepPrefix = true) {
+    public function end($remove = false, $keepPrefix = true) {
         Console::saveCursorPosition();
         Console::moveCursorTo(1, $this->lineNumber);
         if ($remove === false) {

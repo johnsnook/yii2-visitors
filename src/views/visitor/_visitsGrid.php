@@ -18,18 +18,18 @@ use johnsnook\visitor\widgets\LinkPager;
 
 $visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
 
-if ($visitor->bootstrapCssVersion === 4) {
-    $pager = 'johnsnook\visitor\widgets\LinkPager';
-} else {
-    $pager = 'yii\widgets\LinkPager';
-}
+//if ($visitor->bootstrapCssVersion === 4) {
+//    $pager = 'johnsnook\visitor\widgets\LinkPager';
+//} else {
+$pager = 'yii\widgets\LinkPager';
+//}
 
 
 echo GridView::widget([
     'dataProvider' => $dataProvider,
     'filterModel' => $searchModel,
     'filterRowOptions' => ['style' => 'visibility: collapse'],
-    'pager' => ['class' => $pager],
+//    'pager' => ['class' => $pager],
     'tableOptions' => ['class' => 'table table-striped table-sm'],
     'columns' => [
         [

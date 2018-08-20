@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/40113240/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/6d599862/solarized_light.css" rel="stylesheet">
+<link href="./assets/5d9d0765/style.css" rel="stylesheet">
+<script src="./assets/6147b175/jquery.js"></script>
+<script src="./assets/40113240/js/bootstrap.js"></script>
+<script src="./assets/f875d911/jssearch.js"></script>    <title>ClientInterface, yii\authclient\ClientInterface - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w20841" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w20841-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w20841-collapse" class="collapse navbar-collapse"><ul id="w20842" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w20843" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-swiftmailer-index.html" tabindex="-1">swiftmailer</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-20837" data-toggle="collapse" data-parent="#navigation">yii\authclient <b class="caret"></b></a><div id="navigation-20837" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-authclient-authaction.html">AuthAction</a>
+<a class="list-group-item" href="./yii-authclient-baseclient.html">BaseClient</a>
+<a class="list-group-item" href="./yii-authclient-baseoauth.html">BaseOAuth</a>
+<a class="list-group-item active" href="./yii-authclient-clientinterface.html">ClientInterface</a>
+<a class="list-group-item" href="./yii-authclient-collection.html">Collection</a>
+<a class="list-group-item" href="./yii-authclient-invalidresponseexception.html">InvalidResponseException</a>
+<a class="list-group-item" href="./yii-authclient-oauth1.html">OAuth1</a>
+<a class="list-group-item" href="./yii-authclient-oauth2.html">OAuth2</a>
+<a class="list-group-item" href="./yii-authclient-oauthtoken.html">OAuthToken</a>
+<a class="list-group-item" href="./yii-authclient-openid.html">OpenId</a>
+<a class="list-group-item" href="./yii-authclient-openidconnect.html">OpenIdConnect</a>
+<a class="list-group-item" href="./yii-authclient-sessionstatestorage.html">SessionStateStorage</a>
+<a class="list-group-item" href="./yii-authclient-statestorageinterface.html">StateStorageInterface</a></div>
+<a class="list-group-item" href="#navigation-20838" data-toggle="collapse" data-parent="#navigation">yii\authclient\clients <b class="caret"></b></a><div id="navigation-20838" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-authclient-clients-facebook.html">Facebook</a>
+<a class="list-group-item" href="./yii-authclient-clients-github.html">GitHub</a>
+<a class="list-group-item" href="./yii-authclient-clients-google.html">Google</a>
+<a class="list-group-item" href="./yii-authclient-clients-googlehybrid.html">GoogleHybrid</a>
+<a class="list-group-item" href="./yii-authclient-clients-linkedin.html">LinkedIn</a>
+<a class="list-group-item" href="./yii-authclient-clients-live.html">Live</a>
+<a class="list-group-item" href="./yii-authclient-clients-twitter.html">Twitter</a>
+<a class="list-group-item" href="./yii-authclient-clients-twitteroauth2.html">TwitterOAuth2</a>
+<a class="list-group-item" href="./yii-authclient-clients-vkontakte.html">VKontakte</a>
+<a class="list-group-item" href="./yii-authclient-clients-yandex.html">Yandex</a></div>
+<a class="list-group-item" href="#navigation-20839" data-toggle="collapse" data-parent="#navigation">yii\authclient\signature <b class="caret"></b></a><div id="navigation-20839" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-authclient-signature-basemethod.html">BaseMethod</a>
+<a class="list-group-item" href="./yii-authclient-signature-hmacsha.html">HmacSha</a>
+<a class="list-group-item" href="./yii-authclient-signature-hmacsha1.html">HmacSha1</a>
+<a class="list-group-item" href="./yii-authclient-signature-plaintext.html">PlainText</a>
+<a class="list-group-item" href="./yii-authclient-signature-rsasha.html">RsaSha</a>
+<a class="list-group-item" href="./yii-authclient-signature-rsasha1.html">RsaSha1</a></div>
+<a class="list-group-item" href="#navigation-20840" data-toggle="collapse" data-parent="#navigation">yii\authclient\widgets <b class="caret"></b></a><div id="navigation-20840" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-authclient-widgets-authchoice.html">AuthChoice</a>
+<a class="list-group-item" href="./yii-authclient-widgets-authchoiceasset.html">AuthChoiceAsset</a>
+<a class="list-group-item" href="./yii-authclient-widgets-authchoiceitem.html">AuthChoiceItem</a>
+<a class="list-group-item" href="./yii-authclient-widgets-authchoicestyleasset.html">AuthChoiceStyleAsset</a>
+<a class="list-group-item" href="./yii-authclient-widgets-googleplusbutton.html">GooglePlusButton</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Interface yii\authclient\ClientInterface</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+                                <tr><th>Implemented by</th><td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a>, <a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a>, <a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a>, <a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a>, <a href="yii-authclient-openid.html">yii\authclient\OpenId</a>, <a href="yii-authclient-openidconnect.html">yii\authclient\OpenIdConnect</a>, <a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a>, <a href="yii-authclient-clients-github.html">yii\authclient\clients\GitHub</a>, <a href="yii-authclient-clients-google.html">yii\authclient\clients\Google</a>, <a href="yii-authclient-clients-googlehybrid.html">yii\authclient\clients\GoogleHybrid</a>, <a href="yii-authclient-clients-linkedin.html">yii\authclient\clients\LinkedIn</a>, <a href="yii-authclient-clients-live.html">yii\authclient\clients\Live</a>, <a href="yii-authclient-clients-twitter.html">yii\authclient\clients\Twitter</a>, <a href="yii-authclient-clients-twitteroauth2.html">yii\authclient\clients\TwitterOAuth2</a>, <a href="yii-authclient-clients-vkontakte.html">yii\authclient\clients\VKontakte</a>, <a href="yii-authclient-clients-yandex.html">yii\authclient\clients\Yandex</a></td></tr>
+                    <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-authclient/blob/master/ClientInterface.php">https://github.com/yiisoft/yii2-authclient/blob/master/ClientInterface.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>ClientInterface declares basic interface all Auth clients should follow.</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="getId()">
+        <td><a href="yii-authclient-clientinterface.html#getId()-detail">getId()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr id="getName()">
+        <td><a href="yii-authclient-clientinterface.html#getName()-detail">getName()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr id="getTitle()">
+        <td><a href="yii-authclient-clientinterface.html#getTitle()-detail">getTitle()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr id="getUserAttributes()">
+        <td><a href="yii-authclient-clientinterface.html#getUserAttributes()-detail">getUserAttributes()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr id="getViewOptions()">
+        <td><a href="yii-authclient-clientinterface.html#getViewOptions()-detail">getViewOptions()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr id="setId()">
+        <td><a href="yii-authclient-clientinterface.html#setId()-detail">setId()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr id="setName()">
+        <td><a href="yii-authclient-clientinterface.html#setName()-detail">setName()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr id="setTitle()">
+        <td><a href="yii-authclient-clientinterface.html#setTitle()-detail">setTitle()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="getId()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clientinterface.html#getId()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/ClientInterface.php#L26" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/ClientInterface.php#L26" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getId()
+        <span class="detail-header-tag small">
+            public            abstract                        method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public abstract</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-clientinterface.html#getId()-detail">getId</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Service id</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clientinterface.html#getName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/ClientInterface.php#L31" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/ClientInterface.php#L31" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getName()
+        <span class="detail-header-tag small">
+            public            abstract                        method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public abstract</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-clientinterface.html#getName()-detail">getName</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Service name.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getTitle()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clientinterface.html#getTitle()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/ClientInterface.php#L41" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/ClientInterface.php#L41" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getTitle()
+        <span class="detail-header-tag small">
+            public            abstract                        method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public abstract</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-clientinterface.html#getTitle()-detail">getTitle</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Service title.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getUserAttributes()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clientinterface.html#getUserAttributes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/ClientInterface.php#L51" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/ClientInterface.php#L51" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getUserAttributes()
+        <span class="detail-header-tag small">
+            public            abstract                        method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public abstract</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-authclient-clientinterface.html#getUserAttributes()-detail">getUserAttributes</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>List of user attributes</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getViewOptions()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clientinterface.html#getViewOptions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/ClientInterface.php#L56" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/ClientInterface.php#L56" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getViewOptions()
+        <span class="detail-header-tag small">
+            public            abstract                        method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public abstract</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-authclient-clientinterface.html#getViewOptions()-detail">getViewOptions</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>View options in format: optionName =&gt; optionValue</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setId()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clientinterface.html#setId()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/ClientInterface.php#L21" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/ClientInterface.php#L21" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        setId()
+        <span class="detail-header-tag small">
+            public            abstract                        method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public abstract</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-clientinterface.html#setId()-detail">setId</a></strong> ( <span style="color: #0000BB">$id</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$id</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Service id.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clientinterface.html#setName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/ClientInterface.php#L36" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/ClientInterface.php#L36" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        setName()
+        <span class="detail-header-tag small">
+            public            abstract                        method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public abstract</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-clientinterface.html#setName()-detail">setName</a></strong> ( <span style="color: #0000BB">$name</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$name</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Service name.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setTitle()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clientinterface.html#setTitle()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/ClientInterface.php#L46" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/ClientInterface.php#L46" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        setTitle()
+        <span class="detail-header-tag small">
+            public            abstract                        method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public abstract</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-clientinterface.html#setTitle()-detail">setTitle</a></strong> ( <span style="color: #0000BB">$title</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$title</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Service title.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+</div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Wed, 15 Aug 2018 19:10:06 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

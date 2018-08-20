@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/f194ff92/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/404086f/jssearch.js"></script>    <title>Module, johnsnook\visitor\Module - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w16995" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w16995-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w16995-collapse" class="collapse navbar-collapse"><ul id="w16996" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w16997" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-swiftmailer-index.html" tabindex="-1">swiftmailer</a></li></ul></li>
+<li><a href="./guide-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-16984" data-toggle="collapse" data-parent="#navigation">Not namespaced classes <b class="caret"></b></a><div id="navigation-16984" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii.html">Yii</a>
+<a class="list-group-item" href="./yiirequirementchecker.html">YiiRequirementChecker</a></div>
+<a class="list-group-item" href="#navigation-16985" data-toggle="collapse" data-parent="#navigation">dektrium\user\filters <b class="caret"></b></a><div id="navigation-16985" class="submenu panel-collapse collapse"><a class="list-group-item" href="./dektrium-user-filters-backendfilter.html">BackendFilter</a></div>
+<a class="list-group-item active" href="#navigation-16986" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor <b class="caret"></b></a><div id="navigation-16986" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./johnsnook-visitor-module.html">Module</a></div>
+<a class="list-group-item" href="#navigation-16987" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\assets <b class="caret"></b></a><div id="navigation-16987" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-assets-appasset.html">AppAsset</a>
+<a class="list-group-item" href="./johnsnook-visitor-assets-visitorasset.html">VisitorAsset</a></div>
+<a class="list-group-item" href="#navigation-16988" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\behaviors <b class="caret"></b></a><div id="navigation-16988" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-behaviors-visitorbehavior.html">VisitorBehavior</a></div>
+<a class="list-group-item" href="#navigation-16989" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\commands <b class="caret"></b></a><div id="navigation-16989" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-commands-importcontroller.html">ImportController</a>
+<a class="list-group-item" href="./johnsnook-visitor-commands-servicecontroller.html">ServiceController</a></div>
+<a class="list-group-item" href="#navigation-16990" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\controllers <b class="caret"></b></a><div id="navigation-16990" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-controllers-individualcontroller.html">IndividualController</a>
+<a class="list-group-item" href="./johnsnook-visitor-controllers-visitorcontroller.html">VisitorController</a>
+<a class="list-group-item" href="./johnsnook-visitor-controllers-visitorserviceerrorcontroller.html">VisitorServiceErrorController</a></div>
+<a class="list-group-item" href="#navigation-16991" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\filters <b class="caret"></b></a><div id="navigation-16991" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-filters-accessrule.html">AccessRule</a>
+<a class="list-group-item" href="./johnsnook-visitor-filters-frontendfilter.html">FrontendFilter</a></div>
+<a class="list-group-item" href="#navigation-16992" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\helpers <b class="caret"></b></a><div id="navigation-16992" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-helpers-iphelper.html">IpHelper</a>
+<a class="list-group-item" href="./johnsnook-visitor-helpers-progressbar.html">ProgressBar</a></div>
+<a class="list-group-item" href="#navigation-16993" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\models <b class="caret"></b></a><div id="navigation-16993" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-models-country.html">Country</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitor.html">Visitor</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitoragent.html">VisitorAgent</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitorlog.html">VisitorLog</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitorlogsearch.html">VisitorLogSearch</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitorsearch.html">VisitorSearch</a></div>
+<a class="list-group-item" href="#navigation-16994" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\widgets <b class="caret"></b></a><div id="navigation-16994" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-widgets-card.html">Card</a>
+<a class="list-group-item" href="./johnsnook-visitor-widgets-linkpager.html">LinkPager</a>
+<a class="list-group-item" href="./johnsnook-visitor-widgets-panel.html">Panel</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class johnsnook\visitor\Module</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+                | <a href="#events">Events</a>
+                | <a href="#constants">Constants</a>
+    </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a> &raquo;
+<a href="yii-base-module.html">yii\base\Module</a> &raquo;
+<a href="yii-di-servicelocator.html">yii\di\ServiceLocator</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-bootstrapinterface.html">yii\base\BootstrapInterface</a>, <a href="yii-base-configurable.html">yii\base\Configurable</a></td></tr>
+                                    </table>
+
+<div class="class-description">
+    <p><strong>This is the main module class for the Yii2-ip-freely extension.</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="$aliases">
+        <td><a href="yii-base-module.html#$aliases-detail">$aliases</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>List of path aliases to be defined.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$basePath">
+        <td><a href="yii-base-module.html#$basePath-detail">$basePath</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The root directory of the module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$behaviors">
+        <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
+        <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
+        <td>List of behaviors attached to this component</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="$blackRules">
+        <td><a href="johnsnook-visitor-module.html#$blackRules-detail">$blackRules</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Rules that show the visitor the door</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr id="$blowOff">
+        <td><a href="johnsnook-visitor-module.html#$blowOff-detail">$blowOff</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The route to your blowoff page telling the user to pound sand</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$components">
+        <td><a href="yii-di-servicelocator.html#$components-detail">$components</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The list of the component definitions or the loaded component instances (ID =&gt; definition or instance).</td>
+        <td><a href="yii-di-servicelocator.html">yii\di\ServiceLocator</a></td>
+    </tr>
+            <tr class="inherited" id="$controllerMap">
+        <td><a href="yii-base-module.html#$controllerMap-detail">$controllerMap</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Mapping from controller ID to controller configurations.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$controllerNamespace">
+        <td><a href="yii-base-module.html#$controllerNamespace-detail">$controllerNamespace</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The namespace that controller classes are in.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$controllerPath">
+        <td><a href="yii-base-module.html#$controllerPath-detail">$controllerPath</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The directory that contains the controller classes.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr id="$db">
+        <td><a href="johnsnook-visitor-module.html#$db-detail">$db</a></td>
+        <td>\johnsnook\visitor\Database</td>
+        <td>Connection</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$defaultRoute">
+        <td><a href="yii-base-module.html#$defaultRoute-detail">$defaultRoute</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The default route of this module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr id="$googleMapsApiKey">
+        <td><a href="johnsnook-visitor-module.html#$googleMapsApiKey-detail">$googleMapsApiKey</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Go to <a href="https://developers">https://developers</a>.</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$id">
+        <td><a href="yii-base-module.html#$id-detail">$id</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>An ID that uniquely identifies this module among other modules which have the same <a href="yii-base-module.html#$module-detail">parent</a>.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr id="$ignorables">
+        <td><a href="johnsnook-visitor-module.html#$ignorables-detail">$ignorables</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>These are the controller actions that will not be logged
+<code>
+    [
+        'site'=> ['about', 'contact'],
+    ]
+</code></td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr id="$ipInfoKey">
+        <td><a href="johnsnook-visitor-module.html#$ipInfoKey-detail">$ipInfoKey</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Go to <a href="https://ipinfo">https://ipinfo</a>.</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$layout">
+        <td><a href="yii-base-module.html#$layout-detail">$layout</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>The layout that should be applied for views within this module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$layoutPath">
+        <td><a href="yii-base-module.html#$layoutPath-detail">$layoutPath</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The root directory of layout files.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$module">
+        <td><a href="yii-base-module.html#$module-detail">$module</a></td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+        <td>The parent module of this module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$modules">
+        <td><a href="yii-base-module.html#$modules-detail">$modules</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The modules (indexed by their IDs).</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$params">
+        <td><a href="yii-base-module.html#$params-detail">$params</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Custom module parameters (name =&gt; value).</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr id="$proxyCheckKey">
+        <td><a href="johnsnook-visitor-module.html#$proxyCheckKey-detail">$proxyCheckKey</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Go to <a href="https://proxycheck">https://proxycheck</a>.</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$uniqueId">
+        <td><a href="yii-base-module.html#$uniqueId-detail">$uniqueId</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The unique ID of the module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr id="$urlRules">
+        <td><a href="johnsnook-visitor-module.html#$urlRules-detail">$urlRules</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The rules to be used in URL management.</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$version">
+        <td><a href="yii-base-module.html#$version-detail">$version</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The version of this module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="$viewPath">
+        <td><a href="yii-base-module.html#$viewPath-detail">$viewPath</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The root directory of view files.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr id="$visitor">
+        <td><a href="johnsnook-visitor-module.html#$visitor-detail">$visitor</a></td>
+        <td><a href="johnsnook-visitor-models-visitor.html">johnsnook\visitor\models\Visitor</a></td>
+        <td>The Visitor record of the currently connected particular individual</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr id="$whatsmybrowswerKey">
+        <td><a href="johnsnook-visitor-module.html#$whatsmybrowswerKey-detail">$whatsmybrowswerKey</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Go to <a href="https://proxycheck">https://proxycheck</a>.</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr id="$whiteRules">
+        <td><a href="johnsnook-visitor-module.html#$whiteRules-detail">$whiteRules</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>Rules that welcomes a visitor in</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-component.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-module.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-di-servicelocator.html#__get()-detail">__get()</a></td>
+        <td>Getter magic method.</td>
+        <td><a href="yii-di-servicelocator.html">yii\di\ServiceLocator</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-di-servicelocator.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property value is null.</td>
+        <td><a href="yii-di-servicelocator.html">yii\di\ServiceLocator</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-component.html#__set()-detail">__set()</a></td>
+        <td>Sets the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-component.html#__unset()-detail">__unset()</a></td>
+        <td>Sets a component property to be null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="afterAction()">
+        <td><a href="yii-base-module.html#afterAction()-detail">afterAction()</a></td>
+        <td>This method is invoked right after an action within this module is executed.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="beforeAction()">
+        <td><a href="yii-base-module.html#beforeAction()-detail">beforeAction()</a></td>
+        <td>This method is invoked right before an action within this module is executed.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="behaviors()">
+        <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="bootstrap()">
+        <td><a href="johnsnook-visitor-module.html#bootstrap()-detail">bootstrap()</a></td>
+        <td>Why don't you pull yourself up by the bootstraps like I did by being born
+middle class and having parents who could help pay for college?</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-component.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="clear()">
+        <td><a href="yii-di-servicelocator.html#clear()-detail">clear()</a></td>
+        <td>Removes the component from the locator.</td>
+        <td><a href="yii-di-servicelocator.html">yii\di\ServiceLocator</a></td>
+    </tr>
+            <tr class="inherited" id="createController()">
+        <td><a href="yii-base-module.html#createController()-detail">createController()</a></td>
+        <td>Creates a controller instance based on the given route.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="createControllerByID()">
+        <td><a href="yii-base-module.html#createControllerByID()-detail">createControllerByID()</a></td>
+        <td>Creates a controller based on the given controller ID.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+                <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="get()">
+        <td><a href="yii-base-module.html#get()-detail">get()</a></td>
+        <td>Returns the component instance with the specified ID.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="getBasePath()">
+        <td><a href="yii-base-module.html#getBasePath()-detail">getBasePath()</a></td>
+        <td>Returns the root directory of the module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getComponents()">
+        <td><a href="yii-di-servicelocator.html#getComponents()-detail">getComponents()</a></td>
+        <td>Returns the list of the component definitions or the loaded component instances.</td>
+        <td><a href="yii-di-servicelocator.html">yii\di\ServiceLocator</a></td>
+    </tr>
+            <tr class="inherited" id="getControllerPath()">
+        <td><a href="yii-base-module.html#getControllerPath()-detail">getControllerPath()</a></td>
+        <td>Returns the directory that contains the controller classes according to <a href="yii-base-module.html#$controllerNamespace-detail">$controllerNamespace</a>.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr id="getDb()">
+        <td><a href="johnsnook-visitor-module.html#getDb()-detail">getDb()</a></td>
+        <td></td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr class="inherited" id="getInstance()">
+        <td><a href="yii-base-module.html#getInstance()-detail">getInstance()</a></td>
+        <td>Returns the currently requested instance of this module class.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="getLayoutPath()">
+        <td><a href="yii-base-module.html#getLayoutPath()-detail">getLayoutPath()</a></td>
+        <td>Returns the directory that contains layout view files for this module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="getModule()">
+        <td><a href="yii-base-module.html#getModule()-detail">getModule()</a></td>
+        <td>Retrieves the child module of the specified ID.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="getModules()">
+        <td><a href="yii-base-module.html#getModules()-detail">getModules()</a></td>
+        <td>Returns the sub-modules in this module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="getUniqueId()">
+        <td><a href="yii-base-module.html#getUniqueId()-detail">getUniqueId()</a></td>
+        <td>Returns an ID that uniquely identifies this module among all modules within the current application.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="getVersion()">
+        <td><a href="yii-base-module.html#getVersion()-detail">getVersion()</a></td>
+        <td>Returns current module version.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="getViewPath()">
+        <td><a href="yii-base-module.html#getViewPath()-detail">getViewPath()</a></td>
+        <td>Returns the directory that contains the view files for this module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="has()">
+        <td><a href="yii-base-module.html#has()-detail">has()</a></td>
+        <td>Returns a value indicating whether the locator has the specified component definition or has instantiated the component.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-component.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasModule()">
+        <td><a href="yii-base-module.html#hasModule()-detail">hasModule()</a></td>
+        <td>Checks whether the child module of the specified ID exists.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-component.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined for this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="init()">
+        <td><a href="johnsnook-visitor-module.html#init()-detail">init()</a></td>
+        <td>Initializes the module.</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr id="leGauntlet()">
+        <td><a href="johnsnook-visitor-module.html#leGauntlet()-detail">leGauntlet()</a></td>
+        <td>Called on the BeforeAction event, it logs the current visitor, and if it's
+a new visitor, gather their ipInfo, proxy information and browser info.</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+            <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="runAction()">
+        <td><a href="yii-base-module.html#runAction()-detail">runAction()</a></td>
+        <td>Runs a controller action specified by a route.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="set()">
+        <td><a href="yii-di-servicelocator.html#set()-detail">set()</a></td>
+        <td>Registers a component definition with this locator.</td>
+        <td><a href="yii-di-servicelocator.html">yii\di\ServiceLocator</a></td>
+    </tr>
+            <tr class="inherited" id="setAliases()">
+        <td><a href="yii-base-module.html#setAliases()-detail">setAliases()</a></td>
+        <td>Defines path aliases.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="setBasePath()">
+        <td><a href="yii-base-module.html#setBasePath()-detail">setBasePath()</a></td>
+        <td>Sets the root directory of the module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="setComponents()">
+        <td><a href="yii-di-servicelocator.html#setComponents()-detail">setComponents()</a></td>
+        <td>Registers a set of component definitions in this locator.</td>
+        <td><a href="yii-di-servicelocator.html">yii\di\ServiceLocator</a></td>
+    </tr>
+            <tr class="inherited" id="setInstance()">
+        <td><a href="yii-base-module.html#setInstance()-detail">setInstance()</a></td>
+        <td>Sets the currently requested instance of this module class.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="setLayoutPath()">
+        <td><a href="yii-base-module.html#setLayoutPath()-detail">setLayoutPath()</a></td>
+        <td>Sets the directory that contains the layout files.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="setModule()">
+        <td><a href="yii-base-module.html#setModule()-detail">setModule()</a></td>
+        <td>Adds a sub-module to this module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="setModules()">
+        <td><a href="yii-base-module.html#setModules()-detail">setModules()</a></td>
+        <td>Registers sub-modules in the current module.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="setVersion()">
+        <td><a href="yii-base-module.html#setVersion()-detail">setVersion()</a></td>
+        <td>Sets current module version.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="setViewPath()">
+        <td><a href="yii-base-module.html#setViewPath()-detail">setViewPath()</a></td>
+        <td>Sets the directory that contains the view files.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+            <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                                                    <tr id="checkList()">
+        <td><a href="johnsnook-visitor-module.html#checkList()-detail">checkList()</a></td>
+        <td>Compares properties against a indexed array of arrays of values.  String
+values are compared using stripos, ip values should be in CIDR format.</td>
+        <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+    </tr>
+                            <tr class="inherited" id="defaultVersion()">
+        <td><a href="yii-base-module.html#defaultVersion()-detail">defaultVersion()</a></td>
+        <td>Returns default module version.</td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+                                                                                                                                                            </table>
+</div>
+
+<a id="events"></a>
+<div class="summary doc-event">
+    <h2>Events</h2>
+
+    <p><a href="#" class="toggle">Hide inherited events</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-event" />
+        <col class="col-type" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Event</th><th>Type</th><th>Description</th><th>Defined By</th>
+    </tr>
+        <tr class="inherited" id="EVENT_AFTER_ACTION">
+        <td><a href="yii-base-module.html#EVENT_AFTER_ACTION-detail">EVENT_AFTER_ACTION</a></td>
+        <td><a href="yii-base-actionevent.html">yii\base\ActionEvent</a></td>
+        <td>
+            An event raised after executing a controller action.                    </td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_BEFORE_ACTION">
+        <td><a href="yii-base-module.html#EVENT_BEFORE_ACTION-detail">EVENT_BEFORE_ACTION</a></td>
+        <td><a href="yii-base-actionevent.html">yii\base\ActionEvent</a></td>
+        <td>
+            An event raised before executing a controller action.                    </td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+    </tr>
+        </table>
+</div>
+
+<a id="constants"></a>
+<div class="summary doc-const">
+    <h2>Constants</h2>
+
+    <p><a href="#" class="toggle">Hide inherited constants</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-const" />
+        <col class="col-value" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Constant</th><th>Value</th><th>Description</th><th>Defined By</th>
+    </tr>
+            <tr id="REPLACEMENTS_TEMPLATE">
+          <td id="REPLACEMENTS_TEMPLATE-detail">REPLACEMENTS_TEMPLATE</td>
+          <td>array('{ip_address}', '{key}')</td>
+          <td>
+                        </td>
+          <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+        </tr>
+            <tr id="TEMPLATE_IP_INFO_URL">
+          <td id="TEMPLATE_IP_INFO_URL-detail">TEMPLATE_IP_INFO_URL</td>
+          <td>'http://ipinfo.io/{ip_address}?token={key}'</td>
+          <td>
+                        </td>
+          <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+        </tr>
+            <tr id="TEMPLATE_PROXY_CHECK_URL">
+          <td id="TEMPLATE_PROXY_CHECK_URL-detail">TEMPLATE_PROXY_CHECK_URL</td>
+          <td>'http://proxycheck.io/v2/{ip_address}&key={key}&vpn=1&inf=0'</td>
+          <td>
+                        </td>
+          <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+        </tr>
+            <tr id="TEMPLATE_USER_AGENT_URL">
+          <td id="TEMPLATE_USER_AGENT_URL-detail">TEMPLATE_USER_AGENT_URL</td>
+          <td>'http://www.useragentstring.com/?uas={user_agent}&getJSON=all'</td>
+          <td>
+                        </td>
+          <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+        </tr>
+            <tr id="VERSION">
+          <td id="VERSION-detail">VERSION</td>
+          <td>'v0.9.5'</td>
+          <td>
+                        </td>
+          <td><a href="johnsnook-visitor-module.html">johnsnook\visitor\Module</a></td>
+        </tr>
+        </table>
+</div>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$blackRules-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#$blackRules-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $blackRules        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Rules that show the visitor the door</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="johnsnook-visitor-module.html#$blackRules-detail">$blackRules</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$blowOff-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#$blowOff-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $blowOff        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The route to your blowoff page telling the user to pound sand</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="johnsnook-visitor-module.html#$blowOff-detail">$blowOff</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'visitor/visitor/blowoff'</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$db-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#$db-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $db        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Connection</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type">\johnsnook\visitor\Database</span> <strong><a href="johnsnook-visitor-module.html#getDb()-detail">getDb</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$googleMapsApiKey-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#$googleMapsApiKey-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $googleMapsApiKey        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Go to <a href="https://developers.google.com/maps/documentation/javascript/get-api-key">https://developers.google.com/maps/documentation/javascript/get-api-key</a> for a free API key</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="johnsnook-visitor-module.html#$googleMapsApiKey-detail">$googleMapsApiKey</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$ignorables-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#$ignorables-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $ignorables        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>These are the controller actions that will not be logged
+<code></p>
+<pre><code class="hljs json">[
+    'site'=&gt; ['about', 'contact'],
+]
+</code></pre>
+<p></code></p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="johnsnook-visitor-module.html#$ignorables-detail">$ignorables</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$ipInfoKey-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#$ipInfoKey-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $ipInfoKey        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Go to <a href="https://ipinfo.io/signup">https://ipinfo.io/signup</a> for a free API key</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="johnsnook-visitor-module.html#$ipInfoKey-detail">$ipInfoKey</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">''</span></div>
+
+
+    <div class="detail-header h3" id="$proxyCheckKey-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#$proxyCheckKey-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $proxyCheckKey        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Go to <a href="https://proxycheck.io/">https://proxycheck.io/</a> for a free API key</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="johnsnook-visitor-module.html#$proxyCheckKey-detail">$proxyCheckKey</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">''</span></div>
+
+
+    <div class="detail-header h3" id="$urlRules-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#$urlRules-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $urlRules        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The rules to be used in URL management.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="johnsnook-visitor-module.html#$urlRules-detail">$urlRules</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'/visitor'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'/visitor/visitor/index'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/visitor/index'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'/visitor/visitor/index'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/visitor/blowoff'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'/visitor/visitor/blowoff'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/visitor/&lt;id&gt;'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'/visitor/visitor/view'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/visitor/update/&lt;id&gt;'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'/visitor/visitor/update'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'/individual/&lt;id&gt;'&nbsp;</span><span style="color: #007700">=&gt;&nbsp;</span><span style="color: #DD0000">'/visitor/individual/view'</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$visitor-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#$visitor-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $visitor        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The Visitor record of the currently connected particular individual</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="johnsnook-visitor-models-visitor.html">johnsnook\visitor\models\Visitor</a></span> <a href="johnsnook-visitor-module.html#$visitor-detail">$visitor</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$whatsmybrowswerKey-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#$whatsmybrowswerKey-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $whatsmybrowswerKey        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Go to <a href="https://proxycheck.io/">https://proxycheck.io/</a> for a free API key</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="johnsnook-visitor-module.html#$whatsmybrowswerKey-detail">$whatsmybrowswerKey</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">''</span></div>
+
+
+    <div class="detail-header h3" id="$whiteRules-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#$whiteRules-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $whiteRules        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Rules that welcomes a visitor in</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="johnsnook-visitor-module.html#$whiteRules-detail">$whiteRules</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="bootstrap()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#bootstrap()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        bootstrap()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Why don't you pull yourself up by the bootstraps like I did by being born
+middle class and having parents who could help pay for college?</strong></p>
+
+        <p>If we're running in console mode set the controller space to our commands
+folder.  If not, attach our main event to the the [[ap beforeAction</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="johnsnook-visitor-module.html#bootstrap()-detail">bootstrap</a></strong> ( <span style="color: #0000BB">$app</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$app</span></td>
+                  <td class="param-type-col"><a href="yii-web-application.html">yii\web\Application</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="checkList()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#checkList()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        checkList()
+        <span class="detail-header-tag small">
+            protected                        static            method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Compares properties against a indexed array of arrays of values.  String
+values are compared using stripos, ip values should be in CIDR format.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected static</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="johnsnook-visitor-module.html#checkList()-detail">checkList</a></strong> ( <span style="color: #0000BB">$list</span>, <span style="color: #0000BB">$visitor</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$list</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$visitor</span></td>
+                  <td class="param-type-col"><a href="johnsnook-visitor-models-visitor.html">johnsnook\visitor\models\Visitor</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The list element that matched</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getDb()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#getDb()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        getDb()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">\johnsnook\visitor\Database</span> <strong><a href="johnsnook-visitor-module.html#getDb()-detail">getDb</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col">\johnsnook\visitor\Database</td>
+                  <td class="param-desc-col"><p>Connection</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="init()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        init()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Initializes the module.</strong></p>
+
+        <p>This method is called after the module is created and initialized with property values
+given in configuration. The default implementation will initialize <a href="yii-base-module.html#$controllerNamespace-detail">$controllerNamespace</a>
+if it is not set.</p>
+<p>If you override this method, please make sure you call the parent implementation.</p>
+<p>If we're running from the console, change the controller namespace</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="johnsnook-visitor-module.html#init()-detail">init</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="leGauntlet()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-module.html#leGauntlet()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        leGauntlet()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Called on the BeforeAction event, it logs the current visitor, and if it's
+a new visitor, gather their ipInfo, proxy information and browser info.</strong></p>
+
+        <p>Then, check their blacklist status or compares their info against the
+blacklist criteria.</p>
+<p>If the visitor IS blacklisted, redirect them to the blowoff action.  If
+they're going to the blowoff action, let them and don't redirect them so
+much the browser throws a fucking error.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="johnsnook-visitor-module.html#leGauntlet()-detail">leGauntlet</a></strong> ( <span class="signature-type"><a href="yii-base-actionevent.html">yii\base\ActionEvent</a></span> <span style="color: #0000BB">$event</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$event</span></td>
+                  <td class="param-type-col"><a href="yii-base-actionevent.html">yii\base\ActionEvent</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the current action should continue</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Thu, 16 Aug 2018 03:16:09 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

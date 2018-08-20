@@ -72,7 +72,7 @@ class VisitorController extends \yii\web\Controller {
         $searchModel = new VisitorLogSearch();
         $searchModel->ip = $id;
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        $dataProvider->setPagination(['pageSize' => 10]);
+        //$dataProvider->setPagination(['pageSize' => 10]);
         return $this->render('view', [
                     'model' => $this->findModel($id),
                     'searchModel' => $searchModel,

@@ -1,5 +1,14 @@
 <?php
 
+/**
+ * This file is part of the Yii2 extension module, yii2-visitor
+ *
+ * @author John Snook
+ * @date Aug 4, 2018
+ * @license https://snooky.biz/site/license
+ * @copyright 2018 John Snook Consulting
+ */
+
 namespace johnsnook\visitor\commands;
 
 use johnsnook\visitor\helpers\ProgressBar;
@@ -9,40 +18,16 @@ use johnsnook\visitor\models\VisitorAgent;
 use Kassner\LogParser\LogParser;
 use yii\helpers\Console;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
- * ImportController - it imports things
- *
- *
- * @author John
+ * Import apache2 access log into the database for a quick start
  */
 class ImportController extends \yii\console\Controller {
-#$parser->setFormat('%h %l %u %t "%r" %>s %b "%{Referer}i" "%{User-Agent}i" %I %O');
+
     /**
-     * Delete this
-     * @return int
+     *
+     * @param type $list
+     * @return boolean
      */
-
-    function actionTest() {
-        $logDir = '/etc/httpd/logs';
-        $totes = 0;
-        foreach (glob("$logDir/access*") as $filename) {
-            echo "$filename size " . filesize($filename) . "\n";
-            $arr = file($filename, FILE_IGNORE_NEW_LINES);
-            $count = count($arr);
-            echo "Lines $count\n";
-            $totes += $count;
-        }
-        echo "Total lines $totes\n";
-
-        return \yii\console\ExitCode::OK;
-    }
-
     public function countAndConfirm($list) {
         $totes = 0;
         foreach (($list) as $filename) {
@@ -166,12 +151,15 @@ class ImportController extends \yii\console\Controller {
                 }
             }
         }
-        $fileProgress->endProgress();
+        $fileProgress->end();
         $transaction->commit();
     }
 
     /**
-     * @inheritdoc
+     * Displays a message above the progress bar
+     *
+     * @param string $msg
+     * @param boolean $err
      */
     private function showMsg($msg, $err = false) {
         $screen = Console::getScreenSize();
@@ -184,6 +172,12 @@ class ImportController extends \yii\console\Controller {
         echo Console::renderColoredString($msg);
     }
 
+    /**
+     * Makes an exception printable
+     *
+     * @param \Exception $e
+     * @return string
+     */
     private function exception2arr($e) {
         $out = [];
         $out['message'] = $e->getMessage();
@@ -193,10 +187,24 @@ class ImportController extends \yii\console\Controller {
         return json_encode($out, 224);
     }
 
+    /**
+     * Returns an array with file name and extension
+     *
+     * @param string $fileName
+     * @return array
+     */
     private function nameAndExt($fileName) {
         return [substr($fileName, 0, strrpos($fileName, '.')), substr($fileName, strrpos($fileName, '.') + 1)];
     }
 
+    /**
+     * Dumps message at top of screen
+     *
+     * @param int $projProgress
+     * @param int $docsProgress
+     * @param int $docsRelProgress
+     * @param array $config
+     */
     private function heads(&$projProgress, &$docsProgress, &$docsRelProgress, $config) {
         Console::saveCursorPosition();
         $screen = Console::getScreenSize();

@@ -57,18 +57,24 @@ class VisitorLog extends \yii\db\ActiveRecord {
      *
      * @param string $ip The ip address to associate this record with
      */
-    public static function log($ip) {
+    public static function log($ip, $save = true) {
         $log = new VisitorLog([
             'ip' => $ip,
             'request' => filter_input(INPUT_SERVER, 'REQUEST_URI'),
             'referer' => filter_input(INPUT_SERVER, 'HTTP_REFERER'),
             'user_agent' => filter_input(INPUT_SERVER, 'HTTP_USER_AGENT'),
         ]);
-        $log->save(false);
+        if ($save) {
+            $log->save(false);
+        }
         Visitor::incrementCount($ip);
         return $log;
     }
 
+    /**
+     * Converts db timestamp to formatted string
+     * @return string
+     */
     public function getCreatedAt() {
         $dt = new \DateTime($this->created_at);
         return $dt->format('Y-m-d g:i A');

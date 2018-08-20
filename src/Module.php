@@ -147,15 +147,13 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
     public function bootstrap($app) {
         if ($app->hasModule('visitor') && ($module = $app->getModule('visitor')) instanceof Module) {
             $um = $app->getUrlManager();
-            if ($um->enablePrettyUrl) {
-                $um->addRules($this->urlRules, false);
-            }
+            $um->addRules($this->urlRules, true);
             //die(json_encode($app->getUrlManager()->rules));
             /** this allows me to do some importing from my old security system */
             if ($app instanceof \yii\console\Application) {
                 $this->controllerNamespace = 'johnsnook\visitor\commands';
             } else {
-                $app->on(Application::EVENT_BEFORE_ACTION, [$module, 'leGauntlet']);
+                $app->on(Application::EVENT_BEFORE_ACTION, [$module, 'portcullis']);
             }
         }
     }
@@ -173,7 +171,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
      * @param ActionEvent $event
      * @return boolean whether the current action should continue
      */
-    public function leGauntlet(ActionEvent $event) {
+    protected function portcullis(ActionEvent $event) {
 
         /** get user ip, if null, send them to the blowoff */
         if (is_null($ip = Yii::$app->request->getUserIP())) {
@@ -205,13 +203,16 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
         /** Attach the visitor behavior to the user */
         $visitorBehavior = new behaviors\VisitorBehavior(['visitor' => $this->visitor]);
         \Yii::$app->user->attachBehavior('visitor', $visitorBehavior);
-
+//        die(\Yii::$app->user->ip);
         /** Check to see if this action is listed in the ignorables array */
         $controllerId = $event->action->controller->id;
         if (array_key_exists($controllerId, $this->ignorables) && in_array($event->action->id, $this->ignorables[$controllerId])) {
+            $this->visitor->visit = VisitorLog::log($ip, false);
+            return true;
+        } elseif (!is_null(static::checkList($this->ignorables, $this->visitor))) {
+            $this->visitor->visit = VisitorLog::log($ip, false);
             return true;
         }
-
         /** Log the visit */
         $this->visitor->visit = VisitorLog::log($ip);
         VisitorAgent::log($this->visitor->visit->user_agent);

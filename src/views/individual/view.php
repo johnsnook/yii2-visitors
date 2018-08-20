@@ -42,7 +42,6 @@ $this->title = empty($model->name) ? $model->ip : $model->name;
                             return $dt->format('Y-m-d g:i A');
                         }
                     ],
-                    //'user_id',
                     'hat_color',
                     'hat_rule',
                     'visits',

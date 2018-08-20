@@ -1,0 +1,1289 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/40113240/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/6d599862/solarized_light.css" rel="stylesheet">
+<link href="./assets/5d9d0765/style.css" rel="stylesheet">
+<script src="./assets/6147b175/jquery.js"></script>
+<script src="./assets/40113240/js/bootstrap.js"></script>
+<script src="./assets/f875d911/jssearch.js"></script>    <title>AuthAction, yii\authclient\AuthAction - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w325" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w325-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w325-collapse" class="collapse navbar-collapse"><ul id="w326" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w327" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-swiftmailer-index.html" tabindex="-1">swiftmailer</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-321" data-toggle="collapse" data-parent="#navigation">yii\authclient <b class="caret"></b></a><div id="navigation-321" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-authclient-authaction.html">AuthAction</a>
+<a class="list-group-item" href="./yii-authclient-baseclient.html">BaseClient</a>
+<a class="list-group-item" href="./yii-authclient-baseoauth.html">BaseOAuth</a>
+<a class="list-group-item" href="./yii-authclient-clientinterface.html">ClientInterface</a>
+<a class="list-group-item" href="./yii-authclient-collection.html">Collection</a>
+<a class="list-group-item" href="./yii-authclient-invalidresponseexception.html">InvalidResponseException</a>
+<a class="list-group-item" href="./yii-authclient-oauth1.html">OAuth1</a>
+<a class="list-group-item" href="./yii-authclient-oauth2.html">OAuth2</a>
+<a class="list-group-item" href="./yii-authclient-oauthtoken.html">OAuthToken</a>
+<a class="list-group-item" href="./yii-authclient-openid.html">OpenId</a>
+<a class="list-group-item" href="./yii-authclient-openidconnect.html">OpenIdConnect</a>
+<a class="list-group-item" href="./yii-authclient-sessionstatestorage.html">SessionStateStorage</a>
+<a class="list-group-item" href="./yii-authclient-statestorageinterface.html">StateStorageInterface</a></div>
+<a class="list-group-item" href="#navigation-322" data-toggle="collapse" data-parent="#navigation">yii\authclient\clients <b class="caret"></b></a><div id="navigation-322" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-authclient-clients-facebook.html">Facebook</a>
+<a class="list-group-item" href="./yii-authclient-clients-github.html">GitHub</a>
+<a class="list-group-item" href="./yii-authclient-clients-google.html">Google</a>
+<a class="list-group-item" href="./yii-authclient-clients-googlehybrid.html">GoogleHybrid</a>
+<a class="list-group-item" href="./yii-authclient-clients-linkedin.html">LinkedIn</a>
+<a class="list-group-item" href="./yii-authclient-clients-live.html">Live</a>
+<a class="list-group-item" href="./yii-authclient-clients-twitter.html">Twitter</a>
+<a class="list-group-item" href="./yii-authclient-clients-twitteroauth2.html">TwitterOAuth2</a>
+<a class="list-group-item" href="./yii-authclient-clients-vkontakte.html">VKontakte</a>
+<a class="list-group-item" href="./yii-authclient-clients-yandex.html">Yandex</a></div>
+<a class="list-group-item" href="#navigation-323" data-toggle="collapse" data-parent="#navigation">yii\authclient\signature <b class="caret"></b></a><div id="navigation-323" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-authclient-signature-basemethod.html">BaseMethod</a>
+<a class="list-group-item" href="./yii-authclient-signature-hmacsha.html">HmacSha</a>
+<a class="list-group-item" href="./yii-authclient-signature-hmacsha1.html">HmacSha1</a>
+<a class="list-group-item" href="./yii-authclient-signature-plaintext.html">PlainText</a>
+<a class="list-group-item" href="./yii-authclient-signature-rsasha.html">RsaSha</a>
+<a class="list-group-item" href="./yii-authclient-signature-rsasha1.html">RsaSha1</a></div>
+<a class="list-group-item" href="#navigation-324" data-toggle="collapse" data-parent="#navigation">yii\authclient\widgets <b class="caret"></b></a><div id="navigation-324" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-authclient-widgets-authchoice.html">AuthChoice</a>
+<a class="list-group-item" href="./yii-authclient-widgets-authchoiceasset.html">AuthChoiceAsset</a>
+<a class="list-group-item" href="./yii-authclient-widgets-authchoiceitem.html">AuthChoiceItem</a>
+<a class="list-group-item" href="./yii-authclient-widgets-authchoicestyleasset.html">AuthChoiceStyleAsset</a>
+<a class="list-group-item" href="./yii-authclient-widgets-googleplusbutton.html">GooglePlusButton</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\authclient\AuthAction</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a> &raquo;
+<a href="yii-base-action.html">yii\base\Action</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a></td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php">https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>AuthAction performs authentication via different auth clients.</strong></p>
+    <p>It supports <a href="yii-authclient-openid.html">yii\authclient\OpenId</a>, <a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a> and <a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a> client types.</p>
+<p>Usage:</p>
+<pre><code class="hljs php language-php"><span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SiteController</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">Controller</span>
+</span>{
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">actions</span><span class="hljs-params">()</span>
+    </span>{
+        <span class="hljs-keyword">return</span> [
+            <span class="hljs-string">'auth'</span> =&gt; [
+                <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'yii\authclient\AuthAction'</span>,
+                <span class="hljs-string">'successCallback'</span> =&gt; [<span class="hljs-variable">$this</span>, <span class="hljs-string">'successCallback'</span>],
+            ],
+        ]
+    }
+
+    <span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">successCallback</span><span class="hljs-params">(<span class="hljs-variable">$client</span>)</span>
+    </span>{
+        <span class="hljs-variable">$attributes</span> = <span class="hljs-variable">$client</span>-&gt;getUserAttributes();
+        <span class="hljs-comment">// user login or signup comes here</span>
+    }
+}
+</code></pre>
+<p>Usually authentication via external services is performed inside the popup window.
+This action handles the redirection and closing of popup window correctly.</p>
+
+    <p>See also:</p><ul><li><a href="yii-authclient-collection.html">yii\authclient\Collection</a></li><li><a href="yii-authclient-widgets-authchoice.html">yii\authclient\widgets\AuthChoice</a></li></ul></div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$cancelCallback">
+        <td><a href="yii-authclient-authaction.html#$cancelCallback-detail">$cancelCallback</a></td>
+        <td><a href="http://www.php.net/language.types.callable">callable</a></td>
+        <td>PHP callback, which should be triggered in case of authentication cancelation.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="$clientCollection">
+        <td><a href="yii-authclient-authaction.html#$clientCollection-detail">$clientCollection</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Name of the auth client collection application component.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="$clientIdGetParamName">
+        <td><a href="yii-authclient-authaction.html#$clientIdGetParamName-detail">$clientIdGetParamName</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Name of the GET param, which is used to passed auth client id to this action.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr class="inherited" id="$controller">
+        <td><a href="yii-base-action.html#$controller-detail">$controller</a></td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a>|<a href="yii-web-controller.html">yii\web\Controller</a>|<a href="yii-console-controller.html">yii\console\Controller</a></td>
+        <td>The controller that owns this action</td>
+        <td><a href="yii-base-action.html">yii\base\Action</a></td>
+    </tr>
+            <tr class="inherited" id="$id">
+        <td><a href="yii-base-action.html#$id-detail">$id</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>ID of the action</td>
+        <td><a href="yii-base-action.html">yii\base\Action</a></td>
+    </tr>
+            <tr id="$redirectView">
+        <td><a href="yii-authclient-authaction.html#$redirectView-detail">$redirectView</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Name or alias of the view file, which should be rendered in order to perform redirection.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="$successCallback">
+        <td><a href="yii-authclient-authaction.html#$successCallback-detail">$successCallback</a></td>
+        <td><a href="http://www.php.net/language.types.callable">callable</a></td>
+        <td>PHP callback, which should be triggered in case of successful authentication.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-baseobject.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-action.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-base-action.html">yii\base\Action</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-baseobject.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-baseobject.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-baseobject.html#__set()-detail">__set()</a></td>
+        <td>Sets value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-baseobject.html#__unset()-detail">__unset()</a></td>
+        <td>Sets an object property to null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+                <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                                        <tr class="inherited" id="behaviors()">
+        <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-baseobject.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-baseobject.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+                    <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="getCancelUrl()">
+        <td><a href="yii-authclient-authaction.html#getCancelUrl()-detail">getCancelUrl()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="getSuccessUrl()">
+        <td><a href="yii-authclient-authaction.html#getSuccessUrl()-detail">getSuccessUrl()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr class="inherited" id="getUniqueId()">
+        <td><a href="yii-base-action.html#getUniqueId()-detail">getUniqueId()</a></td>
+        <td>Returns the unique ID of this action among the whole application.</td>
+        <td><a href="yii-base-action.html">yii\base\Action</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-baseobject.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-baseobject.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-base-baseobject.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="redirect()">
+        <td><a href="yii-authclient-authaction.html#redirect()-detail">redirect()</a></td>
+        <td>Redirect to the given URL or simply close the popup window.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="redirectCancel()">
+        <td><a href="yii-authclient-authaction.html#redirectCancel()-detail">redirectCancel()</a></td>
+        <td>Redirect to the <span class="broken-link">\yii\authclient\cancelUrl</span> or simply close the popup window.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="redirectSuccess()">
+        <td><a href="yii-authclient-authaction.html#redirectSuccess()-detail">redirectSuccess()</a></td>
+        <td>Redirect to the URL. If URL is null, <span class="broken-link">\yii\authclient\successUrl</span> will be used.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="run()">
+        <td><a href="yii-authclient-authaction.html#run()-detail">run()</a></td>
+        <td>Runs the action.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr class="inherited" id="runWithParams()">
+        <td><a href="yii-base-action.html#runWithParams()-detail">runWithParams()</a></td>
+        <td>Runs this action with the specified parameters.</td>
+        <td><a href="yii-base-action.html">yii\base\Action</a></td>
+    </tr>
+            <tr id="setCancelUrl()">
+        <td><a href="yii-authclient-authaction.html#setCancelUrl()-detail">setCancelUrl()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="setSuccessUrl()">
+        <td><a href="yii-authclient-authaction.html#setSuccessUrl()-detail">setSuccessUrl()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                    <tr class="inherited" id="afterRun()">
+        <td><a href="yii-base-action.html#afterRun()-detail">afterRun()</a></td>
+        <td>This method is called right after <code>run()</code> is executed.</td>
+        <td><a href="yii-base-action.html">yii\base\Action</a></td>
+    </tr>
+                    <tr id="auth()">
+        <td><a href="yii-authclient-authaction.html#auth()-detail">auth()</a></td>
+        <td>Perform authentication for the given client.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="authCancel()">
+        <td><a href="yii-authclient-authaction.html#authCancel()-detail">authCancel()</a></td>
+        <td>This method is invoked in case of authentication cancelation.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="authOAuth1()">
+        <td><a href="yii-authclient-authaction.html#authOAuth1()-detail">authOAuth1()</a></td>
+        <td>Performs OAuth1 auth flow.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="authOAuth2()">
+        <td><a href="yii-authclient-authaction.html#authOAuth2()-detail">authOAuth2()</a></td>
+        <td>Performs OAuth2 auth flow.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="authOpenId()">
+        <td><a href="yii-authclient-authaction.html#authOpenId()-detail">authOpenId()</a></td>
+        <td>Performs OpenID auth flow.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="authSuccess()">
+        <td><a href="yii-authclient-authaction.html#authSuccess()-detail">authSuccess()</a></td>
+        <td>This method is invoked in case of successful authentication via auth client.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr class="inherited" id="beforeRun()">
+        <td><a href="yii-base-action.html#beforeRun()-detail">beforeRun()</a></td>
+        <td>This method is called right before <code>run()</code> is executed.</td>
+        <td><a href="yii-base-action.html">yii\base\Action</a></td>
+    </tr>
+                            <tr id="defaultCancelUrl()">
+        <td><a href="yii-authclient-authaction.html#defaultCancelUrl()-detail">defaultCancelUrl()</a></td>
+        <td>Creates default <span class="broken-link">\yii\authclient\cancelUrl</span> value.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+            <tr id="defaultSuccessUrl()">
+        <td><a href="yii-authclient-authaction.html#defaultSuccessUrl()-detail">defaultSuccessUrl()</a></td>
+        <td>Creates default <span class="broken-link">\yii\authclient\successUrl</span> value.</td>
+        <td><a href="yii-authclient-authaction.html">yii\authclient\AuthAction</a></td>
+    </tr>
+                                                                                            </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$cancelCallback-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#$cancelCallback-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L105" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L105" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $cancelCallback        <span class="detail-header-tag small">
+            public                                                property
+                            (available since version 2.1.5)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>PHP callback, which should be triggered in case of authentication cancelation.
+This callback should accept <a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a> instance as an argument.
+For example:</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onAuthCancel</span><span class="hljs-params">(ClientInterface <span class="hljs-variable">$client</span>)</span>
+</span>{
+    <span class="hljs-comment">// set flash, logging, etc.</span>
+}
+</code></pre>
+<p>If this callback returns <a href="yii-web-response.html">yii\web\Response</a> instance, it will be used as action response,
+otherwise redirection to <span class="broken-link">\yii\authclient\cancelUrl</span> will be performed.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.callable">callable</a></span> <a href="yii-authclient-authaction.html#$cancelCallback-detail">$cancelCallback</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$clientCollection-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#$clientCollection-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L65" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L65" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $clientCollection        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Name of the auth client collection application component.
+It should point to <a href="yii-authclient-collection.html">yii\authclient\Collection</a> instance.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-authclient-authaction.html#$clientCollection-detail">$clientCollection</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'authClientCollection'</span></div>
+
+
+    <div class="detail-header h3" id="$clientIdGetParamName-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#$clientIdGetParamName-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L70" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L70" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $clientIdGetParamName        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Name of the GET param, which is used to passed auth client id to this action.
+Note: watch for the naming, make sure you do not choose name used in some auth protocol.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-authclient-authaction.html#$clientIdGetParamName-detail">$clientIdGetParamName</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'authclient'</span></div>
+
+
+    <div class="detail-header h3" id="$redirectView-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#$redirectView-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L110" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L110" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $redirectView        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Name or alias of the view file, which should be rendered in order to perform redirection.
+If not set - default one will be used.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-authclient-authaction.html#$redirectView-detail">$redirectView</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$successCallback-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#$successCallback-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L87" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L87" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $successCallback        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>PHP callback, which should be triggered in case of successful authentication.
+This callback should accept <a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a> instance as an argument.
+For example:</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">public</span> <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">onAuthSuccess</span><span class="hljs-params">(ClientInterface <span class="hljs-variable">$client</span>)</span>
+</span>{
+    <span class="hljs-variable">$attributes</span> = <span class="hljs-variable">$client</span>-&gt;getUserAttributes();
+    <span class="hljs-comment">// user login or signup comes here</span>
+}
+</code></pre>
+<p>If this callback returns <a href="yii-web-response.html">yii\web\Response</a> instance, it will be used as action response,
+otherwise redirection to <span class="broken-link">\yii\authclient\successUrl</span> will be performed.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.callable">callable</a></span> <a href="yii-authclient-authaction.html#$successCallback-detail">$successCallback</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="auth()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#auth()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L206" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L206" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        auth()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Perform authentication for the given client.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="yii-web-response.html">yii\web\Response</a></span> <strong><a href="yii-authclient-authaction.html#auth()-detail">auth</a></strong> ( <span style="color: #0000BB">$client</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$client</span></td>
+                  <td class="param-type-col">mixed</td>
+                  <td class="param-desc-col"><p>Auth client instance.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-response.html">yii\web\Response</a></td>
+                  <td class="param-desc-col"><p>Response instance.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-notsupportedexception.html">yii\base\NotSupportedException</a></td>
+                  <td class="param-desc-col"><p>on invalid client.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="authCancel()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#authCancel()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L245" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L245" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        authCancel()
+        <span class="detail-header-tag small">
+            protected                                    method
+                            (available since version 2.1.5)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>This method is invoked in case of authentication cancelation.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="yii-web-response.html">yii\web\Response</a></span> <strong><a href="yii-authclient-authaction.html#authCancel()-detail">authCancel</a></strong> ( <span style="color: #0000BB">$client</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$client</span></td>
+                  <td class="param-type-col"><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+                  <td class="param-desc-col"><p>Auth client instance.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-response.html">yii\web\Response</a></td>
+                  <td class="param-desc-col"><p>Response instance.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="authOAuth1()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#authOAuth1()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L344" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L344" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        authOAuth1()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Performs OAuth1 auth flow.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="yii-web-response.html">yii\web\Response</a></span> <strong><a href="yii-authclient-authaction.html#authOAuth1()-detail">authOAuth1</a></strong> ( <span style="color: #0000BB">$client</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$client</span></td>
+                  <td class="param-type-col"><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+                  <td class="param-desc-col"><p>Auth client instance.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-response.html">yii\web\Response</a></td>
+                  <td class="param-desc-col"><p>Action response.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="authOAuth2()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#authOAuth2()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L373" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L373" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        authOAuth2()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Performs OAuth2 auth flow.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="yii-web-response.html">yii\web\Response</a></span> <strong><a href="yii-authclient-authaction.html#authOAuth2()-detail">authOAuth2</a></strong> ( <span style="color: #0000BB">$client</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$client</span></td>
+                  <td class="param-type-col"><a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a></td>
+                  <td class="param-desc-col"><p>Auth client instance.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-response.html">yii\web\Response</a></td>
+                  <td class="param-desc-col"><p>Action response.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-exception.html">yii\base\Exception</a></td>
+                  <td class="param-desc-col"><p>on failure.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="authOpenId()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#authOpenId()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L316" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L316" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        authOpenId()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Performs OpenID auth flow.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="yii-web-response.html">yii\web\Response</a></span> <strong><a href="yii-authclient-authaction.html#authOpenId()-detail">authOpenId</a></strong> ( <span style="color: #0000BB">$client</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$client</span></td>
+                  <td class="param-type-col"><a href="yii-authclient-openid.html">yii\authclient\OpenId</a></td>
+                  <td class="param-desc-col"><p>Auth client instance.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-response.html">yii\web\Response</a></td>
+                  <td class="param-desc-col"><p>Action response.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-exception.html">yii\base\Exception</a></td>
+                  <td class="param-desc-col"><p>on failure.</p>
+</td>
+                </tr>
+                            <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-web-httpexception.html">yii\web\HttpException</a></td>
+                  <td class="param-desc-col"><p>on failure.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="authSuccess()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#authSuccess()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L225" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L225" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        authSuccess()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>This method is invoked in case of successful authentication via auth client.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="yii-web-response.html">yii\web\Response</a></span> <strong><a href="yii-authclient-authaction.html#authSuccess()-detail">authSuccess</a></strong> ( <span style="color: #0000BB">$client</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$client</span></td>
+                  <td class="param-type-col"><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+                  <td class="param-desc-col"><p>Auth client instance.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-response.html">yii\web\Response</a></td>
+                  <td class="param-desc-col"><p>Response instance.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
+                  <td class="param-desc-col"><p>on invalid success callback.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="defaultCancelUrl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#defaultCancelUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L175" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L175" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        defaultCancelUrl()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates default <span class="broken-link">\yii\authclient\cancelUrl</span> value.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-authaction.html#defaultCancelUrl()-detail">defaultCancelUrl</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Cancel URL value.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="defaultSuccessUrl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#defaultSuccessUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L166" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L166" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        defaultSuccessUrl()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates default <span class="broken-link">\yii\authclient\successUrl</span> value.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-authaction.html#defaultSuccessUrl()-detail">defaultSuccessUrl</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Success URL value.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getCancelUrl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#getCancelUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L153" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L153" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getCancelUrl()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-authaction.html#getCancelUrl()-detail">getCancelUrl</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Cancel URL.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getSuccessUrl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#getSuccessUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L133" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L133" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getSuccessUrl()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-authaction.html#getSuccessUrl()-detail">getSuccessUrl</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Successful URL.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="redirect()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#redirect()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L263" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L263" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        redirect()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Redirect to the given URL or simply close the popup window.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-web-response.html">yii\web\Response</a></span> <strong><a href="yii-authclient-authaction.html#redirect()-detail">redirect</a></strong> ( <span style="color: #0000BB">$url</span>, <span style="color: #0000BB">$enforceRedirect&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$url</span></td>
+                  <td class="param-type-col">mixed</td>
+                  <td class="param-desc-col"><p>URL to redirect, could be a string or array config to generate a valid URL.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$enforceRedirect</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Indicates if redirect should be performed even in case of popup window.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-response.html">yii\web\Response</a></td>
+                  <td class="param-desc-col"><p>Response instance.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="redirectCancel()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#redirectCancel()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L301" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L301" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        redirectCancel()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Redirect to the <span class="broken-link">\yii\authclient\cancelUrl</span> or simply close the popup window.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-web-response.html">yii\web\Response</a></span> <strong><a href="yii-authclient-authaction.html#redirectCancel()-detail">redirectCancel</a></strong> ( <span style="color: #0000BB">$url&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$url</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>URL to redirect.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-response.html">yii\web\Response</a></td>
+                  <td class="param-desc-col"><p>Response instance.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="redirectSuccess()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#redirectSuccess()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L288" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L288" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        redirectSuccess()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Redirect to the URL. If URL is null, <span class="broken-link">\yii\authclient\successUrl</span> will be used.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-web-response.html">yii\web\Response</a></span> <strong><a href="yii-authclient-authaction.html#redirectSuccess()-detail">redirectSuccess</a></strong> ( <span style="color: #0000BB">$url&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$url</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>URL to redirect.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-web-response.html">yii\web\Response</a></td>
+                  <td class="param-desc-col"><p>Response instance.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="run()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L183" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L183" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        run()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Runs the action.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-authaction.html#run()-detail">run</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setCancelUrl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#setCancelUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L145" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L145" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        setCancelUrl()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-authaction.html#setCancelUrl()-detail">setCancelUrl</a></strong> ( <span style="color: #0000BB">$url</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$url</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Cancel URL.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setSuccessUrl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-authaction.html#setSuccessUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/AuthAction.php#L125" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/AuthAction.php#L125" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        setSuccessUrl()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-authaction.html#setSuccessUrl()-detail">setSuccessUrl</a></strong> ( <span style="color: #0000BB">$url</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$url</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Successful URL.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Wed, 15 Aug 2018 19:09:09 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

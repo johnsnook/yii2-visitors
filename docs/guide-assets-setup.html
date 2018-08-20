@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/43dc5993/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/7bdf3495/jssearch.js"></script>    <title>The Definitive Guide to Yii 2.0</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w237" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w237-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">The Definitive Guide to Yii 2.0</a></div><div id="w237-collapse" class="collapse navbar-collapse"><ul id="w238" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w239" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-swiftmailer-index.html" tabindex="-1">swiftmailer</a></li></ul></li>
+<li><a href="./guide-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-2">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-236" data-toggle="collapse" data-parent="#navigation">Installation <b class="caret"></b></a><div id="navigation-236" class="submenu panel-collapse collapse in"></div></div>    </div>
+    <div class="col-md-9 guide-content" role="main">
+        <h1>Assets Setup <span id="assets-setup"></span><a href="#assets-setup" class="hashlink">&para;</a></h1>
+<div class="toc"><ol><li><a href="#using-asset-packagist-repository">Using asset-packagist repository</a></li>
+<li><a href="#using-composer-asset-plugin">Using composer asset plugin</a></li>
+<li><a href="#using-bowernpm-client-directly">Using Bower/NPM client directly</a></li>
+<li><a href="#using-cdn">Using CDN</a></li>
+<li><a href="#compiling-from-the-less-files">Compiling from the .less files</a></li>
+<li><a href="#compiling-from-the-sass-files">Compiling from the .sass files</a></li></ol></div>
+<p>This extensions relies on <a href="http://bower.io/">Bower</a> and/or <a href="https://www.npmjs.org/">NPM</a> packages for the asset installation.
+Before using this package you should decide in which way you will install those packages in your project.</p>
+<h2>Using asset-packagist repository <span id="using-asset-packagist-repository"></span><a href="#using-asset-packagist-repository" class="hashlink">&para;</a></h2><p>You can setup <a href="https://asset-packagist.org">asset-packagist.org</a> as package source for the Bootstrap assets.</p>
+<p>In the <code>composer.json</code> of your project, add the following lines:</p>
+<pre><code class="hljs json language-json"><span class="hljs-string">"repositories"</span>: [
+    {
+        "<span class="hljs-attribute">type</span>": <span class="hljs-value"><span class="hljs-string">"composer"</span></span>,
+        "<span class="hljs-attribute">url</span>": <span class="hljs-value"><span class="hljs-string">"https://asset-packagist.org"</span>
+    </span>}
+]
+</code></pre>
+<p>Adjust <code>@npm</code> and <code>@bower</code> in you application configuration:</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">return</span> [
+    <span class="hljs-comment">//...</span>
+    <span class="hljs-string">'aliases'</span> =&gt; [
+        <span class="hljs-string">'@bower'</span> =&gt; <span class="hljs-string">'@vendor/bower-asset'</span>,
+        <span class="hljs-string">'@npm'</span>   =&gt; <span class="hljs-string">'@vendor/npm-asset'</span>,
+    ],
+    <span class="hljs-comment">//...</span>
+];
+</code></pre>
+<h2>Using composer asset plugin <span id="using-composer-asset-plugin"></span><a href="#using-composer-asset-plugin" class="hashlink">&para;</a></h2><p>Install <a href="https://github.com/francoispluchino/composer-asset-plugin/">composer asset plugin</a> globally, using following command:</p>
+<pre><code class="hljs php">composer <span class="hljs-keyword">global</span> <span class="hljs-keyword">require</span> <span class="hljs-string">"fxp/composer-asset-plugin:^1.4.0"</span>
+</code></pre>
+<p>Add the following lines to <code>composer.json</code> of your project to adjust directories where the installed packages
+will be placed, if you want to publish them using Yii:</p>
+<pre><code class="hljs json language-json"><span class="hljs-string">"extra"</span>: {
+    "<span class="hljs-attribute">asset-installer-paths</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">npm-asset-library</span>": <span class="hljs-value"><span class="hljs-string">"vendor/npm"</span></span>,
+        "<span class="hljs-attribute">bower-asset-library</span>": <span class="hljs-value"><span class="hljs-string">"vendor/bower"</span>
+    </span>}
+</span>}
+</code></pre>
+<p>Then you can run composer install/update command to pick up Bootstrap assets.</p>
+<blockquote class="note"><p><strong>Note: </strong><code>fxp/composer-asset-plugin</code> significantly slows down the <code>composer update</code> command in comparison
+  to asset-packagist.</p>
+</blockquote>
+<h2>Using Bower/NPM client directly <span id="using-bowernpm-client-directly"></span><a href="#using-bowernpm-client-directly" class="hashlink">&para;</a></h2><p>You can install Bootstrap assets directly via Bower or NPM client.
+In the <code>package.json</code> of your project, add the following lines:</p>
+<pre><code class="hljs json language-json">{
+    ...
+    "<span class="hljs-attribute">dependencies</span>": <span class="hljs-value">{
+        "<span class="hljs-attribute">bootstrap</span>": <span class="hljs-value"><span class="hljs-string">"3.3.5"</span></span>,
+        ...
+    }
+    ...
+</span>}
+</code></pre>
+<p>In the <code>composer.json</code> of your project, add the following lines in order to prevent redundant Bootstrap asset installation:</p>
+<pre><code class="hljs json language-json"><span class="hljs-string">"replace"</span>: {
+    "<span class="hljs-attribute">bower-asset/bootstrap</span>": <span class="hljs-value"><span class="hljs-string">"&gt;=3.3.0"</span>
+</span>},
+</code></pre>
+<h2>Using CDN <span id="using-cdn"></span><a href="#using-cdn" class="hashlink">&para;</a></h2><p>You may use Bootstrap assets from <a href="https://www.bootstrapcdn.com">official CDN</a>.</p>
+<p>In the <code>composer.json</code> of your project, add the following lines in order to prevent redundant Bootstrap asset installation:</p>
+<pre><code class="hljs json language-json"><span class="hljs-string">"replace"</span>: {
+    "<span class="hljs-attribute">bower-asset/bootstrap</span>": <span class="hljs-value"><span class="hljs-string">"&gt;=3.3.0"</span>
+</span>},
+</code></pre>
+<p>Configure 'assetManager' application component, overriding Bootstrap assent bundles with CDN links:</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">return</span> [
+    <span class="hljs-string">'components'</span> =&gt; [
+        <span class="hljs-string">'assetManager'</span> =&gt; [
+            <span class="hljs-comment">// override bundles to use CDN :</span>
+            <span class="hljs-string">'bundles'</span> =&gt; [
+                <span class="hljs-string">'yii\bootstrap\BootstrapAsset'</span> =&gt; [
+                    <span class="hljs-string">'sourcePath'</span> =&gt; <span class="hljs-keyword">null</span>,
+                    <span class="hljs-string">'baseUrl'</span> =&gt; <span class="hljs-string">'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7'</span>,
+                    <span class="hljs-string">'css'</span> =&gt; [
+                        <span class="hljs-string">'css/bootstrap.min.css'</span>
+                    ],
+                ],
+                <span class="hljs-string">'yii\bootstrap\BootstrapPluginAsset'</span> =&gt; [
+                    <span class="hljs-string">'sourcePath'</span> =&gt; <span class="hljs-keyword">null</span>,
+                    <span class="hljs-string">'baseUrl'</span> =&gt; <span class="hljs-string">'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7'</span>,
+                    <span class="hljs-string">'js'</span> =&gt; [
+                        <span class="hljs-string">'js/bootstrap.min.js'</span>
+                    ],
+                ],
+                <span class="hljs-string">'yii\bootstrap\BootstrapThemeAsset'</span> =&gt; [
+                    <span class="hljs-string">'sourcePath'</span> =&gt; <span class="hljs-keyword">null</span>,
+                    <span class="hljs-string">'baseUrl'</span> =&gt; <span class="hljs-string">'https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7'</span>,
+                    <span class="hljs-string">'css'</span> =&gt; [
+                        <span class="hljs-string">'css/bootstrap-theme.min.css'</span>
+                    ]
+                ],
+            ],
+        ],
+        <span class="hljs-comment">// ...</span>
+    ],
+    <span class="hljs-comment">// ...</span>
+];
+</code></pre>
+<h2>Compiling from the .less files <span id="compiling-from-the-less-files"></span><a href="#compiling-from-the-less-files" class="hashlink">&para;</a></h2><p>If you want to customize the Bootstrap CSS source directly, you may want to compile it from source *.less files.
+In such case installing Bootstrap assets from Composer or Bower/NPM makes no sense, since you can not modify files
+inside 'vendor' directory.
+You'll have to downloaded Bootstrap assets manually and place them somewhere inside you project source code,
+for example at 'assets/source/bootstrap' folder.</p>
+<p>In the <code>composer.json</code> of your project, add the following lines in order to prevent redundant Bootstrap asset installation:</p>
+<pre><code class="hljs json language-json"><span class="hljs-string">"replace"</span>: {
+    "<span class="hljs-attribute">bower-asset/bootstrap</span>": <span class="hljs-value"><span class="hljs-string">"&gt;=3.3.0"</span>
+</span>},
+</code></pre>
+<p>Configure 'assetManager' application component, overriding Bootstrap assent bundles and specifying compiler for CSS files:</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">return</span> [
+    <span class="hljs-string">'components'</span> =&gt; [
+        <span class="hljs-string">'assetManager'</span> =&gt; [
+            <span class="hljs-comment">// setup asset converter for *.less files :</span>
+            <span class="hljs-string">'converter'</span> =&gt; [
+                <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'yii\web\AssetConverter'</span>,
+                <span class="hljs-string">'commands'</span> =&gt; [
+                    <span class="hljs-string">'less'</span> =&gt; [<span class="hljs-string">'css'</span>, <span class="hljs-string">'lessc {from} {to} --no-color'</span>],
+                ],
+            ],
+            <span class="hljs-comment">// override bundles to use local project files :</span>
+            <span class="hljs-string">'bundles'</span> =&gt; [
+                <span class="hljs-string">'yii\bootstrap\BootstrapAsset'</span> =&gt; [
+                    <span class="hljs-string">'sourcePath'</span> =&gt; <span class="hljs-string">'@app/assets/source/bootstrap'</span>,
+                    <span class="hljs-string">'css'</span> =&gt; [
+                        <span class="hljs-string">'css/bootstrap.less'</span>
+                    ],
+                ],
+                <span class="hljs-string">'yii\bootstrap\BootstrapPluginAsset'</span> =&gt; [
+                    <span class="hljs-string">'sourcePath'</span> =&gt; <span class="hljs-string">'@app/assets/source/bootstrap'</span>,
+                ],
+                <span class="hljs-string">'yii\bootstrap\BootstrapThemeAsset'</span> =&gt; [
+                    <span class="hljs-string">'sourcePath'</span> =&gt; <span class="hljs-string">'@app/assets/source/bootstrap'</span>,
+                ],
+            ],
+        ],
+        <span class="hljs-comment">// ...</span>
+    ],
+    <span class="hljs-comment">// ...</span>
+];
+</code></pre>
+<h2>Compiling from the .sass files <span id="compiling-from-the-sass-files"></span><a href="#compiling-from-the-sass-files" class="hashlink">&para;</a></h2><p>If you want to customize the Bootstrap CSS source directly, you may want to compile it from source *.sass files.
+These can be obtained from <a href="https://github.com/twbs/bootstrap-sass">Bootstrap ported from Less to Sass</a>.</p>
+<p>In such case installing Bootstrap assets from Composer or Bower/NPM makes no sense, since you can not modify files
+inside 'vendor' directory.
+You'll have to downloaded Bootstrap assets manually and place them somewhere inside you project source code,
+for example at 'assets/source/bootstrap' folder.</p>
+<p>In the <code>composer.json</code> of your project, add the following lines in order to prevent redundant Bootstrap asset installation:</p>
+<pre><code class="hljs json language-json"><span class="hljs-string">"replace"</span>: {
+    "<span class="hljs-attribute">bower-asset/bootstrap</span>": <span class="hljs-value"><span class="hljs-string">"&gt;=3.3.0"</span>
+</span>},
+</code></pre>
+<p>Configure 'assetManager' application component, overriding Bootstrap assent bundles and specifying compiler for CSS files:</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">return</span> [
+    <span class="hljs-string">'components'</span> =&gt; [
+        <span class="hljs-string">'assetManager'</span> =&gt; [
+            <span class="hljs-comment">// setup asset converter for *.sass files :</span>
+            <span class="hljs-string">'converter'</span> =&gt; [
+                <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'yii\web\AssetConverter'</span>,
+                <span class="hljs-string">'commands'</span> =&gt; [
+                    <span class="hljs-string">'scss'</span> =&gt; [<span class="hljs-string">'css'</span>, <span class="hljs-string">'sass {from} {to} --sourcemap'</span>]
+                ],
+            ],
+            <span class="hljs-comment">// override bundles to use local project files :</span>
+            <span class="hljs-string">'bundles'</span> =&gt; [
+                <span class="hljs-string">'yii\bootstrap\BootstrapAsset'</span> =&gt; [
+                    <span class="hljs-string">'sourcePath'</span> =&gt; <span class="hljs-string">'@app/assets/source/bootstrap'</span>,
+                    <span class="hljs-string">'css'</span> =&gt; [
+                        <span class="hljs-string">'css/bootstrap.scss'</span>
+                    ],
+                ],
+                <span class="hljs-string">'yii\bootstrap\BootstrapPluginAsset'</span> =&gt; [
+                    <span class="hljs-string">'sourcePath'</span> =&gt; <span class="hljs-string">'@app/assets/source/bootstrap'</span>,
+                ],
+                <span class="hljs-string">'yii\bootstrap\BootstrapThemeAsset'</span> =&gt; [
+                    <span class="hljs-string">'sourcePath'</span> =&gt; <span class="hljs-string">'@app/assets/source/bootstrap'</span>,
+                ],
+            ],
+        ],
+        <span class="hljs-comment">// ...</span>
+    ],
+    <span class="hljs-comment">// ...</span>
+];
+</code></pre>
+        <div class="toplink"><a href="#" class="h1" title="go to top"><span class="glyphicon glyphicon-arrow-up"></a></div>
+    </div>
+</div>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Wed, 15 Aug 2018 18:48:11 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/f194ff92/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/404086f/jssearch.js"></script>    <title>IndividualController, johnsnook\visitor\controllers\IndividualController - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w16911" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w16911-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w16911-collapse" class="collapse navbar-collapse"><ul id="w16912" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w16913" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-swiftmailer-index.html" tabindex="-1">swiftmailer</a></li></ul></li>
+<li><a href="./guide-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-16900" data-toggle="collapse" data-parent="#navigation">Not namespaced classes <b class="caret"></b></a><div id="navigation-16900" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii.html">Yii</a>
+<a class="list-group-item" href="./yiirequirementchecker.html">YiiRequirementChecker</a></div>
+<a class="list-group-item" href="#navigation-16901" data-toggle="collapse" data-parent="#navigation">dektrium\user\filters <b class="caret"></b></a><div id="navigation-16901" class="submenu panel-collapse collapse"><a class="list-group-item" href="./dektrium-user-filters-backendfilter.html">BackendFilter</a></div>
+<a class="list-group-item" href="#navigation-16902" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor <b class="caret"></b></a><div id="navigation-16902" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-module.html">Module</a></div>
+<a class="list-group-item" href="#navigation-16903" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\assets <b class="caret"></b></a><div id="navigation-16903" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-assets-appasset.html">AppAsset</a>
+<a class="list-group-item" href="./johnsnook-visitor-assets-visitorasset.html">VisitorAsset</a></div>
+<a class="list-group-item" href="#navigation-16904" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\behaviors <b class="caret"></b></a><div id="navigation-16904" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-behaviors-visitorbehavior.html">VisitorBehavior</a></div>
+<a class="list-group-item" href="#navigation-16905" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\commands <b class="caret"></b></a><div id="navigation-16905" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-commands-importcontroller.html">ImportController</a>
+<a class="list-group-item" href="./johnsnook-visitor-commands-servicecontroller.html">ServiceController</a></div>
+<a class="list-group-item active" href="#navigation-16906" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\controllers <b class="caret"></b></a><div id="navigation-16906" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./johnsnook-visitor-controllers-individualcontroller.html">IndividualController</a>
+<a class="list-group-item" href="./johnsnook-visitor-controllers-visitorcontroller.html">VisitorController</a>
+<a class="list-group-item" href="./johnsnook-visitor-controllers-visitorserviceerrorcontroller.html">VisitorServiceErrorController</a></div>
+<a class="list-group-item" href="#navigation-16907" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\filters <b class="caret"></b></a><div id="navigation-16907" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-filters-accessrule.html">AccessRule</a>
+<a class="list-group-item" href="./johnsnook-visitor-filters-frontendfilter.html">FrontendFilter</a></div>
+<a class="list-group-item" href="#navigation-16908" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\helpers <b class="caret"></b></a><div id="navigation-16908" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-helpers-iphelper.html">IpHelper</a>
+<a class="list-group-item" href="./johnsnook-visitor-helpers-progressbar.html">ProgressBar</a></div>
+<a class="list-group-item" href="#navigation-16909" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\models <b class="caret"></b></a><div id="navigation-16909" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-models-country.html">Country</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitor.html">Visitor</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitoragent.html">VisitorAgent</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitorlog.html">VisitorLog</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitorlogsearch.html">VisitorLogSearch</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitorsearch.html">VisitorSearch</a></div>
+<a class="list-group-item" href="#navigation-16910" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\widgets <b class="caret"></b></a><div id="navigation-16910" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-widgets-card.html">Card</a>
+<a class="list-group-item" href="./johnsnook-visitor-widgets-linkpager.html">LinkPager</a>
+<a class="list-group-item" href="./johnsnook-visitor-widgets-panel.html">Panel</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class johnsnook\visitor\controllers\IndividualController</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+                | <a href="#events">Events</a>
+                | <a href="#constants">Constants</a>
+    </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="johnsnook-visitor-controllers-individualcontroller.html">johnsnook\visitor\controllers\IndividualController</a> &raquo;
+<a href="yii-web-controller.html">yii\web\Controller</a> &raquo;
+<a href="yii-base-controller.html">yii\base\Controller</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a>, <a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
+                                    </table>
+
+<div class="class-description">
+    <p><strong>VisitorController implements the CRUD actions for the Visitor model.</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="$action">
+        <td><a href="yii-base-controller.html#$action-detail">$action</a></td>
+        <td><a href="yii-base-action.html">yii\base\Action</a></td>
+        <td>The action that is currently being executed.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$actionParams">
+        <td><a href="yii-web-controller.html#$actionParams-detail">$actionParams</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The parameters bound to the current action.</td>
+        <td><a href="yii-web-controller.html">yii\web\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$behaviors">
+        <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
+        <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
+        <td>List of behaviors attached to this component</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="$defaultAction">
+        <td><a href="yii-base-controller.html#$defaultAction-detail">$defaultAction</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The ID of the action that is used when the action ID is not specified
+in the request.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$enableCsrfValidation">
+        <td><a href="yii-web-controller.html#$enableCsrfValidation-detail">$enableCsrfValidation</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to enable CSRF validation for the actions in this controller.</td>
+        <td><a href="yii-web-controller.html">yii\web\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$id">
+        <td><a href="yii-base-controller.html#$id-detail">$id</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The ID of this controller.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$layout">
+        <td><a href="yii-base-controller.html#$layout-detail">$layout</a></td>
+        <td><a href="http://www.php.net/language.types.null">null</a>|<a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.boolean">false</a></td>
+        <td>The name of the layout to be applied to this controller's views.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$module">
+        <td><a href="yii-base-controller.html#$module-detail">$module</a></td>
+        <td><a href="yii-base-module.html">yii\base\Module</a></td>
+        <td>The module that this controller belongs to.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$modules">
+        <td><a href="yii-base-controller.html#$modules-detail">$modules</a></td>
+        <td><a href="yii-base-module.html">yii\base\Module</a>[]</td>
+        <td>All ancestor modules that this controller is located within.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$route">
+        <td><a href="yii-base-controller.html#$route-detail">$route</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The route (module ID, controller ID and action ID) of the current request.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$uniqueId">
+        <td><a href="yii-base-controller.html#$uniqueId-detail">$uniqueId</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The controller ID that is prefixed with the module ID (if any).</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$view">
+        <td><a href="yii-base-controller.html#$view-detail">$view</a></td>
+        <td><a href="yii-base-view.html">yii\base\View</a>|<a href="yii-web-view.html">yii\web\View</a></td>
+        <td>The view object that can be used to render views or view files.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="$viewPath">
+        <td><a href="yii-base-controller.html#$viewPath-detail">$viewPath</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The directory containing the view files for this controller.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-component.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-controller.html#__construct()-detail">__construct()</a></td>
+        <td></td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-component.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-component.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-component.html#__set()-detail">__set()</a></td>
+        <td>Sets the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-component.html#__unset()-detail">__unset()</a></td>
+        <td>Sets a component property to be null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="actionIndex()">
+        <td><a href="johnsnook-visitor-controllers-individualcontroller.html#actionIndex()-detail">actionIndex()</a></td>
+        <td>Displays the index page</td>
+        <td><a href="johnsnook-visitor-controllers-individualcontroller.html">johnsnook\visitor\controllers\IndividualController</a></td>
+    </tr>
+            <tr id="actionLookup()">
+        <td><a href="johnsnook-visitor-controllers-individualcontroller.html#actionLookup()-detail">actionLookup()</a></td>
+        <td>Performs ip info query</td>
+        <td><a href="johnsnook-visitor-controllers-individualcontroller.html">johnsnook\visitor\controllers\IndividualController</a></td>
+    </tr>
+            <tr class="inherited" id="actions()">
+        <td><a href="yii-base-controller.html#actions()-detail">actions()</a></td>
+        <td>Declares external actions for the controller.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="afterAction()">
+        <td><a href="yii-base-controller.html#afterAction()-detail">afterAction()</a></td>
+        <td>This method is invoked right after an action is executed.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="asJson()">
+        <td><a href="yii-web-controller.html#asJson()-detail">asJson()</a></td>
+        <td>Send data formatted as JSON.</td>
+        <td><a href="yii-web-controller.html">yii\web\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="asXml()">
+        <td><a href="yii-web-controller.html#asXml()-detail">asXml()</a></td>
+        <td>Send data formatted as XML.</td>
+        <td><a href="yii-web-controller.html">yii\web\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="beforeAction()">
+        <td><a href="yii-web-controller.html#beforeAction()-detail">beforeAction()</a></td>
+        <td>This method is invoked right before an action is executed.</td>
+        <td><a href="yii-web-controller.html">yii\web\Controller</a></td>
+    </tr>
+            <tr id="behaviors()">
+        <td><a href="johnsnook-visitor-controllers-individualcontroller.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="johnsnook-visitor-controllers-individualcontroller.html">johnsnook\visitor\controllers\IndividualController</a></td>
+    </tr>
+            <tr class="inherited" id="bindActionParams()">
+        <td><a href="yii-web-controller.html#bindActionParams()-detail">bindActionParams()</a></td>
+        <td>Binds the parameters to the action.</td>
+        <td><a href="yii-web-controller.html">yii\web\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-component.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="createAction()">
+        <td><a href="yii-base-controller.html#createAction()-detail">createAction()</a></td>
+        <td>Creates an action based on the given action ID.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="findLayoutFile()">
+        <td><a href="yii-base-controller.html#findLayoutFile()-detail">findLayoutFile()</a></td>
+        <td>Finds the applicable layout file.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getModules()">
+        <td><a href="yii-base-controller.html#getModules()-detail">getModules()</a></td>
+        <td>Returns all ancestor modules of this controller.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getRoute()">
+        <td><a href="yii-base-controller.html#getRoute()-detail">getRoute()</a></td>
+        <td>Returns the route of the current request.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getUniqueId()">
+        <td><a href="yii-base-controller.html#getUniqueId()-detail">getUniqueId()</a></td>
+        <td>Returns the unique ID of the controller.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getView()">
+        <td><a href="yii-base-controller.html#getView()-detail">getView()</a></td>
+        <td>Returns the view object that can be used to render views or view files.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="getViewPath()">
+        <td><a href="yii-base-controller.html#getViewPath()-detail">getViewPath()</a></td>
+        <td>Returns the directory containing view files for this controller.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="goBack()">
+        <td><a href="yii-web-controller.html#goBack()-detail">goBack()</a></td>
+        <td>Redirects the browser to the last visited page.</td>
+        <td><a href="yii-web-controller.html">yii\web\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="goHome()">
+        <td><a href="yii-web-controller.html#goHome()-detail">goHome()</a></td>
+        <td>Redirects the browser to the home page.</td>
+        <td><a href="yii-web-controller.html">yii\web\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-component.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-component.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined for this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-base-baseobject.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="redirect()">
+        <td><a href="yii-web-controller.html#redirect()-detail">redirect()</a></td>
+        <td>Redirects the browser to the specified URL.</td>
+        <td><a href="yii-web-controller.html">yii\web\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="refresh()">
+        <td><a href="yii-web-controller.html#refresh()-detail">refresh()</a></td>
+        <td>Refreshes the current page.</td>
+        <td><a href="yii-web-controller.html">yii\web\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="render()">
+        <td><a href="yii-base-controller.html#render()-detail">render()</a></td>
+        <td>Renders a view and applies layout if available.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="renderAjax()">
+        <td><a href="yii-web-controller.html#renderAjax()-detail">renderAjax()</a></td>
+        <td>Renders a view in response to an AJAX request.</td>
+        <td><a href="yii-web-controller.html">yii\web\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="renderContent()">
+        <td><a href="yii-base-controller.html#renderContent()-detail">renderContent()</a></td>
+        <td>Renders a static string by applying a layout.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="renderFile()">
+        <td><a href="yii-base-controller.html#renderFile()-detail">renderFile()</a></td>
+        <td>Renders a view file.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="renderPartial()">
+        <td><a href="yii-base-controller.html#renderPartial()-detail">renderPartial()</a></td>
+        <td>Renders a view without applying layout.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="run()">
+        <td><a href="yii-base-controller.html#run()-detail">run()</a></td>
+        <td>Runs a request specified in terms of a route.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="runAction()">
+        <td><a href="yii-base-controller.html#runAction()-detail">runAction()</a></td>
+        <td>Runs an action within this controller with the specified action ID and parameters.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="setView()">
+        <td><a href="yii-base-controller.html#setView()-detail">setView()</a></td>
+        <td>Sets the view object to be used by this controller.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="setViewPath()">
+        <td><a href="yii-base-controller.html#setViewPath()-detail">setViewPath()</a></td>
+        <td>Sets the directory that contains the view files.</td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+            <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="events"></a>
+<div class="summary doc-event">
+    <h2>Events</h2>
+
+    <p><a href="#" class="toggle">Hide inherited events</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-event" />
+        <col class="col-type" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Event</th><th>Type</th><th>Description</th><th>Defined By</th>
+    </tr>
+        <tr class="inherited" id="EVENT_AFTER_ACTION">
+        <td><a href="yii-base-controller.html#EVENT_AFTER_ACTION-detail">EVENT_AFTER_ACTION</a></td>
+        <td><a href="yii-base-actionevent.html">yii\base\ActionEvent</a></td>
+        <td>
+            An event raised right after executing a controller action.                    </td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_BEFORE_ACTION">
+        <td><a href="yii-base-controller.html#EVENT_BEFORE_ACTION-detail">EVENT_BEFORE_ACTION</a></td>
+        <td><a href="yii-base-actionevent.html">yii\base\ActionEvent</a></td>
+        <td>
+            An event raised right before executing a controller action.                    </td>
+        <td><a href="yii-base-controller.html">yii\base\Controller</a></td>
+    </tr>
+        </table>
+</div>
+
+<a id="constants"></a>
+<div class="summary doc-const">
+    <h2>Constants</h2>
+
+    <p><a href="#" class="toggle">Hide inherited constants</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-const" />
+        <col class="col-value" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Constant</th><th>Value</th><th>Description</th><th>Defined By</th>
+    </tr>
+            <tr id="REPLACEMENTS_TEMPLATE">
+          <td id="REPLACEMENTS_TEMPLATE-detail">REPLACEMENTS_TEMPLATE</td>
+          <td>array('{ip_address}', '{key}')</td>
+          <td>
+                        </td>
+          <td><a href="johnsnook-visitor-controllers-individualcontroller.html">johnsnook\visitor\controllers\IndividualController</a></td>
+        </tr>
+            <tr id="TEMPLATE_IP_INFO_URL">
+          <td id="TEMPLATE_IP_INFO_URL-detail">TEMPLATE_IP_INFO_URL</td>
+          <td>'http://ipinfo.io/{ip_address}?token={key}'</td>
+          <td>
+                        </td>
+          <td><a href="johnsnook-visitor-controllers-individualcontroller.html">johnsnook\visitor\controllers\IndividualController</a></td>
+        </tr>
+        </table>
+</div>
+
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="actionIndex()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-controllers-individualcontroller.html#actionIndex()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        actionIndex()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Displays the index page</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="johnsnook-visitor-controllers-individualcontroller.html#actionIndex()-detail">actionIndex</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="actionLookup()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-controllers-individualcontroller.html#actionLookup()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        actionLookup()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Performs ip info query</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.null">null</a></span> <strong><a href="johnsnook-visitor-controllers-individualcontroller.html#actionLookup()-detail">actionLookup</a></strong> ( <span style="color: #0000BB">$ip</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$ip</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="behaviors()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-controllers-individualcontroller.html#behaviors()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        behaviors()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Returns a list of behaviors that this component should behave as.</strong></p>
+
+        <p>Child classes may override this method to specify the behaviors they want to behave as.</p>
+<p>The return value of this method should be an array of behavior objects or configurations
+indexed by behavior names. A behavior configuration can be either a string specifying
+the behavior class or an array of the following structure:</p>
+<pre><code class="hljs php language-php"><span class="hljs-string">'behaviorName'</span> =&gt; [
+    <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'BehaviorClass'</span>,
+    <span class="hljs-string">'property1'</span> =&gt; <span class="hljs-string">'value1'</span>,
+    <span class="hljs-string">'property2'</span> =&gt; <span class="hljs-string">'value2'</span>,
+]
+</code></pre>
+<p>Note that a behavior class must extend from <span class="broken-link">\johnsnook\visitor\controllers\Behavior</span>. Behaviors can be attached using a name or anonymously.
+When a name is used as the array key, using this name, the behavior can later be retrieved using <a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a>
+or be detached using <a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a>. Anonymous behaviors can not be retrieved or detached.</p>
+<p>Behaviors declared in this method will be attached to the component automatically (on demand).</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="johnsnook-visitor-controllers-individualcontroller.html#behaviors()-detail">behaviors</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>The behavior configurations.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Thu, 16 Aug 2018 03:16:09 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

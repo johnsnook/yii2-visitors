@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/40113240/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/6d599862/solarized_light.css" rel="stylesheet">
+<link href="./assets/5d9d0765/style.css" rel="stylesheet">
+<script src="./assets/6147b175/jquery.js"></script>
+<script src="./assets/40113240/js/bootstrap.js"></script>
+<script src="./assets/f875d911/jssearch.js"></script>    <title>ButtonDropdown, yii\bootstrap4\ButtonDropdown - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w20461" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w20461-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w20461-collapse" class="collapse navbar-collapse"><ul id="w20462" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w20463" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-swiftmailer-index.html" tabindex="-1">swiftmailer</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-20420" data-toggle="collapse" data-parent="#navigation">Not namespaced classes <b class="caret"></b></a><div id="navigation-20420" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii.html">Yii</a>
+<a class="list-group-item" href="./yiirequirementchecker.html">YiiRequirementChecker</a></div>
+<a class="list-group-item" href="#navigation-20421" data-toggle="collapse" data-parent="#navigation">yii <b class="caret"></b></a><div id="navigation-20421" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-baseyii.html">BaseYii</a></div>
+<a class="list-group-item" href="#navigation-20422" data-toggle="collapse" data-parent="#navigation">yii\base <b class="caret"></b></a><div id="navigation-20422" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-base-action.html">Action</a>
+<a class="list-group-item" href="./yii-base-actionevent.html">ActionEvent</a>
+<a class="list-group-item" href="./yii-base-actionfilter.html">ActionFilter</a>
+<a class="list-group-item" href="./yii-base-application.html">Application</a>
+<a class="list-group-item" href="./yii-base-arrayaccesstrait.html">ArrayAccessTrait</a>
+<a class="list-group-item" href="./yii-base-arrayable.html">Arrayable</a>
+<a class="list-group-item" href="./yii-base-arrayabletrait.html">ArrayableTrait</a>
+<a class="list-group-item" href="./yii-base-baseobject.html">BaseObject</a>
+<a class="list-group-item" href="./yii-base-behavior.html">Behavior</a>
+<a class="list-group-item" href="./yii-base-bootstrapinterface.html">BootstrapInterface</a>
+<a class="list-group-item" href="./yii-base-component.html">Component</a>
+<a class="list-group-item" href="./yii-base-configurable.html">Configurable</a>
+<a class="list-group-item" href="./yii-base-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-base-dynamiccontentawareinterface.html">DynamicContentAwareInterface</a>
+<a class="list-group-item" href="./yii-base-dynamiccontentawaretrait.html">DynamicContentAwareTrait</a>
+<a class="list-group-item" href="./yii-base-dynamicmodel.html">DynamicModel</a>
+<a class="list-group-item" href="./yii-base-errorexception.html">ErrorException</a>
+<a class="list-group-item" href="./yii-base-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-base-event.html">Event</a>
+<a class="list-group-item" href="./yii-base-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-base-exitexception.html">ExitException</a>
+<a class="list-group-item" href="./yii-base-inlineaction.html">InlineAction</a>
+<a class="list-group-item" href="./yii-base-invalidargumentexception.html">InvalidArgumentException</a>
+<a class="list-group-item" href="./yii-base-invalidcallexception.html">InvalidCallException</a>
+<a class="list-group-item" href="./yii-base-invalidconfigexception.html">InvalidConfigException</a>
+<a class="list-group-item" href="./yii-base-invalidparamexception.html">InvalidParamException</a>
+<a class="list-group-item" href="./yii-base-invalidrouteexception.html">InvalidRouteException</a>
+<a class="list-group-item" href="./yii-base-invalidvalueexception.html">InvalidValueException</a>
+<a class="list-group-item" href="./yii-base-model.html">Model</a>
+<a class="list-group-item" href="./yii-base-modelevent.html">ModelEvent</a>
+<a class="list-group-item" href="./yii-base-module.html">Module</a>
+<a class="list-group-item" href="./yii-base-notsupportedexception.html">NotSupportedException</a>
+<a class="list-group-item" href="./yii-base-object.html">Object</a>
+<a class="list-group-item" href="./yii-base-request.html">Request</a>
+<a class="list-group-item" href="./yii-base-response.html">Response</a>
+<a class="list-group-item" href="./yii-base-security.html">Security</a>
+<a class="list-group-item" href="./yii-base-staticinstanceinterface.html">StaticInstanceInterface</a>
+<a class="list-group-item" href="./yii-base-staticinstancetrait.html">StaticInstanceTrait</a>
+<a class="list-group-item" href="./yii-base-theme.html">Theme</a>
+<a class="list-group-item" href="./yii-base-unknownclassexception.html">UnknownClassException</a>
+<a class="list-group-item" href="./yii-base-unknownmethodexception.html">UnknownMethodException</a>
+<a class="list-group-item" href="./yii-base-unknownpropertyexception.html">UnknownPropertyException</a>
+<a class="list-group-item" href="./yii-base-userexception.html">UserException</a>
+<a class="list-group-item" href="./yii-base-view.html">View</a>
+<a class="list-group-item" href="./yii-base-viewcontextinterface.html">ViewContextInterface</a>
+<a class="list-group-item" href="./yii-base-viewevent.html">ViewEvent</a>
+<a class="list-group-item" href="./yii-base-viewnotfoundexception.html">ViewNotFoundException</a>
+<a class="list-group-item" href="./yii-base-viewrenderer.html">ViewRenderer</a>
+<a class="list-group-item" href="./yii-base-widget.html">Widget</a>
+<a class="list-group-item" href="./yii-base-widgetevent.html">WidgetEvent</a></div>
+<a class="list-group-item" href="#navigation-20423" data-toggle="collapse" data-parent="#navigation">yii\behaviors <b class="caret"></b></a><div id="navigation-20423" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-behaviors-attributebehavior.html">AttributeBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-attributetypecastbehavior.html">AttributeTypecastBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-attributesbehavior.html">AttributesBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-blameablebehavior.html">BlameableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-cacheablewidgetbehavior.html">CacheableWidgetBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-sluggablebehavior.html">SluggableBehavior</a>
+<a class="list-group-item" href="./yii-behaviors-timestampbehavior.html">TimestampBehavior</a></div>
+<a class="list-group-item active" href="#navigation-20424" data-toggle="collapse" data-parent="#navigation">yii\bootstrap4 <b class="caret"></b></a><div id="navigation-20424" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-bootstrap4-accordion.html">Accordion</a>
+<a class="list-group-item" href="./yii-bootstrap4-activefield.html">ActiveField</a>
+<a class="list-group-item" href="./yii-bootstrap4-activeform.html">ActiveForm</a>
+<a class="list-group-item" href="./yii-bootstrap4-alert.html">Alert</a>
+<a class="list-group-item" href="./yii-bootstrap4-basehtml.html">BaseHtml</a>
+<a class="list-group-item" href="./yii-bootstrap4-bootstrapasset.html">BootstrapAsset</a>
+<a class="list-group-item" href="./yii-bootstrap4-bootstrappluginasset.html">BootstrapPluginAsset</a>
+<a class="list-group-item" href="./yii-bootstrap4-bootstrapwidgettrait.html">BootstrapWidgetTrait</a>
+<a class="list-group-item" href="./yii-bootstrap4-button.html">Button</a>
+<a class="list-group-item active" href="./yii-bootstrap4-buttondropdown.html">ButtonDropdown</a>
+<a class="list-group-item" href="./yii-bootstrap4-buttongroup.html">ButtonGroup</a>
+<a class="list-group-item" href="./yii-bootstrap4-buttontoolbar.html">ButtonToolbar</a>
+<a class="list-group-item" href="./yii-bootstrap4-carousel.html">Carousel</a>
+<a class="list-group-item" href="./yii-bootstrap4-collapse.html">Collapse</a>
+<a class="list-group-item" href="./yii-bootstrap4-dropdown.html">Dropdown</a>
+<a class="list-group-item" href="./yii-bootstrap4-html.html">Html</a>
+<a class="list-group-item" href="./yii-bootstrap4-inputwidget.html">InputWidget</a>
+<a class="list-group-item" href="./yii-bootstrap4-modal.html">Modal</a>
+<a class="list-group-item" href="./yii-bootstrap4-nav.html">Nav</a>
+<a class="list-group-item" href="./yii-bootstrap4-navbar.html">NavBar</a>
+<a class="list-group-item" href="./yii-bootstrap4-progress.html">Progress</a>
+<a class="list-group-item" href="./yii-bootstrap4-tabs.html">Tabs</a>
+<a class="list-group-item" href="./yii-bootstrap4-togglebuttongroup.html">ToggleButtonGroup</a>
+<a class="list-group-item" href="./yii-bootstrap4-widget.html">Widget</a></div>
+<a class="list-group-item" href="#navigation-20425" data-toggle="collapse" data-parent="#navigation">yii\caching <b class="caret"></b></a><div id="navigation-20425" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-caching-apccache.html">ApcCache</a>
+<a class="list-group-item" href="./yii-caching-arraycache.html">ArrayCache</a>
+<a class="list-group-item" href="./yii-caching-cache.html">Cache</a>
+<a class="list-group-item" href="./yii-caching-cacheinterface.html">CacheInterface</a>
+<a class="list-group-item" href="./yii-caching-chaineddependency.html">ChainedDependency</a>
+<a class="list-group-item" href="./yii-caching-dbcache.html">DbCache</a>
+<a class="list-group-item" href="./yii-caching-dbdependency.html">DbDependency</a>
+<a class="list-group-item" href="./yii-caching-dbquerydependency.html">DbQueryDependency</a>
+<a class="list-group-item" href="./yii-caching-dependency.html">Dependency</a>
+<a class="list-group-item" href="./yii-caching-dummycache.html">DummyCache</a>
+<a class="list-group-item" href="./yii-caching-expressiondependency.html">ExpressionDependency</a>
+<a class="list-group-item" href="./yii-caching-filecache.html">FileCache</a>
+<a class="list-group-item" href="./yii-caching-filedependency.html">FileDependency</a>
+<a class="list-group-item" href="./yii-caching-memcache.html">MemCache</a>
+<a class="list-group-item" href="./yii-caching-memcacheserver.html">MemCacheServer</a>
+<a class="list-group-item" href="./yii-caching-tagdependency.html">TagDependency</a>
+<a class="list-group-item" href="./yii-caching-wincache.html">WinCache</a>
+<a class="list-group-item" href="./yii-caching-xcache.html">XCache</a>
+<a class="list-group-item" href="./yii-caching-zenddatacache.html">ZendDataCache</a></div>
+<a class="list-group-item" href="#navigation-20426" data-toggle="collapse" data-parent="#navigation">yii\captcha <b class="caret"></b></a><div id="navigation-20426" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-captcha-captcha.html">Captcha</a>
+<a class="list-group-item" href="./yii-captcha-captchaaction.html">CaptchaAction</a>
+<a class="list-group-item" href="./yii-captcha-captchaasset.html">CaptchaAsset</a>
+<a class="list-group-item" href="./yii-captcha-captchavalidator.html">CaptchaValidator</a></div>
+<a class="list-group-item" href="#navigation-20427" data-toggle="collapse" data-parent="#navigation">yii\console <b class="caret"></b></a><div id="navigation-20427" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-application.html">Application</a>
+<a class="list-group-item" href="./yii-console-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-console-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-console-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-console-exitcode.html">ExitCode</a>
+<a class="list-group-item" href="./yii-console-markdown.html">Markdown</a>
+<a class="list-group-item" href="./yii-console-request.html">Request</a>
+<a class="list-group-item" href="./yii-console-response.html">Response</a>
+<a class="list-group-item" href="./yii-console-unknowncommandexception.html">UnknownCommandException</a></div>
+<a class="list-group-item" href="#navigation-20428" data-toggle="collapse" data-parent="#navigation">yii\console\controllers <b class="caret"></b></a><div id="navigation-20428" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-controllers-assetcontroller.html">AssetController</a>
+<a class="list-group-item" href="./yii-console-controllers-basemigratecontroller.html">BaseMigrateController</a>
+<a class="list-group-item" href="./yii-console-controllers-cachecontroller.html">CacheController</a>
+<a class="list-group-item" href="./yii-console-controllers-fixturecontroller.html">FixtureController</a>
+<a class="list-group-item" href="./yii-console-controllers-helpcontroller.html">HelpController</a>
+<a class="list-group-item" href="./yii-console-controllers-messagecontroller.html">MessageController</a>
+<a class="list-group-item" href="./yii-console-controllers-migratecontroller.html">MigrateController</a>
+<a class="list-group-item" href="./yii-console-controllers-servecontroller.html">ServeController</a></div>
+<a class="list-group-item" href="#navigation-20429" data-toggle="collapse" data-parent="#navigation">yii\console\widgets <b class="caret"></b></a><div id="navigation-20429" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-console-widgets-table.html">Table</a></div>
+<a class="list-group-item" href="#navigation-20430" data-toggle="collapse" data-parent="#navigation">yii\data <b class="caret"></b></a><div id="navigation-20430" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-data-activedatafilter.html">ActiveDataFilter</a>
+<a class="list-group-item" href="./yii-data-activedataprovider.html">ActiveDataProvider</a>
+<a class="list-group-item" href="./yii-data-arraydataprovider.html">ArrayDataProvider</a>
+<a class="list-group-item" href="./yii-data-basedataprovider.html">BaseDataProvider</a>
+<a class="list-group-item" href="./yii-data-datafilter.html">DataFilter</a>
+<a class="list-group-item" href="./yii-data-dataproviderinterface.html">DataProviderInterface</a>
+<a class="list-group-item" href="./yii-data-pagination.html">Pagination</a>
+<a class="list-group-item" href="./yii-data-sort.html">Sort</a>
+<a class="list-group-item" href="./yii-data-sqldataprovider.html">SqlDataProvider</a></div>
+<a class="list-group-item" href="#navigation-20431" data-toggle="collapse" data-parent="#navigation">yii\db <b class="caret"></b></a><div id="navigation-20431" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-activequery.html">ActiveQuery</a>
+<a class="list-group-item" href="./yii-db-activequeryinterface.html">ActiveQueryInterface</a>
+<a class="list-group-item" href="./yii-db-activequerytrait.html">ActiveQueryTrait</a>
+<a class="list-group-item" href="./yii-db-activerecord.html">ActiveRecord</a>
+<a class="list-group-item" href="./yii-db-activerecordinterface.html">ActiveRecordInterface</a>
+<a class="list-group-item" href="./yii-db-activerelationtrait.html">ActiveRelationTrait</a>
+<a class="list-group-item" href="./yii-db-aftersaveevent.html">AfterSaveEvent</a>
+<a class="list-group-item" href="./yii-db-arrayexpression.html">ArrayExpression</a>
+<a class="list-group-item" href="./yii-db-baseactiverecord.html">BaseActiveRecord</a>
+<a class="list-group-item" href="./yii-db-batchqueryresult.html">BatchQueryResult</a>
+<a class="list-group-item" href="./yii-db-checkconstraint.html">CheckConstraint</a>
+<a class="list-group-item" href="./yii-db-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-command.html">Command</a>
+<a class="list-group-item" href="./yii-db-connection.html">Connection</a>
+<a class="list-group-item" href="./yii-db-constraint.html">Constraint</a>
+<a class="list-group-item" href="./yii-db-constraintfinderinterface.html">ConstraintFinderInterface</a>
+<a class="list-group-item" href="./yii-db-constraintfindertrait.html">ConstraintFinderTrait</a>
+<a class="list-group-item" href="./yii-db-datareader.html">DataReader</a>
+<a class="list-group-item" href="./yii-db-defaultvalueconstraint.html">DefaultValueConstraint</a>
+<a class="list-group-item" href="./yii-db-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-db-expression.html">Expression</a>
+<a class="list-group-item" href="./yii-db-expressionbuilder.html">ExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-expressionbuilderinterface.html">ExpressionBuilderInterface</a>
+<a class="list-group-item" href="./yii-db-expressionbuildertrait.html">ExpressionBuilderTrait</a>
+<a class="list-group-item" href="./yii-db-expressioninterface.html">ExpressionInterface</a>
+<a class="list-group-item" href="./yii-db-foreignkeyconstraint.html">ForeignKeyConstraint</a>
+<a class="list-group-item" href="./yii-db-indexconstraint.html">IndexConstraint</a>
+<a class="list-group-item" href="./yii-db-integrityexception.html">IntegrityException</a>
+<a class="list-group-item" href="./yii-db-jsonexpression.html">JsonExpression</a>
+<a class="list-group-item" href="./yii-db-migration.html">Migration</a>
+<a class="list-group-item" href="./yii-db-migrationinterface.html">MigrationInterface</a>
+<a class="list-group-item" href="./yii-db-pdovalue.html">PdoValue</a>
+<a class="list-group-item" href="./yii-db-pdovaluebuilder.html">PdoValueBuilder</a>
+<a class="list-group-item" href="./yii-db-query.html">Query</a>
+<a class="list-group-item" href="./yii-db-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-queryexpressionbuilder.html">QueryExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-queryinterface.html">QueryInterface</a>
+<a class="list-group-item" href="./yii-db-querytrait.html">QueryTrait</a>
+<a class="list-group-item" href="./yii-db-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-schemabuildertrait.html">SchemaBuilderTrait</a>
+<a class="list-group-item" href="./yii-db-sqltoken.html">SqlToken</a>
+<a class="list-group-item" href="./yii-db-sqltokenizer.html">SqlTokenizer</a>
+<a class="list-group-item" href="./yii-db-staleobjectexception.html">StaleObjectException</a>
+<a class="list-group-item" href="./yii-db-tableschema.html">TableSchema</a>
+<a class="list-group-item" href="./yii-db-transaction.html">Transaction</a>
+<a class="list-group-item" href="./yii-db-viewfindertrait.html">ViewFinderTrait</a></div>
+<a class="list-group-item" href="#navigation-20432" data-toggle="collapse" data-parent="#navigation">yii\db\conditions <b class="caret"></b></a><div id="navigation-20432" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-conditions-andcondition.html">AndCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencolumnscondition.html">BetweenColumnsCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencolumnsconditionbuilder.html">BetweenColumnsConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-betweencondition.html">BetweenCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-betweenconditionbuilder.html">BetweenConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-conditioninterface.html">ConditionInterface</a>
+<a class="list-group-item" href="./yii-db-conditions-conjunctioncondition.html">ConjunctionCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-conjunctionconditionbuilder.html">ConjunctionConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-existscondition.html">ExistsCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-existsconditionbuilder.html">ExistsConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-hashcondition.html">HashCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-hashconditionbuilder.html">HashConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-incondition.html">InCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-likecondition.html">LikeCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-likeconditionbuilder.html">LikeConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-notcondition.html">NotCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-notconditionbuilder.html">NotConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-conditions-orcondition.html">OrCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-simplecondition.html">SimpleCondition</a>
+<a class="list-group-item" href="./yii-db-conditions-simpleconditionbuilder.html">SimpleConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-20433" data-toggle="collapse" data-parent="#navigation">yii\db\cubrid <b class="caret"></b></a><div id="navigation-20433" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-cubrid-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-cubrid-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-cubrid-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-20434" data-toggle="collapse" data-parent="#navigation">yii\db\cubrid\conditions <b class="caret"></b></a><div id="navigation-20434" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-cubrid-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-20435" data-toggle="collapse" data-parent="#navigation">yii\db\mssql <b class="caret"></b></a><div id="navigation-20435" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mssql-pdo.html">PDO</a>
+<a class="list-group-item" href="./yii-db-mssql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-mssql-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-mssql-sqlsrvpdo.html">SqlsrvPDO</a>
+<a class="list-group-item" href="./yii-db-mssql-tableschema.html">TableSchema</a></div>
+<a class="list-group-item" href="#navigation-20436" data-toggle="collapse" data-parent="#navigation">yii\db\mssql\conditions <b class="caret"></b></a><div id="navigation-20436" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mssql-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-mssql-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-20437" data-toggle="collapse" data-parent="#navigation">yii\db\mysql <b class="caret"></b></a><div id="navigation-20437" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-mysql-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-mysql-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-jsonexpressionbuilder.html">JsonExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-mysql-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-20438" data-toggle="collapse" data-parent="#navigation">yii\db\oci <b class="caret"></b></a><div id="navigation-20438" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-oci-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-20439" data-toggle="collapse" data-parent="#navigation">yii\db\oci\conditions <b class="caret"></b></a><div id="navigation-20439" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-oci-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-oci-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-20440" data-toggle="collapse" data-parent="#navigation">yii\db\pgsql <b class="caret"></b></a><div id="navigation-20440" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-pgsql-arrayexpressionbuilder.html">ArrayExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-arrayparser.html">ArrayParser</a>
+<a class="list-group-item" href="./yii-db-pgsql-columnschema.html">ColumnSchema</a>
+<a class="list-group-item" href="./yii-db-pgsql-jsonexpressionbuilder.html">JsonExpressionBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-pgsql-schema.html">Schema</a></div>
+<a class="list-group-item" href="#navigation-20441" data-toggle="collapse" data-parent="#navigation">yii\db\sqlite <b class="caret"></b></a><div id="navigation-20441" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-sqlite-columnschemabuilder.html">ColumnSchemaBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-command.html">Command</a>
+<a class="list-group-item" href="./yii-db-sqlite-querybuilder.html">QueryBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-schema.html">Schema</a>
+<a class="list-group-item" href="./yii-db-sqlite-sqltokenizer.html">SqlTokenizer</a></div>
+<a class="list-group-item" href="#navigation-20442" data-toggle="collapse" data-parent="#navigation">yii\db\sqlite\conditions <b class="caret"></b></a><div id="navigation-20442" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-db-sqlite-conditions-inconditionbuilder.html">InConditionBuilder</a>
+<a class="list-group-item" href="./yii-db-sqlite-conditions-likeconditionbuilder.html">LikeConditionBuilder</a></div>
+<a class="list-group-item" href="#navigation-20443" data-toggle="collapse" data-parent="#navigation">yii\di <b class="caret"></b></a><div id="navigation-20443" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-di-container.html">Container</a>
+<a class="list-group-item" href="./yii-di-instance.html">Instance</a>
+<a class="list-group-item" href="./yii-di-notinstantiableexception.html">NotInstantiableException</a>
+<a class="list-group-item" href="./yii-di-servicelocator.html">ServiceLocator</a></div>
+<a class="list-group-item" href="#navigation-20444" data-toggle="collapse" data-parent="#navigation">yii\filters <b class="caret"></b></a><div id="navigation-20444" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-accesscontrol.html">AccessControl</a>
+<a class="list-group-item" href="./yii-filters-accessrule.html">AccessRule</a>
+<a class="list-group-item" href="./yii-filters-ajaxfilter.html">AjaxFilter</a>
+<a class="list-group-item" href="./yii-filters-contentnegotiator.html">ContentNegotiator</a>
+<a class="list-group-item" href="./yii-filters-cors.html">Cors</a>
+<a class="list-group-item" href="./yii-filters-hostcontrol.html">HostControl</a>
+<a class="list-group-item" href="./yii-filters-httpcache.html">HttpCache</a>
+<a class="list-group-item" href="./yii-filters-pagecache.html">PageCache</a>
+<a class="list-group-item" href="./yii-filters-ratelimitinterface.html">RateLimitInterface</a>
+<a class="list-group-item" href="./yii-filters-ratelimiter.html">RateLimiter</a>
+<a class="list-group-item" href="./yii-filters-verbfilter.html">VerbFilter</a></div>
+<a class="list-group-item" href="#navigation-20445" data-toggle="collapse" data-parent="#navigation">yii\filters\auth <b class="caret"></b></a><div id="navigation-20445" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-filters-auth-authinterface.html">AuthInterface</a>
+<a class="list-group-item" href="./yii-filters-auth-authmethod.html">AuthMethod</a>
+<a class="list-group-item" href="./yii-filters-auth-compositeauth.html">CompositeAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpbasicauth.html">HttpBasicAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpbearerauth.html">HttpBearerAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-httpheaderauth.html">HttpHeaderAuth</a>
+<a class="list-group-item" href="./yii-filters-auth-queryparamauth.html">QueryParamAuth</a></div>
+<a class="list-group-item" href="#navigation-20446" data-toggle="collapse" data-parent="#navigation">yii\grid <b class="caret"></b></a><div id="navigation-20446" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-grid-actioncolumn.html">ActionColumn</a>
+<a class="list-group-item" href="./yii-grid-checkboxcolumn.html">CheckboxColumn</a>
+<a class="list-group-item" href="./yii-grid-column.html">Column</a>
+<a class="list-group-item" href="./yii-grid-datacolumn.html">DataColumn</a>
+<a class="list-group-item" href="./yii-grid-gridview.html">GridView</a>
+<a class="list-group-item" href="./yii-grid-gridviewasset.html">GridViewAsset</a>
+<a class="list-group-item" href="./yii-grid-radiobuttoncolumn.html">RadioButtonColumn</a>
+<a class="list-group-item" href="./yii-grid-serialcolumn.html">SerialColumn</a></div>
+<a class="list-group-item" href="#navigation-20447" data-toggle="collapse" data-parent="#navigation">yii\helpers <b class="caret"></b></a><div id="navigation-20447" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-helpers-arrayhelper.html">ArrayHelper</a>
+<a class="list-group-item" href="./yii-helpers-basearrayhelper.html">BaseArrayHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseconsole.html">BaseConsole</a>
+<a class="list-group-item" href="./yii-helpers-basefilehelper.html">BaseFileHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseformatconverter.html">BaseFormatConverter</a>
+<a class="list-group-item" href="./yii-helpers-basehtml.html">BaseHtml</a>
+<a class="list-group-item" href="./yii-helpers-basehtmlpurifier.html">BaseHtmlPurifier</a>
+<a class="list-group-item" href="./yii-helpers-baseinflector.html">BaseInflector</a>
+<a class="list-group-item" href="./yii-helpers-baseiphelper.html">BaseIpHelper</a>
+<a class="list-group-item" href="./yii-helpers-basejson.html">BaseJson</a>
+<a class="list-group-item" href="./yii-helpers-basemarkdown.html">BaseMarkdown</a>
+<a class="list-group-item" href="./yii-helpers-basestringhelper.html">BaseStringHelper</a>
+<a class="list-group-item" href="./yii-helpers-baseurl.html">BaseUrl</a>
+<a class="list-group-item" href="./yii-helpers-basevardumper.html">BaseVarDumper</a>
+<a class="list-group-item" href="./yii-helpers-console.html">Console</a>
+<a class="list-group-item" href="./yii-helpers-filehelper.html">FileHelper</a>
+<a class="list-group-item" href="./yii-helpers-formatconverter.html">FormatConverter</a>
+<a class="list-group-item" href="./yii-helpers-html.html">Html</a>
+<a class="list-group-item" href="./yii-helpers-htmlpurifier.html">HtmlPurifier</a>
+<a class="list-group-item" href="./yii-helpers-inflector.html">Inflector</a>
+<a class="list-group-item" href="./yii-helpers-iphelper.html">IpHelper</a>
+<a class="list-group-item" href="./yii-helpers-json.html">Json</a>
+<a class="list-group-item" href="./yii-helpers-markdown.html">Markdown</a>
+<a class="list-group-item" href="./yii-helpers-replacearrayvalue.html">ReplaceArrayValue</a>
+<a class="list-group-item" href="./yii-helpers-stringhelper.html">StringHelper</a>
+<a class="list-group-item" href="./yii-helpers-unsetarrayvalue.html">UnsetArrayValue</a>
+<a class="list-group-item" href="./yii-helpers-url.html">Url</a>
+<a class="list-group-item" href="./yii-helpers-vardumper.html">VarDumper</a></div>
+<a class="list-group-item" href="#navigation-20448" data-toggle="collapse" data-parent="#navigation">yii\httpclient <b class="caret"></b></a><div id="navigation-20448" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-httpclient-client.html">Client</a>
+<a class="list-group-item" href="./yii-httpclient-curltransport.html">CurlTransport</a>
+<a class="list-group-item" href="./yii-httpclient-exception.html">Exception</a>
+<a class="list-group-item" href="./yii-httpclient-formatterinterface.html">FormatterInterface</a>
+<a class="list-group-item" href="./yii-httpclient-jsonformatter.html">JsonFormatter</a>
+<a class="list-group-item" href="./yii-httpclient-jsonparser.html">JsonParser</a>
+<a class="list-group-item" href="./yii-httpclient-message.html">Message</a>
+<a class="list-group-item" href="./yii-httpclient-parserinterface.html">ParserInterface</a>
+<a class="list-group-item" href="./yii-httpclient-request.html">Request</a>
+<a class="list-group-item" href="./yii-httpclient-requestevent.html">RequestEvent</a>
+<a class="list-group-item" href="./yii-httpclient-response.html">Response</a>
+<a class="list-group-item" href="./yii-httpclient-streamtransport.html">StreamTransport</a>
+<a class="list-group-item" href="./yii-httpclient-transport.html">Transport</a>
+<a class="list-group-item" href="./yii-httpclient-urlencodedformatter.html">UrlEncodedFormatter</a>
+<a class="list-group-item" href="./yii-httpclient-urlencodedparser.html">UrlEncodedParser</a>
+<a class="list-group-item" href="./yii-httpclient-xmlformatter.html">XmlFormatter</a>
+<a class="list-group-item" href="./yii-httpclient-xmlparser.html">XmlParser</a></div>
+<a class="list-group-item" href="#navigation-20449" data-toggle="collapse" data-parent="#navigation">yii\httpclient\debug <b class="caret"></b></a><div id="navigation-20449" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-httpclient-debug-httpclientpanel.html">HttpClientPanel</a>
+<a class="list-group-item" href="./yii-httpclient-debug-requestexecuteaction.html">RequestExecuteAction</a>
+<a class="list-group-item" href="./yii-httpclient-debug-searchmodel.html">SearchModel</a></div>
+<a class="list-group-item" href="#navigation-20450" data-toggle="collapse" data-parent="#navigation">yii\i18n <b class="caret"></b></a><div id="navigation-20450" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-i18n-dbmessagesource.html">DbMessageSource</a>
+<a class="list-group-item" href="./yii-i18n-formatter.html">Formatter</a>
+<a class="list-group-item" href="./yii-i18n-gettextfile.html">GettextFile</a>
+<a class="list-group-item" href="./yii-i18n-gettextmessagesource.html">GettextMessageSource</a>
+<a class="list-group-item" href="./yii-i18n-gettextmofile.html">GettextMoFile</a>
+<a class="list-group-item" href="./yii-i18n-gettextpofile.html">GettextPoFile</a>
+<a class="list-group-item" href="./yii-i18n-i18n.html">I18N</a>
+<a class="list-group-item" href="./yii-i18n-locale.html">Locale</a>
+<a class="list-group-item" href="./yii-i18n-messageformatter.html">MessageFormatter</a>
+<a class="list-group-item" href="./yii-i18n-messagesource.html">MessageSource</a>
+<a class="list-group-item" href="./yii-i18n-missingtranslationevent.html">MissingTranslationEvent</a>
+<a class="list-group-item" href="./yii-i18n-phpmessagesource.html">PhpMessageSource</a></div>
+<a class="list-group-item" href="#navigation-20451" data-toggle="collapse" data-parent="#navigation">yii\log <b class="caret"></b></a><div id="navigation-20451" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-log-dbtarget.html">DbTarget</a>
+<a class="list-group-item" href="./yii-log-dispatcher.html">Dispatcher</a>
+<a class="list-group-item" href="./yii-log-emailtarget.html">EmailTarget</a>
+<a class="list-group-item" href="./yii-log-filetarget.html">FileTarget</a>
+<a class="list-group-item" href="./yii-log-logruntimeexception.html">LogRuntimeException</a>
+<a class="list-group-item" href="./yii-log-logger.html">Logger</a>
+<a class="list-group-item" href="./yii-log-syslogtarget.html">SyslogTarget</a>
+<a class="list-group-item" href="./yii-log-target.html">Target</a></div>
+<a class="list-group-item" href="#navigation-20452" data-toggle="collapse" data-parent="#navigation">yii\mail <b class="caret"></b></a><div id="navigation-20452" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mail-basemailer.html">BaseMailer</a>
+<a class="list-group-item" href="./yii-mail-basemessage.html">BaseMessage</a>
+<a class="list-group-item" href="./yii-mail-mailevent.html">MailEvent</a>
+<a class="list-group-item" href="./yii-mail-mailerinterface.html">MailerInterface</a>
+<a class="list-group-item" href="./yii-mail-messageinterface.html">MessageInterface</a></div>
+<a class="list-group-item" href="#navigation-20453" data-toggle="collapse" data-parent="#navigation">yii\mutex <b class="caret"></b></a><div id="navigation-20453" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-mutex-dbmutex.html">DbMutex</a>
+<a class="list-group-item" href="./yii-mutex-filemutex.html">FileMutex</a>
+<a class="list-group-item" href="./yii-mutex-mutex.html">Mutex</a>
+<a class="list-group-item" href="./yii-mutex-mysqlmutex.html">MysqlMutex</a>
+<a class="list-group-item" href="./yii-mutex-oraclemutex.html">OracleMutex</a>
+<a class="list-group-item" href="./yii-mutex-pgsqlmutex.html">PgsqlMutex</a></div>
+<a class="list-group-item" href="#navigation-20454" data-toggle="collapse" data-parent="#navigation">yii\rbac <b class="caret"></b></a><div id="navigation-20454" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rbac-assignment.html">Assignment</a>
+<a class="list-group-item" href="./yii-rbac-basemanager.html">BaseManager</a>
+<a class="list-group-item" href="./yii-rbac-checkaccessinterface.html">CheckAccessInterface</a>
+<a class="list-group-item" href="./yii-rbac-dbmanager.html">DbManager</a>
+<a class="list-group-item" href="./yii-rbac-item.html">Item</a>
+<a class="list-group-item" href="./yii-rbac-managerinterface.html">ManagerInterface</a>
+<a class="list-group-item" href="./yii-rbac-permission.html">Permission</a>
+<a class="list-group-item" href="./yii-rbac-phpmanager.html">PhpManager</a>
+<a class="list-group-item" href="./yii-rbac-role.html">Role</a>
+<a class="list-group-item" href="./yii-rbac-rule.html">Rule</a></div>
+<a class="list-group-item" href="#navigation-20455" data-toggle="collapse" data-parent="#navigation">yii\rest <b class="caret"></b></a><div id="navigation-20455" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-rest-action.html">Action</a>
+<a class="list-group-item" href="./yii-rest-activecontroller.html">ActiveController</a>
+<a class="list-group-item" href="./yii-rest-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-rest-createaction.html">CreateAction</a>
+<a class="list-group-item" href="./yii-rest-deleteaction.html">DeleteAction</a>
+<a class="list-group-item" href="./yii-rest-indexaction.html">IndexAction</a>
+<a class="list-group-item" href="./yii-rest-optionsaction.html">OptionsAction</a>
+<a class="list-group-item" href="./yii-rest-serializer.html">Serializer</a>
+<a class="list-group-item" href="./yii-rest-updateaction.html">UpdateAction</a>
+<a class="list-group-item" href="./yii-rest-urlrule.html">UrlRule</a>
+<a class="list-group-item" href="./yii-rest-viewaction.html">ViewAction</a></div>
+<a class="list-group-item" href="#navigation-20456" data-toggle="collapse" data-parent="#navigation">yii\shell <b class="caret"></b></a><div id="navigation-20456" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-shell-bootstrap.html">Bootstrap</a>
+<a class="list-group-item" href="./yii-shell-shellcontroller.html">ShellController</a>
+<a class="list-group-item" href="./yii-shell-yiicaster.html">YiiCaster</a></div>
+<a class="list-group-item" href="#navigation-20457" data-toggle="collapse" data-parent="#navigation">yii\test <b class="caret"></b></a><div id="navigation-20457" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-test-activefixture.html">ActiveFixture</a>
+<a class="list-group-item" href="./yii-test-arrayfixture.html">ArrayFixture</a>
+<a class="list-group-item" href="./yii-test-baseactivefixture.html">BaseActiveFixture</a>
+<a class="list-group-item" href="./yii-test-dbfixture.html">DbFixture</a>
+<a class="list-group-item" href="./yii-test-filefixturetrait.html">FileFixtureTrait</a>
+<a class="list-group-item" href="./yii-test-fixture.html">Fixture</a>
+<a class="list-group-item" href="./yii-test-fixturetrait.html">FixtureTrait</a>
+<a class="list-group-item" href="./yii-test-initdbfixture.html">InitDbFixture</a></div>
+<a class="list-group-item" href="#navigation-20458" data-toggle="collapse" data-parent="#navigation">yii\validators <b class="caret"></b></a><div id="navigation-20458" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-validators-booleanvalidator.html">BooleanValidator</a>
+<a class="list-group-item" href="./yii-validators-comparevalidator.html">CompareValidator</a>
+<a class="list-group-item" href="./yii-validators-datevalidator.html">DateValidator</a>
+<a class="list-group-item" href="./yii-validators-defaultvaluevalidator.html">DefaultValueValidator</a>
+<a class="list-group-item" href="./yii-validators-eachvalidator.html">EachValidator</a>
+<a class="list-group-item" href="./yii-validators-emailvalidator.html">EmailValidator</a>
+<a class="list-group-item" href="./yii-validators-existvalidator.html">ExistValidator</a>
+<a class="list-group-item" href="./yii-validators-filevalidator.html">FileValidator</a>
+<a class="list-group-item" href="./yii-validators-filtervalidator.html">FilterValidator</a>
+<a class="list-group-item" href="./yii-validators-imagevalidator.html">ImageValidator</a>
+<a class="list-group-item" href="./yii-validators-inlinevalidator.html">InlineValidator</a>
+<a class="list-group-item" href="./yii-validators-ipvalidator.html">IpValidator</a>
+<a class="list-group-item" href="./yii-validators-numbervalidator.html">NumberValidator</a>
+<a class="list-group-item" href="./yii-validators-punycodeasset.html">PunycodeAsset</a>
+<a class="list-group-item" href="./yii-validators-rangevalidator.html">RangeValidator</a>
+<a class="list-group-item" href="./yii-validators-regularexpressionvalidator.html">RegularExpressionValidator</a>
+<a class="list-group-item" href="./yii-validators-requiredvalidator.html">RequiredValidator</a>
+<a class="list-group-item" href="./yii-validators-safevalidator.html">SafeValidator</a>
+<a class="list-group-item" href="./yii-validators-stringvalidator.html">StringValidator</a>
+<a class="list-group-item" href="./yii-validators-uniquevalidator.html">UniqueValidator</a>
+<a class="list-group-item" href="./yii-validators-urlvalidator.html">UrlValidator</a>
+<a class="list-group-item" href="./yii-validators-validationasset.html">ValidationAsset</a>
+<a class="list-group-item" href="./yii-validators-validator.html">Validator</a></div>
+<a class="list-group-item" href="#navigation-20459" data-toggle="collapse" data-parent="#navigation">yii\web <b class="caret"></b></a><div id="navigation-20459" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-web-application.html">Application</a>
+<a class="list-group-item" href="./yii-web-assetbundle.html">AssetBundle</a>
+<a class="list-group-item" href="./yii-web-assetconverter.html">AssetConverter</a>
+<a class="list-group-item" href="./yii-web-assetconverterinterface.html">AssetConverterInterface</a>
+<a class="list-group-item" href="./yii-web-assetmanager.html">AssetManager</a>
+<a class="list-group-item" href="./yii-web-badrequesthttpexception.html">BadRequestHttpException</a>
+<a class="list-group-item" href="./yii-web-cachesession.html">CacheSession</a>
+<a class="list-group-item" href="./yii-web-compositeurlrule.html">CompositeUrlRule</a>
+<a class="list-group-item" href="./yii-web-conflicthttpexception.html">ConflictHttpException</a>
+<a class="list-group-item" href="./yii-web-controller.html">Controller</a>
+<a class="list-group-item" href="./yii-web-cookie.html">Cookie</a>
+<a class="list-group-item" href="./yii-web-cookiecollection.html">CookieCollection</a>
+<a class="list-group-item" href="./yii-web-dbsession.html">DbSession</a>
+<a class="list-group-item" href="./yii-web-erroraction.html">ErrorAction</a>
+<a class="list-group-item" href="./yii-web-errorhandler.html">ErrorHandler</a>
+<a class="list-group-item" href="./yii-web-forbiddenhttpexception.html">ForbiddenHttpException</a>
+<a class="list-group-item" href="./yii-web-gonehttpexception.html">GoneHttpException</a>
+<a class="list-group-item" href="./yii-web-groupurlrule.html">GroupUrlRule</a>
+<a class="list-group-item" href="./yii-web-headercollection.html">HeaderCollection</a>
+<a class="list-group-item" href="./yii-web-headersalreadysentexception.html">HeadersAlreadySentException</a>
+<a class="list-group-item" href="./yii-web-htmlresponseformatter.html">HtmlResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-httpexception.html">HttpException</a>
+<a class="list-group-item" href="./yii-web-identityinterface.html">IdentityInterface</a>
+<a class="list-group-item" href="./yii-web-jqueryasset.html">JqueryAsset</a>
+<a class="list-group-item" href="./yii-web-jsexpression.html">JsExpression</a>
+<a class="list-group-item" href="./yii-web-jsonparser.html">JsonParser</a>
+<a class="list-group-item" href="./yii-web-jsonresponseformatter.html">JsonResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-link.html">Link</a>
+<a class="list-group-item" href="./yii-web-linkable.html">Linkable</a>
+<a class="list-group-item" href="./yii-web-methodnotallowedhttpexception.html">MethodNotAllowedHttpException</a>
+<a class="list-group-item" href="./yii-web-multifieldsession.html">MultiFieldSession</a>
+<a class="list-group-item" href="./yii-web-multipartformdataparser.html">MultipartFormDataParser</a>
+<a class="list-group-item" href="./yii-web-notacceptablehttpexception.html">NotAcceptableHttpException</a>
+<a class="list-group-item" href="./yii-web-notfoundhttpexception.html">NotFoundHttpException</a>
+<a class="list-group-item" href="./yii-web-rangenotsatisfiablehttpexception.html">RangeNotSatisfiableHttpException</a>
+<a class="list-group-item" href="./yii-web-request.html">Request</a>
+<a class="list-group-item" href="./yii-web-requestparserinterface.html">RequestParserInterface</a>
+<a class="list-group-item" href="./yii-web-response.html">Response</a>
+<a class="list-group-item" href="./yii-web-responseformatterinterface.html">ResponseFormatterInterface</a>
+<a class="list-group-item" href="./yii-web-servererrorhttpexception.html">ServerErrorHttpException</a>
+<a class="list-group-item" href="./yii-web-session.html">Session</a>
+<a class="list-group-item" href="./yii-web-sessioniterator.html">SessionIterator</a>
+<a class="list-group-item" href="./yii-web-toomanyrequestshttpexception.html">TooManyRequestsHttpException</a>
+<a class="list-group-item" href="./yii-web-unauthorizedhttpexception.html">UnauthorizedHttpException</a>
+<a class="list-group-item" href="./yii-web-unprocessableentityhttpexception.html">UnprocessableEntityHttpException</a>
+<a class="list-group-item" href="./yii-web-unsupportedmediatypehttpexception.html">UnsupportedMediaTypeHttpException</a>
+<a class="list-group-item" href="./yii-web-uploadedfile.html">UploadedFile</a>
+<a class="list-group-item" href="./yii-web-urlmanager.html">UrlManager</a>
+<a class="list-group-item" href="./yii-web-urlnormalizer.html">UrlNormalizer</a>
+<a class="list-group-item" href="./yii-web-urlnormalizerredirectexception.html">UrlNormalizerRedirectException</a>
+<a class="list-group-item" href="./yii-web-urlrule.html">UrlRule</a>
+<a class="list-group-item" href="./yii-web-urlruleinterface.html">UrlRuleInterface</a>
+<a class="list-group-item" href="./yii-web-user.html">User</a>
+<a class="list-group-item" href="./yii-web-userevent.html">UserEvent</a>
+<a class="list-group-item" href="./yii-web-view.html">View</a>
+<a class="list-group-item" href="./yii-web-viewaction.html">ViewAction</a>
+<a class="list-group-item" href="./yii-web-xmlresponseformatter.html">XmlResponseFormatter</a>
+<a class="list-group-item" href="./yii-web-yiiasset.html">YiiAsset</a></div>
+<a class="list-group-item" href="#navigation-20460" data-toggle="collapse" data-parent="#navigation">yii\widgets <b class="caret"></b></a><div id="navigation-20460" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-widgets-activefield.html">ActiveField</a>
+<a class="list-group-item" href="./yii-widgets-activeform.html">ActiveForm</a>
+<a class="list-group-item" href="./yii-widgets-activeformasset.html">ActiveFormAsset</a>
+<a class="list-group-item" href="./yii-widgets-baselistview.html">BaseListView</a>
+<a class="list-group-item" href="./yii-widgets-block.html">Block</a>
+<a class="list-group-item" href="./yii-widgets-breadcrumbs.html">Breadcrumbs</a>
+<a class="list-group-item" href="./yii-widgets-contentdecorator.html">ContentDecorator</a>
+<a class="list-group-item" href="./yii-widgets-detailview.html">DetailView</a>
+<a class="list-group-item" href="./yii-widgets-fragmentcache.html">FragmentCache</a>
+<a class="list-group-item" href="./yii-widgets-inputwidget.html">InputWidget</a>
+<a class="list-group-item" href="./yii-widgets-linkpager.html">LinkPager</a>
+<a class="list-group-item" href="./yii-widgets-linksorter.html">LinkSorter</a>
+<a class="list-group-item" href="./yii-widgets-listview.html">ListView</a>
+<a class="list-group-item" href="./yii-widgets-maskedinput.html">MaskedInput</a>
+<a class="list-group-item" href="./yii-widgets-maskedinputasset.html">MaskedInputAsset</a>
+<a class="list-group-item" href="./yii-widgets-menu.html">Menu</a>
+<a class="list-group-item" href="./yii-widgets-pjax.html">Pjax</a>
+<a class="list-group-item" href="./yii-widgets-pjaxasset.html">PjaxAsset</a>
+<a class="list-group-item" href="./yii-widgets-spaceless.html">Spaceless</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\bootstrap4\ButtonDropdown</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+                | <a href="#events">Events</a>
+        </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a> &raquo;
+<a href="yii-bootstrap4-widget.html">yii\bootstrap4\Widget</a> &raquo;
+<a href="yii-base-widget.html">yii\base\Widget</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a>, <a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a></td></tr>
+                    <tr><th>Uses Traits</th><td><a href="yii-bootstrap4-bootstrapwidgettrait.html">yii\bootstrap4\BootstrapWidgetTrait</a></td></tr>
+                                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php">https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>ButtonDropdown renders a group or split button dropdown bootstrap component.</strong></p>
+    <p>For example,</p>
+<pre><code class="hljs php language-php"><span class="hljs-comment">// a button group using Dropdown widget</span>
+<span class="hljs-keyword">echo</span> ButtonDropdown::widget([
+    <span class="hljs-string">'label'</span> =&gt; <span class="hljs-string">'Action'</span>,
+    <span class="hljs-string">'dropdown'</span> =&gt; [
+        <span class="hljs-string">'items'</span> =&gt; [
+            [<span class="hljs-string">'label'</span> =&gt; <span class="hljs-string">'DropdownA'</span>, <span class="hljs-string">'url'</span> =&gt; <span class="hljs-string">'/'</span>],
+            [<span class="hljs-string">'label'</span> =&gt; <span class="hljs-string">'DropdownB'</span>, <span class="hljs-string">'url'</span> =&gt; <span class="hljs-string">'#'</span>],
+        ],
+    ],
+]);
+</code></pre>
+
+    <p>See also:</p><ul><li><a href="http://getbootstrap.com/javascript/#buttons">http://getbootstrap.com/javascript/#buttons</a></li><li><a href="http://getbootstrap.com/components/#btn-dropdowns">http://getbootstrap.com/components/#btn-dropdowns</a></li></ul></div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="$autoIdPrefix">
+        <td><a href="yii-base-widget.html#$autoIdPrefix-detail">$autoIdPrefix</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The prefix to the automatically generated widget IDs.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr id="$buttonOptions">
+        <td><a href="yii-bootstrap4-buttondropdown.html#$buttonOptions-detail">$buttonOptions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The HTML attributes of the button.</td>
+        <td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a></td>
+    </tr>
+            <tr class="inherited" id="$clientEvents">
+        <td><a href="yii-bootstrap4-bootstrapwidgettrait.html#$clientEvents-detail">$clientEvents</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The event handlers for the underlying Bootstrap JS plugin.</td>
+        <td><a href="yii-bootstrap4-bootstrapwidgettrait.html">yii\bootstrap4\BootstrapWidgetTrait</a></td>
+    </tr>
+            <tr class="inherited" id="$clientOptions">
+        <td><a href="yii-bootstrap4-bootstrapwidgettrait.html#$clientOptions-detail">$clientOptions</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The options for the underlying Bootstrap JS plugin.</td>
+        <td><a href="yii-bootstrap4-bootstrapwidgettrait.html">yii\bootstrap4\BootstrapWidgetTrait</a></td>
+    </tr>
+            <tr class="inherited" id="$counter">
+        <td><a href="yii-base-widget.html#$counter-detail">$counter</a></td>
+        <td><a href="http://www.php.net/language.types.integer">integer</a></td>
+        <td>A counter used to generate <span class="broken-link">\yii\base\id</span> for widgets.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr id="$dropdown">
+        <td><a href="yii-bootstrap4-buttondropdown.html#$dropdown-detail">$dropdown</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The configuration array for <a href="yii-bootstrap4-dropdown.html">yii\bootstrap4\Dropdown</a>.</td>
+        <td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a></td>
+    </tr>
+            <tr id="$dropdownClass">
+        <td><a href="yii-bootstrap4-buttondropdown.html#$dropdownClass-detail">$dropdownClass</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Name of a class to use for rendering dropdowns withing this widget.</td>
+        <td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a></td>
+    </tr>
+            <tr id="$encodeLabel">
+        <td><a href="yii-bootstrap4-buttondropdown.html#$encodeLabel-detail">$encodeLabel</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether the label should be HTML-encoded.</td>
+        <td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a></td>
+    </tr>
+            <tr id="$label">
+        <td><a href="yii-bootstrap4-buttondropdown.html#$label-detail">$label</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The button label</td>
+        <td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a></td>
+    </tr>
+            <tr id="$options">
+        <td><a href="yii-bootstrap4-buttondropdown.html#$options-detail">$options</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The HTML attributes for the container tag.</td>
+        <td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a></td>
+    </tr>
+            <tr id="$split">
+        <td><a href="yii-bootstrap4-buttondropdown.html#$split-detail">$split</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to display a group of split-styled button group.</td>
+        <td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a></td>
+    </tr>
+            <tr class="inherited" id="$stack">
+        <td><a href="yii-base-widget.html#$stack-detail">$stack</a></td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a>[]</td>
+        <td>The widgets that are currently being rendered (not ended).</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr id="$tagName">
+        <td><a href="yii-bootstrap4-buttondropdown.html#$tagName-detail">$tagName</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The tag to use to render the button</td>
+        <td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-component.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-baseobject.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-component.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-component.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-component.html#__set()-detail">__set()</a></td>
+        <td>Sets the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-component.html#__unset()-detail">__unset()</a></td>
+        <td>Sets a component property to be null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="afterRun()">
+        <td><a href="yii-base-widget.html#afterRun()-detail">afterRun()</a></td>
+        <td>This method is invoked right after a widget is executed.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="beforeRun()">
+        <td><a href="yii-base-widget.html#beforeRun()-detail">beforeRun()</a></td>
+        <td>This method is invoked right before the widget is executed.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="begin()">
+        <td><a href="yii-base-widget.html#begin()-detail">begin()</a></td>
+        <td>Begins a widget.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="behaviors()">
+        <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-component.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="end()">
+        <td><a href="yii-base-widget.html#end()-detail">end()</a></td>
+        <td>Ends a widget.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getId()">
+        <td><a href="yii-base-widget.html#getId()-detail">getId()</a></td>
+        <td>Returns the ID of the widget.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="getView()">
+        <td><a href="yii-bootstrap4-bootstrapwidgettrait.html#getView()-detail">getView()</a></td>
+        <td></td>
+        <td><a href="yii-bootstrap4-bootstrapwidgettrait.html">yii\bootstrap4\BootstrapWidgetTrait</a></td>
+    </tr>
+            <tr class="inherited" id="getViewPath()">
+        <td><a href="yii-base-widget.html#getViewPath()-detail">getViewPath()</a></td>
+        <td>Returns the directory containing the view files for this widget.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-component.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-component.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined for this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="init()">
+        <td><a href="yii-bootstrap4-buttondropdown.html#init()-detail">init()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a></td>
+    </tr>
+            <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+                    <tr class="inherited" id="render()">
+        <td><a href="yii-base-widget.html#render()-detail">render()</a></td>
+        <td>Renders a view.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+                    <tr class="inherited" id="renderFile()">
+        <td><a href="yii-base-widget.html#renderFile()-detail">renderFile()</a></td>
+        <td>Renders a view file.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr id="run()">
+        <td><a href="yii-bootstrap4-buttondropdown.html#run()-detail">run()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a></td>
+    </tr>
+            <tr class="inherited" id="setId()">
+        <td><a href="yii-base-widget.html#setId()-detail">setId()</a></td>
+        <td>Sets the ID of the widget.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="setView()">
+        <td><a href="yii-base-widget.html#setView()-detail">setView()</a></td>
+        <td>Sets the view object to be used by this widget.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+            <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="widget()">
+        <td><a href="yii-base-widget.html#widget()-detail">widget()</a></td>
+        <td>Creates a widget instance and runs it.</td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                                                                                                                    <tr class="inherited" id="registerClientEvents()">
+        <td><a href="yii-bootstrap4-bootstrapwidgettrait.html#registerClientEvents()-detail">registerClientEvents()</a></td>
+        <td>Registers JS event handlers that are listed in <a href="yii-bootstrap4-bootstrapwidgettrait.html#$clientEvents-detail">$clientEvents</a>.</td>
+        <td><a href="yii-bootstrap4-bootstrapwidgettrait.html">yii\bootstrap4\BootstrapWidgetTrait</a></td>
+    </tr>
+            <tr class="inherited" id="registerPlugin()">
+        <td><a href="yii-bootstrap4-bootstrapwidgettrait.html#registerPlugin()-detail">registerPlugin()</a></td>
+        <td>Registers a specific Bootstrap plugin and the related events</td>
+        <td><a href="yii-bootstrap4-bootstrapwidgettrait.html">yii\bootstrap4\BootstrapWidgetTrait</a></td>
+    </tr>
+                <tr id="renderButton()">
+        <td><a href="yii-bootstrap4-buttondropdown.html#renderButton()-detail">renderButton()</a></td>
+        <td>Generates the button dropdown.</td>
+        <td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a></td>
+    </tr>
+            <tr id="renderDropdown()">
+        <td><a href="yii-bootstrap4-buttondropdown.html#renderDropdown()-detail">renderDropdown()</a></td>
+        <td>Generates the dropdown menu.</td>
+        <td><a href="yii-bootstrap4-buttondropdown.html">yii\bootstrap4\ButtonDropdown</a></td>
+    </tr>
+                            </table>
+</div>
+
+<a id="events"></a>
+<div class="summary doc-event">
+    <h2>Events</h2>
+
+    <p><a href="#" class="toggle">Hide inherited events</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-event" />
+        <col class="col-type" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Event</th><th>Type</th><th>Description</th><th>Defined By</th>
+    </tr>
+        <tr class="inherited" id="EVENT_AFTER_RUN">
+        <td><a href="yii-base-widget.html#EVENT_AFTER_RUN-detail">EVENT_AFTER_RUN</a></td>
+        <td><a href="yii-base-widgetevent.html">yii\base\WidgetEvent</a></td>
+        <td>
+            An event raised right after executing a widget.                            (available since version 2.0.11)
+                    </td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_BEFORE_RUN">
+        <td><a href="yii-base-widget.html#EVENT_BEFORE_RUN-detail">EVENT_BEFORE_RUN</a></td>
+        <td><a href="yii-base-widgetevent.html">yii\base\WidgetEvent</a></td>
+        <td>
+            An event raised right before executing a widget.                            (available since version 2.0.11)
+                    </td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_INIT">
+        <td><a href="yii-base-widget.html#EVENT_INIT-detail">EVENT_INIT</a></td>
+        <td><a href="yii-base-event.html">yii\base\Event</a></td>
+        <td>
+            An event that is triggered when the widget is initialized via <a href="yii-base-widget.html#init()-detail">init()</a>.                            (available since version 2.0.11)
+                    </td>
+        <td><a href="yii-base-widget.html">yii\base\Widget</a></td>
+    </tr>
+        </table>
+</div>
+
+<a id="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$buttonOptions-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap4-buttondropdown.html#$buttonOptions-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/bootstrap4/ButtonDropdown.php#L52" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php#L52" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $buttonOptions        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The HTML attributes of the button.</p>
+
+        <p>See also <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">yii\helpers\Html::renderTagAttributes()</a> for details on how attributes are being rendered.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-bootstrap4-buttondropdown.html#$buttonOptions-detail">$buttonOptions</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$dropdown-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap4-buttondropdown.html#$dropdown-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/bootstrap4/ButtonDropdown.php#L56" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php#L56" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $dropdown        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The configuration array for <a href="yii-bootstrap4-dropdown.html">yii\bootstrap4\Dropdown</a>.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-bootstrap4-buttondropdown.html#$dropdown-detail">$dropdown</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$dropdownClass-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap4-buttondropdown.html#$dropdownClass-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/bootstrap4/ButtonDropdown.php#L72" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php#L72" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $dropdownClass        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Name of a class to use for rendering dropdowns withing this widget. Defaults to <a href="yii-bootstrap4-dropdown.html">yii\bootstrap4\Dropdown</a>.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-bootstrap4-buttondropdown.html#$dropdownClass-detail">$dropdownClass</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'yii\bootstrap4\Dropdown'</span></div>
+
+
+    <div class="detail-header h3" id="$encodeLabel-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap4-buttondropdown.html#$encodeLabel-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/bootstrap4/ButtonDropdown.php#L68" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php#L68" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $encodeLabel        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether the label should be HTML-encoded.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="yii-bootstrap4-buttondropdown.html#$encodeLabel-detail">$encodeLabel</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span></div>
+
+
+    <div class="detail-header h3" id="$label-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap4-buttondropdown.html#$label-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/bootstrap4/ButtonDropdown.php#L39" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php#L39" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $label        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The button label</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-bootstrap4-buttondropdown.html#$label-detail">$label</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'Button'</span></div>
+
+
+    <div class="detail-header h3" id="$options-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap4-buttondropdown.html#$options-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/bootstrap4/ButtonDropdown.php#L47" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php#L47" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $options        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The HTML attributes for the container tag. The following special options are recognized:</p>
+<ul>
+<li>tag: string, defaults to "div", the name of the container tag.</li>
+</ul>
+
+        <p>See also <a href="yii-helpers-basehtml.html#renderTagAttributes()-detail">yii\helpers\Html::renderTagAttributes()</a> for details on how attributes are being rendered.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-bootstrap4-buttondropdown.html#$options-detail">$options</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[]</span></div>
+
+
+    <div class="detail-header h3" id="$split-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap4-buttondropdown.html#$split-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/bootstrap4/ButtonDropdown.php#L60" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php#L60" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $split        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether to display a group of split-styled button group.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="yii-bootstrap4-buttondropdown.html#$split-detail">$split</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+
+    <div class="detail-header h3" id="$tagName-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap4-buttondropdown.html#$tagName-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/bootstrap4/ButtonDropdown.php#L64" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php#L64" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $tagName        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>The tag to use to render the button</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-bootstrap4-buttondropdown.html#$tagName-detail">$tagName</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'button'</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="init()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap4-buttondropdown.html#init()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/bootstrap4/ButtonDropdown.php#L77" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php#L77" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        init()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>{@inheritdoc}</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-bootstrap4-buttondropdown.html#init()-detail">init</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renderButton()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap4-buttondropdown.html#renderButton()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/bootstrap4/ButtonDropdown.php#L115" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php#L115" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renderButton()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates the button dropdown.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-bootstrap4-buttondropdown.html#renderButton()-detail">renderButton</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The rendering result.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="http://www.php.net/class.exception">Exception</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="renderDropdown()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap4-buttondropdown.html#renderDropdown()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/bootstrap4/ButtonDropdown.php#L170" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php#L170" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        renderDropdown()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates the dropdown menu.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-bootstrap4-buttondropdown.html#renderDropdown()-detail">renderDropdown</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>The rendering result.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="http://www.php.net/class.exception">Exception</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="run()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-bootstrap4-buttondropdown.html#run()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2/edit/master/framework/bootstrap4/ButtonDropdown.php#L90" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2/blob/master/framework/bootstrap4/ButtonDropdown.php#L90" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        run()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>{@inheritdoc}</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-bootstrap4-buttondropdown.html#run()-detail">run</a></strong> ( )</td></tr>
+                                                            <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="http://www.php.net/class.exception">Exception</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                        </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Wed, 15 Aug 2018 19:10:05 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

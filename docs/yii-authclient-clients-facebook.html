@@ -1,0 +1,1265 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/40113240/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/6d599862/solarized_light.css" rel="stylesheet">
+<link href="./assets/5d9d0765/style.css" rel="stylesheet">
+<script src="./assets/6147b175/jquery.js"></script>
+<script src="./assets/40113240/js/bootstrap.js"></script>
+<script src="./assets/f875d911/jssearch.js"></script>    <title>Facebook, yii\authclient\clients\Facebook - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w283" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w283-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w283-collapse" class="collapse navbar-collapse"><ul id="w284" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w285" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-swiftmailer-index.html" tabindex="-1">swiftmailer</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-279" data-toggle="collapse" data-parent="#navigation">yii\authclient <b class="caret"></b></a><div id="navigation-279" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-authclient-authaction.html">AuthAction</a>
+<a class="list-group-item" href="./yii-authclient-baseclient.html">BaseClient</a>
+<a class="list-group-item" href="./yii-authclient-baseoauth.html">BaseOAuth</a>
+<a class="list-group-item" href="./yii-authclient-clientinterface.html">ClientInterface</a>
+<a class="list-group-item" href="./yii-authclient-collection.html">Collection</a>
+<a class="list-group-item" href="./yii-authclient-invalidresponseexception.html">InvalidResponseException</a>
+<a class="list-group-item" href="./yii-authclient-oauth1.html">OAuth1</a>
+<a class="list-group-item" href="./yii-authclient-oauth2.html">OAuth2</a>
+<a class="list-group-item" href="./yii-authclient-oauthtoken.html">OAuthToken</a>
+<a class="list-group-item" href="./yii-authclient-openid.html">OpenId</a>
+<a class="list-group-item" href="./yii-authclient-openidconnect.html">OpenIdConnect</a>
+<a class="list-group-item" href="./yii-authclient-sessionstatestorage.html">SessionStateStorage</a>
+<a class="list-group-item" href="./yii-authclient-statestorageinterface.html">StateStorageInterface</a></div>
+<a class="list-group-item active" href="#navigation-280" data-toggle="collapse" data-parent="#navigation">yii\authclient\clients <b class="caret"></b></a><div id="navigation-280" class="submenu panel-collapse collapse in"><a class="list-group-item active" href="./yii-authclient-clients-facebook.html">Facebook</a>
+<a class="list-group-item" href="./yii-authclient-clients-github.html">GitHub</a>
+<a class="list-group-item" href="./yii-authclient-clients-google.html">Google</a>
+<a class="list-group-item" href="./yii-authclient-clients-googlehybrid.html">GoogleHybrid</a>
+<a class="list-group-item" href="./yii-authclient-clients-linkedin.html">LinkedIn</a>
+<a class="list-group-item" href="./yii-authclient-clients-live.html">Live</a>
+<a class="list-group-item" href="./yii-authclient-clients-twitter.html">Twitter</a>
+<a class="list-group-item" href="./yii-authclient-clients-twitteroauth2.html">TwitterOAuth2</a>
+<a class="list-group-item" href="./yii-authclient-clients-vkontakte.html">VKontakte</a>
+<a class="list-group-item" href="./yii-authclient-clients-yandex.html">Yandex</a></div>
+<a class="list-group-item" href="#navigation-281" data-toggle="collapse" data-parent="#navigation">yii\authclient\signature <b class="caret"></b></a><div id="navigation-281" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-authclient-signature-basemethod.html">BaseMethod</a>
+<a class="list-group-item" href="./yii-authclient-signature-hmacsha.html">HmacSha</a>
+<a class="list-group-item" href="./yii-authclient-signature-hmacsha1.html">HmacSha1</a>
+<a class="list-group-item" href="./yii-authclient-signature-plaintext.html">PlainText</a>
+<a class="list-group-item" href="./yii-authclient-signature-rsasha.html">RsaSha</a>
+<a class="list-group-item" href="./yii-authclient-signature-rsasha1.html">RsaSha1</a></div>
+<a class="list-group-item" href="#navigation-282" data-toggle="collapse" data-parent="#navigation">yii\authclient\widgets <b class="caret"></b></a><div id="navigation-282" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-authclient-widgets-authchoice.html">AuthChoice</a>
+<a class="list-group-item" href="./yii-authclient-widgets-authchoiceasset.html">AuthChoiceAsset</a>
+<a class="list-group-item" href="./yii-authclient-widgets-authchoiceitem.html">AuthChoiceItem</a>
+<a class="list-group-item" href="./yii-authclient-widgets-authchoicestyleasset.html">AuthChoiceStyleAsset</a>
+<a class="list-group-item" href="./yii-authclient-widgets-googleplusbutton.html">GooglePlusButton</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\authclient\clients\Facebook</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a> &raquo;
+<a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a> &raquo;
+<a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a> &raquo;
+<a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a>, <a href="yii-base-configurable.html">yii\base\Configurable</a></td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php">https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>Facebook allows authentication via Facebook OAuth.</strong></p>
+    <p>In order to use Facebook OAuth you must register your application at <a href="https://developers.facebook.com/apps">https://developers.facebook.com/apps</a>.</p>
+<p>Example application configuration:</p>
+<pre><code class="hljs php language-php"><span class="hljs-string">'components'</span> =&gt; [
+    <span class="hljs-string">'authClientCollection'</span> =&gt; [
+        <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'yii\authclient\Collection'</span>,
+        <span class="hljs-string">'clients'</span> =&gt; [
+            <span class="hljs-string">'facebook'</span> =&gt; [
+                <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'yii\authclient\clients\Facebook'</span>,
+                <span class="hljs-string">'clientId'</span> =&gt; <span class="hljs-string">'facebook_client_id'</span>,
+                <span class="hljs-string">'clientSecret'</span> =&gt; <span class="hljs-string">'facebook_client_secret'</span>,
+            ],
+        ],
+    ]
+    <span class="hljs-comment">// ...</span>
+]
+</code></pre>
+
+    <p>See also:</p><ul><li><a href="https://developers.facebook.com/apps">https://developers.facebook.com/apps</a></li><li><a href="http://developers.facebook.com/docs/reference/api">http://developers.facebook.com/docs/reference/api</a></li></ul></div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$apiBaseUrl">
+        <td><a href="yii-authclient-clients-facebook.html#$apiBaseUrl-detail">$apiBaseUrl</a></td>
+        <td></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr id="$attributeNames">
+        <td><a href="yii-authclient-clients-facebook.html#$attributeNames-detail">$attributeNames</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>List of attribute names, which should be requested from API to initialize user attributes.</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr id="$authUrl">
+        <td><a href="yii-authclient-clients-facebook.html#$authUrl-detail">$authUrl</a></td>
+        <td></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr id="$autoExchangeAccessToken">
+        <td><a href="yii-authclient-clients-facebook.html#$autoExchangeAccessToken-detail">$autoExchangeAccessToken</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to automatically upgrade short-live (2 hours) access token to long-live (60 days) one, after fetching it.</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr id="$autoRefreshAccessToken">
+        <td><a href="yii-authclient-clients-facebook.html#$autoRefreshAccessToken-detail">$autoRefreshAccessToken</a></td>
+        <td></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr id="$clientAuthCodeUrl">
+        <td><a href="yii-authclient-clients-facebook.html#$clientAuthCodeUrl-detail">$clientAuthCodeUrl</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>URL endpoint for the client auth code generation.</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr class="inherited" id="$clientId">
+        <td><a href="yii-authclient-oauth2.html#$clientId-detail">$clientId</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>OAuth client ID.</td>
+        <td><a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a></td>
+    </tr>
+            <tr class="inherited" id="$clientSecret">
+        <td><a href="yii-authclient-oauth2.html#$clientSecret-detail">$clientSecret</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>OAuth client secret.</td>
+        <td><a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a></td>
+    </tr>
+            <tr id="$scope">
+        <td><a href="yii-authclient-clients-facebook.html#$scope-detail">$scope</a></td>
+        <td></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr id="$tokenUrl">
+        <td><a href="yii-authclient-clients-facebook.html#$tokenUrl-detail">$tokenUrl</a></td>
+        <td></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr class="inherited" id="$validateAuthState">
+        <td><a href="yii-authclient-oauth2.html#$validateAuthState-detail">$validateAuthState</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to use and validate auth 'state' parameter in authentication flow.</td>
+        <td><a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a></td>
+    </tr>
+            <tr class="inherited" id="$version">
+        <td><a href="yii-authclient-baseoauth.html#$version-detail">$version</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Protocol version.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-baseobject.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-baseobject.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-baseobject.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-baseobject.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-baseobject.html#__set()-detail">__set()</a></td>
+        <td>Sets value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-baseobject.html#__unset()-detail">__unset()</a></td>
+        <td>Sets an object property to null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="api()">
+        <td><a href="yii-authclient-baseoauth.html#api()-detail">api()</a></td>
+        <td>Performs request to the OAuth API returning response data.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr id="applyAccessTokenToRequest()">
+        <td><a href="yii-authclient-clients-facebook.html#applyAccessTokenToRequest()-detail">applyAccessTokenToRequest()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+                <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="authenticateClient()">
+        <td><a href="yii-authclient-oauth2.html#authenticateClient()-detail">authenticateClient()</a></td>
+        <td>Authenticate OAuth client directly at the provider without third party (user) involved,
+using 'client_credentials' grant type.</td>
+        <td><a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a></td>
+    </tr>
+            <tr class="inherited" id="authenticateUser()">
+        <td><a href="yii-authclient-oauth2.html#authenticateUser()-detail">authenticateUser()</a></td>
+        <td>Authenticates user directly by 'username/password' pair, using 'password' grant type.</td>
+        <td><a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a></td>
+    </tr>
+            <tr class="inherited" id="authenticateUserJwt()">
+        <td><a href="yii-authclient-oauth2.html#authenticateUserJwt()-detail">authenticateUserJwt()</a></td>
+        <td>Authenticates user directly using JSON Web Token (JWT).</td>
+        <td><a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a></td>
+    </tr>
+            <tr class="inherited" id="beforeApiRequestSend()">
+        <td><a href="yii-authclient-baseoauth.html#beforeApiRequestSend()-detail">beforeApiRequestSend()</a></td>
+        <td>Handles <a href="yii-httpclient-request.html#EVENT_BEFORE_SEND-detail">yii\httpclient\Request::EVENT_BEFORE_SEND</a> event.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="behaviors()">
+        <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="buildAuthUrl()">
+        <td><a href="yii-authclient-oauth2.html#buildAuthUrl()-detail">buildAuthUrl()</a></td>
+        <td>Composes user authorization URL.</td>
+        <td><a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-baseobject.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-baseobject.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+                <tr class="inherited" id="createApiRequest()">
+        <td><a href="yii-authclient-baseoauth.html#createApiRequest()-detail">createApiRequest()</a></td>
+        <td>Creates an HTTP request for the API call.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+                <tr class="inherited" id="createRequest()">
+        <td><a href="yii-authclient-baseclient.html#createRequest()-detail">createRequest()</a></td>
+        <td>Creates HTTP request instance.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+                                            <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="exchangeAccessToken()">
+        <td><a href="yii-authclient-clients-facebook.html#exchangeAccessToken()-detail">exchangeAccessToken()</a></td>
+        <td>Exchanges short-live (2 hours) access token to long-live (60 days) one.</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr id="fetchAccessToken()">
+        <td><a href="yii-authclient-clients-facebook.html#fetchAccessToken()-detail">fetchAccessToken()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr id="fetchClientAccessToken()">
+        <td><a href="yii-authclient-clients-facebook.html#fetchClientAccessToken()-detail">fetchClientAccessToken()</a></td>
+        <td>Fetches access token from client-specific authorization code.</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr id="fetchClientAuthCode()">
+        <td><a href="yii-authclient-clients-facebook.html#fetchClientAuthCode()-detail">fetchClientAuthCode()</a></td>
+        <td>Requests the authorization code for the client-specific access token.</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+                <tr class="inherited" id="getAccessToken()">
+        <td><a href="yii-authclient-baseoauth.html#getAccessToken()-detail">getAccessToken()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getHttpClient()">
+        <td><a href="yii-authclient-baseclient.html#getHttpClient()-detail">getHttpClient()</a></td>
+        <td>Returns HTTP client.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="getId()">
+        <td><a href="yii-authclient-clientinterface.html#getId()-detail">getId()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="getName()">
+        <td><a href="yii-authclient-clientinterface.html#getName()-detail">getName()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="getNormalizeUserAttributeMap()">
+        <td><a href="yii-authclient-baseclient.html#getNormalizeUserAttributeMap()-detail">getNormalizeUserAttributeMap()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="getRequestOptions()">
+        <td><a href="yii-authclient-baseclient.html#getRequestOptions()-detail">getRequestOptions()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="getReturnUrl()">
+        <td><a href="yii-authclient-baseoauth.html#getReturnUrl()-detail">getReturnUrl()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="getSignatureMethod()">
+        <td><a href="yii-authclient-baseoauth.html#getSignatureMethod()-detail">getSignatureMethod()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+                    <tr class="inherited" id="getStateStorage()">
+        <td><a href="yii-authclient-baseclient.html#getStateStorage()-detail">getStateStorage()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="getTitle()">
+        <td><a href="yii-authclient-clientinterface.html#getTitle()-detail">getTitle()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="getUserAttributes()">
+        <td><a href="yii-authclient-clientinterface.html#getUserAttributes()-detail">getUserAttributes()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="getViewOptions()">
+        <td><a href="yii-authclient-clientinterface.html#getViewOptions()-detail">getViewOptions()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-baseobject.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-baseobject.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-base-baseobject.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+                    <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="refreshAccessToken()">
+        <td><a href="yii-authclient-baseoauth.html#refreshAccessToken()-detail">refreshAccessToken()</a></td>
+        <td>Gets new auth token to replace expired one.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+                            <tr class="inherited" id="setAccessToken()">
+        <td><a href="yii-authclient-baseoauth.html#setAccessToken()-detail">setAccessToken()</a></td>
+        <td>Sets access token to be used.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="setHttpClient()">
+        <td><a href="yii-authclient-baseoauth.html#setHttpClient()-detail">setHttpClient()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="setId()">
+        <td><a href="yii-authclient-clientinterface.html#setId()-detail">setId()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="setName()">
+        <td><a href="yii-authclient-clientinterface.html#setName()-detail">setName()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="setNormalizeUserAttributeMap()">
+        <td><a href="yii-authclient-baseclient.html#setNormalizeUserAttributeMap()-detail">setNormalizeUserAttributeMap()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="setRequestOptions()">
+        <td><a href="yii-authclient-baseclient.html#setRequestOptions()-detail">setRequestOptions()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="setReturnUrl()">
+        <td><a href="yii-authclient-baseoauth.html#setReturnUrl()-detail">setReturnUrl()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="setSignatureMethod()">
+        <td><a href="yii-authclient-baseoauth.html#setSignatureMethod()-detail">setSignatureMethod()</a></td>
+        <td>Set signature method to be used.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+                <tr class="inherited" id="setStateStorage()">
+        <td><a href="yii-authclient-baseclient.html#setStateStorage()-detail">setStateStorage()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="setTitle()">
+        <td><a href="yii-authclient-clientinterface.html#setTitle()-detail">setTitle()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="setUserAttributes()">
+        <td><a href="yii-authclient-baseclient.html#setUserAttributes()-detail">setUserAttributes()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="setViewOptions()">
+        <td><a href="yii-authclient-baseclient.html#setViewOptions()-detail">setViewOptions()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                            <tr class="inherited" id="applyClientCredentialsToRequest()">
+        <td><a href="yii-authclient-oauth2.html#applyClientCredentialsToRequest()-detail">applyClientCredentialsToRequest()</a></td>
+        <td>Applies client credentials (e.g. <a href="yii-authclient-oauth2.html#$clientId-detail">$clientId</a> and <a href="yii-authclient-oauth2.html#$clientSecret-detail">$clientSecret</a>) to the HTTP request instance.</td>
+        <td><a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a></td>
+    </tr>
+                                                        <tr class="inherited" id="composeUrl()">
+        <td><a href="yii-authclient-baseoauth.html#composeUrl()-detail">composeUrl()</a></td>
+        <td>Composes URL from base URL and GET params.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+                <tr class="inherited" id="createHttpClient()">
+        <td><a href="yii-authclient-baseoauth.html#createHttpClient()-detail">createHttpClient()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+                <tr class="inherited" id="createSignatureMethod()">
+        <td><a href="yii-authclient-baseoauth.html#createSignatureMethod()-detail">createSignatureMethod()</a></td>
+        <td>Creates signature method instance from its configuration.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="createToken()">
+        <td><a href="yii-authclient-baseoauth.html#createToken()-detail">createToken()</a></td>
+        <td>Creates token from its configuration.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr id="defaultName()">
+        <td><a href="yii-authclient-clients-facebook.html#defaultName()-detail">defaultName()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr class="inherited" id="defaultNormalizeUserAttributeMap()">
+        <td><a href="yii-authclient-baseclient.html#defaultNormalizeUserAttributeMap()-detail">defaultNormalizeUserAttributeMap()</a></td>
+        <td>Returns the default <span class="broken-link">\yii\authclient\normalizeUserAttributeMap</span> value.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="defaultRequestOptions()">
+        <td><a href="yii-authclient-baseoauth.html#defaultRequestOptions()-detail">defaultRequestOptions()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="defaultReturnUrl()">
+        <td><a href="yii-authclient-baseoauth.html#defaultReturnUrl()-detail">defaultReturnUrl()</a></td>
+        <td>Composes default <span class="broken-link">\yii\authclient\returnUrl</span> value.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr id="defaultTitle()">
+        <td><a href="yii-authclient-clients-facebook.html#defaultTitle()-detail">defaultTitle()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr id="defaultViewOptions()">
+        <td><a href="yii-authclient-clients-facebook.html#defaultViewOptions()-detail">defaultViewOptions()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+                                        <tr class="inherited" id="generateAuthState()">
+        <td><a href="yii-authclient-oauth2.html#generateAuthState()-detail">generateAuthState()</a></td>
+        <td>Generates the auth state value.</td>
+        <td><a href="yii-authclient-oauth2.html">yii\authclient\OAuth2</a></td>
+    </tr>
+                                                    <tr class="inherited" id="getState()">
+        <td><a href="yii-authclient-baseclient.html#getState()-detail">getState()</a></td>
+        <td>Returns persistent state value.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="getStateKeyPrefix()">
+        <td><a href="yii-authclient-baseclient.html#getStateKeyPrefix()-detail">getStateKeyPrefix()</a></td>
+        <td>Returns session key prefix, which is used to store internal states.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+                                            <tr id="initUserAttributes()">
+        <td><a href="yii-authclient-clients-facebook.html#initUserAttributes()-detail">initUserAttributes()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-clients-facebook.html">yii\authclient\clients\Facebook</a></td>
+    </tr>
+            <tr class="inherited" id="normalizeUserAttributes()">
+        <td><a href="yii-authclient-baseclient.html#normalizeUserAttributes()-detail">normalizeUserAttributes()</a></td>
+        <td>Normalize given user attributes according to <span class="broken-link">\yii\authclient\normalizeUserAttributeMap</span>.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+                        <tr class="inherited" id="removeState()">
+        <td><a href="yii-authclient-baseclient.html#removeState()-detail">removeState()</a></td>
+        <td>Removes persistent state value.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="restoreAccessToken()">
+        <td><a href="yii-authclient-baseoauth.html#restoreAccessToken()-detail">restoreAccessToken()</a></td>
+        <td>Restores access token.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="saveAccessToken()">
+        <td><a href="yii-authclient-baseoauth.html#saveAccessToken()-detail">saveAccessToken()</a></td>
+        <td>Saves token as persistent state.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="sendRequest()">
+        <td><a href="yii-authclient-baseoauth.html#sendRequest()-detail">sendRequest()</a></td>
+        <td>Sends the given HTTP request, returning response data.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+                                            <tr class="inherited" id="setState()">
+        <td><a href="yii-authclient-baseclient.html#setState()-detail">setState()</a></td>
+        <td>Sets persistent state.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+                        </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$apiBaseUrl-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#$apiBaseUrl-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L55" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L55" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $apiBaseUrl        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-authclient-clients-facebook.html#$apiBaseUrl-detail">$apiBaseUrl</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'https://graph.facebook.com'</span></div>
+
+
+    <div class="detail-header h3" id="$attributeNames-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#$attributeNames-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L64" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L64" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $attributeNames        <span class="detail-header-tag small">
+            public                                                property
+                            (available since version 2.0.5)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>List of attribute names, which should be requested from API to initialize user attributes.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <a href="yii-authclient-clients-facebook.html#$attributeNames-detail">$attributeNames</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'name'</span><span style="color: #007700">,&nbsp;</span><span style="color: #DD0000">'email'</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$authUrl-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#$authUrl-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L47" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L47" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $authUrl        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-authclient-clients-facebook.html#$authUrl-detail">$authUrl</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'https://www.facebook.com/dialog/oauth'</span></div>
+
+
+    <div class="detail-header h3" id="$autoExchangeAccessToken-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#$autoExchangeAccessToken-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L77" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L77" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $autoExchangeAccessToken        <span class="detail-header-tag small">
+            public                                                property
+                            (available since version 2.1.3)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether to automatically upgrade short-live (2 hours) access token to long-live (60 days) one, after fetching it.</p>
+
+        <p>See also <span class="broken-link">\yii\authclient\clients\exchangeToken()</span>.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="yii-authclient-clients-facebook.html#$autoExchangeAccessToken-detail">$autoExchangeAccessToken</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+
+    <div class="detail-header h3" id="$autoRefreshAccessToken-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#$autoRefreshAccessToken-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L71" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L71" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $autoRefreshAccessToken        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-authclient-clients-facebook.html#$autoRefreshAccessToken-detail">$autoRefreshAccessToken</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+
+    <div class="detail-header h3" id="$clientAuthCodeUrl-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#$clientAuthCodeUrl-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L85" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L85" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $clientAuthCodeUrl        <span class="detail-header-tag small">
+            public                                                property
+                            (available since version 2.1.3)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>URL endpoint for the client auth code generation.</p>
+
+        <p>See also:</p><ul><li><a href="https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension">https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension</a></li><li><a href="yii-authclient-clients-facebook.html#fetchClientAuthCode()-detail">fetchClientAuthCode()</a></li><li><a href="yii-authclient-clients-facebook.html#fetchClientAccessToken()-detail">fetchClientAccessToken()</a></li></ul>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-authclient-clients-facebook.html#$clientAuthCodeUrl-detail">$clientAuthCodeUrl</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'https://graph.facebook.com/oauth/client_code'</span></div>
+
+
+    <div class="detail-header h3" id="$scope-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#$scope-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L59" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L59" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $scope        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-authclient-clients-facebook.html#$scope-detail">$scope</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'email'</span></div>
+
+
+    <div class="detail-header h3" id="$tokenUrl-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#$tokenUrl-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L51" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L51" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $tokenUrl        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="yii-authclient-clients-facebook.html#$tokenUrl-detail">$tokenUrl</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'https://graph.facebook.com/oauth/access_token'</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="applyAccessTokenToRequest()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#applyAccessTokenToRequest()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L101" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L101" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        applyAccessTokenToRequest()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>{@inheritdoc}</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-clients-facebook.html#applyAccessTokenToRequest()-detail">applyAccessTokenToRequest</a></strong> ( <span style="color: #0000BB">$request</span>, <span style="color: #0000BB">$accessToken</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$request</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$accessToken</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="defaultName()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#defaultName()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L116" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L116" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        defaultName()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>{@inheritdoc}</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-clients-facebook.html#defaultName()-detail">defaultName</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="defaultTitle()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#defaultTitle()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L124" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L124" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        defaultTitle()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>{@inheritdoc}</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-clients-facebook.html#defaultTitle()-detail">defaultTitle</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="defaultViewOptions()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#defaultViewOptions()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L132" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L132" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        defaultViewOptions()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>{@inheritdoc}</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-clients-facebook.html#defaultViewOptions()-detail">defaultViewOptions</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="exchangeAccessToken()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#exchangeAccessToken()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L161" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L161" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        exchangeAccessToken()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.1.3)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Exchanges short-live (2 hours) access token to long-live (60 days) one.</strong></p>
+
+        <p>Note that this method will success for already long-live token, but will not actually prolong it any further.
+Pay attention, that this method will fail on already expired access token.</p>
+
+        <p>See also <a href="https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension">https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension</a>.</p>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></span> <strong><a href="yii-authclient-clients-facebook.html#exchangeAccessToken()-detail">exchangeAccessToken</a></strong> ( <span class="signature-type"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></span> <span style="color: #0000BB">$token</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$token</span></td>
+                  <td class="param-type-col"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></td>
+                  <td class="param-desc-col"><p>Short-live access token.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></td>
+                  <td class="param-desc-col"><p>Long-live access token.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="fetchAccessToken()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#fetchAccessToken()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L143" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L143" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        fetchAccessToken()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>{@inheritdoc}</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-clients-facebook.html#fetchAccessToken()-detail">fetchAccessToken</a></strong> ( <span style="color: #0000BB">$authCode</span>, <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <span style="color: #0000BB">$params&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$authCode</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="fetchClientAccessToken()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#fetchClientAccessToken()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L228" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L228" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        fetchClientAccessToken()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.1.3)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Fetches access token from client-specific authorization code.</strong></p>
+
+        <p>This make sense for the distributed applications, which provides several Auth clients (web and mobile)
+to avoid triggering Facebook's automated spam systems.</p>
+
+        <p>See also:</p><ul><li><a href="https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension">https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension</a></li><li><a href="yii-authclient-clients-facebook.html#fetchClientAuthCode()-detail">fetchClientAuthCode()</a></li></ul>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></span> <strong><a href="yii-authclient-clients-facebook.html#fetchClientAccessToken()-detail">fetchClientAccessToken</a></strong> ( <span style="color: #0000BB">$authCode</span>, <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <span style="color: #0000BB">$params&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$authCode</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Client auth code.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></td>
+                  <td class="param-desc-col"><p>Long-live client-specific access token.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="fetchClientAuthCode()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#fetchClientAuthCode()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L194" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L194" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        fetchClientAuthCode()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.1.3)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Requests the authorization code for the client-specific access token.</strong></p>
+
+        <p>This make sense for the distributed applications, which provides several Auth clients (web and mobile)
+to avoid triggering Facebook's automated spam systems.</p>
+
+        <p>See also:</p><ul><li><a href="https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension">https://developers.facebook.com/docs/facebook-login/access-tokens/expiration-and-extension</a></li><li><a href="yii-authclient-clients-facebook.html#fetchClientAccessToken()-detail">fetchClientAccessToken()</a></li></ul>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-clients-facebook.html#fetchClientAuthCode()-detail">fetchClientAuthCode</a></strong> ( <span class="signature-type"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></span> <span style="color: #0000BB">$token&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span>, <span style="color: #0000BB">$params&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$token</span></td>
+                  <td class="param-type-col"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>Access token, if not set <span class="broken-link">\yii\authclient\clients\accessToken</span> will be used.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Additional request params.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Client auth code.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="initUserAttributes()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-clients-facebook.html#initUserAttributes()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/clients/Facebook.php#L91" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/clients/Facebook.php#L91" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        initUserAttributes()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>{@inheritdoc}</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-clients-facebook.html#initUserAttributes()-detail">initUserAttributes</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Wed, 15 Aug 2018 19:09:09 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

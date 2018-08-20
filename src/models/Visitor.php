@@ -1,6 +1,8 @@
 <?php
 
 /**
+ * This file is part of the Yii2 extension module, yii2-visitor
+ *
  * @author John Snook
  * @date 2018-06-28
  * @license https://github.com/johnsnook/yii2-visitor/LICENSE
@@ -85,14 +87,16 @@ class Visitor extends \yii\db\ActiveRecord {
     }
 
     /**
-     * @inheritdoc
+     * The table name
      */
     public static function tableName() {
         return 'visitor';
     }
 
     /**
-     * @inheritdoc
+     * Validation rules
+     *
+     * @return array
      */
     public function rules() {
         return [
@@ -138,7 +142,7 @@ class Visitor extends \yii\db\ActiveRecord {
     }
 
     /**
-     * @inheritdoc
+     * Labels of the attributes
      */
     public function attributeLabels() {
         return [
@@ -211,22 +215,6 @@ class Visitor extends \yii\db\ActiveRecord {
             return $this->banned;
         }
         return ($this->hat_color === static::HAT_COLOR_BLACK);
-//            public $hat = ['color' => static::HAT_COLOR_NONE, 'why' => null];
-//        $visitor = \Yii::$app->getModule('visitor');
-//        $return = false;
-//        if ($this->proxy !== 'no' && in_array($this->proxy, $visitor->proxyBan, true)) {
-//            $this->blacklist_reason = self::BL_PROXY;
-//            return true;
-//        }
-//
-//        foreach ($visitor->autoBan as $ban) {
-//            if (IpHelper::inRange($this->ip, $ban)) {
-//                //$this->blacklist_reason = self::BL_AUTOBAN;
-//                $return = true;
-//                break;
-//            }
-//        }
-//        return $return;
     }
 
     /**

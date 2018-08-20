@@ -23,65 +23,108 @@ $form = ActiveForm::begin([
             'method' => 'get',
             'fieldConfig' => ['enableLabel' => false],
             'options' => [
-                'class' => "form-inline",
+//                'class' => "form-inline",
                 'role' => "form",
                 'style' => 'margin-bottom:30px'
             ]
         ]);
 ?>
-<div class="row">
-    <div class="col-sm-offset-1 col-sm-8 text-right" style="padding-right:0px">
+
+<div class="form-group ">
+    <!--<label class="control-label" for="visitorsearch-userquery">Filter visitors by</label>-->
+    <div class="input-group ">
         <input id="visitorsearch-userquery" name="VisitorSearch[userQuery]"
-               type="text" name="search" class="form-control"
-               value="<?= $model->userQuery ?>" style="width:-webkit-fill-available"
+               type="text" class="form-control"
+               value="<?= htmlentities($model->userQuery) ?>"
                placeholder="Enter a search term"
                >
+               <?php
+               echo Html::beginTag('span', ['class' => 'input-group-btn']);
+               echo Html::submitButton('<i class="glyphicon glyphicon-search"></i>', [
+                   'class' => 'btn btn-primary',
+                   'data-toggle' => "tooltip",
+                   'data-title' => "Search"
+               ]);
+               echo Html::a('<i class="glyphicon glyphicon-leaf"></i>', ['index'], [
+                   'class' => 'btn btn-success',
+                   'data-toggle' => "tooltip",
+                   'data-title' => "Reset search"
+               ]);
+               echo Html::button('<i class="glyphicon glyphicon-question-sign"></i>', [
+                   'class' => 'btn btn-info',
+                   'data-toggle' => 'collapse',
+                   'data-title' => "Toggle search help",
+                   'data-target' => '#help',
+                   'autocomplete' => 'off',
+                   'aria-expanded' => "false",
+                   "aria-controls" => "help"
+               ]);
+               echo Html::button('<i class="glyphicon glyphicon-th-list"></i>', [
+                   'class' => 'btn btn-warning',
+                   'data-toggle' => 'collapse',
+                   'data-title' => "Toggle Generated SQL",
+                   'data-target' => '#sql',
+                   'autocomplete' => 'off',
+                   'aria-expanded' => "false",
+                   "aria-controls" => "sql"
+               ]);
+               echo Html::endTag('span');
+               ?>
     </div>
-    <div class="col-sm-2" style="padding-left:0px">
-        <?php
-        echo Html::submitButton('Search', [
-            'class' => 'btn btn-default',
-            'type' => 'submit'
-        ]);
-        echo Html::button('<i class="glyphicon glyphicon-question-sign"></i>', [
-            'class' => 'btn btn-info',
-            'data-toggle' => 'collapse',
-            'data-target' => '#help',
-            'autocomplete' => 'off',
-            'aria-expanded' => "false",
-            "aria-controls" => "help"
-        ]);
-        echo Html::button('<i class="glyphicon glyphicon-th-list"></i>', [
-            'class' => 'btn btn-info',
-            'data-toggle' => 'collapse',
-            'data-target' => '#sql',
-            'autocomplete' => 'off',
-            'aria-expanded' => "false",
-            "aria-controls" => "sql"
-        ]);
-        ?>
-    </div>
-    <div class="col-sm-1" >
-    </div>
-
 </div>
 <div id="help"  class="panel outline-info collapse" >
     <div class="panel-body">
-        <b>Conjunctives:</b><br>
-        <ul class="list-group">
-            <li class="list-group-item">'AND' is the default behavior. "smart pretty" is the same as "smart AND pretty."</li>
-            <li class="list-group-item">'OR' allows more results in your query: "smart OR pretty."</li>
-        </ul>
-        <b>Operators:</b><br>
-        <ul class="list-group">
-            <li class="list-group-item">Negation: '-'. The user query "smart pretty -judgmental" parses to "smart AND pretty AND NOT judgmental"</li>
-            <li class="list-group-item">Sub-query : '()', Allows grouping of terms . The user query "-crazy (smart AND pretty)" parses to "NOT crazy AND (smart AND pretty)".</li>
-            <li class="list-group-item">Wildpanel: '*', fuzzy matches. "butt*" matches butt, buttery, buttered etc.</li>
-            <li class="list-group-item">Character wildpanel: '_', matches one character. "boo_" matches boot, book, bool, boon, etc.</li>
-            <li class="list-group-item">Full match: '=', field match. Entire fields must be equal to the term. "=georgia" only matches where one or more fields is exactly equal to the search term. The search term will NOT be bracketed with %, but wildpanels can still be used.</li>
-            <li class="list-group-item">Phrase: double quotes. '"Super fun"' searches for the full phrase, space include. Wild panels, negation and exact match operators all work within the phrase.</li>
-            <li class="list-group-item">Phrase, no wildpanels: single quotes. The term will not be evaluated for * or _, but will be wrapped in wildpanels. If a % or _ is in the term, it will be escaped. 'P%on*' becomes '%P%on*%'.</li>
-        </ul>
+        <table class="table table-striped table-sm">
+            <thead>
+                <tr>
+                    <th>Operator</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>-</td>
+                    <td>Negation</td>
+                    <td>The user query "smart pretty -judgmental" parses to "smart AND pretty AND NOT judgmental"</td>
+                </tr>
+                <tr>
+                    <td>()</td>
+                    <td>Sub-query</td>
+                    <td>Allows grouping of terms .  The user query "-crazy (smart AND pretty)" parses to "NOT crazy AND (smart AND pretty)"</td>
+                </tr>
+                <tr>
+                    <td>*</td>
+                    <td>Wildcard</td>
+                    <td>Fuzzy matches. "butt*" matches butt, buttery, buttered etc.</td>
+                </tr>
+                <tr>
+                    <td>_</td>
+                    <td>Character wildcard</td>
+                    <td>Matches one character.  "boo_" matches boot, book, bool, boon, etc.</td>
+                </tr>
+                <tr>
+                    <td>=</td>
+                    <td>Full match</td>
+                    <td>Entire fields must be equal to the term.  "=georgia" only matches where one or more fields is exactly equal to the search term.  The search term will NOT be bracketed with %, but wildcards can still be used.</td>
+                </tr>
+                <tr>
+                    <td>""</td>
+                    <td>Double quotes</td>
+                    <td>Phrase. '"Super fun"' searches for the full phrase, space include.  Wild cards, negation and exact match operators all work within the phrase.</td>
+                </tr>
+                <tr>
+                    <td>''</td>
+                    <td>Single quotes</td>
+                    <td>Phrase, no wildcards.  The term will not be evaluated for * or _, but will be wrapped in wildcards.  If a % or _ is in the term, it will be escaped.  'P%on*' becomes '%P%on*%'.</td>
+                </tr>
+                <tr>
+                    <td>:</td>
+                    <td>Field</td>
+                    <td>Specify the field to search.  'name:jo*' will search the name field for 'jo*.' If no field name matches, all fields will be searched for 'name:jo*'</td>
+                </tr>
+            </tbody>
+        </table>
 
     </div>
 </div>
@@ -90,10 +133,13 @@ if (!empty($model->queryError)) {
     echo '<div class="alert alert-danger" role="alert">';
     echo $model->queryError;
     echo '</div>';
-} elseif (!empty($model->sql)) {
+} elseif (!empty($model->parselQuery->sql)) {
     echo '<div id="sql"  class="panel outline-info collapse" >';
     echo '<div class="panel-body">';
-    echo $model->sql;
+    dump($model->parselQuery->tokens);
+    dump($model->parselQuery->queryParts);
+    echo $model->parselQuery->sql;
+
     echo '</div>';
     echo '</div>';
 }

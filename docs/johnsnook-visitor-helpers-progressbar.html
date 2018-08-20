@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/f194ff92/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/404086f/jssearch.js"></script>    <title>ProgressBar, johnsnook\visitor\helpers\ProgressBar - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w16897" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w16897-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w16897-collapse" class="collapse navbar-collapse"><ul id="w16898" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w16899" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-swiftmailer-index.html" tabindex="-1">swiftmailer</a></li></ul></li>
+<li><a href="./guide-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item" href="#navigation-16886" data-toggle="collapse" data-parent="#navigation">Not namespaced classes <b class="caret"></b></a><div id="navigation-16886" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii.html">Yii</a>
+<a class="list-group-item" href="./yiirequirementchecker.html">YiiRequirementChecker</a></div>
+<a class="list-group-item" href="#navigation-16887" data-toggle="collapse" data-parent="#navigation">dektrium\user\filters <b class="caret"></b></a><div id="navigation-16887" class="submenu panel-collapse collapse"><a class="list-group-item" href="./dektrium-user-filters-backendfilter.html">BackendFilter</a></div>
+<a class="list-group-item" href="#navigation-16888" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor <b class="caret"></b></a><div id="navigation-16888" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-module.html">Module</a></div>
+<a class="list-group-item" href="#navigation-16889" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\assets <b class="caret"></b></a><div id="navigation-16889" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-assets-appasset.html">AppAsset</a>
+<a class="list-group-item" href="./johnsnook-visitor-assets-visitorasset.html">VisitorAsset</a></div>
+<a class="list-group-item" href="#navigation-16890" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\behaviors <b class="caret"></b></a><div id="navigation-16890" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-behaviors-visitorbehavior.html">VisitorBehavior</a></div>
+<a class="list-group-item" href="#navigation-16891" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\commands <b class="caret"></b></a><div id="navigation-16891" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-commands-importcontroller.html">ImportController</a>
+<a class="list-group-item" href="./johnsnook-visitor-commands-servicecontroller.html">ServiceController</a></div>
+<a class="list-group-item" href="#navigation-16892" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\controllers <b class="caret"></b></a><div id="navigation-16892" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-controllers-individualcontroller.html">IndividualController</a>
+<a class="list-group-item" href="./johnsnook-visitor-controllers-visitorcontroller.html">VisitorController</a>
+<a class="list-group-item" href="./johnsnook-visitor-controllers-visitorserviceerrorcontroller.html">VisitorServiceErrorController</a></div>
+<a class="list-group-item" href="#navigation-16893" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\filters <b class="caret"></b></a><div id="navigation-16893" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-filters-accessrule.html">AccessRule</a>
+<a class="list-group-item" href="./johnsnook-visitor-filters-frontendfilter.html">FrontendFilter</a></div>
+<a class="list-group-item active" href="#navigation-16894" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\helpers <b class="caret"></b></a><div id="navigation-16894" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./johnsnook-visitor-helpers-iphelper.html">IpHelper</a>
+<a class="list-group-item active" href="./johnsnook-visitor-helpers-progressbar.html">ProgressBar</a></div>
+<a class="list-group-item" href="#navigation-16895" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\models <b class="caret"></b></a><div id="navigation-16895" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-models-country.html">Country</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitor.html">Visitor</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitoragent.html">VisitorAgent</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitorlog.html">VisitorLog</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitorlogsearch.html">VisitorLogSearch</a>
+<a class="list-group-item" href="./johnsnook-visitor-models-visitorsearch.html">VisitorSearch</a></div>
+<a class="list-group-item" href="#navigation-16896" data-toggle="collapse" data-parent="#navigation">johnsnook\visitor\widgets <b class="caret"></b></a><div id="navigation-16896" class="submenu panel-collapse collapse"><a class="list-group-item" href="./johnsnook-visitor-widgets-card.html">Card</a>
+<a class="list-group-item" href="./johnsnook-visitor-widgets-linkpager.html">LinkPager</a>
+<a class="list-group-item" href="./johnsnook-visitor-widgets-panel.html">Panel</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class johnsnook\visitor\helpers\ProgressBar</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a> &raquo;
+<a href="yii-base-object.html">yii\base\Object</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a></td></tr>
+                                    </table>
+
+<div class="class-description">
+    <p><strong>Description of ProgressBar</strong></p>
+    
+    </div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$infoColor">
+        <td><a href="johnsnook-visitor-helpers-progressbar.html#$infoColor-detail">$infoColor</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a></td>
+    </tr>
+            <tr id="$label">
+        <td><a href="johnsnook-visitor-helpers-progressbar.html#$label-detail">$label</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a></td>
+    </tr>
+            <tr id="$labelColor">
+        <td><a href="johnsnook-visitor-helpers-progressbar.html#$labelColor-detail">$labelColor</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a></td>
+    </tr>
+            <tr id="$lineNumber">
+        <td><a href="johnsnook-visitor-helpers-progressbar.html#$lineNumber-detail">$lineNumber</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a></td>
+    </tr>
+            <tr id="$progress">
+        <td><a href="johnsnook-visitor-helpers-progressbar.html#$progress-detail">$progress</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a></td>
+    </tr>
+            <tr id="$progressColor">
+        <td><a href="johnsnook-visitor-helpers-progressbar.html#$progressColor-detail">$progressColor</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a></td>
+    </tr>
+            <tr id="$total">
+        <td><a href="johnsnook-visitor-helpers-progressbar.html#$total-detail">$total</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a></td>
+    </tr>
+            <tr id="$width">
+        <td><a href="johnsnook-visitor-helpers-progressbar.html#$width-detail">$width</a></td>
+        <td></td>
+        <td></td>
+        <td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-baseobject.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr id="__construct()">
+        <td><a href="johnsnook-visitor-helpers-progressbar.html#__construct()-detail">__construct()</a></td>
+        <td></td>
+        <td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-baseobject.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-baseobject.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-baseobject.html#__set()-detail">__set()</a></td>
+        <td>Sets value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-baseobject.html#__unset()-detail">__unset()</a></td>
+        <td>Sets an object property to null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-baseobject.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-baseobject.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr id="endProgress()">
+        <td><a href="johnsnook-visitor-helpers-progressbar.html#endProgress()-detail">endProgress()</a></td>
+        <td>Ends a progress bar that has been started by <span class="broken-link">\johnsnook\visitor\helpers\startProgress()</span>.</td>
+        <td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-baseobject.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-baseobject.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-base-baseobject.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr id="start()">
+        <td><a href="johnsnook-visitor-helpers-progressbar.html#start()-detail">start()</a></td>
+        <td>Starts display of a progress bar on screen.</td>
+        <td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a></td>
+    </tr>
+            <tr id="update()">
+        <td><a href="johnsnook-visitor-helpers-progressbar.html#update()-detail">update()</a></td>
+        <td>Updates a progress bar that has been started by <span class="broken-link">\johnsnook\visitor\helpers\startProgress()</span>.</td>
+        <td><a href="johnsnook-visitor-helpers-progressbar.html">johnsnook\visitor\helpers\ProgressBar</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$infoColor-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-helpers-progressbar.html#$infoColor-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $infoColor        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="johnsnook-visitor-helpers-progressbar.html#$infoColor-detail">$infoColor</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$label-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-helpers-progressbar.html#$label-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $label        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="johnsnook-visitor-helpers-progressbar.html#$label-detail">$label</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$labelColor-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-helpers-progressbar.html#$labelColor-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $labelColor        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="johnsnook-visitor-helpers-progressbar.html#$labelColor-detail">$labelColor</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$lineNumber-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-helpers-progressbar.html#$lineNumber-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $lineNumber        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="johnsnook-visitor-helpers-progressbar.html#$lineNumber-detail">$lineNumber</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$progress-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-helpers-progressbar.html#$progress-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $progress        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="johnsnook-visitor-helpers-progressbar.html#$progress-detail">$progress</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">0</span></div>
+
+
+    <div class="detail-header h3" id="$progressColor-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-helpers-progressbar.html#$progressColor-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $progressColor        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="johnsnook-visitor-helpers-progressbar.html#$progressColor-detail">$progressColor</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$total-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-helpers-progressbar.html#$total-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $total        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="johnsnook-visitor-helpers-progressbar.html#$total-detail">$total</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$width-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-helpers-progressbar.html#$width-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        $width        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"></span> <a href="johnsnook-visitor-helpers-progressbar.html#$width-detail">$width</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="__construct()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-helpers-progressbar.html#__construct()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        __construct()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="johnsnook-visitor-helpers-progressbar.html#__construct()-detail">__construct</a></strong> ( <span style="color: #0000BB">$config</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$config</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="endProgress()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-helpers-progressbar.html#endProgress()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        endProgress()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Ends a progress bar that has been started by <span class="broken-link">\johnsnook\visitor\helpers\startProgress()</span>.</strong></p>
+
+        
+        <p>See also:</p><ul><li><span class="broken-link">\johnsnook\visitor\helpers\startProgress</span></li><li><a href="johnsnook-visitor-helpers-progressbar.html#update()-detail">update()</a></li></ul>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="johnsnook-visitor-helpers-progressbar.html#endProgress()-detail">endProgress</a></strong> ( <span style="color: #0000BB">$remove&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span>, <span style="color: #0000BB">$keepPrefix&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">true</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$remove</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>This can be <code>false</code> to leave the progress bar on screen and just print a newline.
+If set to <code>true</code>, the line of the progress bar will be cleared. This may also be a string to be displayed instead
+of the progress bar.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$keepPrefix</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether to keep the prefix that has been specified for the progressbar when progressbar
+gets removed. Defaults to true.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="start()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-helpers-progressbar.html#start()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        start()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Starts display of a progress bar on screen.</strong></p>
+
+        <p>This bar will be updated by <a href="johnsnook-visitor-helpers-progressbar.html#update()-detail">update()</a> and my be ended by <a href="johnsnook-visitor-helpers-progressbar.html#endProgress()-detail">endProgress()</a>.</p>
+<p>The following example shows a simple usage of a progress bar:</p>
+<pre><code class="hljs php language-php">Console::startProgress(<span class="hljs-number">0</span>, <span class="hljs-number">1000</span>);
+<span class="hljs-keyword">for</span> (<span class="hljs-variable">$n</span> = <span class="hljs-number">1</span>; <span class="hljs-variable">$n</span> &lt;= <span class="hljs-number">1000</span>; <span class="hljs-variable">$n</span>++) {
+    usleep(<span class="hljs-number">1000</span>);
+    Console::update(<span class="hljs-variable">$n</span>, <span class="hljs-number">1000</span>);
+}
+Console::endProgress();
+</code></pre>
+<p>Git clone like progress (showing only status information):
+<code>`</code>php
+Console::startProgress(0, 1000, 'Counting objects: ', false);
+for ($n = 1; $n &lt;= 1000; $n++) {</p>
+<pre><code class="hljs scss"><span class="hljs-function">usleep</span>(1000);
+Console<span class="hljs-value">::<span class="hljs-function">update</span>(<span class="hljs-variable">$n</span>, <span class="hljs-number">1000</span>);</span>
+</code></pre>
+<p>}
+Console::endProgress("progress." . PHP_EOL);
+<code>`</code></p>
+
+        <p>See also:</p><ul><li><span class="broken-link">\johnsnook\visitor\helpers\startProgress</span></li><li><a href="johnsnook-visitor-helpers-progressbar.html#update()-detail">update()</a></li><li><a href="johnsnook-visitor-helpers-progressbar.html#endProgress()-detail">endProgress()</a></li></ul>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="johnsnook-visitor-helpers-progressbar.html#start()-detail">start</a></strong> ( <span style="color: #0000BB">$total&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$total</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="update()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="johnsnook-visitor-helpers-progressbar.html#update()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+        
+        update()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Updates a progress bar that has been started by <span class="broken-link">\johnsnook\visitor\helpers\startProgress()</span>.</strong></p>
+
+        
+        <p>See also:</p><ul><li><span class="broken-link">\johnsnook\visitor\helpers\startProgress</span></li><li><a href="johnsnook-visitor-helpers-progressbar.html#endProgress()-detail">endProgress()</a></li></ul>    </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="johnsnook-visitor-helpers-progressbar.html#update()-detail">update</a></strong> ( <span style="color: #0000BB">$progress</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$progress</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>The number of items that are completed.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Thu, 16 Aug 2018 03:16:09 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

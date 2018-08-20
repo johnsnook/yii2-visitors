@@ -43,25 +43,33 @@ class VisitorAgent extends \yii\db\ActiveRecord {
     const USER_AGENT_URL = 'https://api.whatismybrowser.com/api/v2/user_agent_parse';
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public static function tableName() {
         return 'visitor_agent';
     }
 
+    /**
+     *
+     * @param boolean $insert
+     * @return boolean
+     */
     public function beforeSave($insert) {
         if (gettype($this->info) !== 'string')
             $this->info = json_encode($this->info);
         return true;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     public function afterFind() {
         parent::afterFind();
         $this->info = json_decode($this->info);
     }
 
     /**
-     * @inheritdoc
+     * {@inheritdoc}
      */
     public function rules() {
         return [
@@ -249,6 +257,11 @@ class VisitorAgent extends \yii\db\ActiveRecord {
         }
     }
 
+    /**
+     *
+     * @return string
+     * @throws \Exception
+     */
     private static function getRealYiiPath() {
         $path = \Yii::$app->basePath;
         if (file_exists($path . '/yii')) {

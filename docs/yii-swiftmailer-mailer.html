@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/969a6042/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/f28e901f/solarized_light.css" rel="stylesheet">
+<link href="./assets/f194ff92/style.css" rel="stylesheet">
+<script src="./assets/6e695b5a/jquery.js"></script>
+<script src="./assets/969a6042/js/bootstrap.js"></script>
+<script src="./assets/404086f/jssearch.js"></script>    <title>Mailer, yii\swiftmailer\Mailer - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w15609" class="navbar-inverse navbar-fixed-top navbar"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w15609-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w15609-collapse" class="collapse navbar-collapse"><ul id="w15610" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <span class="caret"></span></a><ul id="w15611" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-faker-index.html" tabindex="-1">faker</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-swiftmailer-index.html" tabindex="-1">swiftmailer</a></li></ul></li>
+<li><a href="./guide-README.html">Guide</a></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-15608" data-toggle="collapse" data-parent="#navigation">yii\swiftmailer <b class="caret"></b></a><div id="navigation-15608" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-swiftmailer-logger.html">Logger</a>
+<a class="list-group-item active" href="./yii-swiftmailer-mailer.html">Mailer</a>
+<a class="list-group-item" href="./yii-swiftmailer-message.html">Message</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Class yii\swiftmailer\Mailer</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+                | <a href="#events">Events</a>
+        </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-swiftmailer-mailer.html">yii\swiftmailer\Mailer</a> &raquo;
+<a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-base-configurable.html">yii\base\Configurable</a>, <a href="yii-base-viewcontextinterface.html">yii\base\ViewContextInterface</a>, <a href="yii-mail-mailerinterface.html">yii\mail\MailerInterface</a></td></tr>
+                                    <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php">https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>Mailer implements a mailer based on SwiftMailer.</strong></p>
+    <p>To use Mailer, you should configure it in the application configuration like the following,</p>
+<pre><code class="hljs php"><span class="hljs-string">'components'</span> =&gt; [
+    ...
+    <span class="hljs-string">'mailer'</span> =&gt; [
+        <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'yii\swiftmailer\Mailer'</span>,
+        <span class="hljs-string">'transport'</span> =&gt; [
+            <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'Swift_SmtpTransport'</span>,
+            <span class="hljs-string">'host'</span> =&gt; <span class="hljs-string">'localhost'</span>,
+            <span class="hljs-string">'username'</span> =&gt; <span class="hljs-string">'username'</span>,
+            <span class="hljs-string">'password'</span> =&gt; <span class="hljs-string">'password'</span>,
+            <span class="hljs-string">'port'</span> =&gt; <span class="hljs-string">'587'</span>,
+            <span class="hljs-string">'encryption'</span> =&gt; <span class="hljs-string">'tls'</span>,
+        ],
+    ],
+    ...
+],
+</code></pre>
+<p>You may also skip the configuration of the <a href="yii-swiftmailer-mailer.html#$transport-detail">$transport</a> property. In that case, the default
+PHP <code>mail()</code> function will be used to send emails.</p>
+<p>You specify the transport constructor arguments using 'constructArgs' key in the config.
+You can also specify the list of plugins, which should be registered to the transport using
+'plugins' key. For example:</p>
+<pre><code class="hljs php"><span class="hljs-string">'transport'</span> =&gt; [
+    <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'Swift_SmtpTransport'</span>,
+    <span class="hljs-string">'constructArgs'</span> =&gt; [<span class="hljs-string">'localhost'</span>, <span class="hljs-number">25</span>]
+    <span class="hljs-string">'plugins'</span> =&gt; [
+        [
+            <span class="hljs-string">'class'</span> =&gt; <span class="hljs-string">'Swift_Plugins_ThrottlerPlugin'</span>,
+            <span class="hljs-string">'constructArgs'</span> =&gt; [<span class="hljs-number">20</span>],
+        ],
+    ],
+],
+</code></pre>
+<p>To send an email, you may use the following code:</p>
+<pre><code class="hljs php">Yii::<span class="hljs-variable">$app</span>-&gt;mailer-&gt;compose(<span class="hljs-string">'contact/html'</span>, [<span class="hljs-string">'contactForm'</span> =&gt; <span class="hljs-variable">$form</span>])
+    -&gt;setFrom(<span class="hljs-string">'from@domain.com'</span>)
+    -&gt;setTo(<span class="hljs-variable">$form</span>-&gt;email)
+    -&gt;setSubject(<span class="hljs-variable">$form</span>-&gt;subject)
+    -&gt;send();
+</code></pre>
+
+    <p>See also <a href="http://swiftmailer.org">http://swiftmailer.org</a>.</p></div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="$behaviors">
+        <td><a href="yii-base-component.html#$behaviors-detail">$behaviors</a></td>
+        <td><a href="yii-base-behavior.html">yii\base\Behavior</a>[]</td>
+        <td>List of behaviors attached to this component</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="$enableSwiftMailerLogging">
+        <td><a href="yii-swiftmailer-mailer.html#$enableSwiftMailerLogging-detail">$enableSwiftMailerLogging</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to enable writing of the SwiftMailer internal logs using Yii log mechanism.</td>
+        <td><a href="yii-swiftmailer-mailer.html">yii\swiftmailer\Mailer</a></td>
+    </tr>
+            <tr class="inherited" id="$fileTransportCallback">
+        <td><a href="yii-mail-basemailer.html#$fileTransportCallback-detail">$fileTransportCallback</a></td>
+        <td><a href="http://www.php.net/language.types.callable">callable</a></td>
+        <td>A PHP callback that will be called by <a href="yii-mail-basemailer.html#send()-detail">send()</a> when <a href="yii-mail-basemailer.html#$useFileTransport-detail">$useFileTransport</a> is true.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr class="inherited" id="$fileTransportPath">
+        <td><a href="yii-mail-basemailer.html#$fileTransportPath-detail">$fileTransportPath</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The directory where the email messages are saved when <a href="yii-mail-basemailer.html#$useFileTransport-detail">$useFileTransport</a> is true.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr class="inherited" id="$htmlLayout">
+        <td><a href="yii-mail-basemailer.html#$htmlLayout-detail">$htmlLayout</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>HTML layout view name.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr id="$messageClass">
+        <td><a href="yii-swiftmailer-mailer.html#$messageClass-detail">$messageClass</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Message default class name.</td>
+        <td><a href="yii-swiftmailer-mailer.html">yii\swiftmailer\Mailer</a></td>
+    </tr>
+            <tr class="inherited" id="$messageConfig">
+        <td><a href="yii-mail-basemailer.html#$messageConfig-detail">$messageConfig</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a></td>
+        <td>The configuration that should be applied to any newly created
+email message instance by <a href="yii-mail-basemailer.html#createMessage()-detail">createMessage()</a> or <a href="yii-mail-basemailer.html#compose()-detail">compose()</a>.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr id="$swiftMailer">
+        <td><a href="yii-swiftmailer-mailer.html#$swiftMailer-detail">$swiftMailer</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a>|\Swift_Mailer</td>
+        <td>Swift mailer instance or array configuration.</td>
+        <td><a href="yii-swiftmailer-mailer.html">yii\swiftmailer\Mailer</a></td>
+    </tr>
+            <tr class="inherited" id="$textLayout">
+        <td><a href="yii-mail-basemailer.html#$textLayout-detail">$textLayout</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a>|<a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Text layout view name.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr id="$transport">
+        <td><a href="yii-swiftmailer-mailer.html#$transport-detail">$transport</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a>|\Swift_Transport</td>
+        <td></td>
+        <td><a href="yii-swiftmailer-mailer.html">yii\swiftmailer\Mailer</a></td>
+    </tr>
+            <tr class="inherited" id="$useFileTransport">
+        <td><a href="yii-mail-basemailer.html#$useFileTransport-detail">$useFileTransport</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to save email messages as files under <a href="yii-mail-basemailer.html#$fileTransportPath-detail">$fileTransportPath</a> instead of sending them
+to the actual recipients.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr class="inherited" id="$view">
+        <td><a href="yii-mail-basemailer.html#$view-detail">$view</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a>|<a href="yii-web-view.html">yii\web\View</a></td>
+        <td>View instance or its array configuration that will be used to
+render message bodies.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr class="inherited" id="$viewPath">
+        <td><a href="yii-mail-basemailer.html#$viewPath-detail">$viewPath</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>The directory that contains the view files for composing mail messages
+Defaults to '@app/mail'.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-component.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-baseobject.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-component.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-component.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-component.html#__set()-detail">__set()</a></td>
+        <td>Sets the value of a component property.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-component.html#__unset()-detail">__unset()</a></td>
+        <td>Sets a component property to be null.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="afterSend()">
+        <td><a href="yii-mail-basemailer.html#afterSend()-detail">afterSend()</a></td>
+        <td>This method is invoked right after mail was send.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="beforeSend()">
+        <td><a href="yii-mail-basemailer.html#beforeSend()-detail">beforeSend()</a></td>
+        <td>This method is invoked right before mail send.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr class="inherited" id="behaviors()">
+        <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-component.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-component.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="compose()">
+        <td><a href="yii-mail-basemailer.html#compose()-detail">compose()</a></td>
+        <td>Creates a new message instance and optionally composes its body content via view rendering.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+                                <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="generateMessageFileName()">
+        <td><a href="yii-mail-basemailer.html#generateMessageFileName()-detail">generateMessageFileName()</a></td>
+        <td></td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="getSwiftMailer()">
+        <td><a href="yii-swiftmailer-mailer.html#getSwiftMailer()-detail">getSwiftMailer()</a></td>
+        <td></td>
+        <td><a href="yii-swiftmailer-mailer.html">yii\swiftmailer\Mailer</a></td>
+    </tr>
+            <tr id="getTransport()">
+        <td><a href="yii-swiftmailer-mailer.html#getTransport()-detail">getTransport()</a></td>
+        <td></td>
+        <td><a href="yii-swiftmailer-mailer.html">yii\swiftmailer\Mailer</a></td>
+    </tr>
+            <tr class="inherited" id="getView()">
+        <td><a href="yii-mail-basemailer.html#getView()-detail">getView()</a></td>
+        <td></td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr class="inherited" id="getViewPath()">
+        <td><a href="yii-mail-basemailer.html#getViewPath()-detail">getViewPath()</a></td>
+        <td></td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-component.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-component.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined for this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-base-baseobject.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="render()">
+        <td><a href="yii-mail-basemailer.html#render()-detail">render()</a></td>
+        <td>Renders the specified view with optional parameters and layout.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+                <tr class="inherited" id="send()">
+        <td><a href="yii-mail-basemailer.html#send()-detail">send()</a></td>
+        <td>Sends the given email message.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+                <tr class="inherited" id="sendMultiple()">
+        <td><a href="yii-mail-basemailer.html#sendMultiple()-detail">sendMultiple()</a></td>
+        <td>Sends multiple messages at once.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr id="setTransport()">
+        <td><a href="yii-swiftmailer-mailer.html#setTransport()-detail">setTransport()</a></td>
+        <td></td>
+        <td><a href="yii-swiftmailer-mailer.html">yii\swiftmailer\Mailer</a></td>
+    </tr>
+            <tr class="inherited" id="setView()">
+        <td><a href="yii-mail-basemailer.html#setView()-detail">setView()</a></td>
+        <td></td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr class="inherited" id="setViewPath()">
+        <td><a href="yii-mail-basemailer.html#setViewPath()-detail">setViewPath()</a></td>
+        <td></td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                                                        <tr class="inherited" id="createMessage()">
+        <td><a href="yii-mail-basemailer.html#createMessage()-detail">createMessage()</a></td>
+        <td>Creates a new message instance.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+            <tr id="createSwiftMailer()">
+        <td><a href="yii-swiftmailer-mailer.html#createSwiftMailer()-detail">createSwiftMailer()</a></td>
+        <td>Creates Swift mailer instance.</td>
+        <td><a href="yii-swiftmailer-mailer.html">yii\swiftmailer\Mailer</a></td>
+    </tr>
+            <tr id="createSwiftObject()">
+        <td><a href="yii-swiftmailer-mailer.html#createSwiftObject()-detail">createSwiftObject()</a></td>
+        <td>Creates Swift library object, from given array configuration.</td>
+        <td><a href="yii-swiftmailer-mailer.html">yii\swiftmailer\Mailer</a></td>
+    </tr>
+            <tr id="createTransport()">
+        <td><a href="yii-swiftmailer-mailer.html#createTransport()-detail">createTransport()</a></td>
+        <td>Creates email transport instance by its array configuration.</td>
+        <td><a href="yii-swiftmailer-mailer.html">yii\swiftmailer\Mailer</a></td>
+    </tr>
+            <tr class="inherited" id="createView()">
+        <td><a href="yii-mail-basemailer.html#createView()-detail">createView()</a></td>
+        <td>Creates view instance from given configuration.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+                                                                                <tr class="inherited" id="saveMessage()">
+        <td><a href="yii-mail-basemailer.html#saveMessage()-detail">saveMessage()</a></td>
+        <td>Saves the message as a file under <a href="yii-mail-basemailer.html#$fileTransportPath-detail">$fileTransportPath</a>.</td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+                <tr id="sendMessage()">
+        <td><a href="yii-swiftmailer-mailer.html#sendMessage()-detail">sendMessage()</a></td>
+        <td>Sends the specified message.</td>
+        <td><a href="yii-swiftmailer-mailer.html">yii\swiftmailer\Mailer</a></td>
+    </tr>
+                        </table>
+</div>
+
+<a id="events"></a>
+<div class="summary doc-event">
+    <h2>Events</h2>
+
+    <p><a href="#" class="toggle">Hide inherited events</a></p>
+
+    <table class="summary-table table table-striped table-bordered table-hover">
+    <colgroup>
+        <col class="col-event" />
+        <col class="col-type" />
+        <col class="col-description" />
+        <col class="col-defined" />
+    </colgroup>
+    <tr>
+        <th>Event</th><th>Type</th><th>Description</th><th>Defined By</th>
+    </tr>
+        <tr class="inherited" id="EVENT_AFTER_SEND">
+        <td><a href="yii-mail-basemailer.html#EVENT_AFTER_SEND-detail">EVENT_AFTER_SEND</a></td>
+        <td><a href="yii-mail-mailevent.html">yii\mail\MailEvent</a></td>
+        <td>
+            An event raised right after send.                    </td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+        <tr class="inherited" id="EVENT_BEFORE_SEND">
+        <td><a href="yii-mail-basemailer.html#EVENT_BEFORE_SEND-detail">EVENT_BEFORE_SEND</a></td>
+        <td><a href="yii-mail-mailevent.html">yii\mail\MailEvent</a></td>
+        <td>
+            An event raised right before send.                    </td>
+        <td><a href="yii-mail-basemailer.html">yii\mail\BaseMailer</a></td>
+    </tr>
+        </table>
+</div>
+
+<a id="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$enableSwiftMailerLogging-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-swiftmailer-mailer.html#$enableSwiftMailerLogging-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-swiftmailer/edit/master/Mailer.php#L87" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php#L87" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $enableSwiftMailerLogging        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Whether to enable writing of the SwiftMailer internal logs using Yii log mechanism.
+If enabled <a href="yii-swiftmailer-logger.html">yii\swiftmailer\Logger</a> plugin will be attached to the <a href="yii-swiftmailer-mailer.html#$transport-detail">$transport</a> for this purpose.</p>
+
+        <p>See also <a href="yii-swiftmailer-logger.html">yii\swiftmailer\Logger</a>.</p>    </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <a href="yii-swiftmailer-mailer.html#$enableSwiftMailerLogging-detail">$enableSwiftMailerLogging</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">false</span></div>
+
+
+    <div class="detail-header h3" id="$messageClass-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-swiftmailer-mailer.html#$messageClass-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-swiftmailer/edit/master/Mailer.php#L81" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php#L81" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $messageClass        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Message default class name.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-swiftmailer-mailer.html#$messageClass-detail">$messageClass</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'yii\swiftmailer\Message'</span></div>
+
+
+    <div class="detail-header h3" id="$swiftMailer-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-swiftmailer-mailer.html#$swiftMailer-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-swiftmailer/edit/master/Mailer.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $swiftMailer        <span class="detail-header-tag small">
+            public                         <em>read-only</em>                         property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Swift mailer instance or array configuration.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a>|\Swift_Mailer</span> <strong><a href="yii-swiftmailer-mailer.html#getSwiftMailer()-detail">getSwiftMailer</a></strong> ( )</div>
+
+
+    <div class="detail-header h3" id="$transport-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-swiftmailer-mailer.html#$transport-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-swiftmailer/edit/master/Mailer.php" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $transport        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a>|\Swift_Transport</span> <strong><a href="yii-swiftmailer-mailer.html#getTransport()-detail">getTransport</a></strong> ( )<br /><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-swiftmailer-mailer.html#setTransport()-detail">setTransport</a></strong> ( <span style="color: #0000BB">$transport</span> )</div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="createSwiftMailer()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-swiftmailer-mailer.html#createSwiftMailer()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-swiftmailer/edit/master/Mailer.php#L153" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php#L153" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        createSwiftMailer()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates Swift mailer instance.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">\Swift_Mailer</span> <strong><a href="yii-swiftmailer-mailer.html#createSwiftMailer()-detail">createSwiftMailer</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col">\Swift_Mailer</td>
+                  <td class="param-desc-col"><p>Mailer instance.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="createSwiftObject()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-swiftmailer-mailer.html#createSwiftObject()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-swiftmailer/edit/master/Mailer.php#L207" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php#L207" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        createSwiftObject()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates Swift library object, from given array configuration.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">Object</span> <strong><a href="yii-swiftmailer-mailer.html#createSwiftObject()-detail">createSwiftObject</a></strong> ( <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <span style="color: #0000BB">$config</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$config</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Object configuration</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col">Object</td>
+                  <td class="param-desc-col"><p>Created object</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
+                  <td class="param-desc-col"><p>on invalid configuration.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="createTransport()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-swiftmailer-mailer.html#createTransport()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-swiftmailer/edit/master/Mailer.php#L164" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php#L164" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        createTransport()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates email transport instance by its array configuration.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type">\Swift_Transport</span> <strong><a href="yii-swiftmailer-mailer.html#createTransport()-detail">createTransport</a></strong> ( <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <span style="color: #0000BB">$config</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$config</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Transport configuration.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col">\Swift_Transport</td>
+                  <td class="param-desc-col"><p>Transport instance.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
+                  <td class="param-desc-col"><p>on invalid transport configuration.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getSwiftMailer()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-swiftmailer-mailer.html#getSwiftMailer()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-swiftmailer/edit/master/Mailer.php#L102" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php#L102" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getSwiftMailer()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a>|\Swift_Mailer</span> <strong><a href="yii-swiftmailer-mailer.html#getSwiftMailer()-detail">getSwiftMailer</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|\Swift_Mailer</td>
+                  <td class="param-desc-col"><p>Swift mailer instance or array configuration.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="getTransport()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-swiftmailer-mailer.html#getTransport()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-swiftmailer/edit/master/Mailer.php#L126" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php#L126" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        getTransport()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a>|\Swift_Transport</span> <strong><a href="yii-swiftmailer-mailer.html#getTransport()-detail">getTransport</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="sendMessage()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-swiftmailer-mailer.html#sendMessage()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-swiftmailer/edit/master/Mailer.php#L138" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php#L138" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        sendMessage()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Sends the specified message.</strong></p>
+
+        <p>This method should be implemented by child classes with the actual email sending logic.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.boolean">boolean</a></span> <strong><a href="yii-swiftmailer-mailer.html#sendMessage()-detail">sendMessage</a></strong> ( <span style="color: #0000BB">$message</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$message</span></td>
+                  <td class="param-type-col"><a href="yii-mail-messageinterface.html">yii\mail\MessageInterface</a></td>
+                  <td class="param-desc-col"><p>The message to be sent</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+                  <td class="param-desc-col"><p>Whether the message is sent successfully</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="setTransport()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-swiftmailer-mailer.html#setTransport()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-swiftmailer/edit/master/Mailer.php#L115" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-swiftmailer/blob/master/Mailer.php#L115" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        setTransport()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong></strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-swiftmailer-mailer.html#setTransport()-detail">setTransport</a></strong> ( <span style="color: #0000BB">$transport</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$transport</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a>|\Swift_Transport</td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                    <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidconfigexception.html">yii\base\InvalidConfigException</a></td>
+                  <td class="param-desc-col"><p>on invalid argument.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Thu, 16 Aug 2018 03:16:04 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>

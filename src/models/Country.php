@@ -20,14 +20,18 @@ namespace johnsnook\visitor\models;
 class Country extends \yii\db\ActiveRecord {
 
     /**
-     * @inheritdoc
+     * The name of the db table
+     *
+     * @return string
      */
     public static function tableName() {
         return 'country';
     }
 
     /**
-     * @inheritdoc
+     * Validation rules
+     *
+     * @return array
      */
     public function rules() {
         return [
@@ -35,16 +39,6 @@ class Country extends \yii\db\ActiveRecord {
             [['name'], 'string'],
             [['code'], 'string', 'max' => 2],
             [['code'], 'unique'],
-        ];
-    }
-
-    /**
-     * @inheritdoc
-     */
-    public function attributeLabels() {
-        return [
-            'code' => 'Code',
-            'name' => 'Name',
         ];
     }
 

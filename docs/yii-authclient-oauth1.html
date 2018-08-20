@@ -1,0 +1,1569 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="language" content="en" />
+        <link href="./assets/40113240/css/bootstrap.css" rel="stylesheet">
+<link href="./assets/6d599862/solarized_light.css" rel="stylesheet">
+<link href="./assets/5d9d0765/style.css" rel="stylesheet">
+<script src="./assets/6147b175/jquery.js"></script>
+<script src="./assets/40113240/js/bootstrap.js"></script>
+<script src="./assets/f875d911/jssearch.js"></script>    <title>OAuth1, yii\authclient\OAuth1 - Yii Framework 2.0 API Documentation</title>
+</head>
+<body>
+
+<div class="wrap">
+    <nav id="w332" class="navbar-inverse navbar-fixed-top navbar" role="navigation"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#w332-collapse"><span class="sr-only">Toggle navigation</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span></button><a class="navbar-brand" href="./index.html">Yii Framework 2.0 API Documentation</a></div><div id="w332-collapse" class="collapse navbar-collapse"><ul id="w333" class="navbar-nav nav"><li><a href="./index.html">Class reference</a></li>
+<li class="dropdown"><a class="dropdown-toggle" href="#" data-toggle="dropdown">Extensions <b class="caret"></b></a><ul id="w334" class="dropdown-menu"><li><a href="./ext-apidoc-index.html" tabindex="-1">apidoc</a></li>
+<li><a href="./ext-authclient-index.html" tabindex="-1">authclient</a></li>
+<li><a href="./ext-bootstrap-index.html" tabindex="-1">bootstrap</a></li>
+<li><a href="./ext-composer-index.html" tabindex="-1">composer</a></li>
+<li><a href="./ext-debug-index.html" tabindex="-1">debug</a></li>
+<li><a href="./ext-gii-index.html" tabindex="-1">gii</a></li>
+<li><a href="./ext-swiftmailer-index.html" tabindex="-1">swiftmailer</a></li></ul></li></ul><div class="navbar-form navbar-left" role="search">
+  <div class="form-group">
+    <input id="searchbox" type="text" class="form-control" placeholder="Search">
+  </div>
+</div>
+</div></nav>
+    <div id="search-resultbox" style="display: none;" class="modal-content">
+        <ul id="search-results">
+        </ul>
+    </div>
+
+    
+<div class="row">
+    <div class="col-md-3">
+                <div id="navigation" class="list-group"><a class="list-group-item active" href="#navigation-328" data-toggle="collapse" data-parent="#navigation">yii\authclient <b class="caret"></b></a><div id="navigation-328" class="submenu panel-collapse collapse in"><a class="list-group-item" href="./yii-authclient-authaction.html">AuthAction</a>
+<a class="list-group-item" href="./yii-authclient-baseclient.html">BaseClient</a>
+<a class="list-group-item" href="./yii-authclient-baseoauth.html">BaseOAuth</a>
+<a class="list-group-item" href="./yii-authclient-clientinterface.html">ClientInterface</a>
+<a class="list-group-item" href="./yii-authclient-collection.html">Collection</a>
+<a class="list-group-item" href="./yii-authclient-invalidresponseexception.html">InvalidResponseException</a>
+<a class="list-group-item active" href="./yii-authclient-oauth1.html">OAuth1</a>
+<a class="list-group-item" href="./yii-authclient-oauth2.html">OAuth2</a>
+<a class="list-group-item" href="./yii-authclient-oauthtoken.html">OAuthToken</a>
+<a class="list-group-item" href="./yii-authclient-openid.html">OpenId</a>
+<a class="list-group-item" href="./yii-authclient-openidconnect.html">OpenIdConnect</a>
+<a class="list-group-item" href="./yii-authclient-sessionstatestorage.html">SessionStateStorage</a>
+<a class="list-group-item" href="./yii-authclient-statestorageinterface.html">StateStorageInterface</a></div>
+<a class="list-group-item" href="#navigation-329" data-toggle="collapse" data-parent="#navigation">yii\authclient\clients <b class="caret"></b></a><div id="navigation-329" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-authclient-clients-facebook.html">Facebook</a>
+<a class="list-group-item" href="./yii-authclient-clients-github.html">GitHub</a>
+<a class="list-group-item" href="./yii-authclient-clients-google.html">Google</a>
+<a class="list-group-item" href="./yii-authclient-clients-googlehybrid.html">GoogleHybrid</a>
+<a class="list-group-item" href="./yii-authclient-clients-linkedin.html">LinkedIn</a>
+<a class="list-group-item" href="./yii-authclient-clients-live.html">Live</a>
+<a class="list-group-item" href="./yii-authclient-clients-twitter.html">Twitter</a>
+<a class="list-group-item" href="./yii-authclient-clients-twitteroauth2.html">TwitterOAuth2</a>
+<a class="list-group-item" href="./yii-authclient-clients-vkontakte.html">VKontakte</a>
+<a class="list-group-item" href="./yii-authclient-clients-yandex.html">Yandex</a></div>
+<a class="list-group-item" href="#navigation-330" data-toggle="collapse" data-parent="#navigation">yii\authclient\signature <b class="caret"></b></a><div id="navigation-330" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-authclient-signature-basemethod.html">BaseMethod</a>
+<a class="list-group-item" href="./yii-authclient-signature-hmacsha.html">HmacSha</a>
+<a class="list-group-item" href="./yii-authclient-signature-hmacsha1.html">HmacSha1</a>
+<a class="list-group-item" href="./yii-authclient-signature-plaintext.html">PlainText</a>
+<a class="list-group-item" href="./yii-authclient-signature-rsasha.html">RsaSha</a>
+<a class="list-group-item" href="./yii-authclient-signature-rsasha1.html">RsaSha1</a></div>
+<a class="list-group-item" href="#navigation-331" data-toggle="collapse" data-parent="#navigation">yii\authclient\widgets <b class="caret"></b></a><div id="navigation-331" class="submenu panel-collapse collapse"><a class="list-group-item" href="./yii-authclient-widgets-authchoice.html">AuthChoice</a>
+<a class="list-group-item" href="./yii-authclient-widgets-authchoiceasset.html">AuthChoiceAsset</a>
+<a class="list-group-item" href="./yii-authclient-widgets-authchoiceitem.html">AuthChoiceItem</a>
+<a class="list-group-item" href="./yii-authclient-widgets-authchoicestyleasset.html">AuthChoiceStyleAsset</a>
+<a class="list-group-item" href="./yii-authclient-widgets-googleplusbutton.html">GooglePlusButton</a></div></div>    </div>
+    <div class="col-md-9 api-content" role="main">
+        <h1>Abstract Class yii\authclient\OAuth1</h1>
+<div class="top-nav">
+    <a href="index.html">All Classes</a>
+            | <a href="#properties">Properties</a>
+                | <a href="#methods">Methods</a>
+            </div>
+
+<table class="summaryTable docClass table table-bordered">
+    <colgroup>
+        <col class="col-name" />
+        <col class="col-value" />
+    </colgroup>
+            <tr><th>Inheritance</th><td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a> &raquo;
+<a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a> &raquo;
+<a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a> &raquo;
+<a href="yii-base-component.html">yii\base\Component</a> &raquo;
+<a href="yii-base-baseobject.html">yii\base\BaseObject</a></td></tr>
+                <tr><th>Implements</th><td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a>, <a href="yii-base-configurable.html">yii\base\Configurable</a></td></tr>
+                        <tr><th>Subclasses</th><td><a href="yii-authclient-clients-twitter.html">yii\authclient\clients\Twitter</a></td></tr>
+                        <tr><th>Available since version</th><td>2.0</td></tr>
+                    <tr>
+          <th>Source Code</th>
+          <td><a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php">https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php</a></td>
+        </tr>
+    </table>
+
+<div class="class-description">
+    <p><strong>OAuth1 serves as a client for the OAuth 1/1.0a flow.</strong></p>
+    <p>In order to acquire access token perform following sequence:</p>
+<pre><code class="hljs php language-php"><span class="hljs-keyword">use</span> <span class="hljs-title">yii</span>\<span class="hljs-title">authclient</span>\<span class="hljs-title">OAuth1</span>;
+<span class="hljs-keyword">use</span> <span class="hljs-title">Yii</span>;
+
+<span class="hljs-comment">// assuming class MyAuthClient extends OAuth1</span>
+<span class="hljs-variable">$oauthClient</span> = <span class="hljs-keyword">new</span> MyAuthClient();
+<span class="hljs-variable">$requestToken</span> = <span class="hljs-variable">$oauthClient</span>-&gt;fetchRequestToken(); <span class="hljs-comment">// Get request token</span>
+<span class="hljs-variable">$url</span> = <span class="hljs-variable">$oauthClient</span>-&gt;buildAuthUrl(<span class="hljs-variable">$requestToken</span>); <span class="hljs-comment">// Get authorization URL</span>
+<span class="hljs-keyword">return</span> Yii::<span class="hljs-variable">$app</span>-&gt;getResponse()-&gt;redirect(<span class="hljs-variable">$url</span>); <span class="hljs-comment">// Redirect to authorization URL</span>
+
+<span class="hljs-comment">// After user returns at our site:</span>
+<span class="hljs-variable">$accessToken</span> = <span class="hljs-variable">$oauthClient</span>-&gt;fetchAccessToken(Yii::<span class="hljs-variable">$app</span>-&gt;request-&gt;get(<span class="hljs-string">'oauth_token'</span>), <span class="hljs-variable">$requestToken</span>); <span class="hljs-comment">// Upgrade to access token</span>
+</code></pre>
+
+    <p>See also <a href="https://oauth.net/1/">https://oauth.net/1/</a> <a href="https://tools.ietf.org/html/rfc5849">https://tools.ietf.org/html/rfc5849</a>.</p></div>
+
+<a id="properties"></a>
+
+<div class="summary doc-property">
+<h2>Public Properties</h2>
+
+<p><a href="#" class="toggle">Hide inherited properties</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-property" />
+    <col class="col-type" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Property</th><th>Type</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr id="$accessTokenMethod">
+        <td><a href="yii-authclient-oauth1.html#$accessTokenMethod-detail">$accessTokenMethod</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Access token HTTP method.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr id="$accessTokenUrl">
+        <td><a href="yii-authclient-oauth1.html#$accessTokenUrl-detail">$accessTokenUrl</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>OAuth access token URL.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr class="inherited" id="$apiBaseUrl">
+        <td><a href="yii-authclient-baseoauth.html#$apiBaseUrl-detail">$apiBaseUrl</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>API base URL.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="$authUrl">
+        <td><a href="yii-authclient-baseoauth.html#$authUrl-detail">$authUrl</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Authorize URL.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr id="$authorizationHeaderMethods">
+        <td><a href="yii-authclient-oauth1.html#$authorizationHeaderMethods-detail">$authorizationHeaderMethods</a></td>
+        <td><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+        <td>List of the request methods, which require adding 'Authorization' header.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr class="inherited" id="$autoRefreshAccessToken">
+        <td><a href="yii-authclient-baseoauth.html#$autoRefreshAccessToken-detail">$autoRefreshAccessToken</a></td>
+        <td><a href="http://www.php.net/language.types.boolean">boolean</a></td>
+        <td>Whether to automatically perform 'refresh access token' request on expired access token.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr id="$consumerKey">
+        <td><a href="yii-authclient-oauth1.html#$consumerKey-detail">$consumerKey</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>OAuth consumer key.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr id="$consumerSecret">
+        <td><a href="yii-authclient-oauth1.html#$consumerSecret-detail">$consumerSecret</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>OAuth consumer secret.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr id="$requestTokenMethod">
+        <td><a href="yii-authclient-oauth1.html#$requestTokenMethod-detail">$requestTokenMethod</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Request token HTTP method.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr id="$requestTokenUrl">
+        <td><a href="yii-authclient-oauth1.html#$requestTokenUrl-detail">$requestTokenUrl</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>OAuth request token URL.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr class="inherited" id="$scope">
+        <td><a href="yii-authclient-baseoauth.html#$scope-detail">$scope</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Auth request scope.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr id="$version">
+        <td><a href="yii-authclient-oauth1.html#$version-detail">$version</a></td>
+        <td><a href="http://www.php.net/language.types.string">string</a></td>
+        <td>Protocol version.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+    </table>
+</div>
+
+<a id="methods"></a>
+
+<div class="summary doc-method">
+<h2>Public Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+        <tr class="inherited" id="__call()">
+        <td><a href="yii-base-baseobject.html#__call()-detail">__call()</a></td>
+        <td>Calls the named method which is not a class method.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__clone()">
+        <td><a href="yii-base-component.html#__clone()-detail">__clone()</a></td>
+        <td>This method is called after the object is created by cloning an existing one.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="__construct()">
+        <td><a href="yii-base-baseobject.html#__construct()-detail">__construct()</a></td>
+        <td>Constructor.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__get()">
+        <td><a href="yii-base-baseobject.html#__get()-detail">__get()</a></td>
+        <td>Returns the value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__isset()">
+        <td><a href="yii-base-baseobject.html#__isset()-detail">__isset()</a></td>
+        <td>Checks if a property is set, i.e. defined and not null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__set()">
+        <td><a href="yii-base-baseobject.html#__set()-detail">__set()</a></td>
+        <td>Sets value of an object property.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="__unset()">
+        <td><a href="yii-base-baseobject.html#__unset()-detail">__unset()</a></td>
+        <td>Sets an object property to null.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="api()">
+        <td><a href="yii-authclient-baseoauth.html#api()-detail">api()</a></td>
+        <td>Performs request to the OAuth API returning response data.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr id="applyAccessTokenToRequest()">
+        <td><a href="yii-authclient-oauth1.html#applyAccessTokenToRequest()-detail">applyAccessTokenToRequest()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehavior()">
+        <td><a href="yii-base-component.html#attachBehavior()-detail">attachBehavior()</a></td>
+        <td>Attaches a behavior to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="attachBehaviors()">
+        <td><a href="yii-base-component.html#attachBehaviors()-detail">attachBehaviors()</a></td>
+        <td>Attaches a list of behaviors to the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="beforeApiRequestSend()">
+        <td><a href="yii-authclient-baseoauth.html#beforeApiRequestSend()-detail">beforeApiRequestSend()</a></td>
+        <td>Handles <a href="yii-httpclient-request.html#EVENT_BEFORE_SEND-detail">yii\httpclient\Request::EVENT_BEFORE_SEND</a> event.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr id="beforeRequestSend()">
+        <td><a href="yii-authclient-oauth1.html#beforeRequestSend()-detail">beforeRequestSend()</a></td>
+        <td>Handles <a href="yii-httpclient-request.html#EVENT_BEFORE_SEND-detail">yii\httpclient\Request::EVENT_BEFORE_SEND</a> event.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr class="inherited" id="behaviors()">
+        <td><a href="yii-base-component.html#behaviors()-detail">behaviors()</a></td>
+        <td>Returns a list of behaviors that this component should behave as.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="buildAuthUrl()">
+        <td><a href="yii-authclient-oauth1.html#buildAuthUrl()-detail">buildAuthUrl()</a></td>
+        <td>Composes user authorization URL.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr class="inherited" id="canGetProperty()">
+        <td><a href="yii-base-baseobject.html#canGetProperty()-detail">canGetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be read.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="canSetProperty()">
+        <td><a href="yii-base-baseobject.html#canSetProperty()-detail">canSetProperty()</a></td>
+        <td>Returns a value indicating whether a property can be set.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="className()">
+        <td><a href="yii-base-baseobject.html#className()-detail">className()</a></td>
+        <td>Returns the fully qualified name of this class.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+                            <tr id="createApiRequest()">
+        <td><a href="yii-authclient-oauth1.html#createApiRequest()-detail">createApiRequest()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+                <tr id="createRequest()">
+        <td><a href="yii-authclient-oauth1.html#createRequest()-detail">createRequest()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+                                            <tr class="inherited" id="detachBehavior()">
+        <td><a href="yii-base-component.html#detachBehavior()-detail">detachBehavior()</a></td>
+        <td>Detaches a behavior from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="detachBehaviors()">
+        <td><a href="yii-base-component.html#detachBehaviors()-detail">detachBehaviors()</a></td>
+        <td>Detaches all behaviors from the component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="ensureBehaviors()">
+        <td><a href="yii-base-component.html#ensureBehaviors()-detail">ensureBehaviors()</a></td>
+        <td>Makes sure that the behaviors declared in <a href="yii-base-component.html#behaviors()-detail">behaviors()</a> are attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="fetchAccessToken()">
+        <td><a href="yii-authclient-oauth1.html#fetchAccessToken()-detail">fetchAccessToken()</a></td>
+        <td>Fetches OAuth access token.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr id="fetchRequestToken()">
+        <td><a href="yii-authclient-oauth1.html#fetchRequestToken()-detail">fetchRequestToken()</a></td>
+        <td>Fetches the OAuth request token.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+                        <tr class="inherited" id="getAccessToken()">
+        <td><a href="yii-authclient-baseoauth.html#getAccessToken()-detail">getAccessToken()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="getBehavior()">
+        <td><a href="yii-base-component.html#getBehavior()-detail">getBehavior()</a></td>
+        <td>Returns the named behavior object.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getBehaviors()">
+        <td><a href="yii-base-component.html#getBehaviors()-detail">getBehaviors()</a></td>
+        <td>Returns all behaviors attached to this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="getHttpClient()">
+        <td><a href="yii-authclient-baseclient.html#getHttpClient()-detail">getHttpClient()</a></td>
+        <td>Returns HTTP client.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="getId()">
+        <td><a href="yii-authclient-clientinterface.html#getId()-detail">getId()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="getName()">
+        <td><a href="yii-authclient-clientinterface.html#getName()-detail">getName()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="getNormalizeUserAttributeMap()">
+        <td><a href="yii-authclient-baseclient.html#getNormalizeUserAttributeMap()-detail">getNormalizeUserAttributeMap()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="getRequestOptions()">
+        <td><a href="yii-authclient-baseclient.html#getRequestOptions()-detail">getRequestOptions()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="getReturnUrl()">
+        <td><a href="yii-authclient-baseoauth.html#getReturnUrl()-detail">getReturnUrl()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="getSignatureMethod()">
+        <td><a href="yii-authclient-baseoauth.html#getSignatureMethod()-detail">getSignatureMethod()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+                    <tr class="inherited" id="getStateStorage()">
+        <td><a href="yii-authclient-baseclient.html#getStateStorage()-detail">getStateStorage()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="getTitle()">
+        <td><a href="yii-authclient-clientinterface.html#getTitle()-detail">getTitle()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="getUserAttributes()">
+        <td><a href="yii-authclient-clientinterface.html#getUserAttributes()-detail">getUserAttributes()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="getViewOptions()">
+        <td><a href="yii-authclient-clientinterface.html#getViewOptions()-detail">getViewOptions()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="hasEventHandlers()">
+        <td><a href="yii-base-component.html#hasEventHandlers()-detail">hasEventHandlers()</a></td>
+        <td>Returns a value indicating whether there is any handler attached to the named event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="hasMethod()">
+        <td><a href="yii-base-baseobject.html#hasMethod()-detail">hasMethod()</a></td>
+        <td>Returns a value indicating whether a method is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="hasProperty()">
+        <td><a href="yii-base-baseobject.html#hasProperty()-detail">hasProperty()</a></td>
+        <td>Returns a value indicating whether a property is defined.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+            <tr class="inherited" id="init()">
+        <td><a href="yii-base-baseobject.html#init()-detail">init()</a></td>
+        <td>Initializes the object.</td>
+        <td><a href="yii-base-baseobject.html">yii\base\BaseObject</a></td>
+    </tr>
+                    <tr class="inherited" id="off()">
+        <td><a href="yii-base-component.html#off()-detail">off()</a></td>
+        <td>Detaches an existing event handler from this component.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr class="inherited" id="on()">
+        <td><a href="yii-base-component.html#on()-detail">on()</a></td>
+        <td>Attaches an event handler to an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+            <tr id="refreshAccessToken()">
+        <td><a href="yii-authclient-oauth1.html#refreshAccessToken()-detail">refreshAccessToken()</a></td>
+        <td>Gets new auth token to replace expired one.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+                            <tr class="inherited" id="setAccessToken()">
+        <td><a href="yii-authclient-baseoauth.html#setAccessToken()-detail">setAccessToken()</a></td>
+        <td>Sets access token to be used.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="setHttpClient()">
+        <td><a href="yii-authclient-baseoauth.html#setHttpClient()-detail">setHttpClient()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="setId()">
+        <td><a href="yii-authclient-clientinterface.html#setId()-detail">setId()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="setName()">
+        <td><a href="yii-authclient-clientinterface.html#setName()-detail">setName()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="setNormalizeUserAttributeMap()">
+        <td><a href="yii-authclient-baseclient.html#setNormalizeUserAttributeMap()-detail">setNormalizeUserAttributeMap()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="setRequestOptions()">
+        <td><a href="yii-authclient-baseclient.html#setRequestOptions()-detail">setRequestOptions()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="setReturnUrl()">
+        <td><a href="yii-authclient-baseoauth.html#setReturnUrl()-detail">setReturnUrl()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="setSignatureMethod()">
+        <td><a href="yii-authclient-baseoauth.html#setSignatureMethod()-detail">setSignatureMethod()</a></td>
+        <td>Set signature method to be used.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+                <tr class="inherited" id="setStateStorage()">
+        <td><a href="yii-authclient-baseclient.html#setStateStorage()-detail">setStateStorage()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="setTitle()">
+        <td><a href="yii-authclient-clientinterface.html#setTitle()-detail">setTitle()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-clientinterface.html">yii\authclient\ClientInterface</a></td>
+    </tr>
+            <tr class="inherited" id="setUserAttributes()">
+        <td><a href="yii-authclient-baseclient.html#setUserAttributes()-detail">setUserAttributes()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="setViewOptions()">
+        <td><a href="yii-authclient-baseclient.html#setViewOptions()-detail">setViewOptions()</a></td>
+        <td></td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr id="signRequest()">
+        <td><a href="yii-authclient-oauth1.html#signRequest()-detail">signRequest()</a></td>
+        <td>Sign given request with <span class="broken-link">\yii\authclient\signatureMethod</span>.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr class="inherited" id="trigger()">
+        <td><a href="yii-base-component.html#trigger()-detail">trigger()</a></td>
+        <td>Triggers an event.</td>
+        <td><a href="yii-base-component.html">yii\base\Component</a></td>
+    </tr>
+    </table>
+</div>
+
+<div class="summary doc-method">
+<h2>Protected Methods</h2>
+
+<p><a href="#" class="toggle">Hide inherited methods</a></p>
+
+<table class="summary-table table table-striped table-bordered table-hover">
+<colgroup>
+    <col class="col-method" />
+    <col class="col-description" />
+    <col class="col-defined" />
+</colgroup>
+<tr>
+  <th>Method</th><th>Description</th><th>Defined By</th>
+</tr>
+                                                                                <tr id="composeAuthorizationHeader()">
+        <td><a href="yii-authclient-oauth1.html#composeAuthorizationHeader()-detail">composeAuthorizationHeader()</a></td>
+        <td>Composes authorization header.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr id="composeSignatureBaseString()">
+        <td><a href="yii-authclient-oauth1.html#composeSignatureBaseString()-detail">composeSignatureBaseString()</a></td>
+        <td>Creates signature base string, which will be signed by <span class="broken-link">\yii\authclient\signatureMethod</span>.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr id="composeSignatureKey()">
+        <td><a href="yii-authclient-oauth1.html#composeSignatureKey()-detail">composeSignatureKey()</a></td>
+        <td>Composes request signature key.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr class="inherited" id="composeUrl()">
+        <td><a href="yii-authclient-baseoauth.html#composeUrl()-detail">composeUrl()</a></td>
+        <td>Composes URL from base URL and GET params.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+                <tr class="inherited" id="createHttpClient()">
+        <td><a href="yii-authclient-baseoauth.html#createHttpClient()-detail">createHttpClient()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+                <tr class="inherited" id="createSignatureMethod()">
+        <td><a href="yii-authclient-baseoauth.html#createSignatureMethod()-detail">createSignatureMethod()</a></td>
+        <td>Creates signature method instance from its configuration.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="createToken()">
+        <td><a href="yii-authclient-baseoauth.html#createToken()-detail">createToken()</a></td>
+        <td>Creates token from its configuration.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="defaultName()">
+        <td><a href="yii-authclient-baseclient.html#defaultName()-detail">defaultName()</a></td>
+        <td>Generates service name.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="defaultNormalizeUserAttributeMap()">
+        <td><a href="yii-authclient-baseclient.html#defaultNormalizeUserAttributeMap()-detail">defaultNormalizeUserAttributeMap()</a></td>
+        <td>Returns the default <span class="broken-link">\yii\authclient\normalizeUserAttributeMap</span> value.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="defaultRequestOptions()">
+        <td><a href="yii-authclient-baseoauth.html#defaultRequestOptions()-detail">defaultRequestOptions()</a></td>
+        <td>{@inheritdoc}</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr id="defaultReturnUrl()">
+        <td><a href="yii-authclient-oauth1.html#defaultReturnUrl()-detail">defaultReturnUrl()</a></td>
+        <td>Composes default <span class="broken-link">\yii\authclient\returnUrl</span> value.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr class="inherited" id="defaultTitle()">
+        <td><a href="yii-authclient-baseclient.html#defaultTitle()-detail">defaultTitle()</a></td>
+        <td>Generates service title.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="defaultViewOptions()">
+        <td><a href="yii-authclient-baseclient.html#defaultViewOptions()-detail">defaultViewOptions()</a></td>
+        <td>Returns the default <span class="broken-link">\yii\authclient\viewOptions</span> value.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+                                <tr id="generateCommonRequestParams()">
+        <td><a href="yii-authclient-oauth1.html#generateCommonRequestParams()-detail">generateCommonRequestParams()</a></td>
+        <td>Generate common request params like version, timestamp etc.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr id="generateNonce()">
+        <td><a href="yii-authclient-oauth1.html#generateNonce()-detail">generateNonce()</a></td>
+        <td>Generates nonce value.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+            <tr id="generateTimestamp()">
+        <td><a href="yii-authclient-oauth1.html#generateTimestamp()-detail">generateTimestamp()</a></td>
+        <td>Generates timestamp.</td>
+        <td><a href="yii-authclient-oauth1.html">yii\authclient\OAuth1</a></td>
+    </tr>
+                                                    <tr class="inherited" id="getState()">
+        <td><a href="yii-authclient-baseclient.html#getState()-detail">getState()</a></td>
+        <td>Returns persistent state value.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="getStateKeyPrefix()">
+        <td><a href="yii-authclient-baseclient.html#getStateKeyPrefix()-detail">getStateKeyPrefix()</a></td>
+        <td>Returns session key prefix, which is used to store internal states.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+                                            <tr class="inherited" id="initUserAttributes()">
+        <td><a href="yii-authclient-baseclient.html#initUserAttributes()-detail">initUserAttributes()</a></td>
+        <td>Initializes authenticated user attributes.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="normalizeUserAttributes()">
+        <td><a href="yii-authclient-baseclient.html#normalizeUserAttributes()-detail">normalizeUserAttributes()</a></td>
+        <td>Normalize given user attributes according to <span class="broken-link">\yii\authclient\normalizeUserAttributeMap</span>.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+                        <tr class="inherited" id="removeState()">
+        <td><a href="yii-authclient-baseclient.html#removeState()-detail">removeState()</a></td>
+        <td>Removes persistent state value.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+            <tr class="inherited" id="restoreAccessToken()">
+        <td><a href="yii-authclient-baseoauth.html#restoreAccessToken()-detail">restoreAccessToken()</a></td>
+        <td>Restores access token.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="saveAccessToken()">
+        <td><a href="yii-authclient-baseoauth.html#saveAccessToken()-detail">saveAccessToken()</a></td>
+        <td>Saves token as persistent state.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+            <tr class="inherited" id="sendRequest()">
+        <td><a href="yii-authclient-baseoauth.html#sendRequest()-detail">sendRequest()</a></td>
+        <td>Sends the given HTTP request, returning response data.</td>
+        <td><a href="yii-authclient-baseoauth.html">yii\authclient\BaseOAuth</a></td>
+    </tr>
+                                            <tr class="inherited" id="setState()">
+        <td><a href="yii-authclient-baseclient.html#setState()-detail">setState()</a></td>
+        <td>Sets persistent state.</td>
+        <td><a href="yii-authclient-baseclient.html">yii\authclient\BaseClient</a></td>
+    </tr>
+                            </table>
+</div>
+
+<a id="events"></a>
+
+<a id="constants"></a>
+
+<h2>Property Details</h2>
+
+<div class="property-doc">
+
+    <div class="detail-header h3" id="$accessTokenMethod-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#$accessTokenMethod-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L69" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L69" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $accessTokenMethod        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Access token HTTP method.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-authclient-oauth1.html#$accessTokenMethod-detail">$accessTokenMethod</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'GET'</span></div>
+
+
+    <div class="detail-header h3" id="$accessTokenUrl-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#$accessTokenUrl-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L65" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L65" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $accessTokenUrl        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>OAuth access token URL.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-authclient-oauth1.html#$accessTokenUrl-detail">$accessTokenUrl</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$authorizationHeaderMethods-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#$authorizationHeaderMethods-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L76" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L76" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $authorizationHeaderMethods        <span class="detail-header-tag small">
+            public                                                property
+                            (available since version 2.1.1)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>List of the request methods, which require adding 'Authorization' header.
+By default only POST requests will have 'Authorization' header.
+You may set this option to <code>null</code> in order to make all requests to use 'Authorization' header.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a>|<a href="http://www.php.net/language.types.null">null</a></span> <a href="yii-authclient-oauth1.html#$authorizationHeaderMethods-detail">$authorizationHeaderMethods</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;[</span><span style="color: #DD0000">'POST'</span><span style="color: #007700">]</span></div>
+
+
+    <div class="detail-header h3" id="$consumerKey-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#$consumerKey-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L49" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L49" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $consumerKey        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>OAuth consumer key.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-authclient-oauth1.html#$consumerKey-detail">$consumerKey</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$consumerSecret-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#$consumerSecret-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L53" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L53" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $consumerSecret        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>OAuth consumer secret.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-authclient-oauth1.html#$consumerSecret-detail">$consumerSecret</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$requestTokenMethod-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#$requestTokenMethod-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L61" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L61" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $requestTokenMethod        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Request token HTTP method.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-authclient-oauth1.html#$requestTokenMethod-detail">$requestTokenMethod</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'GET'</span></div>
+
+
+    <div class="detail-header h3" id="$requestTokenUrl-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#$requestTokenUrl-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L57" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L57" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $requestTokenUrl        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>OAuth request token URL.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-authclient-oauth1.html#$requestTokenUrl-detail">$requestTokenUrl</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span></div>
+
+
+    <div class="detail-header h3" id="$version-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#$version-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L45" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L45" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        $version        <span class="detail-header-tag small">
+            public                                                property
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p>Protocol version.</p>
+
+            </div>
+
+    <div class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <a href="yii-authclient-oauth1.html#$version-detail">$version</a> <span style="color: #0000BB"></span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">'1.0'</span></div>
+
+</div>
+<h2>Method Details</h2>
+
+<div class="method-doc">
+
+    <div class="detail-header h3" id="applyAccessTokenToRequest()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#applyAccessTokenToRequest()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L230" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L230" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        applyAccessTokenToRequest()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>{@inheritdoc}</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-oauth1.html#applyAccessTokenToRequest()-detail">applyAccessTokenToRequest</a></strong> ( <span style="color: #0000BB">$request</span>, <span style="color: #0000BB">$accessToken</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$request</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$accessToken</span></td>
+                  <td class="param-type-col"></td>
+                  <td class="param-desc-col"></td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="beforeRequestSend()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#beforeRequestSend()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L222" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L222" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        beforeRequestSend()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.1)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Handles <a href="yii-httpclient-request.html#EVENT_BEFORE_SEND-detail">yii\httpclient\Request::EVENT_BEFORE_SEND</a> event.</strong></p>
+
+        <p>Ensures every request has been signed up before sending.</p>
+
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-oauth1.html#beforeRequestSend()-detail">beforeRequestSend</a></strong> ( <span style="color: #0000BB">$event</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$event</span></td>
+                  <td class="param-type-col"><a href="yii-httpclient-requestevent.html">yii\httpclient\RequestEvent</a></td>
+                  <td class="param-desc-col"><p>Event instance.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="buildAuthUrl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#buildAuthUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L120" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L120" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        buildAuthUrl()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Composes user authorization URL.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-oauth1.html#buildAuthUrl()-detail">buildAuthUrl</a></strong> ( <span class="signature-type"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></span> <span style="color: #0000BB">$requestToken&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span>, <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <span style="color: #0000BB">$params&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$requestToken</span></td>
+                  <td class="param-type-col"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></td>
+                  <td class="param-desc-col"><p>OAuth request token.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Additional request params.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Authorize URL</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidparamexception.html">yii\base\InvalidParamException</a></td>
+                  <td class="param-desc-col"><p>on failure.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="composeAuthorizationHeader()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#composeAuthorizationHeader()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L399" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L399" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        composeAuthorizationHeader()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Composes authorization header.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-authclient-oauth1.html#composeAuthorizationHeader()-detail">composeAuthorizationHeader</a></strong> ( <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <span style="color: #0000BB">$params</span>, <span style="color: #0000BB">$realm&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #DD0000">''</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Request params.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$realm</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Authorization realm.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Authorization header in format: [name => content].</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="composeSignatureBaseString()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#composeSignatureBaseString()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L349" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L349" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        composeSignatureBaseString()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Creates signature base string, which will be signed by <span class="broken-link">\yii\authclient\signatureMethod</span>.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-oauth1.html#composeSignatureBaseString()-detail">composeSignatureBaseString</a></strong> ( <span style="color: #0000BB">$method</span>, <span style="color: #0000BB">$url</span>, <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <span style="color: #0000BB">$params</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$method</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Request method.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$url</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Request URL.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Request params.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Base signature string.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="composeSignatureKey()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#composeSignatureKey()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L373" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L373" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        composeSignatureKey()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Composes request signature key.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-oauth1.html#composeSignatureKey()-detail">composeSignatureKey</a></strong> ( <span style="color: #0000BB">$token&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$token</span></td>
+                  <td class="param-type-col"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>OAuth token to be used for signature key.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Signature key.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="createApiRequest()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#createApiRequest()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L205" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L205" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        createApiRequest()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>{@inheritdoc}</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-oauth1.html#createApiRequest()-detail">createApiRequest</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="createRequest()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#createRequest()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L195" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L195" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        createRequest()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>{@inheritdoc}</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-oauth1.html#createRequest()-detail">createRequest</a></strong> ( )</td></tr>
+            </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="defaultReturnUrl()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#defaultReturnUrl()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L253" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L253" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        defaultReturnUrl()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Composes default <span class="broken-link">\yii\authclient\returnUrl</span> value.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-oauth1.html#defaultReturnUrl()-detail">defaultReturnUrl</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Return URL.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="fetchAccessToken()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#fetchAccessToken()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L143" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L143" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        fetchAccessToken()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Fetches OAuth access token.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></span> <strong><a href="yii-authclient-oauth1.html#fetchAccessToken()-detail">fetchAccessToken</a></strong> ( <span style="color: #0000BB">$oauthToken&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span>, <span class="signature-type"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></span> <span style="color: #0000BB">$requestToken&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span>, <span style="color: #0000BB">$oauthVerifier&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span>, <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <span style="color: #0000BB">$params&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$oauthToken</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>OAuth token returned with redirection back to client.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$requestToken</span></td>
+                  <td class="param-type-col"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></td>
+                  <td class="param-desc-col"><p>OAuth request token.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$oauthVerifier</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>OAuth verifier.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Additional request params.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></td>
+                  <td class="param-desc-col"><p>OAuth access token.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-base-invalidparamexception.html">yii\base\InvalidParamException</a></td>
+                  <td class="param-desc-col"><p>on failure.</p>
+</td>
+                </tr>
+                            <tr>
+                  <th class="param-name-col">throws</th>
+                  <td class="param-type-col"><a href="yii-web-httpexception.html">yii\web\HttpException</a></td>
+                  <td class="param-desc-col"><p>in case oauth token miss-matches request token.</p>
+</td>
+                </tr>
+                        </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="fetchRequestToken()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#fetchRequestToken()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L84" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L84" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        fetchRequestToken()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Fetches the OAuth request token.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></span> <strong><a href="yii-authclient-oauth1.html#fetchRequestToken()-detail">fetchRequestToken</a></strong> ( <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <span style="color: #0000BB">$params&nbsp;</span><span style="color: #007700">=&nbsp;[]</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$params</span></td>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Additional request params.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></td>
+                  <td class="param-desc-col"><p>Request token.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generateCommonRequestParams()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#generateCommonRequestParams()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L284" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L284" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generateCommonRequestParams()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generate common request params like version, timestamp etc.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.array">array</a></span> <strong><a href="yii-authclient-oauth1.html#generateCommonRequestParams()-detail">generateCommonRequestParams</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.array">array</a></td>
+                  <td class="param-desc-col"><p>Common request params.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generateNonce()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#generateNonce()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L266" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L266" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generateNonce()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates nonce value.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.string">string</a></span> <strong><a href="yii-authclient-oauth1.html#generateNonce()-detail">generateNonce</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.string">string</a></td>
+                  <td class="param-desc-col"><p>Nonce value.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="generateTimestamp()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#generateTimestamp()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L275" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L275" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        generateTimestamp()
+        <span class="detail-header-tag small">
+            protected                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Generates timestamp.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">protected</span> <span class="signature-type"><a href="http://www.php.net/language.types.integer">integer</a></span> <strong><a href="yii-authclient-oauth1.html#generateTimestamp()-detail">generateTimestamp</a></strong> ( )</td></tr>
+                                                <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="http://www.php.net/language.types.integer">integer</a></td>
+                  <td class="param-desc-col"><p>Timestamp.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="refreshAccessToken()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#refreshAccessToken()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L243" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L243" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        refreshAccessToken()
+        <span class="detail-header-tag small">
+            public                                    method
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Gets new auth token to replace expired one.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></span> <strong><a href="yii-authclient-oauth1.html#refreshAccessToken()-detail">refreshAccessToken</a></strong> ( <span class="signature-type"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></span> <span style="color: #0000BB">$token</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$token</span></td>
+                  <td class="param-type-col"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></td>
+                  <td class="param-desc-col"><p>Expired auth token.</p>
+</td>
+                </tr>
+                                        <tr>
+                  <th class="param-name-col">return</th>
+                  <td class="param-type-col"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a></td>
+                  <td class="param-desc-col"><p>New auth token.</p>
+</td>
+                </tr>
+                                    </table>
+
+<!--	-->
+
+    <div class="detail-header h3" id="signRequest()-detail">
+        <a href="#" class="tool-link" title="go to top"><span class="glyphicon glyphicon-arrow-up"></span></a>
+        <a class="tool-link hash" href="yii-authclient-oauth1.html#signRequest()-detail" title="direct link to this method"><span class="glyphicon icon-hash"></span></a>
+                    <a href="https://github.com/yiisoft/yii2-authclient/edit/master/OAuth1.php#L301" class="tool-link" title="edit on github"><span class="glyphicon glyphicon-pencil"></span></a>
+            <a href="https://github.com/yiisoft/yii2-authclient/blob/master/OAuth1.php#L301" class="tool-link" title="view source on github"><span class="glyphicon glyphicon-eye-open"></span></a>
+        
+        signRequest()
+        <span class="detail-header-tag small">
+            public                                    method
+                            (available since version 2.1)
+                    </span>
+    </div>
+
+    
+    <div class="doc-description">
+        <p><strong>Sign given request with <span class="broken-link">\yii\authclient\signatureMethod</span>.</strong></p>
+
+        
+            </div>
+
+    <table class="detail-table table table-striped table-bordered table-hover">
+        <tr><td colspan="3" class="signature"><span class="signature-defs">public</span> <span class="signature-type">void</span> <strong><a href="yii-authclient-oauth1.html#signRequest()-detail">signRequest</a></strong> ( <span style="color: #0000BB">$request</span>, <span style="color: #0000BB">$token&nbsp;</span><span style="color: #007700">=&nbsp;</span><span style="color: #0000BB">null</span> )</td></tr>
+                                    <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$request</span></td>
+                  <td class="param-type-col"><a href="yii-httpclient-request.html">yii\httpclient\Request</a></td>
+                  <td class="param-desc-col"><p>Request instance.</p>
+</td>
+                </tr>
+                            <tr>
+                  <td class="param-name-col"><span style="color: #0000BB">$token</span></td>
+                  <td class="param-type-col"><a href="yii-authclient-oauthtoken.html">yii\authclient\OAuthToken</a>|<a href="http://www.php.net/language.types.null">null</a></td>
+                  <td class="param-desc-col"><p>OAuth token to be used for signature, if not set <span class="broken-link">\yii\authclient\accessToken</span> will be used.</p>
+</td>
+                </tr>
+                                                </table>
+
+<!--	-->
+</div>
+        </div>
+</div>
+
+<script type="text/javascript">
+    /*<![CDATA[*/
+    $("a.toggle").on('click', function () {
+        var $this = $(this);
+        if ($this.hasClass('properties-hidden')) {
+            $this.text($this.text().replace(/Show/,'Hide'));
+            $this.parents(".summary").find(".inherited").show();
+            $this.removeClass('properties-hidden');
+        } else {
+            $this.text($this.text().replace(/Hide/,'Show'));
+            $this.parents(".summary").find(".inherited").hide();
+            $this.addClass('properties-hidden');
+        }
+
+        return false;
+    });
+    /*
+     $(".sourceCode a.show").toggle(function () {
+     $(this).text($(this).text().replace(/show/,'hide'));
+     $(this).parents(".sourceCode").find("div.code").show();
+     },function () {
+     $(this).text($(this).text().replace(/hide/,'show'));
+     $(this).parents(".sourceCode").find("div.code").hide();
+     });
+     $("a.sourceLink").click(function () {
+     $(this).attr('target','_blank');
+     });
+     */
+    /*]]>*/
+</script>
+
+
+</div>
+
+<footer class="footer">
+        <p class="pull-right"><small>Page generated on Wed, 15 Aug 2018 19:09:09 +0000</small></p>
+    Powered by <a href="http://www.yiiframework.com/" rel="external">Yii Framework</a></footer>
+
+<script>jQuery(function ($) {
+    var shiftWindow = function () { scrollBy(0, -50) };
+    if (location.hash) setTimeout(shiftWindow, 1);
+    window.addEventListener("hashchange", shiftWindow);
+var element = document.createElement("script");
+element.src = "./jssearch.index.js";
+document.body.appendChild(element);
+
+var searchBox = $('#searchbox');
+
+// search when typing in search field
+searchBox.on("keyup", function(event) {
+    var query = $(this).val();
+
+    if (query == '' || event.which == 27) {
+        $('#search-resultbox').hide();
+        return;
+    } else if (event.which == 13) {
+        var selectedLink = $('#search-resultbox a.selected');
+        if (selectedLink.length != 0) {
+            document.location = selectedLink.attr('href');
+            return;
+        }
+    } else if (event.which == 38 || event.which == 40) {
+        $('#search-resultbox').show();
+
+        var selected = $('#search-resultbox a.selected');
+        if (selected.length == 0) {
+            $('#search-results').find('a').first().addClass('selected');
+        } else {
+            var next;
+            if (event.which == 40) {
+                next = selected.parent().next().find('a').first();
+            } else {
+                next = selected.parent().prev().find('a').first();
+            }
+            if (next.length != 0) {
+                var resultbox = $('#search-results');
+                var position = next.position();
+
+//              TODO scrolling is buggy and jumps around
+//                resultbox.scrollTop(Math.floor(position.top));
+//                console.log(position.top);
+
+                selected.removeClass('selected');
+                next.addClass('selected');
+            }
+        }
+
+        return;
+    }
+    $('#search-resultbox').show();
+    $('#search-results').html('<li><span class="no-results">No results</span></li>');
+
+    var result = jssearch.search(query);
+
+    if (result.length > 0) {
+        var i = 0;
+        var resHtml = '';
+
+        for (var key in result) {
+            if (i++ > 20) {
+                break;
+            }
+            resHtml = resHtml +
+            '<li><a href="' + result[key].file.u.substr(3) +'"><span class="title">' + result[key].file.t + '</span>' +
+            '<span class="description">' + result[key].file.d + '</span></a></li>';
+        }
+        $('#search-results').html(resHtml);
+    }
+});
+
+// hide the search results on ESC
+$(document).on("keyup", function(event) { if (event.which == 27) { $('#search-resultbox').hide(); } });
+// hide search results on click to document
+$(document).bind('click', function (e) { $('#search-resultbox').hide(); });
+// except the following:
+searchBox.bind('click', function(e) { e.stopPropagation(); });
+$('#search-resultbox').bind('click', function(e) { e.stopPropagation(); });
+
+});</script></body>
+</html>
