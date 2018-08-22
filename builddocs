@@ -1,8 +1,13 @@
 #!/usr/bin/bash
 
-docs api ./src ./docs
+cd /var/www/johnsnook/yii2-visitor
 
-docs guide . docs
+APIDOC='/var/www/bas.snooky/vendor/bin/apidoc'
+YII2='/var/www/bas.snooky/vendor/yiisoft/yii2'
 
-sed -i 's/Yii Framework 2.0 API Documentation/Yii2 IP Filter API Documentation/g' docs/*html
-sed -i 's/The Definitive Guide to Yii 2.0/The Definitive Guide to Yii2 IP Filter/g' docs/*html
+$APIDOC api src docs
+
+$APIDOC guide src docs
+
+sed -i 's/Yii Framework 2.0 API Documentation/Yii2 Visitor API Documentation/g' docs/*html
+sed -i 's/The Definitive Guide to Yii 2.0/The Definitive Guide to Yii2 Visitor/g' docs/*html

@@ -22,119 +22,113 @@ $this->params['breadcrumbs'][] = ['label' => 'Visitors', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
 $visitor = Yii::$app->getModule('visitor');
-?>
-<div class="container-fluid ">
-    <!--    <div class="col-md-10 col-md-offset-2">-->
-    <?php
-    $lie = '<li class="nav-item">';
-    if (!Yii::$app->user->isGuest) {
-        if (!$model->banned) {
-            echo $lie . Html::a('Blacklist', ['blacklist', 'id' => $model->ip], ['class' => 'mr-sm-2 btn btn-outline-danger text-danger']) . '</li>';
-        }
-        echo $lie . Html::a('Update', ['update', 'id' => $model->ip], ['class' => 'btn btn-outline-warning text-warning my-2 my-sm-0']) . '</li>';
+
+echo Html::beginTag('div', ['class' => "container-fluid "]);
+$lie = '<li class="nav-item">';
+if (!Yii::$app->user->isGuest) {
+    if (!$model->banned) {
+        echo $lie . Html::a('Blacklist', ['blacklist', 'id' => $model->ip], ['class' => 'mr-sm-2 btn btn-outline-danger text-danger']) . '</li>';
     }
-    ?>
-</div>
-<div class="d-flex mx-auto card-group " >
-    <?php
-    /** Visitor Info Panel */
-    $template = '<tr><th{captionOptions} style="text-align: right">{label}</th><td{contentOptions}>{value}</td></tr>';
+    echo $lie . Html::a('Update', ['update', 'id' => $model->ip], ['class' => 'btn btn-outline-warning text-warning my-2 my-sm-0']) . '</li>';
+}
 
-    Panel::begin([
-        'containerOptions' => [
-            'class' => 'col-lg-4',
+echo Html::endTag('div');
+
+echo Html::beginTag('div', ['class' => "row"]);
+/** Visitor Info Panel */
+$template = '<tr><th{captionOptions} style="text-align: right">{label}</th><td{contentOptions}>{value}</td></tr>';
+
+Panel::begin([
+    'containerOptions' => [
+        'class' => 'col-lg-4',
+    ],
+    'useHeader' => false,
+]);
+echo DetailView::widget([
+    'options' => ['class' => 'table table-striped table-sm'],
+    'model' => $model,
+    'template' => $template,
+    'attributes' => [
+        'ip',
+        //'banned:boolean',
+        [
+            'attribute' => 'banned',
+            'format' => 'text',
+            'value' => function($data) {
+                return ($data->banned ? 'Yes' : 'No');
+            }
         ],
-        'useHeader' => false,
-    ]);
-    echo DetailView::widget([
-        'options' => ['class' => 'table table-striped table-sm'],
-        'model' => $model,
-        'template' => $template,
-        'attributes' => [
-            'ip',
-            //'banned:boolean',
-            [
-                'attribute' => 'banned',
-                'format' => 'text',
-                'value' => function($data) {
-                    return ($data->banned ? 'Yes' : 'No');
-                }
-            ],
-            [
-                'attribute' => 'created_at',
-                'value' => function($data) {
-                    $dt = new DateTime($data->created_at);
-                    return $dt->format('Y-m-d g:i A');
-                }
-            ],
-            [
-                'attribute' => 'updated_at',
-                'value' => function($data) {
-                    $dt = new DateTime($data->updated_at);
-                    return $dt->format('Y-m-d g:i A');
-                }
-            ],
-            'hat_color',
-            'hat_rule',
-            'visits',
+        [
+            'attribute' => 'created_at',
+            'value' => function($data) {
+                $dt = new DateTime($data->created_at);
+                return $dt->format('Y-m-d g:i A');
+            }
         ],
-    ]);
-    Panel::end();
-
-
-    /** Map Panel */
-    Panel::begin([
-        'containerOptions' => [
-            'class' => 'col-lg-4',
-            'style' => 'overflow:hidden;display: flex;justify-content: center; align-items: center;  ',
+        [
+            'attribute' => 'updated_at',
+            'value' => function($data) {
+                $dt = new DateTime($data->updated_at);
+                return $dt->format('Y-m-d g:i A');
+            }
         ],
-            //'body' => ,
-            //'title' => "Map"
-    ]);
-    echo $this->render('_map', ['model' => $model]);
-    Panel::end();
+        'hat_color',
+        'hat_rule',
+        'visits',
+    ],
+]);
+Panel::end();
 
 
-    Panel::begin([
-        'containerOptions' => [
-            'class' => 'col-lg-4',
-        ],
-        'useHeader' => false,
-    ]);
-    echo DetailView::widget([
-        'options' => ['class' => 'table table-striped table-sm'],
-        'model' => $model,
-        'template' => $template,
-        'attributes' => [
-            'city',
-            'region',
-            'country',
-            'postal',
-            'latitude',
-            'longitude',
-            'asn',
-            'organization',
-            'proxy'
-        ]
-    ]);
-    Panel::end();
-    ?>
+/** Map Panel */
+Panel::begin([
+    'containerOptions' => [
+        'class' => 'col-lg-4',
+        'style' => 'overflow:hidden;display: flex;justify-content: center; align-items: center;  ',
+    ],
+        //'body' => ,
+        //'title' => "Map"
+]);
+echo $this->render('_map', ['model' => $model]);
+Panel::end();
 
-</div>
-<?php
+
+Panel::begin([
+    'containerOptions' => [
+        'class' => 'col-lg-4',
+    ],
+    'useHeader' => false,
+]);
+echo DetailView::widget([
+    'options' => ['class' => 'table table-striped table-sm'],
+    'model' => $model,
+    'template' => $template,
+    'attributes' => [
+        'city',
+        'region',
+        'country',
+        'postal',
+        'latitude',
+        'longitude',
+        'asn',
+        'organization',
+        'proxy'
+    ]
+]);
+Panel::end();
+echo Html::endTag('div');
+
 /** Visitor Log Panel */
 echo Panel::widget([
     'containerOptions' => ['class' => 'bg-secondary border-light mx-auto'],
     'titleOptions' => ['class' => 'text-white'],
     'bodyOptions' => ['class' => 'bg-white text-dark'],
     //'title' => "Log",
-    'body' => $this->render('_visitsGrid', [
+    'body' => $this->render('_viewGrid', [
         'searchModel' => $searchModel,
         'dataProvider' => $dataProvider,
     ])
 ]);
-?>
-<!--</div>-->
-<!--<div class="d-flex mx-auto ">-->
+
 
 

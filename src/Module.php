@@ -218,7 +218,8 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
         VisitorAgent::log($this->visitor->visit->user_agent);
 
         /** Allow the rejected visitor to reach the blowoff action */
-        if ([$event->action->controller->route] === $this->blowOff) {
+        $route = $event->action->controller->route;
+        if ([$route] === $this->blowOff || ($route === 'site/error')) {
             return $event->handled = true;
         }
 

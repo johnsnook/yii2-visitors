@@ -9,11 +9,10 @@
  * @copyright 2018 John Snook Consulting
  */
 use johnsnook\visitor\assets\VisitorAsset;
-use johnsnook\visitor\models\Visitor;
+use \kop\y2sp\ScrollPager;
 use yii\helpers\Html;
 use yii\helpers\Url;
-use yii\grid\GridView;
-use yii\widgets\Pjax;
+use kartik\grid\GridView;
 
 /* @var $this yii\web\View */
 /* @var $searchModel frontend\models\VisitorSearch */
@@ -25,14 +24,21 @@ $bc = "$this->title";
 $this->params['breadcrumbs'][] = $bc;
 $route = Url::to([Yii::$app->controller->id . '/index']);
 $visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
-if (empty($model->userQuery)) {
-    $this->title .= " query: [{$searchModel->userQuery}]";
-}
-
-//if ($visitor->bootstrapCssVersion === 4) {
-//    $pager = 'johnsnook\visitor\widgets\LinkPager';
-//} else {
-$pager = 'yii\widgets\LinkPager';
+//if (!empty($searchModel->userQuery)) {
+//    $this->title .= " [{$searchModel->userQuery}]";
+//    $lastCol = [[
+//    'class' => 'kartik\grid\ExpandRowColumn',
+//    'width' => '50px',
+//    'value' => function ($model, $key, $index, $column) {
+//        return GridView::ROW_COLLAPSED;
+//    },
+//    'headerOptions' => ['class' => 'kartik-sheet-style'],
+//    'expandOneOnly' => true,
+//    'class' => '\kartik\grid\ExpandRowColumn',
+//    'detail' => function ($model, $key, $index, $column) {
+//        return json_encode($model);
+//    }
+//    ]];
 //}
 ?>
 <div class="visitor-index" >
@@ -41,83 +47,35 @@ $pager = 'yii\widgets\LinkPager';
     echo $this->render('_search', [
         'model' => $searchModel,
     ]);
-    ?>
-    <?php Pjax::begin(['formSelector' => 'search-form']); ?>
-    <?=
-    GridView::widget([
-        'caption' => $dataProvider->totalCount . ' ' . Html::encode($this->title) . '!',
+
+    echo GridView::widget([
+        //'caption' => $dataProvider->totalCount . ' ' . Html::encode($this->title) . '!',
         'dataProvider' => $dataProvider,
+        'filterModel' => $searchModel,
+        'columns' => require __DIR__ . '/index-columns.php',
         'filterRowOptions' => ['style' => 'visibility: collapse'],
-        'tableOptions' => ['class' => 'table table-striped table-sm'],
-//        'pager' => ['class' => $pager],
-        'columns' => [
-            [
-                'class' => '\yii\grid\DataColumn',
-                'attribute' => 'ip',
-                'format' => 'html',
-                'value' => function($data) {
-                    $style = '';
-                    if ($data->banned || $data->hat_color === Visitor::HAT_COLOR_BLACK) {
-                        $style = 'background-color: Black; color: White';
-                    } elseif ($data->hat_color === Visitor::HAT_COLOR_WHITE) {
-                        $style = 'background-color: #33FF00';
-                    }
-                    return Html::a($data->ip, ['view', 'id' => $data->ip], ['style' => $style]);
-                }
-            ],
-            [
-                'class' => '\yii\grid\DataColumn',
-                'attribute' => 'asn',
-                'format' => 'html',
-                'value' => function($data) {
-                    return Html::a($data->asn, ['visitor/index', 'VisitorSearch[userQuery]' => '=asn:' . $data->asn]);
-                }
-            ],
-//            'asn',
-            [
-                'class' => '\yii\grid\DataColumn',
-                'attribute' => 'organization',
-                'format' => 'html',
-                'value' => function($data) {
-                    return Html::a($data->organization, ['visitor/index', 'VisitorSearch[userQuery]' => '=organization:"' . $data->organization . '"']);
-                }
-            ],
-//            'organization',
-            [
-                'class' => '\yii\grid\DataColumn',
-                'attribute' => 'city',
-                'format' => 'raw',
-                'value' => function($data) {
-                    $return = '';
-                    if (!empty($data->city)) {
-                        $return .= $data->city . (!empty($data->region) ? ', ' : '');
-                    }
-                    if (!empty($data->region)) {
-                        $return .= $data->region . (!empty($data->country) ? ', ' : '');
-                    }
-                    if (!empty($data->country)) {
-                        $return .= $data->country;
-                    }
-                    if ($return === '') {
-                        return '(not set)';
-                    }
-                    return $return;
-                }
-            ],
-            [
-                'class' => '\yii\grid\DataColumn',
-                'attribute' => 'visits',
-            ],
-            [
-                'class' => '\yii\grid\DataColumn',
-                'attribute' => 'updated_at',
-                'value' => function($data) {
-                    $dt = new DateTime($data->updated_at);
-                    return $dt->format('Y-m-d g:i A');
-                }
+        'pjax' => true,
+        'bordered' => true,
+        'striped' => false,
+        'condensed' => true,
+        'responsive' => true,
+        'hover' => true,
+        'floatHeader' => true,
+//        'perfectScrollbar' => true,
+//        'floatHeaderOptions' => ['scrollingTop' => $scrollingTop],
+        'showPageSummary' => true,
+        'panel' => [
+            'type' => GridView::TYPE_INFO],
+        'containerOptions' => ['style' => 'overflow: auto'], // only set when $responsive = false
+        'showPageSummary' => false,
+        'pager' => [
+            'class' => ScrollPager::className(),
+            'container' => '.grid-view',
+            'item' => '.kv-grid-table tbody tr',
+            'enabledExtensions' => [
+                ScrollPager::EXTENSION_SPINNER,
             ],
         ],
     ]);
     ?>
-    <?php Pjax::end(); ?>
 </div>

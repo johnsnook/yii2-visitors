@@ -31,7 +31,6 @@ $form = ActiveForm::begin([
 ?>
 
 <div class="form-group ">
-    <!--<label class="control-label" for="visitorsearch-userquery">Filter visitors by</label>-->
     <div class="input-group ">
         <input id="visitorsearch-userquery" name="VisitorSearch[userQuery]"
                type="text" class="form-control"

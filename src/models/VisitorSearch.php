@@ -61,7 +61,7 @@ class VisitorSearch extends Visitor {
     /**
      * @var array The fields to search with ParselQuery
      */
-    private $fields = ['ip' => 'v.ip', 'city', 'region', 'country', 'asn', 'organization', 'proxy', 'request', 'referer'];
+    private $fields = ['ip', 'city', 'region', 'country', 'asn', 'organization', 'proxy'];
 
     /**
      * {@inheritdoc}
@@ -95,11 +95,6 @@ class VisitorSearch extends Visitor {
             'userQuery' => $this->userQuery,
             'searchFields' => $this->fields,
             'dbQuery' => Visitor::find()
-                    ->select(['v.ip'])
-                    ->distinct()
-                    ->addSelect(['city', 'region', 'country', 'visits', 'asn', 'organization', 'updated_at'])
-                    ->from('visitor v')
-                    ->leftJoin('visitor_log vl', 'v.ip = vl.ip')
         ]);
 
         $dataProvider = new ActiveDataProvider([

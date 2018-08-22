@@ -15,6 +15,7 @@ use Yii;
 use johnsnook\visitor\models\Visitor;
 use johnsnook\visitor\models\VisitorSearch;
 use johnsnook\visitor\models\VisitorLogSearch;
+use johnsnook\visitor\web\ImATeapotException;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
 
@@ -97,8 +98,7 @@ class VisitorController extends \yii\web\Controller {
      * @return mixed
      */
     public function actionBlowoff() {
-        $this->layout = 'blowy';
-        return $this->render('blowoff');
+        throw new ImATeapotException;
     }
 
     /**
