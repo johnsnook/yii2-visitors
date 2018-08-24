@@ -22,7 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "johnsnook\\visitor\\": "/src"
+            "johnsnook\\visitors\\": "/src"
         }
     },
     "repositories": [

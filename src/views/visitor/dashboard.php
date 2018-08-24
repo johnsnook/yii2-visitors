@@ -9,5 +9,5 @@
  */
 use yii\helpers\Html;
 
-echo Html::a('Visitors', ['/visitor/visitor/index'], ['class' => 'btn btn-success']) . '<br>';
+echo Html::a('Visitors', ['/visitors/visitor/index'], ['class' => 'btn btn-success']) . '<br>';
 echo Html::a('Visitor Log', ['/visitor/visits/index'], ['class' => 'btn btn-success']) . '<br>';

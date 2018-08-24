@@ -8,7 +8,7 @@
  * @copyright 2018 John Snook Consulting
  */
 /* @var $this yii\web\View */
-/* @var $visitor johnsnook\visitor\models\Visitor */
+/* @var $visitor johnsnook\visitors\models\Visitor */
 $visitor = \Yii::$app->getModule('visitor')->visitor;
 
 $name = (!empty($visitor->name) ? $visitor->name : 'Visitor');

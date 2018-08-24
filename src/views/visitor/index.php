@@ -8,7 +8,7 @@
  * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
-use johnsnook\visitor\assets\VisitorAsset;
+use johnsnook\visitors\assets\VisitorAsset;
 use kop\y2sp\ScrollPager;
 use yii\helpers\Html;
 use yii\helpers\Url;

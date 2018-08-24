@@ -8,7 +8,7 @@
  * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
-use johnsnook\visitor\models\VisitorAgent;
+use johnsnook\visitors\models\VisitorAgent;
 use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\helpers\Url;
@@ -16,7 +16,7 @@ use yii\helpers\Url;
 $visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
 
 if ($visitor->bootstrapCssVersion === 4) {
-    $pager = 'johnsnook\visitor\widgets\LinkPager';
+    $pager = 'johnsnook\visitors\widgets\LinkPager';
 } else {
     $pager = 'yii\widgets\LinkPager';
 }

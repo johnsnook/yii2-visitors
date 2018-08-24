@@ -9,11 +9,11 @@
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\visitor\models;
+namespace johnsnook\visitors\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use johnsnook\visitor\models\Visits;
+use johnsnook\visitors\models\Visits;
 use johnsnook\parsel\ParselQuery;
 
 /**

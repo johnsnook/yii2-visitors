@@ -13,7 +13,7 @@ use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /* @var $this yii\web\View */
-/* @var $model \johnsnook\visitor\models\Visitor */
+/* @var $model \johnsnook\visitors\models\Visitor */
 /* @var $form yii\widgets\ActiveForm */
 
 $this->title = 'Update Visitor: ' . empty($model->name) ? $model->ip : "$model->name - $model->ip ";

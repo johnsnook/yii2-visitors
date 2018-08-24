@@ -1,6 +1,6 @@
 <?php
 
-namespace johnsnook\visitor\widgets;
+namespace johnsnook\visitors\widgets;
 
 /**
  * Link Pager Widget.

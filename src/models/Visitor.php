@@ -9,11 +9,11 @@
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\visitor\models;
+namespace johnsnook\visitors\models;
 
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
-use johnsnook\visitor\models\Country;
+use johnsnook\visitors\models\Country;
 
 /**
  * This is the model class for table "visitor".

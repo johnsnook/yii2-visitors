@@ -9,7 +9,7 @@
  * AccessRule
  */
 
-namespace johnsnook\visitor\filters;
+namespace johnsnook\visitors\filters;
 
 use yii\filters\AccessRule as BaseAccessRule;
 
@@ -18,42 +18,42 @@ class AccessRule extends BaseAccessRule {
     /**
      * @var array list of user ip that this rule applies to.
      * If not set or empty, it means this rule applies to all ips.
-     * @see [[\johnsnook\visitor\models\Visitor::ip]]
+     * @see [[\johnsnook\visitors\models\Visitor::ip]]
      */
     public $ip;
 
     /**
      * @var array list of user cities that this rule applies to.
      * If not set or empty, it means this rule applies to all cities.
-     * @see [[\johnsnook\visitor\models\Visitor::city]]
+     * @see [[\johnsnook\visitors\models\Visitor::city]]
      */
     public $city;
 
     /**
      * @var array list of user regions that this rule applies to.
      * If not set or empty, it means this rule applies to all regions.
-     * @see [[\johnsnook\visitor\models\Visitor::region]]
+     * @see [[\johnsnook\visitors\models\Visitor::region]]
      */
     public $region;
 
     /**
      * @var array list of user countries that this rule applies to.
      * If not set or empty, it means this rule applies to all countries.
-     * @see [[\johnsnook\visitor\models\Visitor::country]]
+     * @see [[\johnsnook\visitors\models\Visitor::country]]
      */
     public $country;
 
     /**
      * @var array list of user proxies that this rule applies to.
      * If not set or empty, it means this rule applies to all proxies.
-     * @see [[\johnsnook\visitor\models\Visitor::proxy]]
+     * @see [[\johnsnook\visitors\models\Visitor::proxy]]
      */
     public $proxy;
 
     /**
      * @var array list of user hat_color that this rule applies to.
      * If not set or empty, it means this rule applies to all hat_colors.
-     * @see [[\johnsnook\visitor\models\Visitor::proxy]]
+     * @see [[\johnsnook\visitors\models\Visitor::proxy]]
      */
     public $hat_color;
 

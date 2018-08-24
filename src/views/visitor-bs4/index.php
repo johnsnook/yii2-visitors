@@ -8,7 +8,7 @@
  * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
-use johnsnook\visitor\models\Visitor;
+use johnsnook\visitors\models\Visitor;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use yii\grid\GridView;
@@ -23,7 +23,7 @@ $this->params['breadcrumbs'][] = $this->title;
 $route = Url::to([Yii::$app->controller->id . '/index']);
 $visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
 
-$pager = 'johnsnook\visitor\widgets\LinkPager';
+$pager = 'johnsnook\visitors\widgets\LinkPager';
 ?>
 <div class="my-5 container-fluid" >
     <div class="row">

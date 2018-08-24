@@ -9,11 +9,11 @@
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\visitor\controllers;
+namespace johnsnook\visitors\controllers;
 
 use Yii;
-use johnsnook\visitor\models\Visits;
-use johnsnook\visitor\models\VisitsSearch;
+use johnsnook\visitors\models\Visits;
+use johnsnook\visitors\models\VisitsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

@@ -9,13 +9,13 @@
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\visitor\controllers;
+namespace johnsnook\visitors\controllers;
 
 use Yii;
-use johnsnook\visitor\models\Visitor;
-use johnsnook\visitor\models\VisitorSearch;
-use johnsnook\visitor\models\VisitsSearch;
-use johnsnook\visitor\web\ImATeapotException;
+use johnsnook\visitors\models\Visitor;
+use johnsnook\visitors\models\VisitorSearch;
+use johnsnook\visitors\models\VisitsSearch;
+use johnsnook\visitors\web\ImATeapotException;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
 

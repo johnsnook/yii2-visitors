@@ -1,6 +1,13 @@
-Ip filtering for Yii2
+Yii2 - Visitors
 =====================
-This extension gets the visitor information associated with their ip address, including proxy and geographical information and logs the access and checks if it's blacklisted or whitelisted and takes appropriate action.
+
+![visitors.jpg]()
+
+This extension is a half security, half SEO (search engine optimization) tool for webmasters to determing
+
+It tracks the visitor information associated with the visitor ip address and user agent (browser/OS) info, retrieves  proxy and "IP info", including ISP geographical information,  logs the access and checks against rules for  blacklisting or whitelisting, taking appropriate action.
+
+Includes tool for view, searching, filtering and graphically (Including GIS!) exploring your websites visitors. 
 
 Installation
 ------------

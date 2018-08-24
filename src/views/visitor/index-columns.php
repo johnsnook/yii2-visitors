@@ -7,7 +7,7 @@
  * @copyright 2018 John Snook Consulting
  * Description of index_columns
  */
-use johnsnook\visitor\models\Visitor;
+use johnsnook\visitors\models\Visitor;
 use yii\helpers\Html;
 
 return [

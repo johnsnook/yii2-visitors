@@ -9,12 +9,12 @@
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\visitor;
+namespace johnsnook\visitors;
 
-use johnsnook\visitor\helpers\IpHelper;
-use johnsnook\visitor\models\Visitor;
-use johnsnook\visitor\models\VisitorAgent;
-use johnsnook\visitor\models\Visits;
+use johnsnook\visitors\helpers\IpHelper;
+use johnsnook\visitors\models\Visitor;
+use johnsnook\visitors\models\VisitorAgent;
+use johnsnook\visitors\models\Visits;
 use Yii;
 use yii\base\ActionEvent;
 use yii\web\Application;
@@ -68,7 +68,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
     /**
      * @var string The route to your blowoff page telling the user to pound sand
      */
-    public $blowOff = ['visitor/visitor/blowoff'];
+    public $blowOff = ['visitors/visitor/blowoff'];
 
     /**
      * @var string $ipInfoKey Go to https://ipinfo.io/signup for a free API key
@@ -112,14 +112,14 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
 
     /** @var array The rules to be used in URL management. */
     public $urlRules = [
-        '/visitors' => '/visitor/visitor/dashboard',
-//        '/visitor/<action:\w+>' => '/visitor/visitor/<action>',
-        '/visitors/index' => '/visitor/visitor/index',
-        '/visitor/blowoff' => '/visitor/visitor/blowoff',
-        '/visitor/<id>' => '/visitor/visitor/view',
-        '/visitor/update/<id>' => '/visitor/visitor/update',
-        '/visits/<action:\w+>' => '/visitor/visits/<action>',
-        '/individual/<id>' => '/visitor/individual/view',
+        '/visitors' => '/visitors/visitor/dashboard',
+//        '/visitor/<action:\w+>' => '/visitors/visitor/<action>',
+        '/visitors/index' => '/visitors/visitor/index',
+        '/visitor/blowoff' => '/visitors/visitor/blowoff',
+        '/visitor/<id>' => '/visitors/visitor/view',
+        '/visitor/update/<id>' => '/visitors/visitor/update',
+        '/visits/<action:\w+>' => '/visitors/visits/<action>',
+        '/individual/<id>' => '/visitors/visitor/individual/view',
     ];
 
     /**
@@ -130,7 +130,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
     public function init() {
         parent::init();
         if (Yii::$app instanceof \yii\console\Application) {
-            $this->controllerNamespace = 'johnsnook\visitor\commands';
+            $this->controllerNamespace = 'johnsnook\visitors\commands';
         } else {
             Yii::$app->setModule('gridview', ['class' => '\kartik\grid\Module']);
         }
@@ -152,7 +152,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
             //die(json_encode($app->getUrlManager()->rules));
             /** this allows me to do some importing from my old security system */
             if ($app instanceof \yii\console\Application) {
-                $this->controllerNamespace = 'johnsnook\visitor\commands';
+                $this->controllerNamespace = 'johnsnook\visitors\commands';
             } else {
                 $app->on(Application::EVENT_BEFORE_ACTION, [$module, 'portcullis']);
             }

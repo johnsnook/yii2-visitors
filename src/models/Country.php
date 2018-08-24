@@ -9,7 +9,7 @@
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\visitor\models;
+namespace johnsnook\visitors\models;
 
 /**
  * This is the model class for table "country".

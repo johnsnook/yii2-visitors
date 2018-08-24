@@ -9,7 +9,7 @@
  * @copyright 2018 John Snook Consulting
  */
 
-namespace johnsnook\visitor\models;
+namespace johnsnook\visitors\models;
 
 use yii\behaviors\TimestampBehavior;
 use yii\db\Expression;
