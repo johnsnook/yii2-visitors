@@ -1,7 +1,7 @@
 Yii2 - Visitors
 =====================
 
-![https://raw.githubusercontent.com/johnsnook/yii2-visitors/dev/visitors.jpg]()
+![https://user-images.githubusercontent.com/4065107/44600120-55c23200-a7a6-11e8-9e2a-1f950cbf949b.jpg]()
 
 This extension is a half security, half SEO (search engine optimization) tool for webmasters to determing
 
