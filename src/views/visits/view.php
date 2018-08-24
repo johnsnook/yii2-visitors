@@ -4,7 +4,7 @@ use yii\helpers\Html;
 use yii\widgets\DetailView;
 
 /* @var $this yii\web\View */
-/* @var $model johnsnook\visitor\models\VisitorLog */
+/* @var $model johnsnook\visitor\models\Visits */
 
 $this->title = $model->id;
 $this->params['breadcrumbs'][] = ['label' => 'Visitor Logs', 'url' => ['index']];

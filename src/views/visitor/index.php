@@ -9,7 +9,7 @@
  * @copyright 2018 John Snook Consulting
  */
 use johnsnook\visitor\assets\VisitorAsset;
-use \kop\y2sp\ScrollPager;
+use kop\y2sp\ScrollPager;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use kartik\grid\GridView;
@@ -21,31 +21,23 @@ VisitorAsset::register($this);
 
 $this->title = 'Visitors';
 $bc = "$this->title";
+;
+
 $this->params['breadcrumbs'][] = $bc;
 $route = Url::to([Yii::$app->controller->id . '/index']);
 $visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
-//if (!empty($searchModel->userQuery)) {
-//    $this->title .= " [{$searchModel->userQuery}]";
-//    $lastCol = [[
-//    'class' => 'kartik\grid\ExpandRowColumn',
-//    'width' => '50px',
-//    'value' => function ($model, $key, $index, $column) {
-//        return GridView::ROW_COLLAPSED;
-//    },
-//    'headerOptions' => ['class' => 'kartik-sheet-style'],
-//    'expandOneOnly' => true,
-//    'class' => '\kartik\grid\ExpandRowColumn',
-//    'detail' => function ($model, $key, $index, $column) {
-//        return json_encode($model);
-//    }
-//    ]];
-//}
 ?>
+<style>
+    table td[data-col-seq="5"]{
+        white-space: nowrap;  /** added **/
+    }
+
+</style>
 <div class="visitor-index" >
     <h1><?php echo $dataProvider->totalCount . ' ' . Html::encode($bc) ?>!</h1>
     <?php
-    echo $this->render('_search', [
-        'model' => $searchModel,
+    echo $this->render('/search/searchForm', [
+        'searchModel' => $searchModel,
     ]);
 
     echo GridView::widget([

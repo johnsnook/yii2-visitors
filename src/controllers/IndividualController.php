@@ -13,7 +13,7 @@ namespace johnsnook\visitor\controllers;
 
 use Yii;
 use johnsnook\visitor\models\Visitor;
-use johnsnook\visitor\models\VisitorLogSearch;
+use johnsnook\visitor\models\VisitsSearch;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
 
@@ -43,7 +43,7 @@ class IndividualController extends \yii\web\Controller {
     }
 
     /**
-     * Displays a single Visitor model and a GridView from VisitorLog of this
+     * Displays a single Visitor model and a GridView from Visits of this
      * Visitor's activity on your site
      *
      * @param string $id The IP address to be viewed
@@ -51,7 +51,7 @@ class IndividualController extends \yii\web\Controller {
      * activity
      */
     public function actionView($id) {
-        $searchModel = new VisitorLogSearch();
+        $searchModel = new VisitsSearch();
         $searchModel->ip = $id;
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $this->setViewPath(__dir__ . '/../views/individual');

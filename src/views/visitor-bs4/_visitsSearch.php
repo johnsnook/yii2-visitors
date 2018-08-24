@@ -27,9 +27,9 @@ use yii\bootstrap4\ActiveForm;
                     'options' => ['role' => "form"]
         ]);
         ?>
-        <input type="hidden" id="visitorlogsearch-ip" name="VisitorLogSearch[ip]" value="<?= $model->ip ?>">
+        <input type="hidden" id="visitssearch-ip" name="VisitsSearch[ip]" value="<?= $model->ip ?>">
         <div class="input-group">
-            <input id="visitorsearch-userquery" name="VisitorLogSearch[userQuery]"
+            <input id="visitorsearch-userquery" name="VisitsSearch[userQuery]"
                    type="text" name="search" class="form-control"
                    aria-label="Visitor Search" autofocus="true" value="<?= $model->userQuery ?>"
                    placeholder="Enter a search term" style="height: initial"

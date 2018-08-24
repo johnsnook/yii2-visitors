@@ -14,7 +14,7 @@ namespace johnsnook\visitor\controllers;
 use Yii;
 use johnsnook\visitor\models\Visitor;
 use johnsnook\visitor\models\VisitorSearch;
-use johnsnook\visitor\models\VisitorLogSearch;
+use johnsnook\visitor\models\VisitsSearch;
 use johnsnook\visitor\web\ImATeapotException;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
@@ -24,28 +24,49 @@ use yii\filters\AccessControl;
  */
 class VisitorController extends \yii\web\Controller {
 
+    public $defaultAction = 'dashboard';
+
     /**
-     * @inheritDoc
+     * {@inheritdoc}
+     */
+    public function beforeAction($action) {
+        if (parent::beforeAction($action)) {
+            $this->view->params['breadcrumbs'][] = ['label' => 'Dashboard', 'url' => ['/visitors']];
+            return true;
+        }
+        return false;
+    }
+
+    /**
+     * {@inheritdoc}
      */
     public function behaviors() {
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index', 'view', 'update', 'blowoff', 'blacklist'],
+                'only' => ['index', 'view', 'update', 'blowoff', 'blacklist', 'dashboard'],
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index', 'view', 'blowoff'],
-                        'roles' => ['?'],
+                        'actions' => ['index', 'view', 'blowoff', 'dashboard'],
+                        'roles' => ['?', '@'],
                     ],
                     [
                         'allow' => true,
-                        'actions' => ['index', 'view', 'update', 'blacklist'],
+                        'actions' => ['update', 'blacklist'],
                         'roles' => ['@'],
                     ],
                 ],
             ],
         ];
+    }
+
+    /**
+     * Lists all Visitor models.
+     * @return string A rendered view of the list of visitors
+     */
+    public function actionDashboard() {
+        return $this->render('dashboard');
     }
 
     /**
@@ -62,7 +83,7 @@ class VisitorController extends \yii\web\Controller {
     }
 
     /**
-     * Displays a single Visitor model and a GridView from VisitorLog of this
+     * Displays a single Visitor model and a GridView from Visits of this
      * Visitor's activity on your site
      *
      * @param string $id The IP address to be viewed
@@ -70,7 +91,7 @@ class VisitorController extends \yii\web\Controller {
      * activity
      */
     public function actionView($id) {
-        $searchModel = new VisitorLogSearch();
+        $searchModel = new VisitsSearch();
         $searchModel->ip = $id;
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         //$dataProvider->setPagination(['pageSize' => 10]);

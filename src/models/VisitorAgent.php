@@ -17,7 +17,6 @@ namespace johnsnook\visitor\models;
  * </code>
  *
  * @property string $user_agent
- * @property string $name
  * @property array $info
  *
  * @property string $agentType
@@ -33,7 +32,7 @@ namespace johnsnook\visitor\models;
  * @property string $agentLanguage
  * @property string $agentLanguageTag
  *
- * @property VisitorLog[] $visitorLogs
+ * @property Visits[] $visitss
  */
 class VisitorAgent extends \yii\db\ActiveRecord {
 
@@ -74,7 +73,7 @@ class VisitorAgent extends \yii\db\ActiveRecord {
     public function rules() {
         return [
             [['user_agent'], 'required'],
-            [['user_agent', 'name'], 'string'],
+            [['user_agent'], 'string'],
         ];
     }
 
@@ -92,8 +91,8 @@ class VisitorAgent extends \yii\db\ActiveRecord {
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getVisitorLogs() {
-        return $this->hasMany(VisitorLog::className(), ['user_agent' => 'user_agent']);
+    public function getVisitss() {
+        return $this->hasMany(Visits::className(), ['user_agent' => 'user_agent']);
     }
 
     /**

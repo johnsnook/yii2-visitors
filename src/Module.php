@@ -14,7 +14,7 @@ namespace johnsnook\visitor;
 use johnsnook\visitor\helpers\IpHelper;
 use johnsnook\visitor\models\Visitor;
 use johnsnook\visitor\models\VisitorAgent;
-use johnsnook\visitor\models\VisitorLog;
+use johnsnook\visitor\models\Visits;
 use Yii;
 use yii\base\ActionEvent;
 use yii\web\Application;
@@ -112,12 +112,13 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
 
     /** @var array The rules to be used in URL management. */
     public $urlRules = [
-//        'visitor/<action:\w+>' => '/visitor/visitor/<action>',
-        '/visitor' => '/visitor/visitor/index',
-        '/visitor/index' => '/visitor/visitor/index',
+        '/visitors' => '/visitor/visitor/dashboard',
+//        '/visitor/<action:\w+>' => '/visitor/visitor/<action>',
+        '/visitors/index' => '/visitor/visitor/index',
         '/visitor/blowoff' => '/visitor/visitor/blowoff',
         '/visitor/<id>' => '/visitor/visitor/view',
         '/visitor/update/<id>' => '/visitor/visitor/update',
+        '/visits/<action:\w+>' => '/visitor/visits/<action>',
         '/individual/<id>' => '/visitor/individual/view',
     ];
 
@@ -145,7 +146,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
      * @param Application $app
      */
     public function bootstrap($app) {
-        if ($app->hasModule('visitor') && ($module = $app->getModule('visitor')) instanceof Module) {
+        if ($app->hasModule($this->id) && ($module = $app->getModule($this->id)) instanceof Module) {
             $um = $app->getUrlManager();
             $um->addRules($this->urlRules, true);
             //die(json_encode($app->getUrlManager()->rules));
@@ -207,14 +208,14 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
         /** Check to see if this action is listed in the ignorables array */
         $controllerId = $event->action->controller->id;
         if (array_key_exists($controllerId, $this->ignorables) && in_array($event->action->id, $this->ignorables[$controllerId])) {
-            $this->visitor->visit = VisitorLog::log($ip, false);
+            $this->visitor->visit = Visits::log($ip, false);
             return true;
         } elseif (!is_null(static::checkList($this->ignorables, $this->visitor))) {
-            $this->visitor->visit = VisitorLog::log($ip, false);
+            $this->visitor->visit = Visits::log($ip, false);
             return true;
         }
         /** Log the visit */
-        $this->visitor->visit = VisitorLog::log($ip);
+        $this->visitor->visit = Visits::log($ip);
         VisitorAgent::log($this->visitor->visit->user_agent);
 
         /** Allow the rejected visitor to reach the blowoff action */

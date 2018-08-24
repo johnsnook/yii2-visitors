@@ -1,5 +1,5 @@
 {
-    "name": "johnsnook/yii2-visitor",
+    "name": "johnsnook/yii2-visitors",
     "description": "This extension gets the visitor information associated with their ip address, including proxy and geographical information and logs the access and checks if it's blacklisted or whitelisted and takes appropriate action.",
     "type": "yii2-extension",
     "keywords": ["yii2", "extension", "access_log", "cidr", "ip tables", "proxy", "tor", "blacklist", "ip address", "security", "hackers"],
@@ -15,8 +15,9 @@
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
         "kassner/log-parser": "~1.0",
-        "kartik-v/yii2-grid": "@dev",
         "johnsnook/yii2-parsel": "*",
+        "kartik-v/yii2-grid": "@dev",
+        "kartik-v/yii2-tabs-x": "*",
         "kop/yii2-scroll-pager": "dev-master"
     },
     "autoload": {

@@ -28,13 +28,13 @@ use yii\db\Expression;
  * @property Visitor $visitor
  * @property VisitorAgent $userAgent
  */
-class VisitorLog extends \yii\db\ActiveRecord {
+class Visits extends \yii\db\ActiveRecord {
 
     /**
      * @inheritdoc
      */
     public static function tableName() {
-        return 'visitor_log';
+        return 'visits';
     }
 
     /**
@@ -58,7 +58,7 @@ class VisitorLog extends \yii\db\ActiveRecord {
      * @param string $ip The ip address to associate this record with
      */
     public static function log($ip, $save = true) {
-        $log = new VisitorLog([
+        $log = new Visits([
             'ip' => $ip,
             'request' => filter_input(INPUT_SERVER, 'REQUEST_URI'),
             'referer' => filter_input(INPUT_SERVER, 'HTTP_REFERER'),
@@ -97,7 +97,7 @@ class VisitorLog extends \yii\db\ActiveRecord {
         return [
             'id' => 'ID',
             'ip' => 'Ip Address',
-            'created_at' => 'Created At',
+            'created_at' => 'Visit Time',
             'request' => 'Request',
             'referer' => 'Referer',
             'user_agent' => 'User Agent',
@@ -105,7 +105,7 @@ class VisitorLog extends \yii\db\ActiveRecord {
     }
 
     public static function getMostRecentVisit($ip) {
-        $sql = "select max(created_at) from visitor_log where ip = '$ip'";
+        $sql = "select max(created_at) from visits where ip = '$ip'";
         return \Yii::$app->db->createCommand($sql)->queryScalar();
     }
 

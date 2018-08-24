@@ -13,7 +13,7 @@ namespace johnsnook\visitor\commands;
 
 use johnsnook\visitor\helpers\ProgressBar;
 use johnsnook\visitor\models\Visitor;
-use johnsnook\visitor\models\VisitorLog;
+use johnsnook\visitor\models\Visits;
 use johnsnook\visitor\models\VisitorAgent;
 use Kassner\LogParser\LogParser;
 use yii\helpers\Console;
@@ -129,7 +129,7 @@ class ImportController extends \yii\console\Controller {
                         continue;
                     }
                     $dt = new \DateTime;
-                    $log = new VisitorLog([
+                    $log = new Visits([
                         'ip' => $ip,
                         'request' => $request,
                         'referer' => $entry->HeaderReferer !== '-' ? $entry->HeaderReferer : null,

@@ -10,18 +10,23 @@
  */
 /* @var $this yii\web\View */
 /* @var $model frontend\models\Visitor */
+/* @var $searchModel frontend\models\VisitsSearch */
+/* @var $dataProvider yii\data\ActiveDataProvider */
 
 use johnsnook\visitor\widgets\Panel;
 use yii\helpers\Html;
 use yii\widgets\DetailView;
+use johnsnook\visitor\assets\VisitorAsset;
+use kartik\grid\GridView;
+use \kop\y2sp\ScrollPager;
+
+VisitorAsset::register($this);
 
 $visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
 
 $this->title = $model->ip;
 $this->params['breadcrumbs'][] = ['label' => 'Visitors', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
-
-$visitor = Yii::$app->getModule('visitor');
 
 echo Html::beginTag('div', ['class' => "container-fluid "]);
 $lie = '<li class="nav-item">';
@@ -44,6 +49,7 @@ Panel::begin([
     ],
     'useHeader' => false,
 ]);
+
 echo DetailView::widget([
     'options' => ['class' => 'table table-striped table-sm'],
     'model' => $model,
@@ -118,17 +124,38 @@ echo DetailView::widget([
 Panel::end();
 echo Html::endTag('div');
 
-/** Visitor Log Panel */
-echo Panel::widget([
-    'containerOptions' => ['class' => 'bg-secondary border-light mx-auto'],
-    'titleOptions' => ['class' => 'text-white'],
-    'bodyOptions' => ['class' => 'bg-white text-dark'],
-    //'title' => "Log",
-    'body' => $this->render('_viewGrid', [
-        'searchModel' => $searchModel,
-        'dataProvider' => $dataProvider,
-    ])
+
+echo $this->render('/search/searchForm', [
+    'searchModel' => $searchModel,
 ]);
 
-
+echo GridView::widget([
+    'dataProvider' => $dataProvider,
+    'filterModel' => $searchModel,
+    'filterRowOptions' => ['style' => 'visibility: collapse'],
+    //    'beforeHeader' => $this->render('_search', [
+    //        'searchModel' => $searchModel,
+    //    ]),
+    //    'toolbar' => false,
+    'pjax' => true,
+    'bordered' => true,
+    'striped' => false,
+    'condensed' => true,
+    'responsive' => true,
+    'hover' => true,
+    'floatHeader' => true,
+    'panel' => [
+        'type' => GridView::TYPE_INFO],
+    'containerOptions' => ['style' => 'overflow: auto'], // only set when $responsive = false
+    'showPageSummary' => false,
+    'pager' => [
+        'class' => ScrollPager::className(),
+        'container' => '.grid-view',
+        'item' => '.kv-grid-table tbody tr',
+        'enabledExtensions' => [
+            ScrollPager::EXTENSION_SPINNER,
+        ],
+    ],
+    'columns' => require __DIR__ . '/view-columns.php',
+]);
 

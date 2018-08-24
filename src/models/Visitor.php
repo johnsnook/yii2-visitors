@@ -68,7 +68,7 @@ class Visitor extends \yii\db\ActiveRecord {
     public $proxyCheckKey = '';
 
     /**
-     * @var VisitorLog The log record of this visit
+     * @var Visits The log record of this visit
      */
     public $visit;
 
@@ -292,7 +292,7 @@ class Visitor extends \yii\db\ActiveRecord {
     }
 
     public function getLoggedVisits() {
-        return $this->hasMany(VisitorLog::className(), ['ip' => 'ip']);
+        return $this->hasMany(Visits::className(), ['ip' => 'ip']);
     }
 
 }
