@@ -13,10 +13,10 @@ namespace johnsnook\visitors\controllers;
 
 use Yii;
 use johnsnook\visitors\models\Visits;
-use johnsnook\visitors\models\VisitsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\Json;
 
 /**
  * VisitsController implements the CRUD actions for Visits model.
@@ -69,18 +69,6 @@ class VisitsController extends Controller {
         $searchModel = new VisitsSearch();
         $searchModel->search(Yii::$app->request->queryParams);
         return $this->render('visits-graph', [
-                    'searchModel' => $searchModel,
-        ]);
-    }
-
-    /**
-     * Returns a map view of the current user query.
-     * @return mixed
-     */
-    public function actionMap() {
-        $searchModel = new VisitsSearch();
-        $searchModel->search(Yii::$app->request->queryParams);
-        return $this->render('visits-map', [
                     'searchModel' => $searchModel,
         ]);
     }

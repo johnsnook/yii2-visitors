@@ -1,13 +1,12 @@
+![](https://user-images.githubusercontent.com/4065107/44600120-55c23200-a7a6-11e8-9e2a-1f950cbf949b.jpg)
 Yii2 - Visitors
 =====================
-
-![](https://user-images.githubusercontent.com/4065107/44600120-55c23200-a7a6-11e8-9e2a-1f950cbf949b.jpg)
 
 This extension is a half security, half SEO (search engine optimization) tool for webmasters to determing
 
 It tracks the visitor information associated with the visitor ip address and user agent (browser/OS) info, retrieves  proxy and "IP info", including ISP geographical information,  logs the access and checks against rules for  blacklisting or whitelisting, taking appropriate action.
 
-Includes tool for view, searching, filtering and graphically (Including GIS!) exploring your websites visitors. 
+Includes tools for viewing, searching, filtering and graphically (Including GIS!) exploring your websites visitors. 
 
 Installation
 ------------

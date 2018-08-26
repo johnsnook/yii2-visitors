@@ -18,6 +18,7 @@ use johnsnook\visitors\models\VisitsSearch;
 use johnsnook\visitors\web\ImATeapotException;
 use yii\web\NotFoundHttpException;
 use yii\filters\AccessControl;
+use yii\helpers\Json;
 
 /**
  * VisitorController implements the CRUD actions for the Visitor model.
@@ -76,7 +77,7 @@ class VisitorController extends \yii\web\Controller {
     public function actionIndex() {
         $searchModel = new VisitorSearch();
 
-        return $this->render('index', [
+        return $this->render('visitor-index', [
                     'searchModel' => $searchModel,
                     'dataProvider' => $searchModel->search(Yii::$app->request->queryParams),
         ]);
@@ -100,6 +101,26 @@ class VisitorController extends \yii\web\Controller {
                     'searchModel' => $searchModel,
                     'dataProvider' => $dataProvider,
         ]);
+    }
+
+    /**
+     * Returns a map view of the current user query.
+     * @return mixed
+     */
+    public function actionMap() {
+        $searchModel = new VisitorSearch();
+
+        $searchModel->search(Yii::$app->request->queryParams);
+        /* @var $query \yii\db\ActiveQuery */
+        $query = $searchModel->parselQuery->dbQuery;
+        $query->select('latitude')
+                ->distinct()
+                ->addSelect(['longitude', 'organization'])
+                ->where(['not', ['longitude' => null]]);
+        //->joinWith('visitor');
+        $out = $this->renderAjax('visitor-index-map', ['locations' => $query]);
+        //return Json::encode($query->asArray()->all());
+        return Json::encode($out);
     }
 
     /**

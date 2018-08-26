@@ -291,7 +291,7 @@ class Visitor extends \yii\db\ActiveRecord {
         }
     }
 
-    public function getLoggedVisits() {
+    public function getVisits() {
         return $this->hasMany(Visits::className(), ['ip' => 'ip']);
     }
 

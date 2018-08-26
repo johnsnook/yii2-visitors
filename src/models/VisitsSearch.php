@@ -18,6 +18,9 @@ use johnsnook\parsel\ParselQuery;
 
 /**
  * VisitsSearch represents the model behind the search form of `common\models\Visits`.
+ *
+ * @property-read ParselQuery $parselQuery The [[ParselQuery]] object used to parse the user query.
+ * @property-read array $fields The table fields to search in query
  */
 class VisitsSearch extends Visits {
 
@@ -47,6 +50,7 @@ class VisitsSearch extends Visits {
     public function rules() {
         return [
             [['id'], 'integer'],
+            [['ip', 'request', 'referer', 'user_agent'], 'string'],
             [['ip', 'userQuery'], 'safe'],
         ];
     }
@@ -60,13 +64,13 @@ class VisitsSearch extends Visits {
     }
 
     /**
-     * Creates data provider instance with search query applied
+     * Create the ParselQuery from the params and return the query object for
+     * use by [[search]] and [[Visits]] ajax methods for maps and graphs
      *
      * @param array $params
-     *
-     * @return ActiveDataProvider
+     * @return \yii\db\ActiveQuery
      */
-    public function search($params) {
+    public function loadQuery($params) {
         $this->load($params);
         $query = Visits::find();
         if (!empty($this->ip)) {
@@ -78,10 +82,18 @@ class VisitsSearch extends Visits {
             'searchFields' => $this->fields,
             'dbQuery' => $query
         ]);
+        return $this->parselQuery->dbQuery;
+    }
 
-
+    /**
+     * Creates data provider instance with search query applied
+     *
+     * @param array $params
+     * @return ActiveDataProvider
+     */
+    public function search($params) {
         $dataProvider = new ActiveDataProvider([
-            'query' => $this->parselQuery->dbQuery,
+            'query' => $this->loadQuery($params),
             'pagination' => [
                 'pageSize' => 20,
             ],

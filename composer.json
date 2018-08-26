@@ -14,10 +14,11 @@
     "require": {
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
-        "kassner/log-parser": "~1.0",
-        "johnsnook/yii2-parsel": "*",
+        "johnsnook/yii2-google-chart": "dev-dev",
+        "johnsnook/yii2-parsel": "dev-dev",
         "kartik-v/yii2-grid": "@dev",
         "kartik-v/yii2-tabs-x": "*",
+        "kassner/log-parser": "~1.0",
         "kop/yii2-scroll-pager": "dev-master"
     },
     "autoload": {
@@ -26,6 +27,10 @@
         }
     },
     "repositories": [
+        {
+            "type": "path",
+            "url": "/var/www/johnsnook/yii2-google-graph"
+        },
         {
             "type": "composer",
             "url": "https://asset-packagist.org"
