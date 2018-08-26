@@ -95,7 +95,7 @@ Panel::begin([
         //'body' => ,
         //'title' => "Map"
 ]);
-echo $this->render('_map', ['model' => $model]);
+echo $this->render('visitor-view-map', ['model' => $model]);
 Panel::end();
 
 
@@ -156,6 +156,7 @@ echo GridView::widget([
             ScrollPager::EXTENSION_SPINNER,
         ],
     ],
-    'columns' => require __DIR__ . '/view-columns.php',
+    //'columns' => require __DIR__ . '/view-columns.php',
+    'columns' => require 'view-columns.php',
 ]);
 

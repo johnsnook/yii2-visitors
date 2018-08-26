@@ -39,6 +39,8 @@ use johnsnook\parsel\ParselQuery;
  * @property string $hat_color
  * @property string $hat_rule
  *
+ * @property ActiveDataProvider $dataProvider
+ * @property array $mapChartData
  * @property string $sql
  */
 class VisitorSearch extends Visitor {
@@ -64,6 +66,34 @@ class VisitorSearch extends Visitor {
     protected $fields = ['ip', 'city', 'region', 'country', 'asn', 'organization', 'proxy'];
 
     /**
+     * Instead of passing the query parameters to the search, we'll pass it in the
+     * options array, so we can use it for more than just getting a [[ActiveDataProvider]].
+     *
+     * Also, the search method is now called "getDataProvider".
+     *
+     * @var array The parameters from the user request
+     */
+    public $queryParams;
+
+    /**
+     * {@inheritdoc}
+     *
+     * Instead of passing the query parameters to the search, we'll pass it in the
+     * options array
+     */
+    public function init() {
+        parent::init();
+
+        $this->load($this->queryParams);
+
+        $this->parselQuery = new ParselQuery([
+            'userQuery' => $this->userQuery,
+            'searchFields' => $this->fields,
+            'dbQuery' => Visitor::find()
+        ]);
+    }
+
+    /**
      * {@inheritdoc}
      */
     public function rules() {
@@ -84,18 +114,9 @@ class VisitorSearch extends Visitor {
     /**
      * Creates data provider instance with search query applied
      *
-     * @param array $params
-     *
      * @return ActiveDataProvider
      */
-    public function search($params) {
-        $this->load($params);
-
-        $this->parselQuery = new ParselQuery([
-            'userQuery' => $this->userQuery,
-            'searchFields' => $this->fields,
-            'dbQuery' => Visitor::find()
-        ]);
+    public function getDataProvider() {
 
         return new ActiveDataProvider([
             'query' => $this->parselQuery->dbQuery,
@@ -108,6 +129,33 @@ class VisitorSearch extends Visitor {
                 ]
             ],
         ]);
+    }
+
+    /**
+     *
+     * @return array latitude, longitude & organization
+     */
+    public function getMapChartData() {
+        $query = $this->parselQuery->dbQuery;
+        $query->select('latitude')
+                ->distinct()
+                ->addSelect(['longitude', 'organization'])
+                ->where(['not', ['longitude' => null]]);
+
+        $locations = $query->asArray()->all();
+
+        /** Add column labels */
+        $googleData = [['Latitude', 'Longitude', 'Organization']];
+
+        foreach ($locations as $location) {
+            $googleData[] = array_values($location);
+        }
+        return $googleData;
+
+        //->joinWith('visitor');
+        //$out = $this->renderAjax('visitor-index-map', ['locations' => $query]);
+        //return Json::encode($query->asArray()->all());
+        //return Json::encode($out);
     }
 
     /**

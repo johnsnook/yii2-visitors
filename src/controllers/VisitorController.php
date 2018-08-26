@@ -45,11 +45,11 @@ class VisitorController extends \yii\web\Controller {
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index', 'view', 'update', 'blowoff', 'blacklist', 'dashboard'],
+                'only' => ['index', 'view', 'update', 'blowoff', 'blacklist', 'dashboard', 'map'],
                 'rules' => [
                     [
                         'allow' => true,
-                        'actions' => ['index', 'view', 'blowoff', 'dashboard'],
+                        'actions' => ['index', 'view', 'blowoff', 'dashboard', 'map'],
                         'roles' => ['?', '@'],
                     ],
                     [
@@ -75,11 +75,13 @@ class VisitorController extends \yii\web\Controller {
      * @return string A rendered view of the list of visitors
      */
     public function actionIndex() {
-        $searchModel = new VisitorSearch();
+        $searchModel = new VisitorSearch([
+            'queryParams' => Yii::$app->request->queryParams
+        ]);
 
-        return $this->render('visitor-index', [
+        return $this->render('visitor-index/visitor-index', [
                     'searchModel' => $searchModel,
-                    'dataProvider' => $searchModel->search(Yii::$app->request->queryParams),
+                    'dataProvider' => $searchModel->dataProvider,
         ]);
     }
 
@@ -96,7 +98,7 @@ class VisitorController extends \yii\web\Controller {
         $searchModel->ip = $id;
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         //$dataProvider->setPagination(['pageSize' => 10]);
-        return $this->render('view', [
+        return $this->render('visitor-view/visitor-view', [
                     'model' => $this->findModel($id),
                     'searchModel' => $searchModel,
                     'dataProvider' => $dataProvider,
@@ -108,19 +110,13 @@ class VisitorController extends \yii\web\Controller {
      * @return mixed
      */
     public function actionMap() {
-        $searchModel = new VisitorSearch();
+        $searchModel = new VisitorSearch([
+            'queryParams' => Yii::$app->request->queryParams
+        ]);
 
-        $searchModel->search(Yii::$app->request->queryParams);
-        /* @var $query \yii\db\ActiveQuery */
-        $query = $searchModel->parselQuery->dbQuery;
-        $query->select('latitude')
-                ->distinct()
-                ->addSelect(['longitude', 'organization'])
-                ->where(['not', ['longitude' => null]]);
-        //->joinWith('visitor');
-        $out = $this->renderAjax('visitor-index-map', ['locations' => $query]);
-        //return Json::encode($query->asArray()->all());
-        return Json::encode($out);
+        return $this->render('visitor-index/visitor-index-map', [
+                    'searchModel' => $searchModel,
+        ]);
     }
 
     /**
@@ -172,7 +168,13 @@ class VisitorController extends \yii\web\Controller {
         if (($model = Visitor::findOne($id)) !== null) {
             return $model;
         } else {
-            throw new NotFoundHttpException('The requested page does not exist.');
+            throw new NotFoundHttpException('The requested page does not exist.
+
+
+
+
+
+        ');
         }
     }
 

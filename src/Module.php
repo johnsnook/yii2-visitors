@@ -115,6 +115,7 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
         '/visitors' => '/visitors/visitor/dashboard',
 //        '/visitor/<action:\w+>' => '/visitors/visitor/<action>',
         '/visitors/index' => '/visitors/visitor/index',
+        '/visitors/map' => '/visitors/visitor/map',
         '/visitor/blowoff' => '/visitors/visitor/blowoff',
         '/visitor/<id>' => '/visitors/visitor/view',
         '/visitor/update/<id>' => '/visitors/visitor/update',

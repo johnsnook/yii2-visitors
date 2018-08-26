@@ -22,7 +22,6 @@ VisitorAsset::register($this);
 
 $this->title = 'Visitors';
 $bc = "$this->title";
-;
 
 $this->params['breadcrumbs'][] = $bc;
 $route = Url::to([Yii::$app->controller->id . '/index']);
@@ -78,8 +77,9 @@ $tabItems = [
     ],
     [
         'label' => '<i class="glyphicon glyphicon-globe"></i> Map',
-        'content' => 'Loading (hopefully!) ...',
-        'linkOptions' => ['data-url' => Url::to(['/visitors/visitor/map'])]
+        'content' => $this->render('visitor-index-map', ['searchModel' => $searchModel]),
+//        'content' => 'Loading (hopefully!) ...',
+//        'linkOptions' => ['data-url' => Url::to(['/visitors/visitor/map'])]
     ],
 //    [
 //        'label' => '<i class="glyphicon glyphicon-stats"></i> Charts',
