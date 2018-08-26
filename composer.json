@@ -14,7 +14,7 @@
     "require": {
         "yiisoft/yii2": "*",
         "yiisoft/yii2-bootstrap": "*",
-        "johnsnook/yii2-google-chart": "dev-dev",
+        "johnsnook/yii2-google-charts": "dev-dev",
         "johnsnook/yii2-parsel": "dev-dev",
         "kartik-v/yii2-grid": "@dev",
         "kartik-v/yii2-tabs-x": "*",
@@ -29,7 +29,11 @@
     "repositories": [
         {
             "type": "path",
-            "url": "/var/www/johnsnook/yii2-google-graph"
+            "url": "/var/www/johnsnook/yii2-parsel"
+        },
+        {
+            "type": "path",
+            "url": "/var/www/johnsnook/yii2-google-charts"
         },
         {
             "type": "composer",
