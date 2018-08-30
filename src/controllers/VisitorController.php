@@ -66,14 +66,6 @@ class VisitorController extends \yii\web\Controller {
      * Lists all Visitor models.
      * @return string A rendered view of the list of visitors
      */
-    public function actionDashboard() {
-        return $this->render('dashboard');
-    }
-
-    /**
-     * Lists all Visitor models.
-     * @return string A rendered view of the list of visitors
-     */
     public function actionIndex() {
         $searchModel = new VisitorSearch([
             'queryParams' => Yii::$app->request->queryParams
@@ -114,9 +106,10 @@ class VisitorController extends \yii\web\Controller {
             'queryParams' => Yii::$app->request->queryParams
         ]);
 
-        return $this->render('visitor-index/visitor-index-map', [
-                    'searchModel' => $searchModel,
+        $out = $this->renderAjax('visitor-index/visitor-index-map', [
+            'searchModel' => $searchModel,
         ]);
+        return $out;
     }
 
     /**

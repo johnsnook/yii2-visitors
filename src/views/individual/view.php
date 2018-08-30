@@ -13,7 +13,9 @@ use yii\widgets\DetailView;
 use yii\bootstrap\Tabs;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\Visitor */
+/* @var $model johnsnook\visitors\models\Visitor */
+/* @var $searchModel \johnsnook\visitors\models\VisitorSearch */
+/* @var $dataProvider \yii\data\ActiveDataProvider */
 
 $this->title = empty($model->name) ? $model->ip : $model->name;
 ?>

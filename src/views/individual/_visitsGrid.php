@@ -8,14 +8,18 @@
  * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
+/* @var $model johnsnook\visitors\models\Visitor */
+/* @var $searchModel \johnsnook\visitors\models\VisitorSearch */
+/* @var $dataProvider \yii\data\ActiveDataProvider */
+
 use johnsnook\visitors\models\VisitorAgent;
 use yii\grid\GridView;
 use yii\helpers\Html;
 use yii\helpers\Url;
 
-$visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
+$visitorModule = $searchModel->module;
 
-if ($visitor->bootstrapCssVersion === 4) {
+if ($visitorModule->bootstrapCssVersion === 4) {
     $pager = 'johnsnook\visitors\widgets\LinkPager';
 } else {
     $pager = 'yii\widgets\LinkPager';

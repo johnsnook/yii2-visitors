@@ -28,7 +28,7 @@ use yii\db\Expression;
  * @property Visitor $visitor
  * @property VisitorAgent $userAgent
  */
-class Visits extends \yii\db\ActiveRecord {
+class Visits extends ModuleActiveRecord {
 
     /**
      * @inheritdoc
@@ -69,6 +69,14 @@ class Visits extends \yii\db\ActiveRecord {
         }
         Visitor::incrementCount($ip);
         return $log;
+    }
+
+    /**
+     * {@inheritdoc}
+     * @return VisitsQuery the active query used by this AR class.
+     */
+    public static function find() {
+        return new VisitsQuery(get_called_class());
     }
 
     /**

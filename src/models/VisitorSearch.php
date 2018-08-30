@@ -38,7 +38,8 @@ use johnsnook\parsel\ParselQuery;
  * @property string $proxy
  * @property string $hat_color
  * @property string $hat_rule
- *
+ * 
+ * @property-read ParselQuery $parselQuery Use this to capture the user query in other data searches like chartdata
  * @property ActiveDataProvider $dataProvider
  * @property array $mapChartData
  * @property string $sql
@@ -139,8 +140,11 @@ class VisitorSearch extends Visitor {
         $query = $this->parselQuery->dbQuery;
         $query->select('latitude')
                 ->distinct()
-                ->addSelect(['longitude', 'organization'])
-                ->where(['not', ['longitude' => null]]);
+                ->addSelect(['longitude', 'organization', 'visits'])
+                ->andWhere(['not', ['longitude' => null]]);
+//        echo $this->parselQuery->sql;
+//        echo $query->createCommand()->getRawSql();
+//        die();
 
         $locations = $query->asArray()->all();
 
@@ -148,7 +152,12 @@ class VisitorSearch extends Visitor {
         $googleData = [['Latitude', 'Longitude', 'Organization']];
 
         foreach ($locations as $location) {
-            $googleData[] = array_values($location);
+            $location = (object) $location;
+            $googleData[] = [
+                floatval($location->latitude),
+                floatval($location->longitude),
+                $location->organization . "<br>\n" . $location->visits . ' visits'
+            ];
         }
         return $googleData;
 

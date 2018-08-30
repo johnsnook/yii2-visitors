@@ -62,7 +62,6 @@ class ImportController extends \yii\console\Controller {
             echo "Invalid log directory";
         }
 
-        $visitor = \Yii::$app->controller->module;
         if (!empty($list)) {
             $files = explode(',', $list);
             foreach ($files as &$file) {

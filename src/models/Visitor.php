@@ -11,8 +11,6 @@
 
 namespace johnsnook\visitors\models;
 
-use yii\behaviors\TimestampBehavior;
-use yii\db\Expression;
 use johnsnook\visitors\models\Country;
 
 /**
@@ -36,7 +34,7 @@ use johnsnook\visitors\models\Country;
  * @property string $hat_rule
  *
  */
-class Visitor extends \yii\db\ActiveRecord {
+class Visitor extends ModuleActiveRecord {
 
     const HAT_COLOR_WHITE = 'White';
     const HAT_COLOR_NONE = 'None';
@@ -73,20 +71,6 @@ class Visitor extends \yii\db\ActiveRecord {
     public $visit;
 
     /**
-     * Set up timestamp behavior here
-     *
-     * @return array
-     */
-    public function behaviors() {
-        return [
-            [
-                'class' => TimestampBehavior::className(),
-                'value' => new Expression('NOW()'),
-            ],
-        ];
-    }
-
-    /**
      * The table name
      */
     public static function tableName() {
@@ -119,16 +103,6 @@ class Visitor extends \yii\db\ActiveRecord {
         $sql = "UPDATE visitor SET visits = visits + 1, updated_at = now() WHERE ip = '$ip'";
         $command = \Yii::$app->db->createCommand($sql);
         $command->execute();
-    }
-
-    /**
-     * Format the postgresql time stamp into nicer version
-     *
-     * @return string a formatted big endian DateTime
-     */
-    public function getCreatedAt() {
-        $dt = new \DateTime($this->created_at);
-        return $dt->format('Y-m-d g:i A');
     }
 
     /**
@@ -234,9 +208,8 @@ class Visitor extends \yii\db\ActiveRecord {
      * @return object|null
      */
     public function getIpInfo() {
-        $visitor = \Yii::$app->getModule('visitor');
 
-        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, $visitor->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, static::$module->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
         try {
             if (!empty($data = json_decode(file_get_contents($url)))) {
                 return $data;
@@ -262,9 +235,8 @@ class Visitor extends \yii\db\ActiveRecord {
      * @return object|null
      */
     public static function proxyCheck($ip) {
-        $visitor = \Yii::$app->getModule('visitor');
         $proxy = null;
-        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, $visitor->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, static::$module->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
 
         try {
             if (!empty($data = json_decode(file_get_contents($url), true))) {
@@ -280,8 +252,7 @@ class Visitor extends \yii\db\ActiveRecord {
     }
 
     private function getProxyInfo() {
-        $visitor = \Yii::$app->getModule('visitor');
-        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, $visitor->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, static::$module->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
         try {
             if (!empty($data = json_decode(file_get_contents($url), true))) {
                 return (object) $data[$this->ip];

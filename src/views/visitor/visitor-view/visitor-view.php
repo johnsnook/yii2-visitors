@@ -22,8 +22,6 @@ use \kop\y2sp\ScrollPager;
 
 VisitorAsset::register($this);
 
-$visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
-
 $this->title = $model->ip;
 $this->params['breadcrumbs'][] = ['label' => 'Visitors', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
@@ -157,6 +155,6 @@ echo GridView::widget([
         ],
     ],
     //'columns' => require __DIR__ . '/view-columns.php',
-    'columns' => require 'view-columns.php',
+    'columns' => require 'visitor-view-columns.php',
 ]);
 

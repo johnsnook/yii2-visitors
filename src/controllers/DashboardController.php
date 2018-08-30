@@ -12,28 +12,15 @@
 namespace johnsnook\visitors\controllers;
 
 use Yii;
-use johnsnook\visitors\models\Visits;
 use johnsnook\visitors\models\VisitsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-use yii\helpers\Json;
 
 /**
  * VisitsController implements the CRUD actions for Visits model.
  */
-class VisitsController extends Controller {
-
-    /**
-     * {@inheritdoc}
-     */
-    public function beforeAction($action) {
-        if (parent::beforeAction($action)) {
-            $this->view->params['breadcrumbs'][] = ['label' => 'Dashboard', 'url' => ['/visitors']];
-            return true;
-        }
-        return false;
-    }
+class DashboardController extends Controller {
 
     /**
      * {@inheritdoc}
@@ -54,12 +41,20 @@ class VisitsController extends Controller {
      * @return mixed
      */
     public function actionIndex() {
-        $searchModel = new VisitsSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-        return $this->render('visits-index', [
-                    'searchModel' => $searchModel,
-                    'dataProvider' => $dataProvider,
-        ]);
+        return $this->render('index');
+    }
+
+    /**
+     * Lists all Visits models.
+     * @return mixed
+     */
+    public function actionLine() {
+        #return $this->render('dashboard-visits-line');
+        return $this->render('dashboard-highcharts');
+    }
+
+    public function actionD3() {
+        return $this->render('dashboard-d3');
     }
 
     /**
@@ -84,21 +79,6 @@ class VisitsController extends Controller {
         return $this->render('view', [
                     'model' => $this->findModel($id),
         ]);
-    }
-
-    /**
-     * Finds the Visits model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Visits the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    protected function findModel($id) {
-        if (($model = Visits::findOne($id)) !== null) {
-            return $model;
-        }
-
-        throw new NotFoundHttpException('The requested page does not exist.');
     }
 
 }

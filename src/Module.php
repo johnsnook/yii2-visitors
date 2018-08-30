@@ -112,9 +112,9 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
 
     /** @var array The rules to be used in URL management. */
     public $urlRules = [
-        '/visitors' => '/visitors/visitor/dashboard',
-//        '/visitor/<action:\w+>' => '/visitors/visitor/<action>',
-        '/visitors/index' => '/visitors/visitor/index',
+        '/dashboard' => '/visitors/dashboard/index',
+        '/dashboard/<action:\w+>' => '/visitors/dashboard//<action>',
+        '/visitors' => '/visitors/visitor/index',
         '/visitors/map' => '/visitors/visitor/map',
         '/visitor/blowoff' => '/visitors/visitor/blowoff',
         '/visitor/<id>' => '/visitors/visitor/view',

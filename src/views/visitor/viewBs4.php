@@ -14,13 +14,14 @@ use yii\widgets\DetailView;
 //use yii\bootstrap\Tabs;
 
 /* @var $this yii\web\View */
-/* @var $model frontend\models\Visitor */
+/* @var $model johnsnook\visitors\models\Visitor */
 
 $this->title = empty($model->name) ? $model->ip : $model->name;
 $this->params['breadcrumbs'][] = ['label' => 'Visitors', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
-$visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
-$panel = $visitor->bootstrapCssVersion === 3 ? 'panel' : 'card';
+
+$visitorModule = $model->module;
+$panel = $visitorModule->bootstrapCssVersion === 3 ? 'panel' : 'card';
 ?>
 <div class="visitor-view">
     <div class="row" style="font-size: 36px">

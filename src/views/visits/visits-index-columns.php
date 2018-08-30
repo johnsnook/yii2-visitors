@@ -16,7 +16,6 @@ use yii\helpers\Url;
 /* @var $searchModel frontend\models\VisitorSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-//$visitor = Yii::$app->getModule(Yii::$app->controller->module->id);
 return [
     [
         'class' => '\kartik\grid\DataColumn',

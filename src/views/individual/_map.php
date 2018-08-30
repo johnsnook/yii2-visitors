@@ -8,7 +8,7 @@
  * @license https://github.com/johnsnook/yii2-visitor/LICENSE
  * @copyright 2018 John Snook Consulting
  */
-/* @var $model frontend\models\Visitor */
+/* @var $model johnsnook\visitors\models\Visitor */
 
 /**
  * Uses mapquest/osm static map
@@ -17,10 +17,7 @@
  */
 use yii\helpers\Html;
 
-$visitor = Yii::$app->getModule('visitor');
-$mapKey = $visitor->googleMapsApiKey;
-
-
+$mapKey = $model->module->googleMapsApiKey;
 
 if (empty($mapKey)) {
     echo "<p>For this map to work, you must hava Google Maps API key defined in your configuration.</p>";
