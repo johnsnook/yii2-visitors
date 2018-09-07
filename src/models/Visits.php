@@ -72,14 +72,6 @@ class Visits extends ModuleActiveRecord {
     }
 
     /**
-     * {@inheritdoc}
-     * @return VisitsQuery the active query used by this AR class.
-     */
-    public static function find() {
-        return new VisitsQuery(get_called_class());
-    }
-
-    /**
      * Converts db timestamp to formatted string
      * @return string
      */

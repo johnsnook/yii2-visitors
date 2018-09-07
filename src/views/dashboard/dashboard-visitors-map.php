@@ -10,9 +10,13 @@
 /* @var $this yii\web\View */
 
 use johnsnook\visitors\assets\LeafletAsset;
+use yii\helpers\Url;
 
 LeafletAsset::register($this);
-$this->registerJs(file_get_contents(__dir__ . '/visitor-index-map.js'));
+$this->registerJs(file_get_contents(__dir__ . '/dashboard-visitors-map.js'));
+
+//$this->params['breadcrumbs'][] = $bc;
+$route = Url::to([Yii::$app->controller->id . '/index']);
 ?>
 <style>
     html, body {

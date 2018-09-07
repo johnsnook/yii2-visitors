@@ -21,8 +21,17 @@ use yii\db\Expression;
  */
 class ModuleActiveRecord extends \yii\db\ActiveRecord {
 
-    /** johnsnook\visitors\Module */
-    private static $module;
+    /**
+     * @inheritdoc
+     *
+     * We override the AR to this module's db to allow the developer to have a
+     * separate database for this module.
+     *
+     * @return \yii\db\Connection 
+     */
+    public static function getDb() {
+        return self::getModule()->getDb();
+    }
 
     /**
      * Set up timestamp behavior here
@@ -54,11 +63,7 @@ class ModuleActiveRecord extends \yii\db\ActiveRecord {
      * @return \johnsnook\visitors\Module
      */
     public static function getModule() {
-        if (empty(self::$module)) {
-            return self::$module = Yii::$app->getModule(Yii::$app->controller->module->id);
-        } else {
-            return self::$module;
-        }
+        return \johnsnook\visitors\Module::getInstance();
     }
 
 }

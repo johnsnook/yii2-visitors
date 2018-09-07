@@ -327,7 +327,7 @@ class VisitorAgent extends \yii\db\ActiveRecord {
             curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
             curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-            curl_setopt($ch, CURLOPT_HTTPHEADER, ['X-API-KEY: ' . Visitor::$module->whatsmybrowswerKey]);
+            curl_setopt($ch, CURLOPT_HTTPHEADER, ['X-API-KEY: ' . Visitor::getModule()->whatsmybrowswerKey]);
             curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
             if (($response = curl_exec($ch) ) === false) {
                 die("Error" . curl_error($ch) . PHP_EOL);

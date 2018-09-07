@@ -8,15 +8,12 @@ use yii\web\View;
 /**
  * Main frontend application asset bundle.
  */
-class VisitorAsset extends AssetBundle {
+class LeafletAsset extends AssetBundle {
 
-    public $sourcePath = __DIR__;
-    public $css = [
-    ];
-    public $js = [
-            //'visitorSearch.js',
-    ];
-    public $publishOptions = ['forceCopy' => YII_ENV_DEV ? true : false];
+    public $sourcePath = '@bower/leaflet/dist';
+    public $css = ['leaflet.css'];
+    public $js = ['leaflet.js'];
+    //public $publishOptions = ['forceCopy' => YII_ENV_DEV ? true : false];
     public $jsOptions = ['position' => View::POS_END];
     public $depends = [
         'yii\web\JqueryAsset',

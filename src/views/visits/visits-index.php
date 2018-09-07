@@ -14,7 +14,7 @@
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 use kartik\grid\GridView;
-use kartik\tabs\TabsX;
+use yii\bootstrap\Tabs;
 use yii\helpers\Url;
 use kop\y2sp\ScrollPager;
 use yii\bootstrap\Nav;
@@ -73,10 +73,8 @@ $tabItems = [
     ],
 ];
 
-echo TabsX::widget([
+echo Tabs::widget([
     'encodeLabels' => false,
-    'bordered' => true,
-    'position' => TabsX::POS_LEFT,
     'items' => $tabItems,
 //    'options' => ['class' => 'nav-pills'], // set this to nav-tab to get tab-styled navigation
 ]);

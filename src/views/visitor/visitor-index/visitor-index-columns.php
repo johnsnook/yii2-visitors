@@ -35,7 +35,7 @@ return [
         'value' => function($model, $key, $index, $column) {
             $model = (object) $model;
 
-            return Html::a($model->asn, ['visitor/index', 'VisitorSearch[userQuery]' => '=asn:' . $model->asn]);
+            return Html::a($model->asn, ['visitor/index', 'userQuery' => '=asn:' . $model->asn]);
         }
     ],
 //            'asn',
@@ -44,7 +44,7 @@ return [
         'attribute' => 'organization',
         'format' => 'html',
         'value' => function($model, $key, $index, $column) {
-            return Html::a($model->organization, ['visitor/index', 'VisitorSearch[userQuery]' => '=organization:"' . $model->organization . '"']);
+            return Html::a($model->organization, ['visitor/index', 'userQuery' => '=organization:"' . $model->organization . '"']);
         }
     ],
 //            'organization',
@@ -53,20 +53,7 @@ return [
         'attribute' => 'city',
         'format' => 'raw',
         'value' => function($model, $key, $index, $column) {
-            $return = '';
-            if (!empty($model->city)) {
-                $return .= $model->city . (!empty($model->region) ? ', ' : '');
-            }
-            if (!empty($model->region)) {
-                $return .= $model->region . (!empty($model->country) ? ', ' : '');
-            }
-            if (!empty($model->country)) {
-                $return .= $model->country;
-            }
-            if ($return === '') {
-                return '(not set)';
-            }
-            return $return;
+            return $model->location;
         }
     ],
     [

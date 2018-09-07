@@ -21,14 +21,11 @@ DialogAsset::register($this);
 /* @var $searchModel frontend\models\VisitorSearch */
 /* @var $form yii\widgets\ActiveForm */
 
-//$lastErr = johnsnook\parsel\ParselQuery::$lastError;
-
 $form = ActiveForm::begin([
             'action' => ['index'],
             'method' => 'get',
             'fieldConfig' => ['enableLabel' => false],
             'options' => [
-//                'class' => "form-inline",
                 'role' => "form",
                 'style' => 'margin-bottom:30px'
             ]
@@ -40,7 +37,7 @@ $sql = (!empty($searchModel->parselQuery->sql) ? $searchModel->parselQuery->sql 
 
 <div class="form-group ">
     <div class="input-group ">
-        <input id="userquery" name="<?= $className ?>[userQuery]"
+        <input id="userquery" name="userQuery"
                type="text" class="form-control"
                value="<?= htmlentities($searchModel->userQuery) ?>"
                placeholder="Enter a search term"

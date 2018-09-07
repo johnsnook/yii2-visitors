@@ -11,11 +11,13 @@
 
 namespace johnsnook\visitors\controllers;
 
-use Yii;
+use johnsnook\visitors\models\Visits;
 use johnsnook\visitors\models\VisitsSearch;
+use Yii;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
 
 /**
  * VisitsController implements the CRUD actions for Visits model.
@@ -25,15 +27,12 @@ class DashboardController extends Controller {
     /**
      * {@inheritdoc}
      */
-    public function behaviors() {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
+    public function beforeAction($action) {
+        if (parent::beforeAction($action)) {
+            $this->view->params['breadcrumbs'][] = ['label' => 'Dashboard', 'url' => ['/dashboard']];
+            return true;
+        }
+        return false;
     }
 
     /**
@@ -48,37 +47,16 @@ class DashboardController extends Controller {
      * Lists all Visits models.
      * @return mixed
      */
-    public function actionLine() {
-        #return $this->render('dashboard-visits-line');
-        return $this->render('dashboard-highcharts');
-    }
-
-    public function actionD3() {
-        return $this->render('dashboard-d3');
+    public function actionVisitsVisitors() {
+        return $this->render('dashboard-daily-visits');
     }
 
     /**
      * Returns a graph view of the current user query.
      * @return mixed
      */
-    public function actionGraph() {
-        $searchModel = new VisitsSearch();
-        $searchModel->search(Yii::$app->request->queryParams);
-        return $this->render('visits-graph', [
-                    'searchModel' => $searchModel,
-        ]);
-    }
-
-    /**
-     * Displays a single Visits model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionView($id) {
-        return $this->render('view', [
-                    'model' => $this->findModel($id),
-        ]);
+    public function actionVisitorsMap() {
+        return $this->render('dashboard-visitors-map');
     }
 
 }

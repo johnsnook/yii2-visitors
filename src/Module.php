@@ -61,6 +61,12 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
     const TEMPLATE_IP_INFO_URL = 'http://ipinfo.io/{ip_address}?token={key}';
 
     /**
+     *
+     * @var \yii\db\Connection allow developer to set different connection, but defaults to the application component
+     */
+    public $db;
+
+    /**
      * @var Visitor The Visitor record of the currently connected particular individual
      */
     public $visitor;
@@ -112,8 +118,10 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
 
     /** @var array The rules to be used in URL management. */
     public $urlRules = [
+        '/exploration' => '/visitors/exploration/index',
+        '/exploration/<action:(?:\w|-)+>' => '/visitors/exploration/<action>',
         '/dashboard' => '/visitors/dashboard/index',
-        '/dashboard/<action:\w+>' => '/visitors/dashboard//<action>',
+        '/dashboard/<action:(?:\w|-)+>' => '/visitors/dashboard/<action>',
         '/visitors' => '/visitors/visitor/index',
         '/visitors/map' => '/visitors/visitor/map',
         '/visitor/blowoff' => '/visitors/visitor/blowoff',
@@ -299,7 +307,11 @@ class Module extends \yii\base\Module implements \yii\base\BootstrapInterface {
      * @return Database connection
      */
     public function getDb() {
-        return \Yii::$app->get($this->dbConnection);
+        if (empty($this->db)) {
+            return \Yii::$app->getDb();
+        } else {
+            return $this->db;
+        }
     }
 
 }
