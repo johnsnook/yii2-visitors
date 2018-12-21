@@ -18,13 +18,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-php composer.phar require --prefer-dist johnsnook/yii2-visitor "*"
+php composer.phar require --prefer-dist johnsnook/yii2-visitors "*"
 ```
 
 or add
 
 ```
-"johnsnook/yii2-visitor": "*"
+"johnsnook/yii2-visitors": "*"
 ```
 
 to the require section of your `composer.json` file.
