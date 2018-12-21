@@ -46,7 +46,7 @@ Then add the bare-minimum module definition
     'modules' => [
         ...
         'visitor' => [
-            'class' => 'johnsnook\visitor\Module',
+            'class' => 'johnsnook\visitors\Module',
         ],
         ...
     ],
@@ -68,7 +68,7 @@ migrations. Make sure that you have properly configured `db` application compone
 and run the following command:
 
 ```bash
-$ php yii migrate/up --migrationPath=@vendor/johnsnook/yii2-visitor/migrations
+$ php yii migrate/up --migrationPath=@vendor/johnsnook/yii2-visitors/migrations
 ```
 
 Free API Keys
@@ -98,7 +98,7 @@ When you're done getting all your keys, and deciding that there are some control
     'modules' => [
         ...
         'visitor' => [
-            'class' => 'johnsnook\visitor\Module',
+            'class' => 'johnsnook\visitors\Module',
             'ipInfoKey' => 'Not a real key, obviously',
             'proxyCheckKey' => 'Not a real key, obviously',
             'mapquestKey' => 'Not a real key, obviously',
