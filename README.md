@@ -24,7 +24,7 @@ php composer.phar require --prefer-dist johnsnook/yii2-visitors "*"
 or add
 
 ```
-"johnsnook/yii2-visitor": "*"
+"johnsnook/yii2-visitors": "*"
 ```
 
 to the require section of your `composer.json` file.
