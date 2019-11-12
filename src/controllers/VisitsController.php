@@ -29,7 +29,7 @@ class VisitsController extends Controller {
      */
     public function beforeAction($action) {
         if (parent::beforeAction($action)) {
-            $this->view->params['breadcrumbs'][] = ['label' => 'Dashboard', 'url' => ['/visitors']];
+            $this->view->params['breadcrumbs'][] = ['label' => 'Dashboard', 'url' => ['/dashboard']];
             return true;
         }
         return false;

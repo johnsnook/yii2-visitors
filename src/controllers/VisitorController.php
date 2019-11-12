@@ -32,7 +32,7 @@ class VisitorController extends \yii\web\Controller {
      */
     public function beforeAction($action) {
         if (parent::beforeAction($action)) {
-            $this->view->params['breadcrumbs'][] = ['label' => 'Dashboard', 'url' => ['/visitors']];
+            $this->view->params['breadcrumbs'][] = ['label' => 'Dashboard', 'url' => ['/dashboard']];
             return true;
         }
         return false;
@@ -66,9 +66,10 @@ class VisitorController extends \yii\web\Controller {
      * Lists all Visitor models.
      * @return string A rendered view of the list of visitors
      */
-    public function actionIndex() {
+    public function actionIndex($userQuery = null) {
         $searchModel = new VisitorSearch([
-            'queryParams' => Yii::$app->request->queryParams
+            'userQuery' => $userQuery,
+                //'queryParams' => Yii::$app->request->queryParams
         ]);
 
         return $this->render('visitor-index/visitor-index', [
@@ -101,10 +102,8 @@ class VisitorController extends \yii\web\Controller {
      * Returns a map view of the current user query.
      * @return mixed
      */
-    public function actionMap() {
-        $searchModel = new VisitorSearch([
-            'queryParams' => Yii::$app->request->queryParams
-        ]);
+    public function actionMap($userQuery) {
+        $searchModel = new VisitorSearch(['userQuery' => $userQuery]);
 
         $out = $this->renderAjax('visitor-index/visitor-index-map', [
             'searchModel' => $searchModel,

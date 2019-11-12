@@ -6,7 +6,7 @@ This extension is a half security, half SEO (search engine optimization) tool fo
 
 It tracks the visitor information associated with the visitor ip address and user agent (browser/OS) info, retrieves  proxy and "IP info", including ISP geographical information,  logs the access and checks against rules for  blacklisting or whitelisting, taking appropriate action.
 
-Includes tools for viewing, searching, filtering and graphically (Including GIS!) exploring your websites visitors. 
+Includes tools for viewing, searching, filtering and graphically (Including GIS!) exploring your websites visitors.
 
 Installation
 ------------
@@ -18,7 +18,7 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```bash
-php composer.phar require --prefer-dist johnsnook/yii2-visitor "*"
+php composer.phar require --prefer-dist johnsnook/yii2-visitors "*"
 ```
 
 or add

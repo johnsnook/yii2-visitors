@@ -36,6 +36,21 @@ $this->registerJsFile('https://www.gstatic.com/charts/loader.js', ['position' =>
     div.kv-thead-float{
         overflow: hidden
     }
+
+    .tab-pane {
+
+        border-left: 1px solid #ddd;
+        border-right: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        border-radius: 0px 0px 5px 5px;
+        padding: 10px;
+    }
+
+    .nav-tabs {
+        margin-bottom: 0;
+    }
+
+
 </style>
 <h1><?= $dataProvider->totalCount . ' ' . Html::encode($bc) ?>!</h1>
 <?php
@@ -47,7 +62,7 @@ $grid = GridView::widget([
             //'caption' => $dataProvider->totalCount . ' ' . Html::encode($this->title) . '!',
             'dataProvider' => $dataProvider,
             'filterModel' => $searchModel,
-            'columns' => require __DIR__ . '/index-columns.php',
+            'columns' => require __DIR__ . '/visitor-index-columns.php',
             'filterRowOptions' => ['style' => 'visibility: collapse'],
             'pjax' => true,
             'bordered' => false,
@@ -73,14 +88,15 @@ $tabItems = [
         'label' => '<i class="glyphicon glyphicon-list-alt"></i> Data',
         'active' => 'true',
         'content' => $grid,
+        'options' => ['class' => ' in']
     ],
     [
         'label' => '<i class="glyphicon glyphicon-globe"></i> Map',
-        //'url' => Url::to(['/visitors/visitor/map']),
-        'linkOptions' => ['data-url' => Url::to(['/visitors/visitor/map'])],
+        'linkOptions' => [
+            'data-url' => Url::to(['/visitors/visitor/map', 'userQuery' => $searchModel->userQuery]),
+        ],
         'content' => 'Loading (hopefully!) ...',
-//        'content' => $this->render('visitor-index-map', ['searchModel' => $searchModel]),
-//        'linkOptions' => ['data-url' => Url::to(['/visitors/visitor/map'])]
+        'headerOptions' => ['class' => 'bg-success'],
     ],
 //    [
 //        'label' => '<i class="glyphicon glyphicon-stats"></i> Charts',
@@ -116,14 +132,15 @@ $ajaxTabEvent = <<< JS
 JS;
 
 echo Tabs::widget([
-    'clientEvents' => [
-        'click' => $ajaxTabEvent
-    ],
+//    'clientEvents' => [
+//        'click' => $ajaxTabEvent
+//    ],
     'encodeLabels' => false,
 //    'bordered' => true,
 //    'position' => TabsX::POS_LEFT,
     'items' => $tabItems,
-//    'options' => ['class' => 'nav-pills'], // set this to nav-tab to get tab-styled navigation
+    'itemOptions' => ['class' => 'fade'],
+    'options' => ['class' => ' nav-pills'], // set this to nav-tab to get tab-styled navigation
 ]);
 ?>
 <script>

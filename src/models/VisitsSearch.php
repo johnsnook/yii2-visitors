@@ -15,6 +15,7 @@ use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use johnsnook\visitors\models\Visits;
 use johnsnook\parsel\ParselQuery;
+use yii\db\Expression;
 
 /**
  * VisitsSearch represents the model behind the search form of `common\models\Visits`.
@@ -46,6 +47,25 @@ class VisitsSearch extends Visits {
 
     /**
      * {@inheritdoc}
+     *
+     * Instead of passing the query parameters to the search, we'll pass it in the
+     * options array
+     */
+    public function init() {
+        parent::init();
+//        $this->load($this->queryParams);
+
+        $this->parselQuery = new ParselQuery([
+            'userQuery' => $this->userQuery,
+            'searchFields' => $this->fields,
+            'dbQuery' => static::find()
+                    ->select($this->fields)
+//                    ->leftJoin('visits', 'visitor.ip = visits.ip')
+        ]);
+    }
+
+    /**
+     * {@inheritdoc}
      */
     public function rules() {
         return [
@@ -72,7 +92,7 @@ class VisitsSearch extends Visits {
      */
     public function loadQuery($params) {
         $this->load($params);
-        $query = Visits::find();
+        $query = static::find();
         if (!empty($this->ip)) {
             $query->where(['ip' => $this->ip]);
         }
@@ -105,6 +125,47 @@ class VisitsSearch extends Visits {
         ]);
 
         return $dataProvider;
+    }
+
+    /**
+     * select (to_char(created_at, 'YYYY-MM-DD HH24') || ':00')::timestamp as time,
+     *      count(distinct ip) as visitors
+     * group by created_at
+     * order created_at;
+     *
+     * @return array
+     */
+    public function getNewVisitsByDay() {
+        /* @var \yii\db\ActiveQuery $query */
+        $query = $this->parselQuery->dbQuery
+                ->select([
+                    'x' => new Expression("distinct created_at::date"),
+                    'visits' => new Expression('count(ip)')
+                ])
+                ->groupBy('x')
+                ->orderBy('x');
+        return $query->asArray()->all();
+    }
+
+    /**
+     * Returns detailed data for a line chart
+     *
+     * @param string $day the date of the data we want
+     * @return array Chart data
+     */
+    public function getNewVisitsByHour($day) {
+
+        /* @var \yii\db\ActiveQuery $query */
+        $query = $this->parselQuery->dbQuery
+                ->select([
+                    'x' => new Expression("distinct (to_char(created_at, 'YYYY-MM-DD HH24') || ':00')::timestamp"),
+                    'visits' => new Expression('count(ip)')
+                ])
+                ->andWhere("created_at::date = '$day'::date")
+                ->groupBy('x')
+                ->orderBy('x');
+
+        return $query->asArray()->all();
     }
 
     /**

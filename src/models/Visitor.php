@@ -11,6 +11,7 @@
 
 namespace johnsnook\visitors\models;
 
+use yii\db\Expression;
 use johnsnook\visitors\models\Country;
 
 /**
@@ -116,6 +117,28 @@ class Visitor extends ModuleActiveRecord {
     }
 
     /**
+     * Concatenates city, region and country where they exist
+     *
+     * @return string
+     */
+    public function getLocation() {
+        $loc = [];
+        if (!empty($this->city)) {
+            $loc[] = $this->city;
+        }
+        if (!empty($this->region)) {
+            $loc[] = $this->region;
+        }
+        if (!empty($this->country)) {
+            $loc[] = $this->country;
+        }
+        if (empty($loc)) {
+            return '(not set)';
+        }
+        return implode(', ', $loc);
+    }
+
+    /**
      * Labels of the attributes
      */
     public function attributeLabels() {
@@ -153,7 +176,15 @@ class Visitor extends ModuleActiveRecord {
     public function beforeSave($insert) {
         if (parent::beforeSave($insert)) {
             if ($insert) {
-                if (($info = $this->getIpInfo($this->ip)) !== null) {
+                if ($this->ip === '127.0.0.1') {
+                    $this->city = 'Poundtown';
+                    $this->region = 'Denial';
+                    $this->country = 'Gods';
+                    $this->latitude = 90;
+                    $this->longitude = 0;
+                    $this->asn = 'A Laptop';
+                    $this->organization = "Kickin' Ass";
+                } else if (($info = $this->getIpInfo($this->ip)) !== null) {
                     $this->city = $info->city;
                     $this->region = $info->region;
                     $country = Country::findOne(['code' => $info->country]);
@@ -209,7 +240,7 @@ class Visitor extends ModuleActiveRecord {
      */
     public function getIpInfo() {
 
-        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, static::$module->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, static::getModule()->ipInfoKey], self::TEMPLATE_IP_INFO_URL);
         try {
             if (!empty($data = json_decode(file_get_contents($url)))) {
                 return $data;
@@ -235,8 +266,11 @@ class Visitor extends ModuleActiveRecord {
      * @return object|null
      */
     public static function proxyCheck($ip) {
+        if ($ip === '127.0.0.1') {
+            return 'no';
+        }
         $proxy = null;
-        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, static::$module->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$ip, static::getModule()->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
 
         try {
             if (!empty($data = json_decode(file_get_contents($url), true))) {
@@ -252,7 +286,7 @@ class Visitor extends ModuleActiveRecord {
     }
 
     private function getProxyInfo() {
-        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, static::$module->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
+        $url = str_replace(self::REPLACEMENTS_TEMPLATE, [$this->ip, static::getModule()->proxyCheckKey], self::TEMPLATE_PROXY_CHECK_URL);
         try {
             if (!empty($data = json_decode(file_get_contents($url), true))) {
                 return (object) $data[$this->ip];
